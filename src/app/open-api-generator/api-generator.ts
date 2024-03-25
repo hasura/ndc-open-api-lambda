@@ -59,6 +59,7 @@ export async function generateOpenApiTypescriptFile(
     input: filePath,
     output: outputDir,
     templates: templateDir,
+    silent: true,
     hooks: {
       onCreateComponent: (component) => {
         /**

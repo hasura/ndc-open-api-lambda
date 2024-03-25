@@ -2,6 +2,12 @@ import { generateOpenApiTypescriptFile } from './api-generator';
 import * as path from 'path';
 import * as fs from 'fs';
 import { generateFunctionsTypescriptFile } from './function-generator';
+import pacote from "pacote";
+import { SemVer } from "semver";
+import { version } from "../../../package.json";
+import { exec, execSync } from 'child_process';
+
+const PackageJson = require('@npmcli/package-json')
 
 function isValidUrl(uri: string): boolean {
   let url;
@@ -40,11 +46,120 @@ function getFilePath(uri: string): string {
  * @returns the correct parent directory containing templates
  */
 export const getTemplatesDirectory = (): string => {
-  if (fs.existsSync(path.resolve(__dirname, '../../templates'))) {
-    return path.resolve(__dirname, '../../templates');
-  } else {
+  if (fs.existsSync(path.resolve(__dirname, '../../../templates'))) {
     return path.resolve(__dirname, '../../../templates');
+  } else {
+    return path.resolve(__dirname, '../../../../templates');
   }
+}
+
+const tsConfigContent  = `{
+  "extends": "./node_modules/@tsconfig/node18/tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "dom"
+    ]
+  }
+}
+`;
+
+export async function generateAlphaPackageJson(outputDir: string) {
+  console.log('generatePackageJson()');
+
+  fs.writeFileSync(path.resolve(outputDir, "configuration.json"), `{}`);
+
+  const packageManifest = await pacote.manifest(
+    "generator-hasura-ndc-nodejs-lambda", // todo: change the name to this package name
+  );
+  const latestVersion = new SemVer(packageManifest.version);
+  const currentVersion = new SemVer(version);
+
+  console.log('checking for update')
+  if (currentVersion.compare(latestVersion) === -1) {
+    console.log(`Upate available: A newer version (${latestVersion}) is available`);
+  } else {
+    console.log(`Already on latest version`);
+  }
+  
+  const configuration = "configuration.json";
+  const versionRestriction = "";
+
+  const sdkPackageManifest = await pacote.manifest(
+    `@hasura/ndc-lambda-sdk${versionRestriction}`,
+    {},
+  );
+  const packageJson = await PackageJson.load(outputDir, { create: true });//.load(outputDir, { create: true });
+  // packageJson.load(outputDir, { create: true });
+
+  packageJson.update({
+    private: true,
+    engines: {
+      node: ">=18",
+    },
+    scripts: {
+      // packageJson.content.scripts === undefined ? [] : packageJson.content.scripts,
+      start: `ndc-lambda-sdk host -f functions.ts serve --configuration ${configuration}`,
+      watch: `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ${configuration} --pretty-print-logs`,
+    },
+    dependencies: {
+      // ...packageJson.content.dependencies,
+      "@hasura/ndc-lambda-sdk": "0.16.0",
+    },
+  });
+  await packageJson.save();
+
+
+  console.log('running npm install -- installing dependencies')
+  execSync('npm install', {stdio: 'inherit'});
+  console.log('npm install complete -- all dependencies installed');
+}
+
+export async function generatePackageJson(outputDir: string) {
+  console.log('generatePackageJson()');
+  const packageManifest = await pacote.manifest(
+    "generator-hasura-ndc-nodejs-lambda", // todo: change the name to this package name
+  );
+  const latestVersion = new SemVer(packageManifest.version);
+  const currentVersion = new SemVer(version);
+
+  console.log('checking for update')
+  if (currentVersion.compare(latestVersion) === -1) {
+    console.log(`Upate available: A newer version (${latestVersion}) is available`);
+  } else {
+    console.log(`Already on latest version`);
+  }
+  
+  const configuration = "./";
+  const versionRestriction = "";
+
+  const sdkPackageManifest = await pacote.manifest(
+    `@hasura/ndc-lambda-sdk${versionRestriction}`,
+    {},
+  );
+  const packageJson = await PackageJson.load(outputDir, { create: true });//.load(outputDir, { create: true });
+  // packageJson.load(outputDir, { create: true });
+
+  packageJson.update({
+    private: true,
+    engines: {
+      node: ">=18",
+    },
+    scripts: {
+      // packageJson.content.scripts === undefined ? [] : packageJson.content.scripts,
+      start: `ndc-lambda-sdk host -f functions.ts serve --configuration ${configuration}`,
+      watch: `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ${configuration} --pretty-print-logs`,
+    },
+    dependencies: {
+      // ...packageJson.content.dependencies,
+      "@hasura/ndc-lambda-sdk": sdkPackageManifest.version,
+    },
+  });
+  await packageJson.save();
+
+
+  console.log('running npm install -- installing dependencies')
+  execSync('npm install', {stdio: 'inherit'});
+  console.log('npm install complete -- all dependencies installed');
 }
 
 export async function generateCode(openApiUri: string, outputDir: string): Promise<string> {
@@ -57,5 +172,18 @@ export async function generateCode(openApiUri: string, outputDir: string): Promi
   );
 
   const functionFileStr = generateFunctionsTypescriptFile(apiComponents);
+  console.log('generateCode: functionFileStr length: ', functionFileStr.length);
   return functionFileStr;
+}
+
+export async function generateProject(openApiUri: string, outputDir: string) {
+  const functionFileTs = await generateCode(openApiUri, outputDir);
+
+  console.log('Creating functions.ts');
+  fs.writeFileSync(path.resolve(outputDir, "functions.ts"), functionFileTs);
+  console.log('created functions.ts');
+
+  await generateAlphaPackageJson(outputDir);
+
+  fs.writeFileSync(path.resolve(outputDir, "tsconfig.json"), tsConfigContent);
 }
