@@ -1,0 +1,8 @@
+packagingDefinition:
+  type: PrebuiltDockerImage
+  dockerImage: "oasconnector:v1" 
+supportedEnvironmentVariables:
+  - name: OAS_DOCUMENT_URI
+    description: "The URI of OAS Document. If not provided, the connector will look for `/etc/connector/swagger.json` by default"
+commands:
+  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector oasconnector:v1 update"

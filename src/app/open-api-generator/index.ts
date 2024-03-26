@@ -98,8 +98,8 @@ export async function generateAlphaPackageJson(outputDir: string) {
     },
     scripts: {
       // packageJson.content.scripts === undefined ? [] : packageJson.content.scripts,
-      start: `ndc-lambda-sdk host -f functions.ts serve --configuration ${configuration}`,
-      watch: `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ${configuration} --pretty-print-logs`,
+      start: `ndc-lambda-sdk host -f functions.ts serve --configuration ${configuration} --port 8080`,
+      watch: `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ${configuration} --pretty-print-logs --port 8080`,
     },
     dependencies: {
       // ...packageJson.content.dependencies,
@@ -146,8 +146,8 @@ export async function generatePackageJson(outputDir: string) {
     },
     scripts: {
       // packageJson.content.scripts === undefined ? [] : packageJson.content.scripts,
-      start: `ndc-lambda-sdk host -f functions.ts serve --configuration ${configuration}`,
-      watch: `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ${configuration} --pretty-print-logs`,
+      start: `ndc-lambda-sdk host -f functions.ts serve --configuration ${configuration} --port 8080`,
+      watch: `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ${configuration} --pretty-print-logs --port 8080`,
     },
     dependencies: {
       // ...packageJson.content.dependencies,

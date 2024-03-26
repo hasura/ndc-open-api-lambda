@@ -1,3 +1,4 @@
 import { Command } from "commander";
 
-export const cmd = new Command("watch").description("Watch for file changes");
+export const cmd = new Command("watch")
+  .description("Watch for file changes. Not yet implemented");
