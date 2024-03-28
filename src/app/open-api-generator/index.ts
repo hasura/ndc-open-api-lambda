@@ -64,6 +64,16 @@ const tsConfigContent = `{
 }
 `;
 
+const tsConfigBetaContent = `{
+  "extends": "./node_modules/@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "dom"
+    ]
+  }
+}
+`;
+
 export async function generateAlphaPackageJson(outputDir: string) {
   logger.info("Generating Alpha compatible scripts");
   logger.warn(
@@ -191,5 +201,5 @@ export async function generateProject(openApiUri: string, outputDir: string) {
 
   await generatePackageJson(outputDir);
 
-  fs.writeFileSync(path.resolve(outputDir, "tsconfig.json"), tsConfigContent);
+  fs.writeFileSync(path.resolve(outputDir, "tsconfig.json"), tsConfigBetaContent);
 }
