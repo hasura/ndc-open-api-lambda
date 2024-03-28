@@ -1,3 +1,7 @@
+/**
+ * WARNING: This file is DEPRECATED
+ */
+
 import Generator from "yeoman-generator";
 import pacote from "pacote";
 import { version } from "../../package.json";

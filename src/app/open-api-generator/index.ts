@@ -1,13 +1,14 @@
-import { generateOpenApiTypescriptFile } from './api-generator';
-import * as path from 'path';
-import * as fs from 'fs';
-import { generateFunctionsTypescriptFile } from './function-generator';
+import { generateOpenApiTypescriptFile } from "./api-generator";
+import * as path from "path";
+import * as fs from "fs";
+import { generateFunctionsTypescriptFile } from "./function-generator";
 import pacote from "pacote";
 import { SemVer } from "semver";
 import { version } from "../../../package.json";
-import { exec, execSync } from 'child_process';
+import { exec, execSync } from "child_process";
+import * as logger from "../../util/logger";
 
-const PackageJson = require('@npmcli/package-json')
+const PackageJson = require("@npmcli/package-json");
 
 function isValidUrl(uri: string): boolean {
   let url;
@@ -46,14 +47,14 @@ function getFilePath(uri: string): string {
  * @returns the correct parent directory containing templates
  */
 export const getTemplatesDirectory = (): string => {
-  if (fs.existsSync(path.resolve(__dirname, '../../../templates'))) {
-    return path.resolve(__dirname, '../../../templates');
+  if (fs.existsSync(path.resolve(__dirname, "../../../templates"))) {
+    return path.resolve(__dirname, "../../../templates");
   } else {
-    return path.resolve(__dirname, '../../../../templates');
+    return path.resolve(__dirname, "../../../../templates");
   }
-}
+};
 
-const tsConfigContent  = `{
+const tsConfigContent = `{
   "extends": "./node_modules/@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
     "lib": [
@@ -64,33 +65,39 @@ const tsConfigContent  = `{
 `;
 
 export async function generateAlphaPackageJson(outputDir: string) {
-  console.log('generatePackageJson()');
+  logger.info("Generating Alpha compatible scripts");
+  logger.warn(
+    "Alpha version is deprecated and will no longer be support. Please consider updating to Beta"
+  );
 
   fs.writeFileSync(path.resolve(outputDir, "configuration.json"), `{}`);
 
   const packageManifest = await pacote.manifest(
-    "generator-hasura-ndc-nodejs-lambda", // todo: change the name to this package name
+    "generator-hasura-ndc-nodejs-lambda" // todo: change the name to this package name
   );
   const latestVersion = new SemVer(packageManifest.version);
   const currentVersion = new SemVer(version);
 
-  console.log('checking for update')
+  logger.debug("checking for update");
   if (currentVersion.compare(latestVersion) === -1) {
-    console.log(`Upate available: A newer version (${latestVersion}) is available`);
+    logger.info(
+      `Upate available: A newer version (${latestVersion}) is available`
+    );
   } else {
-    console.log(`Already on latest version`);
+    logger.debug(`Already on latest version`);
   }
-  
+
   const configuration = "configuration.json";
   const versionRestriction = "";
 
   const sdkPackageManifest = await pacote.manifest(
     `@hasura/ndc-lambda-sdk${versionRestriction}`,
-    {},
+    {}
   );
-  const packageJson = await PackageJson.load(outputDir, { create: true });//.load(outputDir, { create: true });
+  const packageJson = await PackageJson.load(outputDir, { create: true }); //.load(outputDir, { create: true });
   // packageJson.load(outputDir, { create: true });
 
+  logger.info("Updating package.json and installing dependencies");
   packageJson.update({
     private: true,
     engines: {
@@ -108,37 +115,37 @@ export async function generateAlphaPackageJson(outputDir: string) {
   });
   await packageJson.save();
 
-
-  console.log('running npm install -- installing dependencies')
-  execSync('npm install', {stdio: 'inherit'});
-  console.log('npm install complete -- all dependencies installed');
+  execSync("npm install", { stdio: "inherit" });
+  logger.info("npm install complete -- all dependencies installed");
 }
 
 export async function generatePackageJson(outputDir: string) {
-  console.log('generatePackageJson()');
   const packageManifest = await pacote.manifest(
-    "generator-hasura-ndc-nodejs-lambda", // todo: change the name to this package name
+    "generator-hasura-ndc-nodejs-lambda" // todo: change the name to this package name
   );
   const latestVersion = new SemVer(packageManifest.version);
   const currentVersion = new SemVer(version);
 
-  console.log('checking for update')
+  logger.debug("checking for update");
   if (currentVersion.compare(latestVersion) === -1) {
-    console.log(`Upate available: A newer version (${latestVersion}) is available`);
+    logger.info(
+      `Upate available: A newer version (${latestVersion}) is available`
+    );
   } else {
-    console.log(`Already on latest version`);
+    logger.debug(`Already on latest version`);
   }
-  
+
   const configuration = "./";
   const versionRestriction = "";
 
   const sdkPackageManifest = await pacote.manifest(
     `@hasura/ndc-lambda-sdk${versionRestriction}`,
-    {},
+    {}
   );
-  const packageJson = await PackageJson.load(outputDir, { create: true });//.load(outputDir, { create: true });
+  const packageJson = await PackageJson.load(outputDir, { create: true }); //.load(outputDir, { create: true });
   // packageJson.load(outputDir, { create: true });
 
+  logger.info("Updating package.json and installing dependencies");
   packageJson.update({
     private: true,
     engines: {
@@ -156,34 +163,33 @@ export async function generatePackageJson(outputDir: string) {
   });
   await packageJson.save();
 
-
-  console.log('running npm install -- installing dependencies')
-  execSync('npm install', {stdio: 'inherit'});
-  console.log('npm install complete -- all dependencies installed');
+  execSync("npm install", { stdio: "inherit" });
+  logger.info("npm install complete -- all dependencies installed");
 }
 
-export async function generateCode(openApiUri: string, outputDir: string): Promise<string> {
+export async function generateCode(
+  openApiUri: string,
+  outputDir: string
+): Promise<string> {
   const apiComponents = await generateOpenApiTypescriptFile(
     "Api.ts",
     isValidUrl(openApiUri) ? openApiUri : undefined,
     isValidUrl(openApiUri) ? undefined : getFilePath(openApiUri),
     outputDir,
-    undefined,
+    undefined
   );
 
   const functionFileStr = generateFunctionsTypescriptFile(apiComponents);
-  console.log('generateCode: functionFileStr length: ', functionFileStr.length);
   return functionFileStr;
 }
 
 export async function generateProject(openApiUri: string, outputDir: string) {
   const functionFileTs = await generateCode(openApiUri, outputDir);
 
-  console.log('Creating functions.ts');
   fs.writeFileSync(path.resolve(outputDir, "functions.ts"), functionFileTs);
-  console.log('created functions.ts');
+  logger.info("created functions.ts");
 
-  await generateAlphaPackageJson(outputDir);
+  await generatePackageJson(outputDir);
 
   fs.writeFileSync(path.resolve(outputDir, "tsconfig.json"), tsConfigContent);
 }

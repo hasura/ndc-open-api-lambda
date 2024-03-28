@@ -24,10 +24,6 @@ Further reading:
     "/etc/connector/"
   )
   .action((args, cmd) => {
-    console.log("Running command: upodate");
-    console.log("args: ", args);
-    console.log("open-api: ", args.openApi);
-    console.log("out-dir: ", args.outDir);
     main(args.openApi, resolve(args.outDir));
   });
 

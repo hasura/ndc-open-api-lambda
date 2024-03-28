@@ -1,5 +1,6 @@
 import { ParsedRoute } from "swagger-typescript-api"
 const CircularJSON = require('circular-json');
+import * as logger from "../../util/logger";
 
 export enum ParamType {
   QUERY = 'query',
@@ -65,7 +66,7 @@ export class ParsedApiRoutes {
 
     this.sortParamsByOptionality(allParams);
 
-
+    logger.info(`parsing route: ${route.request.method?.toUpperCase()} ${route.raw.route}`);
     const apiRoute: ApiRoute = {
       type: route.request.method?.toUpperCase(),
       route: route.raw.route,
@@ -84,17 +85,7 @@ export class ParsedApiRoutes {
       shouldAllowRelaxedTypes: this.shouldAllowRelaxedTypes(route),
 
       isQuery: route.raw.method === 'get'
-
-      // parsedRoute: route,
     };
-    // if (apiRoute.functionName === 'getPetFindPetsByStatus') {
-    //   console.log('all params: ', JSON.stringify(allParams));
-    //   console.log('\n\n\n\n\nparsedApiRoutes: parse: apiRoute: ', apiRoute);
-    //   console.log('parsedApiRoutes: parse: apiRoute (JSON): ', CircularJSON.stringify(apiRoute));
-    //   console.log('\n\nparsedApiRoutes: parse: route: ', route);
-    //   console.log('parsedApiRoutes: parse: route (JSON): ', CircularJSON.stringify(route));
-    // }
-
     this.apiRoutes.push(apiRoute);
   }
 

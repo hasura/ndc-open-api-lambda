@@ -13,3 +13,8 @@ export const CONFIGURATION_DIRECTORY_DEFAULT_VALUE = "/etc/connector/";
  */
 export const CONNECTOR_PORT = "HASURA_CONNECTOR_PORT";
 export const CONNECTOR_PORT_DEFAULT_VALUE = "8080";
+
+/**
+ * Log specifc env vars
+ */
+export const LOG_LEVEL = "HASURA_PLUGIN_LOG_LEVEL";
