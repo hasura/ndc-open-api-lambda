@@ -27,16 +27,6 @@ export const getTemplatesDirectory = (): string => {
   }
 };
 
-const tsConfigContent = `{
-  "extends": "./node_modules/@tsconfig/node18/tsconfig.json",
-  "compilerOptions": {
-    "lib": [
-      "dom"
-    ]
-  }
-}
-`;
-
 const tsConfigBetaContent = `{
   "extends": "./node_modules/@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
@@ -152,14 +142,16 @@ export async function generatePackageJson(outputDir: string) {
 
 export async function generateCode(
   openApiUri: string,
-  outputDir: string
+  outputDir: string,
+  shouldOverwrite: boolean,
 ): Promise<string> {
   const apiComponents = await generateOpenApiTypescriptFile(
     "Api.ts",
     fileUtil.isValidUrl(openApiUri) ? openApiUri : undefined,
     fileUtil.isValidUrl(openApiUri) ? undefined : fileUtil.getFilePath(openApiUri),
     outputDir,
-    undefined
+    undefined,
+    shouldOverwrite,
   );
 
   const functionFileStr = generateFunctionsTypescriptFile(apiComponents);
@@ -167,7 +159,7 @@ export async function generateCode(
 }
 
 export async function generateProject(openApiUri: string, outputDir: string) {
-  const functionFileTs = await generateCode(openApiUri, outputDir);
+  const functionFileTs = await generateCode(openApiUri, outputDir, true);
 
   fs.writeFileSync(path.resolve(outputDir, "functions.ts"), functionFileTs);
   logger.info("created functions.ts");
@@ -181,10 +173,24 @@ export type ImportOpenApiArgs = {
   openApiUri: string,
   outputDirectory: string,
   alphaOverride: boolean,
+  shouldOverwrite: boolean,
 }
 
 export async function importOpenApi(args: ImportOpenApiArgs) {
-  const functionFileTs = await generateCode(args.openApiUri, args.outputDirectory);
+  const functionFileTs = await generateCode(args.openApiUri, args.outputDirectory, args.shouldOverwrite);
+
+  if (!args.shouldOverwrite) {
+    if (fs.existsSync(path.resolve(args.outputDirectory, 'functions.ts'))) {
+      throw new Error(`Error: functions.ts already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+    }
+    if (fs.existsSync(path.resolve(args.outputDirectory, 'package.json'))) {
+      throw new Error(`Error: package.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+    }
+    if (fs.existsSync(path.resolve(args.outputDirectory, 'tsconfig.json'))) {
+      throw new Error(`Error: tsconfig.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+    }
+  }
+
   logger.info("create functions.ts");
   fs.writeFileSync(path.resolve(args.outputDirectory, "functions.ts"), functionFileTs);
 

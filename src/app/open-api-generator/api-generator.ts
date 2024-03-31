@@ -1,6 +1,7 @@
 import { ParsedRoute, generateApi, Hooks, SchemaComponent } from "swagger-typescript-api";
 import * as path from 'path';
 import { getTemplatesDirectory } from ".";
+import { existsSync } from "fs";
 
 const CircularJSON = require('circular-json');
 
@@ -50,8 +51,15 @@ export async function generateOpenApiTypescriptFile(
   filePath: string | undefined,
   outputDir: string,
   hooks: Hooks | undefined,
+  shouldOverwriteFile: boolean,
 ): Promise<ApiComponents> {
   const apiComponents = new ApiComponents();
+
+  if (!shouldOverwriteFile) {
+    if (existsSync(path.resolve(outputDir, filename))) {
+      throw new Error(`Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+    }
+  }
 
   await generateApi({
     name: filename,
@@ -98,7 +106,7 @@ export async function generateOpenApiTypescriptFile(
       },
       onPrepareConfig: (currentConfiguration) => {},
     },
-  })
+  });
 
   return apiComponents;
 }

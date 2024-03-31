@@ -1,6 +1,8 @@
 import { Command, Option } from "commander";
 import { generateProject, importOpenApi } from "../app/open-api-generator";
 import { resolve } from "path";
+import { exit } from "process";
+import * as logger from "../util/logger";
 
 export const cmd = new Command("update")
   .description(
@@ -36,19 +38,39 @@ Further reading:
       .preset("true")
       .env("NDC_OAS_OVERRIDE_ALPHA")
   )
+  .addOption(
+    new Option(
+      "--overwrite <boolean>",
+      "Override the generated config to support DDN Alpha."
+    )
+      .default("false")
+      .choices(["true", "false", "0", "1"])
+      .preset("true")
+      .env("NDC_OAS_FILE_OVERWRITE")
+  )
   // TODO: Add following options: header and base url
   .action((args, cmd) => {
-    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true' || args.alpha === '1');
+    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true' || args.alpha === '1', args.overwrite === 'true' || args.overwrite === '1');
   });
 
 async function main(
   openApi: string,
   outputDir: string,
-  alphaOverride: boolean
+  alphaOverride: boolean,
+  overwrite: boolean,
 ) {
-  await importOpenApi({
-    openApiUri: openApi,
-    outputDirectory: outputDir,
-    alphaOverride: alphaOverride,
-  });
+  try {
+    await importOpenApi({
+      openApiUri: openApi,
+      outputDirectory: outputDir,
+      alphaOverride: alphaOverride,
+      shouldOverwrite: overwrite,
+    });
+  } catch (e) {
+    logger.fatal(e);
+    if (e instanceof Error) {
+      console.log(e.message);
+    }
+    exit(1);
+  }
 }
