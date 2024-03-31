@@ -7,36 +7,9 @@ import { SemVer } from "semver";
 import { version } from "../../../package.json";
 import { exec, execSync } from "child_process";
 import * as logger from "../../util/logger";
+import * as fileUtil from "../../util/file";
 
 const PackageJson = require("@npmcli/package-json");
-
-function isValidUrl(uri: string): boolean {
-  let url;
-  try {
-    url = new URL(uri);
-  } catch (_) {
-    return false;
-  }
-  return url.protocol === "http:" || url.protocol === "https:";
-}
-
-function isValidFileUrl(uri: string): boolean {
-  let url;
-  try {
-    url = new URL(uri);
-  } catch (_) {
-    return false;
-  }
-  return url.protocol === "file:";
-}
-
-function getFilePath(uri: string): string {
-  if (isValidFileUrl(uri)) {
-    const path = new URL(uri);
-    return path.pathname;
-  }
-  return path.resolve(uri);
-}
 
 /**
  * this function is added because the variable `__dirname` points to two different
@@ -183,8 +156,8 @@ export async function generateCode(
 ): Promise<string> {
   const apiComponents = await generateOpenApiTypescriptFile(
     "Api.ts",
-    isValidUrl(openApiUri) ? openApiUri : undefined,
-    isValidUrl(openApiUri) ? undefined : getFilePath(openApiUri),
+    fileUtil.isValidUrl(openApiUri) ? openApiUri : undefined,
+    fileUtil.isValidUrl(openApiUri) ? undefined : fileUtil.getFilePath(openApiUri),
     outputDir,
     undefined
   );
@@ -202,4 +175,25 @@ export async function generateProject(openApiUri: string, outputDir: string) {
   await generatePackageJson(outputDir);
 
   fs.writeFileSync(path.resolve(outputDir, "tsconfig.json"), tsConfigBetaContent);
+}
+
+export type ImportOpenApiArgs = {
+  openApiUri: string,
+  outputDirectory: string,
+  alphaOverride: boolean,
+}
+
+export async function importOpenApi(args: ImportOpenApiArgs) {
+  const functionFileTs = await generateCode(args.openApiUri, args.outputDirectory);
+  logger.info("create functions.ts");
+  fs.writeFileSync(path.resolve(args.outputDirectory, "functions.ts"), functionFileTs);
+
+  if (args.alphaOverride) {
+    await generateAlphaPackageJson(args.outputDirectory)
+  } else {
+    await generatePackageJson(args.outputDirectory);
+  }
+
+  logger.info('create tsconfig.json');
+  fs.writeFileSync(path.resolve(args.outputDirectory, "tsconfig.json"), tsConfigBetaContent); 
 }
