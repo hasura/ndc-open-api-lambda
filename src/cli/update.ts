@@ -41,7 +41,7 @@ Further reading:
   .addOption(
     new Option(
       "--overwrite <boolean>",
-      "Override the generated config to support DDN Alpha."
+      "Overwrite files if already present in the output directory."
     )
       .default("false")
       .choices(["true", "false", "0", "1"])
