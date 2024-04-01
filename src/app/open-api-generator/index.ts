@@ -145,6 +145,7 @@ export async function generateCode(
   outputDir: string,
   shouldOverwrite: boolean,
   headers: string | undefined,
+  baseUrl: string | undefined,
 ): Promise<string> {
   const apiComponents = await generateOpenApiTypescriptFile(
     "api.ts",
@@ -155,12 +156,12 @@ export async function generateCode(
     shouldOverwrite,
   );
 
-  const functionFileStr = generateFunctionsTypescriptFile(apiComponents, headers);
+  const functionFileStr = generateFunctionsTypescriptFile(apiComponents, headers, baseUrl);
   return functionFileStr;
 }
 
-export async function generateProject(openApiUri: string, outputDir: string, headers: string | undefined) {
-  const functionFileTs = await generateCode(openApiUri, outputDir, true, headers);
+export async function generateProject(openApiUri: string, outputDir: string, headers: string | undefined, baseUrl: string | undefined) {
+  const functionFileTs = await generateCode(openApiUri, outputDir, true, headers, baseUrl);
 
   fs.writeFileSync(path.resolve(outputDir, "functions.ts"), functionFileTs);
   logger.info("created functions.ts");
@@ -176,10 +177,11 @@ export type ImportOpenApiArgs = {
   alphaOverride: boolean,
   shouldOverwrite: boolean,
   headers: string | undefined, // format: key1=value1&key2=value2&key3=value3...
+  baseUrl: string | undefined,
 }
 
 export async function importOpenApi(args: ImportOpenApiArgs) {
-  const functionFileTs = await generateCode(args.openApiUri, args.outputDirectory, args.shouldOverwrite, args.headers);
+  const functionFileTs = await generateCode(args.openApiUri, args.outputDirectory, args.shouldOverwrite, args.headers, args.baseUrl);
 
   if (!args.shouldOverwrite) {
     if (fs.existsSync(path.resolve(args.outputDirectory, 'functions.ts'))) {

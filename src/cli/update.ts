@@ -29,6 +29,11 @@ Further reading:
       .env("HASURA_CONFIGURATION_DIRECTORY")
   )
   .addOption(
+    new Option("-b --base-url <value>", "Base URL of the API")
+    .env("NDC_OAS_BASE_URL")
+    .argParser(headerParser)
+  )
+  .addOption(
     new Option("-H --headers <key=value...>", "Headers to be included in the requests")
     .env("NDC_OAS_HEADERS")
     .argParser(headerParser)
@@ -55,7 +60,7 @@ Further reading:
   )
   // TODO: Add following options: header and base url
   .action((args, cmd) => {
-    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true', args.overwrite === 'true', args.headers);
+    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true', args.overwrite === 'true', args.headers, args.baseUrl);
   });
 
 // convert the given array into the following format:
@@ -78,6 +83,7 @@ async function main(
   alphaOverride: boolean,
   overwrite: boolean,
   headers: string[],
+  baseUrl: string | undefined,
 ) {
   try {
     await importOpenApi({
@@ -85,7 +91,8 @@ async function main(
       outputDirectory: outputDir,
       alphaOverride: alphaOverride,
       shouldOverwrite: overwrite,
-      headers: (headers && headers.length > 0) ? headers[0] : undefined, // beacuse of headerParser(), the headers array can contain only 1 element
+      headers: (headers && headers.length > 0) ? headers[0] : undefined, // beacuse of headerParser(), the headers array can contain only 1 element,
+      baseUrl: baseUrl,
     });
   } catch (e) {
     logger.fatal(e);

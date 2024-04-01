@@ -15,7 +15,7 @@ const templateFile = "functions.ejs";
  * @param headers Expected to be in format: key1=value1&key2=value2&key3=value3...
  * @returns 
  */
-export function generateFunctionsTypescriptFile(apiComponents: ApiComponents, headers: string | undefined): string {
+export function generateFunctionsTypescriptFile(apiComponents: ApiComponents, headers: string | undefined, baseUrl: string | undefined): string {
   templateDir = path.resolve(getTemplatesDirectory(), './functions');
 
   const parseApiRoutes = new ParsedApiRoutes(new Set<string>(apiComponents.getTypeNames()));
@@ -27,7 +27,7 @@ export function generateFunctionsTypescriptFile(apiComponents: ApiComponents, he
   const headerMap = parseHeaders(headers);
 
   const eta = new Eta({ views: templateDir});
-  const fileStr = eta.render(templateFile, { apiRoutes: parseApiRoutes.getApiRoutes(), importList: parseApiRoutes.getImportList(), baseUrl: "localhost:9090", headerMap: headerMap });
+  const fileStr = eta.render(templateFile, { apiRoutes: parseApiRoutes.getApiRoutes(), importList: parseApiRoutes.getImportList(), baseUrl: baseUrl? baseUrl : '', headerMap: headerMap });
   return fileStr;
 }
 

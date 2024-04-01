@@ -56,7 +56,7 @@ describe("GenerateCode", async () => {
     });
 
     it(testCase.name, async () => {
-      const got = await generateCode(testCase.oasFile, `${testCase.outDir}`, true, testCase.headers);
+      const got = await generateCode(testCase.oasFile, `${testCase.outDir}`, true, testCase.headers, undefined);
       fs.writeFileSync(path.resolve(`${testCase.outDir}`, "functions.ts"), got);
       assert.equal(got, testCase.expected);
 
