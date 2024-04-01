@@ -30,27 +30,27 @@ Further reading:
   )
   .addOption(
     new Option(
-      "--alpha <boolean>",
+      "--alpha",
       "Override the generated config to support DDN Alpha."
     )
       .default("false")
-      .choices(["true", "false", "0", "1"])
+      .choices(["true", "false"])
       .preset("true")
       .env("NDC_OAS_OVERRIDE_ALPHA")
   )
   .addOption(
     new Option(
-      "--overwrite <boolean>",
+      "--overwrite",
       "Overwrite files if already present in the output directory."
     )
       .default("false")
-      .choices(["true", "false", "0", "1"])
+      .choices(["true", "false"])
       .preset("true")
       .env("NDC_OAS_FILE_OVERWRITE")
   )
   // TODO: Add following options: header and base url
   .action((args, cmd) => {
-    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true' || args.alpha === '1', args.overwrite === 'true' || args.overwrite === '1');
+    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true', args.overwrite === 'true');
   });
 
 async function main(
