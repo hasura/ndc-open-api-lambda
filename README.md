@@ -7,20 +7,49 @@ Functions that wrap GET requests are marked with `@readonly` annotation, and are
 This connector is under active development right now and is not stable. It has known limitations and might have undocumented issues. Please create an issue if you run into any problems.
 
 ## Build and Run
-Clone the repository and run the following commands to get the connector running. Please ensure that you have NodeJS v18+ installed.
+You can use the Open API Connector via Docker or via the bundled CLI.
+
+### Using Docker
+Clone the repository and run the following commands to build the Docker image that can then be used for code generation.
 ```
-# install dependencies
+cd ndc-open-api-lambda
+
+# build the docker image with the name `ndc-oas-lambda` and tag `latest`
+docker build -t ndc-oas-lambda:latest .
+
+# get command documentation/help
+docker run --rm ndc-oas-lambda:latest update -h
+
+# when running the code generation, the container will expect either of the following two things
+# 1. The OpenAPI document is mounted at `/etc/connector/` as `swagger.json`. OR
+# 2. The link to the OpenAPI document is provided via the env var `NDC_OAS_DOCUMENT_URI`
+# Please note that mounting a directory at /etc/connector/ is required in both cases, since that is where the code is generated
+# run the code generation
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ndc-oas-lambda:latest update
+
+# start the NodeJS Lambda Connector
+docker run --rm -p 8080:8080 -v ./:/etc/connector ndc-oas-lambda:latest
+```
+
+### Using the CLI
+You can install the OpenAPI Connector as a CLI on your system. Please ensure you have NPM and Node 20+ installed. You can install and run the CLI using the following commands
+```
+cd ndc-open-api-lambda
+
+# install dependencies and then install the CLI
 npm i
+npm run install-bin
 
-# build and install the package
-npm run build && npm link
+# print help for update command
+ndc-oas-lamda update -h
 
-# run the code generation for Open API documentation
-npx yo hasura-ndc-nodejs-lambda --open-api ${link-or-path-to-open-api-doc}
+# run the update command to generate code
+ndc-oas-lamda update --open-api ${link/path to open api swagger document}
 
 # start the NodeJS Lambda Connector
 npm run watch
 ```
+By default, both the CLI and the Docker container output logs in JSON fromat. To change that to a more humane readable format during development, please set the env var `NDC_OAS_LAMBDA_PRETTY_LOGS=true`
 
 ## Supported Request Types
 Request Type | Query | Path | Body | Headers
