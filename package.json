@@ -9,7 +9,7 @@
   "scripts": {
     "compile": "tsc",
     "install-bin": "npm test && npm run compile && npm install -g .",
-    "install-bin-unsafe": "npm test && npm run compile && npm install -g .",
+    "install-bin-unsafe": "npm run compile && npm install -g .",
     "build": "webpack",
     "test": "mocha --require ts-node/register --timeout 5000 --ui bdd ./src/**/*.test.ts"
   },

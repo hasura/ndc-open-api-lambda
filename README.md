@@ -24,8 +24,13 @@ docker run --rm ndc-oas-lambda:latest update -h
 # 1. The OpenAPI document is mounted at `/etc/connector/` as `swagger.json`. OR
 # 2. The link to the OpenAPI document is provided via the env var `NDC_OAS_DOCUMENT_URI`
 # Please note that mounting a directory at /etc/connector/ is required in both cases, since that is where the code is generated
+# **** Examples ****
 # run the code generation
 docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ndc-oas-lambda:latest update
+# with headers
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_HEADERS=${key1=value1&key2=value2&key3=value3...} ndc-oas-lambda:latest update
+# with headers and baseUrl
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_HEADERS=${key1=value1&key2=value2&key3=value3...} -e NDC_OAS_BASE_URL=http://demoapi.com/ ndc-oas-lambda:latest update
 
 # start the NodeJS Lambda Connector
 docker run --rm -p 8080:8080 -v ./:/etc/connector ndc-oas-lambda:latest
@@ -43,8 +48,13 @@ npm run install-bin
 # print help for update command
 ndc-oas-lamda update -h
 
+# **** Examples ****
 # run the update command to generate code
 ndc-oas-lamda update --open-api ${link/path to open api swagger document}
+# with headers
+ndc-oas-lamda update --open-api ${link/path to open api swagger document} -H key1=value -H key2=value2 -H keyN=valueN
+# with baseurl and headers
+ndc-oas-lamda update --open-api ${link/path to open api swagger document} -H key1=value -H key2=value2 -H keyN=valueN -b http://localhost:8081
 
 # start the NodeJS Lambda Connector
 npm run watch

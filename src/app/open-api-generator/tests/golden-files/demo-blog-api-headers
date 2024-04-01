@@ -2,7 +2,13 @@ import { Api, MainAuthor, MainBlog, MainBlogRequestDto } from './api';
 import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
 
 const api = new Api({
-  baseUrl: 'http://localhost:9191',
+  baseUrl: 'http://mybaseurl/abc/def',
+  baseApiParams: {
+    headers: {
+      "auth": "some-token=1",
+      "type": "json",
+    }
+  }
 });
 
 /**

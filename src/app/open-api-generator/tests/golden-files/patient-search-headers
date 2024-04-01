@@ -2,7 +2,12 @@ import { Api, ProblemDetails } from './api';
 import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
 
 const api = new Api({
-  baseUrl: '',
+  baseUrl: 'http://myapi/abc/def',
+  baseApiParams: {
+    headers: {
+      "auth": "some-token=1",
+    }
+  }
 });
 
 /**

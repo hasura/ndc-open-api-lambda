@@ -1,11 +1,7 @@
-<% const { apiRoutes, importList, baseUrl } = it; _%>
+<% const { apiRoutes, importList, baseUrl, headerMap } = it; _%>
 
-import { <%~ it.importList.join(', ') %> } from './Api';
+import { <%~ it.importList.join(', ') %> } from './api';
 import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
-
-const api = new Api({
-  baseUrl: '<%~ baseUrl %>',
-});
 
 <%-
 const hasParams = (route) => {
@@ -19,7 +15,24 @@ const getParameterAsFunctionParam = (param) => { // parameter accepted by the fu
     return `${param.name}?: ${param.tsType},`
   }
 }
-_%>
+
+const hasHeaders = (headers) => {
+  return (headers && headers.size > 0)
+}
+-%>
+
+const api = new Api({
+  baseUrl: '<%~ baseUrl %>',
+<% if (hasHeaders(headerMap)) { %>
+  baseApiParams: {
+    headers: {
+<% for (const [key, value] of headerMap) { %>
+      "<%~key%>": "<%~value%>",
+<% } %>
+    }
+  }
+<% } %>
+});
 
 <%- for (let req of apiRoutes) { %>
 
