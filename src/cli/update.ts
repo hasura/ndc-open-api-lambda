@@ -29,7 +29,7 @@ Further reading:
       .env("HASURA_CONFIGURATION_DIRECTORY")
   )
   .addOption(
-    new Option("-H --headers <key=value...>", "Output Directory")
+    new Option("-H --headers <key=value...>", "Headers to be included in the requests")
     .env("NDC_OAS_HEADERS")
     .argParser(headerParser)
   )
