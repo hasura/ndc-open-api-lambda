@@ -9,4 +9,4 @@ RUN npm run install-bin
 RUN mkdir /etc/connector/
 WORKDIR /etc/connector/
 
-ENTRYPOINT [ "oas" ]
+ENTRYPOINT [ "ndc-oas-lambda" ]
