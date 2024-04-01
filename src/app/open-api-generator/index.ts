@@ -147,7 +147,7 @@ export async function generateCode(
   headers: string | undefined,
 ): Promise<string> {
   const apiComponents = await generateOpenApiTypescriptFile(
-    "Api.ts",
+    "api.ts",
     fileUtil.isValidUrl(openApiUri) ? openApiUri : undefined,
     fileUtil.isValidUrl(openApiUri) ? undefined : fileUtil.getFilePath(openApiUri),
     outputDir,
