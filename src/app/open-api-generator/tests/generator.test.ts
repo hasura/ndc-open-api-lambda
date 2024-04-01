@@ -37,7 +37,8 @@ describe("GenerateCode", async () => {
     });
 
     it(testCase.name, async () => {
-      const got = await generateCode(testCase.oasFile, `${testCase.outDir}`, true);
+      const got = await generateCode(testCase.oasFile, `${testCase.outDir}`, true, undefined);
+      fs.writeFileSync(path.resolve(`${testCase.outDir}`, "functions.ts"), got);
       assert.equal(got, testCase.expected);
 
       // uncomment the following to update golden file

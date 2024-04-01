@@ -29,6 +29,11 @@ Further reading:
       .env("HASURA_CONFIGURATION_DIRECTORY")
   )
   .addOption(
+    new Option("-H --headers <key=value...>", "Output Directory")
+    .env("NDC_OAS_HEADERS")
+    .argParser(headerParser)
+  )
+  .addOption(
     new Option(
       "--alpha",
       "Override the generated config to support DDN Alpha."
@@ -50,14 +55,29 @@ Further reading:
   )
   // TODO: Add following options: header and base url
   .action((args, cmd) => {
-    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true', args.overwrite === 'true');
+    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true', args.overwrite === 'true', args.headers);
   });
+
+// convert the given array into the following format:
+// key1=value1&key2=value2&key3=value3....
+// because this is what the format is expected to be for the env var
+function headerParser(value: string, previousValue: string[]): string[] {
+  if (!value) {
+    return [];
+  }
+  if (!previousValue) {
+    return [ value ];
+  }
+  const joinedValue = `${value}&${previousValue.join("&")}`;
+  return [joinedValue];
+}
 
 async function main(
   openApi: string,
   outputDir: string,
   alphaOverride: boolean,
   overwrite: boolean,
+  headers: string[],
 ) {
   try {
     await importOpenApi({
@@ -65,6 +85,7 @@ async function main(
       outputDirectory: outputDir,
       alphaOverride: alphaOverride,
       shouldOverwrite: overwrite,
+      headers: (headers && headers.length > 0) ? headers[0] : undefined, // beacuse of headerParser(), the headers array can contain only 1 element
     });
   } catch (e) {
     logger.fatal(e);

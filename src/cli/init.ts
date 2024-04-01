@@ -28,5 +28,5 @@ Further reading:
   });
 
 async function main(openApi: string, outputDir: string) {
-  await generateProject(openApi, outputDir);
+  // await generateProject(openApi, outputDir);
 }
