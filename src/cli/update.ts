@@ -21,7 +21,7 @@ Further reading:
       "URI or file path of OAS Document. Usually ${HASURA_CONFIGURATION_DIRECTORY}/swagger.json"
     )
       .default("./swagger.json")
-      .env("HASURA_CONFIGURATION_DIRECTORY")
+      .env("NDC_OAS_DOCUMENT_URI")
   )
   .addOption(
     new Option("--output-directory <directory>", "Output Directory")
