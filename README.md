@@ -49,7 +49,7 @@ ndc-oas-lamda update --open-api ${link/path to open api swagger document}
 # start the NodeJS Lambda Connector
 npm run watch
 ```
-By default, both the CLI and the Docker container output logs in JSON fromat. To change that to a more humane readable format during development, please set the env var `NDC_OAS_LAMBDA_PRETTY_LOGS=true`
+By default, both the CLI and the Docker container output logs in JSON fromat. To change that to a more human readable format during development, please set the env var `NDC_OAS_LAMBDA_PRETTY_LOGS=true`
 
 ## Supported Request Types
 Request Type | Query | Path | Body | Headers
