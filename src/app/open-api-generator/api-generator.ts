@@ -2,29 +2,69 @@ import { ParsedRoute, generateApi, Hooks, SchemaComponent } from "swagger-typesc
 import * as path from 'path';
 import { getTemplatesDirectory } from ".";
 import { existsSync } from "fs";
+import * as logger from "../../util/logger";
 
 const CircularJSON = require('circular-json');
 
 let templateDir: string; // cannot be a constant because calling `getTemplateDirectory` results in a compilation error
 
+export type NdcSchemaComponent = {
+  component: SchemaComponent,
+  isRelaxedType: boolean, // components with this flag set to true need `@allowrelaxedtypes` annotation. More: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+  isUntyped: boolean, // components with this flag set to true (like `any`) need to be wrapped in JSON before being returned
+  rawTypeName: string, // path of the type, can be the same as `typename`, but not always.
+  typeName: string, // name of the type (used in typescript files)
+  ref: string,
+}
+
 
 export class ApiComponents {
   rawTypeToTypeMap: Map<string, string>;
   typeToRawTypeMap: Map<string, string>;
-  components: SchemaComponent[];
+  rawTypeNameToRefMap: Map<string, string>;
+  refToRawTypeNameMap: Map<string, string>;
+  refToSchemaComponentMap: Map<string, NdcSchemaComponent>;
+
+  /* DEPRECATED */
+  // components: SchemaComponent[];
+
   routes: ParsedRoute[];
 
   constructor() {
     this.rawTypeToTypeMap = new Map<string, string>();
     this.typeToRawTypeMap = new Map<string, string>();
-    this.components = [];
+    this.rawTypeNameToRefMap = new Map<string, string>();
+    this.refToRawTypeNameMap = new Map<string, string>();
+    this.refToSchemaComponentMap = new Map<string, NdcSchemaComponent>();
+    // this.components = [];
     this.routes = [];
 
     templateDir =  path.resolve(getTemplatesDirectory(), './custom')
   }
 
   public addComponent(component: SchemaComponent) {
-    this.components.push(component);
+    let ref = component.$ref;
+    const rawTypeName = component.typeName;
+
+    if (!ref) {
+      ref = `#/customref/${component.componentName}/${rawTypeName}`
+      logger.warn(`$ref missing for component. setting ref to '${ref}'`, component);
+    }
+
+    const ndcComponent: NdcSchemaComponent = {
+      component: component,
+      isRelaxedType: false,
+      isUntyped: false,
+      rawTypeName: rawTypeName,
+      typeName: '',
+      ref: ref,
+    }
+
+    this.rawTypeNameToRefMap.set(rawTypeName, ref);
+    this.refToRawTypeNameMap.set(ref, rawTypeName);
+    this.refToSchemaComponentMap.set(ref, ndcComponent);
+
+    // this.components.push(component);
   }
 
   public addTypes(rawType: string, type: string) {
@@ -42,6 +82,61 @@ export class ApiComponents {
 
   public getRoutes(): ParsedRoute[] {
     return this.routes;
+  }
+
+  public getNdcComponentByTypeName(typename: string): NdcSchemaComponent | undefined {
+    const rawTypeName = this.typeToRawTypeMap.get(typename);
+    if (!rawTypeName) {
+      return undefined;
+    }
+    const ref = this.rawTypeNameToRefMap.get(rawTypeName);
+    if (!ref) {
+      return undefined;
+    }
+    return this.refToSchemaComponentMap.get(ref)!;
+  }
+
+  public processNdcComponents() {
+    for (let [key, value] of this.refToSchemaComponentMap) {
+      let visitedRefs = new Set<string>();
+      // console.log('processNdcComponents: component ref: ', value.ref);
+      this.processNdcComponentUtil(value, visitedRefs);
+    }
+  }
+
+  processNdcComponentUtil(component: NdcSchemaComponent, visitedRefs: Set<string>) {
+    if (visitedRefs.has(component.ref)) {
+      return
+    }
+    visitedRefs.add(component.ref);
+    if (!component.component.rawTypeData || !component.component.rawTypeData.properties) {
+      return
+    }
+    Object.entries(component.component.rawTypeData.properties).forEach(([key, value]) => {
+      const anyValue: any = value;
+      if (anyValue['enum'] && anyValue['enum'].length > 0) {
+        component.isRelaxedType = true;
+        logger.debug(`'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`);
+      }
+
+      if (anyValue['$ref']) {
+        this.processNdcComponentUtil(this.refToSchemaComponentMap.get(anyValue['$ref'])!, visitedRefs);
+        if (this.refToSchemaComponentMap.get(anyValue['$ref'])!.isRelaxedType) {
+          component.isRelaxedType = true;
+          logger.debug(`'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`);
+        }
+      }
+
+      if (anyValue['type'] === 'array') {
+        if (anyValue['items'] && anyValue['items']['$ref']) {
+          this.processNdcComponentUtil(this.refToSchemaComponentMap.get(anyValue['items']['$ref'])!, visitedRefs);
+          if (this.refToSchemaComponentMap.get(anyValue['items']['$ref'])!.isRelaxedType) {
+            component.isRelaxedType = true;
+            logger.debug(`'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`);
+          }
+        }
+      }
+    });
   }
 }
 
@@ -73,13 +168,17 @@ export async function generateOpenApiTypescriptFile(
         /**
          * Contains the full definition of the type, along with individual variables in objects
          */
-        apiComponents.addComponent(component);
+        if (component.componentName === 'schemas') {
+          // for now, we are only going to deal with schemas
+          apiComponents.addComponent(component);
+        }
       },
       onCreateRequestParams: (rawType) => {
 
       },
       onCreateRoute: (routeData) => {
 
+        // console.log('\n\n\n routeData: ', CircularJSON.stringify(routeData));
         apiComponents.addRoute(routeData);
       },
       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {
@@ -108,5 +207,13 @@ export async function generateOpenApiTypescriptFile(
     },
   });
 
+  apiComponents.processNdcComponents();
+
+
+  // console.log('rawTypeToTypeMap', apiComponents.rawTypeToTypeMap);
+  // console.log('typeToRawTypeMap', apiComponents.typeToRawTypeMap);
+  // console.log('rawTypeNameToRefMap', apiComponents.rawTypeNameToRefMap);
+  // console.log('refToRawTypeNameMap', apiComponents.refToRawTypeNameMap);
+  // console.log('refToSchemaComponentMap', apiComponents.refToSchemaComponentMap);
   return apiComponents;
 }

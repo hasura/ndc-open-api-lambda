@@ -1,6 +1,7 @@
 import { ParsedRoute } from "swagger-typescript-api"
 const CircularJSON = require('circular-json');
 import * as logger from "../../util/logger";
+import { ApiComponents } from "./api-generator";
 
 export enum ParamType {
   QUERY = 'query',
@@ -44,14 +45,18 @@ export class ParsedApiRoutes {
   private generatedComponents = new Set<string>();
   private hasEnumVariables = false;
 
-  constructor(generatedComponents: Set<string>) {
+  private apiComponents: ApiComponents;
+
+  constructor(generatedComponents: Set<string>, apiComponents: ApiComponents) {
     this.generatedComponents = generatedComponents;
+    this.apiComponents = apiComponents;
   }
 
   private reservedTypes = new Set<string>(['void', 'any',
     'string', 'Record', 'number']);
 
   public parse(route: any) {
+    this.hasEnumVariables = false;
 
     // ensure keywords like `void` are not added to import list and hence to added to import statements
     this.addTypeToImportList(route.response.type, this.importList);
@@ -65,6 +70,8 @@ export class ParsedApiRoutes {
     }
 
     this.sortParamsByOptionality(allParams);
+
+    // console.log('\n\n all params: ', CircularJSON.stringify(allParams));
 
     logger.info(`parsing route: ${route.request.method?.toUpperCase()} ${route.raw.route}`);
     const apiRoute: ApiRoute = {
@@ -82,7 +89,7 @@ export class ParsedApiRoutes {
       pathParams: this.parseParams(route.routeParams.path, ParamType.PATH),
       allParams: allParams,
       shouldWrapReturnResultInJSON: this.shouldWrapReturnResultInJSON(route.response),
-      shouldAllowRelaxedTypes: this.shouldAllowRelaxedTypes(route),
+      shouldAllowRelaxedTypes: this.shouldAllowRelaxedTypes(route, allParams, this.sanitizeTypes(route.response.type)),
 
       isQuery: route.raw.method === 'get'
     };
@@ -107,10 +114,10 @@ export class ParsedApiRoutes {
   }
 
   private shouldWrapReturnResultInJSON(response: any): boolean {
-    return (response['type'] === 'any')
+    return (response['type'] === 'any' || response['type'] === 'void')
   }
 
-  private shouldAllowRelaxedTypes(apiRoute: any): boolean {
+  private shouldAllowRelaxedTypes(apiRoute: any, allParams: Param[] | undefined, responseSuccessType: string): boolean {
     if (this.shouldWrapReturnResultInJSON(apiRoute.response)) {
       return true;
     }
@@ -118,6 +125,24 @@ export class ParsedApiRoutes {
       return true;
     }
     if (this.hasEnumVariables) {
+      return true;
+    }
+    if (allParams && allParams.length > 0) {
+      for (const param of allParams) {
+        // console.log('get ndc component for param: ', param.tsType);
+        const ndcComponent = this.apiComponents.getNdcComponentByTypeName(param.tsType);
+        // console.log('ndc component: ', ndcComponent);
+        if (ndcComponent && ndcComponent.isRelaxedType) {
+          // console.log('Relaxed type true for param: ', param.tsType);
+          return true;
+        }
+      }
+    }
+    const ndcComponent = this.apiComponents.getNdcComponentByTypeName(responseSuccessType);
+    // console.log('get ndc component for response type: ', responseSuccessType);
+    // console.log('ndc component: ', ndcComponent);
+    if (ndcComponent && ndcComponent.isRelaxedType) {
+      // console.log('Relaxed type true for success type: ', responseSuccessType);
       return true;
     }
     return false;
