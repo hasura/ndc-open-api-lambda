@@ -1,6 +1,7 @@
 import { ParsedRoute } from "swagger-typescript-api"
 const CircularJSON = require('circular-json');
 import * as logger from "../../util/logger";
+import { ApiComponents } from "./api-generator";
 
 export enum ParamType {
   QUERY = 'query',
@@ -35,6 +36,7 @@ export type ApiRoute = {
   shouldWrapReturnResultInJSON: boolean, // if the return result type is unsupported (like `any`), it should be wrapped as JSON. this flag dictates whether that happens or not
   shouldAllowRelaxedTypes: boolean, // flag to add `@allowrelaxedtypes` annotation. More: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
 
+  returnsVoid: boolean,
   // parsedRoute: ParsedRoute,
 }
 
@@ -44,14 +46,18 @@ export class ParsedApiRoutes {
   private generatedComponents = new Set<string>();
   private hasEnumVariables = false;
 
-  constructor(generatedComponents: Set<string>) {
+  private apiComponents: ApiComponents;
+
+  constructor(generatedComponents: Set<string>, apiComponents: ApiComponents) {
     this.generatedComponents = generatedComponents;
+    this.apiComponents = apiComponents;
   }
 
   private reservedTypes = new Set<string>(['void', 'any',
     'string', 'Record', 'number']);
 
   public parse(route: any) {
+    this.hasEnumVariables = false;
 
     // ensure keywords like `void` are not added to import list and hence to added to import statements
     this.addTypeToImportList(route.response.type, this.importList);
@@ -65,6 +71,8 @@ export class ParsedApiRoutes {
     }
 
     this.sortParamsByOptionality(allParams);
+
+    // console.log('\n\n all params: ', CircularJSON.stringify(allParams));
 
     logger.info(`parsing route: ${route.request.method?.toUpperCase()} ${route.raw.route}`);
     const apiRoute: ApiRoute = {
@@ -82,9 +90,11 @@ export class ParsedApiRoutes {
       pathParams: this.parseParams(route.routeParams.path, ParamType.PATH),
       allParams: allParams,
       shouldWrapReturnResultInJSON: this.shouldWrapReturnResultInJSON(route.response),
-      shouldAllowRelaxedTypes: this.shouldAllowRelaxedTypes(route),
+      shouldAllowRelaxedTypes: this.shouldAllowRelaxedTypes(route, allParams, this.sanitizeTypes(route.response.type)),
 
-      isQuery: route.raw.method === 'get'
+      isQuery: route.raw.method === 'get',
+
+      returnsVoid: this.returnsVoid(route.response),
     };
     this.apiRoutes.push(apiRoute);
   }
@@ -107,10 +117,14 @@ export class ParsedApiRoutes {
   }
 
   private shouldWrapReturnResultInJSON(response: any): boolean {
-    return (response['type'] === 'any')
+    return (response['type'] === 'any' || response['type'] === 'void')
   }
 
-  private shouldAllowRelaxedTypes(apiRoute: any): boolean {
+  private returnsVoid(response: any): boolean {
+   return response['type'] === 'void'; 
+  }
+
+  private shouldAllowRelaxedTypes(apiRoute: any, allParams: Param[] | undefined, responseSuccessType: string): boolean {
     if (this.shouldWrapReturnResultInJSON(apiRoute.response)) {
       return true;
     }
@@ -118,6 +132,22 @@ export class ParsedApiRoutes {
       return true;
     }
     if (this.hasEnumVariables) {
+      return true;
+    }
+    if (allParams && allParams.length > 0) {
+      for (const param of allParams) {
+        let sanitizedType = param.tsType.endsWith('[]') ? param.tsType.substring(0, param.tsType.length-2) : param.tsType;
+        sanitizedType = this.sanitizeTypes(sanitizedType);
+        const ndcComponent = this.apiComponents.getNdcComponentByTypeName(sanitizedType);
+        if (ndcComponent && ndcComponent.isRelaxedType) {
+          return true;
+        }
+      }
+    }
+    let sanitizedType = responseSuccessType.endsWith('[]') ? responseSuccessType.substring(0, responseSuccessType.length-2) : responseSuccessType;
+    sanitizedType = this.sanitizeTypes(sanitizedType);
+    const ndcComponent = this.apiComponents.getNdcComponentByTypeName(sanitizedType);
+    if (ndcComponent && ndcComponent.isRelaxedType) {
       return true;
     }
     return false;

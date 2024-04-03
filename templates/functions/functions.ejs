@@ -90,6 +90,14 @@ export async function <%~ req.functionName _%> (
   } %>
   });
 <% } %>
+<% if (req.returnsVoid) { %>
+  if (result.error) {
+    throw (result.error)
+  } else {
+    new hasuraSdk.JSONValue(result.data);
+  }
+}
+<% } else { %>
   if (result.data) {
     return <% if (req.shouldWrapReturnResultInJSON) { _%>
       new hasuraSdk.JSONValue(result.data);
@@ -100,4 +108,5 @@ export async function <%~ req.functionName _%> (
     throw (result.error)
   }
 }
+<% } %>
 <% } %>

@@ -18,7 +18,7 @@ const templateFile = "functions.ejs";
 export function generateFunctionsTypescriptFile(apiComponents: ApiComponents, headers: string | undefined, baseUrl: string | undefined): string {
   templateDir = path.resolve(getTemplatesDirectory(), './functions');
 
-  const parseApiRoutes = new ParsedApiRoutes(new Set<string>(apiComponents.getTypeNames()));
+  const parseApiRoutes = new ParsedApiRoutes(new Set<string>(apiComponents.getTypeNames()), apiComponents);
 
   for (let route of apiComponents.routes) {
     parseApiRoutes.parse(route);

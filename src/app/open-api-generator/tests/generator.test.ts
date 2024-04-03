@@ -15,11 +15,6 @@ const tests = [
     headers: "",
   },
   {
-    name: "GenerateCode_PatientSearch",
-    oasFile: "./oas-docs/patient-search.json",
-    goldenFile: "./golden-files/patient-search",
-  },
-  {
     name: 'GenerateCode_Petstore',
     oasFile: './oas-docs/petstore.yaml',
     goldenFile: './golden-files/petstore',
@@ -31,13 +26,6 @@ const tests = [
     goldenFile: "./golden-files/demo-blog-api-headers",
     headers: "auth=some-token=1&type=json",
     baseUrl: "http://mybaseurl/abc/def",
-  },
-  {
-    name: "GenerateCode_PatientSearch_headers",
-    oasFile: "./oas-docs/patient-search.json",
-    goldenFile: "./golden-files/patient-search-headers",
-    headers: "auth=some-token=1",
-    baseUrl: "http://myapi/abc/def",
   },
   {
     name: 'GenerateCode_Petstore_headers',

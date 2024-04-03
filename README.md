@@ -73,4 +73,3 @@ PATCH | y | y | y | Not Tested
 
 ## Known Limiations
 - [Types not supported by the NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#unsupported-types) are not supported
-- [Relaxed Types](https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types) inside object types are not supported
