@@ -36,6 +36,7 @@ export type ApiRoute = {
   shouldWrapReturnResultInJSON: boolean, // if the return result type is unsupported (like `any`), it should be wrapped as JSON. this flag dictates whether that happens or not
   shouldAllowRelaxedTypes: boolean, // flag to add `@allowrelaxedtypes` annotation. More: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
 
+  returnsVoid: boolean,
   // parsedRoute: ParsedRoute,
 }
 
@@ -91,7 +92,9 @@ export class ParsedApiRoutes {
       shouldWrapReturnResultInJSON: this.shouldWrapReturnResultInJSON(route.response),
       shouldAllowRelaxedTypes: this.shouldAllowRelaxedTypes(route, allParams, this.sanitizeTypes(route.response.type)),
 
-      isQuery: route.raw.method === 'get'
+      isQuery: route.raw.method === 'get',
+
+      returnsVoid: this.returnsVoid(route.response),
     };
     this.apiRoutes.push(apiRoute);
   }
@@ -115,6 +118,10 @@ export class ParsedApiRoutes {
 
   private shouldWrapReturnResultInJSON(response: any): boolean {
     return (response['type'] === 'any' || response['type'] === 'void')
+  }
+
+  private returnsVoid(response: any): boolean {
+   return response['type'] === 'void'; 
   }
 
   private shouldAllowRelaxedTypes(apiRoute: any, allParams: Param[] | undefined, responseSuccessType: string): boolean {
