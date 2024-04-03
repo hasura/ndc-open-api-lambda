@@ -24,9 +24,6 @@ const tests = [
     oasFile: './oas-docs/petstore.yaml',
     goldenFile: './golden-files/petstore',
     baseUrl: "http://localhost:13191",
-        outDir: "",
-    expected: "",
-    headers: "",
   },
   {
     name: "GenerateCode_DemoBlogApi_headers",
