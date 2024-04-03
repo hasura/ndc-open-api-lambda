@@ -25,9 +25,6 @@ export class ApiComponents {
   refToRawTypeNameMap: Map<string, string>;
   refToSchemaComponentMap: Map<string, NdcSchemaComponent>;
 
-  /* DEPRECATED */
-  // components: SchemaComponent[];
-
   routes: ParsedRoute[];
 
   constructor() {
@@ -36,7 +33,6 @@ export class ApiComponents {
     this.rawTypeNameToRefMap = new Map<string, string>();
     this.refToRawTypeNameMap = new Map<string, string>();
     this.refToSchemaComponentMap = new Map<string, NdcSchemaComponent>();
-    // this.components = [];
     this.routes = [];
 
     templateDir =  path.resolve(getTemplatesDirectory(), './custom')
@@ -63,8 +59,6 @@ export class ApiComponents {
     this.rawTypeNameToRefMap.set(rawTypeName, ref);
     this.refToRawTypeNameMap.set(ref, rawTypeName);
     this.refToSchemaComponentMap.set(ref, ndcComponent);
-
-    // this.components.push(component);
   }
 
   public addTypes(rawType: string, type: string) {
@@ -99,7 +93,6 @@ export class ApiComponents {
   public processNdcComponents() {
     for (let [key, value] of this.refToSchemaComponentMap) {
       let visitedRefs = new Set<string>();
-      // console.log('processNdcComponents: component ref: ', value.ref);
       this.processNdcComponentUtil(value, visitedRefs);
     }
   }
@@ -178,7 +171,6 @@ export async function generateOpenApiTypescriptFile(
       },
       onCreateRoute: (routeData) => {
 
-        // console.log('\n\n\n routeData: ', CircularJSON.stringify(routeData));
         apiComponents.addRoute(routeData);
       },
       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {
@@ -208,12 +200,6 @@ export async function generateOpenApiTypescriptFile(
   });
 
   apiComponents.processNdcComponents();
-
-
-  // console.log('rawTypeToTypeMap', apiComponents.rawTypeToTypeMap);
-  // console.log('typeToRawTypeMap', apiComponents.typeToRawTypeMap);
-  // console.log('rawTypeNameToRefMap', apiComponents.rawTypeNameToRefMap);
-  // console.log('refToRawTypeNameMap', apiComponents.refToRawTypeNameMap);
-  // console.log('refToSchemaComponentMap', apiComponents.refToSchemaComponentMap);
+  
   return apiComponents;
 }
