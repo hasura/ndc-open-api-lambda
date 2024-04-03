@@ -129,20 +129,18 @@ export class ParsedApiRoutes {
     }
     if (allParams && allParams.length > 0) {
       for (const param of allParams) {
-        // console.log('get ndc component for param: ', param.tsType);
-        const ndcComponent = this.apiComponents.getNdcComponentByTypeName(param.tsType);
-        // console.log('ndc component: ', ndcComponent);
+        let sanitizedType = param.tsType.endsWith('[]') ? param.tsType.substring(0, param.tsType.length-2) : param.tsType;
+        sanitizedType = this.sanitizeTypes(sanitizedType);
+        const ndcComponent = this.apiComponents.getNdcComponentByTypeName(sanitizedType);
         if (ndcComponent && ndcComponent.isRelaxedType) {
-          // console.log('Relaxed type true for param: ', param.tsType);
           return true;
         }
       }
     }
-    const ndcComponent = this.apiComponents.getNdcComponentByTypeName(responseSuccessType);
-    // console.log('get ndc component for response type: ', responseSuccessType);
-    // console.log('ndc component: ', ndcComponent);
+    let sanitizedType = responseSuccessType.endsWith('[]') ? responseSuccessType.substring(0, responseSuccessType.length-2) : responseSuccessType;
+    sanitizedType = this.sanitizeTypes(sanitizedType);
+    const ndcComponent = this.apiComponents.getNdcComponentByTypeName(sanitizedType);
     if (ndcComponent && ndcComponent.isRelaxedType) {
-      // console.log('Relaxed type true for success type: ', responseSuccessType);
       return true;
     }
     return false;

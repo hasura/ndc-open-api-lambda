@@ -8,6 +8,7 @@ const api = new Api({
 /**
  * Add a new pet to the store
  * @request POST :/pet
+ * @allowrelaxedtypes
  */
 export async function postPetAddPet(
   /** Request body */
@@ -26,6 +27,7 @@ export async function postPetAddPet(
 /**
  * Update an existing pet
  * @request PUT :/pet
+ * @allowrelaxedtypes
  */
 export async function putPetUpdatePet(
   /** Request body */
@@ -154,7 +156,6 @@ export async function deletePetDeletePet(
 /**
  * uploads an image
  * @request POST :/pet/{petId}/uploadImage
- * @allowrelaxedtypes
  */
 export async function postPetUploadFile(
   /** ID of pet to update */
@@ -273,7 +274,6 @@ export async function postUserCreateUser(
 /**
  * Creates list of users with given input array
  * @request POST :/user/createWithList
- * @allowrelaxedtypes
  */
 export async function postUserCreateUsersWithListInput(
   /** Request body */
@@ -292,7 +292,6 @@ export async function postUserCreateUsersWithListInput(
 /**
  * Logs user into the system
  * @request GET :/user/login
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserLoginUser(
@@ -332,7 +331,6 @@ export async function getUserLogoutUser(): Promise<hasuraSdk.JSONValue> {
 /**
  * Get user by user name
  * @request GET :/user/{username}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserGetUserByName(
