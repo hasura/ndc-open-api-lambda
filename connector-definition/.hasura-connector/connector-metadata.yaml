@@ -1,6 +1,5 @@
 packagingDefinition:
   type: ManagedDockerBuild
-  dockerImage: "ghcr.io/hasura/ndc-open-api-lambda:v0.0.1-pre-alpha"
 supportedEnvironmentVariables:
   - name: NDC_OAS_DOCUMENT_URI
     description: "The URI of OAS Document. If not provided, the connector will look for `/etc/connector/swagger.json` by default"
@@ -15,7 +14,7 @@ supportedEnvironmentVariables:
     description: "Overwrite previously generated functions.ts file and api.ts file"
     default: "true"
 commands:
-  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -e NDC_OAS_BASE_URL -e NDC_OAS_HEADERS -e NDC_OAS_DOCUMENT_URI -e NDC_OAS_LAMBDA_PRETTY_LOGS -e NDC_OAS_FILE_OVERWRITE -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector oasconnector:v1 update"
+  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -e NDC_OAS_BASE_URL -e NDC_OAS_HEADERS -e NDC_OAS_DOCUMENT_URI -e NDC_OAS_LAMBDA_PRETTY_LOGS -e NDC_OAS_FILE_OVERWRITE -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector ghcr.io/hasura/ndc-open-api-lambda:v0.0.1-alpha update"
 dockerComposeWatch:
   # Rebuild the container if a new package restore is required because package[-lock].json changed
   - path: package.json
