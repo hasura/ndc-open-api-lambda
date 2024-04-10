@@ -161,16 +161,22 @@ export async function generateOpenApiTypescriptFile(
         /**
          * Contains the full definition of the type, along with individual variables in objects
          */
+        // console.log('\n\n\n created Component: ', component.$ref);
+        // console.log('created component: typename: ', component.typeName);
+        // console.log('created component: component: ', CircularJSON.stringify(component));
         if (component.componentName === 'schemas') {
           // for now, we are only going to deal with schemas
           apiComponents.addComponent(component);
         }
       },
       onCreateRequestParams: (rawType) => {
-
+        // console.log('\n\n\n onCreateRequestParams: ', CircularJSON.stringify(rawType));
       },
       onCreateRoute: (routeData) => {
 
+        if (routeData.raw.route === "/v3/projects/search/{query}") {
+          console.log('onCreateRoute: ', CircularJSON.stringify(routeData));
+        }
         apiComponents.addRoute(routeData);
       },
       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {
@@ -196,6 +202,10 @@ export async function generateOpenApiTypescriptFile(
 
       },
       onPrepareConfig: (currentConfiguration) => {},
+
+      onBuildRoutePath: (data) => {
+        // console.log('\n\n\n onBuildRoutePath: ', CircularJSON.stringify(data));
+      },
     },
   });
 
