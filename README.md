@@ -40,6 +40,7 @@ docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API 
 # start the NodeJS Lambda Connector
 docker run --rm -p 8080:8080 -v ./:/etc/connector ndc-oas-lambda:latest
 ```
+NOTE: You can also pass CLI flags with values to the Docker Container instead of environment variables
 
 ### Using the CLI
 You can install the OpenAPI Connector as a CLI on your system. Please ensure you have NPM and Node 20+ installed. You can install and run the CLI using the following commands
@@ -69,15 +70,18 @@ By default, both the CLI and the Docker container output logs in JSON fromat. To
 ## Supported Request Types
 Request Type | Query | Path | Body | Headers
 --- | --- | --- | --- | --- 
-GET | y | y | NA | Not Tested
-POST | y | y | y | Not Tested
-DELETE | y | y | y | Not Tested
-PUT | y | y | y | Not Tested
-PATCH | y | y | y | Not Tested
+GET | y | y | NA | Need Manual Addition
+POST | y | y | y | Need Manual Addition
+DELETE | y | y | y | Need Manual Addition
+PUT | y | y | y | Need Manual Addition
+PATCH | y | y | y | Need Manual Addition
 
 
 ## Known Limiations
-- `void` return type for both success and error at the same time is not supported
-- `Record<>` and `Map<>` return types are wrapped as JSON
-- Support for [Relaxed Types](https://github.com/hasura/ndc-nodejs-lambda/tree/main?tab=readme-ov-file#relaxed-types) is a WiP
-- [Types not supported by the NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#unsupported-types) are not supported
+- `void` return type for both success and error at the same time is not supported.
+- `Record<>` and `Map<>` return types are wrapped as JSON.
+- Support for [Relaxed Types](https://github.com/hasura/ndc-nodejs-lambda/tree/main?tab=readme-ov-file#relaxed-types) is a WiP.
+- [Types not supported by the NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#unsupported-types) are not supported.
+- Complex nested types in function parameters and return are not correctly added to import statements.
+- If `*/` is present in examples or descriptions, it causes a syntax error because it denotes the end of a multi line comment in Typescript. This causes the codegen to crash. This is a high priority issue that will be fixed in upcoming releases.
+- Code formatting can be a little off.
