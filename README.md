@@ -81,3 +81,5 @@ PATCH | y | y | y | Not Tested
 - `Record<>` and `Map<>` return types are wrapped as JSON
 - Support for [Relaxed Types](https://github.com/hasura/ndc-nodejs-lambda/tree/main?tab=readme-ov-file#relaxed-types) is a WiP
 - [Types not supported by the NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#unsupported-types) are not supported
+- Complex nested types in function parameters and return are not correctly added to import statements
+- If `*/` is present in examples or descriptions, it causes a syntax error because it denotes the end of a multi line comment in Typescript.
