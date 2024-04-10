@@ -25,6 +25,8 @@ export class ApiComponents {
   refToRawTypeNameMap: Map<string, string>;
   refToSchemaComponentMap: Map<string, NdcSchemaComponent>;
 
+  allGeneratedTypes: Set<string>;
+
   routes: ParsedRoute[];
 
   constructor() {
@@ -33,6 +35,7 @@ export class ApiComponents {
     this.rawTypeNameToRefMap = new Map<string, string>();
     this.refToRawTypeNameMap = new Map<string, string>();
     this.refToSchemaComponentMap = new Map<string, NdcSchemaComponent>();
+    this.allGeneratedTypes = new Set<string>();
     this.routes = [];
 
     templateDir =  path.resolve(getTemplatesDirectory(), './custom')
@@ -70,13 +73,17 @@ export class ApiComponents {
     this.routes.push(route);
   }
 
-  public getTypeNames(): IterableIterator<string> {
-    return this.typeToRawTypeMap.keys();
+  public getTypeNames(): Set<string> {
+    return this.allGeneratedTypes;
   }
 
   public getRoutes(): ParsedRoute[] {
     return this.routes;
   }
+
+  // public hasGeneratedTypeName(typename: string) {
+  //   return this.allGeneratedTypes.has(typename);
+  // }
 
   public getNdcComponentByTypeName(typename: string): NdcSchemaComponent | undefined {
     const rawTypeName = this.typeToRawTypeMap.get(typename);
@@ -185,6 +192,9 @@ export async function generateOpenApiTypescriptFile(
          * rawTypeName is equal to the component.typename from onCreateComponent hook.
          */
         apiComponents.addTypes(rawTypeName ? rawTypeName : typeName, typeName);
+        if (schemaType && schemaType === 'type-name') {
+          apiComponents.allGeneratedTypes.add(typeName);
+        }
       },
       onInit: (configuration) => {
 
