@@ -117,7 +117,12 @@ export class ParsedApiRoutes {
   }
 
   private shouldWrapReturnResultInJSON(response: any): boolean {
-    return (response['type'] === 'any' || response['type'] === 'void')
+    if (response['type'] === 'any' || response['type'] === 'void') {
+      return true;
+    } else if (response['type'].includes('Record<') || response['type'].includes('Map<')) {
+      return true;
+    }
+    return false;
   }
 
   private returnsVoid(response: any): boolean {

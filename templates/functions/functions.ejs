@@ -94,7 +94,7 @@ export async function <%~ req.functionName _%> (
   if (result.error) {
     throw (result.error)
   } else {
-    new hasuraSdk.JSONValue(result.data);
+    return new hasuraSdk.JSONValue(result.data);
   }
 }
 <% } else { %>
