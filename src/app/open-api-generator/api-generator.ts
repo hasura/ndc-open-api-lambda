@@ -81,10 +81,6 @@ export class ApiComponents {
     return this.routes;
   }
 
-  // public hasGeneratedTypeName(typename: string) {
-  //   return this.allGeneratedTypes.has(typename);
-  // }
-
   public getNdcComponentByTypeName(typename: string): NdcSchemaComponent | undefined {
     const rawTypeName = this.typeToRawTypeMap.get(typename);
     if (!rawTypeName) {
