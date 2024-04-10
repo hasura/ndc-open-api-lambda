@@ -85,3 +85,6 @@ PATCH | y | y | y | Need Manual Addition
 - Complex nested types in function parameters and return are not correctly added to import statements.
 - If `*/` is present in examples or descriptions, it causes a syntax error because it denotes the end of a multi line comment in Typescript. This causes the codegen to crash. This is a high priority issue that will be fixed in upcoming releases.
 - Code formatting can be a little off.
+
+## Release
+Please refer to the [release doc](https://github.com/hasura/ndc-open-api-lambda/blob/main/release.md)
