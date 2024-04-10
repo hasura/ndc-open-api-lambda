@@ -1,0 +1,634 @@
+import { Api, MediaListResponse, LocationSearchResponse, LocationInfoResponse, MediaSearchResponse, MediaEntryResponse, CommentsResponse, StatusResponse, UsersInfoResponse, TagSearchResponse, TagInfoResponse, TagMediaListResponse, UserResponse, UsersPagingResponse, RelationshipResponse, RelationshipPostResponse } from './api';
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+
+const api = new Api({
+  baseUrl: '',
+});
+
+/**
+ * Get recent media from a custom geo-id.
+ * @request GET :/geographies/{geo-id}/media/recent
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getGeographiesGeoIdMediaRecentList(
+  /** The geography ID. */
+  geoId: string,      
+  /** Max number of media to return. */
+  count?: number,      
+  /** Return media before this `min_id`. */
+  min_id?: string,      
+): Promise<MediaListResponse> {
+  const result = await api.geographies.geoIdMediaRecentList({
+    query: {
+      count: count,
+      min_id: min_id,
+    },
+    geoId: geoId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Search for a location by geographic coordinate.
+ * @request GET :/locations/search
+ * @readonly
+ */
+export async function getLocationsSearchList(
+  /** Default is 1000m (distance=1000), max distance is 5000. */
+  distance?: number,      
+  /** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */
+  facebook_places_id?: string,      
+  /** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use
+`lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.
+ */
+  foursquare_id?: string,      
+  /** Latitude of the center search coordinate. If used, `lng` is required. */
+  lat?: number,      
+  /** Longitude of the center search coordinate. If used, `lat` is required. */
+  lng?: number,      
+  /** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use
+`lat` and `lng`.
+ */
+  foursquare_v2_id?: string,      
+): Promise<LocationSearchResponse> {
+  const result = await api.locations.searchList({
+    query: {
+      distance: distance,
+      facebook_places_id: facebook_places_id,
+      foursquare_id: foursquare_id,
+      lat: lat,
+      lng: lng,
+      foursquare_v2_id: foursquare_v2_id,
+    },
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get information about a location.
+ * @request GET :/locations/{location-id}
+ * @readonly
+ */
+export async function getLocationsLocationIdList(
+  /** The location ID. */
+  locationId: string,      
+): Promise<LocationInfoResponse> {
+  const result = await api.locations.locationIdList({
+    locationId: locationId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get a list of recent media objects from a given location.
+ * @request GET :/locations/{location-id}/media/recent
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getLocationsLocationIdMediaRecentList(
+  /** The location ID. */
+  locationId: string,      
+  /** Return media after this UNIX timestamp. */
+  min_timestamp?: number,      
+  /** Return media before this UNIX timestamp. */
+  max_timestamp?: number,      
+  /** Return media before this `min_id`. */
+  min_id?: string,      
+  /** Return media after this `max_id`. */
+  max_id?: string,      
+): Promise<MediaListResponse> {
+  const result = await api.locations.locationIdMediaRecentList({
+    query: {
+      min_timestamp: min_timestamp,
+      max_timestamp: max_timestamp,
+      min_id: min_id,
+      max_id: max_id,
+    },
+    locationId: locationId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get a list of currently popular media.
+ * @request GET :/media/popular
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getMediaPopularList(): Promise<MediaSearchResponse> {
+  const result = await api.media.popularList({});
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Search for media in a given area.
+ * @request GET :/media/search
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getMediaSearchList(
+  /** Latitude of the center search coordinate. If used, `lng` is required. */
+  lat: number,      
+  /** Longitude of the center search coordinate. If used, `lat` is required. */
+  lng: number,      
+  /** A unix timestamp. All media returned will be taken later than this timestamp. */
+  min_timestamp?: number,      
+  /** A unix timestamp. All media returned will be taken earlier than this timestamp. */
+  max_timestamp?: number,      
+  /** Default is 1km (distance=1000), max distance is 5km. */
+  distance?: number,      
+): Promise<MediaSearchResponse> {
+  const result = await api.media.searchList({
+    query: {
+      lat: lat,
+      lng: lng,
+      min_timestamp: min_timestamp,
+      max_timestamp: max_timestamp,
+      distance: distance,
+    },
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get information about a media object.
+ * @request GET :/media/shortcode/{shortcode}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getMediaShortcodeDetail(
+  /** The short code of the media resource. */
+  shortcode: string,      
+): Promise<MediaEntryResponse> {
+  const result = await api.media.shortcodeDetail({
+    shortcode: shortcode,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get information about a media object.
+ * @request GET :/media/{media-id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getMediaMediaIdList(
+  /** The ID of the media resource. */
+  mediaId: string,      
+): Promise<MediaEntryResponse> {
+  const result = await api.media.mediaIdList({
+    mediaId: mediaId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get a list of recent comments on a media object.
+ * @request GET :/media/{media-id}/comments
+ * @readonly
+ */
+export async function getMediaMediaIdCommentsList(
+  /** The ID of the media resource. */
+  mediaId: string,      
+): Promise<CommentsResponse> {
+  const result = await api.media.mediaIdCommentsList({
+    mediaId: mediaId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Create a comment on a media object.
+ * @request POST :/media/{media-id}/comments
+ */
+export async function postMediaMediaIdCommentsCreate(
+  /** Text to post as a comment on the media object as specified in `media-id`. */
+  text: string,      
+  /** The ID of the media resource. */
+  mediaId: string,      
+): Promise<StatusResponse> {
+  const result = await api.media.mediaIdCommentsCreate({
+    query: {
+      text: text,
+    },
+    mediaId: mediaId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Remove a comment.
+ * @request DELETE :/media/{media-id}/comments/{comment-id}
+ */
+export async function deleteMediaMediaIdCommentsCommentIdDelete(
+  /** The ID of the media resource. */
+  mediaId: string,      
+  /** The ID of the comment entry. */
+  commentId: string,      
+): Promise<StatusResponse> {
+  const result = await api.media.mediaIdCommentsCommentIdDelete({
+    mediaId: mediaId,
+    commentId: commentId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Remove a like on this media by the current user.
+ * @request DELETE :/media/{media-id}/likes
+ */
+export async function deleteMediaMediaIdLikesDelete(
+  /** The ID of the media resource. */
+  mediaId: string,      
+): Promise<StatusResponse> {
+  const result = await api.media.mediaIdLikesDelete({
+    mediaId: mediaId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get a list of users who have liked this media.
+ * @request GET :/media/{media-id}/likes
+ * @readonly
+ */
+export async function getMediaMediaIdLikesList(
+  /** The ID of the media resource. */
+  mediaId: string,      
+): Promise<UsersInfoResponse> {
+  const result = await api.media.mediaIdLikesList({
+    mediaId: mediaId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Set a like on this media by the current user.
+ * @request POST :/media/{media-id}/likes
+ */
+export async function postMediaMediaIdLikesCreate(
+  /** The ID of the media resource. */
+  mediaId: string,      
+): Promise<StatusResponse> {
+  const result = await api.media.mediaIdLikesCreate({
+    mediaId: mediaId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Search for tags by name.
+ * @request GET :/tags/search
+ * @readonly
+ */
+export async function getTagsSearchList(
+  /** A valid tag name without a leading \#. (eg. snowy, nofilter) */
+  q: string,      
+): Promise<TagSearchResponse> {
+  const result = await api.tags.searchList({
+    query: {
+      q: q,
+    },
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get information about a tag object.
+ * @request GET :/tags/{tag-name}
+ * @readonly
+ */
+export async function getTagsTagNameList(
+  /** The tag name. */
+  tagName: string,      
+): Promise<TagInfoResponse> {
+  const result = await api.tags.tagNameList({
+    tagName: tagName,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get a list of recently tagged media.
+ * @request GET :/tags/{tag-name}/media/recent
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getTagsTagNameMediaRecentList(
+  /** The tag name. */
+  tagName: string,      
+  /** Count of tagged media to return. */
+  count?: number,      
+  /** Return media before this `min_tag_id`. */
+  min_tag_id?: string,      
+  /** Return media after this `max_tag_id`. */
+  max_tag_id?: string,      
+): Promise<TagMediaListResponse> {
+  const result = await api.tags.tagNameMediaRecentList({
+    query: {
+      count: count,
+      min_tag_id: min_tag_id,
+      max_tag_id: max_tag_id,
+    },
+    tagName: tagName,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Search for a user by name.
+ * @request GET :/users/search
+ * @readonly
+ */
+export async function getUsersSearchList(
+  /** A query string. */
+  q: string,      
+  /** Number of users to return. */
+  count?: number,      
+): Promise<UsersInfoResponse> {
+  const result = await api.users.searchList({
+    query: {
+      q: q,
+      count: count,
+    },
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * See the authenticated user's feed.
+ * @request GET :/users/self/feed
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getUsersSelfFeedList(
+  /** Count of media to return. */
+  count?: number,      
+  /** Return media later than this `min_id`. */
+  min_id?: string,      
+  /** Return media earlier than this `max_id`. */
+  max_id?: string,      
+): Promise<MediaListResponse> {
+  const result = await api.users.selfFeedList({
+    query: {
+      count: count,
+      min_id: min_id,
+      max_id: max_id,
+    },
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * See the list of media liked by the authenticated user.
+ * @request GET :/users/self/media/liked
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getUsersSelfMediaLikedList(
+  /** Count of media to return. */
+  count?: number,      
+  /** Return media liked before this id. */
+  max_like_id?: string,      
+): Promise<MediaListResponse> {
+  const result = await api.users.selfMediaLikedList({
+    query: {
+      count: count,
+      max_like_id: max_like_id,
+    },
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * List the users who have requested this user's permission to follow.
+ * @request GET :/users/self/requested-by
+ * @readonly
+ */
+export async function getUsersSelfRequestedByList(): Promise<UsersInfoResponse> {
+  const result = await api.users.selfRequestedByList({});
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get basic information about a user.
+ * @request GET :/users/{user-id}
+ * @readonly
+ */
+export async function getUsersUserIdList(
+  /** The ID of a user to get information about, or **self** to retrieve information about authenticated user. */
+  userId: string,      
+): Promise<UserResponse> {
+  const result = await api.users.userIdList({
+    userId: userId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get the list of users this user is followed by.
+ * @request GET :/users/{user-id}/followed-by
+ * @readonly
+ */
+export async function getUsersUserIdFollowedByList(
+  /** The ID of a user, or **self** to retrieve information about authenticated user. */
+  userId: string,      
+): Promise<UsersPagingResponse> {
+  const result = await api.users.userIdFollowedByList({
+    userId: userId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get the list of users this user follows.
+ * @request GET :/users/{user-id}/follows
+ * @readonly
+ */
+export async function getUsersUserIdFollowsList(
+  /** The ID of a user, or **self** to retrieve information about authenticated user. */
+  userId: string,      
+): Promise<UsersPagingResponse> {
+  const result = await api.users.userIdFollowsList({
+    userId: userId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get the most recent media published by a user.
+ * @request GET :/users/{user-id}/media/recent
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getUsersUserIdMediaRecentList(
+  /** The ID of a user to get recent media of, or **self** to retrieve media of authenticated user. */
+  userId: string,      
+  /** Count of media to return. */
+  count?: number,      
+  /** Return media before this UNIX timestamp. */
+  max_timestamp?: number,      
+  /** Return media after this UNIX timestamp. */
+  min_timestamp?: number,      
+  /** Return media later than this `min_id`. */
+  min_id?: string,      
+  /** Return media earlier than this `max_id`. */
+  max_id?: string,      
+): Promise<MediaListResponse> {
+  const result = await api.users.userIdMediaRecentList({
+    query: {
+      count: count,
+      max_timestamp: max_timestamp,
+      min_timestamp: min_timestamp,
+      min_id: min_id,
+      max_id: max_id,
+    },
+    userId: userId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Get information about a relationship to another user.
+ * @request GET :/users/{user-id}/relationship
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getUsersUserIdRelationshipList(
+  /** The ID of a user to get information about. */
+  userId: string,      
+): Promise<RelationshipResponse> {
+  const result = await api.users.userIdRelationshipList({
+    userId: userId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}
+
+/**
+ * Modify the relationship between the current user and the target user.
+ * @request POST :/users/{user-id}/relationship
+ * @allowrelaxedtypes
+ */
+export async function postUsersUserIdRelationshipCreate(
+  /** Type of action to apply for relationship with the user. */
+  action: "follow" | "unfollow" | "block" | "unblock" | "approve" | "ignore",      
+  /** The ID of the target user. */
+  userId: string,      
+): Promise<RelationshipPostResponse> {
+  const result = await api.users.userIdRelationshipCreate({
+    query: {
+      action: action,
+    },
+    userId: userId,
+  });
+  if (result.data) {
+    return result.data
+  } else {
+    throw (result.error)
+  }
+}

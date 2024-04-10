@@ -58,7 +58,7 @@ Further reading:
       .preset("true")
       .env("NDC_OAS_FILE_OVERWRITE")
   )
-  // TODO: Add following options: header and base url
+
   .action((args, cmd) => {
     main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true', args.overwrite === 'true', args.headers, args.baseUrl);
   });

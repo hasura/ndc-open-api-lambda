@@ -4,7 +4,7 @@ The OpenAPI Lambda Connector allows you to import APIs that have an OpenAPI/Swag
 Functions that wrap GET requests are marked with `@readonly` annotation, and are exposed as GraphQL Queries by the [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda). All other request types are exposed as GraphQL Mutations.
 
 ## Important
-This connector is under active development right now and is not stable. It has known limitations and might have undocumented issues. Please create an issue if you run into any problems.
+This connector is under active development right now and is not stable. It has [known limitations](https://github.com/hasura/ndc-open-api-lambda?tab=readme-ov-file#known-limiations) and might have undocumented issues. Please create an issue if you run into any problems.
 
 ## Build and Run
 You can use the Open API Connector via Docker or via the bundled CLI.
@@ -24,13 +24,18 @@ docker run --rm ndc-oas-lambda:latest update -h
 # 1. The OpenAPI document is mounted at `/etc/connector/` as `swagger.json`. OR
 # 2. The link to the OpenAPI document is provided via the env var `NDC_OAS_DOCUMENT_URI`
 # Please note that mounting a directory at /etc/connector/ is required in both cases, since that is where the code is generated
-# **** Examples ****
+
+# **** START: Examples ****
 # run the code generation
 docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ndc-oas-lambda:latest update
+
 # with headers
 docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_HEADERS=${key1=value1&key2=value2&key3=value3...} ndc-oas-lambda:latest update
+
 # with headers and baseUrl
 docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_HEADERS=${key1=value1&key2=value2&key3=value3...} -e NDC_OAS_BASE_URL=http://demoapi.com/ ndc-oas-lambda:latest update
+
+# **** END: Examples ****
 
 # start the NodeJS Lambda Connector
 docker run --rm -p 8080:8080 -v ./:/etc/connector ndc-oas-lambda:latest
@@ -46,15 +51,15 @@ npm i
 npm run install-bin
 
 # print help for update command
-ndc-oas-lamda update -h
+ndc-oas-lambda update -h
 
 # **** Examples ****
 # run the update command to generate code
-ndc-oas-lamda update --open-api ${link/path to open api swagger document}
+ndc-oas-lambda update --open-api ${link/path to open api swagger document}
 # with headers
-ndc-oas-lamda update --open-api ${link/path to open api swagger document} -H key1=value -H key2=value2 -H keyN=valueN
+ndc-oas-lambda update --open-api ${link/path to open api swagger document} -H key1=value -H key2=value2 -H keyN=valueN
 # with baseurl and headers
-ndc-oas-lamda update --open-api ${link/path to open api swagger document} -H key1=value -H key2=value2 -H keyN=valueN -b http://localhost:8081
+ndc-oas-lambda update --open-api ${link/path to open api swagger document} -H key1=value -H key2=value2 -H keyN=valueN -b http://localhost:8081
 
 # start the NodeJS Lambda Connector
 npm run watch
@@ -72,4 +77,7 @@ PATCH | y | y | y | Not Tested
 
 
 ## Known Limiations
+- `void` return type for both success and error at the same time is not supported
+- `Record<>` and `Map<>` return types are wrapped as JSON
+- Support for [Relaxed Types](https://github.com/hasura/ndc-nodejs-lambda/tree/main?tab=readme-ov-file#relaxed-types) is a WiP
 - [Types not supported by the NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#unsupported-types) are not supported
