@@ -33,6 +33,11 @@ const tests = [
     goldenFile: './golden-files/petstore-headers',
     headers: "auth=some-token=1&type=json,xml,text",
   },
+  {
+    name: 'GenerateCode_Instagram',
+    oasFile: './oas-docs/instagram.json',
+    goldenFile: './golden-files/instagram',
+  },
 ];
 
 describe("GenerateCode", async () => {
