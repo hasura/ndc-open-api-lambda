@@ -43,6 +43,18 @@ const tests = [
     oasFile: './oas-docs/geomag.json',
     goldenFile: './golden-files/geomag',
   },
+  {
+    name: 'GenerateCode_GoogleHome',
+    oasFile: './oas-docs/google-home.json',
+    goldenFile: './golden-files/google-home',
+    baseUrl: "http://localhost:13191",
+  },
+  {
+    name: 'GenerateCode_GoogleAdsense',
+    oasFile: './oas-docs/google-adsense.json',
+    goldenFile: './golden-files/google-adsense',
+    baseUrl: "http://localhost:13191",
+  },
 ];
 
 describe("GenerateCode", async () => {
