@@ -42,7 +42,7 @@ export type ApiRoute = {
 
 export class ParsedApiRoutes {
   private apiRoutes: ApiRoute[] = [];
-  private importList: Set<string> = new Set<string>(['Api']);
+  private importList: Set<string> = new Set<string>();
   private generatedComponents = new Set<string>();
   private hasEnumVariables = false;
 
@@ -51,6 +51,8 @@ export class ParsedApiRoutes {
   constructor(generatedComponents: Set<string>, apiComponents: ApiComponents) {
     this.generatedComponents = generatedComponents;
     this.apiComponents = apiComponents;
+    this.importList = generatedComponents;
+    this.importList.add('Api');
   }
 
   private reservedTypes = new Set<string>(['void', 'any',
@@ -262,6 +264,23 @@ export class ParsedApiRoutes {
       paramType: ParamType.BODY,
     }
     this.addTypeToImportList(paramType, this.importList);
+    if (arg['schema'] && arg.schema.properties) {
+      for (const propertyKey in arg.schema.properties) {
+        const property: any = arg.schema.properties[propertyKey];
+        if (property.enum && property.enum.length > 0) {
+          this.hasEnumVariables = true;
+        }
+        if (property['$ref']) {
+          let ndcComponent = this.apiComponents.getNdcComponentByRef(property['$ref']);
+          if (ndcComponent) {
+            this.addTypeToImportList(ndcComponent.component.typeName, this.importList);
+            if (ndcComponent.isRelaxedType) {
+              this.hasEnumVariables = true; // to add @relaxed type annotation
+            }
+          }
+        }
+      }
+    }
     return param;
   }
 
