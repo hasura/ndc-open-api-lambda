@@ -1,9 +1,26 @@
-import { Api, MediaListResponse, LocationSearchResponse, LocationInfoResponse, MediaSearchResponse, MediaEntryResponse, CommentsResponse, StatusResponse, UsersInfoResponse, TagSearchResponse, TagInfoResponse, TagMediaListResponse, UserResponse, UsersPagingResponse, RelationshipResponse, RelationshipPostResponse } from './api';
+import {
+  Api,
+  MediaListResponse,
+  LocationSearchResponse,
+  LocationInfoResponse,
+  MediaSearchResponse,
+  MediaEntryResponse,
+  CommentsResponse,
+  StatusResponse,
+  UsersInfoResponse,
+  TagSearchResponse,
+  TagInfoResponse,
+  TagMediaListResponse,
+  UserResponse,
+  UsersPagingResponse,
+  RelationshipResponse,
+  RelationshipPostResponse,
+} from "./api"
 import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
 
 const api = new Api({
-  baseUrl: '',
-});
+  baseUrl: "",
+})
 
 /**
  * Get recent media from a custom geo-id.
@@ -13,11 +30,11 @@ const api = new Api({
  */
 export async function getGeographiesGeoIdMediaRecentList(
   /** The geography ID. */
-  geoId: string,      
+  geoId: string,
   /** Max number of media to return. */
-  count?: number,      
+  count?: number,
   /** Return media before this `min_id`. */
-  min_id?: string,      
+  min_id?: string,
 ): Promise<MediaListResponse> {
   const result = await api.geographies.geoIdMediaRecentList({
     query: {
@@ -25,11 +42,11 @@ export async function getGeographiesGeoIdMediaRecentList(
       min_id: min_id,
     },
     geoId: geoId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -40,21 +57,21 @@ export async function getGeographiesGeoIdMediaRecentList(
  */
 export async function getLocationsSearchList(
   /** Default is 1000m (distance=1000), max distance is 5000. */
-  distance?: number,      
+  distance?: number,
   /** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */
-  facebook_places_id?: string,      
+  facebook_places_id?: string,
   /** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use
 `lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.
  */
-  foursquare_id?: string,      
+  foursquare_id?: string,
   /** Latitude of the center search coordinate. If used, `lng` is required. */
-  lat?: number,      
+  lat?: number,
   /** Longitude of the center search coordinate. If used, `lat` is required. */
-  lng?: number,      
+  lng?: number,
   /** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use
 `lat` and `lng`.
  */
-  foursquare_v2_id?: string,      
+  foursquare_v2_id?: string,
 ): Promise<LocationSearchResponse> {
   const result = await api.locations.searchList({
     query: {
@@ -65,11 +82,11 @@ export async function getLocationsSearchList(
       lng: lng,
       foursquare_v2_id: foursquare_v2_id,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -80,15 +97,15 @@ export async function getLocationsSearchList(
  */
 export async function getLocationsLocationIdList(
   /** The location ID. */
-  locationId: string,      
+  locationId: string,
 ): Promise<LocationInfoResponse> {
   const result = await api.locations.locationIdList({
     locationId: locationId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -100,15 +117,15 @@ export async function getLocationsLocationIdList(
  */
 export async function getLocationsLocationIdMediaRecentList(
   /** The location ID. */
-  locationId: string,      
+  locationId: string,
   /** Return media after this UNIX timestamp. */
-  min_timestamp?: number,      
+  min_timestamp?: number,
   /** Return media before this UNIX timestamp. */
-  max_timestamp?: number,      
+  max_timestamp?: number,
   /** Return media before this `min_id`. */
-  min_id?: string,      
+  min_id?: string,
   /** Return media after this `max_id`. */
-  max_id?: string,      
+  max_id?: string,
 ): Promise<MediaListResponse> {
   const result = await api.locations.locationIdMediaRecentList({
     query: {
@@ -118,11 +135,11 @@ export async function getLocationsLocationIdMediaRecentList(
       max_id: max_id,
     },
     locationId: locationId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -133,11 +150,11 @@ export async function getLocationsLocationIdMediaRecentList(
  * @readonly
  */
 export async function getMediaPopularList(): Promise<MediaSearchResponse> {
-  const result = await api.media.popularList({});
+  const result = await api.media.popularList({})
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -149,15 +166,15 @@ export async function getMediaPopularList(): Promise<MediaSearchResponse> {
  */
 export async function getMediaSearchList(
   /** Latitude of the center search coordinate. If used, `lng` is required. */
-  lat: number,      
+  lat: number,
   /** Longitude of the center search coordinate. If used, `lat` is required. */
-  lng: number,      
+  lng: number,
   /** A unix timestamp. All media returned will be taken later than this timestamp. */
-  min_timestamp?: number,      
+  min_timestamp?: number,
   /** A unix timestamp. All media returned will be taken earlier than this timestamp. */
-  max_timestamp?: number,      
+  max_timestamp?: number,
   /** Default is 1km (distance=1000), max distance is 5km. */
-  distance?: number,      
+  distance?: number,
 ): Promise<MediaSearchResponse> {
   const result = await api.media.searchList({
     query: {
@@ -167,11 +184,11 @@ export async function getMediaSearchList(
       max_timestamp: max_timestamp,
       distance: distance,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -183,15 +200,15 @@ export async function getMediaSearchList(
  */
 export async function getMediaShortcodeDetail(
   /** The short code of the media resource. */
-  shortcode: string,      
+  shortcode: string,
 ): Promise<MediaEntryResponse> {
   const result = await api.media.shortcodeDetail({
     shortcode: shortcode,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -203,15 +220,15 @@ export async function getMediaShortcodeDetail(
  */
 export async function getMediaMediaIdList(
   /** The ID of the media resource. */
-  mediaId: string,      
+  mediaId: string,
 ): Promise<MediaEntryResponse> {
   const result = await api.media.mediaIdList({
     mediaId: mediaId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -222,15 +239,15 @@ export async function getMediaMediaIdList(
  */
 export async function getMediaMediaIdCommentsList(
   /** The ID of the media resource. */
-  mediaId: string,      
+  mediaId: string,
 ): Promise<CommentsResponse> {
   const result = await api.media.mediaIdCommentsList({
     mediaId: mediaId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -240,20 +257,20 @@ export async function getMediaMediaIdCommentsList(
  */
 export async function postMediaMediaIdCommentsCreate(
   /** Text to post as a comment on the media object as specified in `media-id`. */
-  text: string,      
+  text: string,
   /** The ID of the media resource. */
-  mediaId: string,      
+  mediaId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdCommentsCreate({
     query: {
       text: text,
     },
     mediaId: mediaId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -263,18 +280,18 @@ export async function postMediaMediaIdCommentsCreate(
  */
 export async function deleteMediaMediaIdCommentsCommentIdDelete(
   /** The ID of the media resource. */
-  mediaId: string,      
+  mediaId: string,
   /** The ID of the comment entry. */
-  commentId: string,      
+  commentId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdCommentsCommentIdDelete({
     mediaId: mediaId,
     commentId: commentId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -284,15 +301,15 @@ export async function deleteMediaMediaIdCommentsCommentIdDelete(
  */
 export async function deleteMediaMediaIdLikesDelete(
   /** The ID of the media resource. */
-  mediaId: string,      
+  mediaId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdLikesDelete({
     mediaId: mediaId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -303,15 +320,15 @@ export async function deleteMediaMediaIdLikesDelete(
  */
 export async function getMediaMediaIdLikesList(
   /** The ID of the media resource. */
-  mediaId: string,      
+  mediaId: string,
 ): Promise<UsersInfoResponse> {
   const result = await api.media.mediaIdLikesList({
     mediaId: mediaId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -321,15 +338,15 @@ export async function getMediaMediaIdLikesList(
  */
 export async function postMediaMediaIdLikesCreate(
   /** The ID of the media resource. */
-  mediaId: string,      
+  mediaId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdLikesCreate({
     mediaId: mediaId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -340,17 +357,17 @@ export async function postMediaMediaIdLikesCreate(
  */
 export async function getTagsSearchList(
   /** A valid tag name without a leading \#. (eg. snowy, nofilter) */
-  q: string,      
+  q: string,
 ): Promise<TagSearchResponse> {
   const result = await api.tags.searchList({
     query: {
       q: q,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -361,15 +378,15 @@ export async function getTagsSearchList(
  */
 export async function getTagsTagNameList(
   /** The tag name. */
-  tagName: string,      
+  tagName: string,
 ): Promise<TagInfoResponse> {
   const result = await api.tags.tagNameList({
     tagName: tagName,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -381,13 +398,13 @@ export async function getTagsTagNameList(
  */
 export async function getTagsTagNameMediaRecentList(
   /** The tag name. */
-  tagName: string,      
+  tagName: string,
   /** Count of tagged media to return. */
-  count?: number,      
+  count?: number,
   /** Return media before this `min_tag_id`. */
-  min_tag_id?: string,      
+  min_tag_id?: string,
   /** Return media after this `max_tag_id`. */
-  max_tag_id?: string,      
+  max_tag_id?: string,
 ): Promise<TagMediaListResponse> {
   const result = await api.tags.tagNameMediaRecentList({
     query: {
@@ -396,11 +413,11 @@ export async function getTagsTagNameMediaRecentList(
       max_tag_id: max_tag_id,
     },
     tagName: tagName,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -411,20 +428,20 @@ export async function getTagsTagNameMediaRecentList(
  */
 export async function getUsersSearchList(
   /** A query string. */
-  q: string,      
+  q: string,
   /** Number of users to return. */
-  count?: number,      
+  count?: number,
 ): Promise<UsersInfoResponse> {
   const result = await api.users.searchList({
     query: {
       q: q,
       count: count,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -436,11 +453,11 @@ export async function getUsersSearchList(
  */
 export async function getUsersSelfFeedList(
   /** Count of media to return. */
-  count?: number,      
+  count?: number,
   /** Return media later than this `min_id`. */
-  min_id?: string,      
+  min_id?: string,
   /** Return media earlier than this `max_id`. */
-  max_id?: string,      
+  max_id?: string,
 ): Promise<MediaListResponse> {
   const result = await api.users.selfFeedList({
     query: {
@@ -448,11 +465,11 @@ export async function getUsersSelfFeedList(
       min_id: min_id,
       max_id: max_id,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -464,20 +481,20 @@ export async function getUsersSelfFeedList(
  */
 export async function getUsersSelfMediaLikedList(
   /** Count of media to return. */
-  count?: number,      
+  count?: number,
   /** Return media liked before this id. */
-  max_like_id?: string,      
+  max_like_id?: string,
 ): Promise<MediaListResponse> {
   const result = await api.users.selfMediaLikedList({
     query: {
       count: count,
       max_like_id: max_like_id,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -487,11 +504,11 @@ export async function getUsersSelfMediaLikedList(
  * @readonly
  */
 export async function getUsersSelfRequestedByList(): Promise<UsersInfoResponse> {
-  const result = await api.users.selfRequestedByList({});
+  const result = await api.users.selfRequestedByList({})
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -502,15 +519,15 @@ export async function getUsersSelfRequestedByList(): Promise<UsersInfoResponse> 
  */
 export async function getUsersUserIdList(
   /** The ID of a user to get information about, or **self** to retrieve information about authenticated user. */
-  userId: string,      
+  userId: string,
 ): Promise<UserResponse> {
   const result = await api.users.userIdList({
     userId: userId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -521,15 +538,15 @@ export async function getUsersUserIdList(
  */
 export async function getUsersUserIdFollowedByList(
   /** The ID of a user, or **self** to retrieve information about authenticated user. */
-  userId: string,      
+  userId: string,
 ): Promise<UsersPagingResponse> {
   const result = await api.users.userIdFollowedByList({
     userId: userId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -540,15 +557,15 @@ export async function getUsersUserIdFollowedByList(
  */
 export async function getUsersUserIdFollowsList(
   /** The ID of a user, or **self** to retrieve information about authenticated user. */
-  userId: string,      
+  userId: string,
 ): Promise<UsersPagingResponse> {
   const result = await api.users.userIdFollowsList({
     userId: userId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -560,17 +577,17 @@ export async function getUsersUserIdFollowsList(
  */
 export async function getUsersUserIdMediaRecentList(
   /** The ID of a user to get recent media of, or **self** to retrieve media of authenticated user. */
-  userId: string,      
+  userId: string,
   /** Count of media to return. */
-  count?: number,      
+  count?: number,
   /** Return media before this UNIX timestamp. */
-  max_timestamp?: number,      
+  max_timestamp?: number,
   /** Return media after this UNIX timestamp. */
-  min_timestamp?: number,      
+  min_timestamp?: number,
   /** Return media later than this `min_id`. */
-  min_id?: string,      
+  min_id?: string,
   /** Return media earlier than this `max_id`. */
-  max_id?: string,      
+  max_id?: string,
 ): Promise<MediaListResponse> {
   const result = await api.users.userIdMediaRecentList({
     query: {
@@ -581,11 +598,11 @@ export async function getUsersUserIdMediaRecentList(
       max_id: max_id,
     },
     userId: userId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -597,15 +614,15 @@ export async function getUsersUserIdMediaRecentList(
  */
 export async function getUsersUserIdRelationshipList(
   /** The ID of a user to get information about. */
-  userId: string,      
+  userId: string,
 ): Promise<RelationshipResponse> {
   const result = await api.users.userIdRelationshipList({
     userId: userId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -616,19 +633,19 @@ export async function getUsersUserIdRelationshipList(
  */
 export async function postUsersUserIdRelationshipCreate(
   /** Type of action to apply for relationship with the user. */
-  action: "follow" | "unfollow" | "block" | "unblock" | "approve" | "ignore",      
+  action: "follow" | "unfollow" | "block" | "unblock" | "approve" | "ignore",
   /** The ID of the target user. */
-  userId: string,      
+  userId: string,
 ): Promise<RelationshipPostResponse> {
   const result = await api.users.userIdRelationshipCreate({
     query: {
       action: action,
     },
     userId: userId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
