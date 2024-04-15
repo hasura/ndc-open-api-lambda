@@ -42,7 +42,7 @@ export type ApiRoute = {
 
 export class ParsedApiRoutes {
   private apiRoutes: ApiRoute[] = [];
-  private importList: Set<string> = new Set<string>(['Api']);
+  private importList: Set<string> = new Set<string>();
   private generatedComponents = new Set<string>();
   private hasEnumVariables = false;
 
@@ -51,6 +51,8 @@ export class ParsedApiRoutes {
   constructor(generatedComponents: Set<string>, apiComponents: ApiComponents) {
     this.generatedComponents = generatedComponents;
     this.apiComponents = apiComponents;
+    this.importList = generatedComponents;
+    this.importList.add('Api');
   }
 
   private reservedTypes = new Set<string>(['void', 'any',
