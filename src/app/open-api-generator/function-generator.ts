@@ -3,6 +3,7 @@ import { ApiComponents } from './api-generator';
 import { ParsedApiRoutes } from './parsedApiRoutes';
 import { Eta } from 'eta';
 import { getTemplatesDirectory } from "./index";
+import * as prettier from "prettier";
 
 const CircularJSON = require('circular-json');
 
@@ -15,7 +16,7 @@ const templateFile = "functions.ejs";
  * @param headers Expected to be in format: key1=value1&key2=value2&key3=value3...
  * @returns 
  */
-export function generateFunctionsTypescriptFile(apiComponents: ApiComponents, headers: string | undefined, baseUrl: string | undefined): string {
+export async function generateFunctionsTypescriptFile(apiComponents: ApiComponents, headers: string | undefined, baseUrl: string | undefined): Promise<string> {
   templateDir = path.resolve(getTemplatesDirectory(), './functions');
 
   const parseApiRoutes = new ParsedApiRoutes(new Set<string>(apiComponents.getTypeNames()), apiComponents);
@@ -27,7 +28,8 @@ export function generateFunctionsTypescriptFile(apiComponents: ApiComponents, he
   const headerMap = parseHeaders(headers);
 
   const eta = new Eta({ views: templateDir});
-  const fileStr = eta.render(templateFile, { apiRoutes: parseApiRoutes.getApiRoutes(), importList: parseApiRoutes.getImportList(), baseUrl: baseUrl? baseUrl : '', headerMap: headerMap });
+  let fileStr = eta.render(templateFile, { apiRoutes: parseApiRoutes.getApiRoutes(), importList: parseApiRoutes.getImportList(), baseUrl: baseUrl? baseUrl : '', headerMap: headerMap });
+  fileStr = await prettier.format(fileStr, { semi: false, parser: "typescript" }); // correctly format the generated file string
   return fileStr;
 }
 

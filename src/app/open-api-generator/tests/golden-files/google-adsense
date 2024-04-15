@@ -1,9 +1,27 @@
-import { Api, Accounts, Account, AdClients, AdCode, AdUnits, AdUnit, CustomChannels, CustomChannel, UrlChannels, Alerts, Payments, AdsenseReportsGenerateResponse, SavedReports, SavedAdStyles, SavedAdStyle, Metadata } from './api';
+import {
+  Api,
+  Accounts,
+  Account,
+  AdClients,
+  AdCode,
+  AdUnits,
+  AdUnit,
+  CustomChannels,
+  CustomChannel,
+  UrlChannels,
+  Alerts,
+  Payments,
+  AdsenseReportsGenerateResponse,
+  SavedReports,
+  SavedAdStyles,
+  SavedAdStyle,
+  Metadata,
+} from "./api"
 import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
 
 const api = new Api({
-  baseUrl: 'http://localhost:13191',
-});
+  baseUrl: "http://localhost:13191",
+})
 
 /**
  * undefined
@@ -13,23 +31,23 @@ const api = new Api({
  */
 export async function getAccountsAdsenseAccountsList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of accounts to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through accounts. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<Accounts> {
   const result = await api.accounts.adsenseAccountsList({
     query: {
@@ -43,11 +61,11 @@ export async function getAccountsAdsenseAccountsList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -59,23 +77,23 @@ export async function getAccountsAdsenseAccountsList(
  */
 export async function getAccountsAdsenseAccountsGet(
   /** Account to get information about. */
-  accountId: string,      
+  accountId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Whether the tree of sub accounts should be returned. */
-  tree?: boolean,      
+  tree?: boolean,
 ): Promise<Account> {
   const result = await api.accounts.adsenseAccountsGet({
     query: {
@@ -89,11 +107,11 @@ export async function getAccountsAdsenseAccountsGet(
       tree: tree,
     },
     accountId: accountId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -105,25 +123,25 @@ export async function getAccountsAdsenseAccountsGet(
  */
 export async function getAccountsAdsenseAccountsAdclientsList(
   /** Account for which to list ad clients. */
-  accountId: string,      
+  accountId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of ad clients to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<AdClients> {
   const result = await api.accounts.adsenseAccountsAdclientsList({
     query: {
@@ -138,11 +156,11 @@ export async function getAccountsAdsenseAccountsAdclientsList(
       pageToken: pageToken,
     },
     accountId: accountId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -154,25 +172,25 @@ export async function getAccountsAdsenseAccountsAdclientsList(
  */
 export async function getAccountsAdsenseAccountsAdclientsGetAdCode(
   /** Account which contains the ad client. */
-  accountId: string,      
+  accountId: string,
   /** Ad client to get the code for. */
-  adClientId: string,      
+  adClientId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Tag partner to include in the ad code snippet. */
-  tagPartner?: string,      
+  tagPartner?: string,
 ): Promise<AdCode> {
   const result = await api.accounts.adsenseAccountsAdclientsGetAdCode({
     query: {
@@ -187,11 +205,11 @@ export async function getAccountsAdsenseAccountsAdclientsGetAdCode(
     },
     accountId: accountId,
     adClientId: adClientId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -203,29 +221,29 @@ export async function getAccountsAdsenseAccountsAdclientsGetAdCode(
  */
 export async function getAccountsAdsenseAccountsAdunitsList(
   /** Account to which the ad client belongs. */
-  accountId: string,      
+  accountId: string,
   /** Ad client for which to list ad units. */
-  adClientId: string,      
+  adClientId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Whether to include inactive ad units. Default: true. */
-  includeInactive?: boolean,      
+  includeInactive?: boolean,
   /** The maximum number of ad units to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<AdUnits> {
   const result = await api.accounts.adsenseAccountsAdunitsList({
     query: {
@@ -242,11 +260,11 @@ export async function getAccountsAdsenseAccountsAdunitsList(
     },
     accountId: accountId,
     adClientId: adClientId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -258,25 +276,25 @@ export async function getAccountsAdsenseAccountsAdunitsList(
  */
 export async function getAccountsAdsenseAccountsAdunitsGet(
   /** Account to which the ad client belongs. */
-  accountId: string,      
+  accountId: string,
   /** Ad client for which to get the ad unit. */
-  adClientId: string,      
+  adClientId: string,
   /** Ad unit to retrieve. */
-  adUnitId: string,      
+  adUnitId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<AdUnit> {
   const result = await api.accounts.adsenseAccountsAdunitsGet({
     query: {
@@ -291,11 +309,11 @@ export async function getAccountsAdsenseAccountsAdunitsGet(
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -307,25 +325,25 @@ export async function getAccountsAdsenseAccountsAdunitsGet(
  */
 export async function getAccountsAdsenseAccountsAdunitsGetAdCode(
   /** Account which contains the ad client. */
-  accountId: string,      
+  accountId: string,
   /** Ad client with contains the ad unit. */
-  adClientId: string,      
+  adClientId: string,
   /** Ad unit to get the code for. */
-  adUnitId: string,      
+  adUnitId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<AdCode> {
   const result = await api.accounts.adsenseAccountsAdunitsGetAdCode({
     query: {
@@ -340,11 +358,11 @@ export async function getAccountsAdsenseAccountsAdunitsGetAdCode(
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -356,29 +374,29 @@ export async function getAccountsAdsenseAccountsAdunitsGetAdCode(
  */
 export async function getAccountsAdsenseAccountsAdunitsCustomchannelsList(
   /** Account to which the ad client belongs. */
-  accountId: string,      
+  accountId: string,
   /** Ad client which contains the ad unit. */
-  adClientId: string,      
+  adClientId: string,
   /** Ad unit for which to list custom channels. */
-  adUnitId: string,      
+  adUnitId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of custom channels to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<CustomChannels> {
   const result = await api.accounts.adsenseAccountsAdunitsCustomchannelsList({
     query: {
@@ -395,11 +413,11 @@ export async function getAccountsAdsenseAccountsAdunitsCustomchannelsList(
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -411,27 +429,27 @@ export async function getAccountsAdsenseAccountsAdunitsCustomchannelsList(
  */
 export async function getAccountsAdsenseAccountsCustomchannelsList(
   /** Account to which the ad client belongs. */
-  accountId: string,      
+  accountId: string,
   /** Ad client for which to list custom channels. */
-  adClientId: string,      
+  adClientId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of custom channels to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<CustomChannels> {
   const result = await api.accounts.adsenseAccountsCustomchannelsList({
     query: {
@@ -447,11 +465,11 @@ export async function getAccountsAdsenseAccountsCustomchannelsList(
     },
     accountId: accountId,
     adClientId: adClientId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -463,25 +481,25 @@ export async function getAccountsAdsenseAccountsCustomchannelsList(
  */
 export async function getAccountsAdsenseAccountsCustomchannelsGet(
   /** Account to which the ad client belongs. */
-  accountId: string,      
+  accountId: string,
   /** Ad client which contains the custom channel. */
-  adClientId: string,      
+  adClientId: string,
   /** Custom channel to retrieve. */
-  customChannelId: string,      
+  customChannelId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<CustomChannel> {
   const result = await api.accounts.adsenseAccountsCustomchannelsGet({
     query: {
@@ -496,11 +514,11 @@ export async function getAccountsAdsenseAccountsCustomchannelsGet(
     accountId: accountId,
     adClientId: adClientId,
     customChannelId: customChannelId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -512,31 +530,31 @@ export async function getAccountsAdsenseAccountsCustomchannelsGet(
  */
 export async function getAccountsAdsenseAccountsCustomchannelsAdunitsList(
   /** Account to which the ad client belongs. */
-  accountId: string,      
+  accountId: string,
   /** Ad client which contains the custom channel. */
-  adClientId: string,      
+  adClientId: string,
   /** Custom channel for which to list ad units. */
-  customChannelId: string,      
+  customChannelId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Whether to include inactive ad units. Default: true. */
-  includeInactive?: boolean,      
+  includeInactive?: boolean,
   /** The maximum number of ad units to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<AdUnits> {
   const result = await api.accounts.adsenseAccountsCustomchannelsAdunitsList({
     query: {
@@ -554,11 +572,11 @@ export async function getAccountsAdsenseAccountsCustomchannelsAdunitsList(
     accountId: accountId,
     adClientId: adClientId,
     customChannelId: customChannelId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -570,27 +588,27 @@ export async function getAccountsAdsenseAccountsCustomchannelsAdunitsList(
  */
 export async function getAccountsAdsenseAccountsUrlchannelsList(
   /** Account to which the ad client belongs. */
-  accountId: string,      
+  accountId: string,
   /** Ad client for which to list URL channels. */
-  adClientId: string,      
+  adClientId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of URL channels to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<UrlChannels> {
   const result = await api.accounts.adsenseAccountsUrlchannelsList({
     query: {
@@ -606,11 +624,11 @@ export async function getAccountsAdsenseAccountsUrlchannelsList(
     },
     accountId: accountId,
     adClientId: adClientId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -622,23 +640,23 @@ export async function getAccountsAdsenseAccountsUrlchannelsList(
  */
 export async function getAccountsAdsenseAccountsAlertsList(
   /** Account for which to retrieve the alerts. */
-  accountId: string,      
+  accountId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported. */
-  locale?: string,      
+  locale?: string,
 ): Promise<Alerts> {
   const result = await api.accounts.adsenseAccountsAlertsList({
     query: {
@@ -652,11 +670,11 @@ export async function getAccountsAdsenseAccountsAlertsList(
       locale: locale,
     },
     accountId: accountId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -667,23 +685,23 @@ export async function getAccountsAdsenseAccountsAlertsList(
  */
 export async function deleteAccountsAdsenseAccountsAlertsDelete(
   /** Account which contains the ad unit. */
-  accountId: string,      
+  accountId: string,
   /** Alert to delete. */
-  alertId: string,      
+  alertId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.accounts.adsenseAccountsAlertsDelete({
     query: {
@@ -697,11 +715,11 @@ export async function deleteAccountsAdsenseAccountsAlertsDelete(
     },
     accountId: accountId,
     alertId: alertId,
-  });
+  })
   if (result.error) {
-    throw (result.error)
+    throw result.error
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    return new hasuraSdk.JSONValue(result.data)
   }
 }
 
@@ -713,21 +731,21 @@ export async function deleteAccountsAdsenseAccountsAlertsDelete(
  */
 export async function getAccountsAdsenseAccountsPaymentsList(
   /** Account for which to retrieve the payments. */
-  accountId: string,      
+  accountId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<Payments> {
   const result = await api.accounts.adsenseAccountsPaymentsList({
     query: {
@@ -740,11 +758,11 @@ export async function getAccountsAdsenseAccountsPaymentsList(
       userIp: userIp,
     },
     accountId: accountId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -756,43 +774,43 @@ export async function getAccountsAdsenseAccountsPaymentsList(
  */
 export async function getAccountsAdsenseAccountsReportsGenerate(
   /** Start of the date range to report on in "YYYY-MM-DD" format, inclusive. */
-  startDate: string,      
+  startDate: string,
   /** End of the date range to report on in "YYYY-MM-DD" format, inclusive. */
-  endDate: string,      
+  endDate: string,
   /** Account upon which to report. */
-  accountId: string,      
+  accountId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set. */
-  currency?: string,      
+  currency?: string,
   /** Dimensions to base the report on. */
-  dimension?: string[],      
+  dimension?: string[],
   /** Filters to be run on the report. */
-  filter?: string[],      
+  filter?: string[],
   /** Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified. */
-  locale?: string,      
+  locale?: string,
   /** The maximum number of rows of report data to return. */
-  maxResults?: number,      
+  maxResults?: number,
   /** Numeric columns to include in the report. */
-  metric?: string[],      
+  metric?: string[],
   /** The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending. */
-  sort?: string[],      
+  sort?: string[],
   /** Index of the first row of report data to return. */
-  startIndex?: number,      
+  startIndex?: number,
   /** Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used. */
-  useTimezoneReporting?: boolean,      
+  useTimezoneReporting?: boolean,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.accounts.adsenseAccountsReportsGenerate({
     query: {
@@ -816,11 +834,11 @@ export async function getAccountsAdsenseAccountsReportsGenerate(
       useTimezoneReporting: useTimezoneReporting,
     },
     accountId: accountId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -832,25 +850,25 @@ export async function getAccountsAdsenseAccountsReportsGenerate(
  */
 export async function getAccountsAdsenseAccountsReportsSavedList(
   /** Account to which the saved reports belong. */
-  accountId: string,      
+  accountId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of saved reports to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<SavedReports> {
   const result = await api.accounts.adsenseAccountsReportsSavedList({
     query: {
@@ -865,11 +883,11 @@ export async function getAccountsAdsenseAccountsReportsSavedList(
       pageToken: pageToken,
     },
     accountId: accountId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -881,29 +899,29 @@ export async function getAccountsAdsenseAccountsReportsSavedList(
  */
 export async function getAccountsAdsenseAccountsReportsSavedGenerate(
   /** Account to which the saved reports belong. */
-  accountId: string,      
+  accountId: string,
   /** The saved report to retrieve. */
-  savedReportId: string,      
+  savedReportId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified. */
-  locale?: string,      
+  locale?: string,
   /** The maximum number of rows of report data to return. */
-  maxResults?: number,      
+  maxResults?: number,
   /** Index of the first row of report data to return. */
-  startIndex?: number,      
+  startIndex?: number,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.accounts.adsenseAccountsReportsSavedGenerate({
     query: {
@@ -920,11 +938,11 @@ export async function getAccountsAdsenseAccountsReportsSavedGenerate(
     },
     accountId: accountId,
     savedReportId: savedReportId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -936,25 +954,25 @@ export async function getAccountsAdsenseAccountsReportsSavedGenerate(
  */
 export async function getAccountsAdsenseAccountsSavedadstylesList(
   /** Account for which to list saved ad styles. */
-  accountId: string,      
+  accountId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of saved ad styles to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<SavedAdStyles> {
   const result = await api.accounts.adsenseAccountsSavedadstylesList({
     query: {
@@ -969,11 +987,11 @@ export async function getAccountsAdsenseAccountsSavedadstylesList(
       pageToken: pageToken,
     },
     accountId: accountId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -985,23 +1003,23 @@ export async function getAccountsAdsenseAccountsSavedadstylesList(
  */
 export async function getAccountsAdsenseAccountsSavedadstylesGet(
   /** Account for which to get the saved ad style. */
-  accountId: string,      
+  accountId: string,
   /** Saved ad style to retrieve. */
-  savedAdStyleId: string,      
+  savedAdStyleId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<SavedAdStyle> {
   const result = await api.accounts.adsenseAccountsSavedadstylesGet({
     query: {
@@ -1015,11 +1033,11 @@ export async function getAccountsAdsenseAccountsSavedadstylesGet(
     },
     accountId: accountId,
     savedAdStyleId: savedAdStyleId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1031,23 +1049,23 @@ export async function getAccountsAdsenseAccountsSavedadstylesGet(
  */
 export async function getAdclientsAdsenseAdclientsList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of ad clients to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<AdClients> {
   const result = await api.adclients.adsenseAdclientsList({
     query: {
@@ -1061,11 +1079,11 @@ export async function getAdclientsAdsenseAdclientsList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1077,27 +1095,27 @@ export async function getAdclientsAdsenseAdclientsList(
  */
 export async function getAdclientsAdsenseAdunitsList(
   /** Ad client for which to list ad units. */
-  adClientId: string,      
+  adClientId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Whether to include inactive ad units. Default: true. */
-  includeInactive?: boolean,      
+  includeInactive?: boolean,
   /** The maximum number of ad units to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<AdUnits> {
   const result = await api.adclients.adsenseAdunitsList({
     query: {
@@ -1113,11 +1131,11 @@ export async function getAdclientsAdsenseAdunitsList(
       pageToken: pageToken,
     },
     adClientId: adClientId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1129,23 +1147,23 @@ export async function getAdclientsAdsenseAdunitsList(
  */
 export async function getAdclientsAdsenseAdunitsGet(
   /** Ad client for which to get the ad unit. */
-  adClientId: string,      
+  adClientId: string,
   /** Ad unit to retrieve. */
-  adUnitId: string,      
+  adUnitId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<AdUnit> {
   const result = await api.adclients.adsenseAdunitsGet({
     query: {
@@ -1159,11 +1177,11 @@ export async function getAdclientsAdsenseAdunitsGet(
     },
     adClientId: adClientId,
     adUnitId: adUnitId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1175,23 +1193,23 @@ export async function getAdclientsAdsenseAdunitsGet(
  */
 export async function getAdclientsAdsenseAdunitsGetAdCode(
   /** Ad client with contains the ad unit. */
-  adClientId: string,      
+  adClientId: string,
   /** Ad unit to get the code for. */
-  adUnitId: string,      
+  adUnitId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<AdCode> {
   const result = await api.adclients.adsenseAdunitsGetAdCode({
     query: {
@@ -1205,11 +1223,11 @@ export async function getAdclientsAdsenseAdunitsGetAdCode(
     },
     adClientId: adClientId,
     adUnitId: adUnitId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1221,27 +1239,27 @@ export async function getAdclientsAdsenseAdunitsGetAdCode(
  */
 export async function getAdclientsAdsenseAdunitsCustomchannelsList(
   /** Ad client which contains the ad unit. */
-  adClientId: string,      
+  adClientId: string,
   /** Ad unit for which to list custom channels. */
-  adUnitId: string,      
+  adUnitId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of custom channels to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<CustomChannels> {
   const result = await api.adclients.adsenseAdunitsCustomchannelsList({
     query: {
@@ -1257,11 +1275,11 @@ export async function getAdclientsAdsenseAdunitsCustomchannelsList(
     },
     adClientId: adClientId,
     adUnitId: adUnitId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1273,25 +1291,25 @@ export async function getAdclientsAdsenseAdunitsCustomchannelsList(
  */
 export async function getAdclientsAdsenseCustomchannelsList(
   /** Ad client for which to list custom channels. */
-  adClientId: string,      
+  adClientId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of custom channels to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<CustomChannels> {
   const result = await api.adclients.adsenseCustomchannelsList({
     query: {
@@ -1306,11 +1324,11 @@ export async function getAdclientsAdsenseCustomchannelsList(
       pageToken: pageToken,
     },
     adClientId: adClientId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1322,23 +1340,23 @@ export async function getAdclientsAdsenseCustomchannelsList(
  */
 export async function getAdclientsAdsenseCustomchannelsGet(
   /** Ad client which contains the custom channel. */
-  adClientId: string,      
+  adClientId: string,
   /** Custom channel to retrieve. */
-  customChannelId: string,      
+  customChannelId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<CustomChannel> {
   const result = await api.adclients.adsenseCustomchannelsGet({
     query: {
@@ -1352,11 +1370,11 @@ export async function getAdclientsAdsenseCustomchannelsGet(
     },
     adClientId: adClientId,
     customChannelId: customChannelId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1368,29 +1386,29 @@ export async function getAdclientsAdsenseCustomchannelsGet(
  */
 export async function getAdclientsAdsenseCustomchannelsAdunitsList(
   /** Ad client which contains the custom channel. */
-  adClientId: string,      
+  adClientId: string,
   /** Custom channel for which to list ad units. */
-  customChannelId: string,      
+  customChannelId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Whether to include inactive ad units. Default: true. */
-  includeInactive?: boolean,      
+  includeInactive?: boolean,
   /** The maximum number of ad units to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<AdUnits> {
   const result = await api.adclients.adsenseCustomchannelsAdunitsList({
     query: {
@@ -1407,11 +1425,11 @@ export async function getAdclientsAdsenseCustomchannelsAdunitsList(
     },
     adClientId: adClientId,
     customChannelId: customChannelId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1423,25 +1441,25 @@ export async function getAdclientsAdsenseCustomchannelsAdunitsList(
  */
 export async function getAdclientsAdsenseUrlchannelsList(
   /** Ad client for which to list URL channels. */
-  adClientId: string,      
+  adClientId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of URL channels to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<UrlChannels> {
   const result = await api.adclients.adsenseUrlchannelsList({
     query: {
@@ -1456,11 +1474,11 @@ export async function getAdclientsAdsenseUrlchannelsList(
       pageToken: pageToken,
     },
     adClientId: adClientId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1472,21 +1490,21 @@ export async function getAdclientsAdsenseUrlchannelsList(
  */
 export async function getAlertsAdsenseAlertsList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported. */
-  locale?: string,      
+  locale?: string,
 ): Promise<Alerts> {
   const result = await api.alerts.adsenseAlertsList({
     query: {
@@ -1499,11 +1517,11 @@ export async function getAlertsAdsenseAlertsList(
       userIp: userIp,
       locale: locale,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1514,21 +1532,21 @@ export async function getAlertsAdsenseAlertsList(
  */
 export async function deleteAlertsAdsenseAlertsDelete(
   /** Alert to delete. */
-  alertId: string,      
+  alertId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.alerts.adsenseAlertsDelete({
     query: {
@@ -1541,11 +1559,11 @@ export async function deleteAlertsAdsenseAlertsDelete(
       userIp: userIp,
     },
     alertId: alertId,
-  });
+  })
   if (result.error) {
-    throw (result.error)
+    throw result.error
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    return new hasuraSdk.JSONValue(result.data)
   }
 }
 
@@ -1557,19 +1575,19 @@ export async function deleteAlertsAdsenseAlertsDelete(
  */
 export async function getMetadataAdsenseMetadataDimensionsList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<Metadata> {
   const result = await api.metadata.adsenseMetadataDimensionsList({
     query: {
@@ -1581,11 +1599,11 @@ export async function getMetadataAdsenseMetadataDimensionsList(
       quotaUser: quotaUser,
       userIp: userIp,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1597,19 +1615,19 @@ export async function getMetadataAdsenseMetadataDimensionsList(
  */
 export async function getMetadataAdsenseMetadataMetricsList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<Metadata> {
   const result = await api.metadata.adsenseMetadataMetricsList({
     query: {
@@ -1621,11 +1639,11 @@ export async function getMetadataAdsenseMetadataMetricsList(
       quotaUser: quotaUser,
       userIp: userIp,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1637,19 +1655,19 @@ export async function getMetadataAdsenseMetadataMetricsList(
  */
 export async function getPaymentsAdsensePaymentsList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<Payments> {
   const result = await api.payments.adsensePaymentsList({
     query: {
@@ -1661,11 +1679,11 @@ export async function getPaymentsAdsensePaymentsList(
       quotaUser: quotaUser,
       userIp: userIp,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1677,43 +1695,43 @@ export async function getPaymentsAdsensePaymentsList(
  */
 export async function getReportsAdsenseReportsGenerate(
   /** Start of the date range to report on in "YYYY-MM-DD" format, inclusive. */
-  startDate: string,      
+  startDate: string,
   /** End of the date range to report on in "YYYY-MM-DD" format, inclusive. */
-  endDate: string,      
+  endDate: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Accounts upon which to report. */
-  accountId?: string[],      
+  accountId?: string[],
   /** Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set. */
-  currency?: string,      
+  currency?: string,
   /** Dimensions to base the report on. */
-  dimension?: string[],      
+  dimension?: string[],
   /** Filters to be run on the report. */
-  filter?: string[],      
+  filter?: string[],
   /** Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified. */
-  locale?: string,      
+  locale?: string,
   /** The maximum number of rows of report data to return. */
-  maxResults?: number,      
+  maxResults?: number,
   /** Numeric columns to include in the report. */
-  metric?: string[],      
+  metric?: string[],
   /** The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending. */
-  sort?: string[],      
+  sort?: string[],
   /** Index of the first row of report data to return. */
-  startIndex?: number,      
+  startIndex?: number,
   /** Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used. */
-  useTimezoneReporting?: boolean,      
+  useTimezoneReporting?: boolean,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.reports.adsenseReportsGenerate({
     query: {
@@ -1737,11 +1755,11 @@ export async function getReportsAdsenseReportsGenerate(
       startIndex: startIndex,
       useTimezoneReporting: useTimezoneReporting,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1753,23 +1771,23 @@ export async function getReportsAdsenseReportsGenerate(
  */
 export async function getReportsAdsenseReportsSavedList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of saved reports to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<SavedReports> {
   const result = await api.reports.adsenseReportsSavedList({
     query: {
@@ -1783,11 +1801,11 @@ export async function getReportsAdsenseReportsSavedList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1799,27 +1817,27 @@ export async function getReportsAdsenseReportsSavedList(
  */
 export async function getReportsAdsenseReportsSavedGenerate(
   /** The saved report to retrieve. */
-  savedReportId: string,      
+  savedReportId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified. */
-  locale?: string,      
+  locale?: string,
   /** The maximum number of rows of report data to return. */
-  maxResults?: number,      
+  maxResults?: number,
   /** Index of the first row of report data to return. */
-  startIndex?: number,      
+  startIndex?: number,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.reports.adsenseReportsSavedGenerate({
     query: {
@@ -1835,11 +1853,11 @@ export async function getReportsAdsenseReportsSavedGenerate(
       startIndex: startIndex,
     },
     savedReportId: savedReportId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1851,23 +1869,23 @@ export async function getReportsAdsenseReportsSavedGenerate(
  */
 export async function getSavedadstylesAdsenseSavedadstylesList(
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
   /** The maximum number of saved ad styles to include in the response, used for paging. */
-  maxResults?: number,      
+  maxResults?: number,
   /** A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. */
-  pageToken?: string,      
+  pageToken?: string,
 ): Promise<SavedAdStyles> {
   const result = await api.savedadstyles.adsenseSavedadstylesList({
     query: {
@@ -1881,11 +1899,11 @@ export async function getSavedadstylesAdsenseSavedadstylesList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }
 
@@ -1897,21 +1915,21 @@ export async function getSavedadstylesAdsenseSavedadstylesList(
  */
 export async function getSavedadstylesAdsenseSavedadstylesGet(
   /** Saved ad style to retrieve. */
-  savedAdStyleId: string,      
+  savedAdStyleId: string,
   /** Data format for the response. */
-  alt?: "csv" | "json",      
+  alt?: "csv" | "json",
   /** Selector specifying which fields to include in a partial response. */
-  fields?: string,      
+  fields?: string,
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  key?: string,      
+  key?: string,
   /** OAuth 2.0 token for the current user. */
-  oauth_token?: string,      
+  oauth_token?: string,
   /** Returns response with indentations and line breaks. */
-  prettyPrint?: boolean,      
+  prettyPrint?: boolean,
   /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
-  quotaUser?: string,      
+  quotaUser?: string,
   /** Deprecated. Please use quotaUser instead. */
-  userIp?: string,      
+  userIp?: string,
 ): Promise<SavedAdStyle> {
   const result = await api.savedadstyles.adsenseSavedadstylesGet({
     query: {
@@ -1924,10 +1942,10 @@ export async function getSavedadstylesAdsenseSavedadstylesGet(
       userIp: userIp,
     },
     savedAdStyleId: savedAdStyleId,
-  });
+  })
   if (result.data) {
     return result.data
   } else {
-    throw (result.error)
+    throw result.error
   }
 }

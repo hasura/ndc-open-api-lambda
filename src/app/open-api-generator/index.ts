@@ -156,7 +156,7 @@ export async function generateCode(
     shouldOverwrite,
   );
 
-  const functionFileStr = generateFunctionsTypescriptFile(apiComponents, headers, baseUrl);
+  const functionFileStr = await generateFunctionsTypescriptFile(apiComponents, headers, baseUrl);
   return functionFileStr;
 }
 
