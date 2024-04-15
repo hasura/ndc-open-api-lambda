@@ -6328,11 +6328,7 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaDiff(
     id: id,
     sha: sha,
   })
-  if (result.error) {
-    throw result.error
-  } else {
-    return new hasuraSdk.JSONValue(result.data)
-  }
+  return new hasuraSdk.JSONValue(result)
 }
 
 /**
