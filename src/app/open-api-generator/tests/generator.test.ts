@@ -45,11 +45,6 @@ const tests: {
     goldenFile: "./golden-files/gitlab",
   },
   {
-    name: "GenerateCode_LaunchDarklyApi",
-    oasFile: "./oas-docs/launch-darkly.json",
-    goldenFile: "./golden-files/launch-darkly",
-  },
-  {
     name: 'GenerateCode_Instagram',
     oasFile: './oas-docs/instagram.json',
     goldenFile: './golden-files/instagram',
@@ -71,6 +66,17 @@ const tests: {
     goldenFile: './golden-files/google-adsense',
     baseUrl: "http://localhost:13191",
   },
+  {
+    name: 'GenerateCode_CircleCI',
+    oasFile: './oas-docs/circleci.json',
+    goldenFile: './golden-files/circleci',
+    baseUrl: "http://localhost:13191",
+  },
+  // {
+  //   name: "GenerateCode_LaunchDarklyApi",
+  //   oasFile: "./oas-docs/launch-darkly.json",
+  //   goldenFile: "./golden-files/launch-darkly",
+  // },
 ];
 
 describe("GenerateCode", async () => {

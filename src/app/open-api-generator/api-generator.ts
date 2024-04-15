@@ -55,7 +55,7 @@ export class ApiComponents {
       isRelaxedType: false,
       isUntyped: false,
       rawTypeName: rawTypeName,
-      typeName: '',
+      typeName: `${this.rawTypeToTypeMap.get(rawTypeName)}`,
       ref: ref,
     }
 
@@ -93,6 +93,10 @@ export class ApiComponents {
     return this.refToSchemaComponentMap.get(ref)!;
   }
 
+  public getNdcComponentByRef(ref: string): NdcSchemaComponent | undefined {
+    return this.refToSchemaComponentMap.get(ref);
+  }
+
   public processNdcComponents() {
     for (let [key, value] of this.refToSchemaComponentMap) {
       let visitedRefs = new Set<string>();
@@ -108,6 +112,7 @@ export class ApiComponents {
     if (!component.component.rawTypeData || !component.component.rawTypeData.properties) {
       return
     }
+    component.typeName = `${this.rawTypeToTypeMap.get(component.rawTypeName)}`;
     Object.entries(component.component.rawTypeData.properties).forEach(([key, value]) => {
       const anyValue: any = value;
       if (anyValue['enum'] && anyValue['enum'].length > 0) {
@@ -177,9 +182,9 @@ export async function generateOpenApiTypescriptFile(
       },
       onCreateRoute: (routeData) => {
 
-        if (routeData.raw.route === "/v3/projects/search/{query}") {
-          console.log('onCreateRoute: ', CircularJSON.stringify(routeData));
-        }
+        // if (routeData.raw.route === "/v3/projects/{id}") {
+        //   console.log('\n\n\n\nonCreateRoute: ', CircularJSON.stringify(routeData));
+        // }
         apiComponents.addRoute(routeData);
       },
       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {
