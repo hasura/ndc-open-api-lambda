@@ -169,9 +169,6 @@ export async function generateOpenApiTypescriptFile(
         /**
          * Contains the full definition of the type, along with individual variables in objects
          */
-        // console.log('\n\n\n created Component: ', component.$ref);
-        // console.log('created component: typename: ', component.typeName);
-        // console.log('created component: component: ', CircularJSON.stringify(component));
         if (component.componentName === 'schemas') {
           // for now, we are only going to deal with schemas
           apiComponents.addComponent(component);
