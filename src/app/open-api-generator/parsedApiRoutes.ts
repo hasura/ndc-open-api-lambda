@@ -117,7 +117,12 @@ export class ParsedApiRoutes {
   }
 
   private shouldWrapReturnResultInJSON(response: any): boolean {
-    return (response['type'] === 'any' || response['type'] === 'void')
+    if (response['type'] === 'any' || response['type'] === 'void') {
+      return true;
+    } else if (response['type'].includes('Record<') || response['type'].includes('Map<')) {
+      return true;
+    }
+    return false;
   }
 
   private returnsVoid(response: any): boolean {
@@ -156,6 +161,7 @@ export class ParsedApiRoutes {
   private addTypeToImportList(type: string, importList: Set<string>) {
     const allTypes = this.splitGenericType(type);
     for (type of allTypes) {
+      type = this.convertDataTypeToTypeName(type);
       if (!this.reservedTypes.has(this.getImportType(type)) && this.generatedComponents.has(type)) {
         importList.add(this.getImportType(type));
       }
@@ -190,6 +196,19 @@ export class ParsedApiRoutes {
     type = type.replace('(', '');
     type = type.replace(')', '');
     return type;
+  }
+
+  /**
+   * this function takes in a data type and extracts the type name from it
+   * Eg: (APIRequest)[] => APIRequest
+   * @param dataType the type to be converted
+   */
+  private convertDataTypeToTypeName(dataType: string): string {
+    dataType = dataType.replace('(', '');
+    dataType = dataType.replace(')', '');
+    dataType = dataType.replace('[', '');
+    dataType = dataType.replace(']', '');
+    return dataType;
   }
 
   private getFunctionName(type: string, namespace: string, apiFunction: string): string {

@@ -1,8 +1,30 @@
 packagingDefinition:
-  type: PrebuiltDockerImage
-  dockerImage: "oasconnector:v1"  # TODO: update the docker image name
+  type: ManagedDockerBuild
 supportedEnvironmentVariables:
-  - name: OAS_DOCUMENT_URI
+  - name: NDC_OAS_DOCUMENT_URI
     description: "The URI of OAS Document. If not provided, the connector will look for `/etc/connector/swagger.json` by default"
+  - name: NDC_OAS_BASE_URL
+    description: "Base url of the API"
+  - name: NDC_OAS_HEADERS
+    description: "Headers to be added to api call. Expected format: key1=value1&key2=value2&key3=value3...."
+  - name: NDC_OAS_LAMBDA_PRETTY_LOGS
+    description: "Print logs in a human readable format instead of JSON"
+    default: "true"
+  - name: NDC_OAS_FILE_OVERWRITE
+    description: "Overwrite previously generated functions.ts file and api.ts file"
+    default: "true"
 commands:
-  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector oasconnector:v1 update"
+  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -e NDC_OAS_BASE_URL -e NDC_OAS_HEADERS -e NDC_OAS_DOCUMENT_URI -e NDC_OAS_LAMBDA_PRETTY_LOGS -e NDC_OAS_FILE_OVERWRITE -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector ghcr.io/hasura/ndc-open-api-lambda:v0.0.1-alpha update"
+dockerComposeWatch:
+  # Rebuild the container if a new package restore is required because package[-lock].json changed
+  - path: package.json
+    target: /functions/package.json
+    action: rebuild
+  - path: package-lock.json
+    target: /functions/package-lock.json
+    action: rebuild
+  # For any other file change, simply copy it into the existing container and restart it
+  - path: ./
+    target: /functions
+    action: sync+restart
+    exclude: swagger.json
