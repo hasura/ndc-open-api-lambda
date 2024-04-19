@@ -13,9 +13,7 @@
     },
     "title": "CircleCI REST API",
     "version": "v1",
-    "x-apisguru-categories": [
-      "developer_tools"
-    ],
+    "x-apisguru-categories": ["developer_tools"],
     "x-logo": {
       "url": "https://api.apis.guru/v2/cache/logo/https_avatars0.githubusercontent.com_u_1231870.png"
     },
@@ -186,10 +184,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "enum": [
-                  "deploy-key",
-                  "github-user-key"
-                ],
+                "enum": ["deploy-key", "github-user-key"],
                 "type": "string"
               }
             }
@@ -213,9 +208,7 @@
                 "schema": {
                   "properties": {
                     "message": {
-                      "enum": [
-                        "OK"
-                      ],
+                      "enum": ["OK"],
                       "type": "string"
                     }
                   },
@@ -283,9 +276,7 @@
                 "schema": {
                   "properties": {
                     "message": {
-                      "enum": [
-                        "OK"
-                      ],
+                      "enum": ["OK"],
                       "type": "string"
                     }
                   },
@@ -334,9 +325,7 @@
             "name": "Content-Type",
             "required": true,
             "schema": {
-              "enum": [
-                "application/json"
-              ],
+              "enum": ["application/json"],
               "type": "string"
             }
           }
@@ -680,12 +669,7 @@
         "in": "query",
         "name": "filter",
         "schema": {
-          "enum": [
-            "completed",
-            "successful",
-            "failed",
-            "running"
-          ],
+          "enum": ["completed", "successful", "failed", "running"],
           "type": "string"
         }
       },
@@ -1039,10 +1023,7 @@
           },
           "type": {
             "description": "can be \"deploy-key\" or \"github-user-key\"\n",
-            "enum": [
-              "deploy-key",
-              "github-user-key"
-            ],
+            "enum": ["deploy-key", "github-user-key"],
             "type": "string"
           }
         },

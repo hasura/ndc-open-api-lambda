@@ -11,7 +11,8 @@
     "install-bin": "npm test && npm run compile && npm install -g .",
     "install-bin-unsafe": "npm run compile && npm install -g .",
     "build": "webpack",
-    "test": "mocha --require ts-node/register --timeout 5000 --ui bdd ./src/**/*.test.ts"
+    "test": "mocha --require ts-node/register --timeout 5000 --ui bdd ./src/**/*.test.ts",
+    "format": "npx prettier . --write"
   },
   "dependencies": {
     "@npmcli/package-json": "^5.0.0",
@@ -22,7 +23,7 @@
     "pacote": "^17.0.5",
     "pino": "^8.19.0",
     "pino-pretty": "^11.0.0",
-    "prettier": "^3.2.5",
+    "prettier": "3.2.5",
     "semver": "^7.5.4",
     "swagger-typescript-api": "^13.0.3",
     "yeoman-generator": "^5.10.0"

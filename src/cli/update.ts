@@ -6,57 +6,57 @@ import * as logger from "../util/logger";
 
 export const cmd = new Command("update")
   .description(
-    "Import or Re-import OpenAPI Document into your Hasura project using the NDC Typescript Lambda Connector"
+    "Import or Re-import OpenAPI Document into your Hasura project using the NDC Typescript Lambda Connector",
   )
   .addHelpText(
     "after",
     `
 Further reading:
 * https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#nodejs-lambda-connector
-`
+`,
   )
   .addOption(
     new Option(
       "--open-api <uri or filepath>",
-      "URI or file path of OAS Document. Usually ${HASURA_CONFIGURATION_DIRECTORY}/swagger.json"
+      "URI or file path of OAS Document. Usually ${HASURA_CONFIGURATION_DIRECTORY}/swagger.json",
     )
       .default("./swagger.json")
-      .env("NDC_OAS_DOCUMENT_URI")
+      .env("NDC_OAS_DOCUMENT_URI"),
   )
   .addOption(
     new Option("--output-directory <directory>", "Output Directory")
       .default("./")
-      .env("HASURA_CONFIGURATION_DIRECTORY")
+      .env("HASURA_CONFIGURATION_DIRECTORY"),
   )
   .addOption(
     new Option("-b --base-url <value>", "Base URL of the API")
       .env("NDC_OAS_BASE_URL")
-      .argParser(headerParser) // TODO why??
+      .argParser(headerParser), // TODO why??
   )
   .addOption(
     new Option(
       "-H --headers <key=value...>",
-      "Headers to be included in the requests"
+      "Headers to be included in the requests",
     )
       .env("NDC_OAS_HEADERS")
-      .argParser(headerParser)
+      .argParser(headerParser),
   )
   .addOption(
     new Option(
       "--overwrite [bool]",
-      "Overwrite files if already present in the output directory."
+      "Overwrite files if already present in the output directory.",
     )
       .default("false")
       .choices(["true", "false"])
       .preset("true")
-      .env("NDC_OAS_FILE_OVERWRITE")
+      .env("NDC_OAS_FILE_OVERWRITE"),
   )
 
   .addOption(
     new Option(
       "--ndc-lambda-sdk <version>",
-      "NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version"
-    ).env("NDC_NODEJS_VERSION")
+      "NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version",
+    ).env("NDC_NODEJS_VERSION"),
   )
 
   .action((args, cmd) => {

@@ -45,31 +45,31 @@ const tests: {
     goldenFile: "./golden-files/gitlab",
   },
   {
-    name: 'GenerateCode_Instagram',
-    oasFile: './oas-docs/instagram.json',
-    goldenFile: './golden-files/instagram',
+    name: "GenerateCode_Instagram",
+    oasFile: "./oas-docs/instagram.json",
+    goldenFile: "./golden-files/instagram",
   },
   {
-    name: 'GenerateCode_Geomag',
-    oasFile: './oas-docs/geomag.json',
-    goldenFile: './golden-files/geomag',
+    name: "GenerateCode_Geomag",
+    oasFile: "./oas-docs/geomag.json",
+    goldenFile: "./golden-files/geomag",
   },
   {
-    name: 'GenerateCode_GoogleHome',
-    oasFile: './oas-docs/google-home.json',
-    goldenFile: './golden-files/google-home',
+    name: "GenerateCode_GoogleHome",
+    oasFile: "./oas-docs/google-home.json",
+    goldenFile: "./golden-files/google-home",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: 'GenerateCode_GoogleAdsense',
-    oasFile: './oas-docs/google-adsense.json',
-    goldenFile: './golden-files/google-adsense',
+    name: "GenerateCode_GoogleAdsense",
+    oasFile: "./oas-docs/google-adsense.json",
+    goldenFile: "./golden-files/google-adsense",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: 'GenerateCode_CircleCI',
-    oasFile: './oas-docs/circleci.json',
-    goldenFile: './golden-files/circleci',
+    name: "GenerateCode_CircleCI",
+    oasFile: "./oas-docs/circleci.json",
+    goldenFile: "./golden-files/circleci",
     baseUrl: "http://localhost:13191",
   },
   // {
@@ -83,7 +83,7 @@ describe("GenerateCode", async () => {
   for (const testCase of tests) {
     before(function () {
       const outDir = generateRandomDir(
-        path.resolve(__dirname, `./_temp/${testCase.name}`)
+        path.resolve(__dirname, `./_temp/${testCase.name}`),
       );
       testCase.outDir = outDir;
       if (testCase.oasFile) {
@@ -99,7 +99,7 @@ describe("GenerateCode", async () => {
         `${testCase.outDir}`,
         true,
         testCase.headers,
-        testCase.baseUrl
+        testCase.baseUrl,
       );
       fs.writeFileSync(path.resolve(`${testCase.outDir}`, "functions.ts"), got);
       assert.equal(got, testCase.expected);

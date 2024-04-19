@@ -36,13 +36,16 @@ const tsConfigContent = `{
 }
 `;
 
-export async function generatePackageJson(outputDir: string, ndcLambdaSdkVersion: string | undefined) {
+export async function generatePackageJson(
+  outputDir: string,
+  ndcLambdaSdkVersion: string | undefined,
+) {
   const configuration = "./";
   const versionRestriction = "";
 
   const sdkPackageManifest = await pacote.manifest(
     `@hasura/ndc-lambda-sdk${versionRestriction}`,
-    {}
+    {},
   );
 
   const latestVersion = new SemVer(sdkPackageManifest.version);
@@ -53,12 +56,15 @@ export async function generatePackageJson(outputDir: string, ndcLambdaSdkVersion
       preferredNdcLambdaSdkVersion = new SemVer(ndcLambdaSdkVersion);
       await pacote.manifest(
         `@hasura/ndc-lambda-sdk@${preferredNdcLambdaSdkVersion}`,
-        {}
+        {},
       );
-      logger.info(`Using NDC Lambda SDK version ${preferredNdcLambdaSdkVersion}`);
-    }
-    catch (e) {
-      logger.warn(`${ndcLambdaSdkVersion} is not a correct NDC Lambda SDK version. Using (latest) NDC Lambda SDK version: ${latestVersion}`);
+      logger.info(
+        `Using NDC Lambda SDK version ${preferredNdcLambdaSdkVersion}`,
+      );
+    } catch (e) {
+      logger.warn(
+        `${ndcLambdaSdkVersion} is not a correct NDC Lambda SDK version. Using (latest) NDC Lambda SDK version: ${latestVersion}`,
+      );
       preferredNdcLambdaSdkVersion = latestVersion;
     }
   } else {
@@ -99,48 +105,72 @@ export async function generateCode(
   const apiComponents = await generateOpenApiTypescriptFile(
     "api.ts",
     fileUtil.isValidUrl(openApiUri) ? openApiUri : undefined,
-    fileUtil.isValidUrl(openApiUri) ? undefined : fileUtil.getFilePath(openApiUri),
+    fileUtil.isValidUrl(openApiUri)
+      ? undefined
+      : fileUtil.getFilePath(openApiUri),
     outputDir,
     undefined,
     shouldOverwrite,
   );
 
-  const functionFileStr = await generateFunctionsTypescriptFile(apiComponents, headers, baseUrl);
+  const functionFileStr = await generateFunctionsTypescriptFile(
+    apiComponents,
+    headers,
+    baseUrl,
+  );
   return functionFileStr;
 }
 
 export type ImportOpenApiArgs = {
-  openApiUri: string,
-  outputDirectory: string,
-  shouldOverwrite: boolean,
-  headers: string | undefined, // format: key1=value1&key2=value2&key3=value3...
-  baseUrl: string | undefined,
-  ndcLambdaSdkVersion: string | undefined,
-}
+  openApiUri: string;
+  outputDirectory: string;
+  shouldOverwrite: boolean;
+  headers: string | undefined; // format: key1=value1&key2=value2&key3=value3...
+  baseUrl: string | undefined;
+  ndcLambdaSdkVersion: string | undefined;
+};
 
 export async function importOpenApi(args: ImportOpenApiArgs) {
-  const functionFileTs = await generateCode(args.openApiUri, args.outputDirectory, args.shouldOverwrite, args.headers, args.baseUrl);
+  const functionFileTs = await generateCode(
+    args.openApiUri,
+    args.outputDirectory,
+    args.shouldOverwrite,
+    args.headers,
+    args.baseUrl,
+  );
 
   if (!args.shouldOverwrite) {
-    if (fs.existsSync(path.resolve(args.outputDirectory, 'functions.ts'))) {
-      logger.error(`Error: functions.ts already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+    if (fs.existsSync(path.resolve(args.outputDirectory, "functions.ts"))) {
+      logger.error(
+        `Error: functions.ts already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+      );
       process.exit(0);
     }
-    if (fs.existsSync(path.resolve(args.outputDirectory, 'package.json'))) {
-      logger.error(`Error: package.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+    if (fs.existsSync(path.resolve(args.outputDirectory, "package.json"))) {
+      logger.error(
+        `Error: package.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+      );
       process.exit(0);
     }
-    if (fs.existsSync(path.resolve(args.outputDirectory, 'tsconfig.json'))) {
-      logger.error(`Error: tsconfig.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+    if (fs.existsSync(path.resolve(args.outputDirectory, "tsconfig.json"))) {
+      logger.error(
+        `Error: tsconfig.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+      );
       process.exit(0);
     }
   }
 
   logger.info("create functions.ts");
-  fs.writeFileSync(path.resolve(args.outputDirectory, "functions.ts"), functionFileTs);
+  fs.writeFileSync(
+    path.resolve(args.outputDirectory, "functions.ts"),
+    functionFileTs,
+  );
 
   await generatePackageJson(args.outputDirectory, args.ndcLambdaSdkVersion);
 
-  logger.info('create tsconfig.json');
-  fs.writeFileSync(path.resolve(args.outputDirectory, "tsconfig.json"), tsConfigContent); 
+  logger.info("create tsconfig.json");
+  fs.writeFileSync(
+    path.resolve(args.outputDirectory, "tsconfig.json"),
+    tsConfigContent,
+  );
 }

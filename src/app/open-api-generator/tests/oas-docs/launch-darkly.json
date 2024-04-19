@@ -1,8 +1,6 @@
 {
   "swagger": "2.0",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "host": "app.launchdarkly.com",
   "basePath": "/api/v2",
   "info": {
@@ -20,9 +18,7 @@
     "termsOfService": "https://launchdarkly.com/terms",
     "title": "LaunchDarkly REST API",
     "version": "5.3.0",
-    "x-apisguru-categories": [
-      "developer_tools"
-    ],
+    "x-apisguru-categories": ["developer_tools"],
     "x-logo": {
       "url": "https://api.apis.guru/v2/cache/logo/https_twitter.com_launchdarkly_profile_image.jpeg"
     },
@@ -35,12 +31,8 @@
     ],
     "x-providerName": "launchdarkly.com"
   },
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "securityDefinitions": {
     "Token": {
       "description": "https://app.launchdarkly.com/settings#/tokens",
@@ -109,10 +101,7 @@
             "$ref": "#/definitions/SemanticPatchInstruction"
           },
           "notifyMemberIds": {
-            "example": [
-              "memberId",
-              "memberId2"
-            ],
+            "example": ["memberId", "memberId2"],
             "items": {
               "type": "string"
             },
@@ -123,11 +112,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "description",
-          "instructions",
-          "notifyMemberIds"
-        ],
+        "required": ["description", "instructions", "notifyMemberIds"],
         "type": "object"
       }
     },
@@ -145,18 +130,12 @@
           },
           "kind": {
             "description": "One of approve, decline, or comment.",
-            "enum": [
-              "approve",
-              "decline",
-              "comment"
-            ],
+            "enum": ["approve", "decline", "comment"],
             "example": "approve",
             "type": "string"
           }
         },
-        "required": [
-          "kind"
-        ],
+        "required": ["kind"],
         "type": "object"
       }
     },
@@ -242,11 +221,7 @@
             "type": "array"
           }
         },
-        "required": [
-          "name",
-          "key",
-          "policy"
-        ],
+        "required": ["name", "key", "policy"],
         "type": "object"
       }
     },
@@ -274,12 +249,7 @@
           },
           "kind": {
             "description": "The data export destination type. Available choices are kinesis, google-pubsub, mparticle, or segment.",
-            "enum": [
-              "google-pubsub",
-              "kinesis",
-              "mparticle",
-              "segment"
-            ],
+            "enum": ["google-pubsub", "kinesis", "mparticle", "segment"],
             "example": "google-pubsub",
             "type": "string"
           },
@@ -294,11 +264,7 @@
             "type": "boolean"
           }
         },
-        "required": [
-          "name",
-          "kind",
-          "config"
-        ],
+        "required": ["name", "kind", "config"],
         "type": "object"
       }
     },
@@ -461,11 +427,7 @@
             "type": "array"
           }
         },
-        "required": [
-          "name",
-          "key",
-          "variations"
-        ],
+        "required": ["name", "key", "variations"],
         "type": "object"
       }
     },
@@ -595,10 +557,7 @@
             "type": "array"
           }
         },
-        "required": [
-          "name",
-          "config"
-        ],
+        "required": ["name", "config"],
         "type": "object"
       }
     },
@@ -661,9 +620,7 @@
               "$ref": "#/definitions/Role"
             }
           },
-          "required": [
-            "email"
-          ],
+          "required": ["email"],
           "type": "object"
         },
         "type": "array"
@@ -765,20 +722,14 @@
             "type": "string"
           },
           "tags": {
-            "example": [
-              "ops",
-              "dev"
-            ],
+            "example": ["ops", "dev"],
             "items": {
               "type": "string"
             },
             "type": "array"
           }
         },
-        "required": [
-          "name",
-          "key"
-        ],
+        "required": ["name", "key"],
         "type": "object"
       }
     },
@@ -1016,10 +967,7 @@
             "type": "boolean"
           }
         },
-        "required": [
-          "name",
-          "key"
-        ],
+        "required": ["name", "key"],
         "type": "object"
       }
     },
@@ -1083,11 +1031,7 @@
             "type": "string"
           }
         },
-        "required": [
-          "url",
-          "sign",
-          "on"
-        ],
+        "required": ["url", "sign", "on"],
         "type": "object"
       }
     }
@@ -1206,9 +1150,7 @@
             "$ref": "#/responses/Standard401"
           }
         },
-        "tags": [
-          "Root"
-        ]
+        "tags": ["Root"]
       }
     },
     "/account/relay-auto-configs": {
@@ -1223,9 +1165,7 @@
           }
         },
         "summary": "Returns a list of relay proxy configurations in the account.",
-        "tags": [
-          "Relay proxy configurations"
-        ]
+        "tags": ["Relay proxy configurations"]
       },
       "post": {
         "operationId": "postRelayAutoConfig",
@@ -1249,9 +1189,7 @@
           }
         },
         "summary": "Create a new relay proxy config.",
-        "tags": [
-          "Relay proxy configurations"
-        ]
+        "tags": ["Relay proxy configurations"]
       }
     },
     "/account/relay-auto-configs/{id}": {
@@ -1274,9 +1212,7 @@
           }
         },
         "summary": "Delete a relay proxy configuration by ID.",
-        "tags": [
-          "Relay proxy configurations"
-        ]
+        "tags": ["Relay proxy configurations"]
       },
       "get": {
         "operationId": "getRelayProxyConfig",
@@ -1294,9 +1230,7 @@
           }
         },
         "summary": "Get a single relay proxy configuration by ID.",
-        "tags": [
-          "Relay proxy configurations"
-        ]
+        "tags": ["Relay proxy configurations"]
       },
       "patch": {
         "operationId": "patchRelayProxyConfig",
@@ -1323,9 +1257,7 @@
           }
         },
         "summary": "Modify a relay proxy configuration by ID.",
-        "tags": [
-          "Relay proxy configurations"
-        ]
+        "tags": ["Relay proxy configurations"]
       }
     },
     "/account/relay-auto-configs/{id}/reset": {
@@ -1351,9 +1283,7 @@
           }
         },
         "summary": "Reset a relay proxy configuration's secret key with an optional expiry time for the old key.",
-        "tags": [
-          "Relay proxy configurations"
-        ]
+        "tags": ["Relay proxy configurations"]
       }
     },
     "/auditlog": {
@@ -1391,9 +1321,7 @@
           }
         },
         "summary": "Get a list of all audit log entries. The query parameters allow you to restrict the returned results by date ranges, resource specifiers, or a full-text search query.",
-        "tags": [
-          "Audit log"
-        ]
+        "tags": ["Audit log"]
       }
     },
     "/auditlog/{resourceId}": {
@@ -1419,9 +1347,7 @@
           }
         },
         "summary": "Use this endpoint to fetch a single audit log entry by its resouce ID.",
-        "tags": [
-          "Audit log"
-        ]
+        "tags": ["Audit log"]
       }
     },
     "/destinations": {
@@ -1439,9 +1365,7 @@
           }
         },
         "summary": "Returns a list of all data export destinations.",
-        "tags": [
-          "Data export destinations"
-        ]
+        "tags": ["Data export destinations"]
       }
     },
     "/destinations/{projectKey}/{environmentKey}": {
@@ -1473,9 +1397,7 @@
           }
         },
         "summary": "Create a new data export destination",
-        "tags": [
-          "Data export destinations"
-        ]
+        "tags": ["Data export destinations"]
       }
     },
     "/destinations/{projectKey}/{environmentKey}/{destinationId}": {
@@ -1504,9 +1426,7 @@
           }
         },
         "summary": "Get a single data export destination by ID",
-        "tags": [
-          "Data export destinations"
-        ]
+        "tags": ["Data export destinations"]
       },
       "get": {
         "operationId": "getDestination",
@@ -1533,9 +1453,7 @@
           }
         },
         "summary": "Get a single data export destination by ID",
-        "tags": [
-          "Data export destinations"
-        ]
+        "tags": ["Data export destinations"]
       },
       "patch": {
         "operationId": "patchDestination",
@@ -1571,9 +1489,7 @@
           }
         },
         "summary": "Perform a partial update to a data export destination.",
-        "tags": [
-          "Data export destinations"
-        ]
+        "tags": ["Data export destinations"]
       }
     },
     "/flag-status/{projectKey}/{featureFlagKey}": {
@@ -1602,9 +1518,7 @@
           }
         },
         "summary": "Get the status for a particular feature flag across environments",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flag-statuses/{projectKey}/{environmentKey}": {
@@ -1630,9 +1544,7 @@
           }
         },
         "summary": "Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey}": {
@@ -1661,9 +1573,7 @@
           }
         },
         "summary": "Get the status for a particular feature flag.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flags/{projectKey}": {
@@ -1710,9 +1620,7 @@
           }
         },
         "summary": "Get a list of all features in the given project.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "post": {
         "operationId": "postFeatureFlag",
@@ -1745,9 +1653,7 @@
           }
         },
         "summary": "Creates a new feature flag.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flags/{projectKey}/{environmentKey}/{featureFlagKey}/dependent-flags": {
@@ -1781,9 +1687,7 @@
           }
         },
         "summary": "Get dependent flags for the flag in the environment specified in path parameters",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flags/{projectKey}/{featureFlagKey}": {
@@ -1809,9 +1713,7 @@
           }
         },
         "summary": "Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "get": {
         "operationId": "getFeatureFlag",
@@ -1841,9 +1743,7 @@
           }
         },
         "summary": "Get a single feature flag by key.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "patch": {
         "operationId": "patchFeatureFlag",
@@ -1879,9 +1779,7 @@
           }
         },
         "summary": "Perform a partial update to a feature.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flags/{projectKey}/{featureFlagKey}/copy": {
@@ -1916,9 +1814,7 @@
           }
         },
         "summary": "Copies the feature flag configuration from one environment to the same feature flag in another environment.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flags/{projectKey}/{featureFlagKey}/dependent-flags": {
@@ -1949,9 +1845,7 @@
           }
         },
         "summary": "Get dependent flags across all environments for the flag specified in the path parameters",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey}": {
@@ -1980,9 +1874,7 @@
           }
         },
         "summary": "Get expiring user targets for feature flag",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "patch": {
         "operationId": "patchExpiringUserTargets",
@@ -2021,9 +1913,7 @@
           }
         },
         "summary": "Update, add, or delete expiring user targets on feature flag",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/integrations": {
@@ -2041,9 +1931,7 @@
           }
         },
         "summary": "Get a list of all configured audit log event integrations associated with this account.",
-        "tags": [
-          "Integrations"
-        ]
+        "tags": ["Integrations"]
       }
     },
     "/integrations/{integrationKey}": {
@@ -2069,9 +1957,7 @@
           }
         },
         "summary": "Get a list of all configured integrations of a given kind.",
-        "tags": [
-          "Integrations"
-        ]
+        "tags": ["Integrations"]
       },
       "post": {
         "operationId": "postIntegrationSubscription",
@@ -2101,9 +1987,7 @@
           }
         },
         "summary": "Create a new integration subscription of a given kind.",
-        "tags": [
-          "Integrations"
-        ]
+        "tags": ["Integrations"]
       }
     },
     "/integrations/{integrationKey}/{integrationId}": {
@@ -2129,9 +2013,7 @@
           }
         },
         "summary": "Delete an integration subscription by ID.",
-        "tags": [
-          "Integrations"
-        ]
+        "tags": ["Integrations"]
       },
       "get": {
         "operationId": "getIntegrationSubscription",
@@ -2158,9 +2040,7 @@
           }
         },
         "summary": "Get a single integration subscription by ID.",
-        "tags": [
-          "Integrations"
-        ]
+        "tags": ["Integrations"]
       },
       "patch": {
         "operationId": "patchIntegrationSubscription",
@@ -2193,9 +2073,7 @@
           }
         },
         "summary": "Modify an integration subscription by ID.",
-        "tags": [
-          "Integrations"
-        ]
+        "tags": ["Integrations"]
       }
     },
     "/members": {
@@ -2227,9 +2105,7 @@
           }
         },
         "summary": "Returns a list of all members in the account.",
-        "tags": [
-          "Team members"
-        ]
+        "tags": ["Team members"]
       },
       "post": {
         "operationId": "postMembers",
@@ -2256,9 +2132,7 @@
           }
         },
         "summary": "Invite new members.",
-        "tags": [
-          "Team members"
-        ]
+        "tags": ["Team members"]
       }
     },
     "/members/me": {
@@ -2276,9 +2150,7 @@
           }
         },
         "summary": "Get the current team member associated with the token",
-        "tags": [
-          "Team members"
-        ]
+        "tags": ["Team members"]
       }
     },
     "/members/{memberId}": {
@@ -2301,9 +2173,7 @@
           }
         },
         "summary": "Delete a team member by ID.",
-        "tags": [
-          "Team members"
-        ]
+        "tags": ["Team members"]
       },
       "get": {
         "operationId": "getMember",
@@ -2324,9 +2194,7 @@
           }
         },
         "summary": "Get a single team member by ID.",
-        "tags": [
-          "Team members"
-        ]
+        "tags": ["Team members"]
       },
       "patch": {
         "operationId": "patchMember",
@@ -2356,9 +2224,7 @@
           }
         },
         "summary": "Modify a team member by ID.",
-        "tags": [
-          "Team members"
-        ]
+        "tags": ["Team members"]
       }
     },
     "/projects": {
@@ -2376,9 +2242,7 @@
           }
         },
         "summary": "Returns a list of all projects in the account.",
-        "tags": [
-          "Projects"
-        ]
+        "tags": ["Projects"]
       },
       "post": {
         "operationId": "postProject",
@@ -2402,9 +2266,7 @@
           }
         },
         "summary": "Create a new project with the given key and name.",
-        "tags": [
-          "Projects"
-        ]
+        "tags": ["Projects"]
       }
     },
     "/projects/{projectKey}": {
@@ -2427,9 +2289,7 @@
           }
         },
         "summary": "Delete a project by key. Caution-- deleting a project will delete all associated environments and feature flags. You cannot delete the last project in an account.",
-        "tags": [
-          "Projects"
-        ]
+        "tags": ["Projects"]
       },
       "get": {
         "operationId": "getProject",
@@ -2450,9 +2310,7 @@
           }
         },
         "summary": "Fetch a single project by key.",
-        "tags": [
-          "Projects"
-        ]
+        "tags": ["Projects"]
       },
       "patch": {
         "operationId": "patchProject",
@@ -2482,9 +2340,7 @@
           }
         },
         "summary": "Modify a project by ID.",
-        "tags": [
-          "Projects"
-        ]
+        "tags": ["Projects"]
       }
     },
     "/projects/{projectKey}/environments": {
@@ -2513,9 +2369,7 @@
           }
         },
         "summary": "Create a new environment in a specified project with a given name, key, and swatch color.",
-        "tags": [
-          "Environments"
-        ]
+        "tags": ["Environments"]
       }
     },
     "/projects/{projectKey}/environments/{environmentKey}": {
@@ -2541,9 +2395,7 @@
           }
         },
         "summary": "Delete an environment in a specific project.",
-        "tags": [
-          "Environments"
-        ]
+        "tags": ["Environments"]
       },
       "get": {
         "operationId": "getEnvironment",
@@ -2567,9 +2419,7 @@
           }
         },
         "summary": "Get an environment given a project and key.",
-        "tags": [
-          "Environments"
-        ]
+        "tags": ["Environments"]
       },
       "patch": {
         "operationId": "patchEnvironment",
@@ -2602,9 +2452,7 @@
           }
         },
         "summary": "Modify an environment by ID. If you try to patch the environment by setting both required and requiredApprovalTags, it will result in an error. Users can specify either required approvals for all flags in an environment or those with specific tags, but not both. Only customers on an Enterprise plan can require approval for flag updates with either mechanism.",
-        "tags": [
-          "Environments"
-        ]
+        "tags": ["Environments"]
       }
     },
     "/projects/{projectKey}/environments/{environmentKey}/apiKey": {
@@ -2633,9 +2481,7 @@
           }
         },
         "summary": "Reset an environment's SDK key with an optional expiry time for the old key.",
-        "tags": [
-          "Environments"
-        ]
+        "tags": ["Environments"]
       }
     },
     "/projects/{projectKey}/environments/{environmentKey}/mobileKey": {
@@ -2664,9 +2510,7 @@
           }
         },
         "summary": "Reset an environment's mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately.",
-        "tags": [
-          "Environments"
-        ]
+        "tags": ["Environments"]
       }
     },
     "/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests": {
@@ -2698,9 +2542,7 @@
           }
         },
         "summary": "Get all approval requests for a feature flag config",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}": {
@@ -2735,9 +2577,7 @@
           }
         },
         "summary": "Delete an approval request for a feature flag config",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "get": {
         "operationId": "getApprovalRequest",
@@ -2770,9 +2610,7 @@
           }
         },
         "summary": "Get a single approval request for a feature flag config",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "post": {
         "operationId": "postApprovalRequest",
@@ -2808,9 +2646,7 @@
           }
         },
         "summary": "Create an approval request for a feature flag config",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}/apply": {
@@ -2848,9 +2684,7 @@
           }
         },
         "summary": "Apply approval request for a feature flag config",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}/review": {
@@ -2888,9 +2722,7 @@
           }
         },
         "summary": "Review approval request for a feature flag config",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes": {
@@ -2922,9 +2754,7 @@
           }
         },
         "summary": "Get all scheduled workflows for a feature flag by key.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "post": {
         "operationId": "postFlagConfigScheduledChanges",
@@ -2960,9 +2790,7 @@
           }
         },
         "summary": "Creates a new scheduled change for a feature flag.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes-conflicts": {
@@ -2997,9 +2825,7 @@
           }
         },
         "summary": "Lists conflicts between the given instructions and any existing scheduled changes for the feature flag. The actual HTTP verb should be REPORT, not POST.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId}": {
@@ -3031,9 +2857,7 @@
           }
         },
         "summary": "Delete a scheduled change on a feature flag in an environment.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "get": {
         "operationId": "getFlagConfigScheduledChange",
@@ -3066,9 +2890,7 @@
           }
         },
         "summary": "Get a scheduled change on a feature flag by id.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       },
       "patch": {
         "operationId": "patchFlagConfigScheduledChange",
@@ -3107,9 +2929,7 @@
           }
         },
         "summary": "Updates an existing scheduled-change on a feature flag in an environment.",
-        "tags": [
-          "Feature flags"
-        ]
+        "tags": ["Feature flags"]
       }
     },
     "/roles": {
@@ -3127,9 +2947,7 @@
           }
         },
         "summary": "Return a complete list of custom roles.",
-        "tags": [
-          "Custom roles"
-        ]
+        "tags": ["Custom roles"]
       },
       "post": {
         "operationId": "postCustomRole",
@@ -3153,9 +2971,7 @@
           }
         },
         "summary": "Create a new custom role.",
-        "tags": [
-          "Custom roles"
-        ]
+        "tags": ["Custom roles"]
       }
     },
     "/roles/{customRoleKey}": {
@@ -3178,9 +2994,7 @@
           }
         },
         "summary": "Delete a custom role by key.",
-        "tags": [
-          "Custom roles"
-        ]
+        "tags": ["Custom roles"]
       },
       "get": {
         "operationId": "getCustomRole",
@@ -3201,9 +3015,7 @@
           }
         },
         "summary": "Get one custom role by key.",
-        "tags": [
-          "Custom roles"
-        ]
+        "tags": ["Custom roles"]
       },
       "patch": {
         "operationId": "patchCustomRole",
@@ -3233,9 +3045,7 @@
           }
         },
         "summary": "Modify a custom role by key.",
-        "tags": [
-          "Custom roles"
-        ]
+        "tags": ["Custom roles"]
       }
     },
     "/segments/{projectKey}/{environmentKey}": {
@@ -3264,9 +3074,7 @@
           }
         },
         "summary": "Get a list of all user segments in the given project.",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       },
       "post": {
         "operationId": "postUserSegment",
@@ -3296,9 +3104,7 @@
           }
         },
         "summary": "Creates a new user segment.",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       }
     },
     "/segments/{projectKey}/{environmentKey}/{userSegmentKey}": {
@@ -3327,9 +3133,7 @@
           }
         },
         "summary": "Delete a user segment.",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       },
       "get": {
         "operationId": "getUserSegment",
@@ -3356,9 +3160,7 @@
           }
         },
         "summary": "Get a single user segment by key.",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       },
       "patch": {
         "operationId": "patchUserSegment",
@@ -3394,9 +3196,7 @@
           }
         },
         "summary": "Perform a partial update to a user segment.",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       }
     },
     "/segments/{projectKey}/{environmentKey}/{userSegmentKey}/users": {
@@ -3428,9 +3228,7 @@
           }
         },
         "summary": "Update targets included or excluded in a big segment",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       }
     },
     "/segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey}": {
@@ -3462,9 +3260,7 @@
           }
         },
         "summary": "Get expiring user targets for user segment",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       },
       "patch": {
         "operationId": "patchExpiringUserTargetsOnSegment",
@@ -3503,9 +3299,7 @@
           }
         },
         "summary": "Update, add, or delete expiring user targets on user segment",
-        "tags": [
-          "User segments"
-        ]
+        "tags": ["User segments"]
       }
     },
     "/tokens": {
@@ -3528,9 +3322,7 @@
           }
         },
         "summary": "Returns a list of tokens in the account.",
-        "tags": [
-          "Access tokens"
-        ]
+        "tags": ["Access tokens"]
       },
       "post": {
         "operationId": "postToken",
@@ -3557,9 +3349,7 @@
           }
         },
         "summary": "Create a new token.",
-        "tags": [
-          "Access tokens"
-        ]
+        "tags": ["Access tokens"]
       }
     },
     "/tokens/{tokenId}": {
@@ -3582,9 +3372,7 @@
           }
         },
         "summary": "Delete an access token by ID.",
-        "tags": [
-          "Access tokens"
-        ]
+        "tags": ["Access tokens"]
       },
       "get": {
         "operationId": "getToken",
@@ -3605,9 +3393,7 @@
           }
         },
         "summary": "Get a single access token by ID.",
-        "tags": [
-          "Access tokens"
-        ]
+        "tags": ["Access tokens"]
       },
       "patch": {
         "operationId": "patchToken",
@@ -3637,9 +3423,7 @@
           }
         },
         "summary": "Modify an access token by ID.",
-        "tags": [
-          "Access tokens"
-        ]
+        "tags": ["Access tokens"]
       }
     },
     "/tokens/{tokenId}/reset": {
@@ -3665,9 +3449,7 @@
           }
         },
         "summary": "Reset an access token's secret key with an optional expiry time for the old key.",
-        "tags": [
-          "Access tokens"
-        ]
+        "tags": ["Access tokens"]
       }
     },
     "/usage": {
@@ -3685,9 +3467,7 @@
           }
         },
         "summary": "Returns of the usage endpoints available.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/evaluations/{envId}/{flagKey}": {
@@ -3716,9 +3496,7 @@
           }
         },
         "summary": "Get events usage by event id and the feature flag key.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/events": {
@@ -3736,9 +3514,7 @@
           }
         },
         "summary": "Get events usage endpoints.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/events/{type}": {
@@ -3764,9 +3540,7 @@
           }
         },
         "summary": "Get events usage by event type.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/mau": {
@@ -3784,9 +3558,7 @@
           }
         },
         "summary": "Get monthly active user data.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/mau/bycategory": {
@@ -3804,9 +3576,7 @@
           }
         },
         "summary": "Get monthly active user data by category.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/streams": {
@@ -3824,9 +3594,7 @@
           }
         },
         "summary": "Returns a list of all streams.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/streams/{source}": {
@@ -3852,9 +3620,7 @@
           }
         },
         "summary": "Get a stream endpoint and return timeseries data.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/streams/{source}/bysdkversion": {
@@ -3880,9 +3646,7 @@
           }
         },
         "summary": "Get a stream timeseries data by source show sdk version metadata.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/usage/streams/{source}/sdkversions": {
@@ -3908,9 +3672,7 @@
           }
         },
         "summary": "Get a stream timeseries data by source and show all sdk version associated.",
-        "tags": [
-          "Customer Metrics"
-        ]
+        "tags": ["Customer Metrics"]
       }
     },
     "/user-search/{projectKey}/{environmentKey}": {
@@ -3948,9 +3710,7 @@
           }
         },
         "summary": "Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.",
-        "tags": [
-          "Users"
-        ]
+        "tags": ["Users"]
       }
     },
     "/users/{projectKey}/{environmentKey}": {
@@ -3985,9 +3745,7 @@
           }
         },
         "summary": "List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.",
-        "tags": [
-          "Users"
-        ]
+        "tags": ["Users"]
       }
     },
     "/users/{projectKey}/{environmentKey}/{userKey}": {
@@ -4016,9 +3774,7 @@
           }
         },
         "summary": "Delete a user by ID.",
-        "tags": [
-          "Users"
-        ]
+        "tags": ["Users"]
       },
       "get": {
         "operationId": "getUser",
@@ -4048,9 +3804,7 @@
           }
         },
         "summary": "Get a user by key.",
-        "tags": [
-          "Users"
-        ]
+        "tags": ["Users"]
       }
     },
     "/users/{projectKey}/{environmentKey}/{userKey}/flags": {
@@ -4082,9 +3836,7 @@
           }
         },
         "summary": "Fetch a single flag setting for a user by key.",
-        "tags": [
-          "User settings"
-        ]
+        "tags": ["User settings"]
       }
     },
     "/users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey}": {
@@ -4119,9 +3871,7 @@
           }
         },
         "summary": "Fetch a single flag setting for a user by key.",
-        "tags": [
-          "User settings"
-        ]
+        "tags": ["User settings"]
       },
       "put": {
         "operationId": "putFlagSetting",
@@ -4157,9 +3907,7 @@
           }
         },
         "summary": "Specifically enable or disable a feature flag for a user based on their key.",
-        "tags": [
-          "User settings"
-        ]
+        "tags": ["User settings"]
       }
     },
     "/users/{projectKey}/{userKey}/expiring-user-targets/{environmentKey}": {
@@ -4188,9 +3936,7 @@
           }
         },
         "summary": "Get expiring dates on flags for user",
-        "tags": [
-          "User settings"
-        ]
+        "tags": ["User settings"]
       },
       "patch": {
         "operationId": "patchExpiringUserTargetsForFlags",
@@ -4229,9 +3975,7 @@
           }
         },
         "summary": "Update, add, or delete expiring user targets for a single user on all flags",
-        "tags": [
-          "User settings"
-        ]
+        "tags": ["User settings"]
       }
     },
     "/webhooks": {
@@ -4249,9 +3993,7 @@
           }
         },
         "summary": "Fetch a list of all webhooks.",
-        "tags": [
-          "Webhooks"
-        ]
+        "tags": ["Webhooks"]
       },
       "post": {
         "operationId": "postWebhook",
@@ -4272,9 +4014,7 @@
           }
         },
         "summary": "Create a webhook.",
-        "tags": [
-          "Webhooks"
-        ]
+        "tags": ["Webhooks"]
       }
     },
     "/webhooks/{resourceId}": {
@@ -4297,9 +4037,7 @@
           }
         },
         "summary": "Delete a webhook by ID.",
-        "tags": [
-          "Webhooks"
-        ]
+        "tags": ["Webhooks"]
       },
       "get": {
         "operationId": "getWebhook",
@@ -4320,9 +4058,7 @@
           }
         },
         "summary": "Get a webhook by ID.",
-        "tags": [
-          "Webhooks"
-        ]
+        "tags": ["Webhooks"]
       },
       "patch": {
         "operationId": "patchWebhook",
@@ -4352,9 +4088,7 @@
           }
         },
         "summary": "Modify a webhook by ID.",
-        "tags": [
-          "Webhooks"
-        ]
+        "tags": ["Webhooks"]
       }
     }
   },
@@ -4394,10 +4128,7 @@
           "$ref": "#/definitions/SemanticPatchInstruction"
         },
         "notifyMemberIds": {
-          "example": [
-            "memberId",
-            "memberId2"
-          ],
+          "example": ["memberId", "memberId2"],
           "items": {
             "type": "string"
           },
@@ -4416,12 +4147,7 @@
         },
         "status": {
           "description": "| Name      | Description |\n| ---------:| ----------- |\n| pending   | the approval request has not been applied yet |\n| completed | the approval request has been applied successfully |\n| scheduled | the approval request for a scheduled change has been applied successfully |\n| failed    | the approval request has been applied but the changes were not applied successfully |\n",
-          "enum": [
-            "pending",
-            "completed",
-            "scheduled",
-            "failed"
-          ],
+          "enum": ["pending", "completed", "scheduled", "failed"],
           "type": "string"
         }
       },
@@ -4447,11 +4173,7 @@
     },
     "ApprovalRequestReviewStatus": {
       "description": "| Name     | Description |\n| --------:| ----------- |\n| pending  | the approval request has not been reviewed yet |\n| approved | the approval request has been approved and can now be applied |\n| declined | the approval request has been declined and cannot be applied |\n",
-      "enum": [
-        "pending",
-        "approved",
-        "declined"
-      ],
+      "enum": ["pending", "approved", "declined"],
       "type": "string"
     },
     "ApprovalRequests": {
@@ -4552,9 +4274,7 @@
       "properties": {
         "add": {
           "description": "Users to add to this list of targets",
-          "example": [
-            "user@launchdarkly.com"
-          ],
+          "example": ["user@launchdarkly.com"],
           "items": {
             "type": "string"
           },
@@ -4633,26 +4353,18 @@
         "value": {
           "description": "Values for this property.",
           "items": {
-            "example": [
-              "Value 1",
-              "Value 2"
-            ],
+            "example": ["Value 1", "Value 2"],
             "type": "string"
           },
           "type": "array"
         }
       },
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "type": "object"
     },
     "CustomPropertyValues": {
       "description": "Values for this property.",
-      "example": [
-        "Value 1",
-        "Value 2"
-      ],
+      "example": ["Value 1", "Value 2"],
       "items": {
         "type": "string"
       },
@@ -4716,10 +4428,7 @@
           "type": "integer"
         }
       },
-      "required": [
-        "onVariation",
-        "offVariation"
-      ],
+      "required": ["onVariation", "offVariation"],
       "type": "object"
     },
     "DependentFlag": {
@@ -4817,12 +4526,7 @@
         },
         "kind": {
           "description": "Destination type (\"google-pubsub\", \"kinesis\", \"mparticle\", or \"segment\")",
-          "enum": [
-            "google-pubsub",
-            "kinesis",
-            "mparticle",
-            "segment"
-          ],
+          "enum": ["google-pubsub", "kinesis", "mparticle", "segment"],
           "example": "google-pubsub",
           "type": "string"
         },
@@ -4960,10 +4664,7 @@
             },
             "serviceKind": {
               "description": "The approvals system used.",
-              "enum": [
-                "launchdarkly",
-                "service-now"
-              ],
+              "enum": ["launchdarkly", "service-now"],
               "type": "string"
             }
           },
@@ -5068,21 +4769,14 @@
         },
         "tags": {
           "description": "An array of tags for this environment.",
-          "example": [
-            "tag1",
-            "tag2"
-          ],
+          "example": ["tag1", "tag2"],
           "items": {
             "type": "string"
           },
           "type": "array"
         }
       },
-      "required": [
-        "name",
-        "key",
-        "color"
-      ],
+      "required": ["name", "key", "color"],
       "type": "object"
     },
     "EvaluationUsageError": {
@@ -5157,10 +4851,7 @@
           "example": {
             "bugs": {
               "name": "Issue tracker ids",
-              "value": [
-                "123",
-                "456"
-              ]
+              "value": ["123", "456"]
             },
             "deprecated": {
               "name": "Deprecated Date",
@@ -5185,10 +4876,7 @@
         },
         "goalIds": {
           "description": "An array goals from all environments associated with this feature flag",
-          "example": [
-            "d7239405bd89c930e885aa76",
-            "405bc930e88d7239d895aa76"
-          ],
+          "example": ["d7239405bd89c930e885aa76", "405bc930e88d7239d895aa76"],
           "items": {
             "type": "string"
           },
@@ -5329,9 +5017,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "key"
-      ],
+      "required": ["key"],
       "type": "object"
     },
     "FeatureFlagScheduledChange": {
@@ -5403,12 +5089,7 @@
         },
         "name": {
           "description": "| Name     | Description |\n| --------:| ----------- |\n| new      | the feature flag was created within the last 7 days, and has not been requested yet |\n| active   | the feature flag was requested by your servers or clients within the last 7 days |\n| inactive | the feature flag was created more than 7 days ago, and hasn't been requested by your servers or clients within the past 7 days |\n| launched | one variation of the feature flag has been rolled out to all your users for at least 7 days |\n",
-          "enum": [
-            "new",
-            "active",
-            "inactive",
-            "launched"
-          ],
+          "enum": ["new", "active", "inactive", "launched"],
           "type": "string"
         }
       },
@@ -5442,12 +5123,7 @@
         },
         "name": {
           "description": "| Name     | Description |\n| --------:| ----------- |\n| new      | the feature flag was created within the last 7 days, and has not been requested yet |\n| active   | the feature flag was requested by your servers or clients within the last 7 days |\n| inactive | the feature flag was created more than 7 days ago, and hasn't been requested by your servers or clients within the past 7 days |\n| launched | one variation of the feature flag has been rolled out to all your users for at least 7 days |\n",
-          "enum": [
-            "new",
-            "active",
-            "inactive",
-            "launched"
-          ],
+          "enum": ["new", "active", "inactive", "launched"],
           "type": "string"
         }
       },
@@ -5835,11 +5511,7 @@
           "type": "object"
         }
       },
-      "required": [
-        "op",
-        "path",
-        "value"
-      ],
+      "required": ["op", "path", "value"],
       "type": "object"
     },
     "Policy": {
@@ -6015,12 +5687,7 @@
       "type": "object"
     },
     "Role": {
-      "enum": [
-        "writer",
-        "reader",
-        "admin",
-        "owner"
-      ],
+      "enum": ["writer", "reader", "admin", "owner"],
       "type": "string"
     },
     "Rollout": {
@@ -6098,9 +5765,7 @@
           "$ref": "#/definitions/SemanticPatchInstruction"
         }
       },
-      "required": [
-        "instructions"
-      ],
+      "required": ["instructions"],
       "type": "object"
     },
     "Site": {
@@ -6127,10 +5792,7 @@
           "type": "array"
         },
         "effect": {
-          "enum": [
-            "allow",
-            "deny"
-          ],
+          "enum": ["allow", "deny"],
           "type": "string"
         },
         "notActions": {
@@ -6672,10 +6334,7 @@
         },
         "tags": {
           "description": "An array of tags for this user segment.",
-          "example": [
-            "dev",
-            "ops"
-          ],
+          "example": ["dev", "ops"],
           "items": {
             "type": "string"
           },
@@ -6690,11 +6349,7 @@
           "type": "integer"
         }
       },
-      "required": [
-        "key",
-        "name",
-        "creationDate"
-      ],
+      "required": ["key", "name", "creationDate"],
       "type": "object"
     },
     "UserSegmentRule": {
@@ -6874,9 +6529,7 @@
           "type": "object"
         }
       },
-      "required": [
-        "value"
-      ],
+      "required": ["value"],
       "type": "object"
     },
     "Webhook": {

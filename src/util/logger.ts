@@ -3,38 +3,43 @@ import { pino } from "pino";
 const logger = getLogger();
 
 function getLogLevel(): string {
-  let logLevel = process.env.HASURA_PLUGIN_LOG_LEVEL? process.env.HASURA_PLUGIN_LOG_LEVEL : 'info';
+  let logLevel = process.env.HASURA_PLUGIN_LOG_LEVEL
+    ? process.env.HASURA_PLUGIN_LOG_LEVEL
+    : "info";
   const prettyLogs = process.env.NDC_OAS_LAMBDA_PRETTY_LOGS;
 
   const logLevels = new Set<string>([
-    'trace',
-    'debug',
-    'info',
-    'warn',
-    'error',
-    'fatal',
-    'panic',
+    "trace",
+    "debug",
+    "info",
+    "warn",
+    "error",
+    "fatal",
+    "panic",
   ]);
 
   if (!logLevels.has(logLevel)) {
     return logLevel;
   }
 
-  if (logLevel === 'panic') {
-    return 'silent';
+  if (logLevel === "panic") {
+    return "silent";
   }
   return logLevel;
 }
 
 function getLogger() {
-  if (process.env.NDC_OAS_LAMBDA_PRETTY_LOGS && process.env.NDC_OAS_LAMBDA_PRETTY_LOGS === 'true') {
+  if (
+    process.env.NDC_OAS_LAMBDA_PRETTY_LOGS &&
+    process.env.NDC_OAS_LAMBDA_PRETTY_LOGS === "true"
+  ) {
     return pino({
       transport: {
         target: "pino-pretty",
         options: {
           colorize: true,
           sync: true,
-        }
+        },
       },
       level: getLogLevel(),
     });
@@ -68,7 +73,6 @@ export function info(...args: any[]) {
     logger.info(args);
   }
 }
-
 
 export function warn(...args: any[]) {
   if (args && args.length === 1) {
