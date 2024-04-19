@@ -56,7 +56,7 @@ Further reading:
     new Option(
       "--ndc-lambda-sdk <version>",
       "NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version",
-    ).env("NDC_NODEJS_VERSION"),
+    ).env("NDC_LAMBDA_SDK_VERSION"),
   )
 
   .action((args, cmd) => {
