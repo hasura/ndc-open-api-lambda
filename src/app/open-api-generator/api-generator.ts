@@ -1,22 +1,26 @@
-import { ParsedRoute, generateApi, Hooks, SchemaComponent } from "swagger-typescript-api";
-import * as path from 'path';
+import {
+  ParsedRoute,
+  generateApi,
+  Hooks,
+  SchemaComponent,
+} from "swagger-typescript-api";
+import * as path from "path";
 import { getTemplatesDirectory } from ".";
 import { existsSync } from "fs";
 import * as logger from "../../util/logger";
 
-const CircularJSON = require('circular-json');
+const CircularJSON = require("circular-json");
 
 let templateDir: string; // cannot be a constant because calling `getTemplateDirectory` results in a compilation error
 
 export type NdcSchemaComponent = {
-  component: SchemaComponent,
-  isRelaxedType: boolean, // components with this flag set to true need `@allowrelaxedtypes` annotation. More: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
-  isUntyped: boolean, // components with this flag set to true (like `any`) need to be wrapped in JSON before being returned
-  rawTypeName: string, // path of the type, can be the same as `typename`, but not always.
-  typeName: string, // name of the type (used in typescript files)
-  ref: string,
-}
-
+  component: SchemaComponent;
+  isRelaxedType: boolean; // components with this flag set to true need `@allowrelaxedtypes` annotation. More: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+  isUntyped: boolean; // components with this flag set to true (like `any`) need to be wrapped in JSON before being returned
+  rawTypeName: string; // path of the type, can be the same as `typename`, but not always.
+  typeName: string; // name of the type (used in typescript files)
+  ref: string;
+};
 
 export class ApiComponents {
   rawTypeToTypeMap: Map<string, string>;
@@ -38,7 +42,7 @@ export class ApiComponents {
     this.allGeneratedTypes = new Set<string>();
     this.routes = [];
 
-    templateDir =  path.resolve(getTemplatesDirectory(), './custom')
+    templateDir = path.resolve(getTemplatesDirectory(), "./custom");
   }
 
   public addComponent(component: SchemaComponent) {
@@ -46,8 +50,11 @@ export class ApiComponents {
     const rawTypeName = component.typeName;
 
     if (!ref) {
-      ref = `#/customref/${component.componentName}/${rawTypeName}`
-      logger.warn(`$ref missing for component. setting ref to '${ref}'`, component);
+      ref = `#/customref/${component.componentName}/${rawTypeName}`;
+      logger.warn(
+        `$ref missing for component. setting ref to '${ref}'`,
+        component,
+      );
     }
 
     const ndcComponent: NdcSchemaComponent = {
@@ -57,7 +64,7 @@ export class ApiComponents {
       rawTypeName: rawTypeName,
       typeName: `${this.rawTypeToTypeMap.get(rawTypeName)}`,
       ref: ref,
-    }
+    };
 
     this.rawTypeNameToRefMap.set(rawTypeName, ref);
     this.refToRawTypeNameMap.set(ref, rawTypeName);
@@ -81,7 +88,9 @@ export class ApiComponents {
     return this.routes;
   }
 
-  public getNdcComponentByTypeName(typename: string): NdcSchemaComponent | undefined {
+  public getNdcComponentByTypeName(
+    typename: string,
+  ): NdcSchemaComponent | undefined {
     const rawTypeName = this.typeToRawTypeMap.get(typename);
     if (!rawTypeName) {
       return undefined;
@@ -104,40 +113,65 @@ export class ApiComponents {
     }
   }
 
-  processNdcComponentUtil(component: NdcSchemaComponent, visitedRefs: Set<string>) {
+  processNdcComponentUtil(
+    component: NdcSchemaComponent,
+    visitedRefs: Set<string>,
+  ) {
     if (visitedRefs.has(component.ref)) {
-      return
+      return;
     }
     visitedRefs.add(component.ref);
-    if (!component.component.rawTypeData || !component.component.rawTypeData.properties) {
-      return
+    if (
+      !component.component.rawTypeData ||
+      !component.component.rawTypeData.properties
+    ) {
+      return;
     }
     component.typeName = `${this.rawTypeToTypeMap.get(component.rawTypeName)}`;
-    Object.entries(component.component.rawTypeData.properties).forEach(([key, value]) => {
-      const anyValue: any = value;
-      if (anyValue['enum'] && anyValue['enum'].length > 0) {
-        component.isRelaxedType = true;
-        logger.debug(`'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`);
-      }
-
-      if (anyValue['$ref']) {
-        this.processNdcComponentUtil(this.refToSchemaComponentMap.get(anyValue['$ref'])!, visitedRefs);
-        if (this.refToSchemaComponentMap.get(anyValue['$ref'])!.isRelaxedType) {
+    Object.entries(component.component.rawTypeData.properties).forEach(
+      ([key, value]) => {
+        const anyValue: any = value;
+        if (anyValue["enum"] && anyValue["enum"].length > 0) {
           component.isRelaxedType = true;
-          logger.debug(`'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`);
+          logger.debug(
+            `'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`,
+          );
         }
-      }
 
-      if (anyValue['type'] === 'array') {
-        if (anyValue['items'] && anyValue['items']['$ref']) {
-          this.processNdcComponentUtil(this.refToSchemaComponentMap.get(anyValue['items']['$ref'])!, visitedRefs);
-          if (this.refToSchemaComponentMap.get(anyValue['items']['$ref'])!.isRelaxedType) {
+        if (anyValue["$ref"]) {
+          this.processNdcComponentUtil(
+            this.refToSchemaComponentMap.get(anyValue["$ref"])!,
+            visitedRefs,
+          );
+          if (
+            this.refToSchemaComponentMap.get(anyValue["$ref"])!.isRelaxedType
+          ) {
             component.isRelaxedType = true;
-            logger.debug(`'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`);
+            logger.debug(
+              `'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`,
+            );
           }
         }
-      }
-    });
+
+        if (anyValue["type"] === "array") {
+          if (anyValue["items"] && anyValue["items"]["$ref"]) {
+            this.processNdcComponentUtil(
+              this.refToSchemaComponentMap.get(anyValue["items"]["$ref"])!,
+              visitedRefs,
+            );
+            if (
+              this.refToSchemaComponentMap.get(anyValue["items"]["$ref"])!
+                .isRelaxedType
+            ) {
+              component.isRelaxedType = true;
+              logger.debug(
+                `'${key}' property of '${component.ref}' is an enum. '${component.ref}' marked as a relaxed type`,
+              );
+            }
+          }
+        }
+      },
+    );
   }
 }
 
@@ -153,7 +187,9 @@ export async function generateOpenApiTypescriptFile(
 
   if (!shouldOverwriteFile) {
     if (existsSync(path.resolve(outputDir, filename))) {
-      logger.error(`Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      logger.error(
+        `Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+      );
       process.exit(0); // silently exit early
     }
   }
@@ -170,7 +206,7 @@ export async function generateOpenApiTypescriptFile(
         /**
          * Contains the full definition of the type, along with individual variables in objects
          */
-        if (component.componentName === 'schemas') {
+        if (component.componentName === "schemas") {
           // for now, we are only going to deal with schemas
           apiComponents.addComponent(component);
         }
@@ -179,37 +215,26 @@ export async function generateOpenApiTypescriptFile(
         // console.log('\n\n\n onCreateRequestParams: ', CircularJSON.stringify(rawType));
       },
       onCreateRoute: (routeData) => {
-
         // if (routeData.raw.route === "/v3/projects/{id}") {
         //   console.log('\n\n\n\nonCreateRoute: ', CircularJSON.stringify(routeData));
         // }
         apiComponents.addRoute(routeData);
       },
-      onCreateRouteName: (routeNameInfo, rawRouteInfo) => {
-
-      },
-      onFormatRouteName: (routeInfo, templateRouteName) => {
-
-      },
+      onCreateRouteName: (routeNameInfo, rawRouteInfo) => {},
+      onFormatRouteName: (routeInfo, templateRouteName) => {},
       onFormatTypeName: (typeName, rawTypeName, schemaType) => {
         /**
          * typename is the name of the type generated for typescript. eg. MainBlog
          * rawTypeName is equal to the component.typename from onCreateComponent hook.
          */
         apiComponents.addTypes(rawTypeName ? rawTypeName : typeName, typeName);
-        if (schemaType && schemaType === 'type-name') {
+        if (schemaType && schemaType === "type-name") {
           apiComponents.allGeneratedTypes.add(typeName);
         }
       },
-      onInit: (configuration) => {
-
-      },
-      onPreParseSchema: (originalSchema, typeName, schemaType) => {
-
-      },
-      onParseSchema: (originalSchema, parsedSchema) => {
-
-      },
+      onInit: (configuration) => {},
+      onPreParseSchema: (originalSchema, typeName, schemaType) => {},
+      onParseSchema: (originalSchema, parsedSchema) => {},
       onPrepareConfig: (currentConfiguration) => {},
 
       onBuildRoutePath: (data) => {
@@ -219,6 +244,6 @@ export async function generateOpenApiTypescriptFile(
   });
 
   apiComponents.processNdcComponents();
-  
+
   return apiComponents;
 }

@@ -2,7 +2,7 @@
 
 import { Command } from "commander";
 import * as updateCmd from "./update";
-import { exec, execSync } from 'child_process';
+import { exec, execSync } from "child_process";
 
 export const program = new Command()
   .version("0.0.1")
@@ -18,5 +18,5 @@ export const program = new Command()
 program.parse(process.argv);
 
 async function main() {
-  execSync('npm run watch', {stdio: 'inherit'});
+  execSync("npm run watch", { stdio: "inherit" });
 }
