@@ -26,10 +26,6 @@ export interface FullRequestParams extends Omit<RequestInit, "body"> {
 
 export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">
 
-export interface abcdef {
-  someVar: string;
-}
-
 export interface ApiConfig<SecurityDataType = unknown> {
     baseUrl?: string;
     baseApiParams?: Omit<RequestParams, "baseUrl" | "cancelToken" | "signal">;
@@ -196,19 +192,8 @@ export class HttpClient<SecurityDataType = unknown> {
             r.data = (null as unknown) as T;
             r.error = (null as unknown) as E;
 
-            // TODO: make this more robust
             if (!response.ok && response.status < 500) {
-              // let problemDetails: any;
-              // if (r.error) { // TODO: add status code and text here also
-              //   problemDetails = r.error as ProblemDetails
-              // } else {
-              //  problemDetails = {
-              //    title: r.statusText,
-              //    status: r.status,
-              //  }
-              // }
-              // r.error = problemDetails;
-              return r;
+              throw new hasuraSdk.UnprocessableContent("error: ", { response });
             }
 
             const data = !responseFormat ? r : await response[responseFormat]()
