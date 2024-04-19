@@ -1,5 +1,5 @@
 import { Command, Option } from "commander";
-import { generateProject, importOpenApi } from "../app/open-api-generator";
+import { importOpenApi } from "../app/open-api-generator";
 import { resolve } from "path";
 import { exit } from "process";
 import * as logger from "../util/logger";
@@ -30,27 +30,20 @@ Further reading:
   )
   .addOption(
     new Option("-b --base-url <value>", "Base URL of the API")
-    .env("NDC_OAS_BASE_URL")
-    .argParser(headerParser)
-  )
-  .addOption(
-    new Option("-H --headers <key=value...>", "Headers to be included in the requests")
-    .env("NDC_OAS_HEADERS")
-    .argParser(headerParser)
+      .env("NDC_OAS_BASE_URL")
+      .argParser(headerParser) // TODO why??
   )
   .addOption(
     new Option(
-      "--alpha",
-      "Override the generated config to support DDN Alpha."
+      "-H --headers <key=value...>",
+      "Headers to be included in the requests"
     )
-      .default("false")
-      .choices(["true", "false"])
-      .preset("true")
-      .env("NDC_OAS_OVERRIDE_ALPHA")
+      .env("NDC_OAS_HEADERS")
+      .argParser(headerParser)
   )
   .addOption(
     new Option(
-      "--overwrite",
+      "--overwrite [bool]",
       "Overwrite files if already present in the output directory."
     )
       .default("false")
@@ -59,8 +52,22 @@ Further reading:
       .env("NDC_OAS_FILE_OVERWRITE")
   )
 
+  .addOption(
+    new Option(
+      "--ndc-lambda-sdk <version>",
+      "NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version"
+    ).env("NDC_NODEJS_VERSION")
+  )
+
   .action((args, cmd) => {
-    main(args.openApi, resolve(args.outputDirectory), args.alpha === 'true', args.overwrite === 'true', args.headers, args.baseUrl);
+    main(
+      args.openApi,
+      resolve(args.outputDirectory),
+      args.overwrite === "true",
+      args.headers,
+      args.baseUrl,
+      args.ndcLambdaSdk,
+    );
   });
 
 // convert the given array into the following format:
@@ -71,7 +78,7 @@ function headerParser(value: string, previousValue: string[]): string[] {
     return [];
   }
   if (!previousValue) {
-    return [ value ];
+    return [value];
   }
   const joinedValue = `${value}&${previousValue.join("&")}`;
   return [joinedValue];
@@ -80,19 +87,19 @@ function headerParser(value: string, previousValue: string[]): string[] {
 async function main(
   openApi: string,
   outputDir: string,
-  alphaOverride: boolean,
   overwrite: boolean,
   headers: string[],
   baseUrl: string | undefined,
+  ndcLambdaSdk: string | undefined,
 ) {
   try {
     await importOpenApi({
       openApiUri: openApi,
       outputDirectory: outputDir,
-      alphaOverride: alphaOverride,
       shouldOverwrite: overwrite,
-      headers: (headers && headers.length > 0) ? headers[0] : undefined, // beacuse of headerParser(), the headers array can contain only 1 element,
+      headers: headers && headers.length > 0 ? headers[0] : undefined, // beacuse of headerParser(), the headers array can contain only 1 element,
       baseUrl: baseUrl,
+      ndcLambdaSdkVersion: ndcLambdaSdk,
     });
   } catch (e) {
     logger.fatal(e);

@@ -1,6 +1,6 @@
 import { Command } from "commander";
-import { generateProject } from "../app/open-api-generator";
 import { resolve } from "path";
+import * as logger  from "../util/logger";
 
 export const cmd = new Command("init")
   .description(
@@ -28,5 +28,5 @@ Further reading:
   });
 
 async function main(openApi: string, outputDir: string) {
-  // await generateProject(openApi, outputDir);
+  logger.error("This command is not implemented yet")
 }

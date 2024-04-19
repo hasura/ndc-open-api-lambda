@@ -4,8 +4,7 @@ import * as fs from "fs";
 import { generateFunctionsTypescriptFile } from "./function-generator";
 import pacote from "pacote";
 import { SemVer } from "semver";
-import { version } from "../../../package.json";
-import { exec, execSync } from "child_process";
+import { execSync } from "child_process";
 import * as logger from "../../util/logger";
 import * as fileUtil from "../../util/file";
 
@@ -27,7 +26,7 @@ export const getTemplatesDirectory = (): string => {
   }
 };
 
-const tsConfigBetaContent = `{
+const tsConfigContent = `{
   "extends": "./node_modules/@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "lib": [
@@ -37,77 +36,7 @@ const tsConfigBetaContent = `{
 }
 `;
 
-export async function generateAlphaPackageJson(outputDir: string) {
-  logger.info("Generating Alpha compatible scripts");
-  logger.warn(
-    "Alpha version is deprecated and will no longer be support. Please consider updating to Beta"
-  );
-
-  fs.writeFileSync(path.resolve(outputDir, "configuration.json"), `{}`);
-
-  const packageManifest = await pacote.manifest(
-    "generator-hasura-ndc-nodejs-lambda" // todo: change the name to this package name
-  );
-  const latestVersion = new SemVer(packageManifest.version);
-  const currentVersion = new SemVer(version);
-
-  logger.debug("checking for update");
-  if (currentVersion.compare(latestVersion) === -1) {
-    logger.info(
-      `Upate available: A newer version (${latestVersion}) is available`
-    );
-  } else {
-    logger.debug(`Already on latest version`);
-  }
-
-  const configuration = "configuration.json";
-  const versionRestriction = "";
-
-  const sdkPackageManifest = await pacote.manifest(
-    `@hasura/ndc-lambda-sdk${versionRestriction}`,
-    {}
-  );
-  const packageJson = await PackageJson.load(outputDir, { create: true }); //.load(outputDir, { create: true });
-  // packageJson.load(outputDir, { create: true });
-
-  logger.info("Updating package.json and installing dependencies");
-  packageJson.update({
-    private: true,
-    engines: {
-      node: ">=18",
-    },
-    scripts: {
-      // packageJson.content.scripts === undefined ? [] : packageJson.content.scripts,
-      start: `ndc-lambda-sdk host -f functions.ts serve --configuration ${configuration} --port 8080`,
-      watch: `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ${configuration} --pretty-print-logs --port 8080`,
-    },
-    dependencies: {
-      // ...packageJson.content.dependencies,
-      "@hasura/ndc-lambda-sdk": "0.16.0",
-    },
-  });
-  await packageJson.save();
-
-  execSync("npm install", { stdio: "inherit" });
-  logger.info("npm install complete -- all dependencies installed");
-}
-
-export async function generatePackageJson(outputDir: string) {
-  const packageManifest = await pacote.manifest(
-    "generator-hasura-ndc-nodejs-lambda" // todo: change the name to this package name
-  );
-  const latestVersion = new SemVer(packageManifest.version);
-  const currentVersion = new SemVer(version);
-
-  logger.debug("checking for update");
-  if (currentVersion.compare(latestVersion) === -1) {
-    logger.info(
-      `Upate available: A newer version (${latestVersion}) is available`
-    );
-  } else {
-    logger.debug(`Already on latest version`);
-  }
-
+export async function generatePackageJson(outputDir: string, ndcLambdaSdkVersion: string | undefined) {
   const configuration = "./";
   const versionRestriction = "";
 
@@ -115,8 +44,28 @@ export async function generatePackageJson(outputDir: string) {
     `@hasura/ndc-lambda-sdk${versionRestriction}`,
     {}
   );
-  const packageJson = await PackageJson.load(outputDir, { create: true }); //.load(outputDir, { create: true });
-  // packageJson.load(outputDir, { create: true });
+
+  const latestVersion = new SemVer(sdkPackageManifest.version);
+  let preferredNdcLambdaSdkVersion: SemVer;
+
+  if (ndcLambdaSdkVersion) {
+    try {
+      preferredNdcLambdaSdkVersion = new SemVer(ndcLambdaSdkVersion);
+      await pacote.manifest(
+        `@hasura/ndc-lambda-sdk@${preferredNdcLambdaSdkVersion}`,
+        {}
+      );
+      logger.info(`Using NDC Lambda SDK version ${preferredNdcLambdaSdkVersion}`);
+    }
+    catch (e) {
+      logger.warn(`${ndcLambdaSdkVersion} is not a correct NDC Lambda SDK version. Using (latest) NDC Lambda SDK version: ${latestVersion}`);
+      preferredNdcLambdaSdkVersion = latestVersion;
+    }
+  } else {
+    preferredNdcLambdaSdkVersion = latestVersion;
+  }
+
+  const packageJson = await PackageJson.load(outputDir, { create: true });
 
   logger.info("Updating package.json and installing dependencies");
   packageJson.update({
@@ -131,7 +80,7 @@ export async function generatePackageJson(outputDir: string) {
     },
     dependencies: {
       // ...packageJson.content.dependencies,
-      "@hasura/ndc-lambda-sdk": sdkPackageManifest.version,
+      "@hasura/ndc-lambda-sdk": `${preferredNdcLambdaSdkVersion}`,
     },
   });
   await packageJson.save();
@@ -160,24 +109,13 @@ export async function generateCode(
   return functionFileStr;
 }
 
-export async function generateProject(openApiUri: string, outputDir: string, headers: string | undefined, baseUrl: string | undefined) {
-  const functionFileTs = await generateCode(openApiUri, outputDir, true, headers, baseUrl);
-
-  fs.writeFileSync(path.resolve(outputDir, "functions.ts"), functionFileTs);
-  logger.info("created functions.ts");
-
-  await generatePackageJson(outputDir);
-
-  fs.writeFileSync(path.resolve(outputDir, "tsconfig.json"), tsConfigBetaContent);
-}
-
 export type ImportOpenApiArgs = {
   openApiUri: string,
   outputDirectory: string,
-  alphaOverride: boolean,
   shouldOverwrite: boolean,
   headers: string | undefined, // format: key1=value1&key2=value2&key3=value3...
   baseUrl: string | undefined,
+  ndcLambdaSdkVersion: string | undefined,
 }
 
 export async function importOpenApi(args: ImportOpenApiArgs) {
@@ -185,25 +123,24 @@ export async function importOpenApi(args: ImportOpenApiArgs) {
 
   if (!args.shouldOverwrite) {
     if (fs.existsSync(path.resolve(args.outputDirectory, 'functions.ts'))) {
-      throw new Error(`Error: functions.ts already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      logger.error(`Error: functions.ts already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      process.exit(0);
     }
     if (fs.existsSync(path.resolve(args.outputDirectory, 'package.json'))) {
-      throw new Error(`Error: package.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      logger.error(`Error: package.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      process.exit(0);
     }
     if (fs.existsSync(path.resolve(args.outputDirectory, 'tsconfig.json'))) {
-      throw new Error(`Error: tsconfig.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      logger.error(`Error: tsconfig.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      process.exit(0);
     }
   }
 
   logger.info("create functions.ts");
   fs.writeFileSync(path.resolve(args.outputDirectory, "functions.ts"), functionFileTs);
 
-  if (args.alphaOverride) {
-    await generateAlphaPackageJson(args.outputDirectory)
-  } else {
-    await generatePackageJson(args.outputDirectory);
-  }
+  await generatePackageJson(args.outputDirectory, args.ndcLambdaSdkVersion);
 
   logger.info('create tsconfig.json');
-  fs.writeFileSync(path.resolve(args.outputDirectory, "tsconfig.json"), tsConfigBetaContent); 
+  fs.writeFileSync(path.resolve(args.outputDirectory, "tsconfig.json"), tsConfigContent); 
 }

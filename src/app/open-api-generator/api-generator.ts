@@ -153,7 +153,8 @@ export async function generateOpenApiTypescriptFile(
 
   if (!shouldOverwriteFile) {
     if (existsSync(path.resolve(outputDir, filename))) {
-      throw new Error(`Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      logger.error(`Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`);
+      process.exit(0); // silently exit early
     }
   }
 
