@@ -44,9 +44,7 @@ describe("GenerateParams", async () => {
       if (fileContent) {
         try {
           testCase.expected = new Map(Object.entries(JSON.parse(fileContent)));
-        } catch (e) {
-
-        }
+        } catch (e) {}
       }
     });
 
@@ -63,8 +61,12 @@ describe("GenerateParams", async () => {
             const parsedTypes = parse(routeData);
             const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
 
-            gotFunctionArgs.set(jsonKey, 
-              parsedTypes.queryParams && parsedTypes.queryParams?.rendered ? parsedTypes.queryParams?.rendered : 'null');
+            gotFunctionArgs.set(
+              jsonKey,
+              parsedTypes.queryParams && parsedTypes.queryParams?.rendered
+                ? parsedTypes.queryParams?.rendered
+                : "null",
+            );
           },
         },
       });
