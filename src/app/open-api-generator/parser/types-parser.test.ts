@@ -26,7 +26,7 @@ const tests: {
   // {
   //   name: "GenerateParams_Petstore",
   //   oasFile: "../tests/oas-docs/petstore.yaml",
-  //   goldenFile: "./testdata/golden-files/demo-blog-api.json",
+  //   goldenFile: "./testdata/golden-files/petstore.json",
   // },
 ];
 

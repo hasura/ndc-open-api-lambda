@@ -38,6 +38,7 @@ export type Schema = {
   enum?: number[] | string[] | any[];
   type: string;
   properties?: Record<string, Schema>;
+  content?: any[];
   rendered?: string; // contains the rendered string for this schema node
 };
 
@@ -158,13 +159,14 @@ export function routeParamsParser(routeParams: any) {
  * @param routeData the route data the is passed in the `onCreateRoute()` hook of `generateApi()`
  */
 export function parse(routeData: any): ParsedTypes {
+  console.log(`\n\nAPI: ${routeData.raw.method} ${routeData.raw.route}`);
+
   // const specificArgs = parseSpecificArgs(routeData.specificArgs as SpecificArgs)
 
   // console.log(`\n\n\nRouteParams ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.routeParams)}`);
-  // console.log(`\n\n\nqueryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`);
+  // console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`);
   // console.log(`Specific args ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.specificArgs)}`);
 
-  // console.log(`\n\nAPI: ${routeData.raw.method} ${routeData.raw.route}`)
   const queryParams = parseQueryParams(routeData.queryObjectSchema);
 
   return {
@@ -201,7 +203,6 @@ export function parseQueryParams(queryParams: any): Schema | undefined {
     ? queryParams.$parsed.name
     : "query";
   const querySchema: Schema = {
-    description: "request query",
     name: queryParamName,
     type: "object",
     properties: queryParams.properties,
@@ -224,31 +225,44 @@ function renderQueryParams(schema: Schema | undefined): string {
       result = `${result}  ${renderQueryParams(schema.properties[property])}`;
       // result.concat(renderQueryParams(schema.properties[property]));
     }
-    if (schema.required) {
-      schema.rendered = `${schema.name}: { ${result} },`;
-    } else {
-      schema.rendered = `${schema.name}?: { ${result} },`;
-    }
+    schema.rendered = renderSchema(
+      schema.description,
+      schema.required ? schema.required : false,
+      `${schema.name}`,
+      `{ ${result} }`,
+    );
     return schema.rendered;
-  } else {
-    if (schema.required) {
-      schema.rendered = `${schema.name}: ${schema.type},`;
-    } else {
-      schema.rendered = `${schema.name}?: ${schema.type},`;
-    }
+  }
+  // else if (schema.enum) {
+  //   if (schema.type === 'string') {
+
+  //   }
+  // }
+  else {
+    schema.rendered = renderSchema(
+      schema.description,
+      schema.required ? schema.required : false,
+      `${schema.name}`,
+      `${schema.type}`,
+    );
     return schema.rendered;
   }
 }
 
-// function renderSchema(schema: Schema) {
-//   const schemaDescription = schema.description ? `\\** ${schema.description} */` : '';
+function renderSchema(
+  description: string | undefined,
+  required: boolean,
+  name: string,
+  type: string,
+) {
+  const schemaDescription = description ? `/** ${description} */` : "";
 
-//   if (schema.required) {
-//     return `${schemaDescription} ${schema.name}: ${schema.type},`
-//   } else {
-//     return `${schemaDescription} ${schema.name}?: ${schema.type},`
-//   }
-// }
+  if (required) {
+    return `${schemaDescription} ${name}: ${type},`;
+  } else {
+    return `${schemaDescription} ${name}?: ${type},`;
+  }
+}
 
 export function parseSpecificArgs(specificArgs: SpecificArgs): SpecificArgs {
   if (specificArgs.body) {
