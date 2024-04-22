@@ -39,6 +39,7 @@ export type Schema = {
   type: string;
   properties?: Record<string, Schema>;
   content?: any[];
+  items?: Schema;
   rendered?: string; // contains the rendered string for this schema node
 };
 
@@ -215,34 +216,52 @@ export function parseQueryParams(queryParams: any): Schema | undefined {
 }
 
 function renderQueryParams(schema: Schema | undefined): string {
-  // console.log('renderQueryParams: schema: ', CircularJSON.stringify(schema));
   if (!schema) {
     return "";
   }
+
   if (schema.type === "object") {
+    // parse object
     let result = "";
     for (const property in schema.properties) {
       result = `${result}  ${renderQueryParams(schema.properties[property])}`;
-      // result.concat(renderQueryParams(schema.properties[property]));
     }
     schema.rendered = renderSchema(
       schema.description,
-      schema.required ? schema.required : false,
+      schema.required,
       `${schema.name}`,
       `{ ${result} }`,
     );
     return schema.rendered;
-  }
-  // else if (schema.enum) {
-  //   if (schema.type === 'string') {
-
-  //   }
-  // }
-  else {
+  } else if (schema.type === "array") {
+    let nestedType = renderQueryParams(schema.items); // this type has a trailing comma
+    let type = `${nestedType.substring(0, nestedType.length - 1)}[]`; // remove the trailing comma, add `[]` to denote an array
     schema.rendered = renderSchema(
       schema.description,
-      schema.required ? schema.required : false,
-      `${schema.name}`,
+      schema.required,
+      schema.name,
+      type,
+    );
+    return schema.rendered;
+  } else if (schema.enum) {
+    console.log("found enum");
+    let type = "";
+    if (schema.$parsed && schema.$parsed.content) {
+      const values = schema.$parsed.content.map((x) => x.value);
+      type = values.join(" | ");
+    }
+    schema.rendered = renderSchema(
+      schema.description,
+      schema.required,
+      schema.name,
+      `${type}`,
+    );
+    return schema.rendered;
+  } else {
+    schema.rendered = renderSchema(
+      schema.description,
+      schema.required,
+      schema.name,
       `${schema.type}`,
     );
     return schema.rendered;
@@ -251,17 +270,23 @@ function renderQueryParams(schema: Schema | undefined): string {
 
 function renderSchema(
   description: string | undefined,
-  required: boolean,
-  name: string,
+  required: boolean | undefined,
+  name: string | undefined,
   type: string,
 ) {
   const schemaDescription = description ? `/** ${description} */` : "";
 
-  if (required) {
-    return `${schemaDescription} ${name}: ${type},`;
+  if (name) {
+    if (required && required === true) {
+      name = `${name}:`;
+    } else {
+      name = `${name}?:`;
+    }
   } else {
-    return `${schemaDescription} ${name}?: ${type},`;
+    name = "";
   }
+
+  return `${schemaDescription} ${name} ${type},`;
 }
 
 export function parseSpecificArgs(specificArgs: SpecificArgs): SpecificArgs {

@@ -23,11 +23,11 @@ const tests: {
     oasFile: "../tests/oas-docs/geomag.json",
     goldenFile: "./testdata/golden-files/geomag.json",
   },
-  // {
-  //   name: "GenerateParams_Petstore",
-  //   oasFile: "../tests/oas-docs/petstore.yaml",
-  //   goldenFile: "./testdata/golden-files/petstore.json",
-  // },
+  {
+    name: "GenerateParams_Petstore",
+    oasFile: "../tests/oas-docs/petstore.yaml",
+    goldenFile: "./testdata/golden-files/petstore.json",
+  },
 ];
 
 describe("GenerateParams", async () => {
