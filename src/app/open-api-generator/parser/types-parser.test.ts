@@ -84,8 +84,8 @@ describe("GenerateParams", async () => {
 
             const got: FunctionParams = {
               queryParams:
-                parsedTypes.queryParams && parsedTypes.queryParams?.rendered
-                  ? parsedTypes.queryParams?.rendered
+                parsedTypes.queryParams && parsedTypes.queryParams?._rendered
+                  ? parsedTypes.queryParams?._rendered
                   : "null",
               pathParams: "null",
               bodyParams: "null",

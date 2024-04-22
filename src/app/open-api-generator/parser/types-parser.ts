@@ -40,7 +40,11 @@ export type Schema = {
   properties?: Record<string, Schema>;
   content?: any[];
   items?: Schema;
-  rendered?: string; // contains the rendered string for this schema node
+
+  /**
+   * variables that begin with `_` are not a part of JSON, but calculated by this package
+   */
+  _rendered?: string; // contains the rendered string for this schema node
 };
 
 export type SpecificArgsObject = {
@@ -222,8 +226,8 @@ export function parseQueryParams(
       ? querySpecificArgs.optional
       : false),
   };
-  querySchema.rendered = renderQueryParams(querySchema);
-  console.log(querySchema.rendered);
+  querySchema._rendered = renderQueryParams(querySchema);
+  console.log(querySchema._rendered);
   // console.log('querySchemaJson: ', CircularJSON.stringify(querySchema));
   return querySchema;
 }
@@ -239,36 +243,36 @@ function renderQueryParams(schema: Schema | undefined): string {
     for (const property in schema.properties) {
       result = `${result}  ${renderQueryParams(schema.properties[property])}`;
     }
-    schema.rendered = renderSchema(
+    schema._rendered = renderSchema(
       schema.description,
       schema.required,
       `${schema.name}`,
       `{ ${result} }`,
     );
-    return schema.rendered;
+    return schema._rendered;
   } else if (schema.type === "array") {
     let nestedType = renderQueryParams(schema.items); // this type has a trailing comma
     let type = `${nestedType.substring(0, nestedType.length - 1)}[]`; // remove the trailing comma, add `[]` to denote an array
-    schema.rendered = renderSchema(
+    schema._rendered = renderSchema(
       schema.description,
       schema.required,
       schema.name,
       type,
     );
-    return schema.rendered;
+    return schema._rendered;
   } else if (schema.enum) {
     let type = "";
     if (schema.$parsed && schema.$parsed.content) {
       const values = schema.$parsed.content.map((x) => x.value);
       type = values.join(" | ");
     }
-    schema.rendered = renderSchema(
+    schema._rendered = renderSchema(
       schema.description,
       schema.required,
       schema.name,
       `${type}`,
     );
-    return schema.rendered;
+    return schema._rendered;
   } else {
     let type = schema.type;
     if (
@@ -279,13 +283,13 @@ function renderQueryParams(schema: Schema | undefined): string {
     ) {
       type = "number";
     }
-    schema.rendered = renderSchema(
+    schema._rendered = renderSchema(
       schema.description,
       schema.required,
       schema.name,
       `${type}`,
     );
-    return schema.rendered;
+    return schema._rendered;
   }
 }
 
