@@ -2,136 +2,163 @@
   "get_/geographies/{geo-id}/media/recent": {
     "queryParams": " query?: {   /** Max number of media to return. */ count?: number,  /** Return media before this `min_id`. */ min_id?: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/locations/search": {
     "queryParams": " query?: {   /** Default is 1000m (distance=1000), max distance is 5000. */ distance?: number,  /** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */ facebook_places_id?: string,  /** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use\n`lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.\n */ foursquare_id?: string,  /** Latitude of the center search coordinate. If used, `lng` is required. */ lat?: number,  /** Longitude of the center search coordinate. If used, `lat` is required. */ lng?: number,  /** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use\n`lat` and `lng`.\n */ foursquare_v2_id?: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/locations/{location-id}": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/locations/{location-id}/media/recent": {
     "queryParams": " query?: {   /** Return media after this UNIX timestamp. */ min_timestamp?: number,  /** Return media before this UNIX timestamp. */ max_timestamp?: number,  /** Return media before this `min_id`. */ min_id?: string,  /** Return media after this `max_id`. */ max_id?: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/media/popular": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/media/search": {
     "queryParams": " query: {   /** Latitude of the center search coordinate. If used, `lng` is required. */ lat: number,  /** Longitude of the center search coordinate. If used, `lat` is required. */ lng: number,  /** A unix timestamp. All media returned will be taken later than this timestamp. */ min_timestamp?: number,  /** A unix timestamp. All media returned will be taken earlier than this timestamp. */ max_timestamp?: number,  /** Default is 1km (distance=1000), max distance is 5km. */ distance?: number, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/media/shortcode/{shortcode}": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/media/{media-id}": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/media/{media-id}/comments": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/media/{media-id}/comments": {
     "queryParams": " query: {   /** Text to post as a comment on the media object as specified in `media-id`. */ text: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/media/{media-id}/comments/{comment-id}": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/media/{media-id}/likes": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/media/{media-id}/likes": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/media/{media-id}/likes": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/tags/search": {
     "queryParams": " query: {   /** A valid tag name without a leading \\#. (eg. snowy, nofilter) */ q: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/tags/{tag-name}": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/tags/{tag-name}/media/recent": {
     "queryParams": " query?: {   /** Count of tagged media to return. */ count?: number,  /** Return media before this `min_tag_id`. */ min_tag_id?: string,  /** Return media after this `max_tag_id`. */ max_tag_id?: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/search": {
     "queryParams": " query: {   /** A query string. */ q: string,  /** Number of users to return. */ count?: number, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/self/feed": {
     "queryParams": " query?: {   /** Count of media to return. */ count?: number,  /** Return media later than this `min_id`. */ min_id?: string,  /** Return media earlier than this `max_id`. */ max_id?: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/self/media/liked": {
     "queryParams": " query?: {   /** Count of media to return. */ count?: number,  /** Return media liked before this id. */ max_like_id?: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/self/requested-by": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/{user-id}": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/{user-id}/followed-by": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/{user-id}/follows": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/{user-id}/media/recent": {
     "queryParams": " query?: {   /** Count of media to return. */ count?: number,  /** Return media before this UNIX timestamp. */ max_timestamp?: number,  /** Return media after this UNIX timestamp. */ min_timestamp?: number,  /** Return media later than this `min_id`. */ min_id?: string,  /** Return media earlier than this `max_id`. */ max_id?: string, },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/{user-id}/relationship": {
     "queryParams": "null",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/users/{user-id}/relationship": {
     "queryParams": " query: {   /** Type of action to apply for relationship with the user. */ action: \"follow\" | \"unfollow\" | \"block\" | \"unblock\" | \"approve\" | \"ignore\", },",
     "pathParams": "null",
-    "bodyParams": "null"
+    "bodyParams": "null",
+    "queryParamsRequireRelaxedTypeAnnotation": true
   }
 }

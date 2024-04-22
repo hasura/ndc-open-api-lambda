@@ -45,6 +45,7 @@ export type Schema = {
    * variables that begin with `_` are not a part of JSON, but calculated by this package
    */
   _rendered?: string; // contains the rendered string for this schema node
+  _requiresRelaxedTypeAnnotation?: boolean;
 };
 
 export type SpecificArgsObject = {
@@ -205,6 +206,10 @@ export function parse(routeData: any): ParsedTypes {
   // };
 }
 
+type StateParams = {
+  requireRelaxedTypeAnnotation: boolean;
+};
+
 export function parseQueryParams(
   queryParams: any,
   querySpecificArgs: SpecificArgsObject | undefined,
@@ -214,6 +219,10 @@ export function parseQueryParams(
     return undefined; // no query params
   }
   // console.log('queryParams.$parsed: ', queryParams.$parsed);
+
+  const stateParams: StateParams = {
+    requireRelaxedTypeAnnotation: false,
+  };
 
   const queryParamName = querySpecificArgs?.name
     ? querySpecificArgs?.name
@@ -226,13 +235,18 @@ export function parseQueryParams(
       ? querySpecificArgs.optional
       : false),
   };
-  querySchema._rendered = renderQueryParams(querySchema);
+  querySchema._rendered = renderQueryParams(querySchema, stateParams);
+  querySchema._requiresRelaxedTypeAnnotation =
+    stateParams.requireRelaxedTypeAnnotation;
   console.log(querySchema._rendered);
   // console.log('querySchemaJson: ', CircularJSON.stringify(querySchema));
   return querySchema;
 }
 
-function renderQueryParams(schema: Schema | undefined): string {
+function renderQueryParams(
+  schema: Schema | undefined,
+  stateParams: StateParams,
+): string {
   if (!schema) {
     return "";
   }
@@ -241,7 +255,7 @@ function renderQueryParams(schema: Schema | undefined): string {
     // parse object
     let result = "";
     for (const property in schema.properties) {
-      result = `${result}  ${renderQueryParams(schema.properties[property])}`;
+      result = `${result}  ${renderQueryParams(schema.properties[property], stateParams)}`;
     }
     schema._rendered = renderSchema(
       schema.description,
@@ -251,7 +265,7 @@ function renderQueryParams(schema: Schema | undefined): string {
     );
     return schema._rendered;
   } else if (schema.type === "array") {
-    let nestedType = renderQueryParams(schema.items); // this type has a trailing comma
+    let nestedType = renderQueryParams(schema.items, stateParams); // this type has a trailing comma
     let type = `${nestedType.substring(0, nestedType.length - 1)}[]`; // remove the trailing comma, add `[]` to denote an array
     schema._rendered = renderSchema(
       schema.description,
@@ -266,6 +280,7 @@ function renderQueryParams(schema: Schema | undefined): string {
       const values = schema.$parsed.content.map((x) => x.value);
       type = values.join(" | ");
     }
+    stateParams.requireRelaxedTypeAnnotation = true;
     schema._rendered = renderSchema(
       schema.description,
       schema.required,
@@ -282,6 +297,9 @@ function renderQueryParams(schema: Schema | undefined): string {
       type === "double"
     ) {
       type = "number";
+    }
+    if (type === "any" || type === "Record" || type === "Map") {
+      stateParams.requireRelaxedTypeAnnotation = true;
     }
     schema._rendered = renderSchema(
       schema.description,

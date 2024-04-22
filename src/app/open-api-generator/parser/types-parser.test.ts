@@ -10,6 +10,7 @@ type FunctionParams = {
   queryParams: string;
   pathParams: string;
   bodyParams: string;
+  queryParamsRequireRelaxedTypeAnnotation: boolean;
 };
 
 const tests: {
@@ -89,6 +90,12 @@ describe("GenerateParams", async () => {
                   : "null",
               pathParams: "null",
               bodyParams: "null",
+              queryParamsRequireRelaxedTypeAnnotation:
+                parsedTypes.queryParams &&
+                parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
+                  ? parsedTypes.queryParams &&
+                    parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
+                  : false,
             };
 
             gotFunctionArgs.set(jsonKey, got);
