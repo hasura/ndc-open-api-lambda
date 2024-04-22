@@ -34,6 +34,11 @@ const tests: {
     oasFile: "../tests/oas-docs/petstore.yaml",
     goldenFile: "./testdata/golden-files/petstore.json",
   },
+  {
+    name: "GenerateParams_GoogleAdsense",
+    oasFile: "../tests/oas-docs/google-adsense.json",
+    goldenFile: "./testdata/golden-files/google-adsense.json",
+  },
 ];
 
 describe("GenerateParams", async () => {

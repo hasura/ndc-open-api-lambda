@@ -165,8 +165,11 @@ export function parse(routeData: any): ParsedTypes {
   // const specificArgs = parseSpecificArgs(routeData.specificArgs as SpecificArgs)
 
   // console.log(`\n\n\nRouteParams ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.routeParams)}`);
-  // console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`);
   // console.log(`Specific args ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.specificArgs)}`);
+
+  // if (`${routeData.raw.method} ${routeData.raw.route}` === 'get /reports') {
+  //   console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`);
+  // }
 
   const queryParams = parseQueryParams(routeData.queryObjectSchema);
 
@@ -244,7 +247,6 @@ function renderQueryParams(schema: Schema | undefined): string {
     );
     return schema.rendered;
   } else if (schema.enum) {
-    console.log("found enum");
     let type = "";
     if (schema.$parsed && schema.$parsed.content) {
       const values = schema.$parsed.content.map((x) => x.value);
@@ -258,11 +260,15 @@ function renderQueryParams(schema: Schema | undefined): string {
     );
     return schema.rendered;
   } else {
+    let type = schema.type;
+    if (type === 'integer') {
+      type = 'number';
+    }
     schema.rendered = renderSchema(
       schema.description,
       schema.required,
       schema.name,
-      `${schema.type}`,
+      `${type}`,
     );
     return schema.rendered;
   }
