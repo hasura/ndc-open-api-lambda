@@ -6,11 +6,17 @@ import { generateApi } from "swagger-typescript-api";
 import { getTemplatesDirectory } from "../index";
 import { parse } from "./types-parser";
 
+type FunctionParams = {
+  queryParams: string;
+  pathParams: string;
+  bodyParams: string;
+};
+
 const tests: {
   name: string;
   oasFile: string;
   goldenFile: string;
-  expected?: Map<string, string>;
+  expected?: Map<string, FunctionParams>;
   outDir?: string;
 }[] = [
   {
@@ -49,7 +55,7 @@ describe("GenerateParams", async () => {
     });
 
     it(testCase.name, async () => {
-      const gotFunctionArgs = new Map<string, string>();
+      const gotFunctionArgs = new Map<string, FunctionParams>();
       await generateApi({
         name: "api.ts",
         input: testCase.oasFile,
@@ -61,12 +67,16 @@ describe("GenerateParams", async () => {
             const parsedTypes = parse(routeData);
             const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
 
-            gotFunctionArgs.set(
-              jsonKey,
-              parsedTypes.queryParams && parsedTypes.queryParams?.rendered
-                ? parsedTypes.queryParams?.rendered
-                : "null",
-            );
+            const got: FunctionParams = {
+              queryParams:
+                parsedTypes.queryParams && parsedTypes.queryParams?.rendered
+                  ? parsedTypes.queryParams?.rendered
+                  : "null",
+              pathParams: "null",
+              bodyParams: "null",
+            };
+
+            gotFunctionArgs.set(jsonKey, got);
           },
         },
       });
