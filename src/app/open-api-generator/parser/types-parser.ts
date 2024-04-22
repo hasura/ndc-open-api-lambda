@@ -29,6 +29,7 @@ import { Eta } from "eta";
 const CircularJSON = require("circular-json");
 
 export type Schema = {
+  $ref?: string;
   description?: string;
   name?: string;
   in?: string;
@@ -174,7 +175,7 @@ export function parse(routeData: any): ParsedTypes {
   // console.log(`Specific args ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.specificArgs)}`);
 
   // if (`${routeData.raw.method} ${routeData.raw.route}` === "get /v3/projects/search/{query}") {
-  //   console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`,);
+  // console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`,);
   //   console.log(`routeData ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData)}`,);
   // }
 
@@ -251,7 +252,21 @@ function renderQueryParams(
     return "";
   }
 
-  if (schema.type === "object") {
+  if (schema.$ref) {
+    // TODO: add proper solution for $ref
+    // this is temp hack for now
+
+    const brokenRef = schema.$ref.split("/");
+    const type = brokenRef[brokenRef.length - 1];
+
+    schema._rendered = renderSchema(
+      schema.description,
+      schema.required,
+      schema.name,
+      `${type}`,
+    );
+    return schema._rendered;
+  } else if (schema.type === "object") {
     // parse object
     let result = "";
     for (const property in schema.properties) {
@@ -266,7 +281,15 @@ function renderQueryParams(
     return schema._rendered;
   } else if (schema.type === "array") {
     let nestedType = renderQueryParams(schema.items, stateParams); // this type has a trailing comma
-    let type = `${nestedType.substring(0, nestedType.length - 1)}[]`; // remove the trailing comma, add `[]` to denote an array
+    let type: string;
+    if (schema.items?.enum) {
+      // handle special case, that the item is an array of enums
+      // in this case, we will enclose the returned type in ()
+      type = `(${nestedType.substring(0, nestedType.length - 1)})[]`; // remove the trailing comma, enclose is (), add `[]` to denote an array
+    } else {
+      type = `${nestedType.substring(0, nestedType.length - 1)}[]`; // remove the trailing comma, add `[]` to denote an array
+    }
+
     schema._rendered = renderSchema(
       schema.description,
       schema.required,

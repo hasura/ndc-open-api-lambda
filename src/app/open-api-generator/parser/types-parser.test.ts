@@ -50,6 +50,11 @@ const tests: {
     oasFile: "../tests/oas-docs/gitlab.json",
     goldenFile: "./testdata/golden-files/gitlab.json",
   },
+  {
+    name: "GenerateParams_Dropbox",
+    oasFile: "../tests/oas-docs/dropbox.json",
+    goldenFile: "./testdata/golden-files/dropbox.json",
+  },
 ];
 
 describe("GenerateParams", async () => {
