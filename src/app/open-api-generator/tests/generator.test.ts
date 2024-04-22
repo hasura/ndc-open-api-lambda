@@ -101,7 +101,7 @@ describe("GenerateCode", async () => {
         testCase.headers,
         testCase.baseUrl,
       );
-      fs.writeFileSync(path.resolve(`${testCase.outDir}`, "functions.ts"), got);
+      // fs.writeFileSync(path.resolve(`${testCase.outDir}`, "functions.ts"), got);
       assert.equal(got, testCase.expected);
 
       // uncomment the following to update golden file
