@@ -39,6 +39,16 @@ const tests: {
     oasFile: "../tests/oas-docs/google-adsense.json",
     goldenFile: "./testdata/golden-files/google-adsense.json",
   },
+  {
+    name: "GenerateParams_Instagram",
+    oasFile: "../tests/oas-docs/instagram.json",
+    goldenFile: "./testdata/golden-files/instagram.json",
+  },
+  {
+    name: "GenerateParams_Gitlab",
+    oasFile: "../tests/oas-docs/gitlab.json",
+    goldenFile: "./testdata/golden-files/gitlab.json",
+  },
 ];
 
 describe("GenerateParams", async () => {

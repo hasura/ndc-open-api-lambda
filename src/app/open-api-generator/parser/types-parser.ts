@@ -54,6 +54,7 @@ export type SpecificArgsObject = {
 export type SpecificArgs = {
   body?: SpecificArgsObject;
   pathParams?: SpecificArgsObject;
+  query?: SpecificArgsObject;
 };
 
 // export type ParsedType = {
@@ -167,11 +168,15 @@ export function parse(routeData: any): ParsedTypes {
   // console.log(`\n\n\nRouteParams ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.routeParams)}`);
   // console.log(`Specific args ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.specificArgs)}`);
 
-  // if (`${routeData.raw.method} ${routeData.raw.route}` === 'get /reports') {
-  //   console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`);
+  // if (`${routeData.raw.method} ${routeData.raw.route}` === "get /v3/projects/search/{query}") {
+  //   console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`,);
+  //   console.log(`routeData ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData)}`,);
   // }
 
-  const queryParams = parseQueryParams(routeData.queryObjectSchema);
+  const queryParams = parseQueryParams(
+    routeData.queryObjectSchema,
+    routeData?.specificArgs?.query as SpecificArgsObject,
+  );
 
   return {
     apiMethod: routeData.raw.method,
@@ -196,21 +201,26 @@ export function parse(routeData: any): ParsedTypes {
   // };
 }
 
-export function parseQueryParams(queryParams: any): Schema | undefined {
+export function parseQueryParams(
+  queryParams: any,
+  querySpecificArgs: SpecificArgsObject | undefined,
+): Schema | undefined {
   if (!queryParams || !queryParams.$parsed) {
     console.log("no query params");
     return undefined; // no query params
   }
   // console.log('queryParams.$parsed: ', queryParams.$parsed);
 
-  const queryParamName = queryParams.$parsed.name
-    ? queryParams.$parsed.name
+  const queryParamName = querySpecificArgs?.name
+    ? querySpecificArgs?.name
     : "query";
   const querySchema: Schema = {
     name: queryParamName,
     type: "object",
     properties: queryParams.properties,
-    required: true,
+    required: !(querySpecificArgs?.optional
+      ? querySpecificArgs.optional
+      : false),
   };
   querySchema.rendered = renderQueryParams(querySchema);
   console.log(querySchema.rendered);
@@ -261,8 +271,13 @@ function renderQueryParams(schema: Schema | undefined): string {
     return schema.rendered;
   } else {
     let type = schema.type;
-    if (type === 'integer') {
-      type = 'number';
+    if (
+      type === "integer" ||
+      type === "int" ||
+      type === "float" ||
+      type === "double"
+    ) {
+      type = "number";
     }
     schema.rendered = renderSchema(
       schema.description,
