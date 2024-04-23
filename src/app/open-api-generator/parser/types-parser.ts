@@ -232,9 +232,9 @@ export function parseQueryParams(
     name: queryParamName,
     type: "object",
     properties: queryParams.properties,
-    required: !(querySpecificArgs?.optional
-      ? querySpecificArgs.optional
-      : false),
+
+    // `required` requires a temp fix of being set to true because of how variables are rendered by function.ejs
+    required: true, // ACTUAL VALUE -> required: !(querySpecificArgs?.optional ? querySpecificArgs.optional : false),
   };
   querySchema._rendered = renderQueryParams(querySchema, stateParams);
   querySchema._requiresRelaxedTypeAnnotation =

@@ -8,11 +8,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/pet/findByStatus": {
-    "queryParams": " query?: {   /** Status values that need to be considered for filter */ status?: \"available\" | \"pending\" | \"sold\", },",
+    "queryParams": " query: {   /** Status values that need to be considered for filter */ status?: \"available\" | \"pending\" | \"sold\", },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/pet/findByTags": {
-    "queryParams": " query?: {   /** Tags to filter by */ tags?:   string[], },",
+    "queryParams": " query: {   /** Tags to filter by */ tags?:   string[], },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/pet/{petId}": {
@@ -20,7 +20,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/pet/{petId}": {
-    "queryParams": " query?: {   /** Name of pet that needs to be updated */ name?: string,  /** Status of pet that needs to be updated */ status?: string, },",
+    "queryParams": " query: {   /** Name of pet that needs to be updated */ name?: string,  /** Status of pet that needs to be updated */ status?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/pet/{petId}": {
@@ -28,7 +28,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/pet/{petId}/uploadImage": {
-    "queryParams": " query?: {   /** Additional Metadata */ additionalMetadata?: string, },",
+    "queryParams": " query: {   /** Additional Metadata */ additionalMetadata?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/store/inventory": {
@@ -56,7 +56,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/user/login": {
-    "queryParams": " query?: {   /** The user name for login */ username?: string,  /** The password for login in clear text */ password?: string, },",
+    "queryParams": " query: {   /** The user name for login */ username?: string,  /** The password for login in clear text */ password?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/user/logout": {

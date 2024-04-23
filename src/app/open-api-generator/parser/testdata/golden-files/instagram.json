@@ -1,10 +1,10 @@
 {
   "get_/geographies/{geo-id}/media/recent": {
-    "queryParams": " query?: {   /** Max number of media to return. */ count?: number,  /** Return media before this `min_id`. */ min_id?: string, },",
+    "queryParams": " query: {   /** Max number of media to return. */ count?: number,  /** Return media before this `min_id`. */ min_id?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/locations/search": {
-    "queryParams": " query?: {   /** Default is 1000m (distance=1000), max distance is 5000. */ distance?: number,  /** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */ facebook_places_id?: string,  /** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use\n`lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.\n */ foursquare_id?: string,  /** Latitude of the center search coordinate. If used, `lng` is required. */ lat?: number,  /** Longitude of the center search coordinate. If used, `lat` is required. */ lng?: number,  /** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use\n`lat` and `lng`.\n */ foursquare_v2_id?: string, },",
+    "queryParams": " query: {   /** Default is 1000m (distance=1000), max distance is 5000. */ distance?: number,  /** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */ facebook_places_id?: string,  /** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use\n`lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.\n */ foursquare_id?: string,  /** Latitude of the center search coordinate. If used, `lng` is required. */ lat?: number,  /** Longitude of the center search coordinate. If used, `lat` is required. */ lng?: number,  /** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use\n`lat` and `lng`.\n */ foursquare_v2_id?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/locations/{location-id}": {
@@ -12,7 +12,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/locations/{location-id}/media/recent": {
-    "queryParams": " query?: {   /** Return media after this UNIX timestamp. */ min_timestamp?: number,  /** Return media before this UNIX timestamp. */ max_timestamp?: number,  /** Return media before this `min_id`. */ min_id?: string,  /** Return media after this `max_id`. */ max_id?: string, },",
+    "queryParams": " query: {   /** Return media after this UNIX timestamp. */ min_timestamp?: number,  /** Return media before this UNIX timestamp. */ max_timestamp?: number,  /** Return media before this `min_id`. */ min_id?: string,  /** Return media after this `max_id`. */ max_id?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/media/popular": {
@@ -64,7 +64,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/tags/{tag-name}/media/recent": {
-    "queryParams": " query?: {   /** Count of tagged media to return. */ count?: number,  /** Return media before this `min_tag_id`. */ min_tag_id?: string,  /** Return media after this `max_tag_id`. */ max_tag_id?: string, },",
+    "queryParams": " query: {   /** Count of tagged media to return. */ count?: number,  /** Return media before this `min_tag_id`. */ min_tag_id?: string,  /** Return media after this `max_tag_id`. */ max_tag_id?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/search": {
@@ -72,11 +72,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/self/feed": {
-    "queryParams": " query?: {   /** Count of media to return. */ count?: number,  /** Return media later than this `min_id`. */ min_id?: string,  /** Return media earlier than this `max_id`. */ max_id?: string, },",
+    "queryParams": " query: {   /** Count of media to return. */ count?: number,  /** Return media later than this `min_id`. */ min_id?: string,  /** Return media earlier than this `max_id`. */ max_id?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/self/media/liked": {
-    "queryParams": " query?: {   /** Count of media to return. */ count?: number,  /** Return media liked before this id. */ max_like_id?: string, },",
+    "queryParams": " query: {   /** Count of media to return. */ count?: number,  /** Return media liked before this id. */ max_like_id?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/self/requested-by": {
@@ -96,7 +96,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/{user-id}/media/recent": {
-    "queryParams": " query?: {   /** Count of media to return. */ count?: number,  /** Return media before this UNIX timestamp. */ max_timestamp?: number,  /** Return media after this UNIX timestamp. */ min_timestamp?: number,  /** Return media later than this `min_id`. */ min_id?: string,  /** Return media earlier than this `max_id`. */ max_id?: string, },",
+    "queryParams": " query: {   /** Count of media to return. */ count?: number,  /** Return media before this UNIX timestamp. */ max_timestamp?: number,  /** Return media after this UNIX timestamp. */ min_timestamp?: number,  /** Return media later than this `min_id`. */ min_id?: string,  /** Return media earlier than this `max_id`. */ max_id?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/users/{user-id}/relationship": {

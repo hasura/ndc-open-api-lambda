@@ -40,7 +40,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups": {
-    "queryParams": " query?: {   /** Include project statistics */ statistics?: boolean,  /** Show all group that you have access to */ all_available?: boolean,  /** Search for a specific group */ search?: string,  /** Order by name or path */ order_by?: \"name\" | \"path\",  /** Sort by asc (ascending) or desc (descending) */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Include project statistics */ statistics?: boolean,  /** Show all group that you have access to */ all_available?: boolean,  /** Search for a specific group */ search?: string,  /** Order by name or path */ order_by?: \"name\" | \"path\",  /** Sort by asc (ascending) or desc (descending) */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/groups": {
@@ -48,7 +48,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/owned": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Include project statistics */ statistics?: boolean, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Include project statistics */ statistics?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/groups/{id}": {
@@ -64,7 +64,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/access_requests": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/groups/{id}/access_requests": {
@@ -80,11 +80,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/issues": {
-    "queryParams": " query?: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/groups/{id}/members": {
-    "queryParams": " query?: {   /** A query string to search for members */ query?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** A query string to search for members */ query?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/groups/{id}/members": {
@@ -112,7 +112,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/projects": {
-    "queryParams": " query?: {   /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/groups/{id}/projects/{project_id}": {
@@ -164,7 +164,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/issues": {
-    "queryParams": " query?: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/keys/{id}": {
@@ -172,7 +172,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/licenses": {
-    "queryParams": " query?: {   /** If passed, returns only popular licenses */ popular?: boolean, },",
+    "queryParams": " query: {   /** If passed, returns only popular licenses */ popular?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/licenses/{name}": {
@@ -180,7 +180,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/namespaces": {
-    "queryParams": " query?: {   /** Search query for namespaces */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Search query for namespaces */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/notification_settings": {
@@ -192,7 +192,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects": {
-    "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
+    "queryParams": " query: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects": {
@@ -200,7 +200,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/all": {
-    "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Include project statistics */ statistics?: boolean, },",
+    "queryParams": " query: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Include project statistics */ statistics?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/fork/{id}": {
@@ -208,15 +208,15 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/owned": {
-    "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Include project statistics */ statistics?: boolean, },",
+    "queryParams": " query: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Include project statistics */ statistics?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/search/{query}": {
-    "queryParams": " queryParams?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " queryParams: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/starred": {
-    "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
+    "queryParams": " query: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/user/{user_id}": {
@@ -224,7 +224,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/visible": {
-    "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
+    "queryParams": " query: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "delete_/v3/projects/{id}": {
@@ -244,7 +244,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/access_requests": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/access_requests": {
@@ -288,7 +288,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/builds": {
-    "queryParams": " query?: {   /** The scope of builds to show */ scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** The scope of builds to show */ scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/{id}/builds/artifacts/{ref_name}/download": {
@@ -352,7 +352,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/deployments": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/deployments/{deployment_id}": {
@@ -360,7 +360,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/environments": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/environments": {
@@ -376,7 +376,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/events": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/fork": {
@@ -388,7 +388,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/hooks": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/hooks": {
@@ -408,7 +408,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues": {
-    "queryParams": " query?: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Return the issue having the given `iid` */ iid?: number,  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Return the issue having the given `iid` */ iid?: number,  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/issues": {
@@ -432,7 +432,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}/award_emoji": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/award_emoji": {
@@ -452,7 +452,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
@@ -488,7 +488,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{noteable_id}/notes": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{noteable_id}/notes": {
@@ -564,7 +564,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/members": {
-    "queryParams": " query?: {   /** A query string to search for members */ query?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** A query string to search for members */ query?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/members": {
@@ -600,11 +600,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_request/{merge_request_id}/closes_issues": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
@@ -628,7 +628,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests": {
-    "queryParams": " query?: {   /** Return opened, closed, merged, or all merge requests */ state?: \"opened\" | \"closed\" | \"merged\" | \"all\",  /** Return merge requests ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return merge requests sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Return opened, closed, merged, or all merge requests */ state?: \"opened\" | \"closed\" | \"merged\" | \"all\",  /** Return merge requests ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return merge requests sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/merge_requests": {
@@ -652,7 +652,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
@@ -676,11 +676,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/closes_issues": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
@@ -696,7 +696,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
@@ -740,7 +740,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
@@ -768,7 +768,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/milestones": {
-    "queryParams": " query?: {   /** Return \"active\", \"closed\", or \"all\" milestones */ state?: \"active\" | \"closed\" | \"all\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Return \"active\", \"closed\", or \"all\" milestones */ state?: \"active\" | \"closed\" | \"all\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/milestones": {
@@ -784,7 +784,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/milestones/{milestone_id}/issues": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/notification_settings": {
@@ -800,7 +800,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/pipelines": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Either running, branches, or tags */ scope?: \"running\" | \"branches\" | \"tags\", },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Either running, branches, or tags */ scope?: \"running\" | \"branches\" | \"tags\", },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/{id}/pipelines/{pipeline_id}": {
@@ -816,7 +816,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/archive": {
-    "queryParams": " query?: {   /** The commit sha of the archive to be downloaded */ sha?: string,  /** The archive format */ format?: string, },",
+    "queryParams": " query: {   /** The commit sha of the archive to be downloaded */ sha?: string,  /** The archive format */ format?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/blobs/{sha}": {
@@ -848,7 +848,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits": {
-    "queryParams": " query?: {   /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string,  /** Only commits after or in this date will be returned */ since?: string,  /** Only commits before or in this date will be returned */ until?: string,  /** The page for pagination */ page?: number,  /** The number of results per page */ per_page?: number,  /** The file path */ path?: string, },",
+    "queryParams": " query: {   /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string,  /** Only commits after or in this date will be returned */ since?: string,  /** Only commits before or in this date will be returned */ until?: string,  /** The page for pagination */ page?: number,  /** The number of results per page */ per_page?: number,  /** The file path */ path?: string, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/commits": {
@@ -864,7 +864,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/builds": {
-    "queryParams": " query?: {   /** The scope of builds to show */ scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** The scope of builds to show */ scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/repository/commits/{sha}/cherry_pick": {
@@ -872,7 +872,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/comments": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/commits/{sha}/comments": {
@@ -884,7 +884,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/statuses": {
-    "queryParams": " query?: {   /** The ref */ ref?: string,  /** The stage */ stage?: string,  /** The name */ name?: string,  /** Show all statuses, default: false */ all?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** The ref */ ref?: string,  /** The stage */ stage?: string,  /** The name */ name?: string,  /** Show all statuses, default: false */ all?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/compare": {
@@ -944,11 +944,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/tree": {
-    "queryParams": " query?: {   /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string,  /** The path of the tree */ path?: string,  /** Used to get a recursive tree */ recursive?: boolean, },",
+    "queryParams": " query: {   /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string,  /** The path of the tree */ path?: string,  /** Used to get a recursive tree */ recursive?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/runners": {
-    "queryParams": " query?: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/runners": {
@@ -1088,7 +1088,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets": {
@@ -1096,7 +1096,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{noteable_id}/notes": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets/{noteable_id}/notes": {
@@ -1128,7 +1128,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
@@ -1144,7 +1144,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
@@ -1176,7 +1176,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/triggers": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/triggers": {
@@ -1200,11 +1200,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/users": {
-    "queryParams": " query?: {   /** Return list of users matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Return list of users matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/variables": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/variables": {
@@ -1224,11 +1224,11 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/runners": {
-    "queryParams": " query?: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/runners/all": {
-    "queryParams": " query?: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "delete_/v3/runners/{id}": {
@@ -1264,7 +1264,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/snippets": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/snippets": {
@@ -1272,7 +1272,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/snippets/public": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/snippets/{id}": {
@@ -1316,7 +1316,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/licenses": {
-    "queryParams": " query?: {   /** If passed, returns only popular licenses */ popular?: boolean, },",
+    "queryParams": " query: {   /** If passed, returns only popular licenses */ popular?: boolean, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/licenses/{name}": {
@@ -1328,7 +1328,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/todos": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/todos/{id}": {
@@ -1372,7 +1372,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users": {
-    "queryParams": " query?: {   /** Get a single user with a specific username */ username?: string,  /** Search for a username */ search?: string,  /** Filters only active users */ active?: boolean,  /** Filters only external users */ external?: boolean,  /** Filters only blocked users */ blocked?: boolean,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Get a single user with a specific username */ username?: string,  /** Search for a username */ search?: string,  /** Filters only active users */ active?: boolean,  /** Filters only external users */ external?: boolean,  /** Filters only blocked users */ blocked?: boolean,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/users": {
@@ -1408,7 +1408,7 @@
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users/{id}/events": {
-    "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
+    "queryParams": " query: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users/{id}/keys": {
