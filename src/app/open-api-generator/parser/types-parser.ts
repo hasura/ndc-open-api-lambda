@@ -343,6 +343,7 @@ function renderSchema(
   const schemaDescription = description ? `/** ${description} */` : "";
 
   if (name) {
+    // name = performVariableNameCorrection(name);
     if (required && required === true) {
       name = `${name}:`;
     } else {
@@ -353,6 +354,17 @@ function renderSchema(
   }
 
   return `${schemaDescription} ${name} ${type},`;
+}
+
+function performVariableNameCorrection(name: string): string {
+  // check if the string has special chars
+  // if it does, enclose it in double quotes
+  const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  if (format.test(name)) {
+    return `"${name}"`
+  } else {
+    return name;
+  }
 }
 
 export function parseSpecificArgs(specificArgs: SpecificArgs): SpecificArgs {

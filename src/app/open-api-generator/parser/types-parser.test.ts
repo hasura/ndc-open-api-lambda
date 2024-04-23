@@ -55,6 +55,11 @@ const tests: {
     oasFile: "../tests/oas-docs/dropbox.json",
     goldenFile: "./testdata/golden-files/dropbox.json",
   },
+  {
+    name: "GenerateParams_Adobe",
+    oasFile: "../tests/oas-docs/adobe.json",
+    goldenFile: "./testdata/golden-files/adobe.json",
+  },
 ];
 
 describe("GenerateParams", async () => {
