@@ -359,8 +359,9 @@ function renderSchema(
 function performVariableNameCorrection(name: string): string {
   // check if the string has special chars
   // if it does, enclose it in double quotes
-  const format = /[!@#%^&*()+\-=\[\]{};':"\\|,.<>\/?]+/;
-  if (format.test(name)) {
+  const hasSpecialCharsRegEx = /[!@#%^&*()+\-=\[\]{};':"\\|,.<>\/?]+/;
+  const startsWithNumberRegEx = /^[0-9]/;
+  if (hasSpecialCharsRegEx.test(name) || startsWithNumberRegEx.test(name)) {
     return `"${name}"`;
   } else {
     return name;
