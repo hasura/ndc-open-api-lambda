@@ -1,2150 +1,1434 @@
 {
   "get_/v3/application/settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/application/settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/ci/lint": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/deploy_keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/dockerfiles": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/dockerfiles/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/gitignores": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/gitignores/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/gitlab_ci_ymls": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/gitlab_ci_ymls/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups": {
     "queryParams": " query?: {   /** Include project statistics */ statistics?: boolean,  /** Show all group that you have access to */ all_available?: boolean,  /** Search for a specific group */ search?: string,  /** Order by name or path */ order_by?: \"name\" | \"path\",  /** Sort by asc (ascending) or desc (descending) */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/groups": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/owned": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Include project statistics */ statistics?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/groups/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/groups/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/access_requests": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/groups/{id}/access_requests": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/groups/{id}/access_requests/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/groups/{id}/access_requests/{user_id}/approve": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/issues": {
     "queryParams": " query?: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/groups/{id}/members": {
     "queryParams": " query?: {   /** A query string to search for members */ query?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/groups/{id}/members": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/groups/{id}/members/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/members/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/groups/{id}/members/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/notification_settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/groups/{id}/notification_settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/groups/{id}/projects": {
     "queryParams": " query?: {   /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/groups/{id}/projects/{project_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/hooks": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/hooks": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/hooks/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/hooks/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/internal/allowed": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/internal/broadcast_message": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/internal/check": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/internal/discover": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/internal/lfs_authenticate": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/internal/merge_request_urls": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/internal/two_factor_recovery_codes": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/issues": {
     "queryParams": " query?: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/keys/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/licenses": {
     "queryParams": " query?: {   /** If passed, returns only popular licenses */ popular?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/licenses/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/namespaces": {
     "queryParams": " query?: {   /** Search query for namespaces */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/notification_settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/notification_settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects": {
     "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/all": {
     "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Include project statistics */ statistics?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/fork/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/owned": {
     "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean,  /** Include project statistics */ statistics?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/search/{query}": {
     "queryParams": " queryParams?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/starred": {
     "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/user/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/visible": {
     "queryParams": " query?: {   /** Return projects ordered by field */ order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",  /** Return projects sorted in ascending and descending order */ sort?: \"asc\" | \"desc\",  /** Limit by archived status */ archived?: boolean,  /** Limit by visibility */ visibility?: \"public\" | \"internal\" | \"private\",  /** Return list of authorized projects matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Return only the ID, URL, name, and path of each project */ simple?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "delete_/v3/projects/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/(ref/{ref}/)trigger/builds": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/access_requests": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/access_requests": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/access_requests/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/access_requests/{user_id}/approve": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/archive": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/boards": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/boards/{board_id}/lists": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/boards/{board_id}/lists": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/builds": {
     "queryParams": " query?: {   /** The scope of builds to show */ scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/{id}/builds/artifacts/{ref_name}/download": {
     "queryParams": " query: {   /** The name for the build */ job: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/builds/{build_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/builds/{build_id}/artifacts": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/builds/{build_id}/artifacts/keep": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/builds/{build_id}/cancel": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/builds/{build_id}/erase": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/builds/{build_id}/play": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/builds/{build_id}/retry": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/builds/{build_id}/trace": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/deploy_keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/deploy_keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/deploy_keys/{key_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/deploy_keys/{key_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/deploy_keys/{key_id}/disable": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/deploy_keys/{key_id}/enable": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/deployments": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/deployments/{deployment_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/environments": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/environments": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/environments/{environment_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/environments/{environment_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/events": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/fork": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/fork/{forked_from_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/hooks": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/hooks": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/hooks/{hook_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/hooks/{hook_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/hooks/{hook_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues": {
     "queryParams": " query?: {   /** Return opened, closed, or all issues */ state?: \"opened\" | \"closed\" | \"all\",  /** Return the issue having the given `iid` */ iid?: number,  /** Comma-separated list of label names */ labels?: string,  /** Return issues for a specific milestone */ milestone?: string,  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return issues sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/issues": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/issues/{issue_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/issues/{issue_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/add_spent_time": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}/award_emoji": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/award_emoji": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/move": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/reset_spent_time": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/reset_time_estimate": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/time_estimate": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{issue_id}/time_stats": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{issue_id}/todo": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{noteable_id}/notes": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{noteable_id}/notes": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/issues/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/issues/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/keys/{key_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/keys/{key_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/keys/{key_id}/disable": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/keys/{key_id}/enable": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/labels": {
     "queryParams": " query: {   /** The name of the label to be deleted */ name: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/labels": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/labels": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/labels": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/labels/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/labels/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/members": {
     "queryParams": " query?: {   /** A query string to search for members */ query?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/members": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/members/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/members/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/members/{user_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_request/{merge_request_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/merge_request/{merge_request_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_request/{merge_request_id}/cancel_merge_when_build_succeeds": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_request/{merge_request_id}/changes": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_request/{merge_request_id}/closes_issues": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_request/{merge_request_id}/commits": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/merge_request/{merge_request_id}/merge": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests": {
     "queryParams": " query?: {   /** Return opened, closed, merged, or all merge requests */ state?: \"opened\" | \"closed\" | \"merged\" | \"all\",  /** Return merge requests ordered by `created_at` or `updated_at` fields. */ order_by?: \"created_at\" | \"updated_at\",  /** Return merge requests sorted in `asc` or `desc` order. */ sort?: \"asc\" | \"desc\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/merge_requests": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/merge_requests/{merge_request_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/merge_requests/{merge_request_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/add_spent_time": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/cancel_merge_when_build_succeeds": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/changes": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/closes_issues": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/commits": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/merge_requests/{merge_request_id}/merge": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/reset_spent_time": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/reset_time_estimate": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/time_estimate": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/time_stats": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{merge_request_id}/todo": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/versions": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{merge_request_id}/versions/{version_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/milestones": {
     "queryParams": " query?: {   /** Return \"active\", \"closed\", or \"all\" milestones */ state?: \"active\" | \"closed\" | \"all\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/milestones": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/milestones/{milestone_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/milestones/{milestone_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/milestones/{milestone_id}/issues": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/notification_settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/notification_settings": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/pipeline": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/pipelines": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number,  /** Either running, branches, or tags */ scope?: \"running\" | \"branches\" | \"tags\", },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/projects/{id}/pipelines/{pipeline_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/pipelines/{pipeline_id}/cancel": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/pipelines/{pipeline_id}/retry": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/archive": {
     "queryParams": " query?: {   /** The commit sha of the archive to be downloaded */ sha?: string,  /** The archive format */ format?: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/blobs/{sha}": {
     "queryParams": " query: {   /** The path to the file to display */ filepath: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/branches": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/branches": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/repository/branches/{branch}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/branches/{branch}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/repository/branches/{branch}/protect": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/repository/branches/{branch}/unprotect": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits": {
     "queryParams": " query?: {   /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string,  /** Only commits after or in this date will be returned */ since?: string,  /** Only commits before or in this date will be returned */ until?: string,  /** The page for pagination */ page?: number,  /** The number of results per page */ per_page?: number,  /** The file path */ path?: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/commits": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/blob": {
     "queryParams": " query: {   /** The path to the file to display */ filepath: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/builds": {
     "queryParams": " query?: {   /** The scope of builds to show */ scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/repository/commits/{sha}/cherry_pick": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/comments": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/commits/{sha}/comments": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/diff": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/commits/{sha}/statuses": {
     "queryParams": " query?: {   /** The ref */ ref?: string,  /** The stage */ stage?: string,  /** The name */ name?: string,  /** Show all statuses, default: false */ all?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/compare": {
     "queryParams": " query: {   /** The commit, branch name, or tag name to start comparison */ from: string,  /** The commit, branch name, or tag name to stop comparison */ to: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/contributors": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/repository/files": {
     "queryParams": " query: {   /** The path to new file. Ex. lib/class.rb */ file_path: string,  /** The name of branch */ branch_name: string,  /** Commit Message */ commit_message: string,  /** The email of the author */ author_email?: string,  /** The name of the author */ author_name?: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/files": {
     "queryParams": " query: {   /** The path to the file. Ex. lib/class.rb */ file_path: string,  /** The name of branch, tag, or commit */ ref: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/files": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/repository/files": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/repository/merged_branches": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/raw_blobs/{sha}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/tags": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/tags": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/repository/tags/{tag_name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/tags/{tag_name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/repository/tags/{tag_name}/release": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/repository/tags/{tag_name}/release": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/repository/tree": {
     "queryParams": " query?: {   /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string,  /** The path of the tree */ path?: string,  /** Used to get a recursive tree */ recursive?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/runners": {
     "queryParams": " query?: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "post_/v3/projects/{id}/runners": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/runners/{runner_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/asana": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/assembla": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/bamboo": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/bugzilla": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/buildkite": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/builds-email": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/campfire": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/custom-issue-tracker": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/drone-ci": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/emails-on-push": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/external-wiki": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/flowdock": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/gemnasium": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/hipchat": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/irker": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/jira": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/kubernetes": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/mattermost": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/mattermost-slash-commands": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/services/mattermost_slash_commands/trigger": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/pipelines-email": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/pivotaltracker": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/pushover": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/redmine": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/slack": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/slack-slash-commands": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/services/slack_slash_commands/trigger": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/services/teamcity": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/services/{service_slug}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/services/{service_slug}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/share": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/share/{group_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{noteable_id}/notes": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets/{noteable_id}/notes": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/snippets/{snippet_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/snippets/{snippet_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/snippets/{snippet_id}/raw": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/star": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/star": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/statuses/{sha}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/triggers": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/triggers": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/triggers/{token}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/triggers/{token}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/unarchive": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/uploads": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/users": {
     "queryParams": " query?: {   /** Return list of users matching the search criteria */ search?: string,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/variables": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/projects/{id}/variables": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/projects/{id}/variables/{key}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/projects/{id}/variables/{key}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/projects/{id}/variables/{key}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/runners": {
     "queryParams": " query?: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/v3/runners/all": {
     "queryParams": " query?: {   /** The scope of specific runners to show */ scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "delete_/v3/runners/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/runners/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/runners/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/session": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/sidekiq/compound_metrics": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/sidekiq/job_stats": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/sidekiq/process_metrics": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/sidekiq/queue_metrics": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/snippets": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/snippets": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/snippets/public": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/snippets/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/snippets/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/snippets/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/snippets/{id}/raw": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/dockerfiles": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/dockerfiles/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/gitignores": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/gitignores/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/gitlab_ci_ymls": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/gitlab_ci_ymls/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/licenses": {
     "queryParams": " query?: {   /** If passed, returns only popular licenses */ popular?: boolean, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/templates/licenses/{name}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/todos": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/todos": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/todos/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/user": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/user/emails": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/user/emails": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/user/emails/{email_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/user/emails/{email_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/user/keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/user/keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/user/keys/{key_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/user/keys/{key_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users": {
     "queryParams": " query?: {   /** Get a single user with a specific username */ username?: string,  /** Search for a username */ search?: string,  /** Filters only active users */ active?: boolean,  /** Filters only external users */ external?: boolean,  /** Filters only blocked users */ blocked?: boolean,  /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/users": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/users/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/users/{id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/users/{id}/block": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users/{id}/emails": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/users/{id}/emails": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/users/{id}/emails/{email_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users/{id}/events": {
     "queryParams": " query?: {   /** Current page number */ page?: number,  /** Number of items per page */ per_page?: number, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/users/{id}/keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/v3/users/{id}/keys": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/v3/users/{id}/keys/{key_id}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/v3/users/{id}/unblock": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/v3/version": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   }
 }

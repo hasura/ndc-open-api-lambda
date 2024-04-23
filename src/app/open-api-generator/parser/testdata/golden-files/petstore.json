@@ -1,116 +1,78 @@
 {
   "post_/pet": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/pet": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/pet/findByStatus": {
     "queryParams": " query?: {   /** Status values that need to be considered for filter */ status?: \"available\" | \"pending\" | \"sold\", },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": true
   },
   "get_/pet/findByTags": {
     "queryParams": " query?: {   /** Tags to filter by */ tags?:   string[], },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/pet/{petId}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/pet/{petId}": {
     "queryParams": " query?: {   /** Name of pet that needs to be updated */ name?: string,  /** Status of pet that needs to be updated */ status?: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/pet/{petId}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/pet/{petId}/uploadImage": {
     "queryParams": " query?: {   /** Additional Metadata */ additionalMetadata?: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/store/inventory": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/store/order": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/store/order/{orderId}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/store/order/{orderId}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/user": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "post_/user/createWithList": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/user/login": {
     "queryParams": " query?: {   /** The user name for login */ username?: string,  /** The password for login in clear text */ password?: string, },",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/user/logout": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "get_/user/{username}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "put_/user/{username}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   },
   "delete_/user/{username}": {
     "queryParams": "null",
-    "pathParams": "null",
-    "bodyParams": "null",
     "queryParamsRequireRelaxedTypeAnnotation": false
   }
 }

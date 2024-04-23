@@ -361,7 +361,7 @@ function performVariableNameCorrection(name: string): string {
   // if it does, enclose it in double quotes
   const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   if (format.test(name)) {
-    return `"${name}"`
+    return `"${name}"`;
   } else {
     return name;
   }

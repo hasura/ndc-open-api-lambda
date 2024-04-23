@@ -8,8 +8,6 @@ import { parse } from "./types-parser";
 
 type FunctionParams = {
   queryParams: string;
-  pathParams: string;
-  bodyParams: string;
   queryParamsRequireRelaxedTypeAnnotation: boolean;
 };
 
@@ -62,7 +60,7 @@ const tests: {
   },
 ];
 
-describe("GenerateParams", async () => {
+describe("GenerateQueryParams", async () => {
   const templateDir = path.resolve(getTemplatesDirectory(), "./custom");
   for (const testCase of tests) {
     before(function () {
@@ -98,8 +96,6 @@ describe("GenerateParams", async () => {
                 parsedTypes.queryParams && parsedTypes.queryParams?._rendered
                   ? parsedTypes.queryParams?._rendered
                   : "null",
-              pathParams: "null",
-              bodyParams: "null",
               queryParamsRequireRelaxedTypeAnnotation:
                 parsedTypes.queryParams &&
                 parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
