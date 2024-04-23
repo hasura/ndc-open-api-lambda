@@ -167,7 +167,7 @@ export function routeParamsParser(routeParams: any) {
  * @param routeData the route data the is passed in the `onCreateRoute()` hook of `generateApi()`
  */
 export function parse(routeData: any): ParsedTypes {
-  console.log(`\n\nAPI: ${routeData.raw.method} ${routeData.raw.route}`);
+  // console.log(`\n\nAPI: ${routeData.raw.method} ${routeData.raw.route}`);
 
   // const specificArgs = parseSpecificArgs(routeData.specificArgs as SpecificArgs)
 
@@ -216,7 +216,7 @@ export function parseQueryParams(
   querySpecificArgs: SpecificArgsObject | undefined,
 ): Schema | undefined {
   if (!queryParams || !queryParams.$parsed) {
-    console.log("no query params");
+    // console.log("no query params");
     return undefined; // no query params
   }
   // console.log('queryParams.$parsed: ', queryParams.$parsed);
@@ -239,7 +239,7 @@ export function parseQueryParams(
   querySchema._rendered = renderQueryParams(querySchema, stateParams);
   querySchema._requiresRelaxedTypeAnnotation =
     stateParams.requireRelaxedTypeAnnotation;
-  console.log(querySchema._rendered);
+  // console.log(querySchema._rendered);
   // console.log('querySchemaJson: ', CircularJSON.stringify(querySchema));
   return querySchema;
 }
@@ -343,7 +343,7 @@ function renderSchema(
   const schemaDescription = description ? `/** ${description} */` : "";
 
   if (name) {
-    // name = performVariableNameCorrection(name);
+    name = performVariableNameCorrection(name);
     if (required && required === true) {
       name = `${name}:`;
     } else {
@@ -359,7 +359,7 @@ function renderSchema(
 function performVariableNameCorrection(name: string): string {
   // check if the string has special chars
   // if it does, enclose it in double quotes
-  const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  const format = /[!@#%^&*()+\-=\[\]{};':"\\|,.<>\/?]+/;
   if (format.test(name)) {
     return `"${name}"`;
   } else {
