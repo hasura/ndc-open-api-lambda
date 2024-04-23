@@ -36,12 +36,12 @@ import {
   UserResponse,
   UsersPagingResponse,
   Api,
-} from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+} from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "",
-})
+});
 
 /**
  * Get recent media from a custom geo-id.
@@ -63,11 +63,11 @@ export async function getGeographiesGeoIdMediaRecentList(
       min_id: min_id,
     },
     geoId: geoId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -103,11 +103,11 @@ export async function getLocationsSearchList(
       lng: lng,
       foursquare_v2_id: foursquare_v2_id,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -122,11 +122,11 @@ export async function getLocationsLocationIdList(
 ): Promise<LocationInfoResponse> {
   const result = await api.locations.locationIdList({
     locationId: locationId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -156,11 +156,11 @@ export async function getLocationsLocationIdMediaRecentList(
       max_id: max_id,
     },
     locationId: locationId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -171,11 +171,11 @@ export async function getLocationsLocationIdMediaRecentList(
  * @readonly
  */
 export async function getMediaPopularList(): Promise<MediaSearchResponse> {
-  const result = await api.media.popularList({})
+  const result = await api.media.popularList({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -205,11 +205,11 @@ export async function getMediaSearchList(
       max_timestamp: max_timestamp,
       distance: distance,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -225,11 +225,11 @@ export async function getMediaShortcodeDetail(
 ): Promise<MediaEntryResponse> {
   const result = await api.media.shortcodeDetail({
     shortcode: shortcode,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -245,11 +245,11 @@ export async function getMediaMediaIdList(
 ): Promise<MediaEntryResponse> {
   const result = await api.media.mediaIdList({
     mediaId: mediaId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -264,11 +264,11 @@ export async function getMediaMediaIdCommentsList(
 ): Promise<CommentsResponse> {
   const result = await api.media.mediaIdCommentsList({
     mediaId: mediaId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -287,11 +287,11 @@ export async function postMediaMediaIdCommentsCreate(
       text: text,
     },
     mediaId: mediaId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -308,11 +308,11 @@ export async function deleteMediaMediaIdCommentsCommentIdDelete(
   const result = await api.media.mediaIdCommentsCommentIdDelete({
     mediaId: mediaId,
     commentId: commentId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -326,11 +326,11 @@ export async function deleteMediaMediaIdLikesDelete(
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdLikesDelete({
     mediaId: mediaId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -345,11 +345,11 @@ export async function getMediaMediaIdLikesList(
 ): Promise<UsersInfoResponse> {
   const result = await api.media.mediaIdLikesList({
     mediaId: mediaId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -363,11 +363,11 @@ export async function postMediaMediaIdLikesCreate(
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdLikesCreate({
     mediaId: mediaId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -384,11 +384,11 @@ export async function getTagsSearchList(
     query: {
       q: q,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -403,11 +403,11 @@ export async function getTagsTagNameList(
 ): Promise<TagInfoResponse> {
   const result = await api.tags.tagNameList({
     tagName: tagName,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -434,11 +434,11 @@ export async function getTagsTagNameMediaRecentList(
       max_tag_id: max_tag_id,
     },
     tagName: tagName,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -458,11 +458,11 @@ export async function getUsersSearchList(
       q: q,
       count: count,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -486,11 +486,11 @@ export async function getUsersSelfFeedList(
       min_id: min_id,
       max_id: max_id,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -511,11 +511,11 @@ export async function getUsersSelfMediaLikedList(
       count: count,
       max_like_id: max_like_id,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -525,11 +525,11 @@ export async function getUsersSelfMediaLikedList(
  * @readonly
  */
 export async function getUsersSelfRequestedByList(): Promise<UsersInfoResponse> {
-  const result = await api.users.selfRequestedByList({})
+  const result = await api.users.selfRequestedByList({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -544,11 +544,11 @@ export async function getUsersUserIdList(
 ): Promise<UserResponse> {
   const result = await api.users.userIdList({
     userId: userId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -563,11 +563,11 @@ export async function getUsersUserIdFollowedByList(
 ): Promise<UsersPagingResponse> {
   const result = await api.users.userIdFollowedByList({
     userId: userId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -582,11 +582,11 @@ export async function getUsersUserIdFollowsList(
 ): Promise<UsersPagingResponse> {
   const result = await api.users.userIdFollowsList({
     userId: userId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -619,11 +619,11 @@ export async function getUsersUserIdMediaRecentList(
       max_id: max_id,
     },
     userId: userId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -639,11 +639,11 @@ export async function getUsersUserIdRelationshipList(
 ): Promise<RelationshipResponse> {
   const result = await api.users.userIdRelationshipList({
     userId: userId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -663,10 +663,10 @@ export async function postUsersUserIdRelationshipCreate(
       action: action,
     },
     userId: userId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }

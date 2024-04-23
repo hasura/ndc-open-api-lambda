@@ -42,7 +42,6 @@ export async function generateFunctionsTypescriptFile(
     headerMap: headerMap,
   });
   fileStr = await prettier.format(fileStr, {
-    semi: false,
     parser: "typescript",
   }); // correctly format the generated file string
   return fileStr;

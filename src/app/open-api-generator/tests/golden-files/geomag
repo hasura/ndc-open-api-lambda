@@ -1,9 +1,9 @@
-import { Api } from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+import { Api } from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "",
-})
+});
 
 /**
  * Calculate magnetic declination, inclination, total field intensity, and grid variation
@@ -23,24 +23,24 @@ export async function getMagneticFieldAppApiWmmEndpointsWmmMagneticField(
 ): Promise<{
   /** The angle in the horizontal plane between magnetic north and true north. Declination is positive when magnetic north is east of true north. */
   declination?: {
-    units?: string
-    value?: number
-  }
+    units?: string;
+    value?: number;
+  };
   /** Referenced to grid north, referenced to 0 deg meridian of a polar stereographic projection.  Only defined for latitudes greater than 55 degrees and less than -55 degrees arctic and antarctic. */
   grid_variation?: {
-    units?: string
-    value?: number
-  }
+    units?: string;
+    value?: number;
+  };
   /** Also known as 'dip', is the angle made between the horizontal plane and the magnetic field vector at some position. Positive inclination corresponds to a downward pointing.  */
   inclination?: {
-    units?: string
-    value?: number
-  }
+    units?: string;
+    value?: number;
+  };
   /** Total magnetic field intensity in nano Teslas. */
   total_intensity?: {
-    units?: string
-    value?: number
-  }
+    units?: string;
+    value?: number;
+  };
 }> {
   const result = await api.magneticField.appApiWmmEndpointsWmmMagneticField({
     query: {
@@ -49,10 +49,10 @@ export async function getMagneticFieldAppApiWmmEndpointsWmmMagneticField(
       longitude: longitude,
       year: year,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }

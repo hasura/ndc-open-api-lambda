@@ -23,12 +23,12 @@ import {
   SavedAdStyles,
   SavedReports,
   Api,
-} from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+} from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "http://localhost:13191",
-})
+});
 
 /**
  * undefined
@@ -68,11 +68,11 @@ export async function getAccountsAdsenseAccountsList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -114,11 +114,11 @@ export async function getAccountsAdsenseAccountsGet(
       tree: tree,
     },
     accountId: accountId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -163,11 +163,11 @@ export async function getAccountsAdsenseAccountsAdclientsList(
       pageToken: pageToken,
     },
     accountId: accountId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -212,11 +212,11 @@ export async function getAccountsAdsenseAccountsAdclientsGetAdCode(
     },
     accountId: accountId,
     adClientId: adClientId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -267,11 +267,11 @@ export async function getAccountsAdsenseAccountsAdunitsList(
     },
     accountId: accountId,
     adClientId: adClientId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -316,11 +316,11 @@ export async function getAccountsAdsenseAccountsAdunitsGet(
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -365,11 +365,11 @@ export async function getAccountsAdsenseAccountsAdunitsGetAdCode(
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -420,11 +420,11 @@ export async function getAccountsAdsenseAccountsAdunitsCustomchannelsList(
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -472,11 +472,11 @@ export async function getAccountsAdsenseAccountsCustomchannelsList(
     },
     accountId: accountId,
     adClientId: adClientId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -521,11 +521,11 @@ export async function getAccountsAdsenseAccountsCustomchannelsGet(
     accountId: accountId,
     adClientId: adClientId,
     customChannelId: customChannelId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -579,11 +579,11 @@ export async function getAccountsAdsenseAccountsCustomchannelsAdunitsList(
     accountId: accountId,
     adClientId: adClientId,
     customChannelId: customChannelId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -631,11 +631,11 @@ export async function getAccountsAdsenseAccountsUrlchannelsList(
     },
     accountId: accountId,
     adClientId: adClientId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -677,11 +677,11 @@ export async function getAccountsAdsenseAccountsAlertsList(
       locale: locale,
     },
     accountId: accountId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -722,11 +722,11 @@ export async function deleteAccountsAdsenseAccountsAlertsDelete(
     },
     accountId: accountId,
     alertId: alertId,
-  })
+  });
   if (result.error) {
-    throw result.error
+    throw result.error;
   } else {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   }
 }
 
@@ -765,11 +765,11 @@ export async function getAccountsAdsenseAccountsPaymentsList(
       userIp: userIp,
     },
     accountId: accountId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -841,11 +841,11 @@ export async function getAccountsAdsenseAccountsReportsGenerate(
       useTimezoneReporting: useTimezoneReporting,
     },
     accountId: accountId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -890,11 +890,11 @@ export async function getAccountsAdsenseAccountsReportsSavedList(
       pageToken: pageToken,
     },
     accountId: accountId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -945,11 +945,11 @@ export async function getAccountsAdsenseAccountsReportsSavedGenerate(
     },
     accountId: accountId,
     savedReportId: savedReportId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -994,11 +994,11 @@ export async function getAccountsAdsenseAccountsSavedadstylesList(
       pageToken: pageToken,
     },
     accountId: accountId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1040,11 +1040,11 @@ export async function getAccountsAdsenseAccountsSavedadstylesGet(
     },
     accountId: accountId,
     savedAdStyleId: savedAdStyleId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1086,11 +1086,11 @@ export async function getAdclientsAdsenseAdclientsList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1138,11 +1138,11 @@ export async function getAdclientsAdsenseAdunitsList(
       pageToken: pageToken,
     },
     adClientId: adClientId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1184,11 +1184,11 @@ export async function getAdclientsAdsenseAdunitsGet(
     },
     adClientId: adClientId,
     adUnitId: adUnitId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1230,11 +1230,11 @@ export async function getAdclientsAdsenseAdunitsGetAdCode(
     },
     adClientId: adClientId,
     adUnitId: adUnitId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1282,11 +1282,11 @@ export async function getAdclientsAdsenseAdunitsCustomchannelsList(
     },
     adClientId: adClientId,
     adUnitId: adUnitId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1331,11 +1331,11 @@ export async function getAdclientsAdsenseCustomchannelsList(
       pageToken: pageToken,
     },
     adClientId: adClientId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1377,11 +1377,11 @@ export async function getAdclientsAdsenseCustomchannelsGet(
     },
     adClientId: adClientId,
     customChannelId: customChannelId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1432,11 +1432,11 @@ export async function getAdclientsAdsenseCustomchannelsAdunitsList(
     },
     adClientId: adClientId,
     customChannelId: customChannelId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1481,11 +1481,11 @@ export async function getAdclientsAdsenseUrlchannelsList(
       pageToken: pageToken,
     },
     adClientId: adClientId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1524,11 +1524,11 @@ export async function getAlertsAdsenseAlertsList(
       userIp: userIp,
       locale: locale,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1566,11 +1566,11 @@ export async function deleteAlertsAdsenseAlertsDelete(
       userIp: userIp,
     },
     alertId: alertId,
-  })
+  });
   if (result.error) {
-    throw result.error
+    throw result.error;
   } else {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   }
 }
 
@@ -1606,11 +1606,11 @@ export async function getMetadataAdsenseMetadataDimensionsList(
       quotaUser: quotaUser,
       userIp: userIp,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1646,11 +1646,11 @@ export async function getMetadataAdsenseMetadataMetricsList(
       quotaUser: quotaUser,
       userIp: userIp,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1686,11 +1686,11 @@ export async function getPaymentsAdsensePaymentsList(
       quotaUser: quotaUser,
       userIp: userIp,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1762,11 +1762,11 @@ export async function getReportsAdsenseReportsGenerate(
       startIndex: startIndex,
       useTimezoneReporting: useTimezoneReporting,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1808,11 +1808,11 @@ export async function getReportsAdsenseReportsSavedList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1860,11 +1860,11 @@ export async function getReportsAdsenseReportsSavedGenerate(
       startIndex: startIndex,
     },
     savedReportId: savedReportId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1906,11 +1906,11 @@ export async function getSavedadstylesAdsenseSavedadstylesList(
       maxResults: maxResults,
       pageToken: pageToken,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -1949,10 +1949,10 @@ export async function getSavedadstylesAdsenseSavedadstylesGet(
       userIp: userIp,
     },
     savedAdStyleId: savedAdStyleId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }

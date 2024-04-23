@@ -70,12 +70,12 @@ import {
   SetEurekaInfoRequest,
   TestInternetDownloadSpeedRequest,
   Api,
-} from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+} from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "http://localhost:13191",
-})
+});
 
 /**
  * Legal Notice
@@ -83,11 +83,11 @@ const api = new Api({
  * @readonly
  */
 export async function getNoticeHtmlGzLegalNotice(): Promise<string> {
-  const result = await api.noticeHtmlGz.legalNotice({})
+  const result = await api.noticeHtmlGz.legalNotice({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -101,11 +101,11 @@ export async function postAssistantAccessibility(
 ): Promise<Getcurrentvalues> {
   const result = await api.assistant.accessibility({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -115,11 +115,11 @@ export async function postAssistantAccessibility(
  * @readonly
  */
 export async function getAssistantGetAlarmsandTimers(): Promise<Example18> {
-  const result = await api.assistant.getAlarmsandTimers({})
+  const result = await api.assistant.getAlarmsandTimers({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -133,11 +133,11 @@ export async function postAssistantDeleteAlarmsandTimers(
 ): Promise<Example19> {
   const result = await api.assistant.deleteAlarmsandTimers({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -151,11 +151,11 @@ export async function postAssistantAlarmVolume(
 ): Promise<Getvolume> {
   const result = await api.assistant.alarmVolume({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -169,11 +169,11 @@ export async function postAssistantCheckReadyStatus(
 ): Promise<Example13> {
   const result = await api.assistant.checkReadyStatus({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -182,11 +182,11 @@ export async function postAssistantCheckReadyStatus(
  * @request POST :/assistant/notifications
  */
 export async function postAssistantDoNotDisturb(): Promise<Getcurrentstate> {
-  const result = await api.assistant.doNotDisturb({})
+  const result = await api.assistant.doNotDisturb({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -200,11 +200,11 @@ export async function postAssistantNightModesettings(
 ): Promise<Example17> {
   const result = await api.assistant.nightModesettings({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -218,11 +218,11 @@ export async function postBluetoothForgetpaireddevice(
 ): Promise<object> {
   const result = await api.bluetooth.forgetpaireddevice({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -236,11 +236,11 @@ export async function postBluetoothPairwithSpeaker(
 ): Promise<object> {
   const result = await api.bluetooth.pairwithSpeaker({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -254,11 +254,11 @@ export async function postBluetoothChangeDiscoverability(
 ): Promise<object> {
   const result = await api.bluetooth.changeDiscoverability({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -268,11 +268,11 @@ export async function postBluetoothChangeDiscoverability(
  * @readonly
  */
 export async function getBluetoothGetPairedDevices(): Promise<Example111[]> {
-  const result = await api.bluetooth.getPairedDevices({})
+  const result = await api.bluetooth.getPairedDevices({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -286,11 +286,11 @@ export async function postBluetoothScanfordevices(
 ): Promise<object> {
   const result = await api.bluetooth.scanfordevices({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -300,11 +300,11 @@ export async function postBluetoothScanfordevices(
  * @readonly
  */
 export async function getBluetoothGetScanResults(): Promise<Example112[]> {
-  const result = await api.bluetooth.getScanResults({})
+  const result = await api.bluetooth.getScanResults({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -314,11 +314,11 @@ export async function getBluetoothGetScanResults(): Promise<Example112[]> {
  * @readonly
  */
 export async function getBluetoothStatus(): Promise<Example110> {
-  const result = await api.bluetooth.status({})
+  const result = await api.bluetooth.status({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -330,11 +330,11 @@ export async function getBluetoothStatus(): Promise<Example110> {
 export async function getConfiguredNetworksGetSavedNetworks(): Promise<
   Example113[]
 > {
-  const result = await api.configuredNetworks.getSavedNetworks({})
+  const result = await api.configuredNetworks.getSavedNetworks({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -349,11 +349,11 @@ export async function postConnectWifiConnecttoWiFiNetwork(
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.connectWifi.connecttoWiFiNetwork({
     data: data,
-  })
+  });
   if (result.error) {
-    throw result.error
+    throw result.error;
   } else {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   }
 }
 
@@ -376,11 +376,11 @@ export async function getEurekaInfoEurekaInfo(
       options: options,
       nonce: nonce,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -394,11 +394,11 @@ export async function postForgetWifiForgetWiFiNetwork(
 ): Promise<object> {
   const result = await api.forgetWifi.forgetWiFiNetwork({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -412,11 +412,11 @@ export async function postGetAppDeviceIdAppDeviceId(
 ): Promise<Example11> {
   const result = await api.getAppDeviceId.appDeviceId({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -427,11 +427,11 @@ export async function postGetAppDeviceIdAppDeviceId(
  * @readonly
  */
 export async function getIconPngChromecastIcon(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.iconPng.chromecastIcon({})
+  const result = await api.iconPng.chromecastIcon({});
   if (result.error) {
-    throw result.error
+    throw result.error;
   } else {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   }
 }
 
@@ -441,11 +441,11 @@ export async function getIconPngChromecastIcon(): Promise<hasuraSdk.JSONValue> {
  * @readonly
  */
 export async function getOfferOffer(): Promise<Example12> {
-  const result = await api.offer.offer({})
+  const result = await api.offer.offer({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -459,11 +459,11 @@ export async function postRebootRebootandFactoryReset(
 ): Promise<object> {
   const result = await api.reboot.rebootandFactoryReset({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -475,11 +475,11 @@ export async function postRebootRebootandFactoryReset(
 export async function getScanResultsGetWiFiScanResults(): Promise<
   Example114[]
 > {
-  const result = await api.scanResults.getWiFiScanResults({})
+  const result = await api.scanResults.getWiFiScanResults({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -488,11 +488,11 @@ export async function getScanResultsGetWiFiScanResults(): Promise<
  * @request POST :/scan_wifi
  */
 export async function postScanWifiScanforNetworks(): Promise<object> {
-  const result = await api.scanWifi.scanforNetworks({})
+  const result = await api.scanWifi.scanforNetworks({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -506,11 +506,11 @@ export async function postSetEurekaInfoSetEurekaInfo(
 ): Promise<object> {
   const result = await api.setEurekaInfo.setEurekaInfo({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -520,11 +520,11 @@ export async function postSetEurekaInfoSetEurekaInfo(
  * @readonly
  */
 export async function getSupportedLocalesLocales(): Promise<Example15[]> {
-  const result = await api.supportedLocales.locales({})
+  const result = await api.supportedLocales.locales({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -534,11 +534,11 @@ export async function getSupportedLocalesLocales(): Promise<Example15[]> {
  * @readonly
  */
 export async function getSupportedTimezonesTimezones(): Promise<Example14[]> {
-  const result = await api.supportedTimezones.timezones({})
+  const result = await api.supportedTimezones.timezones({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -552,11 +552,11 @@ export async function postTestInternetDownloadSpeedTestInternetDownloadSpeed(
 ): Promise<Example16> {
   const result = await api.testInternetDownloadSpeed.testInternetDownloadSpeed({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -570,10 +570,10 @@ export async function postUserEqSetEqualizerValues(
 ): Promise<object> {
   const result = await api.userEq.setEqualizerValues({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }

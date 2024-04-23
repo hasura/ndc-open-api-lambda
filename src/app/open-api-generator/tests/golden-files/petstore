@@ -8,12 +8,12 @@ import {
   User,
   ApiResponse,
   Api,
-} from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+} from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "http://localhost:13191",
-})
+});
 
 /**
  * Add a new pet to the store
@@ -26,11 +26,11 @@ export async function postPetAddPet(
 ): Promise<Pet> {
   const result = await api.pet.addPet({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -45,11 +45,11 @@ export async function putPetUpdatePet(
 ): Promise<Pet> {
   const result = await api.pet.updatePet({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -67,11 +67,11 @@ export async function getPetFindPetsByStatus(
     query: {
       status: status,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -89,11 +89,11 @@ export async function getPetFindPetsByTags(
     query: {
       tags: tags,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -109,11 +109,11 @@ export async function getPetGetPetById(
 ): Promise<Pet> {
   const result = await api.pet.getPetById({
     petId: petId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -136,11 +136,11 @@ export async function postPetUpdatePetWithForm(
       status: status,
     },
     petId: petId,
-  })
+  });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -155,11 +155,11 @@ export async function deletePetDeletePet(
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.pet.deletePet({
     petId: petId,
-  })
+  });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -181,11 +181,11 @@ export async function postPetUploadFile(
     },
     petId: petId,
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -196,11 +196,11 @@ export async function postPetUploadFile(
  * @readonly
  */
 export async function getStoreGetInventory(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.store.getInventory({})
+  const result = await api.store.getInventory({});
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -215,11 +215,11 @@ export async function postStorePlaceOrder(
 ): Promise<Order> {
   const result = await api.store.placeOrder({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -235,11 +235,11 @@ export async function getStoreGetOrderById(
 ): Promise<Order> {
   const result = await api.store.getOrderById({
     orderId: orderId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -254,11 +254,11 @@ export async function deleteStoreDeleteOrder(
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.store.deleteOrder({
     orderId: orderId,
-  })
+  });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -273,11 +273,11 @@ export async function postUserCreateUser(
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.user.createUser({
     data: data,
-  })
+  });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -291,11 +291,11 @@ export async function postUserCreateUsersWithListInput(
 ): Promise<User> {
   const result = await api.user.createUsersWithListInput({
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -315,11 +315,11 @@ export async function getUserLoginUser(
       username: username,
       password: password,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -330,11 +330,11 @@ export async function getUserLoginUser(
  * @readonly
  */
 export async function getUserLogoutUser(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.user.logoutUser({})
+  const result = await api.user.logoutUser({});
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -349,11 +349,11 @@ export async function getUserGetUserByName(
 ): Promise<User> {
   const result = await api.user.getUserByName({
     username: username,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -371,11 +371,11 @@ export async function putUserUpdateUser(
   const result = await api.user.updateUser({
     username: username,
     data: data,
-  })
+  });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -390,10 +390,10 @@ export async function deleteUserDeleteUser(
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.user.deleteUser({
     username: username,
-  })
+  });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }

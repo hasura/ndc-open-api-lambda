@@ -1,5 +1,5 @@
-import { MainAuthor, MainBlog, MainBlogRequestDto, Api } from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+import { MainAuthor, MainBlog, MainBlogRequestDto, Api } from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "http://mybaseurl/abc/def",
@@ -9,7 +9,7 @@ const api = new Api({
       type: "json",
     },
   },
-})
+});
 
 /**
  * create author
@@ -21,11 +21,11 @@ export async function postAuthorAuthorCreate(
 ): Promise<MainAuthor> {
   const result = await api.author.authorCreate({
     author: author,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -39,11 +39,11 @@ export async function deleteAuthorAuthorDelete(
 ): Promise<MainAuthor> {
   const result = await api.author.authorDelete({
     authorId: authorId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -53,11 +53,11 @@ export async function deleteAuthorAuthorDelete(
  * @readonly
  */
 export async function getAuthorsAuthorsList(): Promise<MainAuthor[]> {
-  const result = await api.authors.authorsList({})
+  const result = await api.authors.authorsList({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -71,11 +71,11 @@ export async function putBlogBlogUpdate(
 ): Promise<MainBlog> {
   const result = await api.blog.blogUpdate({
     blog: blog,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -89,11 +89,11 @@ export async function postBlogBlogCreate(
 ): Promise<MainBlog> {
   const result = await api.blog.blogCreate({
     blog: blog,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -109,11 +109,11 @@ export async function patchBlogDislikePartialUpdate(
     query: {
       blogId: blogId,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -129,11 +129,11 @@ export async function patchBlogLikePartialUpdate(
     query: {
       blogId: blogId,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -147,11 +147,11 @@ export async function deleteBlogBlogDelete(
 ): Promise<MainBlog> {
   const result = await api.blog.blogDelete({
     blogId: blogId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -176,11 +176,11 @@ export async function patchBlogBlogPartialUpdate(
       summary: summary,
     },
     blogId: blogId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -197,10 +197,10 @@ export async function getBlogsBlogsList(
     query: {
       authorId: authorId,
     },
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
