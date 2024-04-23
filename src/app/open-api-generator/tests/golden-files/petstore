@@ -59,14 +59,14 @@ export async function putPetUpdatePet(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getPetFindPetsByStatus(
-  /** Status values that need to be considered for filter */
-  status?: "available" | "pending" | "sold",
-): Promise<Pet[]> {
+export async function getPetFindPetsByStatus(query: {
+  /** Status values that need to be considered for filter */ status?:
+    | "available"
+    | "pending"
+    | "sold";
+}): Promise<Pet[]> {
   const result = await api.pet.findPetsByStatus({
-    query: {
-      status: status,
-    },
+    query: query,
   });
   if (result.data) {
     return result.data;
@@ -81,14 +81,11 @@ export async function getPetFindPetsByStatus(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getPetFindPetsByTags(
-  /** Tags to filter by */
-  tags?: string[],
-): Promise<Pet[]> {
+export async function getPetFindPetsByTags(query: {
+  /** Tags to filter by */ tags?: string[];
+}): Promise<Pet[]> {
   const result = await api.pet.findPetsByTags({
-    query: {
-      tags: tags,
-    },
+    query: query,
   });
   if (result.data) {
     return result.data;
@@ -123,18 +120,15 @@ export async function getPetGetPetById(
  * @allowrelaxedtypes
  */
 export async function postPetUpdatePetWithForm(
+  query: {
+    /** Name of pet that needs to be updated */ name?: string;
+    /** Status of pet that needs to be updated */ status?: string;
+  },
   /** ID of pet that needs to be updated */
   petId: number,
-  /** Name of pet that needs to be updated */
-  name?: string,
-  /** Status of pet that needs to be updated */
-  status?: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.pet.updatePetWithForm({
-    query: {
-      name: name,
-      status: status,
-    },
+    query: query,
     petId: petId,
   });
   if (result.data) {
@@ -168,17 +162,14 @@ export async function deletePetDeletePet(
  * @request POST :/pet/{petId}/uploadImage
  */
 export async function postPetUploadFile(
+  query: { /** Additional Metadata */ additionalMetadata?: string },
   /** ID of pet to update */
   petId: number,
   /** Request body */
   data: File,
-  /** Additional Metadata */
-  additionalMetadata?: string,
 ): Promise<ApiResponse> {
   const result = await api.pet.uploadFile({
-    query: {
-      additionalMetadata: additionalMetadata,
-    },
+    query: query,
     petId: petId,
     data: data,
   });
@@ -304,17 +295,12 @@ export async function postUserCreateUsersWithListInput(
  * @request GET :/user/login
  * @readonly
  */
-export async function getUserLoginUser(
-  /** The user name for login */
-  username?: string,
-  /** The password for login in clear text */
-  password?: string,
-): Promise<string> {
+export async function getUserLoginUser(query: {
+  /** The user name for login */ username?: string;
+  /** The password for login in clear text */ password?: string;
+}): Promise<string> {
   const result = await api.user.loginUser({
-    query: {
-      username: username,
-      password: password,
-    },
+    query: query,
   });
   if (result.data) {
     return result.data;

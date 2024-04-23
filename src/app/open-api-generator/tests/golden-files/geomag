@@ -11,16 +11,12 @@ const api = new Api({
  * @request GET :/magnetic_field
  * @readonly
  */
-export async function getMagneticFieldAppApiWmmEndpointsWmmMagneticField(
-  /** Geodetic Altitude 0 km to 600 km. */
-  altitude: number,
-  /** Geodetic Latitude. -90 deg (S) to 90 deg (N). */
-  latitude: number,
-  /** Geodetic Longitude. -180 deg (W) to 180 deg (E). */
-  longitude: number,
-  /** Year as a decimal in the range 2015-2025 (2017.5 would be half way through 2017). */
-  year: number,
-): Promise<{
+export async function getMagneticFieldAppApiWmmEndpointsWmmMagneticField(query: {
+  /** Geodetic Altitude 0 km to 600 km. */ altitude: number;
+  /** Geodetic Latitude. -90 deg (S) to 90 deg (N). */ latitude: number;
+  /** Geodetic Longitude. -180 deg (W) to 180 deg (E). */ longitude: number;
+  /** Year as a decimal in the range 2015-2025 (2017.5 would be half way through 2017). */ year: number;
+}): Promise<{
   /** The angle in the horizontal plane between magnetic north and true north. Declination is positive when magnetic north is east of true north. */
   declination?: {
     units?: string;
@@ -43,12 +39,7 @@ export async function getMagneticFieldAppApiWmmEndpointsWmmMagneticField(
   };
 }> {
   const result = await api.magneticField.appApiWmmEndpointsWmmMagneticField({
-    query: {
-      altitude: altitude,
-      latitude: latitude,
-      longitude: longitude,
-      year: year,
-    },
+    query: query,
   });
   if (result.data) {
     return result.data;

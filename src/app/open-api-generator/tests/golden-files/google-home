@@ -362,20 +362,13 @@ export async function postConnectWifiConnecttoWiFiNetwork(
  * @request GET :/eureka_info
  * @readonly
  */
-export async function getEurekaInfoEurekaInfo(
-  /** undefined */
-  params: string,
-  /** undefined */
-  options: string,
-  /** undefined */
-  nonce: number,
-): Promise<Example1> {
+export async function getEurekaInfoEurekaInfo(query: {
+  params: string;
+  options: string;
+  nonce: number;
+}): Promise<Example1> {
   const result = await api.eurekaInfo.eurekaInfo({
-    query: {
-      params: params,
-      options: options,
-      nonce: nonce,
-    },
+    query: query,
   });
   if (result.data) {
     return result.data;

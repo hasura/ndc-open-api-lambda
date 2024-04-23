@@ -8,6 +8,7 @@ import * as path from "path";
 import { getTemplatesDirectory } from ".";
 import { existsSync } from "fs";
 import * as logger from "../../util/logger";
+import * as TypesParser from "./parser/types-parser";
 
 const CircularJSON = require("circular-json");
 
@@ -22,6 +23,11 @@ export type NdcSchemaComponent = {
   ref: string;
 };
 
+export type ApiRoute = {
+  route: ParsedRoute;
+  querySchema: TypesParser.ParsedTypes;
+};
+
 export class ApiComponents {
   rawTypeToTypeMap: Map<string, string>;
   typeToRawTypeMap: Map<string, string>;
@@ -31,7 +37,7 @@ export class ApiComponents {
 
   allGeneratedTypes: Set<string>;
 
-  routes: ParsedRoute[];
+  routes: ApiRoute[];
 
   constructor() {
     this.rawTypeToTypeMap = new Map<string, string>();
@@ -76,7 +82,7 @@ export class ApiComponents {
     this.typeToRawTypeMap.set(type, rawType);
   }
 
-  public addRoute(route: ParsedRoute) {
+  public addRoute(route: ApiRoute) {
     this.routes.push(route);
   }
 
@@ -84,7 +90,7 @@ export class ApiComponents {
     return this.allGeneratedTypes;
   }
 
-  public getRoutes(): ParsedRoute[] {
+  public getRoutes(): ApiRoute[] {
     return this.routes;
   }
 
@@ -218,7 +224,12 @@ export async function generateOpenApiTypescriptFile(
         // if (routeData.raw.route === "/v3/projects/{id}") {
         //   console.log('\n\n\n\nonCreateRoute: ', CircularJSON.stringify(routeData));
         // }
-        apiComponents.addRoute(routeData);
+        const querySchema = TypesParser.parse(routeData);
+        const apiRoute: ApiRoute = {
+          route: routeData,
+          querySchema: querySchema,
+        };
+        apiComponents.addRoute(apiRoute);
       },
       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {},
       onFormatRouteName: (routeInfo, templateRouteName) => {},
