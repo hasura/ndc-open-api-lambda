@@ -340,7 +340,14 @@ function renderSchema(
   name: string | undefined,
   type: string,
 ) {
-  const schemaDescription = description ? `/** ${description} */` : "";
+  let schemaDescription = "";
+  if (description) {
+    if (description.endsWith("\n")) {
+      schemaDescription = `\n/**\n* ${description} */\n`;
+    } else {
+      schemaDescription = `\n/**\n* ${description}\n*/\n`;
+    }
+  }
 
   if (name) {
     name = performVariableNameCorrection(name);

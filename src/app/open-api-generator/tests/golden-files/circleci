@@ -57,13 +57,19 @@ export async function getMeGetMe(): Promise<User> {
  */
 export async function getProjectProjectDetail(
   query: {
-    /** The number of builds to return. Maximum 100, defaults to 30.
-     */ limit?: number;
-    /** The API returns builds starting from this offset, defaults to 0.
-     */ offset?: number;
-    /** Restricts which builds are returned.
+    /**
+     * The number of builds to return. Maximum 100, defaults to 30.
+     */
+    limit?: number;
+    /**
+     * The API returns builds starting from this offset, defaults to 0.
+     */
+    offset?: number;
+    /**
+* Restricts which builds are returned.
 Set to "completed", "successful", "failed", "running", or defaults to no filter.
- */ filter?: "completed" | "successful" | "failed" | "running";
+ */
+    filter?: "completed" | "successful" | "failed" | "running";
   },
   /** XXXXXXXXX
    */
@@ -588,10 +594,14 @@ export async function getProjectsProjectsList(): Promise<Projects> {
  * @readonly
  */
 export async function getRecentBuildsRecentBuildsList(query: {
-  /** The number of builds to return. Maximum 100, defaults to 30.
-   */ limit?: number;
-  /** The API returns builds starting from this offset, defaults to 0.
-   */ offset?: number;
+  /**
+   * The number of builds to return. Maximum 100, defaults to 30.
+   */
+  limit?: number;
+  /**
+   * The API returns builds starting from this offset, defaults to 0.
+   */
+  offset?: number;
 }): Promise<Builds> {
   const result = await api.recentBuilds.recentBuildsList({
     query: query,

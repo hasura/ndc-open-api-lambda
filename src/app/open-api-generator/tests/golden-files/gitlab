@@ -448,13 +448,34 @@ export async function getV3GetV3GitlabCiYmlsName(
  */
 export async function getV3GetV3Groups(
   query: {
-    /** Include project statistics */ statistics?: boolean;
-    /** Show all group that you have access to */ all_available?: boolean;
-    /** Search for a specific group */ search?: string;
-    /** Order by name or path */ order_by?: "name" | "path";
-    /** Sort by asc (ascending) or desc (descending) */ sort?: "asc" | "desc";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Include project statistics
+     */
+    statistics?: boolean;
+    /**
+     * Show all group that you have access to
+     */
+    all_available?: boolean;
+    /**
+     * Search for a specific group
+     */
+    search?: string;
+    /**
+     * Order by name or path
+     */
+    order_by?: "name" | "path";
+    /**
+     * Sort by asc (ascending) or desc (descending)
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** Request body */
   data: {
@@ -513,9 +534,18 @@ export async function postV3PostV3Groups(
  * @readonly
  */
 export async function getV3GetV3GroupsOwned(query: {
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
-  /** Include project statistics */ statistics?: boolean;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
+  /**
+   * Include project statistics
+   */
+  statistics?: boolean;
 }): Promise<Group> {
   const result = await api.v3.getV3GroupsOwned({
     query: query,
@@ -609,8 +639,14 @@ export async function putV3PutV3GroupsId(
  */
 export async function getV3GetV3GroupsIdAccessRequests(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The group ID */
   id: string,
@@ -704,18 +740,34 @@ export async function putV3PutV3GroupsIdAccessRequestsUserIdApprove(
  */
 export async function getV3GetV3GroupsIdIssues(
   query: {
-    /** Return opened, closed, or all issues */ state?:
-      | "opened"
-      | "closed"
-      | "all";
-    /** Comma-separated list of label names */ labels?: string;
-    /** Return issues for a specific milestone */ milestone?: string;
-    /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?:
-      | "created_at"
-      | "updated_at";
-    /** Return issues sorted in `asc` or `desc` order. */ sort?: "asc" | "desc";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Return opened, closed, or all issues
+     */
+    state?: "opened" | "closed" | "all";
+    /**
+     * Comma-separated list of label names
+     */
+    labels?: string;
+    /**
+     * Return issues for a specific milestone
+     */
+    milestone?: string;
+    /**
+     * Return issues ordered by `created_at` or `updated_at` fields.
+     */
+    order_by?: "created_at" | "updated_at";
+    /**
+     * Return issues sorted in `asc` or `desc` order.
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a group */
   id: string,
@@ -738,9 +790,18 @@ export async function getV3GetV3GroupsIdIssues(
  */
 export async function getV3GetV3GroupsIdMembers(
   query: {
-    /** A query string to search for members */ query?: string;
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * A query string to search for members
+     */
+    query?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The group ID */
   id: string,
@@ -947,22 +1008,44 @@ export async function putV3PutV3GroupsIdNotificationSettings(
  */
 export async function getV3GetV3GroupsIdProjects(
   query: {
-    /** Limit by archived status */ archived?: boolean;
-    /** Limit by visibility */ visibility?: "public" | "internal" | "private";
-    /** Return list of authorized projects matching the search criteria */ search?: string;
-    /** Return projects ordered by field */ order_by?:
+    /**
+     * Limit by archived status
+     */
+    archived?: boolean;
+    /**
+     * Limit by visibility
+     */
+    visibility?: "public" | "internal" | "private";
+    /**
+     * Return list of authorized projects matching the search criteria
+     */
+    search?: string;
+    /**
+     * Return projects ordered by field
+     */
+    order_by?:
       | "id"
       | "name"
       | "path"
       | "created_at"
       | "updated_at"
       | "last_activity_at";
-    /** Return projects sorted in ascending and descending order */ sort?:
-      | "asc"
-      | "desc";
-    /** Return only the ID, URL, name, and path of each project */ simple?: boolean;
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Return projects sorted in ascending and descending order
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Return only the ID, URL, name, and path of each project
+     */
+    simple?: boolean;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a group */
   id: string,
@@ -1188,18 +1271,34 @@ export async function postV3PostV3InternalTwoFactorRecoveryCodes(): Promise<hasu
  * @readonly
  */
 export async function getV3GetV3Issues(query: {
-  /** Return opened, closed, or all issues */ state?:
-    | "opened"
-    | "closed"
-    | "all";
-  /** Comma-separated list of label names */ labels?: string;
-  /** Return issues for a specific milestone */ milestone?: string;
-  /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?:
-    | "created_at"
-    | "updated_at";
-  /** Return issues sorted in `asc` or `desc` order. */ sort?: "asc" | "desc";
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * Return opened, closed, or all issues
+   */
+  state?: "opened" | "closed" | "all";
+  /**
+   * Comma-separated list of label names
+   */
+  labels?: string;
+  /**
+   * Return issues for a specific milestone
+   */
+  milestone?: string;
+  /**
+   * Return issues ordered by `created_at` or `updated_at` fields.
+   */
+  order_by?: "created_at" | "updated_at";
+  /**
+   * Return issues sorted in `asc` or `desc` order.
+   */
+  sort?: "asc" | "desc";
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<Issue> {
   const result = await api.v3.getV3Issues({
     query: query,
@@ -1236,7 +1335,10 @@ export async function getV3GetV3KeysId(
  * @readonly
  */
 export async function getV3GetV3Licenses(query: {
-  /** If passed, returns only popular licenses */ popular?: boolean;
+  /**
+   * If passed, returns only popular licenses
+   */
+  popular?: boolean;
 }): Promise<RepoLicense> {
   const result = await api.v3.getV3Licenses({
     query: query,
@@ -1273,9 +1375,18 @@ export async function getV3GetV3LicensesName(
  * @readonly
  */
 export async function getV3GetV3Namespaces(query: {
-  /** Search query for namespaces */ search?: string;
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * Search query for namespaces
+   */
+  search?: string;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<Namespace> {
   const result = await api.v3.getV3Namespaces({
     query: query,
@@ -1355,22 +1466,44 @@ export async function putV3PutV3NotificationSettings(
  * @readonly
  */
 export async function getV3GetV3Projects(query: {
-  /** Return projects ordered by field */ order_by?:
+  /**
+   * Return projects ordered by field
+   */
+  order_by?:
     | "id"
     | "name"
     | "path"
     | "created_at"
     | "updated_at"
     | "last_activity_at";
-  /** Return projects sorted in ascending and descending order */ sort?:
-    | "asc"
-    | "desc";
-  /** Limit by archived status */ archived?: boolean;
-  /** Limit by visibility */ visibility?: "public" | "internal" | "private";
-  /** Return list of authorized projects matching the search criteria */ search?: string;
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
-  /** Return only the ID, URL, name, and path of each project */ simple?: boolean;
+  /**
+   * Return projects sorted in ascending and descending order
+   */
+  sort?: "asc" | "desc";
+  /**
+   * Limit by archived status
+   */
+  archived?: boolean;
+  /**
+   * Limit by visibility
+   */
+  visibility?: "public" | "internal" | "private";
+  /**
+   * Return list of authorized projects matching the search criteria
+   */
+  search?: string;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
+  /**
+   * Return only the ID, URL, name, and path of each project
+   */
+  simple?: boolean;
 }): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3Projects({
     query: query,
@@ -1453,23 +1586,48 @@ export async function postV3PostV3Projects(
  * @readonly
  */
 export async function getV3GetV3ProjectsAll(query: {
-  /** Return projects ordered by field */ order_by?:
+  /**
+   * Return projects ordered by field
+   */
+  order_by?:
     | "id"
     | "name"
     | "path"
     | "created_at"
     | "updated_at"
     | "last_activity_at";
-  /** Return projects sorted in ascending and descending order */ sort?:
-    | "asc"
-    | "desc";
-  /** Limit by archived status */ archived?: boolean;
-  /** Limit by visibility */ visibility?: "public" | "internal" | "private";
-  /** Return list of authorized projects matching the search criteria */ search?: string;
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
-  /** Return only the ID, URL, name, and path of each project */ simple?: boolean;
-  /** Include project statistics */ statistics?: boolean;
+  /**
+   * Return projects sorted in ascending and descending order
+   */
+  sort?: "asc" | "desc";
+  /**
+   * Limit by archived status
+   */
+  archived?: boolean;
+  /**
+   * Limit by visibility
+   */
+  visibility?: "public" | "internal" | "private";
+  /**
+   * Return list of authorized projects matching the search criteria
+   */
+  search?: string;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
+  /**
+   * Return only the ID, URL, name, and path of each project
+   */
+  simple?: boolean;
+  /**
+   * Include project statistics
+   */
+  statistics?: boolean;
 }): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsAll({
     query: query,
@@ -1512,23 +1670,48 @@ export async function postV3PostV3ProjectsForkId(
  * @readonly
  */
 export async function getV3GetV3ProjectsOwned(query: {
-  /** Return projects ordered by field */ order_by?:
+  /**
+   * Return projects ordered by field
+   */
+  order_by?:
     | "id"
     | "name"
     | "path"
     | "created_at"
     | "updated_at"
     | "last_activity_at";
-  /** Return projects sorted in ascending and descending order */ sort?:
-    | "asc"
-    | "desc";
-  /** Limit by archived status */ archived?: boolean;
-  /** Limit by visibility */ visibility?: "public" | "internal" | "private";
-  /** Return list of authorized projects matching the search criteria */ search?: string;
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
-  /** Return only the ID, URL, name, and path of each project */ simple?: boolean;
-  /** Include project statistics */ statistics?: boolean;
+  /**
+   * Return projects sorted in ascending and descending order
+   */
+  sort?: "asc" | "desc";
+  /**
+   * Limit by archived status
+   */
+  archived?: boolean;
+  /**
+   * Limit by visibility
+   */
+  visibility?: "public" | "internal" | "private";
+  /**
+   * Return list of authorized projects matching the search criteria
+   */
+  search?: string;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
+  /**
+   * Return only the ID, URL, name, and path of each project
+   */
+  simple?: boolean;
+  /**
+   * Include project statistics
+   */
+  statistics?: boolean;
 }): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsOwned({
     query: query,
@@ -1548,18 +1731,28 @@ export async function getV3GetV3ProjectsOwned(query: {
  */
 export async function getV3GetV3ProjectsSearchQuery(
   queryParams: {
-    /** Return projects ordered by field */ order_by?:
+    /**
+     * Return projects ordered by field
+     */
+    order_by?:
       | "id"
       | "name"
       | "path"
       | "created_at"
       | "updated_at"
       | "last_activity_at";
-    /** Return projects sorted in ascending and descending order */ sort?:
-      | "asc"
-      | "desc";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Return projects sorted in ascending and descending order
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The project name to be searched */
   query: string,
@@ -1582,22 +1775,44 @@ export async function getV3GetV3ProjectsSearchQuery(
  * @readonly
  */
 export async function getV3GetV3ProjectsStarred(query: {
-  /** Return projects ordered by field */ order_by?:
+  /**
+   * Return projects ordered by field
+   */
+  order_by?:
     | "id"
     | "name"
     | "path"
     | "created_at"
     | "updated_at"
     | "last_activity_at";
-  /** Return projects sorted in ascending and descending order */ sort?:
-    | "asc"
-    | "desc";
-  /** Limit by archived status */ archived?: boolean;
-  /** Limit by visibility */ visibility?: "public" | "internal" | "private";
-  /** Return list of authorized projects matching the search criteria */ search?: string;
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
-  /** Return only the ID, URL, name, and path of each project */ simple?: boolean;
+  /**
+   * Return projects sorted in ascending and descending order
+   */
+  sort?: "asc" | "desc";
+  /**
+   * Limit by archived status
+   */
+  archived?: boolean;
+  /**
+   * Limit by visibility
+   */
+  visibility?: "public" | "internal" | "private";
+  /**
+   * Return list of authorized projects matching the search criteria
+   */
+  search?: string;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
+  /**
+   * Return only the ID, URL, name, and path of each project
+   */
+  simple?: boolean;
 }): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsStarred({
     query: query,
@@ -1683,22 +1898,44 @@ export async function postV3PostV3ProjectsUserUserId(
  * @readonly
  */
 export async function getV3GetV3ProjectsVisible(query: {
-  /** Return projects ordered by field */ order_by?:
+  /**
+   * Return projects ordered by field
+   */
+  order_by?:
     | "id"
     | "name"
     | "path"
     | "created_at"
     | "updated_at"
     | "last_activity_at";
-  /** Return projects sorted in ascending and descending order */ sort?:
-    | "asc"
-    | "desc";
-  /** Limit by archived status */ archived?: boolean;
-  /** Limit by visibility */ visibility?: "public" | "internal" | "private";
-  /** Return list of authorized projects matching the search criteria */ search?: string;
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
-  /** Return only the ID, URL, name, and path of each project */ simple?: boolean;
+  /**
+   * Return projects sorted in ascending and descending order
+   */
+  sort?: "asc" | "desc";
+  /**
+   * Limit by archived status
+   */
+  archived?: boolean;
+  /**
+   * Limit by visibility
+   */
+  visibility?: "public" | "internal" | "private";
+  /**
+   * Return list of authorized projects matching the search criteria
+   */
+  search?: string;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
+  /**
+   * Return only the ID, URL, name, and path of each project
+   */
+  simple?: boolean;
 }): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsVisible({
     query: query,
@@ -1844,8 +2081,14 @@ export async function postV3PostV3ProjectsIdRefRefTriggerBuilds(
  */
 export async function getV3GetV3ProjectsIdAccessRequests(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The project ID */
   id: string,
@@ -2110,14 +2353,18 @@ export async function putV3PutV3ProjectsIdBoardsBoardIdListsListId(
  */
 export async function getV3GetV3ProjectsIdBuilds(
   query: {
-    /** The scope of builds to show */ scope?:
-      | "pending"
-      | "running"
-      | "failed"
-      | "success"
-      | "canceled";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * The scope of builds to show
+     */
+    scope?: "pending" | "running" | "failed" | "success" | "canceled";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -2140,7 +2387,12 @@ export async function getV3GetV3ProjectsIdBuilds(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBuildsArtifactsRefNameDownload(
-  query: { /** The name for the build */ job: string },
+  query: {
+    /**
+     * The name for the build
+     */
+    job: string;
+  },
   /** The ID of a project */
   id: string,
   /** The ref from repository */
@@ -2468,8 +2720,14 @@ export async function postV3PostV3ProjectsIdDeployKeysKeyIdEnable(
  */
 export async function getV3GetV3ProjectsIdDeployments(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The project ID */
   id: string,
@@ -2514,8 +2772,14 @@ export async function getV3GetV3ProjectsIdDeploymentsDeploymentId(
  */
 export async function getV3GetV3ProjectsIdEnvironments(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The project ID */
   id: string,
@@ -2616,8 +2880,14 @@ export async function putV3PutV3ProjectsIdEnvironmentsEnvironmentId(
  */
 export async function getV3GetV3ProjectsIdEvents(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -2681,8 +2951,14 @@ export async function postV3PostV3ProjectsIdForkForkedFromId(
  */
 export async function getV3GetV3ProjectsIdHooks(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -2840,19 +3116,38 @@ export async function putV3PutV3ProjectsIdHooksHookId(
  */
 export async function getV3GetV3ProjectsIdIssues(
   query: {
-    /** Return opened, closed, or all issues */ state?:
-      | "opened"
-      | "closed"
-      | "all";
-    /** Return the issue having the given `iid` */ iid?: number;
-    /** Comma-separated list of label names */ labels?: string;
-    /** Return issues for a specific milestone */ milestone?: string;
-    /** Return issues ordered by `created_at` or `updated_at` fields. */ order_by?:
-      | "created_at"
-      | "updated_at";
-    /** Return issues sorted in `asc` or `desc` order. */ sort?: "asc" | "desc";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Return opened, closed, or all issues
+     */
+    state?: "opened" | "closed" | "all";
+    /**
+     * Return the issue having the given `iid`
+     */
+    iid?: number;
+    /**
+     * Comma-separated list of label names
+     */
+    labels?: string;
+    /**
+     * Return issues for a specific milestone
+     */
+    milestone?: string;
+    /**
+     * Return issues ordered by `created_at` or `updated_at` fields.
+     */
+    order_by?: "created_at" | "updated_at";
+    /**
+     * Return issues sorted in `asc` or `desc` order.
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -3053,8 +3348,14 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdAddSpentTime(
  */
 export async function getV3GetV3ProjectsIdIssuesIssueIdAwardEmoji(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -3186,8 +3487,14 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdMove(
  */
 export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** undefined */
   id: number,
@@ -3422,8 +3729,14 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdTodo(
  */
 export async function getV3GetV3ProjectsIdIssuesNoteableIdNotes(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -3728,7 +4041,12 @@ export async function postV3PostV3ProjectsIdKeysKeyIdEnable(
  * @request DELETE :/v3/projects/{id}/labels
  */
 export async function deleteV3DeleteV3ProjectsIdLabels(
-  query: { /** The name of the label to be deleted */ name: string },
+  query: {
+    /**
+     * The name of the label to be deleted
+     */
+    name: string;
+  },
   /** The ID of a project */
   id: string,
 ): Promise<Label> {
@@ -3880,9 +4198,18 @@ export async function postV3PostV3ProjectsIdLabelsSubscribableIdSubscription(
  */
 export async function getV3GetV3ProjectsIdMembers(
   query: {
-    /** A query string to search for members */ query?: string;
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * A query string to search for members
+     */
+    query?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The project ID */
   id: string,
@@ -4137,8 +4464,14 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdChanges(
  */
 export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdClosesIssues(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -4165,8 +4498,14 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdClosesIssues
  */
 export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdComments(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -4322,19 +4661,26 @@ export async function postV3PostV3ProjectsIdMergeRequestSubscribableIdSubscripti
  */
 export async function getV3GetV3ProjectsIdMergeRequests(
   query: {
-    /** Return opened, closed, merged, or all merge requests */ state?:
-      | "opened"
-      | "closed"
-      | "merged"
-      | "all";
-    /** Return merge requests ordered by `created_at` or `updated_at` fields. */ order_by?:
-      | "created_at"
-      | "updated_at";
-    /** Return merge requests sorted in `asc` or `desc` order. */ sort?:
-      | "asc"
-      | "desc";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Return opened, closed, merged, or all merge requests
+     */
+    state?: "opened" | "closed" | "merged" | "all";
+    /**
+     * Return merge requests ordered by `created_at` or `updated_at` fields.
+     */
+    order_by?: "created_at" | "updated_at";
+    /**
+     * Return merge requests sorted in `asc` or `desc` order.
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -4533,8 +4879,14 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAddSpentT
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoji(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -4690,8 +5042,14 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdChanges(
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdClosesIssues(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -4718,8 +5076,14 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdClosesIssue
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdComments(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -4831,8 +5195,14 @@ export async function putV3PutV3ProjectsIdMergeRequestsMergeRequestIdMerge(
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmoji(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** undefined */
   id: number,
@@ -5127,8 +5497,14 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdVersionsVer
  */
 export async function getV3GetV3ProjectsIdMergeRequestsNoteableIdNotes(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -5312,12 +5688,18 @@ export async function postV3PostV3ProjectsIdMergeRequestsSubscribableIdSubscript
  */
 export async function getV3GetV3ProjectsIdMilestones(
   query: {
-    /** Return "active", "closed", or "all" milestones */ state?:
-      | "active"
-      | "closed"
-      | "all";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Return "active", "closed", or "all" milestones
+     */
+    state?: "active" | "closed" | "all";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -5434,8 +5816,14 @@ export async function putV3PutV3ProjectsIdMilestonesMilestoneId(
  */
 export async function getV3GetV3ProjectsIdMilestonesMilestoneIdIssues(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -5553,12 +5941,18 @@ export async function postV3PostV3ProjectsIdPipeline(
  */
 export async function getV3GetV3ProjectsIdPipelines(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
-    /** Either running, branches, or tags */ scope?:
-      | "running"
-      | "branches"
-      | "tags";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+    /**
+     * Either running, branches, or tags
+     */
+    scope?: "running" | "branches" | "tags";
   },
   /** The project ID */
   id: string,
@@ -5646,8 +6040,14 @@ export async function postV3PostV3ProjectsIdPipelinesPipelineIdRetry(
  */
 export async function getV3GetV3ProjectsIdRepositoryArchive(
   query: {
-    /** The commit sha of the archive to be downloaded */ sha?: string;
-    /** The archive format */ format?: string;
+    /**
+     * The commit sha of the archive to be downloaded
+     */
+    sha?: string;
+    /**
+     * The archive format
+     */
+    format?: string;
   },
   /** The ID of a project */
   id: string,
@@ -5670,7 +6070,12 @@ export async function getV3GetV3ProjectsIdRepositoryArchive(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryBlobsSha(
-  query: { /** The path to the file to display */ filepath: string },
+  query: {
+    /**
+     * The path to the file to display
+     */
+    filepath: string;
+  },
   /** The ID of a project */
   id: string,
   /** The commit, branch name, or tag name */
@@ -5834,12 +6239,30 @@ export async function putV3PutV3ProjectsIdRepositoryBranchesBranchUnprotect(
  */
 export async function getV3GetV3ProjectsIdRepositoryCommits(
   query: {
-    /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string;
-    /** Only commits after or in this date will be returned */ since?: string;
-    /** Only commits before or in this date will be returned */ until?: string;
-    /** The page for pagination */ page?: number;
-    /** The number of results per page */ per_page?: number;
-    /** The file path */ path?: string;
+    /**
+     * The name of a repository branch or tag, if not given the default branch is used
+     */
+    ref_name?: string;
+    /**
+     * Only commits after or in this date will be returned
+     */
+    since?: string;
+    /**
+     * Only commits before or in this date will be returned
+     */
+    until?: string;
+    /**
+     * The page for pagination
+     */
+    page?: number;
+    /**
+     * The number of results per page
+     */
+    per_page?: number;
+    /**
+     * The file path
+     */
+    path?: string;
   },
   /** The ID of a project */
   id: string,
@@ -5916,7 +6339,12 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsSha(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsShaBlob(
-  query: { /** The path to the file to display */ filepath: string },
+  query: {
+    /**
+     * The path to the file to display
+     */
+    filepath: string;
+  },
   /** The ID of a project */
   id: string,
   /** The commit, branch name, or tag name */
@@ -5942,14 +6370,18 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaBlob(
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsShaBuilds(
   query: {
-    /** The scope of builds to show */ scope?:
-      | "pending"
-      | "running"
-      | "failed"
-      | "success"
-      | "canceled";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * The scope of builds to show
+     */
+    scope?: "pending" | "running" | "failed" | "success" | "canceled";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -6002,8 +6434,14 @@ export async function postV3PostV3ProjectsIdRepositoryCommitsShaCherryPick(
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsShaComments(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -6088,12 +6526,30 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaDiff(
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsShaStatuses(
   query: {
-    /** The ref */ ref?: string;
-    /** The stage */ stage?: string;
-    /** The name */ name?: string;
-    /** Show all statuses, default: false */ all?: string;
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * The ref
+     */
+    ref?: string;
+    /**
+     * The stage
+     */
+    stage?: string;
+    /**
+     * The name
+     */
+    name?: string;
+    /**
+     * Show all statuses, default: false
+     */
+    all?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -6119,8 +6575,14 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaStatuses(
  */
 export async function getV3GetV3ProjectsIdRepositoryCompare(
   query: {
-    /** The commit, branch name, or tag name to start comparison */ from: string;
-    /** The commit, branch name, or tag name to stop comparison */ to: string;
+    /**
+     * The commit, branch name, or tag name to start comparison
+     */
+    from: string;
+    /**
+     * The commit, branch name, or tag name to stop comparison
+     */
+    to: string;
   },
   /** The ID of a project */
   id: string,
@@ -6162,11 +6624,26 @@ export async function getV3GetV3ProjectsIdRepositoryContributors(
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryFiles(
   query: {
-    /** The path to new file. Ex. lib/class.rb */ file_path: string;
-    /** The name of branch */ branch_name: string;
-    /** Commit Message */ commit_message: string;
-    /** The email of the author */ author_email?: string;
-    /** The name of the author */ author_name?: string;
+    /**
+     * The path to new file. Ex. lib/class.rb
+     */
+    file_path: string;
+    /**
+     * The name of branch
+     */
+    branch_name: string;
+    /**
+     * Commit Message
+     */
+    commit_message: string;
+    /**
+     * The email of the author
+     */
+    author_email?: string;
+    /**
+     * The name of the author
+     */
+    author_name?: string;
   },
   /** The project ID */
   id: string,
@@ -6190,8 +6667,14 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryFiles(
  */
 export async function getV3GetV3ProjectsIdRepositoryFiles(
   query: {
-    /** The path to the file. Ex. lib/class.rb */ file_path: string;
-    /** The name of branch, tag, or commit */ ref: string;
+    /**
+     * The path to the file. Ex. lib/class.rb
+     */
+    file_path: string;
+    /**
+     * The name of branch, tag, or commit
+     */
+    ref: string;
   },
   /** The project ID */
   id: string,
@@ -6477,9 +6960,18 @@ export async function putV3PutV3ProjectsIdRepositoryTagsTagNameRelease(
  */
 export async function getV3GetV3ProjectsIdRepositoryTree(
   query: {
-    /** The name of a repository branch or tag, if not given the default branch is used */ ref_name?: string;
-    /** The path of the tree */ path?: string;
-    /** Used to get a recursive tree */ recursive?: boolean;
+    /**
+     * The name of a repository branch or tag, if not given the default branch is used
+     */
+    ref_name?: string;
+    /**
+     * The path of the tree
+     */
+    path?: string;
+    /**
+     * Used to get a recursive tree
+     */
+    recursive?: boolean;
   },
   /** The ID of a project */
   id: string,
@@ -6503,14 +6995,18 @@ export async function getV3GetV3ProjectsIdRepositoryTree(
  */
 export async function getV3GetV3ProjectsIdRunners(
   query: {
-    /** The scope of specific runners to show */ scope?:
-      | "active"
-      | "paused"
-      | "online"
-      | "specific"
-      | "shared";
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * The scope of specific runners to show
+     */
+    scope?: "active" | "paused" | "online" | "specific" | "shared";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -7648,8 +8144,14 @@ export async function deleteV3DeleteV3ProjectsIdShareGroupId(
  */
 export async function getV3GetV3ProjectsIdSnippets(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -7706,8 +8208,14 @@ export async function postV3PostV3ProjectsIdSnippets(
  */
 export async function getV3GetV3ProjectsIdSnippetsNoteableIdNotes(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -7922,8 +8430,14 @@ export async function putV3PutV3ProjectsIdSnippetsSnippetId(
  */
 export async function getV3GetV3ProjectsIdSnippetsSnippetIdAwardEmoji(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -8028,8 +8542,14 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdAwardEmojiAwardId(
  */
 export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** undefined */
   id: number,
@@ -8246,8 +8766,14 @@ export async function postV3PostV3ProjectsIdStatusesSha(
  */
 export async function getV3GetV3ProjectsIdTriggers(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -8374,9 +8900,18 @@ export async function postV3PostV3ProjectsIdUploads(
  */
 export async function getV3GetV3ProjectsIdUsers(
   query: {
-    /** Return list of users matching the search criteria */ search?: string;
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Return list of users matching the search criteria
+     */
+    search?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -8399,8 +8934,14 @@ export async function getV3GetV3ProjectsIdUsers(
  */
 export async function getV3GetV3ProjectsIdVariables(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of a project */
   id: string,
@@ -8519,12 +9060,18 @@ export async function putV3PutV3ProjectsIdVariablesKey(
  * @readonly
  */
 export async function getV3GetV3Runners(query: {
-  /** The scope of specific runners to show */ scope?:
-    | "active"
-    | "paused"
-    | "online";
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * The scope of specific runners to show
+   */
+  scope?: "active" | "paused" | "online";
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<Runner> {
   const result = await api.v3.getV3Runners({
     query: query,
@@ -8543,14 +9090,18 @@ export async function getV3GetV3Runners(query: {
  * @readonly
  */
 export async function getV3GetV3RunnersAll(query: {
-  /** The scope of specific runners to show */ scope?:
-    | "active"
-    | "paused"
-    | "online"
-    | "specific"
-    | "shared";
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * The scope of specific runners to show
+   */
+  scope?: "active" | "paused" | "online" | "specific" | "shared";
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<Runner> {
   const result = await api.v3.getV3RunnersAll({
     query: query,
@@ -8722,8 +9273,14 @@ export async function getV3GetV3SidekiqQueueMetrics(): Promise<hasuraSdk.JSONVal
  * @readonly
  */
 export async function getV3GetV3Snippets(query: {
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<PersonalSnippet> {
   const result = await api.v3.getV3Snippets({
     query: query,
@@ -8773,8 +9330,14 @@ export async function postV3PostV3Snippets(
  * @readonly
  */
 export async function getV3GetV3SnippetsPublic(query: {
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<PersonalSnippet> {
   const result = await api.v3.getV3SnippetsPublic({
     query: query,
@@ -8982,7 +9545,10 @@ export async function getV3GetV3TemplatesGitlabCiYmlsName(
  * @readonly
  */
 export async function getV3GetV3TemplatesLicenses(query: {
-  /** If passed, returns only popular licenses */ popular?: boolean;
+  /**
+   * If passed, returns only popular licenses
+   */
+  popular?: boolean;
 }): Promise<RepoLicense> {
   const result = await api.v3.getV3TemplatesLicenses({
     query: query,
@@ -9033,8 +9599,14 @@ export async function deleteV3DeleteV3Todos(): Promise<hasuraSdk.JSONValue> {
  * @readonly
  */
 export async function getV3GetV3Todos(query: {
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<Todo> {
   const result = await api.v3.getV3Todos({
     query: query,
@@ -9231,13 +9803,34 @@ export async function getV3GetV3UserKeysKeyId(
  * @readonly
  */
 export async function getV3GetV3Users(query: {
-  /** Get a single user with a specific username */ username?: string;
-  /** Search for a username */ search?: string;
-  /** Filters only active users */ active?: boolean;
-  /** Filters only external users */ external?: boolean;
-  /** Filters only blocked users */ blocked?: boolean;
-  /** Current page number */ page?: number;
-  /** Number of items per page */ per_page?: number;
+  /**
+   * Get a single user with a specific username
+   */
+  username?: string;
+  /**
+   * Search for a username
+   */
+  search?: string;
+  /**
+   * Filters only active users
+   */
+  active?: boolean;
+  /**
+   * Filters only external users
+   */
+  external?: boolean;
+  /**
+   * Filters only blocked users
+   */
+  blocked?: boolean;
+  /**
+   * Current page number
+   */
+  page?: number;
+  /**
+   * Number of items per page
+   */
+  per_page?: number;
 }): Promise<UserBasic> {
   const result = await api.v3.getV3Users({
     query: query,
@@ -9495,8 +10088,14 @@ export async function deleteV3DeleteV3UsersIdEmailsEmailId(
  */
 export async function getV3GetV3UsersIdEvents(
   query: {
-    /** Current page number */ page?: number;
-    /** Number of items per page */ per_page?: number;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
   },
   /** The ID of the user */
   id: number,

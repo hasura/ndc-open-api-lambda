@@ -51,8 +51,14 @@ const api = new Api({
  */
 export async function getGeographiesGeoIdMediaRecentList(
   query: {
-    /** Max number of media to return. */ count?: number;
-    /** Return media before this `min_id`. */ min_id?: string;
+    /**
+     * Max number of media to return.
+     */
+    count?: number;
+    /**
+     * Return media before this `min_id`.
+     */
+    min_id?: string;
   },
   /** The geography ID. */
   geoId: string,
@@ -74,16 +80,32 @@ export async function getGeographiesGeoIdMediaRecentList(
  * @readonly
  */
 export async function getLocationsSearchList(query: {
-  /** Default is 1000m (distance=1000), max distance is 5000. */ distance?: number;
-  /** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */ facebook_places_id?: string;
-  /** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use
+  /**
+   * Default is 1000m (distance=1000), max distance is 5000.
+   */
+  distance?: number;
+  /**
+   * Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required.
+   */
+  facebook_places_id?: string;
+  /**
+* Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use
 `lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.
- */ foursquare_id?: string;
-  /** Latitude of the center search coordinate. If used, `lng` is required. */ lat?: number;
-  /** Longitude of the center search coordinate. If used, `lat` is required. */ lng?: number;
-  /** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use
+ */
+  foursquare_id?: string;
+  /**
+   * Latitude of the center search coordinate. If used, `lng` is required.
+   */
+  lat?: number;
+  /**
+   * Longitude of the center search coordinate. If used, `lat` is required.
+   */
+  lng?: number;
+  /**
+* Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use
 `lat` and `lng`.
- */ foursquare_v2_id?: string;
+ */
+  foursquare_v2_id?: string;
 }): Promise<LocationSearchResponse> {
   const result = await api.locations.searchList({
     query: query,
@@ -122,10 +144,22 @@ export async function getLocationsLocationIdList(
  */
 export async function getLocationsLocationIdMediaRecentList(
   query: {
-    /** Return media after this UNIX timestamp. */ min_timestamp?: number;
-    /** Return media before this UNIX timestamp. */ max_timestamp?: number;
-    /** Return media before this `min_id`. */ min_id?: string;
-    /** Return media after this `max_id`. */ max_id?: string;
+    /**
+     * Return media after this UNIX timestamp.
+     */
+    min_timestamp?: number;
+    /**
+     * Return media before this UNIX timestamp.
+     */
+    max_timestamp?: number;
+    /**
+     * Return media before this `min_id`.
+     */
+    min_id?: string;
+    /**
+     * Return media after this `max_id`.
+     */
+    max_id?: string;
   },
   /** The location ID. */
   locationId: string,
@@ -163,11 +197,26 @@ export async function getMediaPopularList(): Promise<MediaSearchResponse> {
  * @readonly
  */
 export async function getMediaSearchList(query: {
-  /** Latitude of the center search coordinate. If used, `lng` is required. */ lat: number;
-  /** Longitude of the center search coordinate. If used, `lat` is required. */ lng: number;
-  /** A unix timestamp. All media returned will be taken later than this timestamp. */ min_timestamp?: number;
-  /** A unix timestamp. All media returned will be taken earlier than this timestamp. */ max_timestamp?: number;
-  /** Default is 1km (distance=1000), max distance is 5km. */ distance?: number;
+  /**
+   * Latitude of the center search coordinate. If used, `lng` is required.
+   */
+  lat: number;
+  /**
+   * Longitude of the center search coordinate. If used, `lat` is required.
+   */
+  lng: number;
+  /**
+   * A unix timestamp. All media returned will be taken later than this timestamp.
+   */
+  min_timestamp?: number;
+  /**
+   * A unix timestamp. All media returned will be taken earlier than this timestamp.
+   */
+  max_timestamp?: number;
+  /**
+   * Default is 1km (distance=1000), max distance is 5km.
+   */
+  distance?: number;
 }): Promise<MediaSearchResponse> {
   const result = await api.media.searchList({
     query: query,
@@ -244,7 +293,10 @@ export async function getMediaMediaIdCommentsList(
  */
 export async function postMediaMediaIdCommentsCreate(
   query: {
-    /** Text to post as a comment on the media object as specified in `media-id`. */ text: string;
+    /**
+     * Text to post as a comment on the media object as specified in `media-id`.
+     */
+    text: string;
   },
   /** The ID of the media resource. */
   mediaId: string,
@@ -342,7 +394,10 @@ export async function postMediaMediaIdLikesCreate(
  * @readonly
  */
 export async function getTagsSearchList(query: {
-  /** A valid tag name without a leading \#. (eg. snowy, nofilter) */ q: string;
+  /**
+   * A valid tag name without a leading \#. (eg. snowy, nofilter)
+   */
+  q: string;
 }): Promise<TagSearchResponse> {
   const result = await api.tags.searchList({
     query: query,
@@ -381,9 +436,18 @@ export async function getTagsTagNameList(
  */
 export async function getTagsTagNameMediaRecentList(
   query: {
-    /** Count of tagged media to return. */ count?: number;
-    /** Return media before this `min_tag_id`. */ min_tag_id?: string;
-    /** Return media after this `max_tag_id`. */ max_tag_id?: string;
+    /**
+     * Count of tagged media to return.
+     */
+    count?: number;
+    /**
+     * Return media before this `min_tag_id`.
+     */
+    min_tag_id?: string;
+    /**
+     * Return media after this `max_tag_id`.
+     */
+    max_tag_id?: string;
   },
   /** The tag name. */
   tagName: string,
@@ -405,8 +469,14 @@ export async function getTagsTagNameMediaRecentList(
  * @readonly
  */
 export async function getUsersSearchList(query: {
-  /** A query string. */ q: string;
-  /** Number of users to return. */ count?: number;
+  /**
+   * A query string.
+   */
+  q: string;
+  /**
+   * Number of users to return.
+   */
+  count?: number;
 }): Promise<UsersInfoResponse> {
   const result = await api.users.searchList({
     query: query,
@@ -425,9 +495,18 @@ export async function getUsersSearchList(query: {
  * @readonly
  */
 export async function getUsersSelfFeedList(query: {
-  /** Count of media to return. */ count?: number;
-  /** Return media later than this `min_id`. */ min_id?: string;
-  /** Return media earlier than this `max_id`. */ max_id?: string;
+  /**
+   * Count of media to return.
+   */
+  count?: number;
+  /**
+   * Return media later than this `min_id`.
+   */
+  min_id?: string;
+  /**
+   * Return media earlier than this `max_id`.
+   */
+  max_id?: string;
 }): Promise<MediaListResponse> {
   const result = await api.users.selfFeedList({
     query: query,
@@ -446,8 +525,14 @@ export async function getUsersSelfFeedList(query: {
  * @readonly
  */
 export async function getUsersSelfMediaLikedList(query: {
-  /** Count of media to return. */ count?: number;
-  /** Return media liked before this id. */ max_like_id?: string;
+  /**
+   * Count of media to return.
+   */
+  count?: number;
+  /**
+   * Return media liked before this id.
+   */
+  max_like_id?: string;
 }): Promise<MediaListResponse> {
   const result = await api.users.selfMediaLikedList({
     query: query,
@@ -538,11 +623,26 @@ export async function getUsersUserIdFollowsList(
  */
 export async function getUsersUserIdMediaRecentList(
   query: {
-    /** Count of media to return. */ count?: number;
-    /** Return media before this UNIX timestamp. */ max_timestamp?: number;
-    /** Return media after this UNIX timestamp. */ min_timestamp?: number;
-    /** Return media later than this `min_id`. */ min_id?: string;
-    /** Return media earlier than this `max_id`. */ max_id?: string;
+    /**
+     * Count of media to return.
+     */
+    count?: number;
+    /**
+     * Return media before this UNIX timestamp.
+     */
+    max_timestamp?: number;
+    /**
+     * Return media after this UNIX timestamp.
+     */
+    min_timestamp?: number;
+    /**
+     * Return media later than this `min_id`.
+     */
+    min_id?: string;
+    /**
+     * Return media earlier than this `max_id`.
+     */
+    max_id?: string;
   },
   /** The ID of a user to get recent media of, or **self** to retrieve media of authenticated user. */
   userId: string,
@@ -585,13 +685,10 @@ export async function getUsersUserIdRelationshipList(
  */
 export async function postUsersUserIdRelationshipCreate(
   query: {
-    /** Type of action to apply for relationship with the user. */ action:
-      | "follow"
-      | "unfollow"
-      | "block"
-      | "unblock"
-      | "approve"
-      | "ignore";
+    /**
+     * Type of action to apply for relationship with the user.
+     */
+    action: "follow" | "unfollow" | "block" | "unblock" | "approve" | "ignore";
   },
   /** The ID of the target user. */
   userId: string,

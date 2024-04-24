@@ -102,7 +102,10 @@ export async function postBlogBlogCreate(
  * @request PATCH :/blog/dislike
  */
 export async function patchBlogDislikePartialUpdate(query: {
-  /** blog to dislike */ blogId: string;
+  /**
+   * blog to dislike
+   */
+  blogId: string;
 }): Promise<MainBlog> {
   const result = await api.blog.dislikePartialUpdate({
     query: query,
@@ -119,7 +122,10 @@ export async function patchBlogDislikePartialUpdate(query: {
  * @request PATCH :/blog/like
  */
 export async function patchBlogLikePartialUpdate(query: {
-  /** blog to like */ blogId: string;
+  /**
+   * blog to like
+   */
+  blogId: string;
 }): Promise<MainBlog> {
   const result = await api.blog.likePartialUpdate({
     query: query,
@@ -155,9 +161,18 @@ export async function deleteBlogBlogDelete(
  */
 export async function patchBlogBlogPartialUpdate(
   query: {
-    /** title to update */ title?: string;
-    /** text to update */ text?: string;
-    /** summary to update */ summary?: string;
+    /**
+     * title to update
+     */
+    title?: string;
+    /**
+     * text to update
+     */
+    text?: string;
+    /**
+     * summary to update
+     */
+    summary?: string;
   },
   /** blog to update */
   blogId: string,
@@ -179,7 +194,10 @@ export async function patchBlogBlogPartialUpdate(
  * @readonly
  */
 export async function getBlogsBlogsList(query: {
-  /** id of the author */ authorId: string;
+  /**
+   * id of the author
+   */
+  authorId: string;
 }): Promise<MainBlog[]> {
   const result = await api.blogs.blogsList({
     query: query,

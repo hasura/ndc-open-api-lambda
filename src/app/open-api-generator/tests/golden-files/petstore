@@ -60,10 +60,10 @@ export async function putPetUpdatePet(
  * @readonly
  */
 export async function getPetFindPetsByStatus(query: {
-  /** Status values that need to be considered for filter */ status?:
-    | "available"
-    | "pending"
-    | "sold";
+  /**
+   * Status values that need to be considered for filter
+   */
+  status?: "available" | "pending" | "sold";
 }): Promise<Pet[]> {
   const result = await api.pet.findPetsByStatus({
     query: query,
@@ -82,7 +82,10 @@ export async function getPetFindPetsByStatus(query: {
  * @readonly
  */
 export async function getPetFindPetsByTags(query: {
-  /** Tags to filter by */ tags?: string[];
+  /**
+   * Tags to filter by
+   */
+  tags?: string[];
 }): Promise<Pet[]> {
   const result = await api.pet.findPetsByTags({
     query: query,
@@ -121,8 +124,14 @@ export async function getPetGetPetById(
  */
 export async function postPetUpdatePetWithForm(
   query: {
-    /** Name of pet that needs to be updated */ name?: string;
-    /** Status of pet that needs to be updated */ status?: string;
+    /**
+     * Name of pet that needs to be updated
+     */
+    name?: string;
+    /**
+     * Status of pet that needs to be updated
+     */
+    status?: string;
   },
   /** ID of pet that needs to be updated */
   petId: number,
@@ -162,7 +171,12 @@ export async function deletePetDeletePet(
  * @request POST :/pet/{petId}/uploadImage
  */
 export async function postPetUploadFile(
-  query: { /** Additional Metadata */ additionalMetadata?: string },
+  query: {
+    /**
+     * Additional Metadata
+     */
+    additionalMetadata?: string;
+  },
   /** ID of pet to update */
   petId: number,
   /** Request body */
@@ -296,8 +310,14 @@ export async function postUserCreateUsersWithListInput(
  * @readonly
  */
 export async function getUserLoginUser(query: {
-  /** The user name for login */ username?: string;
-  /** The password for login in clear text */ password?: string;
+  /**
+   * The user name for login
+   */
+  username?: string;
+  /**
+   * The password for login in clear text
+   */
+  password?: string;
 }): Promise<string> {
   const result = await api.user.loginUser({
     query: query,
