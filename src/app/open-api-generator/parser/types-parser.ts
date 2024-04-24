@@ -65,13 +65,6 @@ export type SpecificArgs = {
   query?: SpecificArgsObject;
 };
 
-// export type ParsedType = {
-//   requiresRelaxedTypeAnnotation: boolean,
-//   specificArgs: SpecificArgs,
-//   functionArgsRendered: string,
-//   functionArgsMappingRendered: string,
-// }
-
 export type ParsedTypes = {
   apiMethod: string;
   apiRoute: string;
@@ -160,27 +153,11 @@ export type ParsedTypes = {
   },
 ]
  */
-export function routeParamsParser(routeParams: any) {
-  /* routeParams */
-}
 
 /**
- *
  * @param routeData the route data the is passed in the `onCreateRoute()` hook of `generateApi()`
  */
 export function parse(routeData: any): ParsedTypes {
-  // console.log(`\n\nAPI: ${routeData.raw.method} ${routeData.raw.route}`);
-
-  // const specificArgs = parseSpecificArgs(routeData.specificArgs as SpecificArgs)
-
-  // console.log(`\n\n\nRouteParams ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.routeParams)}`);
-  // console.log(`Specific args ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.specificArgs)}`);
-
-  // if (`${routeData.raw.method} ${routeData.raw.route}` === "get /v3/projects/search/{query}") {
-  // console.log(`queryObjectSchema ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData.queryObjectSchema)}`,);
-  //   console.log(`routeData ${routeData.raw.method} ${routeData.raw.route}: ${CircularJSON.stringify(routeData)}`,);
-  // }
-
   const queryParams = parseQueryParams(
     routeData.queryObjectSchema,
     routeData?.specificArgs?.query as SpecificArgsObject,
@@ -191,22 +168,6 @@ export function parse(routeData: any): ParsedTypes {
     apiRoute: routeData.raw.route,
     queryParams: queryParams,
   };
-
-  // const templateDir = path.resolve(getTemplatesDirectory(), "./functions-modular")
-  // const templateFile = "function-args.ejs";
-  // const eta = new Eta({ views: templateDir});
-  // const specificArgObjectArr = [specificArgs.body, specificArgs.pathParams];
-  // console.log("specific args object arr", specificArgObjectArr)
-  // let functionArgsRendered = eta.render(templateFile, { specificArgsObjectArr: specificArgObjectArr });
-
-  // console.log('functionsArgsRendered: ', functionArgsRendered);
-
-  // return {
-  //   specificArgs: specificArgs,
-  //   requiresRelaxedTypeAnnotation: false,
-  //   functionArgsRendered: functionArgsRendered,
-  //   functionArgsMappingRendered: '',
-  // };
 }
 
 type StateParams = {
@@ -218,10 +179,8 @@ export function parseQueryParams(
   querySpecificArgs: SpecificArgsObject | undefined,
 ): Schema | undefined {
   if (!queryParams || !queryParams.$parsed) {
-    // console.log("no query params");
     return undefined; // no query params
   }
-  // console.log('queryParams.$parsed: ', queryParams.$parsed);
 
   const stateParams: StateParams = {
     requireRelaxedTypeAnnotation: false,
@@ -245,8 +204,6 @@ export function parseQueryParams(
   );
   querySchema._requiresRelaxedTypeAnnotation =
     stateParams.requireRelaxedTypeAnnotation;
-  // console.log(querySchema._rendered);
-  // console.log('querySchemaJson: ', CircularJSON.stringify(querySchema));
   return querySchema;
 }
 
@@ -403,16 +360,3 @@ function performVariableNameCorrection(name: string): string {
     return name;
   }
 }
-
-export function parseSpecificArgs(specificArgs: SpecificArgs): SpecificArgs {
-  if (specificArgs.body) {
-    specificArgs.body.tsArgName = specificArgs.body.name;
-  }
-  if (specificArgs.pathParams) {
-    // specificArgs.pathParams.tsArgName = 'def'
-    // parse path arguments
-  }
-  return specificArgs;
-}
-
-function renderFunctionArgs(specificArgs: SpecificArgs) {}
