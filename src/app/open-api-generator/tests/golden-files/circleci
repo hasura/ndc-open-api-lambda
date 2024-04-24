@@ -28,12 +28,12 @@ import {
   Tag,
   Tests,
   Api,
-} from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+} from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "http://localhost:13191",
-})
+});
 
 /**
  * undefined
@@ -41,11 +41,11 @@ const api = new Api({
  * @readonly
  */
 export async function getMeGetMe(): Promise<User> {
-  const result = await api.me.getMe({})
+  const result = await api.me.getMe({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -56,36 +56,37 @@ export async function getMeGetMe(): Promise<User> {
  * @readonly
  */
 export async function getProjectProjectDetail(
+  query: {
+    /**
+     * The number of builds to return. Maximum 100, defaults to 30.
+     */
+    limit?: number;
+    /**
+     * The API returns builds starting from this offset, defaults to 0.
+     */
+    offset?: number;
+    /**
+* Restricts which builds are returned.
+Set to "completed", "successful", "failed", "running", or defaults to no filter.
+ */
+    filter?: "completed" | "successful" | "failed" | "running";
+  },
   /** XXXXXXXXX
    */
   username: string,
   /** XXXXXXXXX
    */
   project: string,
-  /** The number of builds to return. Maximum 100, defaults to 30.
-   */
-  limit?: number,
-  /** The API returns builds starting from this offset, defaults to 0.
-   */
-  offset?: number,
-  /** Restricts which builds are returned.
-Set to "completed", "successful", "failed", "running", or defaults to no filter.
- */
-  filter?: "completed" | "successful" | "failed" | "running",
 ): Promise<Builds> {
   const result = await api.project.projectDetail({
-    query: {
-      limit: limit,
-      offset: offset,
-      filter: filter,
-    },
+    query: query,
     username: username,
     project: project,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -103,27 +104,27 @@ export async function postProjectProjectCreate(
   /** Request body */
   data: {
     /** Additional environment variables to inject into the build environment. A map of names to values. */
-    build_parameters?: BuildParameters
+    build_parameters?: BuildParameters;
     /** The number of containers to use to run the build. Default is null and the project default is used. */
-    parallel?: Parallel
+    parallel?: Parallel;
     /**
      * The specific revision to build.
      * Default is null and the head of the branch is used. Cannot be used with tag parameter.
      */
-    revision?: Revision
+    revision?: Revision;
     /** The tag to build. Default is null. Cannot be used with revision parameter. */
-    tag?: Tag
+    tag?: Tag;
   },
 ): Promise<BuildSummary> {
   const result = await api.project.projectCreate({
     username: username,
     project: project,
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -139,16 +140,16 @@ export async function deleteProjectBuildCacheDelete(
    */
   project: string,
 ): Promise<{
-  status?: string
+  status?: string;
 }> {
   const result = await api.project.buildCacheDelete({
     username: username,
     project: project,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -168,11 +169,11 @@ export async function getProjectCheckoutKeyDetail(
   const result = await api.project.checkoutKeyDetail({
     username: username,
     project: project,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -195,11 +196,11 @@ export async function postProjectCheckoutKeyCreate(
     username: username,
     project: project,
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -218,17 +219,17 @@ export async function deleteProjectCheckoutKeyDelete(
    */
   fingerprint: string,
 ): Promise<{
-  message?: "OK"
+  message?: "OK";
 }> {
   const result = await api.project.checkoutKeyDelete({
     username: username,
     project: project,
     fingerprint: fingerprint,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -253,11 +254,11 @@ export async function getProjectCheckoutKeyDetail2(
     username: username,
     project: project,
     fingerprint: fingerprint,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -277,11 +278,11 @@ export async function getProjectEnvvarDetail(
   const result = await api.project.envvarDetail({
     username: username,
     project: project,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -300,11 +301,11 @@ export async function postProjectEnvvarCreate(
   const result = await api.project.envvarCreate({
     username: username,
     project: project,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -323,17 +324,17 @@ export async function deleteProjectEnvvarDelete(
    */
   name: string,
 ): Promise<{
-  message?: "OK"
+  message?: "OK";
 }> {
   const result = await api.project.envvarDelete({
     username: username,
     project: project,
     name: name,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -357,11 +358,11 @@ export async function getProjectEnvvarDetail2(
     username: username,
     project: project,
     name: name,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -379,19 +380,19 @@ export async function postProjectSshKeyCreate(
   project: string,
   /** Request body */
   data: {
-    hostname?: string
-    private_key?: string
+    hostname?: string;
+    private_key?: string;
   },
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.project.sshKeyCreate({
     username: username,
     project: project,
     data: data,
-  })
+  });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -412,14 +413,14 @@ export async function postProjectTreeCreate(
   /** Request body */
   data: {
     /** Additional environment variables to inject into the build environment. A map of names to values. */
-    build_parameters?: BuildParameters
+    build_parameters?: BuildParameters;
     /** The number of containers to use to run the build. Default is null and the project default is used. */
-    parallel?: Parallel
+    parallel?: Parallel;
     /**
      * The specific revision to build.
      * Default is null and the head of the branch is used. Cannot be used with tag parameter.
      */
-    revision?: Revision
+    revision?: Revision;
   },
 ): Promise<Build> {
   const result = await api.project.treeCreate({
@@ -427,11 +428,11 @@ export async function postProjectTreeCreate(
     project: project,
     branch: branch,
     data: data,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -455,11 +456,11 @@ export async function getProjectProjectDetail2(
     username: username,
     project: project,
     buildNum: buildNum,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -483,11 +484,11 @@ export async function getProjectArtifactsDetail(
     username: username,
     project: project,
     buildNum: buildNum,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -510,11 +511,11 @@ export async function postProjectCancelCreate(
     username: username,
     project: project,
     buildNum: buildNum,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -537,11 +538,11 @@ export async function postProjectRetryCreate(
     username: username,
     project: project,
     buildNum: buildNum,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -565,11 +566,11 @@ export async function getProjectTestsDetail(
     username: username,
     project: project,
     buildNum: buildNum,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -579,11 +580,11 @@ export async function getProjectTestsDetail(
  * @readonly
  */
 export async function getProjectsProjectsList(): Promise<Projects> {
-  const result = await api.projects.projectsList({})
+  const result = await api.projects.projectsList({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -592,24 +593,23 @@ export async function getProjectsProjectsList(): Promise<Projects> {
  * @request GET :/recent-builds
  * @readonly
  */
-export async function getRecentBuildsRecentBuildsList(
-  /** The number of builds to return. Maximum 100, defaults to 30.
+export async function getRecentBuildsRecentBuildsList(query: {
+  /**
+   * The number of builds to return. Maximum 100, defaults to 30.
    */
-  limit?: number,
-  /** The API returns builds starting from this offset, defaults to 0.
+  limit?: number;
+  /**
+   * The API returns builds starting from this offset, defaults to 0.
    */
-  offset?: number,
-): Promise<Builds> {
+  offset?: number;
+}): Promise<Builds> {
   const result = await api.recentBuilds.recentBuildsList({
-    query: {
-      limit: limit,
-      offset: offset,
-    },
-  })
+    query: query,
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -619,10 +619,10 @@ export async function getRecentBuildsRecentBuildsList(
  * @allowrelaxedtypes
  */
 export async function postUserHerokuKeyCreate(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.user.herokuKeyCreate({})
+  const result = await api.user.herokuKeyCreate({});
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data)
+    return new hasuraSdk.JSONValue(result.data);
   } else {
-    throw result.error
+    throw result.error;
   }
 }

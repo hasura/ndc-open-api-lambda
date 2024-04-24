@@ -1,9 +1,9 @@
-import { MainAuthor, MainBlog, MainBlogRequestDto, Api } from "./api"
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
+import { MainAuthor, MainBlog, MainBlogRequestDto, Api } from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "http://localhost:9191",
-})
+});
 
 /**
  * create author
@@ -15,11 +15,11 @@ export async function postAuthorAuthorCreate(
 ): Promise<MainAuthor> {
   const result = await api.author.authorCreate({
     author: author,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -33,11 +33,11 @@ export async function deleteAuthorAuthorDelete(
 ): Promise<MainAuthor> {
   const result = await api.author.authorDelete({
     authorId: authorId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -47,11 +47,11 @@ export async function deleteAuthorAuthorDelete(
  * @readonly
  */
 export async function getAuthorsAuthorsList(): Promise<MainAuthor[]> {
-  const result = await api.authors.authorsList({})
+  const result = await api.authors.authorsList({});
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -65,11 +65,11 @@ export async function putBlogBlogUpdate(
 ): Promise<MainBlog> {
   const result = await api.blog.blogUpdate({
     blog: blog,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -83,11 +83,11 @@ export async function postBlogBlogCreate(
 ): Promise<MainBlog> {
   const result = await api.blog.blogCreate({
     blog: blog,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -95,19 +95,19 @@ export async function postBlogBlogCreate(
  * dislike a blog post
  * @request PATCH :/blog/dislike
  */
-export async function patchBlogDislikePartialUpdate(
-  /** blog to dislike */
-  blogId: string,
-): Promise<MainBlog> {
+export async function patchBlogDislikePartialUpdate(query: {
+  /**
+   * blog to dislike
+   */
+  blogId: string;
+}): Promise<MainBlog> {
   const result = await api.blog.dislikePartialUpdate({
-    query: {
-      blogId: blogId,
-    },
-  })
+    query: query,
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -115,19 +115,19 @@ export async function patchBlogDislikePartialUpdate(
  * like a blog post
  * @request PATCH :/blog/like
  */
-export async function patchBlogLikePartialUpdate(
-  /** blog to like */
-  blogId: string,
-): Promise<MainBlog> {
+export async function patchBlogLikePartialUpdate(query: {
+  /**
+   * blog to like
+   */
+  blogId: string;
+}): Promise<MainBlog> {
   const result = await api.blog.likePartialUpdate({
-    query: {
-      blogId: blogId,
-    },
-  })
+    query: query,
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -141,11 +141,11 @@ export async function deleteBlogBlogDelete(
 ): Promise<MainBlog> {
   const result = await api.blog.blogDelete({
     blogId: blogId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -154,27 +154,31 @@ export async function deleteBlogBlogDelete(
  * @request PATCH :/blog/{blogId}
  */
 export async function patchBlogBlogPartialUpdate(
+  query: {
+    /**
+     * title to update
+     */
+    title?: string;
+    /**
+     * text to update
+     */
+    text?: string;
+    /**
+     * summary to update
+     */
+    summary?: string;
+  },
   /** blog to update */
   blogId: string,
-  /** title to update */
-  title?: string,
-  /** text to update */
-  text?: string,
-  /** summary to update */
-  summary?: string,
 ): Promise<MainBlog> {
   const result = await api.blog.blogPartialUpdate({
-    query: {
-      title: title,
-      text: text,
-      summary: summary,
-    },
+    query: query,
     blogId: blogId,
-  })
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }
 
@@ -183,18 +187,18 @@ export async function patchBlogBlogPartialUpdate(
  * @request GET :/blogs/
  * @readonly
  */
-export async function getBlogsBlogsList(
-  /** id of the author */
-  authorId: string,
-): Promise<MainBlog[]> {
+export async function getBlogsBlogsList(query: {
+  /**
+   * id of the author
+   */
+  authorId: string;
+}): Promise<MainBlog[]> {
   const result = await api.blogs.blogsList({
-    query: {
-      authorId: authorId,
-    },
-  })
+    query: query,
+  });
   if (result.data) {
-    return result.data
+    return result.data;
   } else {
-    throw result.error
+    throw result.error;
   }
 }

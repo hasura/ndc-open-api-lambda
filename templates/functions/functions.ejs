@@ -10,9 +10,9 @@ const hasParams = (route) => {
 
 const getParameterAsFunctionParam = (param) => { // parameter accepted by the funciton in function.ts
   if (param.required) {
-    return `${param.name}: ${param.tsType},`
+    return `${param.name}: ${param.tsType} ,`
   } else {
-    return `${param.name}?: ${param.tsType},`
+    return `${param.name}?: ${param.tsType} ,`
   }
 }
 
@@ -48,17 +48,21 @@ const api = new Api({
  * @readonly
 <% } %>
  */
-
-<%- if (!hasParams(req)) { -%>
-export async function <%~ req.functionName _%> ():
-<%_ } else { -%>
-export async function <%~ req.functionName _%> (
-      <%_ for (parameter of req.allParams) { -%>
-
-  /** <%~parameter.description %> */
-  <%~ getParameterAsFunctionParam(parameter) %>
+  <% if (!hasParams(req)) { %>
+    export async function <%~ req.functionName %> ():
+  <% } else { %>
+    export async function <%~ req.functionName %> (
+      <% if (req.parsedQueryParams) { %>
+        <%~ req.parsedQueryParams._rendered %>
       <% } %>
 
+      <% for (parameter of req.allParams) { %>
+        <% if (parameter.paramType !== 'query') { %>
+          /** <%~parameter.description %> */
+          <%~ getParameterAsFunctionParam(parameter) %>
+          
+        <% } %>
+      <% } %>
 ):
 <%- } -%>
  Promise
@@ -73,12 +77,8 @@ export async function <%~ req.functionName _%> (
   const result = await api.<%~ req.namespace %>.<%~ req.apiFunction %>({});
 <% } else { %>
   const result = await api.<%~ req.namespace %>.<%~ req.apiFunction %>({
-<% if (req.queryParams && req.queryParams.length > 0) { %>
-    query: {
-    <%- for (const q of req.queryParams) { %>
-  <%~q.name%>: <%~q.name%>,
-    <% } _%>
-    },
+<% if (req.parsedQueryParams) { %>
+  <%~req.parsedQueryParams.name%>: <%~req.parsedQueryParams.name%>,
 <% } %>
 
 <%- if (req.allParams && req.allParams.length > 0) { %>

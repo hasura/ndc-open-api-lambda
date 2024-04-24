@@ -1,0 +1,12 @@
+<% const { specificArgsObjectArr } = it; _%>
+
+<% for (let specificArgObject of specificArgsObjectArr) { %>
+  <% if (!specificArgObject) { continue } _%>
+
+  <% if (specificArgObject.optional) { _%>
+    <%~ specificArgObject.name %>?: 
+  <%_ } else { _%>
+    <%~ specificArgObject.name %>: 
+  <%_ } _%>
+  <%~ specificArgObject.type %>,
+<% } %>

@@ -72,6 +72,13 @@ const tests: {
     goldenFile: "./golden-files/circleci",
     baseUrl: "http://localhost:13191",
   },
+  {
+    name: "GenerateCode_aws-autoscaling",
+    oasFile: "./oas-docs/aws-autoscaling.json",
+    goldenFile: "./golden-files/aws-autoscaling",
+    baseUrl: "http://localhost:13191",
+  },
+
   // {
   //   name: "GenerateCode_LaunchDarklyApi",
   //   oasFile: "./oas-docs/launch-darkly.json",
