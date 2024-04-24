@@ -58,6 +58,11 @@ const tests: {
     oasFile: "../tests/oas-docs/adobe.json",
     goldenFile: "./testdata/golden-files/adobe.json",
   },
+  {
+    name: "GenerateParams_AwsAutoscaling",
+    oasFile: "../tests/oas-docs/aws-autoscaling.json",
+    goldenFile: "./testdata/golden-files/aws-autoscaling.json",
+  },
 ];
 
 describe("GenerateQueryParams", async () => {

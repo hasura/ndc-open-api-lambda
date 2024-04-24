@@ -33,7 +33,7 @@ export type Schema = {
   description?: string;
   name?: string;
   in?: string;
-  required?: boolean;
+  required?: boolean | string[];
   schema?: Schema;
   $parsed?: Schema;
   enum?: number[] | string[] | any[];
@@ -41,12 +41,14 @@ export type Schema = {
   properties?: Record<string, Schema>;
   content?: any[];
   items?: Schema;
+  allOf?: Schema[];
 
   /**
    * variables that begin with `_` are not a part of JSON, but calculated by this package
    */
   _rendered?: string; // contains the rendered string for this schema node
   _requiresRelaxedTypeAnnotation?: boolean;
+  _required?: boolean;
 };
 
 export type SpecificArgsObject = {
@@ -236,7 +238,11 @@ export function parseQueryParams(
     // `required` requires a temp fix of being set to true because of how variables are rendered by function.ejs
     required: true, // ACTUAL VALUE -> required: !(querySpecificArgs?.optional ? querySpecificArgs.optional : false),
   };
-  querySchema._rendered = renderQueryParams(querySchema, stateParams);
+  querySchema._rendered = renderQueryParams(
+    queryParamName,
+    querySchema,
+    stateParams,
+  );
   querySchema._requiresRelaxedTypeAnnotation =
     stateParams.requireRelaxedTypeAnnotation;
   // console.log(querySchema._rendered);
@@ -245,6 +251,7 @@ export function parseQueryParams(
 }
 
 function renderQueryParams(
+  name: string, // the json key of this json value; also the name of the vairable
   schema: Schema | undefined,
   stateParams: StateParams,
 ): string {
@@ -261,26 +268,48 @@ function renderQueryParams(
 
     schema._rendered = renderSchema(
       schema.description,
-      schema.required,
+      schema._required === true ? schema._required : schema.required,
       schema.name,
       `${type}`,
+    );
+    return schema._rendered;
+  } else if (schema.allOf) {
+    schema._rendered = renderSchema(
+      schema.$parsed?.description,
+      schema._required === true
+        ? schema._required
+        : schema.required === true || schema.$parsed?.required === true,
+      name,
+      `${schema.$parsed?.content}`,
     );
     return schema._rendered;
   } else if (schema.type === "object") {
     // parse object
     let result = "";
+
     for (const property in schema.properties) {
-      result = `${result}  ${renderQueryParams(schema.properties[property], stateParams)}`;
+      if (
+        Array.isArray(schema.required) &&
+        schema.required.indexOf(property) > -1
+      ) {
+        /**
+         * if the `required` field in this schema is an array, then that array contains all the properties that are required
+         * therefore, mark the `_required` field of that property as `true`
+         * *DO NOT* mark the `required` field as `true`, because this property might be an object that also has its `required` set as an array
+         */
+        schema.properties[property]!._required = true;
+      }
+      result = `${result}  ${renderQueryParams(property, schema.properties[property], stateParams)}`;
     }
     schema._rendered = renderSchema(
       schema.description,
-      schema.required,
-      `${schema.name}`,
+      schema._required === true ? schema._required : schema.required,
+      name,
       `{ ${result} }`,
     );
     return schema._rendered;
   } else if (schema.type === "array") {
-    let nestedType = renderQueryParams(schema.items, stateParams); // this type has a trailing comma
+    let nestedType = renderQueryParams(name, schema.items, stateParams); // this type has a trailing comma
     let type: string;
     if (schema.items?.enum) {
       // handle special case, that the item is an array of enums
@@ -292,7 +321,7 @@ function renderQueryParams(
 
     schema._rendered = renderSchema(
       schema.description,
-      schema.required,
+      schema._required === true ? schema._required : schema.required,
       schema.name,
       type,
     );
@@ -306,7 +335,7 @@ function renderQueryParams(
     stateParams.requireRelaxedTypeAnnotation = true;
     schema._rendered = renderSchema(
       schema.description,
-      schema.required,
+      schema._required === true ? schema._required : schema.required,
       schema.name,
       `${type}`,
     );
@@ -326,7 +355,7 @@ function renderQueryParams(
     }
     schema._rendered = renderSchema(
       schema.description,
-      schema.required,
+      schema._required === true ? schema._required : schema.required,
       schema.name,
       `${type}`,
     );
@@ -336,7 +365,7 @@ function renderQueryParams(
 
 function renderSchema(
   description: string | undefined,
-  required: boolean | undefined,
+  required: boolean | string[] | undefined,
   name: string | undefined,
   type: string,
 ) {
@@ -351,7 +380,7 @@ function renderSchema(
 
   if (name) {
     name = performVariableNameCorrection(name);
-    if (required && required === true) {
+    if (!Array.isArray(required) && required && required === true) {
       name = `${name}:`;
     } else {
       name = `${name}?:`;
