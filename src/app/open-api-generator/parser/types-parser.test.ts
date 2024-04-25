@@ -21,47 +21,47 @@ const tests: {
   {
     name: "GenerateParams_DemoBlogApi",
     oasFile: "../tests/oas-docs/demo-blog-api.json",
-    goldenFile: "./testdata/golden-files/demo-blog-api.json",
+    goldenFile: "./testdata/golden-files/query-tests/demo-blog-api.json",
   },
   {
     name: "GenerateParams_GeomagApi",
     oasFile: "../tests/oas-docs/geomag.json",
-    goldenFile: "./testdata/golden-files/geomag.json",
+    goldenFile: "./testdata/golden-files/query-tests/geomag.json",
   },
   {
     name: "GenerateParams_Petstore",
     oasFile: "../tests/oas-docs/petstore.yaml",
-    goldenFile: "./testdata/golden-files/petstore.json",
+    goldenFile: "./testdata/golden-files/query-tests/petstore.json",
   },
   {
     name: "GenerateParams_GoogleAdsense",
     oasFile: "../tests/oas-docs/google-adsense.json",
-    goldenFile: "./testdata/golden-files/google-adsense.json",
+    goldenFile: "./testdata/golden-files/query-tests/google-adsense.json",
   },
   {
     name: "GenerateParams_Instagram",
     oasFile: "../tests/oas-docs/instagram.json",
-    goldenFile: "./testdata/golden-files/instagram.json",
+    goldenFile: "./testdata/golden-files/query-tests/instagram.json",
   },
   {
     name: "GenerateParams_Gitlab",
     oasFile: "../tests/oas-docs/gitlab.json",
-    goldenFile: "./testdata/golden-files/gitlab.json",
+    goldenFile: "./testdata/golden-files/query-tests/gitlab.json",
   },
   {
     name: "GenerateParams_Dropbox",
     oasFile: "../tests/oas-docs/dropbox.json",
-    goldenFile: "./testdata/golden-files/dropbox.json",
+    goldenFile: "./testdata/golden-files/query-tests/dropbox.json",
   },
   {
     name: "GenerateParams_Adobe",
     oasFile: "../tests/oas-docs/adobe.json",
-    goldenFile: "./testdata/golden-files/adobe.json",
+    goldenFile: "./testdata/golden-files/query-tests/adobe.json",
   },
   {
     name: "GenerateParams_AwsAutoscaling",
     oasFile: "../tests/oas-docs/aws-autoscaling.json",
-    goldenFile: "./testdata/golden-files/aws-autoscaling.json",
+    goldenFile: "./testdata/golden-files/query-tests/aws-autoscaling.json",
   },
 ];
 
