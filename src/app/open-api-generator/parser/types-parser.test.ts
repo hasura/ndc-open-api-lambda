@@ -7,8 +7,8 @@ import { getTemplatesDirectory } from "../index";
 import { parse } from "./types-parser";
 
 type FunctionParams = {
-  queryParams: string;
-  queryParamsRequireRelaxedTypeAnnotation: boolean;
+  params: string;
+  requireRelaxedTypeAnnotation: boolean;
 };
 
 const tests: {
@@ -97,11 +97,11 @@ describe("GenerateQueryParams", async () => {
             const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
 
             const got: FunctionParams = {
-              queryParams:
+              params:
                 parsedTypes.queryParams && parsedTypes.queryParams?._rendered
                   ? parsedTypes.queryParams?._rendered
                   : "null",
-              queryParamsRequireRelaxedTypeAnnotation:
+              requireRelaxedTypeAnnotation:
                 parsedTypes.queryParams &&
                 parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
                   ? parsedTypes.queryParams &&
