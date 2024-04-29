@@ -5,6 +5,7 @@ import { generateRandomDir } from "../../../../tests/testutils";
 import { generateApi } from "swagger-typescript-api";
 import { getTemplatesDirectory } from "../index";
 import { parse } from "./types-parser";
+const CircularJSON = require("circular-json");
 
 type FunctionParams = {
   params: string;
@@ -14,9 +15,10 @@ type FunctionParams = {
 type TestCase = {
   name: string;
   oasFile: string;
-  goldenFile: string;
-  expected?: Map<string, FunctionParams>;
+  queryParamsGoldenFile: string;
+  expectedQueryParams?: Map<string, FunctionParams>;
   outDir?: string;
+  gotQueryParams?: Map<string, FunctionParams>;
 };
 
 function setupTest(testCase: TestCase) {
@@ -25,13 +27,57 @@ function setupTest(testCase: TestCase) {
   );
   testCase.outDir = outDir;
   testCase.oasFile = path.resolve(__dirname, testCase.oasFile);
-  testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);
-  const fileContent = fs.readFileSync(testCase.goldenFile, "utf8");
-  if (fileContent) {
+  testCase.queryParamsGoldenFile = path.resolve(
+    __dirname,
+    testCase.queryParamsGoldenFile,
+  );
+  const queryParamsFileContent = fs.readFileSync(
+    testCase.queryParamsGoldenFile,
+    "utf8",
+  );
+  if (queryParamsFileContent) {
     try {
-      testCase.expected = new Map(Object.entries(JSON.parse(fileContent)));
+      testCase.expectedQueryParams = new Map(
+        Object.entries(JSON.parse(queryParamsFileContent)),
+      );
     } catch (e) {}
   }
+}
+
+async function generateCode(testCase: TestCase) {
+  const templateDir = path.resolve(getTemplatesDirectory(), "./custom");
+
+  const gotQueryFunctionArgs = new Map<string, FunctionParams>();
+  await generateApi({
+    name: "api.ts",
+    input: testCase.oasFile,
+    output: testCase.outDir,
+    templates: templateDir,
+    silent: true,
+    hooks: {
+      onCreateRoute: (routeData) => {
+        const parsedTypes = parse(routeData);
+        const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
+
+        const gotQuery: FunctionParams = {
+          params:
+            parsedTypes.queryParams && parsedTypes.queryParams?._rendered
+              ? parsedTypes.queryParams?._rendered
+              : "null",
+          requireRelaxedTypeAnnotation:
+            parsedTypes.queryParams &&
+            parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
+              ? parsedTypes.queryParams &&
+                parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
+              : false,
+        };
+
+        gotQueryFunctionArgs.set(jsonKey, gotQuery);
+      },
+    },
+  });
+
+  testCase.gotQueryParams = gotQueryFunctionArgs;
 }
 
 function cleanup(testCase: TestCase) {
@@ -42,97 +88,71 @@ function cleanup(testCase: TestCase) {
 
 const queryParamTests: TestCase[] = [
   {
-    name: "GenerateQueryParams_DemoBlogApi",
+    name: "DemoBlogApi",
     oasFile: "../tests/oas-docs/demo-blog-api.json",
-    goldenFile: "./testdata/golden-files/query-tests/demo-blog-api.json",
+    queryParamsGoldenFile:
+      "./testdata/golden-files/query-tests/demo-blog-api.json",
   },
   {
-    name: "GenerateQueryParams_GeomagApi",
+    name: "GeomagApi",
     oasFile: "../tests/oas-docs/geomag.json",
-    goldenFile: "./testdata/golden-files/query-tests/geomag.json",
+    queryParamsGoldenFile: "./testdata/golden-files/query-tests/geomag.json",
   },
   {
-    name: "GenerateQueryParams_Petstore",
+    name: "Petstore",
     oasFile: "../tests/oas-docs/petstore.yaml",
-    goldenFile: "./testdata/golden-files/query-tests/petstore.json",
+    queryParamsGoldenFile: "./testdata/golden-files/query-tests/petstore.json",
   },
   {
-    name: "GenerateQueryParams_GoogleAdsense",
+    name: "GoogleAdsense",
     oasFile: "../tests/oas-docs/google-adsense.json",
-    goldenFile: "./testdata/golden-files/query-tests/google-adsense.json",
+    queryParamsGoldenFile:
+      "./testdata/golden-files/query-tests/google-adsense.json",
   },
   {
-    name: "GenerateQueryParams_Instagram",
+    name: "Instagram",
     oasFile: "../tests/oas-docs/instagram.json",
-    goldenFile: "./testdata/golden-files/query-tests/instagram.json",
+    queryParamsGoldenFile: "./testdata/golden-files/query-tests/instagram.json",
   },
   {
-    name: "GenerateQueryParams_Gitlab",
+    name: "Gitlab",
     oasFile: "../tests/oas-docs/gitlab.json",
-    goldenFile: "./testdata/golden-files/query-tests/gitlab.json",
+    queryParamsGoldenFile: "./testdata/golden-files/query-tests/gitlab.json",
   },
   {
-    name: "GenerateQueryParams_Dropbox",
+    name: "Dropbox",
     oasFile: "../tests/oas-docs/dropbox.json",
-    goldenFile: "./testdata/golden-files/query-tests/dropbox.json",
+    queryParamsGoldenFile: "./testdata/golden-files/query-tests/dropbox.json",
   },
   {
-    name: "GenerateQueryParams_Adobe",
+    name: "Adobe",
     oasFile: "../tests/oas-docs/adobe.json",
-    goldenFile: "./testdata/golden-files/query-tests/adobe.json",
+    queryParamsGoldenFile: "./testdata/golden-files/query-tests/adobe.json",
   },
   {
-    name: "GenerateQueryParams_AwsAutoscaling",
+    name: "AwsAutoscaling",
     oasFile: "../tests/oas-docs/aws-autoscaling.json",
-    goldenFile: "./testdata/golden-files/query-tests/aws-autoscaling.json",
+    queryParamsGoldenFile:
+      "./testdata/golden-files/query-tests/aws-autoscaling.json",
   },
 ];
 
-describe("GenerateQueryParams", async () => {
-  const templateDir = path.resolve(getTemplatesDirectory(), "./custom");
-  for (const testCase of queryParamTests) {
-    before(function () {
+for (const testCase of queryParamTests) {
+  describe(`Generate Params for ${testCase.name}`, async () => {
+    before(async () => {
       setupTest(testCase);
+      await generateCode(testCase);
     });
 
-    it(testCase.name, async () => {
-      const gotFunctionArgs = new Map<string, FunctionParams>();
-      await generateApi({
-        name: "api.ts",
-        input: testCase.oasFile,
-        output: testCase.outDir,
-        templates: templateDir,
-        silent: true,
-        hooks: {
-          onCreateRoute: (routeData) => {
-            const parsedTypes = parse(routeData);
-            const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
+    it(`${testCase.name}::Query`, function () {
+      assert.deepEqual(testCase.expectedQueryParams, testCase.gotQueryParams);
 
-            const got: FunctionParams = {
-              params:
-                parsedTypes.queryParams && parsedTypes.queryParams?._rendered
-                  ? parsedTypes.queryParams?._rendered
-                  : "null",
-              requireRelaxedTypeAnnotation:
-                parsedTypes.queryParams &&
-                parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
-                  ? parsedTypes.queryParams &&
-                    parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
-                  : false,
-            };
-
-            gotFunctionArgs.set(jsonKey, got);
-          },
-        },
-      });
-
-      assert.deepEqual(testCase.expected, gotFunctionArgs);
-
-      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(Object.fromEntries(gotFunctionArgs)));
+      // Uncomment to update golden file
+      // fs.writeFileSync(testCase.queryParamsGoldenFile, JSON.stringify(Object.fromEntries(testCase.gotQueryParams!)));
     });
 
     after(function () {
       cleanup(testCase);
     });
-  }
-});
+  });
+}
