@@ -110,7 +110,9 @@ export async function getPetFindPetsByTags(query: {
  * @readonly
  */
 export async function getPetGetPetById(
-  /** ID of pet to return */
+  /**
+   * ID of pet to return
+   */
   petId: number,
 ): Promise<Pet> {
   const result = await api.pet.getPetById({
@@ -139,7 +141,9 @@ export async function postPetUpdatePetWithForm(
      */
     status?: string;
   },
-  /** ID of pet that needs to be updated */
+  /**
+   * ID of pet that needs to be updated
+   */
   petId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.pet.updatePetWithForm({
@@ -159,7 +163,9 @@ export async function postPetUpdatePetWithForm(
  * @allowrelaxedtypes
  */
 export async function deletePetDeletePet(
-  /** Pet id to delete */
+  /**
+   * Pet id to delete
+   */
   petId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.pet.deletePet({
@@ -183,7 +189,9 @@ export async function postPetUploadFile(
      */
     additionalMetadata?: string;
   },
-  /** ID of pet to update */
+  /**
+   * ID of pet to update
+   */
   petId: number,
   /** Request body */
   data: File,
@@ -241,7 +249,9 @@ export async function postStorePlaceOrder(
  * @readonly
  */
 export async function getStoreGetOrderById(
-  /** ID of order that needs to be fetched */
+  /**
+   * ID of order that needs to be fetched
+   */
   orderId: number,
 ): Promise<Order> {
   const result = await api.store.getOrderById({
@@ -260,7 +270,9 @@ export async function getStoreGetOrderById(
  * @allowrelaxedtypes
  */
 export async function deleteStoreDeleteOrder(
-  /** ID of the order that needs to be deleted */
+  /**
+   * ID of the order that needs to be deleted
+   */
   orderId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.store.deleteOrder({
@@ -356,7 +368,9 @@ export async function getUserLogoutUser(): Promise<hasuraSdk.JSONValue> {
  * @readonly
  */
 export async function getUserGetUserByName(
-  /** The name that needs to be fetched. Use user1 for testing.  */
+  /**
+   * The name that needs to be fetched. Use user1 for testing.
+   */
   username: string,
 ): Promise<User> {
   const result = await api.user.getUserByName({
@@ -375,7 +389,9 @@ export async function getUserGetUserByName(
  * @allowrelaxedtypes
  */
 export async function putUserUpdateUser(
-  /** name that needs to be updated */
+  /**
+   * name that needs to be updated
+   */
   username: string,
   /** Request body */
   data: User,
@@ -397,7 +413,9 @@ export async function putUserUpdateUser(
  * @allowrelaxedtypes
  */
 export async function deleteUserDeleteUser(
-  /** The name that needs to be deleted */
+  /**
+   * The name that needs to be deleted
+   */
   username: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.user.deleteUser({

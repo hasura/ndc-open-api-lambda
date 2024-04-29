@@ -28,7 +28,9 @@ export async function postAuthorAuthorCreate(
  * @request DELETE :/author/{authorId}
  */
 export async function deleteAuthorAuthorDelete(
-  /** delete author */
+  /**
+   * delete author
+   */
   authorId: string,
 ): Promise<MainAuthor> {
   const result = await api.author.authorDelete({
@@ -136,7 +138,9 @@ export async function patchBlogLikePartialUpdate(query: {
  * @request DELETE :/blog/{blogId}
  */
 export async function deleteBlogBlogDelete(
-  /** blog to delete */
+  /**
+   * blog to delete
+   */
   blogId: string,
 ): Promise<MainBlog> {
   const result = await api.blog.blogDelete({
@@ -168,7 +172,9 @@ export async function patchBlogBlogPartialUpdate(
      */
     summary?: string;
   },
-  /** blog to update */
+  /**
+   * blog to update
+   */
   blogId: string,
 ): Promise<MainBlog> {
   const result = await api.blog.blogPartialUpdate({

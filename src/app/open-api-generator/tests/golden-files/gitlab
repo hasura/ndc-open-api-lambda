@@ -361,7 +361,9 @@ export async function getV3GetV3Dockerfiles(): Promise<TemplatesList> {
  * @readonly
  */
 export async function getV3GetV3DockerfilesName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<Template> {
   const result = await api.v3.getV3DockerfilesName({
@@ -394,7 +396,9 @@ export async function getV3GetV3Gitignores(): Promise<TemplatesList> {
  * @readonly
  */
 export async function getV3GetV3GitignoresName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<Template> {
   const result = await api.v3.getV3GitignoresName({
@@ -427,7 +431,9 @@ export async function getV3GetV3GitlabCiYmls(): Promise<TemplatesList> {
  * @readonly
  */
 export async function getV3GetV3GitlabCiYmlsName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<Template> {
   const result = await api.v3.getV3GitlabCiYmlsName({
@@ -563,7 +569,9 @@ export async function getV3GetV3GroupsOwned(query: {
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3GroupsId(
-  /** The ID of a group */
+  /**
+   * The ID of a group
+   */
   id: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3GroupsId({
@@ -582,7 +590,9 @@ export async function deleteV3DeleteV3GroupsId(
  * @readonly
  */
 export async function getV3GetV3GroupsId(
-  /** The ID of a group */
+  /**
+   * The ID of a group
+   */
   id: string,
 ): Promise<GroupDetail> {
   const result = await api.v3.getV3GroupsId({
@@ -600,7 +610,9 @@ export async function getV3GetV3GroupsId(
  * @request PUT :/v3/groups/{id}
  */
 export async function putV3PutV3GroupsId(
-  /** The ID of a group */
+  /**
+   * The ID of a group
+   */
   id: string,
   /** Request body */
   data: {
@@ -648,7 +660,9 @@ export async function getV3GetV3GroupsIdAccessRequests(
      */
     per_page?: number;
   },
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
 ): Promise<AccessRequester> {
   const result = await api.v3.getV3GroupsIdAccessRequests({
@@ -667,7 +681,9 @@ export async function getV3GetV3GroupsIdAccessRequests(
  * @request POST :/v3/groups/{id}/access_requests
  */
 export async function postV3PostV3GroupsIdAccessRequests(
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
 ): Promise<AccessRequester> {
   const result = await api.v3.postV3GroupsIdAccessRequests({
@@ -686,9 +702,13 @@ export async function postV3PostV3GroupsIdAccessRequests(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3GroupsIdAccessRequestsUserId(
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
-  /** The user ID of the access requester */
+  /**
+   * The user ID of the access requester
+   */
   userId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3GroupsIdAccessRequestsUserId({
@@ -707,9 +727,13 @@ export async function deleteV3DeleteV3GroupsIdAccessRequestsUserId(
  * @request PUT :/v3/groups/{id}/access_requests/{user_id}/approve
  */
 export async function putV3PutV3GroupsIdAccessRequestsUserIdApprove(
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
-  /** The user ID of the access requester */
+  /**
+   * The user ID of the access requester
+   */
   userId: number,
   /** Request body */
   data: {
@@ -769,7 +793,9 @@ export async function getV3GetV3GroupsIdIssues(
      */
     per_page?: number;
   },
-  /** The ID of a group */
+  /**
+   * The ID of a group
+   */
   id: string,
 ): Promise<Issue> {
   const result = await api.v3.getV3GroupsIdIssues({
@@ -803,7 +829,9 @@ export async function getV3GetV3GroupsIdMembers(
      */
     per_page?: number;
   },
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
 ): Promise<Member> {
   const result = await api.v3.getV3GroupsIdMembers({
@@ -822,7 +850,9 @@ export async function getV3GetV3GroupsIdMembers(
  * @request POST :/v3/groups/{id}/members
  */
 export async function postV3PostV3GroupsIdMembers(
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
   /** Request body */
   data: {
@@ -860,9 +890,13 @@ export async function postV3PostV3GroupsIdMembers(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3GroupsIdMembersUserId(
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
-  /** The user ID of the member */
+  /**
+   * The user ID of the member
+   */
   userId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3GroupsIdMembersUserId({
@@ -882,9 +916,13 @@ export async function deleteV3DeleteV3GroupsIdMembersUserId(
  * @readonly
  */
 export async function getV3GetV3GroupsIdMembersUserId(
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
-  /** The user ID of the member */
+  /**
+   * The user ID of the member
+   */
   userId: number,
 ): Promise<Member> {
   const result = await api.v3.getV3GroupsIdMembersUserId({
@@ -903,9 +941,13 @@ export async function getV3GetV3GroupsIdMembersUserId(
  * @request PUT :/v3/groups/{id}/members/{user_id}
  */
 export async function putV3PutV3GroupsIdMembersUserId(
-  /** The group ID */
+  /**
+   * The group ID
+   */
   id: string,
-  /** The user ID of the new member */
+  /**
+   * The user ID of the new member
+   */
   userId: number,
   /** Request body */
   data: {
@@ -939,7 +981,9 @@ export async function putV3PutV3GroupsIdMembersUserId(
  * @readonly
  */
 export async function getV3GetV3GroupsIdNotificationSettings(
-  /** The group ID or project ID or project NAMESPACE/PROJECT_NAME */
+  /**
+   * The group ID or project ID or project NAMESPACE/PROJECT_NAME
+   */
   id: string,
 ): Promise<NotificationSetting> {
   const result = await api.v3.getV3GroupsIdNotificationSettings({
@@ -957,7 +1001,9 @@ export async function getV3GetV3GroupsIdNotificationSettings(
  * @request PUT :/v3/groups/{id}/notification_settings
  */
 export async function putV3PutV3GroupsIdNotificationSettings(
-  /** The group ID or project ID or project NAMESPACE/PROJECT_NAME */
+  /**
+   * The group ID or project ID or project NAMESPACE/PROJECT_NAME
+   */
   id: string,
   /** Request body */
   data: {
@@ -1047,7 +1093,9 @@ export async function getV3GetV3GroupsIdProjects(
      */
     per_page?: number;
   },
-  /** The ID of a group */
+  /**
+   * The ID of a group
+   */
   id: string,
 ): Promise<Project> {
   const result = await api.v3.getV3GroupsIdProjects({
@@ -1066,9 +1114,13 @@ export async function getV3GetV3GroupsIdProjects(
  * @request POST :/v3/groups/{id}/projects/{project_id}
  */
 export async function postV3PostV3GroupsIdProjectsProjectId(
-  /** The ID of a group */
+  /**
+   * The ID of a group
+   */
   id: string,
-  /** The ID or path of the project */
+  /**
+   * The ID or path of the project
+   */
   projectId: string,
 ): Promise<GroupDetail> {
   const result = await api.v3.postV3GroupsIdProjectsProjectId({
@@ -1130,7 +1182,9 @@ export async function postV3PostV3Hooks(
  * @request DELETE :/v3/hooks/{id}
  */
 export async function deleteV3DeleteV3HooksId(
-  /** The ID of the system hook */
+  /**
+   * The ID of the system hook
+   */
   id: number,
 ): Promise<Hook> {
   const result = await api.v3.deleteV3HooksId({
@@ -1149,7 +1203,9 @@ export async function deleteV3DeleteV3HooksId(
  * @readonly
  */
 export async function getV3GetV3HooksId(
-  /** The ID of the system hook */
+  /**
+   * The ID of the system hook
+   */
   id: number,
 ): Promise<Hook> {
   const result = await api.v3.getV3HooksId({
@@ -1315,10 +1371,7 @@ export async function getV3GetV3Issues(query: {
  * @request GET :/v3/keys/{id}
  * @readonly
  */
-export async function getV3GetV3KeysId(
-  /** undefined */
-  id: number,
-): Promise<SSHKeyWithUser> {
+export async function getV3GetV3KeysId(id: number): Promise<SSHKeyWithUser> {
   const result = await api.v3.getV3KeysId({
     id: id,
   });
@@ -1356,7 +1409,9 @@ export async function getV3GetV3Licenses(query: {
  * @readonly
  */
 export async function getV3GetV3LicensesName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<RepoLicense> {
   const result = await api.v3.getV3LicensesName({
@@ -1644,7 +1699,9 @@ export async function getV3GetV3ProjectsAll(query: {
  * @request POST :/v3/projects/fork/{id}
  */
 export async function postV3PostV3ProjectsForkId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -1754,7 +1811,9 @@ export async function getV3GetV3ProjectsSearchQuery(
      */
     per_page?: number;
   },
-  /** The project name to be searched */
+  /**
+   * The project name to be searched
+   */
   query: string,
 ): Promise<Project> {
   const result = await api.v3.getV3ProjectsSearchQuery({
@@ -1830,7 +1889,9 @@ export async function getV3GetV3ProjectsStarred(query: {
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsUserUserId(
-  /** The ID of a user */
+  /**
+   * The ID of a user
+   */
   userId: number,
   /** Request body */
   data: {
@@ -1953,7 +2014,9 @@ export async function getV3GetV3ProjectsVisible(query: {
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsId({
@@ -1972,7 +2035,9 @@ export async function deleteV3DeleteV3ProjectsId(
  * @readonly
  */
 export async function getV3GetV3ProjectsId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<ProjectWithAccess> {
   const result = await api.v3.getV3ProjectsId({
@@ -1991,7 +2056,9 @@ export async function getV3GetV3ProjectsId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -2052,9 +2119,13 @@ export async function putV3PutV3ProjectsId(
  * @request POST :/v3/projects/{id}/(ref/{ref}/)trigger/builds
  */
 export async function postV3PostV3ProjectsIdRefRefTriggerBuilds(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The commit sha or name of a branch or tag */
+  /**
+   * The commit sha or name of a branch or tag
+   */
   ref: string,
   /** Request body */
   data: {
@@ -2090,7 +2161,9 @@ export async function getV3GetV3ProjectsIdAccessRequests(
      */
     per_page?: number;
   },
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<AccessRequester> {
   const result = await api.v3.getV3ProjectsIdAccessRequests({
@@ -2109,7 +2182,9 @@ export async function getV3GetV3ProjectsIdAccessRequests(
  * @request POST :/v3/projects/{id}/access_requests
  */
 export async function postV3PostV3ProjectsIdAccessRequests(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<AccessRequester> {
   const result = await api.v3.postV3ProjectsIdAccessRequests({
@@ -2128,9 +2203,13 @@ export async function postV3PostV3ProjectsIdAccessRequests(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdAccessRequestsUserId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The user ID of the access requester */
+  /**
+   * The user ID of the access requester
+   */
   userId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdAccessRequestsUserId({
@@ -2149,9 +2228,13 @@ export async function deleteV3DeleteV3ProjectsIdAccessRequestsUserId(
  * @request PUT :/v3/projects/{id}/access_requests/{user_id}/approve
  */
 export async function putV3PutV3ProjectsIdAccessRequestsUserIdApprove(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The user ID of the access requester */
+  /**
+   * The user ID of the access requester
+   */
   userId: number,
   /** Request body */
   data: {
@@ -2179,7 +2262,9 @@ export async function putV3PutV3ProjectsIdAccessRequestsUserIdApprove(
  * @request POST :/v3/projects/{id}/archive
  */
 export async function postV3PostV3ProjectsIdArchive(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsIdArchive({
@@ -2198,7 +2283,9 @@ export async function postV3PostV3ProjectsIdArchive(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBoards(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Board> {
   const result = await api.v3.getV3ProjectsIdBoards({
@@ -2217,9 +2304,13 @@ export async function getV3GetV3ProjectsIdBoards(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBoardsBoardIdLists(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a board */
+  /**
+   * The ID of a board
+   */
   boardId: number,
 ): Promise<List> {
   const result = await api.v3.getV3ProjectsIdBoardsBoardIdLists({
@@ -2238,9 +2329,13 @@ export async function getV3GetV3ProjectsIdBoardsBoardIdLists(
  * @request POST :/v3/projects/{id}/boards/{board_id}/lists
  */
 export async function postV3PostV3ProjectsIdBoardsBoardIdLists(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a board */
+  /**
+   * The ID of a board
+   */
   boardId: number,
   /** Request body */
   data: {
@@ -2268,11 +2363,17 @@ export async function postV3PostV3ProjectsIdBoardsBoardIdLists(
  * @request DELETE :/v3/projects/{id}/boards/{board_id}/lists/{list_id}
  */
 export async function deleteV3DeleteV3ProjectsIdBoardsBoardIdListsListId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a board */
+  /**
+   * The ID of a board
+   */
   boardId: number,
-  /** The ID of a board list */
+  /**
+   * The ID of a board list
+   */
   listId: number,
 ): Promise<List> {
   const result = await api.v3.deleteV3ProjectsIdBoardsBoardIdListsListId({
@@ -2293,11 +2394,17 @@ export async function deleteV3DeleteV3ProjectsIdBoardsBoardIdListsListId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBoardsBoardIdListsListId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a board */
+  /**
+   * The ID of a board
+   */
   boardId: number,
-  /** The ID of a list */
+  /**
+   * The ID of a list
+   */
   listId: number,
 ): Promise<List> {
   const result = await api.v3.getV3ProjectsIdBoardsBoardIdListsListId({
@@ -2317,11 +2424,17 @@ export async function getV3GetV3ProjectsIdBoardsBoardIdListsListId(
  * @request PUT :/v3/projects/{id}/boards/{board_id}/lists/{list_id}
  */
 export async function putV3PutV3ProjectsIdBoardsBoardIdListsListId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a board */
+  /**
+   * The ID of a board
+   */
   boardId: number,
-  /** The ID of a list */
+  /**
+   * The ID of a list
+   */
   listId: number,
   /** Request body */
   data: {
@@ -2366,7 +2479,9 @@ export async function getV3GetV3ProjectsIdBuilds(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Build> {
   const result = await api.v3.getV3ProjectsIdBuilds({
@@ -2393,9 +2508,13 @@ export async function getV3GetV3ProjectsIdBuildsArtifactsRefNameDownload(
      */
     job: string;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ref from repository */
+  /**
+   * The ref from repository
+   */
   refName: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdBuildsArtifactsRefNameDownload({
@@ -2416,9 +2535,13 @@ export async function getV3GetV3ProjectsIdBuildsArtifactsRefNameDownload(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBuildsBuildId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a build */
+  /**
+   * The ID of a build
+   */
   buildId: number,
 ): Promise<Build> {
   const result = await api.v3.getV3ProjectsIdBuildsBuildId({
@@ -2439,9 +2562,13 @@ export async function getV3GetV3ProjectsIdBuildsBuildId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBuildsBuildIdArtifacts(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a build */
+  /**
+   * The ID of a build
+   */
   buildId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdBuildsBuildIdArtifacts({
@@ -2460,9 +2587,13 @@ export async function getV3GetV3ProjectsIdBuildsBuildIdArtifacts(
  * @request POST :/v3/projects/{id}/builds/{build_id}/artifacts/keep
  */
 export async function postV3PostV3ProjectsIdBuildsBuildIdArtifactsKeep(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a build */
+  /**
+   * The ID of a build
+   */
   buildId: number,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdArtifactsKeep({
@@ -2481,9 +2612,13 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdArtifactsKeep(
  * @request POST :/v3/projects/{id}/builds/{build_id}/cancel
  */
 export async function postV3PostV3ProjectsIdBuildsBuildIdCancel(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a build */
+  /**
+   * The ID of a build
+   */
   buildId: number,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdCancel({
@@ -2502,9 +2637,13 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdCancel(
  * @request POST :/v3/projects/{id}/builds/{build_id}/erase
  */
 export async function postV3PostV3ProjectsIdBuildsBuildIdErase(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a build */
+  /**
+   * The ID of a build
+   */
   buildId: number,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdErase({
@@ -2523,9 +2662,13 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdErase(
  * @request POST :/v3/projects/{id}/builds/{build_id}/play
  */
 export async function postV3PostV3ProjectsIdBuildsBuildIdPlay(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a Build */
+  /**
+   * The ID of a Build
+   */
   buildId: number,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdPlay({
@@ -2544,9 +2687,13 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdPlay(
  * @request POST :/v3/projects/{id}/builds/{build_id}/retry
  */
 export async function postV3PostV3ProjectsIdBuildsBuildIdRetry(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a build */
+  /**
+   * The ID of a build
+   */
   buildId: number,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdRetry({
@@ -2567,9 +2714,13 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdRetry(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBuildsBuildIdTrace(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a build */
+  /**
+   * The ID of a build
+   */
   buildId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdBuildsBuildIdTrace({
@@ -2589,7 +2740,9 @@ export async function getV3GetV3ProjectsIdBuildsBuildIdTrace(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdDeployKeys(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdDeployKeys({
@@ -2607,7 +2760,9 @@ export async function getV3GetV3ProjectsIdDeployKeys(
  * @request POST :/v3/projects/{id}/deploy_keys
  */
 export async function postV3PostV3ProjectsIdDeployKeys(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
   /** Request body */
   data: {
@@ -2633,9 +2788,13 @@ export async function postV3PostV3ProjectsIdDeployKeys(
  * @request DELETE :/v3/projects/{id}/deploy_keys/{key_id}
  */
 export async function deleteV3DeleteV3ProjectsIdDeployKeysKeyId(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdDeployKeysKeyId({
@@ -2655,9 +2814,13 @@ export async function deleteV3DeleteV3ProjectsIdDeployKeysKeyId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdDeployKeysKeyId(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdDeployKeysKeyId({
@@ -2676,9 +2839,13 @@ export async function getV3GetV3ProjectsIdDeployKeysKeyId(
  * @request DELETE :/v3/projects/{id}/deploy_keys/{key_id}/disable
  */
 export async function deleteV3DeleteV3ProjectsIdDeployKeysKeyIdDisable(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdDeployKeysKeyIdDisable({
@@ -2697,9 +2864,13 @@ export async function deleteV3DeleteV3ProjectsIdDeployKeysKeyIdDisable(
  * @request POST :/v3/projects/{id}/deploy_keys/{key_id}/enable
  */
 export async function postV3PostV3ProjectsIdDeployKeysKeyIdEnable(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3ProjectsIdDeployKeysKeyIdEnable({
@@ -2729,7 +2900,9 @@ export async function getV3GetV3ProjectsIdDeployments(
      */
     per_page?: number;
   },
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<Deployment> {
   const result = await api.v3.getV3ProjectsIdDeployments({
@@ -2749,9 +2922,13 @@ export async function getV3GetV3ProjectsIdDeployments(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdDeploymentsDeploymentId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The deployment ID */
+  /**
+   * The deployment ID
+   */
   deploymentId: number,
 ): Promise<Deployment> {
   const result = await api.v3.getV3ProjectsIdDeploymentsDeploymentId({
@@ -2781,7 +2958,9 @@ export async function getV3GetV3ProjectsIdEnvironments(
      */
     per_page?: number;
   },
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<Environment> {
   const result = await api.v3.getV3ProjectsIdEnvironments({
@@ -2800,7 +2979,9 @@ export async function getV3GetV3ProjectsIdEnvironments(
  * @request POST :/v3/projects/{id}/environments
  */
 export async function postV3PostV3ProjectsIdEnvironments(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
   /** Request body */
   data: {
@@ -2827,9 +3008,13 @@ export async function postV3PostV3ProjectsIdEnvironments(
  * @request DELETE :/v3/projects/{id}/environments/{environment_id}
  */
 export async function deleteV3DeleteV3ProjectsIdEnvironmentsEnvironmentId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The environment ID */
+  /**
+   * The environment ID
+   */
   environmentId: number,
 ): Promise<Environment> {
   const result = await api.v3.deleteV3ProjectsIdEnvironmentsEnvironmentId({
@@ -2848,9 +3033,13 @@ export async function deleteV3DeleteV3ProjectsIdEnvironmentsEnvironmentId(
  * @request PUT :/v3/projects/{id}/environments/{environment_id}
  */
 export async function putV3PutV3ProjectsIdEnvironmentsEnvironmentId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The environment ID */
+  /**
+   * The environment ID
+   */
   environmentId: number,
   /** Request body */
   data: {
@@ -2889,7 +3078,9 @@ export async function getV3GetV3ProjectsIdEvents(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Event> {
   const result = await api.v3.getV3ProjectsIdEvents({
@@ -2909,7 +3100,9 @@ export async function getV3GetV3ProjectsIdEvents(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdFork(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdFork({
@@ -2928,9 +3121,13 @@ export async function deleteV3DeleteV3ProjectsIdFork(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdForkForkedFromId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the project it was forked from */
+  /**
+   * The ID of the project it was forked from
+   */
   forkedFromId: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdForkForkedFromId({
@@ -2960,7 +3157,9 @@ export async function getV3GetV3ProjectsIdHooks(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<ProjectHook> {
   const result = await api.v3.getV3ProjectsIdHooks({
@@ -2979,7 +3178,9 @@ export async function getV3GetV3ProjectsIdHooks(
  * @request POST :/v3/projects/{id}/hooks
  */
 export async function postV3PostV3ProjectsIdHooks(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -3023,9 +3224,13 @@ export async function postV3PostV3ProjectsIdHooks(
  * @request DELETE :/v3/projects/{id}/hooks/{hook_id}
  */
 export async function deleteV3DeleteV3ProjectsIdHooksHookId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the hook to delete */
+  /**
+   * The ID of the hook to delete
+   */
   hookId: number,
 ): Promise<ProjectHook> {
   const result = await api.v3.deleteV3ProjectsIdHooksHookId({
@@ -3045,9 +3250,13 @@ export async function deleteV3DeleteV3ProjectsIdHooksHookId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdHooksHookId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project hook */
+  /**
+   * The ID of a project hook
+   */
   hookId: number,
 ): Promise<ProjectHook> {
   const result = await api.v3.getV3ProjectsIdHooksHookId({
@@ -3066,9 +3275,13 @@ export async function getV3GetV3ProjectsIdHooksHookId(
  * @request PUT :/v3/projects/{id}/hooks/{hook_id}
  */
 export async function putV3PutV3ProjectsIdHooksHookId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the hook to update */
+  /**
+   * The ID of the hook to update
+   */
   hookId: number,
   /** Request body */
   data: {
@@ -3149,7 +3362,9 @@ export async function getV3GetV3ProjectsIdIssues(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Issue> {
   const result = await api.v3.getV3ProjectsIdIssues({
@@ -3168,7 +3383,9 @@ export async function getV3GetV3ProjectsIdIssues(
  * @request POST :/v3/projects/{id}/issues
  */
 export async function postV3PostV3ProjectsIdIssues(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -3221,9 +3438,13 @@ export async function postV3PostV3ProjectsIdIssues(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdIssuesIssueId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdIssuesIssueId({
@@ -3243,9 +3464,13 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdIssuesIssueId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
 ): Promise<Issue> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueId({
@@ -3265,9 +3490,13 @@ export async function getV3GetV3ProjectsIdIssuesIssueId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdIssuesIssueId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
   /** Request body */
   data: {
@@ -3319,9 +3548,13 @@ export async function putV3PutV3ProjectsIdIssuesIssueId(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdAddSpentTime(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
   /** Request body */
   data: {
@@ -3357,9 +3590,13 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdAwardEmoji(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of an Issue, Merge Request or Snippet */
+  /**
+   * The ID of an Issue, Merge Request or Snippet
+   */
   issueId: number,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdAwardEmoji({
@@ -3379,9 +3616,7 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdAwardEmoji(
  * @request POST :/v3/projects/{id}/issues/{issue_id}/award_emoji
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdAwardEmoji(
-  /** undefined */
   id: number,
-  /** undefined */
   issueId: number,
   /** Request body */
   data: {
@@ -3406,11 +3641,11 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdAwardEmoji(
  * @request DELETE :/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}
  */
 export async function deleteV3DeleteV3ProjectsIdIssuesIssueIdAwardEmojiAwardId(
-  /** The ID of an award emoji */
+  /**
+   * The ID of an award emoji
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   issueId: number,
 ): Promise<AwardEmoji> {
   const result = await api.v3.deleteV3ProjectsIdIssuesIssueIdAwardEmojiAwardId({
@@ -3431,11 +3666,11 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueIdAwardEmojiAwardId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdIssuesIssueIdAwardEmojiAwardId(
-  /** The ID of the award */
+  /**
+   * The ID of the award
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   issueId: number,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdAwardEmojiAwardId({
@@ -3455,9 +3690,13 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdAwardEmojiAwardId(
  * @request POST :/v3/projects/{id}/issues/{issue_id}/move
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdMove(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
   /** Request body */
   data: {
@@ -3496,11 +3735,8 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
      */
     per_page?: number;
   },
-  /** undefined */
   id: number,
-  /** undefined */
   issueId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
@@ -3523,11 +3759,8 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
  * @request POST :/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
-  /** undefined */
   id: number,
-  /** undefined */
   issueId: number,
-  /** undefined */
   noteId: number,
   /** Request body */
   data: {
@@ -3554,13 +3787,12 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
  * @request DELETE :/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}
  */
 export async function deleteV3DeleteV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwardId(
-  /** The ID of an award emoji */
+  /**
+   * The ID of an award emoji
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   issueId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -3583,13 +3815,12 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmo
  * @readonly
  */
 export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwardId(
-  /** The ID of the award */
+  /**
+   * The ID of the award
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   issueId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -3612,9 +3843,13 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwar
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdResetSpentTime(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdResetSpentTime({
@@ -3634,9 +3869,13 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdResetSpentTime(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdResetTimeEstimate(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdResetTimeEstimate({
@@ -3656,9 +3895,13 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdResetTimeEstimate(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdTimeEstimate(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
   /** Request body */
   data: {
@@ -3685,9 +3928,13 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdTimeEstimate(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdIssuesIssueIdTimeStats(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project issue */
+  /**
+   * The ID of a project issue
+   */
   issueId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdTimeStats({
@@ -3706,9 +3953,13 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdTimeStats(
  * @request POST :/v3/projects/{id}/issues/{issue_id}/todo
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdTodo(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of an issuable */
+  /**
+   * The ID of an issuable
+   */
   issueId: number,
 ): Promise<Todo> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdTodo({
@@ -3738,9 +3989,13 @@ export async function getV3GetV3ProjectsIdIssuesNoteableIdNotes(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdIssuesNoteableIdNotes({
@@ -3760,9 +4015,13 @@ export async function getV3GetV3ProjectsIdIssuesNoteableIdNotes(
  * @request POST :/v3/projects/{id}/issues/{noteable_id}/notes
  */
 export async function postV3PostV3ProjectsIdIssuesNoteableIdNotes(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
   /** Request body */
   data: {
@@ -3789,11 +4048,17 @@ export async function postV3PostV3ProjectsIdIssuesNoteableIdNotes(
  * @request DELETE :/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}
  */
 export async function deleteV3DeleteV3ProjectsIdIssuesNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
 ): Promise<Note> {
   const result = await api.v3.deleteV3ProjectsIdIssuesNoteableIdNotesNoteId({
@@ -3814,11 +4079,17 @@ export async function deleteV3DeleteV3ProjectsIdIssuesNoteableIdNotesNoteId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdIssuesNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdIssuesNoteableIdNotesNoteId({
@@ -3838,11 +4109,17 @@ export async function getV3GetV3ProjectsIdIssuesNoteableIdNotesNoteId(
  * @request PUT :/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}
  */
 export async function putV3PutV3ProjectsIdIssuesNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
   /** Request body */
   data: {
@@ -3868,9 +4145,13 @@ export async function putV3PutV3ProjectsIdIssuesNoteableIdNotesNoteId(
  * @request DELETE :/v3/projects/{id}/issues/{subscribable_id}/subscription
  */
 export async function deleteV3DeleteV3ProjectsIdIssuesSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<Issue> {
   const result =
@@ -3890,9 +4171,13 @@ export async function deleteV3DeleteV3ProjectsIdIssuesSubscribableIdSubscription
  * @request POST :/v3/projects/{id}/issues/{subscribable_id}/subscription
  */
 export async function postV3PostV3ProjectsIdIssuesSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<Issue> {
   const result = await api.v3.postV3ProjectsIdIssuesSubscribableIdSubscription({
@@ -3912,7 +4197,9 @@ export async function postV3PostV3ProjectsIdIssuesSubscribableIdSubscription(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdKeys(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdKeys({
@@ -3930,7 +4217,9 @@ export async function getV3GetV3ProjectsIdKeys(
  * @request POST :/v3/projects/{id}/keys
  */
 export async function postV3PostV3ProjectsIdKeys(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
   /** Request body */
   data: {
@@ -3956,9 +4245,13 @@ export async function postV3PostV3ProjectsIdKeys(
  * @request DELETE :/v3/projects/{id}/keys/{key_id}
  */
 export async function deleteV3DeleteV3ProjectsIdKeysKeyId(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdKeysKeyId({
@@ -3978,9 +4271,13 @@ export async function deleteV3DeleteV3ProjectsIdKeysKeyId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdKeysKeyId(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdKeysKeyId({
@@ -3999,9 +4296,13 @@ export async function getV3GetV3ProjectsIdKeysKeyId(
  * @request DELETE :/v3/projects/{id}/keys/{key_id}/disable
  */
 export async function deleteV3DeleteV3ProjectsIdKeysKeyIdDisable(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdKeysKeyIdDisable({
@@ -4020,9 +4321,13 @@ export async function deleteV3DeleteV3ProjectsIdKeysKeyIdDisable(
  * @request POST :/v3/projects/{id}/keys/{key_id}/enable
  */
 export async function postV3PostV3ProjectsIdKeysKeyIdEnable(
-  /** The ID of the project */
+  /**
+   * The ID of the project
+   */
   id: string,
-  /** The ID of the deploy key */
+  /**
+   * The ID of the deploy key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3ProjectsIdKeysKeyIdEnable({
@@ -4047,7 +4352,9 @@ export async function deleteV3DeleteV3ProjectsIdLabels(
      */
     name: string;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Label> {
   const result = await api.v3.deleteV3ProjectsIdLabels({
@@ -4067,7 +4374,9 @@ export async function deleteV3DeleteV3ProjectsIdLabels(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdLabels(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Label> {
   const result = await api.v3.getV3ProjectsIdLabels({
@@ -4085,7 +4394,9 @@ export async function getV3GetV3ProjectsIdLabels(
  * @request POST :/v3/projects/{id}/labels
  */
 export async function postV3PostV3ProjectsIdLabels(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -4118,7 +4429,9 @@ export async function postV3PostV3ProjectsIdLabels(
  * @request PUT :/v3/projects/{id}/labels
  */
 export async function putV3PutV3ProjectsIdLabels(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -4153,9 +4466,13 @@ export async function putV3PutV3ProjectsIdLabels(
  * @request DELETE :/v3/projects/{id}/labels/{subscribable_id}/subscription
  */
 export async function deleteV3DeleteV3ProjectsIdLabelsSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<Label> {
   const result =
@@ -4175,9 +4492,13 @@ export async function deleteV3DeleteV3ProjectsIdLabelsSubscribableIdSubscription
  * @request POST :/v3/projects/{id}/labels/{subscribable_id}/subscription
  */
 export async function postV3PostV3ProjectsIdLabelsSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<Label> {
   const result = await api.v3.postV3ProjectsIdLabelsSubscribableIdSubscription({
@@ -4211,7 +4532,9 @@ export async function getV3GetV3ProjectsIdMembers(
      */
     per_page?: number;
   },
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<Member> {
   const result = await api.v3.getV3ProjectsIdMembers({
@@ -4230,7 +4553,9 @@ export async function getV3GetV3ProjectsIdMembers(
  * @request POST :/v3/projects/{id}/members
  */
 export async function postV3PostV3ProjectsIdMembers(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
   /** Request body */
   data: {
@@ -4268,9 +4593,13 @@ export async function postV3PostV3ProjectsIdMembers(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdMembersUserId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The user ID of the member */
+  /**
+   * The user ID of the member
+   */
   userId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdMembersUserId({
@@ -4290,9 +4619,13 @@ export async function deleteV3DeleteV3ProjectsIdMembersUserId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMembersUserId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The user ID of the member */
+  /**
+   * The user ID of the member
+   */
   userId: number,
 ): Promise<Member> {
   const result = await api.v3.getV3ProjectsIdMembersUserId({
@@ -4311,9 +4644,13 @@ export async function getV3GetV3ProjectsIdMembersUserId(
  * @request PUT :/v3/projects/{id}/members/{user_id}
  */
 export async function putV3PutV3ProjectsIdMembersUserId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The user ID of the new member */
+  /**
+   * The user ID of the new member
+   */
   userId: number,
   /** Request body */
   data: {
@@ -4347,9 +4684,13 @@ export async function putV3PutV3ProjectsIdMembersUserId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestMergeRequestId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a merge request */
+  /**
+   * The ID of a merge request
+   */
   mergeRequestId: number,
 ): Promise<MergeRequest> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestId({
@@ -4369,9 +4710,10 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdMergeRequestMergeRequestId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -4416,9 +4758,10 @@ export async function putV3PutV3ProjectsIdMergeRequestMergeRequestId(
  * @request POST :/v3/projects/{id}/merge_request/{merge_request_id}/cancel_merge_when_build_succeeds
  */
 export async function postV3PostV3ProjectsIdMergeRequestMergeRequestIdCancelMergeWhenBuildSucceeds(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MergeRequest> {
   const result =
@@ -4441,9 +4784,10 @@ export async function postV3PostV3ProjectsIdMergeRequestMergeRequestIdCancelMerg
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdChanges(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MergeRequestChanges> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestIdChanges({
@@ -4473,9 +4817,10 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdClosesIssues
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MRNote> {
   const result =
@@ -4507,9 +4852,10 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdComments(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MRNote> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestIdComments(
@@ -4531,9 +4877,10 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdComments(
  * @request POST :/v3/projects/{id}/merge_request/{merge_request_id}/comments
  */
 export async function postV3PostV3ProjectsIdMergeRequestMergeRequestIdComments(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -4560,9 +4907,10 @@ export async function postV3PostV3ProjectsIdMergeRequestMergeRequestIdComments(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdCommits(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<RepoCommit> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestIdCommits({
@@ -4581,9 +4929,10 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdCommits(
  * @request PUT :/v3/projects/{id}/merge_request/{merge_request_id}/merge
  */
 export async function putV3PutV3ProjectsIdMergeRequestMergeRequestIdMerge(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -4614,9 +4963,13 @@ export async function putV3PutV3ProjectsIdMergeRequestMergeRequestIdMerge(
  * @request DELETE :/v3/projects/{id}/merge_request/{subscribable_id}/subscription
  */
 export async function deleteV3DeleteV3ProjectsIdMergeRequestSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<MergeRequest> {
   const result =
@@ -4636,9 +4989,13 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestSubscribableIdSubscr
  * @request POST :/v3/projects/{id}/merge_request/{subscribable_id}/subscription
  */
 export async function postV3PostV3ProjectsIdMergeRequestSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<MergeRequest> {
   const result =
@@ -4682,7 +5039,9 @@ export async function getV3GetV3ProjectsIdMergeRequests(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -4707,7 +5066,9 @@ export async function getV3GetV3ProjectsIdMergeRequests(
  * @request POST :/v3/projects/{id}/merge_requests
  */
 export async function postV3PostV3ProjectsIdMergeRequests(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -4757,9 +5118,13 @@ export async function postV3PostV3ProjectsIdMergeRequests(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a merge request */
+  /**
+   * The ID of a merge request
+   */
   mergeRequestId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdMergeRequestsMergeRequestId({
@@ -4779,9 +5144,10 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MergeRequest> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsMergeRequestId({
@@ -4801,9 +5167,10 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdMergeRequestsMergeRequestId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -4849,9 +5216,13 @@ export async function putV3PutV3ProjectsIdMergeRequestsMergeRequestId(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAddSpentTime(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project merge_request */
+  /**
+   * The ID of a project merge_request
+   */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -4888,9 +5259,13 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoji(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of an Issue, Merge Request or Snippet */
+  /**
+   * The ID of an Issue, Merge Request or Snippet
+   */
   mergeRequestId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -4911,9 +5286,7 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoji(
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoji(
-  /** undefined */
   id: number,
-  /** undefined */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -4939,11 +5312,11 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoj
  * @request DELETE :/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}
  */
 export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdAwardEmojiAwardId(
-  /** The ID of an award emoji */
+  /**
+   * The ID of an award emoji
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -4967,11 +5340,11 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdAward
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdAwardEmojiAwardId(
-  /** The ID of the award */
+  /**
+   * The ID of the award
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -4992,9 +5365,10 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdAwardEmojiA
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/cancel_merge_when_build_succeeds
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdCancelMergeWhenBuildSucceeds(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MergeRequest> {
   const result =
@@ -5017,9 +5391,10 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdCancelMer
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdChanges(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MergeRequestChanges> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdChanges(
@@ -5051,9 +5426,10 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdClosesIssue
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MRNote> {
   const result =
@@ -5085,9 +5461,10 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdComments(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<MRNote> {
   const result =
@@ -5108,9 +5485,10 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdComments(
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/comments
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdComments(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -5137,9 +5515,10 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdComments(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdCommits(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
 ): Promise<RepoCommit> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdCommits(
@@ -5160,9 +5539,10 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdCommits(
  * @request PUT :/v3/projects/{id}/merge_requests/{merge_request_id}/merge
  */
 export async function putV3PutV3ProjectsIdMergeRequestsMergeRequestIdMerge(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** undefined */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -5204,11 +5584,8 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
      */
     per_page?: number;
   },
-  /** undefined */
   id: number,
-  /** undefined */
   mergeRequestId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -5232,11 +5609,8 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmoji(
-  /** undefined */
   id: number,
-  /** undefined */
   mergeRequestId: number,
-  /** undefined */
   noteId: number,
   /** Request body */
   data: {
@@ -5265,13 +5639,12 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdNotesNote
  * @request DELETE :/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}
  */
 export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmojiAwardId(
-  /** The ID of an award emoji */
+  /**
+   * The ID of an award emoji
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   mergeRequestId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -5296,13 +5669,12 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdNotes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmojiAwardId(
-  /** The ID of the award */
+  /**
+   * The ID of the award
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   mergeRequestId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -5327,9 +5699,13 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetSpentTime(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project merge_request */
+  /**
+   * The ID of a project merge_request
+   */
   mergeRequestId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
@@ -5350,9 +5726,13 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetSpen
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetTimeEstimate(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project merge_request */
+  /**
+   * The ID of a project merge_request
+   */
   mergeRequestId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
@@ -5373,9 +5753,13 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetTime
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTimeEstimate(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project merge_request */
+  /**
+   * The ID of a project merge_request
+   */
   mergeRequestId: number,
   /** Request body */
   data: {
@@ -5403,9 +5787,13 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTimeEstim
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdTimeStats(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project merge_request */
+  /**
+   * The ID of a project merge_request
+   */
   mergeRequestId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
@@ -5425,9 +5813,13 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdTimeStats(
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/todo
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTodo(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of an issuable */
+  /**
+   * The ID of an issuable
+   */
   mergeRequestId: number,
 ): Promise<Todo> {
   const result = await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdTodo({
@@ -5447,9 +5839,13 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTodo(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdVersions(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a merge request */
+  /**
+   * The ID of a merge request
+   */
   mergeRequestId: number,
 ): Promise<MergeRequestDiff> {
   const result =
@@ -5470,11 +5866,17 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdVersions(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdVersionsVersionId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a merge request */
+  /**
+   * The ID of a merge request
+   */
   mergeRequestId: number,
-  /** The ID of a merge request diff version */
+  /**
+   * The ID of a merge request diff version
+   */
   versionId: number,
 ): Promise<MergeRequestDiffFull> {
   const result =
@@ -5506,9 +5908,13 @@ export async function getV3GetV3ProjectsIdMergeRequestsNoteableIdNotes(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsNoteableIdNotes({
@@ -5528,9 +5934,13 @@ export async function getV3GetV3ProjectsIdMergeRequestsNoteableIdNotes(
  * @request POST :/v3/projects/{id}/merge_requests/{noteable_id}/notes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsNoteableIdNotes(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
   /** Request body */
   data: {
@@ -5557,11 +5967,17 @@ export async function postV3PostV3ProjectsIdMergeRequestsNoteableIdNotes(
  * @request DELETE :/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}
  */
 export async function deleteV3DeleteV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
 ): Promise<Note> {
   const result =
@@ -5583,11 +5999,17 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsNoteableIdNotesNote
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
@@ -5609,11 +6031,17 @@ export async function getV3GetV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
  * @request PUT :/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}
  */
 export async function putV3PutV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
   /** Request body */
   data: {
@@ -5641,9 +6069,13 @@ export async function putV3PutV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
  * @request DELETE :/v3/projects/{id}/merge_requests/{subscribable_id}/subscription
  */
 export async function deleteV3DeleteV3ProjectsIdMergeRequestsSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<MergeRequest> {
   const result =
@@ -5663,9 +6095,13 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsSubscribableIdSubsc
  * @request POST :/v3/projects/{id}/merge_requests/{subscribable_id}/subscription
  */
 export async function postV3PostV3ProjectsIdMergeRequestsSubscribableIdSubscription(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a resource */
+  /**
+   * The ID of a resource
+   */
   subscribableId: string,
 ): Promise<MergeRequest> {
   const result =
@@ -5701,7 +6137,9 @@ export async function getV3GetV3ProjectsIdMilestones(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -5726,7 +6164,9 @@ export async function getV3GetV3ProjectsIdMilestones(
  * @request POST :/v3/projects/{id}/milestones
  */
 export async function postV3PostV3ProjectsIdMilestones(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -5757,9 +6197,13 @@ export async function postV3PostV3ProjectsIdMilestones(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMilestonesMilestoneId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project milestone */
+  /**
+   * The ID of a project milestone
+   */
   milestoneId: number,
 ): Promise<Milestone> {
   const result = await api.v3.getV3ProjectsIdMilestonesMilestoneId({
@@ -5779,9 +6223,13 @@ export async function getV3GetV3ProjectsIdMilestonesMilestoneId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdMilestonesMilestoneId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project milestone */
+  /**
+   * The ID of a project milestone
+   */
   milestoneId: number,
   /** Request body */
   data: {
@@ -5825,9 +6273,13 @@ export async function getV3GetV3ProjectsIdMilestonesMilestoneIdIssues(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project milestone */
+  /**
+   * The ID of a project milestone
+   */
   milestoneId: number,
 ): Promise<Issue> {
   const result = await api.v3.getV3ProjectsIdMilestonesMilestoneIdIssues({
@@ -5848,7 +6300,9 @@ export async function getV3GetV3ProjectsIdMilestonesMilestoneIdIssues(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdNotificationSettings(
-  /** The group ID or project ID or project NAMESPACE/PROJECT_NAME */
+  /**
+   * The group ID or project ID or project NAMESPACE/PROJECT_NAME
+   */
   id: string,
 ): Promise<NotificationSetting> {
   const result = await api.v3.getV3ProjectsIdNotificationSettings({
@@ -5866,7 +6320,9 @@ export async function getV3GetV3ProjectsIdNotificationSettings(
  * @request PUT :/v3/projects/{id}/notification_settings
  */
 export async function putV3PutV3ProjectsIdNotificationSettings(
-  /** The group ID or project ID or project NAMESPACE/PROJECT_NAME */
+  /**
+   * The group ID or project ID or project NAMESPACE/PROJECT_NAME
+   */
   id: string,
   /** Request body */
   data: {
@@ -5914,7 +6370,9 @@ export async function putV3PutV3ProjectsIdNotificationSettings(
  * @request POST :/v3/projects/{id}/pipeline
  */
 export async function postV3PostV3ProjectsIdPipeline(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
   /** Request body */
   data: {
@@ -5954,7 +6412,9 @@ export async function getV3GetV3ProjectsIdPipelines(
      */
     scope?: "running" | "branches" | "tags";
   },
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<Pipeline> {
   const result = await api.v3.getV3ProjectsIdPipelines({
@@ -5974,9 +6434,13 @@ export async function getV3GetV3ProjectsIdPipelines(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdPipelinesPipelineId(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The pipeline ID */
+  /**
+   * The pipeline ID
+   */
   pipelineId: number,
 ): Promise<Pipeline> {
   const result = await api.v3.getV3ProjectsIdPipelinesPipelineId({
@@ -5995,9 +6459,13 @@ export async function getV3GetV3ProjectsIdPipelinesPipelineId(
  * @request POST :/v3/projects/{id}/pipelines/{pipeline_id}/cancel
  */
 export async function postV3PostV3ProjectsIdPipelinesPipelineIdCancel(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The pipeline ID */
+  /**
+   * The pipeline ID
+   */
   pipelineId: number,
 ): Promise<Pipeline> {
   const result = await api.v3.postV3ProjectsIdPipelinesPipelineIdCancel({
@@ -6016,9 +6484,13 @@ export async function postV3PostV3ProjectsIdPipelinesPipelineIdCancel(
  * @request POST :/v3/projects/{id}/pipelines/{pipeline_id}/retry
  */
 export async function postV3PostV3ProjectsIdPipelinesPipelineIdRetry(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
-  /** The pipeline ID */
+  /**
+   * The pipeline ID
+   */
   pipelineId: number,
 ): Promise<Pipeline> {
   const result = await api.v3.postV3ProjectsIdPipelinesPipelineIdRetry({
@@ -6049,7 +6521,9 @@ export async function getV3GetV3ProjectsIdRepositoryArchive(
      */
     format?: string;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryArchive({
@@ -6076,9 +6550,13 @@ export async function getV3GetV3ProjectsIdRepositoryBlobsSha(
      */
     filepath: string;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The commit, branch name, or tag name */
+  /**
+   * The commit, branch name, or tag name
+   */
   sha: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryBlobsSha({
@@ -6099,7 +6577,9 @@ export async function getV3GetV3ProjectsIdRepositoryBlobsSha(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryBranches(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<RepoBranch> {
   const result = await api.v3.getV3ProjectsIdRepositoryBranches({
@@ -6117,7 +6597,9 @@ export async function getV3GetV3ProjectsIdRepositoryBranches(
  * @request POST :/v3/projects/{id}/repository/branches
  */
 export async function postV3PostV3ProjectsIdRepositoryBranches(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -6144,9 +6626,13 @@ export async function postV3PostV3ProjectsIdRepositoryBranches(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryBranchesBranch(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the branch */
+  /**
+   * The name of the branch
+   */
   branch: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryBranchesBranch({
@@ -6166,9 +6652,13 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryBranchesBranch(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryBranchesBranch(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the branch */
+  /**
+   * The name of the branch
+   */
   branch: string,
 ): Promise<RepoBranch> {
   const result = await api.v3.getV3ProjectsIdRepositoryBranchesBranch({
@@ -6187,9 +6677,13 @@ export async function getV3GetV3ProjectsIdRepositoryBranchesBranch(
  * @request PUT :/v3/projects/{id}/repository/branches/{branch}/protect
  */
 export async function putV3PutV3ProjectsIdRepositoryBranchesBranchProtect(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the branch */
+  /**
+   * The name of the branch
+   */
   branch: string,
   /** Request body */
   data: {
@@ -6216,9 +6710,13 @@ export async function putV3PutV3ProjectsIdRepositoryBranchesBranchProtect(
  * @request PUT :/v3/projects/{id}/repository/branches/{branch}/unprotect
  */
 export async function putV3PutV3ProjectsIdRepositoryBranchesBranchUnprotect(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the branch */
+  /**
+   * The name of the branch
+   */
   branch: string,
 ): Promise<RepoBranch> {
   const result = await api.v3.putV3ProjectsIdRepositoryBranchesBranchUnprotect({
@@ -6264,7 +6762,9 @@ export async function getV3GetV3ProjectsIdRepositoryCommits(
      */
     path?: string;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<RepoCommit> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommits({
@@ -6283,7 +6783,9 @@ export async function getV3GetV3ProjectsIdRepositoryCommits(
  * @request POST :/v3/projects/{id}/repository/commits
  */
 export async function postV3PostV3ProjectsIdRepositoryCommits(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -6316,9 +6818,13 @@ export async function postV3PostV3ProjectsIdRepositoryCommits(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsSha(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** A commit sha, or the name of a branch or tag */
+  /**
+   * A commit sha, or the name of a branch or tag
+   */
   sha: string,
 ): Promise<RepoCommitDetail> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsSha({
@@ -6345,9 +6851,13 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaBlob(
      */
     filepath: string;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The commit, branch name, or tag name */
+  /**
+   * The commit, branch name, or tag name
+   */
   sha: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaBlob({
@@ -6383,9 +6893,13 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaBuilds(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The SHA id of a commit */
+  /**
+   * The SHA id of a commit
+   */
   sha: string,
 ): Promise<Build> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaBuilds({
@@ -6405,9 +6919,13 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaBuilds(
  * @request POST :/v3/projects/{id}/repository/commits/{sha}/cherry_pick
  */
 export async function postV3PostV3ProjectsIdRepositoryCommitsShaCherryPick(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** A commit sha to be cherry picked */
+  /**
+   * A commit sha to be cherry picked
+   */
   sha: string,
   /** Request body */
   data: {
@@ -6443,9 +6961,13 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaComments(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** A commit sha, or the name of a branch or tag */
+  /**
+   * A commit sha, or the name of a branch or tag
+   */
   sha: string,
 ): Promise<CommitNote> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaComments({
@@ -6466,9 +6988,13 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaComments(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdRepositoryCommitsShaComments(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The commit's SHA */
+  /**
+   * The commit's SHA
+   */
   sha: string,
   /** Request body */
   data: {
@@ -6507,9 +7033,13 @@ export async function postV3PostV3ProjectsIdRepositoryCommitsShaComments(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsShaDiff(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** A commit sha, or the name of a branch or tag */
+  /**
+   * A commit sha, or the name of a branch or tag
+   */
   sha: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaDiff({
@@ -6551,9 +7081,13 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaStatuses(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The commit hash */
+  /**
+   * The commit hash
+   */
   sha: string,
 ): Promise<CommitStatus> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaStatuses({
@@ -6584,7 +7118,9 @@ export async function getV3GetV3ProjectsIdRepositoryCompare(
      */
     to: string;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Compare> {
   const result = await api.v3.getV3ProjectsIdRepositoryCompare({
@@ -6604,7 +7140,9 @@ export async function getV3GetV3ProjectsIdRepositoryCompare(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryContributors(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Contributor> {
   const result = await api.v3.getV3ProjectsIdRepositoryContributors({
@@ -6645,7 +7183,9 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryFiles(
      */
     author_name?: string;
   },
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryFiles({
@@ -6676,7 +7216,9 @@ export async function getV3GetV3ProjectsIdRepositoryFiles(
      */
     ref: string;
   },
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryFiles({
@@ -6696,7 +7238,9 @@ export async function getV3GetV3ProjectsIdRepositoryFiles(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdRepositoryFiles(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
   /** Request body */
   data: {
@@ -6733,7 +7277,9 @@ export async function postV3PostV3ProjectsIdRepositoryFiles(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdRepositoryFiles(
-  /** The project ID */
+  /**
+   * The project ID
+   */
   id: string,
   /** Request body */
   data: {
@@ -6770,7 +7316,9 @@ export async function putV3PutV3ProjectsIdRepositoryFiles(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryMergedBranches(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryMergedBranches({
@@ -6790,9 +7338,13 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryMergedBranches(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryRawBlobsSha(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The commit, branch name, or tag name */
+  /**
+   * The commit, branch name, or tag name
+   */
   sha: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryRawBlobsSha({
@@ -6812,7 +7364,9 @@ export async function getV3GetV3ProjectsIdRepositoryRawBlobsSha(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryTags(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<RepoTag> {
   const result = await api.v3.getV3ProjectsIdRepositoryTags({
@@ -6830,7 +7384,9 @@ export async function getV3GetV3ProjectsIdRepositoryTags(
  * @request POST :/v3/projects/{id}/repository/tags
  */
 export async function postV3PostV3ProjectsIdRepositoryTags(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -6861,9 +7417,13 @@ export async function postV3PostV3ProjectsIdRepositoryTags(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryTagsTagName(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the tag */
+  /**
+   * The name of the tag
+   */
   tagName: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryTagsTagName({
@@ -6883,9 +7443,13 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryTagsTagName(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryTagsTagName(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the tag */
+  /**
+   * The name of the tag
+   */
   tagName: string,
 ): Promise<RepoTag> {
   const result = await api.v3.getV3ProjectsIdRepositoryTagsTagName({
@@ -6904,9 +7468,13 @@ export async function getV3GetV3ProjectsIdRepositoryTagsTagName(
  * @request POST :/v3/projects/{id}/repository/tags/{tag_name}/release
  */
 export async function postV3PostV3ProjectsIdRepositoryTagsTagNameRelease(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the tag */
+  /**
+   * The name of the tag
+   */
   tagName: string,
   /** Request body */
   data: {
@@ -6931,9 +7499,13 @@ export async function postV3PostV3ProjectsIdRepositoryTagsTagNameRelease(
  * @request PUT :/v3/projects/{id}/repository/tags/{tag_name}/release
  */
 export async function putV3PutV3ProjectsIdRepositoryTagsTagNameRelease(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The name of the tag */
+  /**
+   * The name of the tag
+   */
   tagName: string,
   /** Request body */
   data: {
@@ -6973,7 +7545,9 @@ export async function getV3GetV3ProjectsIdRepositoryTree(
      */
     recursive?: boolean;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<RepoTreeObject> {
   const result = await api.v3.getV3ProjectsIdRepositoryTree({
@@ -7008,7 +7582,9 @@ export async function getV3GetV3ProjectsIdRunners(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Runner> {
   const result = await api.v3.getV3ProjectsIdRunners({
@@ -7027,7 +7603,9 @@ export async function getV3GetV3ProjectsIdRunners(
  * @request POST :/v3/projects/{id}/runners
  */
 export async function postV3PostV3ProjectsIdRunners(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -7054,9 +7632,13 @@ export async function postV3PostV3ProjectsIdRunners(
  * @request DELETE :/v3/projects/{id}/runners/{runner_id}
  */
 export async function deleteV3DeleteV3ProjectsIdRunnersRunnerId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the runner */
+  /**
+   * The ID of the runner
+   */
   runnerId: number,
 ): Promise<Runner> {
   const result = await api.v3.deleteV3ProjectsIdRunnersRunnerId({
@@ -7076,7 +7658,6 @@ export async function deleteV3DeleteV3ProjectsIdRunnersRunnerId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesAsana(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7105,7 +7686,6 @@ export async function putV3PutV3ProjectsIdServicesAsana(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesAssembla(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7134,7 +7714,6 @@ export async function putV3PutV3ProjectsIdServicesAssembla(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBamboo(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7167,7 +7746,6 @@ export async function putV3PutV3ProjectsIdServicesBamboo(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBugzilla(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7202,7 +7780,6 @@ export async function putV3PutV3ProjectsIdServicesBugzilla(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBuildkite(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7233,7 +7810,6 @@ export async function putV3PutV3ProjectsIdServicesBuildkite(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBuildsEmail(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7264,7 +7840,6 @@ export async function putV3PutV3ProjectsIdServicesBuildsEmail(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesCampfire(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7295,7 +7870,6 @@ export async function putV3PutV3ProjectsIdServicesCampfire(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesCustomIssueTracker(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7330,7 +7904,6 @@ export async function putV3PutV3ProjectsIdServicesCustomIssueTracker(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesDroneCi(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7365,7 +7938,6 @@ export async function putV3PutV3ProjectsIdServicesDroneCi(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesEmailsOnPush(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7398,7 +7970,6 @@ export async function putV3PutV3ProjectsIdServicesEmailsOnPush(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesExternalWiki(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7423,7 +7994,6 @@ export async function putV3PutV3ProjectsIdServicesExternalWiki(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesFlowdock(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7450,7 +8020,6 @@ export async function putV3PutV3ProjectsIdServicesFlowdock(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesGemnasium(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7479,7 +8048,6 @@ export async function putV3PutV3ProjectsIdServicesGemnasium(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesHipchat(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7528,7 +8096,6 @@ export async function putV3PutV3ProjectsIdServicesHipchat(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesIrker(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7566,7 +8133,6 @@ export async function putV3PutV3ProjectsIdServicesIrker(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesJira(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7606,7 +8172,6 @@ export async function putV3PutV3ProjectsIdServicesJira(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesKubernetes(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7637,7 +8202,6 @@ export async function putV3PutV3ProjectsIdServicesKubernetes(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesMattermost(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7679,7 +8243,6 @@ export async function putV3PutV3ProjectsIdServicesMattermost(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesMattermostSlashCommands(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7704,7 +8267,9 @@ export async function putV3PutV3ProjectsIdServicesMattermostSlashCommands(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdServicesMattermostSlashCommandsTrigger(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -7730,7 +8295,6 @@ export async function postV3PostV3ProjectsIdServicesMattermostSlashCommandsTrigg
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesPipelinesEmail(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7758,7 +8322,6 @@ export async function putV3PutV3ProjectsIdServicesPipelinesEmail(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesPivotaltracker(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7787,7 +8350,6 @@ export async function putV3PutV3ProjectsIdServicesPivotaltracker(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesPushover(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7822,7 +8384,6 @@ export async function putV3PutV3ProjectsIdServicesPushover(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesRedmine(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7855,7 +8416,6 @@ export async function putV3PutV3ProjectsIdServicesRedmine(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesSlack(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7901,7 +8461,6 @@ export async function putV3PutV3ProjectsIdServicesSlack(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesSlackSlashCommands(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7926,7 +8485,9 @@ export async function putV3PutV3ProjectsIdServicesSlackSlashCommands(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdServicesSlackSlashCommandsTrigger(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -7953,7 +8514,6 @@ export async function postV3PostV3ProjectsIdServicesSlackSlashCommandsTrigger(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesTeamcity(
-  /** undefined */
   id: number,
   /** Request body */
   data: {
@@ -7986,7 +8546,9 @@ export async function putV3PutV3ProjectsIdServicesTeamcity(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdServicesServiceSlug(
-  /** The name of the service */
+  /**
+   * The name of the service
+   */
   serviceSlug:
     | "asana"
     | "assembla"
@@ -8014,7 +8576,6 @@ export async function deleteV3DeleteV3ProjectsIdServicesServiceSlug(
     | "slack"
     | "mattermost"
     | "teamcity",
-  /** undefined */
   id: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdServicesServiceSlug({
@@ -8035,7 +8596,9 @@ export async function deleteV3DeleteV3ProjectsIdServicesServiceSlug(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdServicesServiceSlug(
-  /** The name of the service */
+  /**
+   * The name of the service
+   */
   serviceSlug:
     | "asana"
     | "assembla"
@@ -8063,7 +8626,6 @@ export async function getV3GetV3ProjectsIdServicesServiceSlug(
     | "slack"
     | "mattermost"
     | "teamcity",
-  /** undefined */
   id: number,
 ): Promise<ProjectService> {
   const result = await api.v3.getV3ProjectsIdServicesServiceSlug({
@@ -8083,7 +8645,9 @@ export async function getV3GetV3ProjectsIdServicesServiceSlug(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdShare(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -8121,9 +8685,13 @@ export async function postV3PostV3ProjectsIdShare(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdShareGroupId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the group */
+  /**
+   * The ID of the group
+   */
   groupId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdShareGroupId({
@@ -8153,7 +8721,9 @@ export async function getV3GetV3ProjectsIdSnippets(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<ProjectSnippet> {
   const result = await api.v3.getV3ProjectsIdSnippets({
@@ -8173,7 +8743,9 @@ export async function getV3GetV3ProjectsIdSnippets(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdSnippets(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -8217,9 +8789,13 @@ export async function getV3GetV3ProjectsIdSnippetsNoteableIdNotes(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdSnippetsNoteableIdNotes({
@@ -8239,9 +8815,13 @@ export async function getV3GetV3ProjectsIdSnippetsNoteableIdNotes(
  * @request POST :/v3/projects/{id}/snippets/{noteable_id}/notes
  */
 export async function postV3PostV3ProjectsIdSnippetsNoteableIdNotes(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
   /** Request body */
   data: {
@@ -8268,11 +8848,17 @@ export async function postV3PostV3ProjectsIdSnippetsNoteableIdNotes(
  * @request DELETE :/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}
  */
 export async function deleteV3DeleteV3ProjectsIdSnippetsNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
 ): Promise<Note> {
   const result = await api.v3.deleteV3ProjectsIdSnippetsNoteableIdNotesNoteId({
@@ -8293,11 +8879,17 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsNoteableIdNotesNoteId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdSnippetsNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdSnippetsNoteableIdNotesNoteId({
@@ -8317,11 +8909,17 @@ export async function getV3GetV3ProjectsIdSnippetsNoteableIdNotesNoteId(
  * @request PUT :/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}
  */
 export async function putV3PutV3ProjectsIdSnippetsNoteableIdNotesNoteId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of the noteable */
+  /**
+   * The ID of the noteable
+   */
   noteableId: number,
-  /** The ID of a note */
+  /**
+   * The ID of a note
+   */
   noteId: number,
   /** Request body */
   data: {
@@ -8348,9 +8946,13 @@ export async function putV3PutV3ProjectsIdSnippetsNoteableIdNotesNoteId(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project snippet */
+  /**
+   * The ID of a project snippet
+   */
   snippetId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdSnippetsSnippetId({
@@ -8370,9 +8972,13 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetId(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdSnippetsSnippetId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project snippet */
+  /**
+   * The ID of a project snippet
+   */
   snippetId: number,
 ): Promise<ProjectSnippet> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetId({
@@ -8392,9 +8998,13 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdSnippetsSnippetId(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project snippet */
+  /**
+   * The ID of a project snippet
+   */
   snippetId: number,
   /** Request body */
   data: {
@@ -8439,9 +9049,13 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdAwardEmoji(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of an Issue, Merge Request or Snippet */
+  /**
+   * The ID of an Issue, Merge Request or Snippet
+   */
   snippetId: number,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetIdAwardEmoji({
@@ -8461,9 +9075,7 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdAwardEmoji(
  * @request POST :/v3/projects/{id}/snippets/{snippet_id}/award_emoji
  */
 export async function postV3PostV3ProjectsIdSnippetsSnippetIdAwardEmoji(
-  /** undefined */
   id: number,
-  /** undefined */
   snippetId: number,
   /** Request body */
   data: {
@@ -8488,11 +9100,11 @@ export async function postV3PostV3ProjectsIdSnippetsSnippetIdAwardEmoji(
  * @request DELETE :/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}
  */
 export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetIdAwardEmojiAwardId(
-  /** The ID of an award emoji */
+  /**
+   * The ID of an award emoji
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   snippetId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -8514,11 +9126,11 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetIdAwardEmojiAward
  * @readonly
  */
 export async function getV3GetV3ProjectsIdSnippetsSnippetIdAwardEmojiAwardId(
-  /** The ID of the award */
+  /**
+   * The ID of the award
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   snippetId: number,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetIdAwardEmojiAwardId(
@@ -8551,11 +9163,8 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
      */
     per_page?: number;
   },
-  /** undefined */
   id: number,
-  /** undefined */
   snippetId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -8577,11 +9186,8 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
  * @request POST :/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji
  */
 export async function postV3PostV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji(
-  /** undefined */
   id: number,
-  /** undefined */
   snippetId: number,
-  /** undefined */
   noteId: number,
   /** Request body */
   data: {
@@ -8608,13 +9214,12 @@ export async function postV3PostV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmo
  * @request DELETE :/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}
  */
 export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmojiAwardId(
-  /** The ID of an award emoji */
+  /**
+   * The ID of an award emoji
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   snippetId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -8639,13 +9244,12 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwar
  * @readonly
  */
 export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmojiAwardId(
-  /** The ID of the award */
+  /**
+   * The ID of the award
+   */
   awardId: number,
-  /** undefined */
   id: number,
-  /** undefined */
   snippetId: number,
-  /** undefined */
   noteId: number,
 ): Promise<AwardEmoji> {
   const result =
@@ -8669,9 +9273,13 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
  * @readonly
  */
 export async function getV3GetV3ProjectsIdSnippetsSnippetIdRaw(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The ID of a project snippet */
+  /**
+   * The ID of a project snippet
+   */
   snippetId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetIdRaw({
@@ -8690,7 +9298,9 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdRaw(
  * @request DELETE :/v3/projects/{id}/star
  */
 export async function deleteV3DeleteV3ProjectsIdStar(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Project> {
   const result = await api.v3.deleteV3ProjectsIdStar({
@@ -8708,7 +9318,9 @@ export async function deleteV3DeleteV3ProjectsIdStar(
  * @request POST :/v3/projects/{id}/star
  */
 export async function postV3PostV3ProjectsIdStar(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsIdStar({
@@ -8727,9 +9339,13 @@ export async function postV3PostV3ProjectsIdStar(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdStatusesSha(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The commit hash */
+  /**
+   * The commit hash
+   */
   sha: string,
   /** Request body */
   data: {
@@ -8775,7 +9391,9 @@ export async function getV3GetV3ProjectsIdTriggers(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Trigger> {
   const result = await api.v3.getV3ProjectsIdTriggers({
@@ -8794,7 +9412,9 @@ export async function getV3GetV3ProjectsIdTriggers(
  * @request POST :/v3/projects/{id}/triggers
  */
 export async function postV3PostV3ProjectsIdTriggers(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Trigger> {
   const result = await api.v3.postV3ProjectsIdTriggers({
@@ -8812,9 +9432,13 @@ export async function postV3PostV3ProjectsIdTriggers(
  * @request DELETE :/v3/projects/{id}/triggers/{token}
  */
 export async function deleteV3DeleteV3ProjectsIdTriggersToken(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The unique token of trigger */
+  /**
+   * The unique token of trigger
+   */
   token: string,
 ): Promise<Trigger> {
   const result = await api.v3.deleteV3ProjectsIdTriggersToken({
@@ -8834,9 +9458,13 @@ export async function deleteV3DeleteV3ProjectsIdTriggersToken(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdTriggersToken(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The unique token of trigger */
+  /**
+   * The unique token of trigger
+   */
   token: string,
 ): Promise<Trigger> {
   const result = await api.v3.getV3ProjectsIdTriggersToken({
@@ -8855,7 +9483,9 @@ export async function getV3GetV3ProjectsIdTriggersToken(
  * @request POST :/v3/projects/{id}/unarchive
  */
 export async function postV3PostV3ProjectsIdUnarchive(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsIdUnarchive({
@@ -8874,7 +9504,9 @@ export async function postV3PostV3ProjectsIdUnarchive(
  * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdUploads(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -8913,7 +9545,9 @@ export async function getV3GetV3ProjectsIdUsers(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<UserBasic> {
   const result = await api.v3.getV3ProjectsIdUsers({
@@ -8943,7 +9577,9 @@ export async function getV3GetV3ProjectsIdVariables(
      */
     per_page?: number;
   },
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
 ): Promise<Variable> {
   const result = await api.v3.getV3ProjectsIdVariables({
@@ -8962,7 +9598,9 @@ export async function getV3GetV3ProjectsIdVariables(
  * @request POST :/v3/projects/{id}/variables
  */
 export async function postV3PostV3ProjectsIdVariables(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
   /** Request body */
   data: {
@@ -8988,9 +9626,13 @@ export async function postV3PostV3ProjectsIdVariables(
  * @request DELETE :/v3/projects/{id}/variables/{key}
  */
 export async function deleteV3DeleteV3ProjectsIdVariablesKey(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The key of the variable */
+  /**
+   * The key of the variable
+   */
   key: string,
 ): Promise<Variable> {
   const result = await api.v3.deleteV3ProjectsIdVariablesKey({
@@ -9010,9 +9652,13 @@ export async function deleteV3DeleteV3ProjectsIdVariablesKey(
  * @readonly
  */
 export async function getV3GetV3ProjectsIdVariablesKey(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The key of the variable */
+  /**
+   * The key of the variable
+   */
   key: string,
 ): Promise<Variable> {
   const result = await api.v3.getV3ProjectsIdVariablesKey({
@@ -9031,9 +9677,13 @@ export async function getV3GetV3ProjectsIdVariablesKey(
  * @request PUT :/v3/projects/{id}/variables/{key}
  */
 export async function putV3PutV3ProjectsIdVariablesKey(
-  /** The ID of a project */
+  /**
+   * The ID of a project
+   */
   id: string,
-  /** The key of the variable */
+  /**
+   * The key of the variable
+   */
   key: string,
   /** Request body */
   data: {
@@ -9118,7 +9768,9 @@ export async function getV3GetV3RunnersAll(query: {
  * @request DELETE :/v3/runners/{id}
  */
 export async function deleteV3DeleteV3RunnersId(
-  /** The ID of the runner */
+  /**
+   * The ID of the runner
+   */
   id: number,
 ): Promise<Runner> {
   const result = await api.v3.deleteV3RunnersId({
@@ -9137,7 +9789,9 @@ export async function deleteV3DeleteV3RunnersId(
  * @readonly
  */
 export async function getV3GetV3RunnersId(
-  /** The ID of the runner */
+  /**
+   * The ID of the runner
+   */
   id: number,
 ): Promise<RunnerDetails> {
   const result = await api.v3.getV3RunnersId({
@@ -9155,7 +9809,9 @@ export async function getV3GetV3RunnersId(
  * @request PUT :/v3/runners/{id}
  */
 export async function putV3PutV3RunnersId(
-  /** The ID of the runner */
+  /**
+   * The ID of the runner
+   */
   id: number,
   /** Request body */
   data: {
@@ -9354,7 +10010,9 @@ export async function getV3GetV3SnippetsPublic(query: {
  * @request DELETE :/v3/snippets/{id}
  */
 export async function deleteV3DeleteV3SnippetsId(
-  /** The ID of a snippet */
+  /**
+   * The ID of a snippet
+   */
   id: number,
 ): Promise<PersonalSnippet> {
   const result = await api.v3.deleteV3SnippetsId({
@@ -9373,7 +10031,9 @@ export async function deleteV3DeleteV3SnippetsId(
  * @readonly
  */
 export async function getV3GetV3SnippetsId(
-  /** The ID of a snippet */
+  /**
+   * The ID of a snippet
+   */
   id: number,
 ): Promise<PersonalSnippet> {
   const result = await api.v3.getV3SnippetsId({
@@ -9392,7 +10052,9 @@ export async function getV3GetV3SnippetsId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3SnippetsId(
-  /** The ID of a snippet */
+  /**
+   * The ID of a snippet
+   */
   id: number,
   /** Request body */
   data: {
@@ -9427,7 +10089,9 @@ export async function putV3PutV3SnippetsId(
  * @readonly
  */
 export async function getV3GetV3SnippetsIdRaw(
-  /** The ID of a snippet */
+  /**
+   * The ID of a snippet
+   */
   id: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3SnippetsIdRaw({
@@ -9460,7 +10124,9 @@ export async function getV3GetV3TemplatesDockerfiles(): Promise<TemplatesList> {
  * @readonly
  */
 export async function getV3GetV3TemplatesDockerfilesName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<Template> {
   const result = await api.v3.getV3TemplatesDockerfilesName({
@@ -9493,7 +10159,9 @@ export async function getV3GetV3TemplatesGitignores(): Promise<TemplatesList> {
  * @readonly
  */
 export async function getV3GetV3TemplatesGitignoresName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<Template> {
   const result = await api.v3.getV3TemplatesGitignoresName({
@@ -9526,7 +10194,9 @@ export async function getV3GetV3TemplatesGitlabCiYmls(): Promise<TemplatesList> 
  * @readonly
  */
 export async function getV3GetV3TemplatesGitlabCiYmlsName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<Template> {
   const result = await api.v3.getV3TemplatesGitlabCiYmlsName({
@@ -9566,7 +10236,9 @@ export async function getV3GetV3TemplatesLicenses(query: {
  * @readonly
  */
 export async function getV3GetV3TemplatesLicensesName(
-  /** The name of the template */
+  /**
+   * The name of the template
+   */
   name: string,
 ): Promise<RepoLicense> {
   const result = await api.v3.getV3TemplatesLicensesName({
@@ -9623,7 +10295,9 @@ export async function getV3GetV3Todos(query: {
  * @request DELETE :/v3/todos/{id}
  */
 export async function deleteV3DeleteV3TodosId(
-  /** The ID of the todo being marked as done */
+  /**
+   * The ID of the todo being marked as done
+   */
   id: number,
 ): Promise<Todo> {
   const result = await api.v3.deleteV3TodosId({
@@ -9691,7 +10365,9 @@ export async function postV3PostV3UserEmails(
  * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3UserEmailsEmailId(
-  /** The ID of the email */
+  /**
+   * The ID of the email
+   */
   emailId: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3UserEmailsEmailId({
@@ -9710,7 +10386,9 @@ export async function deleteV3DeleteV3UserEmailsEmailId(
  * @readonly
  */
 export async function getV3GetV3UserEmailsEmailId(
-  /** The ID of the email */
+  /**
+   * The ID of the email
+   */
   emailId: number,
 ): Promise<Email> {
   const result = await api.v3.getV3UserEmailsEmailId({
@@ -9765,7 +10443,9 @@ export async function postV3PostV3UserKeys(
  * @request DELETE :/v3/user/keys/{key_id}
  */
 export async function deleteV3DeleteV3UserKeysKeyId(
-  /** The ID of the SSH key */
+  /**
+   * The ID of the SSH key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3UserKeysKeyId({
@@ -9784,7 +10464,9 @@ export async function deleteV3DeleteV3UserKeysKeyId(
  * @readonly
  */
 export async function getV3GetV3UserKeysKeyId(
-  /** The ID of the SSH key */
+  /**
+   * The ID of the SSH key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3UserKeysKeyId({
@@ -9905,7 +10587,9 @@ export async function postV3PostV3Users(
  * @request DELETE :/v3/users/{id}
  */
 export async function deleteV3DeleteV3UsersId(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
 ): Promise<Email> {
   const result = await api.v3.deleteV3UsersId({
@@ -9924,7 +10608,9 @@ export async function deleteV3DeleteV3UsersId(
  * @readonly
  */
 export async function getV3GetV3UsersId(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
 ): Promise<UserBasic> {
   const result = await api.v3.getV3UsersId({
@@ -9942,7 +10628,9 @@ export async function getV3GetV3UsersId(
  * @request PUT :/v3/users/{id}
  */
 export async function putV3PutV3UsersId(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
   /** Request body */
   data: {
@@ -10004,7 +10692,9 @@ export async function putV3PutV3UsersId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3UsersIdBlock(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3UsersIdBlock({
@@ -10023,7 +10713,9 @@ export async function putV3PutV3UsersIdBlock(
  * @readonly
  */
 export async function getV3GetV3UsersIdEmails(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
 ): Promise<Email> {
   const result = await api.v3.getV3UsersIdEmails({
@@ -10041,7 +10733,9 @@ export async function getV3GetV3UsersIdEmails(
  * @request POST :/v3/users/{id}/emails
  */
 export async function postV3PostV3UsersIdEmails(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
   /** Request body */
   data: {
@@ -10065,9 +10759,13 @@ export async function postV3PostV3UsersIdEmails(
  * @request DELETE :/v3/users/{id}/emails/{email_id}
  */
 export async function deleteV3DeleteV3UsersIdEmailsEmailId(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
-  /** The ID of the email */
+  /**
+   * The ID of the email
+   */
   emailId: number,
 ): Promise<Email> {
   const result = await api.v3.deleteV3UsersIdEmailsEmailId({
@@ -10097,7 +10795,9 @@ export async function getV3GetV3UsersIdEvents(
      */
     per_page?: number;
   },
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
 ): Promise<Event> {
   const result = await api.v3.getV3UsersIdEvents({
@@ -10117,7 +10817,9 @@ export async function getV3GetV3UsersIdEvents(
  * @readonly
  */
 export async function getV3GetV3UsersIdKeys(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3UsersIdKeys({
@@ -10135,7 +10837,9 @@ export async function getV3GetV3UsersIdKeys(
  * @request POST :/v3/users/{id}/keys
  */
 export async function postV3PostV3UsersIdKeys(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
   /** Request body */
   data: {
@@ -10161,9 +10865,13 @@ export async function postV3PostV3UsersIdKeys(
  * @request DELETE :/v3/users/{id}/keys/{key_id}
  */
 export async function deleteV3DeleteV3UsersIdKeysKeyId(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
-  /** The ID of the SSH key */
+  /**
+   * The ID of the SSH key
+   */
   keyId: number,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3UsersIdKeysKeyId({
@@ -10183,7 +10891,9 @@ export async function deleteV3DeleteV3UsersIdKeysKeyId(
  * @allowrelaxedtypes
  */
 export async function putV3PutV3UsersIdUnblock(
-  /** The ID of the user */
+  /**
+   * The ID of the user
+   */
   id: number,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3UsersIdUnblock({

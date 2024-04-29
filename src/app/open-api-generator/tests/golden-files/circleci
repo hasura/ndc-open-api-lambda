@@ -71,10 +71,12 @@ Set to "completed", "successful", "failed", "running", or defaults to no filter.
  */
     filter?: "completed" | "successful" | "failed" | "running";
   },
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
 ): Promise<Builds> {
@@ -95,10 +97,12 @@ Set to "completed", "successful", "failed", "running", or defaults to no filter.
  * @request POST :/project/{username}/{project}
  */
 export async function postProjectProjectCreate(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
   /** Request body */
@@ -133,10 +137,12 @@ export async function postProjectProjectCreate(
  * @request DELETE :/project/{username}/{project}/build-cache
  */
 export async function deleteProjectBuildCacheDelete(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
 ): Promise<{
@@ -159,10 +165,12 @@ export async function deleteProjectBuildCacheDelete(
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
 ): Promise<Keys> {
@@ -183,10 +191,12 @@ export async function getProjectCheckoutKeyDetail(
  * @allowrelaxedtypes
  */
 export async function postProjectCheckoutKeyCreate(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
   /** Request body */
@@ -209,13 +219,16 @@ export async function postProjectCheckoutKeyCreate(
  * @request DELETE :/project/{username}/{project}/checkout-key/{fingerprint}
  */
 export async function deleteProjectCheckoutKeyDelete(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   fingerprint: string,
 ): Promise<{
@@ -240,13 +253,16 @@ export async function deleteProjectCheckoutKeyDelete(
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail2(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   fingerprint: string,
 ): Promise<Key> {
@@ -268,10 +284,12 @@ export async function getProjectCheckoutKeyDetail2(
  * @readonly
  */
 export async function getProjectEnvvarDetail(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
 ): Promise<Envvars> {
@@ -291,10 +309,12 @@ export async function getProjectEnvvarDetail(
  * @request POST :/project/{username}/{project}/envvar
  */
 export async function postProjectEnvvarCreate(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
 ): Promise<Envvar> {
@@ -314,13 +334,16 @@ export async function postProjectEnvvarCreate(
  * @request DELETE :/project/{username}/{project}/envvar/{name}
  */
 export async function deleteProjectEnvvarDelete(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   name: string,
 ): Promise<{
@@ -344,13 +367,16 @@ export async function deleteProjectEnvvarDelete(
  * @readonly
  */
 export async function getProjectEnvvarDetail2(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   name: string,
 ): Promise<Envvar> {
@@ -372,10 +398,12 @@ export async function getProjectEnvvarDetail2(
  * @allowrelaxedtypes
  */
 export async function postProjectSshKeyCreate(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
   /** Request body */
@@ -401,13 +429,16 @@ export async function postProjectSshKeyCreate(
  * @request POST :/project/{username}/{project}/tree/{branch}
  */
 export async function postProjectTreeCreate(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** The branch name should be url-encoded.
+  /**
+   * The branch name should be url-encoded.
    */
   branch: string,
   /** Request body */
@@ -442,13 +473,16 @@ export async function postProjectTreeCreate(
  * @readonly
  */
 export async function getProjectProjectDetail2(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   buildNum: number,
 ): Promise<BuildDetail> {
@@ -470,13 +504,16 @@ export async function getProjectProjectDetail2(
  * @readonly
  */
 export async function getProjectArtifactsDetail(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   buildNum: number,
 ): Promise<Artifacts> {
@@ -497,13 +534,16 @@ export async function getProjectArtifactsDetail(
  * @request POST :/project/{username}/{project}/{build_num}/cancel
  */
 export async function postProjectCancelCreate(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   buildNum: number,
 ): Promise<Build> {
@@ -524,13 +564,16 @@ export async function postProjectCancelCreate(
  * @request POST :/project/{username}/{project}/{build_num}/retry
  */
 export async function postProjectRetryCreate(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   buildNum: number,
 ): Promise<Build> {
@@ -552,13 +595,16 @@ export async function postProjectRetryCreate(
  * @readonly
  */
 export async function getProjectTestsDetail(
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   username: string,
-  /** XXXXXXXXX
+  /**
+   * XXXXXXXXX
    */
   project: string,
-  /** XXXXXXXXXX
+  /**
+   * XXXXXXXXXX
    */
   buildNum: number,
 ): Promise<Tests> {

@@ -290,7 +290,6 @@ export async function postAppsPostConfigApacheSlingGetServlet(query: {
  * @allowrelaxedtypes
  */
 export async function postAppsPostConfigProperty(
-  /** undefined */
   configNodeName: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigProperty({
@@ -413,7 +412,6 @@ export async function postCrxPostPackageServiceJson(
     force?: boolean;
     recursive?: boolean;
   },
-  /** undefined */
   path: string,
   /** Request body */
   data: {
@@ -476,10 +474,7 @@ export async function postCrxPostPackageUpdate(query: {
  * @request GET :/crx/server/crx.default/jcr:root/.1.json
  * @readonly
  */
-export async function getCrxGetCrxdeStatus(
-  /**  */
-  root: string,
-): Promise<string> {
+export async function getCrxGetCrxdeStatus(root: string): Promise<string> {
   const result = await api.crx.getCrxdeStatus({
     root: root,
   });
@@ -497,11 +492,8 @@ export async function getCrxGetCrxdeStatus(
  * @readonly
  */
 export async function getEtcGetPackage(
-  /** undefined */
   group: string,
-  /** undefined */
   name: string,
-  /** undefined */
   version: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getPackage({
@@ -523,15 +515,10 @@ export async function getEtcGetPackage(
  * @readonly
  */
 export async function getEtcGetPackageFilter(
-  /** undefined */
   group: string,
-  /** undefined */
   name: string,
-  /** undefined */
   version: string,
-  /**  */
   content: string,
-  /**  */
   definition: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getPackageFilter({
@@ -555,7 +542,6 @@ export async function getEtcGetPackageFilter(
  * @readonly
  */
 export async function getEtcGetAgents(
-  /** undefined */
   runmode: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getAgents({
@@ -574,9 +560,7 @@ export async function getEtcGetAgents(
  * @allowrelaxedtypes
  */
 export async function deleteEtcDeleteAgent(
-  /** undefined */
   runmode: string,
-  /** undefined */
   name: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.deleteAgent({
@@ -597,9 +581,7 @@ export async function deleteEtcDeleteAgent(
  * @readonly
  */
 export async function getEtcGetAgent(
-  /** undefined */
   runmode: string,
-  /** undefined */
   name: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getAgent({
@@ -671,9 +653,7 @@ export async function postEtcPostAgent(
     "jcr:primaryType"?: string;
     ":operation"?: string;
   },
-  /** undefined */
   runmode: string,
-  /** undefined */
   name: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.postAgent({
@@ -868,7 +848,6 @@ export async function postLibsPostTreeActivation(query: {
  */
 export async function postSystemPostBundle(
   query: { action: string },
-  /** undefined */
   name: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.system.postBundle({
@@ -888,7 +867,6 @@ export async function postSystemPostBundle(
  * @readonly
  */
 export async function getSystemGetBundleInfo(
-  /** undefined */
   name: string,
 ): Promise<BundleInfo> {
   const result = await api.system.getBundleInfo({
@@ -967,9 +945,7 @@ export async function postSystemPostSamlConfiguration(query: {
  * @allowrelaxedtypes
  */
 export async function postSystemPostJmxRepository(
-  /** undefined */
   action: string,
-  /**  */
   type: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.system.postJmxRepository({
@@ -1034,9 +1010,7 @@ export async function postIntermediatePathPostAuthorizableKeystore(
     newAlias?: string;
     removeAlias?: string;
   },
-  /** undefined */
   intermediatePath: string,
-  /** undefined */
   authorizableId: string,
   /** Request body */
   data: {
@@ -1067,9 +1041,7 @@ export async function postIntermediatePathPostAuthorizableKeystore(
  * @readonly
  */
 export async function getIntermediatePathGetAuthorizableKeystore(
-  /** undefined */
   intermediatePath: string,
-  /** undefined */
   authorizableId: string,
 ): Promise<KeystoreInfo> {
   const result = await api.intermediatePath.getAuthorizableKeystore({
@@ -1090,9 +1062,7 @@ export async function getIntermediatePathGetAuthorizableKeystore(
  * @readonly
  */
 export async function getIntermediatePathGetKeystore(
-  /** undefined */
   intermediatePath: string,
-  /** undefined */
   authorizableId: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.intermediatePath.getKeystore({
@@ -1113,7 +1083,6 @@ export async function getIntermediatePathGetKeystore(
  */
 export async function postPathPostPath(
   query: { "jcr:primaryType": string; ":name": string },
-  /** undefined */
   path: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postPath({
@@ -1133,9 +1102,7 @@ export async function postPathPostPath(
  * @allowrelaxedtypes
  */
 export async function deletePathDeleteNode(
-  /** undefined */
   path: string,
-  /** undefined */
   name: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.deleteNode({
@@ -1156,9 +1123,7 @@ export async function deletePathDeleteNode(
  * @readonly
  */
 export async function getPathGetNode(
-  /** undefined */
   path: string,
-  /** undefined */
   name: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.getNode({
@@ -1179,9 +1144,7 @@ export async function getPathGetNode(
  */
 export async function postPathPostNode(
   query: { ":operation"?: string; deleteAuthorizable?: string },
-  /** undefined */
   path: string,
-  /** undefined */
   name: string,
   /** Request body */
   data: {
@@ -1209,9 +1172,7 @@ export async function postPathPostNode(
  */
 export async function postPathPostNodeRw(
   query: { addMembers?: string },
-  /** undefined */
   path: string,
-  /** undefined */
   name: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postNodeRw({
