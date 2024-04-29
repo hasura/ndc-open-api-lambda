@@ -1,0 +1,69 @@
+{
+  "post_/pet": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "put_/pet": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/pet/findByStatus": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/pet/findByTags": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/pet/{petId}": {
+    "params": "\n/**\n* ID of pet to return\n*/\n petId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/pet/{petId}": {
+    "params": "\n/**\n* ID of pet that needs to be updated\n*/\n petId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/pet/{petId}": {
+    "params": "\n/**\n* Pet id to delete\n*/\n petId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/pet/{petId}/uploadImage": {
+    "params": "\n/**\n* ID of pet to update\n*/\n petId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/store/inventory": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/store/order": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/store/order/{orderId}": {
+    "params": "\n/**\n* ID of order that needs to be fetched\n*/\n orderId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/store/order/{orderId}": {
+    "params": "\n/**\n* ID of the order that needs to be deleted\n*/\n orderId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/user": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/user/createWithList": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/user/login": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/user/logout": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/user/{username}": {
+    "params": "\n/**\n* The name that needs to be fetched. Use user1 for testing. \n*/\n username: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/user/{username}": {
+    "params": "\n/**\n* name that needs to be updated\n*/\n username: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/user/{username}": {
+    "params": "\n/**\n* The name that needs to be deleted\n*/\n username: string,",
+    "requireRelaxedTypeAnnotation": false
+  }
+}

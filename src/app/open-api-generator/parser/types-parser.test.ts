@@ -5,6 +5,7 @@ import { generateRandomDir } from "../../../../tests/testutils";
 import { generateApi } from "swagger-typescript-api";
 import { getTemplatesDirectory } from "../index";
 import { parse } from "./types-parser";
+const CircularJSON = require("circular-json");
 
 type FunctionParams = {
   params: string;
@@ -14,10 +15,31 @@ type FunctionParams = {
 type TestCase = {
   name: string;
   oasFile: string;
+
   goldenFile: string;
-  expected?: Map<string, FunctionParams>;
+
+  // calculated by `setupTest()`
+  _queryGoldenFile?: string;
+  _pathGoldenFile?: string;
+
+  expectedQueryParams?: Map<string, FunctionParams>;
+  expectedPathParams?: Map<string, FunctionParams>;
+
   outDir?: string;
+  gotQueryParams?: Map<string, FunctionParams>;
+  gotPathParams?: Map<string, FunctionParams>;
 };
+
+function readGoldenFileContent(
+  goldenFile: string,
+): Map<string, FunctionParams> | undefined {
+  const queryParamsFileContent = fs.readFileSync(goldenFile, "utf8");
+  if (queryParamsFileContent) {
+    return new Map(Object.entries(JSON.parse(queryParamsFileContent)));
+  } else {
+    return undefined;
+  }
+}
 
 function setupTest(testCase: TestCase) {
   const outDir = generateRandomDir(
@@ -25,13 +47,69 @@ function setupTest(testCase: TestCase) {
   );
   testCase.outDir = outDir;
   testCase.oasFile = path.resolve(__dirname, testCase.oasFile);
-  testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);
-  const fileContent = fs.readFileSync(testCase.goldenFile, "utf8");
-  if (fileContent) {
-    try {
-      testCase.expected = new Map(Object.entries(JSON.parse(fileContent)));
-    } catch (e) {}
-  }
+
+  testCase._queryGoldenFile = path.resolve(
+    __dirname,
+    "./testdata/golden-files/query-tests/",
+    testCase.goldenFile,
+  );
+  testCase._pathGoldenFile = path.resolve(
+    __dirname,
+    "./testdata/golden-files/path-tests/",
+    testCase.goldenFile,
+  );
+
+  testCase.expectedQueryParams = readGoldenFileContent(
+    testCase._queryGoldenFile,
+  );
+  testCase.expectedPathParams = readGoldenFileContent(testCase._pathGoldenFile);
+}
+
+async function generateCode(testCase: TestCase) {
+  const templateDir = path.resolve(getTemplatesDirectory(), "./custom");
+
+  const gotQueryFunctionArgs = new Map<string, FunctionParams>();
+  const gotPathFunctionArgs = new Map<string, FunctionParams>();
+  await generateApi({
+    name: "api.ts",
+    input: testCase.oasFile,
+    output: testCase.outDir,
+    templates: templateDir,
+    silent: true,
+    hooks: {
+      onCreateRoute: (routeData) => {
+        const parsedTypes = parse(routeData);
+        const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
+
+        const gotQuery: FunctionParams = {
+          params:
+            parsedTypes.queryParams && parsedTypes.queryParams?._rendered
+              ? parsedTypes.queryParams?._rendered
+              : "null",
+          requireRelaxedTypeAnnotation:
+            parsedTypes.queryParams &&
+            parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
+              ? parsedTypes.queryParams &&
+                parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
+              : false,
+        };
+        gotQueryFunctionArgs.set(jsonKey, gotQuery);
+
+        const gotPath: FunctionParams = {
+          params: parsedTypes.pathParams
+            ? parsedTypes.pathParams._rendered
+            : "null",
+          requireRelaxedTypeAnnotation: parsedTypes.pathParams
+            ? parsedTypes.pathParams._requiresRelaxedTypeAnnotation
+            : false,
+        };
+        gotPathFunctionArgs.set(jsonKey, gotPath);
+      },
+    },
+  });
+
+  testCase.gotQueryParams = gotQueryFunctionArgs;
+  testCase.gotPathParams = gotPathFunctionArgs;
 }
 
 function cleanup(testCase: TestCase) {
@@ -42,97 +120,75 @@ function cleanup(testCase: TestCase) {
 
 const queryParamTests: TestCase[] = [
   {
-    name: "GenerateQueryParams_DemoBlogApi",
+    name: "DemoBlogApi",
     oasFile: "../tests/oas-docs/demo-blog-api.json",
-    goldenFile: "./testdata/golden-files/query-tests/demo-blog-api.json",
+    goldenFile: "demo-blog-api.json",
   },
   {
-    name: "GenerateQueryParams_GeomagApi",
+    name: "GeomagApi",
     oasFile: "../tests/oas-docs/geomag.json",
-    goldenFile: "./testdata/golden-files/query-tests/geomag.json",
+    goldenFile: "geomag.json",
   },
   {
-    name: "GenerateQueryParams_Petstore",
+    name: "Petstore",
     oasFile: "../tests/oas-docs/petstore.yaml",
-    goldenFile: "./testdata/golden-files/query-tests/petstore.json",
+    goldenFile: "petstore.json",
   },
   {
-    name: "GenerateQueryParams_GoogleAdsense",
+    name: "GoogleAdsense",
     oasFile: "../tests/oas-docs/google-adsense.json",
-    goldenFile: "./testdata/golden-files/query-tests/google-adsense.json",
+    goldenFile: "google-adsense.json",
   },
   {
-    name: "GenerateQueryParams_Instagram",
+    name: "Instagram",
     oasFile: "../tests/oas-docs/instagram.json",
-    goldenFile: "./testdata/golden-files/query-tests/instagram.json",
+    goldenFile: "instagram.json",
   },
   {
-    name: "GenerateQueryParams_Gitlab",
+    name: "Gitlab",
     oasFile: "../tests/oas-docs/gitlab.json",
-    goldenFile: "./testdata/golden-files/query-tests/gitlab.json",
+    goldenFile: "gitlab.json",
   },
   {
-    name: "GenerateQueryParams_Dropbox",
+    name: "Dropbox",
     oasFile: "../tests/oas-docs/dropbox.json",
-    goldenFile: "./testdata/golden-files/query-tests/dropbox.json",
+    goldenFile: "dropbox.json",
   },
   {
-    name: "GenerateQueryParams_Adobe",
+    name: "Adobe",
     oasFile: "../tests/oas-docs/adobe.json",
-    goldenFile: "./testdata/golden-files/query-tests/adobe.json",
+    goldenFile: "adobe.json",
   },
   {
-    name: "GenerateQueryParams_AwsAutoscaling",
+    name: "AwsAutoscaling",
     oasFile: "../tests/oas-docs/aws-autoscaling.json",
-    goldenFile: "./testdata/golden-files/query-tests/aws-autoscaling.json",
+    goldenFile: "aws-autoscaling.json",
   },
 ];
 
-describe("GenerateQueryParams", async () => {
-  const templateDir = path.resolve(getTemplatesDirectory(), "./custom");
-  for (const testCase of queryParamTests) {
-    before(function () {
+for (const testCase of queryParamTests) {
+  describe(`Generate Params for ${testCase.name}`, async () => {
+    before(async () => {
       setupTest(testCase);
+      await generateCode(testCase);
     });
 
-    it(testCase.name, async () => {
-      const gotFunctionArgs = new Map<string, FunctionParams>();
-      await generateApi({
-        name: "api.ts",
-        input: testCase.oasFile,
-        output: testCase.outDir,
-        templates: templateDir,
-        silent: true,
-        hooks: {
-          onCreateRoute: (routeData) => {
-            const parsedTypes = parse(routeData);
-            const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
+    it(`${testCase.name}::Query`, function () {
+      assert.deepEqual(testCase.expectedQueryParams, testCase.gotQueryParams);
 
-            const got: FunctionParams = {
-              params:
-                parsedTypes.queryParams && parsedTypes.queryParams?._rendered
-                  ? parsedTypes.queryParams?._rendered
-                  : "null",
-              requireRelaxedTypeAnnotation:
-                parsedTypes.queryParams &&
-                parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
-                  ? parsedTypes.queryParams &&
-                    parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
-                  : false,
-            };
+      // Uncomment to update golden file
+      // fs.writeFileSync(testCase._queryGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotQueryParams!)));
+    });
 
-            gotFunctionArgs.set(jsonKey, got);
-          },
-        },
-      });
+    it(`${testCase.name}::Path`, function () {
+      assert.deepEqual(testCase.expectedPathParams, testCase.gotPathParams);
 
-      assert.deepEqual(testCase.expected, gotFunctionArgs);
-
-      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(Object.fromEntries(gotFunctionArgs)));
+      // Uncomment to update golden file
+      // fs.writeFileSync(testCase._pathGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotPathParams!)));
     });
 
     after(function () {
       cleanup(testCase);
     });
-  }
-});
+  });
+}

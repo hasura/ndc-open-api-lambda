@@ -1,0 +1,997 @@
+{
+  "get_/authorize": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/collaboration_whitelist_entries": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/collaboration_whitelist_entries": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/collaboration_whitelist_entries/{collaboration_whitelist_entry_id}": {
+    "params": "\n/**\n* The ID of the entry in the list.\n*/\n collaborationWhitelistEntryId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/collaboration_whitelist_entries/{collaboration_whitelist_entry_id}": {
+    "params": "\n/**\n* The ID of the entry in the list.\n*/\n collaborationWhitelistEntryId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/collaboration_whitelist_exempt_targets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/collaboration_whitelist_exempt_targets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/collaboration_whitelist_exempt_targets/{collaboration_whitelist_exempt_target_id}": {
+    "params": "\n/**\n* The ID of the exemption to the list.\n*/\n collaborationWhitelistExemptTargetId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/collaboration_whitelist_exempt_targets/{collaboration_whitelist_exempt_target_id}": {
+    "params": "\n/**\n* The ID of the exemption to the list.\n*/\n collaborationWhitelistExemptTargetId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/collaborations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/collaborations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/collaborations/{collaboration_id}": {
+    "params": "\n/**\n* The ID of the collaboration\n*/\n collaborationId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/collaborations/{collaboration_id}": {
+    "params": "\n/**\n* The ID of the collaboration\n*/\n collaborationId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/collaborations/{collaboration_id}": {
+    "params": "\n/**\n* The ID of the collaboration\n*/\n collaborationId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/collections": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/collections/{collection_id}/items": {
+    "params": "\n/**\n* The ID of the collection.\n*/\n collectionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/comments": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "delete_/comments/{comment_id}": {
+    "params": "\n/**\n* The ID of the comment.\n*/\n commentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/comments/{comment_id}": {
+    "params": "\n/**\n* The ID of the comment.\n*/\n commentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/comments/{comment_id}": {
+    "params": "\n/**\n* The ID of the comment.\n*/\n commentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/device_pinners/{device_pinner_id}": {
+    "params": "\n/**\n* The ID of the device pin\n*/\n devicePinnerId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/device_pinners/{device_pinner_id}": {
+    "params": "\n/**\n* The ID of the device pin\n*/\n devicePinnerId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/enterprises/{enterprise_id}/device_pinners": {
+    "params": "\n/**\n* The ID of the enterprise\n*/\n enterpriseId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/events": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "options_/events": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/file_requests/{file_request_id}": {
+    "params": "\n/**\n* The unique identifier that represent a file request.\n\nThe ID for any file request can be determined\nby visiting a file request builder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/filerequest/123`\nthe `file_request_id` is `123`.\n*/\n fileRequestId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/file_requests/{file_request_id}": {
+    "params": "\n/**\n* The unique identifier that represent a file request.\n\nThe ID for any file request can be determined\nby visiting a file request builder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/filerequest/123`\nthe `file_request_id` is `123`.\n*/\n fileRequestId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/file_requests/{file_request_id}": {
+    "params": "\n/**\n* The unique identifier that represent a file request.\n\nThe ID for any file request can be determined\nby visiting a file request builder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/filerequest/123`\nthe `file_request_id` is `123`.\n*/\n fileRequestId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/file_requests/{file_request_id}/copy": {
+    "params": "\n/**\n* The unique identifier that represent a file request.\n\nThe ID for any file request can be determined\nby visiting a file request builder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/filerequest/123`\nthe `file_request_id` is `123`.\n*/\n fileRequestId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/file_version_legal_holds": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/file_version_legal_holds/{file_version_legal_hold_id}": {
+    "params": "\n/**\n* The ID of the file version legal hold\n*/\n fileVersionLegalHoldId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/file_version_retentions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/file_version_retentions/{file_version_retention_id}": {
+    "params": "\n/**\n* The ID of the file version retention\n*/\n fileVersionRetentionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "options_/files/content": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/content": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/upload_sessions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/files/upload_sessions/{upload_session_id}": {
+    "params": "\n/**\n* The ID of the upload session.\n*/\n uploadSessionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/upload_sessions/{upload_session_id}": {
+    "params": "\n/**\n* The ID of the upload session.\n*/\n uploadSessionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/upload_sessions/{upload_session_id}": {
+    "params": "\n/**\n* The ID of the upload session.\n*/\n uploadSessionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/upload_sessions/{upload_session_id}/commit": {
+    "params": "\n/**\n* The ID of the upload session.\n*/\n uploadSessionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/upload_sessions/{upload_session_id}/parts": {
+    "params": "\n/**\n* The ID of the upload session.\n*/\n uploadSessionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/files/{file_id}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/{file_id}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}#add_shared_link": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}#get_shared_link": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}#remove_shared_link": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}#update_shared_link": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/collaborations": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/comments": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/content": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/{file_id}/content": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/{file_id}/copy": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/metadata": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/files/{file_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/{file_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/files/{file_id}/metadata/global/boxSkillsCards": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/metadata/global/boxSkillsCards": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/{file_id}/metadata/global/boxSkillsCards": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}/metadata/global/boxSkillsCards": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/files/{file_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "get_/files/{file_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "post_/files/{file_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "put_/files/{file_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "get_/files/{file_id}/tasks": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/thumbnail.{extension}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The file format for the thumbnail\n*/\n extension: \"png\" | \"jpg\",",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "delete_/files/{file_id}/trash": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/trash": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/{file_id}/upload_sessions": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/versions": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/files/{file_id}/versions/current": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/files/{file_id}/versions/{file_version_id}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The ID of the file version\n*/\n fileVersionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/versions/{file_version_id}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The ID of the file version\n*/\n fileVersionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}/versions/{file_version_id}": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,\n/**\n* The ID of the file version\n*/\n fileVersionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/files/{file_id}/watermark": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/files/{file_id}/watermark": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/files/{file_id}/watermark": {
+    "params": "\n/**\n* The unique identifier that represents a file.\n\nThe ID for any file can be determined\nby visiting a file in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/files/123`\nthe `file_id` is `123`.\n*/\n fileId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folder_locks": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/folder_locks": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/folder_locks/{folder_lock_id}": {
+    "params": "\n/**\n* The ID of the folder lock.\n*/\n folderLockId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/folders": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/folders/trash/items": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/folders/{folder_id}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/folders/{folder_id}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/folders/{folder_id}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/folders/{folder_id}#add_shared_link": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}#get_shared_link": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/folders/{folder_id}#remove_shared_link": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/folders/{folder_id}#update_shared_link": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}/collaborations": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/folders/{folder_id}/copy": {
+    "params": "\n/**\n* The unique identifier of the folder to copy.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder with the ID `0` can not be copied.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}/items": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}/metadata": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/folders/{folder_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/folders/{folder_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/folders/{folder_id}/metadata/enterprise/securityClassification-6VMVochwUWo": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/folders/{folder_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "get_/folders/{folder_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "post_/folders/{folder_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "put_/folders/{folder_id}/metadata/{scope}/{template_key}": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "delete_/folders/{folder_id}/trash": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}/trash": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/folders/{folder_id}/watermark": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/folders/{folder_id}/watermark": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/folders/{folder_id}/watermark": {
+    "params": "\n/**\n* The unique identifier that represent a folder.\n\nThe ID for any folder can be determined\nby visiting this folder in the web application\nand copying the ID from the URL. For example,\nfor the URL `https://*.app.box.com/folder/123`\nthe `folder_id` is `123`.\n\nThe root folder of a Box account is\nalways represented by the ID `0`.\n*/\n folderId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/group_memberships": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/group_memberships/{group_membership_id}": {
+    "params": "\n/**\n* The ID of the group membership.\n*/\n groupMembershipId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/group_memberships/{group_membership_id}": {
+    "params": "\n/**\n* The ID of the group membership.\n*/\n groupMembershipId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/group_memberships/{group_membership_id}": {
+    "params": "\n/**\n* The ID of the group membership.\n*/\n groupMembershipId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/groups": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/groups": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/groups/terminate_sessions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/groups/{group_id}": {
+    "params": "\n/**\n* The ID of the group.\n*/\n groupId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/groups/{group_id}": {
+    "params": "\n/**\n* The ID of the group.\n*/\n groupId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/groups/{group_id}": {
+    "params": "\n/**\n* The ID of the group.\n*/\n groupId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/groups/{group_id}/collaborations": {
+    "params": "\n/**\n* The ID of the group.\n*/\n groupId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/groups/{group_id}/memberships": {
+    "params": "\n/**\n* The ID of the group.\n*/\n groupId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/invites": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/invites/{invite_id}": {
+    "params": "\n/**\n* The ID of an invite.\n*/\n inviteId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/legal_hold_policies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/legal_hold_policies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/legal_hold_policies/{legal_hold_policy_id}": {
+    "params": "\n/**\n* The ID of the legal hold policy\n*/\n legalHoldPolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/legal_hold_policies/{legal_hold_policy_id}": {
+    "params": "\n/**\n* The ID of the legal hold policy\n*/\n legalHoldPolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/legal_hold_policies/{legal_hold_policy_id}": {
+    "params": "\n/**\n* The ID of the legal hold policy\n*/\n legalHoldPolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/legal_hold_policy_assignments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/legal_hold_policy_assignments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/legal_hold_policy_assignments/{legal_hold_policy_assignment_id}": {
+    "params": "\n/**\n* The ID of the legal hold policy assignment\n*/\n legalHoldPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/legal_hold_policy_assignments/{legal_hold_policy_assignment_id}": {
+    "params": "\n/**\n* The ID of the legal hold policy assignment\n*/\n legalHoldPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/legal_hold_policy_assignments/{legal_hold_policy_assignment_id}/file_versions_on_hold": {
+    "params": "\n/**\n* The ID of the legal hold policy assignment\n*/\n legalHoldPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/legal_hold_policy_assignments/{legal_hold_policy_assignment_id}/files_on_hold": {
+    "params": "\n/**\n* The ID of the legal hold policy assignment\n*/\n legalHoldPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/metadata_cascade_policies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/metadata_cascade_policies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/metadata_cascade_policies/{metadata_cascade_policy_id}": {
+    "params": "\n/**\n* The ID of the metadata cascade policy.\n*/\n metadataCascadePolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/metadata_cascade_policies/{metadata_cascade_policy_id}": {
+    "params": "\n/**\n* The ID of the metadata cascade policy.\n*/\n metadataCascadePolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/metadata_cascade_policies/{metadata_cascade_policy_id}/apply": {
+    "params": "\n/**\n* The ID of the cascade policy to force-apply.\n*/\n metadataCascadePolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/metadata_queries/execute_read": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/metadata_query_indices": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/metadata_templates": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/metadata_templates/enterprise": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema#add": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema#delete": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/metadata_templates/enterprise/securityClassification-6VMVochwUWo/schema#update": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/metadata_templates/global": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/metadata_templates/schema": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/metadata_templates/schema#classifications": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/metadata_templates/{scope}/{template_key}/schema": {
+    "params": "\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "get_/metadata_templates/{scope}/{template_key}/schema": {
+    "params": "\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "put_/metadata_templates/{scope}/{template_key}/schema": {
+    "params": "\n/**\n* The scope of the metadata template\n*/\n scope: \"global\" | \"enterprise\",\n/**\n* The name of the metadata template\n*/\n templateKey: string,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "get_/metadata_templates/{template_id}": {
+    "params": "\n/**\n* The ID of the template\n*/\n templateId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/oauth2/revoke": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/oauth2/token": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/oauth2/token#refresh": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/recent_items": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/retention_policies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/retention_policies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/retention_policies/{retention_policy_id}": {
+    "params": "\n/**\n* The ID of the retention policy.\n*/\n retentionPolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/retention_policies/{retention_policy_id}": {
+    "params": "\n/**\n* The ID of the retention policy.\n*/\n retentionPolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/retention_policies/{retention_policy_id}": {
+    "params": "\n/**\n* The ID of the retention policy.\n*/\n retentionPolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/retention_policies/{retention_policy_id}/assignments": {
+    "params": "\n/**\n* The ID of the retention policy.\n*/\n retentionPolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/retention_policy_assignments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/retention_policy_assignments/{retention_policy_assignment_id}": {
+    "params": "\n/**\n* The ID of the retention policy assignment.\n*/\n retentionPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/retention_policy_assignments/{retention_policy_assignment_id}": {
+    "params": "\n/**\n* The ID of the retention policy assignment.\n*/\n retentionPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/retention_policy_assignments/{retention_policy_assignment_id}/file_versions_under_retention": {
+    "params": "\n/**\n* The ID of the retention policy assignment.\n*/\n retentionPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/retention_policy_assignments/{retention_policy_assignment_id}/files_under_retention": {
+    "params": "\n/**\n* The ID of the retention policy assignment.\n*/\n retentionPolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/search": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/shared_items": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shared_items#folders": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shared_items#web_links": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_reports": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/shield_information_barrier_reports": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_reports/{shield_information_barrier_report_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier Report.\n*/\n shieldInformationBarrierReportId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_segment_members": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/shield_information_barrier_segment_members": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/shield_information_barrier_segment_members/{shield_information_barrier_segment_member_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier segment Member.\n*/\n shieldInformationBarrierSegmentMemberId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_segment_members/{shield_information_barrier_segment_member_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier segment Member.\n*/\n shieldInformationBarrierSegmentMemberId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_segment_restrictions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/shield_information_barrier_segment_restrictions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/shield_information_barrier_segment_restrictions/{shield_information_barrier_segment_restriction_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier segment Restriction.\n*/\n shieldInformationBarrierSegmentRestrictionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_segment_restrictions/{shield_information_barrier_segment_restriction_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier segment Restriction.\n*/\n shieldInformationBarrierSegmentRestrictionId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_segments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/shield_information_barrier_segments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/shield_information_barrier_segments/{shield_information_barrier_segment_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier segment.\n*/\n shieldInformationBarrierSegmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barrier_segments/{shield_information_barrier_segment_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier segment.\n*/\n shieldInformationBarrierSegmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/shield_information_barrier_segments/{shield_information_barrier_segment_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier segment.\n*/\n shieldInformationBarrierSegmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barriers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/shield_information_barriers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/shield_information_barriers/change_status": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/shield_information_barriers/{shield_information_barrier_id}": {
+    "params": "\n/**\n* The ID of the shield information barrier.\n*/\n shieldInformationBarrierId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/sign_requests": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/sign_requests": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/sign_requests/{sign_request_id}": {
+    "params": "\n/**\n* The ID of the sign request\n*/\n signRequestId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/sign_requests/{sign_request_id}/cancel": {
+    "params": "\n/**\n* The ID of the sign request\n*/\n signRequestId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/sign_requests/{sign_request_id}/resend": {
+    "params": "\n/**\n* The ID of the sign request\n*/\n signRequestId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/skill_invocations/{skill_id}": {
+    "params": "\n/**\n* The ID of the skill to apply this metadata for.\n*/\n skillId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/storage_policies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/storage_policies/{storage_policy_id}": {
+    "params": "\n/**\n* The ID of the storage policy.\n*/\n storagePolicyId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/storage_policy_assignments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/storage_policy_assignments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/storage_policy_assignments/{storage_policy_assignment_id}": {
+    "params": "\n/**\n* The ID of the storage policy assignment.\n*/\n storagePolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/storage_policy_assignments/{storage_policy_assignment_id}": {
+    "params": "\n/**\n* The ID of the storage policy assignment.\n*/\n storagePolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/storage_policy_assignments/{storage_policy_assignment_id}": {
+    "params": "\n/**\n* The ID of the storage policy assignment.\n*/\n storagePolicyAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/task_assignments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/task_assignments/{task_assignment_id}": {
+    "params": "\n/**\n* The ID of the task assignment.\n*/\n taskAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/task_assignments/{task_assignment_id}": {
+    "params": "\n/**\n* The ID of the task assignment.\n*/\n taskAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/task_assignments/{task_assignment_id}": {
+    "params": "\n/**\n* The ID of the task assignment.\n*/\n taskAssignmentId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/tasks": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "delete_/tasks/{task_id}": {
+    "params": "\n/**\n* The ID of the task.\n*/\n taskId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/tasks/{task_id}": {
+    "params": "\n/**\n* The ID of the task.\n*/\n taskId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/tasks/{task_id}": {
+    "params": "\n/**\n* The ID of the task.\n*/\n taskId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/tasks/{task_id}/assignments": {
+    "params": "\n/**\n* The ID of the task.\n*/\n taskId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/terms_of_service_user_statuses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/terms_of_service_user_statuses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/terms_of_service_user_statuses/{terms_of_service_user_status_id}": {
+    "params": "\n/**\n* The ID of the terms of service status.\n*/\n termsOfServiceUserStatusId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/terms_of_services": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/terms_of_services": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/terms_of_services/{terms_of_service_id}": {
+    "params": "\n/**\n* The ID of the terms of service.\n*/\n termsOfServiceId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/terms_of_services/{terms_of_service_id}": {
+    "params": "\n/**\n* The ID of the terms of service.\n*/\n termsOfServiceId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/users": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/users/me": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/users/terminate_sessions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/users/{user_id}": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user_id}": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/users/{user_id}": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/users/{user_id}/avatar": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user_id}/avatar": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/users/{user_id}/avatar": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user_id}/email_aliases": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/users/{user_id}/email_aliases": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/users/{user_id}/email_aliases/{email_alias_id}": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,\n/**\n* The ID of the email alias.\n*/\n emailAliasId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/users/{user_id}/folders/0": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user_id}/memberships": {
+    "params": "\n/**\n* The ID of the user.\n*/\n userId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/web_links": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/web_links/{web_link_id}": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/web_links/{web_link_id}": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/web_links/{web_link_id}": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/web_links/{web_link_id}": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/web_links/{web_link_id}#add_shared_link": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/web_links/{web_link_id}#get_shared_link": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/web_links/{web_link_id}#remove_shared_link": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/web_links/{web_link_id}#update_shared_link": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/web_links/{web_link_id}/trash": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/web_links/{web_link_id}/trash": {
+    "params": "\n/**\n* The ID of the web link.\n*/\n webLinkId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/webhooks": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/webhooks": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "delete_/webhooks/{webhook_id}": {
+    "params": "\n/**\n* The ID of the webhook.\n*/\n webhookId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/webhooks/{webhook_id}": {
+    "params": "\n/**\n* The ID of the webhook.\n*/\n webhookId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/webhooks/{webhook_id}": {
+    "params": "\n/**\n* The ID of the webhook.\n*/\n webhookId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/workflows": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/workflows/{workflow_id}/start": {
+    "params": "\n/**\n* The ID of the workflow.\n*/\n workflowId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/zip_downloads": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/zip_downloads/{zip_download_id}/content": {
+    "params": "\n/**\n* The unique identifier that represent this `zip` archive.\n*/\n zipDownloadId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/zip_downloads/{zip_download_id}/status": {
+    "params": "\n/**\n* The unique identifier that represent this `zip` archive.\n*/\n zipDownloadId: string,",
+    "requireRelaxedTypeAnnotation": false
+  }
+}

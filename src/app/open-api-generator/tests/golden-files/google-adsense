@@ -125,7 +125,9 @@ export async function getAccountsAdsenseAccountsGet(
      */
     tree?: boolean;
   },
-  /** Account to get information about. */
+  /**
+   * Account to get information about.
+   */
   accountId: string,
 ): Promise<Account> {
   const result = await api.accounts.adsenseAccountsGet({
@@ -184,7 +186,9 @@ export async function getAccountsAdsenseAccountsAdclientsList(
      */
     pageToken?: string;
   },
-  /** Account for which to list ad clients. */
+  /**
+   * Account for which to list ad clients.
+   */
   accountId: string,
 ): Promise<AdClients> {
   const result = await api.accounts.adsenseAccountsAdclientsList({
@@ -239,9 +243,13 @@ export async function getAccountsAdsenseAccountsAdclientsGetAdCode(
      */
     tagPartner?: string;
   },
-  /** Account which contains the ad client. */
+  /**
+   * Account which contains the ad client.
+   */
   accountId: string,
-  /** Ad client to get the code for. */
+  /**
+   * Ad client to get the code for.
+   */
   adClientId: string,
 ): Promise<AdCode> {
   const result = await api.accounts.adsenseAccountsAdclientsGetAdCode({
@@ -305,9 +313,13 @@ export async function getAccountsAdsenseAccountsAdunitsList(
      */
     pageToken?: string;
   },
-  /** Account to which the ad client belongs. */
+  /**
+   * Account to which the ad client belongs.
+   */
   accountId: string,
-  /** Ad client for which to list ad units. */
+  /**
+   * Ad client for which to list ad units.
+   */
   adClientId: string,
 ): Promise<AdUnits> {
   const result = await api.accounts.adsenseAccountsAdunitsList({
@@ -359,11 +371,17 @@ export async function getAccountsAdsenseAccountsAdunitsGet(
      */
     userIp?: string;
   },
-  /** Account to which the ad client belongs. */
+  /**
+   * Account to which the ad client belongs.
+   */
   accountId: string,
-  /** Ad client for which to get the ad unit. */
+  /**
+   * Ad client for which to get the ad unit.
+   */
   adClientId: string,
-  /** Ad unit to retrieve. */
+  /**
+   * Ad unit to retrieve.
+   */
   adUnitId: string,
 ): Promise<AdUnit> {
   const result = await api.accounts.adsenseAccountsAdunitsGet({
@@ -416,11 +434,17 @@ export async function getAccountsAdsenseAccountsAdunitsGetAdCode(
      */
     userIp?: string;
   },
-  /** Account which contains the ad client. */
+  /**
+   * Account which contains the ad client.
+   */
   accountId: string,
-  /** Ad client with contains the ad unit. */
+  /**
+   * Ad client with contains the ad unit.
+   */
   adClientId: string,
-  /** Ad unit to get the code for. */
+  /**
+   * Ad unit to get the code for.
+   */
   adUnitId: string,
 ): Promise<AdCode> {
   const result = await api.accounts.adsenseAccountsAdunitsGetAdCode({
@@ -481,11 +505,17 @@ export async function getAccountsAdsenseAccountsAdunitsCustomchannelsList(
      */
     pageToken?: string;
   },
-  /** Account to which the ad client belongs. */
+  /**
+   * Account to which the ad client belongs.
+   */
   accountId: string,
-  /** Ad client which contains the ad unit. */
+  /**
+   * Ad client which contains the ad unit.
+   */
   adClientId: string,
-  /** Ad unit for which to list custom channels. */
+  /**
+   * Ad unit for which to list custom channels.
+   */
   adUnitId: string,
 ): Promise<CustomChannels> {
   const result = await api.accounts.adsenseAccountsAdunitsCustomchannelsList({
@@ -546,9 +576,13 @@ export async function getAccountsAdsenseAccountsCustomchannelsList(
      */
     pageToken?: string;
   },
-  /** Account to which the ad client belongs. */
+  /**
+   * Account to which the ad client belongs.
+   */
   accountId: string,
-  /** Ad client for which to list custom channels. */
+  /**
+   * Ad client for which to list custom channels.
+   */
   adClientId: string,
 ): Promise<CustomChannels> {
   const result = await api.accounts.adsenseAccountsCustomchannelsList({
@@ -600,11 +634,17 @@ export async function getAccountsAdsenseAccountsCustomchannelsGet(
      */
     userIp?: string;
   },
-  /** Account to which the ad client belongs. */
+  /**
+   * Account to which the ad client belongs.
+   */
   accountId: string,
-  /** Ad client which contains the custom channel. */
+  /**
+   * Ad client which contains the custom channel.
+   */
   adClientId: string,
-  /** Custom channel to retrieve. */
+  /**
+   * Custom channel to retrieve.
+   */
   customChannelId: string,
 ): Promise<CustomChannel> {
   const result = await api.accounts.adsenseAccountsCustomchannelsGet({
@@ -669,11 +709,17 @@ export async function getAccountsAdsenseAccountsCustomchannelsAdunitsList(
      */
     pageToken?: string;
   },
-  /** Account to which the ad client belongs. */
+  /**
+   * Account to which the ad client belongs.
+   */
   accountId: string,
-  /** Ad client which contains the custom channel. */
+  /**
+   * Ad client which contains the custom channel.
+   */
   adClientId: string,
-  /** Custom channel for which to list ad units. */
+  /**
+   * Custom channel for which to list ad units.
+   */
   customChannelId: string,
 ): Promise<AdUnits> {
   const result = await api.accounts.adsenseAccountsCustomchannelsAdunitsList({
@@ -734,9 +780,13 @@ export async function getAccountsAdsenseAccountsUrlchannelsList(
      */
     pageToken?: string;
   },
-  /** Account to which the ad client belongs. */
+  /**
+   * Account to which the ad client belongs.
+   */
   accountId: string,
-  /** Ad client for which to list URL channels. */
+  /**
+   * Ad client for which to list URL channels.
+   */
   adClientId: string,
 ): Promise<UrlChannels> {
   const result = await api.accounts.adsenseAccountsUrlchannelsList({
@@ -792,7 +842,9 @@ export async function getAccountsAdsenseAccountsAlertsList(
      */
     locale?: string;
   },
-  /** Account for which to retrieve the alerts. */
+  /**
+   * Account for which to retrieve the alerts.
+   */
   accountId: string,
 ): Promise<Alerts> {
   const result = await api.accounts.adsenseAccountsAlertsList({
@@ -842,9 +894,13 @@ export async function deleteAccountsAdsenseAccountsAlertsDelete(
      */
     userIp?: string;
   },
-  /** Account which contains the ad unit. */
+  /**
+   * Account which contains the ad unit.
+   */
   accountId: string,
-  /** Alert to delete. */
+  /**
+   * Alert to delete.
+   */
   alertId: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.accounts.adsenseAccountsAlertsDelete({
@@ -896,7 +952,9 @@ export async function getAccountsAdsenseAccountsPaymentsList(
      */
     userIp?: string;
   },
-  /** Account for which to retrieve the payments. */
+  /**
+   * Account for which to retrieve the payments.
+   */
   accountId: string,
 ): Promise<Payments> {
   const result = await api.accounts.adsenseAccountsPaymentsList({
@@ -991,7 +1049,9 @@ export async function getAccountsAdsenseAccountsReportsGenerate(
      */
     useTimezoneReporting?: boolean;
   },
-  /** Account upon which to report. */
+  /**
+   * Account upon which to report.
+   */
   accountId: string,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.accounts.adsenseAccountsReportsGenerate({
@@ -1050,7 +1110,9 @@ export async function getAccountsAdsenseAccountsReportsSavedList(
      */
     pageToken?: string;
   },
-  /** Account to which the saved reports belong. */
+  /**
+   * Account to which the saved reports belong.
+   */
   accountId: string,
 ): Promise<SavedReports> {
   const result = await api.accounts.adsenseAccountsReportsSavedList({
@@ -1113,9 +1175,13 @@ export async function getAccountsAdsenseAccountsReportsSavedGenerate(
      */
     startIndex?: number;
   },
-  /** Account to which the saved reports belong. */
+  /**
+   * Account to which the saved reports belong.
+   */
   accountId: string,
-  /** The saved report to retrieve. */
+  /**
+   * The saved report to retrieve.
+   */
   savedReportId: string,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.accounts.adsenseAccountsReportsSavedGenerate({
@@ -1175,7 +1241,9 @@ export async function getAccountsAdsenseAccountsSavedadstylesList(
      */
     pageToken?: string;
   },
-  /** Account for which to list saved ad styles. */
+  /**
+   * Account for which to list saved ad styles.
+   */
   accountId: string,
 ): Promise<SavedAdStyles> {
   const result = await api.accounts.adsenseAccountsSavedadstylesList({
@@ -1226,9 +1294,13 @@ export async function getAccountsAdsenseAccountsSavedadstylesGet(
      */
     userIp?: string;
   },
-  /** Account for which to get the saved ad style. */
+  /**
+   * Account for which to get the saved ad style.
+   */
   accountId: string,
-  /** Saved ad style to retrieve. */
+  /**
+   * Saved ad style to retrieve.
+   */
   savedAdStyleId: string,
 ): Promise<SavedAdStyle> {
   const result = await api.accounts.adsenseAccountsSavedadstylesGet({
@@ -1346,7 +1418,9 @@ export async function getAdclientsAdsenseAdunitsList(
      */
     pageToken?: string;
   },
-  /** Ad client for which to list ad units. */
+  /**
+   * Ad client for which to list ad units.
+   */
   adClientId: string,
 ): Promise<AdUnits> {
   const result = await api.adclients.adsenseAdunitsList({
@@ -1397,9 +1471,13 @@ export async function getAdclientsAdsenseAdunitsGet(
      */
     userIp?: string;
   },
-  /** Ad client for which to get the ad unit. */
+  /**
+   * Ad client for which to get the ad unit.
+   */
   adClientId: string,
-  /** Ad unit to retrieve. */
+  /**
+   * Ad unit to retrieve.
+   */
   adUnitId: string,
 ): Promise<AdUnit> {
   const result = await api.adclients.adsenseAdunitsGet({
@@ -1451,9 +1529,13 @@ export async function getAdclientsAdsenseAdunitsGetAdCode(
      */
     userIp?: string;
   },
-  /** Ad client with contains the ad unit. */
+  /**
+   * Ad client with contains the ad unit.
+   */
   adClientId: string,
-  /** Ad unit to get the code for. */
+  /**
+   * Ad unit to get the code for.
+   */
   adUnitId: string,
 ): Promise<AdCode> {
   const result = await api.adclients.adsenseAdunitsGetAdCode({
@@ -1513,9 +1595,13 @@ export async function getAdclientsAdsenseAdunitsCustomchannelsList(
      */
     pageToken?: string;
   },
-  /** Ad client which contains the ad unit. */
+  /**
+   * Ad client which contains the ad unit.
+   */
   adClientId: string,
-  /** Ad unit for which to list custom channels. */
+  /**
+   * Ad unit for which to list custom channels.
+   */
   adUnitId: string,
 ): Promise<CustomChannels> {
   const result = await api.adclients.adsenseAdunitsCustomchannelsList({
@@ -1575,7 +1661,9 @@ export async function getAdclientsAdsenseCustomchannelsList(
      */
     pageToken?: string;
   },
-  /** Ad client for which to list custom channels. */
+  /**
+   * Ad client for which to list custom channels.
+   */
   adClientId: string,
 ): Promise<CustomChannels> {
   const result = await api.adclients.adsenseCustomchannelsList({
@@ -1626,9 +1714,13 @@ export async function getAdclientsAdsenseCustomchannelsGet(
      */
     userIp?: string;
   },
-  /** Ad client which contains the custom channel. */
+  /**
+   * Ad client which contains the custom channel.
+   */
   adClientId: string,
-  /** Custom channel to retrieve. */
+  /**
+   * Custom channel to retrieve.
+   */
   customChannelId: string,
 ): Promise<CustomChannel> {
   const result = await api.adclients.adsenseCustomchannelsGet({
@@ -1692,9 +1784,13 @@ export async function getAdclientsAdsenseCustomchannelsAdunitsList(
      */
     pageToken?: string;
   },
-  /** Ad client which contains the custom channel. */
+  /**
+   * Ad client which contains the custom channel.
+   */
   adClientId: string,
-  /** Custom channel for which to list ad units. */
+  /**
+   * Custom channel for which to list ad units.
+   */
   customChannelId: string,
 ): Promise<AdUnits> {
   const result = await api.adclients.adsenseCustomchannelsAdunitsList({
@@ -1754,7 +1850,9 @@ export async function getAdclientsAdsenseUrlchannelsList(
      */
     pageToken?: string;
   },
-  /** Ad client for which to list URL channels. */
+  /**
+   * Ad client for which to list URL channels.
+   */
   adClientId: string,
 ): Promise<UrlChannels> {
   const result = await api.adclients.adsenseUrlchannelsList({
@@ -1854,7 +1952,9 @@ export async function deleteAlertsAdsenseAlertsDelete(
      */
     userIp?: string;
   },
-  /** Alert to delete. */
+  /**
+   * Alert to delete.
+   */
   alertId: string,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.alerts.adsenseAlertsDelete({
@@ -2203,7 +2303,9 @@ export async function getReportsAdsenseReportsSavedGenerate(
      */
     startIndex?: number;
   },
-  /** The saved report to retrieve. */
+  /**
+   * The saved report to retrieve.
+   */
   savedReportId: string,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.reports.adsenseReportsSavedGenerate({
@@ -2308,7 +2410,9 @@ export async function getSavedadstylesAdsenseSavedadstylesGet(
      */
     userIp?: string;
   },
-  /** Saved ad style to retrieve. */
+  /**
+   * Saved ad style to retrieve.
+   */
   savedAdStyleId: string,
 ): Promise<SavedAdStyle> {
   const result = await api.savedadstyles.adsenseSavedadstylesGet({

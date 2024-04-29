@@ -55,9 +55,12 @@ const api = new Api({
       <% if (req.parsedQueryParams) { %>
         <%~ req.parsedQueryParams._rendered %>
       <% } %>
+      <% if (req.parsedPathParams) { %>
+        <%~ req.parsedPathParams._rendered %>
+      <% } %>
 
       <% for (parameter of req.allParams) { %>
-        <% if (parameter.paramType !== 'query') { %>
+        <% if (parameter.paramType !== 'query' && parameter.paramType !== 'path') { %>
           /** <%~parameter.description %> */
           <%~ getParameterAsFunctionParam(parameter) %>
           

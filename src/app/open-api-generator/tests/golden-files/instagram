@@ -60,7 +60,9 @@ export async function getGeographiesGeoIdMediaRecentList(
      */
     min_id?: string;
   },
-  /** The geography ID. */
+  /**
+   * The geography ID.
+   */
   geoId: string,
 ): Promise<MediaListResponse> {
   const result = await api.geographies.geoIdMediaRecentList({
@@ -123,7 +125,9 @@ export async function getLocationsSearchList(query: {
  * @readonly
  */
 export async function getLocationsLocationIdList(
-  /** The location ID. */
+  /**
+   * The location ID.
+   */
   locationId: string,
 ): Promise<LocationInfoResponse> {
   const result = await api.locations.locationIdList({
@@ -161,7 +165,9 @@ export async function getLocationsLocationIdMediaRecentList(
      */
     max_id?: string;
   },
-  /** The location ID. */
+  /**
+   * The location ID.
+   */
   locationId: string,
 ): Promise<MediaListResponse> {
   const result = await api.locations.locationIdMediaRecentList({
@@ -235,7 +241,9 @@ export async function getMediaSearchList(query: {
  * @readonly
  */
 export async function getMediaShortcodeDetail(
-  /** The short code of the media resource. */
+  /**
+   * The short code of the media resource.
+   */
   shortcode: string,
 ): Promise<MediaEntryResponse> {
   const result = await api.media.shortcodeDetail({
@@ -255,7 +263,9 @@ export async function getMediaShortcodeDetail(
  * @readonly
  */
 export async function getMediaMediaIdList(
-  /** The ID of the media resource. */
+  /**
+   * The ID of the media resource.
+   */
   mediaId: string,
 ): Promise<MediaEntryResponse> {
   const result = await api.media.mediaIdList({
@@ -274,7 +284,9 @@ export async function getMediaMediaIdList(
  * @readonly
  */
 export async function getMediaMediaIdCommentsList(
-  /** The ID of the media resource. */
+  /**
+   * The ID of the media resource.
+   */
   mediaId: string,
 ): Promise<CommentsResponse> {
   const result = await api.media.mediaIdCommentsList({
@@ -298,7 +310,9 @@ export async function postMediaMediaIdCommentsCreate(
      */
     text: string;
   },
-  /** The ID of the media resource. */
+  /**
+   * The ID of the media resource.
+   */
   mediaId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdCommentsCreate({
@@ -317,9 +331,13 @@ export async function postMediaMediaIdCommentsCreate(
  * @request DELETE :/media/{media-id}/comments/{comment-id}
  */
 export async function deleteMediaMediaIdCommentsCommentIdDelete(
-  /** The ID of the media resource. */
+  /**
+   * The ID of the media resource.
+   */
   mediaId: string,
-  /** The ID of the comment entry. */
+  /**
+   * The ID of the comment entry.
+   */
   commentId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdCommentsCommentIdDelete({
@@ -338,7 +356,9 @@ export async function deleteMediaMediaIdCommentsCommentIdDelete(
  * @request DELETE :/media/{media-id}/likes
  */
 export async function deleteMediaMediaIdLikesDelete(
-  /** The ID of the media resource. */
+  /**
+   * The ID of the media resource.
+   */
   mediaId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdLikesDelete({
@@ -357,7 +377,9 @@ export async function deleteMediaMediaIdLikesDelete(
  * @readonly
  */
 export async function getMediaMediaIdLikesList(
-  /** The ID of the media resource. */
+  /**
+   * The ID of the media resource.
+   */
   mediaId: string,
 ): Promise<UsersInfoResponse> {
   const result = await api.media.mediaIdLikesList({
@@ -375,7 +397,9 @@ export async function getMediaMediaIdLikesList(
  * @request POST :/media/{media-id}/likes
  */
 export async function postMediaMediaIdLikesCreate(
-  /** The ID of the media resource. */
+  /**
+   * The ID of the media resource.
+   */
   mediaId: string,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdLikesCreate({
@@ -415,7 +439,9 @@ export async function getTagsSearchList(query: {
  * @readonly
  */
 export async function getTagsTagNameList(
-  /** The tag name. */
+  /**
+   * The tag name.
+   */
   tagName: string,
 ): Promise<TagInfoResponse> {
   const result = await api.tags.tagNameList({
@@ -449,7 +475,9 @@ export async function getTagsTagNameMediaRecentList(
      */
     max_tag_id?: string;
   },
-  /** The tag name. */
+  /**
+   * The tag name.
+   */
   tagName: string,
 ): Promise<TagMediaListResponse> {
   const result = await api.tags.tagNameMediaRecentList({
@@ -564,7 +592,9 @@ export async function getUsersSelfRequestedByList(): Promise<UsersInfoResponse> 
  * @readonly
  */
 export async function getUsersUserIdList(
-  /** The ID of a user to get information about, or **self** to retrieve information about authenticated user. */
+  /**
+   * The ID of a user to get information about, or **self** to retrieve information about authenticated user.
+   */
   userId: string,
 ): Promise<UserResponse> {
   const result = await api.users.userIdList({
@@ -583,7 +613,9 @@ export async function getUsersUserIdList(
  * @readonly
  */
 export async function getUsersUserIdFollowedByList(
-  /** The ID of a user, or **self** to retrieve information about authenticated user. */
+  /**
+   * The ID of a user, or **self** to retrieve information about authenticated user.
+   */
   userId: string,
 ): Promise<UsersPagingResponse> {
   const result = await api.users.userIdFollowedByList({
@@ -602,7 +634,9 @@ export async function getUsersUserIdFollowedByList(
  * @readonly
  */
 export async function getUsersUserIdFollowsList(
-  /** The ID of a user, or **self** to retrieve information about authenticated user. */
+  /**
+   * The ID of a user, or **self** to retrieve information about authenticated user.
+   */
   userId: string,
 ): Promise<UsersPagingResponse> {
   const result = await api.users.userIdFollowsList({
@@ -644,7 +678,9 @@ export async function getUsersUserIdMediaRecentList(
      */
     max_id?: string;
   },
-  /** The ID of a user to get recent media of, or **self** to retrieve media of authenticated user. */
+  /**
+   * The ID of a user to get recent media of, or **self** to retrieve media of authenticated user.
+   */
   userId: string,
 ): Promise<MediaListResponse> {
   const result = await api.users.userIdMediaRecentList({
@@ -665,7 +701,9 @@ export async function getUsersUserIdMediaRecentList(
  * @readonly
  */
 export async function getUsersUserIdRelationshipList(
-  /** The ID of a user to get information about. */
+  /**
+   * The ID of a user to get information about.
+   */
   userId: string,
 ): Promise<RelationshipResponse> {
   const result = await api.users.userIdRelationshipList({
@@ -690,7 +728,9 @@ export async function postUsersUserIdRelationshipCreate(
      */
     action: "follow" | "unfollow" | "block" | "unblock" | "approve" | "ignore";
   },
-  /** The ID of the target user. */
+  /**
+   * The ID of the target user.
+   */
   userId: string,
 ): Promise<RelationshipPostResponse> {
   const result = await api.users.userIdRelationshipCreate({

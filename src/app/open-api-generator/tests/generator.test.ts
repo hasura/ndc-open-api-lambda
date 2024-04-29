@@ -78,6 +78,12 @@ const tests: {
     goldenFile: "./golden-files/aws-autoscaling",
     baseUrl: "http://localhost:13191",
   },
+  {
+    name: "GenerateCode_adobe",
+    oasFile: "./oas-docs/adobe.json",
+    goldenFile: "./golden-files/adobe",
+    baseUrl: "http://localhost:13191",
+  },
 
   // {
   //   name: "GenerateCode_LaunchDarklyApi",
