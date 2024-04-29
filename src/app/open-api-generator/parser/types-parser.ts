@@ -69,6 +69,13 @@ export type ParsedTypes = {
   apiMethod: string;
   apiRoute: string;
   queryParams: Schema | undefined;
+  pathParams: ParsedPathParams | undefined;
+};
+
+export type ParsedPathParams = {
+  params: Schema[];
+  _rendered: string;
+  _requiresRelaxedTypeAnnotation: boolean;
 };
 
 /**
@@ -158,21 +165,86 @@ export type ParsedTypes = {
  * @param routeData the route data the is passed in the `onCreateRoute()` hook of `generateApi()`
  */
 export function parse(routeData: any): ParsedTypes {
+  // console.log(`\n\n\nAPI: ${routeData.raw.method}_${routeData.raw.route}`);
+
   const queryParams = parseQueryParams(
     routeData.queryObjectSchema,
     routeData?.specificArgs?.query as SpecificArgsObject,
+  );
+
+  const pathParams = parsePathParams(
+    routeData.pathObjectSchema as Schema,
+    routeData?.specificArgs?.pathParams as SpecificArgsObject,
   );
 
   return {
     apiMethod: routeData.raw.method,
     apiRoute: routeData.raw.route,
     queryParams: queryParams,
+    pathParams: pathParams,
   };
 }
 
 type StateParams = {
   requireRelaxedTypeAnnotation: boolean;
 };
+
+function parsePathParams(
+  pathParams: Schema | undefined,
+  pathSpecificArgs: SpecificArgsObject | undefined,
+): ParsedPathParams | undefined {
+  if (!pathParams) {
+    return undefined;
+  }
+
+  if (!pathParams?.properties) {
+    return undefined;
+  }
+
+  let requiresRelaxedTypeAnnoation = false;
+
+  let rendered = "";
+
+  const parsedPathParamsArray: Schema[] = [];
+  for (const property in pathParams?.properties) {
+    // console.log('property: ', property);
+    const stateParams: StateParams = {
+      requireRelaxedTypeAnnotation: false,
+    };
+
+    const propertyObj = pathParams.properties[property]!;
+    propertyObj._rendered = renderQueryParams(
+      property,
+      propertyObj,
+      stateParams,
+    );
+    parsedPathParamsArray.push(propertyObj);
+
+    if (propertyObj._rendered) {
+      rendered = rendered.concat(propertyObj._rendered);
+    }
+
+    propertyObj._requiresRelaxedTypeAnnotation =
+      stateParams.requireRelaxedTypeAnnotation;
+
+    if (!requiresRelaxedTypeAnnoation) {
+      requiresRelaxedTypeAnnoation = stateParams.requireRelaxedTypeAnnotation;
+    }
+  }
+
+  if (parsedPathParamsArray.length === 0) {
+    return undefined;
+  }
+
+  parsedPathParamsArray.sort((a, b) =>
+    a.required && !b.required ? -1 : b.required && !a.required ? 1 : 0,
+  );
+  return {
+    params: parsedPathParamsArray,
+    _rendered: rendered,
+    _requiresRelaxedTypeAnnotation: requiresRelaxedTypeAnnoation,
+  };
+}
 
 export function parseQueryParams(
   queryParams: any,

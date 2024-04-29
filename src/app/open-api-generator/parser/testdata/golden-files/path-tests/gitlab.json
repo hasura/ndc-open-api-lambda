@@ -1,0 +1,1407 @@
+{
+  "get_/v3/application/settings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/application/settings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/ci/lint": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/deploy_keys": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/dockerfiles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/dockerfiles/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/gitignores": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/gitignores/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/gitlab_ci_ymls": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/gitlab_ci_ymls/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/v3/groups": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/owned": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/groups/{id}": {
+    "params": "\n/**\n* The ID of a group\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/{id}": {
+    "params": "\n/**\n* The ID of a group\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/groups/{id}": {
+    "params": "\n/**\n* The ID of a group\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/{id}/access_requests": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/groups/{id}/access_requests": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/groups/{id}/access_requests/{user_id}": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,\n/**\n* The user ID of the access requester\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/groups/{id}/access_requests/{user_id}/approve": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,\n/**\n* The user ID of the access requester\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/{id}/issues": {
+    "params": "\n/**\n* The ID of a group\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/{id}/members": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/groups/{id}/members": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/groups/{id}/members/{user_id}": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,\n/**\n* The user ID of the member\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/{id}/members/{user_id}": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,\n/**\n* The user ID of the member\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/groups/{id}/members/{user_id}": {
+    "params": "\n/**\n* The group ID\n*/\n id: string,\n/**\n* The user ID of the new member\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/{id}/notification_settings": {
+    "params": "\n/**\n* The group ID or project ID or project NAMESPACE/PROJECT_NAME\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/groups/{id}/notification_settings": {
+    "params": "\n/**\n* The group ID or project ID or project NAMESPACE/PROJECT_NAME\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/groups/{id}/projects": {
+    "params": "\n/**\n* The ID of a group\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/groups/{id}/projects/{project_id}": {
+    "params": "\n/**\n* The ID of a group\n*/\n id: string,\n/**\n* The ID or path of the project\n*/\n projectId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/hooks": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/v3/hooks": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "delete_/v3/hooks/{id}": {
+    "params": "\n/**\n* The ID of the system hook\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/hooks/{id}": {
+    "params": "\n/**\n* The ID of the system hook\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/internal/allowed": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/internal/broadcast_message": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/internal/check": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/internal/discover": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/internal/lfs_authenticate": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/internal/merge_request_urls": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/internal/two_factor_recovery_codes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/issues": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/v3/keys/{id}": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/licenses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/licenses/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/namespaces": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/notification_settings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/notification_settings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/all": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/fork/{id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/owned": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/search/{query}": {
+    "params": "\n/**\n* The project name to be searched\n*/\n query: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/starred": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/user/{user_id}": {
+    "params": "\n/**\n* The ID of a user\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/visible": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/(ref/{ref}/)trigger/builds": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The commit sha or name of a branch or tag\n*/\n ref: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/access_requests": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/access_requests": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/access_requests/{user_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The user ID of the access requester\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/access_requests/{user_id}/approve": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The user ID of the access requester\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/archive": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/boards": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/boards/{board_id}/lists": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a board\n*/\n boardId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/boards/{board_id}/lists": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a board\n*/\n boardId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a board\n*/\n boardId: number,\n/**\n* The ID of a board list\n*/\n listId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a board\n*/\n boardId: number,\n/**\n* The ID of a list\n*/\n listId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a board\n*/\n boardId: number,\n/**\n* The ID of a list\n*/\n listId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/builds": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/builds/artifacts/{ref_name}/download": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ref from repository\n*/\n refName: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/builds/{build_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/builds/{build_id}/artifacts": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/builds/{build_id}/artifacts/keep": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/builds/{build_id}/cancel": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/builds/{build_id}/erase": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/builds/{build_id}/play": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a Build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/builds/{build_id}/retry": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/builds/{build_id}/trace": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a build\n*/\n buildId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/deploy_keys": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/deploy_keys": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/deploy_keys/{key_id}": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/deploy_keys/{key_id}": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/deploy_keys/{key_id}/disable": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/deploy_keys/{key_id}/enable": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/deployments": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/deployments/{deployment_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The deployment ID\n*/\n deploymentId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/environments": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/environments": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/environments/{environment_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The environment ID\n*/\n environmentId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/environments/{environment_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The environment ID\n*/\n environmentId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/events": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/fork": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/fork/{forked_from_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the project it was forked from\n*/\n forkedFromId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/hooks": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/hooks": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/hooks/{hook_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the hook to delete\n*/\n hookId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/hooks/{hook_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project hook\n*/\n hookId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/hooks/{hook_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the hook to update\n*/\n hookId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/issues/{issue_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{issue_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/issues/{issue_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/add_spent_time": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{issue_id}/award_emoji": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of an Issue, Merge Request or Snippet\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/award_emoji": {
+    "params": " id: number, issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of an award emoji\n*/\n awardId: number, id: number, issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of the award\n*/\n awardId: number, id: number, issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/move": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
+    "params": " id: number, issueId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
+    "params": " id: number, issueId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of an award emoji\n*/\n awardId: number, id: number, issueId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of the award\n*/\n awardId: number, id: number, issueId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/reset_spent_time": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/reset_time_estimate": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/time_estimate": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{issue_id}/time_stats": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project issue\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{issue_id}/todo": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of an issuable\n*/\n issueId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{noteable_id}/notes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{noteable_id}/notes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,\n/**\n* The ID of a note\n*/\n noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a note\n*/\n noteId: number,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,\n/**\n* The ID of a note\n*/\n noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/issues/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/issues/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/keys": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/keys": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/keys/{key_id}": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/keys/{key_id}": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/keys/{key_id}/disable": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/keys/{key_id}/enable": {
+    "params": "\n/**\n* The ID of the project\n*/\n id: string,\n/**\n* The ID of the deploy key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/labels": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/labels": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/labels": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/labels": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/labels/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/labels/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/members": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/members": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/members/{user_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The user ID of the member\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/members/{user_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The user ID of the member\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/members/{user_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The user ID of the new member\n*/\n userId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_request/{merge_request_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a merge request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/merge_request/{merge_request_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_request/{merge_request_id}/cancel_merge_when_build_succeeds": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_request/{merge_request_id}/changes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_request/{merge_request_id}/closes_issues": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_request/{merge_request_id}/commits": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/merge_request/{merge_request_id}/merge": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/merge_requests/{merge_request_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a merge request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/merge_requests/{merge_request_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/add_spent_time": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project merge_request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of an Issue, Merge Request or Snippet\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
+    "params": " id: number, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of an award emoji\n*/\n awardId: number, id: number, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of the award\n*/\n awardId: number, id: number, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/cancel_merge_when_build_succeeds": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/changes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/closes_issues": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/commits": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/merge_requests/{merge_request_id}/merge": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string, mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
+    "params": " id: number, mergeRequestId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
+    "params": " id: number, mergeRequestId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of an award emoji\n*/\n awardId: number, id: number, mergeRequestId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of the award\n*/\n awardId: number, id: number, mergeRequestId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/reset_spent_time": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project merge_request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/reset_time_estimate": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project merge_request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/time_estimate": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project merge_request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/time_stats": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project merge_request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{merge_request_id}/todo": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of an issuable\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/versions": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a merge request\n*/\n mergeRequestId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{merge_request_id}/versions/{version_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a merge request\n*/\n mergeRequestId: number,\n/**\n* The ID of a merge request diff version\n*/\n versionId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,\n/**\n* The ID of a note\n*/\n noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a note\n*/\n noteId: number,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,\n/**\n* The ID of a note\n*/\n noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a resource\n*/\n subscribableId: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/milestones": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/milestones": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/milestones/{milestone_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project milestone\n*/\n milestoneId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/milestones/{milestone_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project milestone\n*/\n milestoneId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/milestones/{milestone_id}/issues": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project milestone\n*/\n milestoneId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/notification_settings": {
+    "params": "\n/**\n* The group ID or project ID or project NAMESPACE/PROJECT_NAME\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/notification_settings": {
+    "params": "\n/**\n* The group ID or project ID or project NAMESPACE/PROJECT_NAME\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/pipeline": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/pipelines": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/pipelines/{pipeline_id}": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The pipeline ID\n*/\n pipelineId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/pipelines/{pipeline_id}/cancel": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The pipeline ID\n*/\n pipelineId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/pipelines/{pipeline_id}/retry": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,\n/**\n* The pipeline ID\n*/\n pipelineId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/archive": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/blobs/{sha}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The commit, branch name, or tag name\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/branches": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/repository/branches": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/repository/branches/{branch}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the branch\n*/\n branch: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/branches/{branch}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the branch\n*/\n branch: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/repository/branches/{branch}/protect": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the branch\n*/\n branch: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/repository/branches/{branch}/unprotect": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the branch\n*/\n branch: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/commits": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/repository/commits": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/commits/{sha}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* A commit sha, or the name of a branch or tag\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/commits/{sha}/blob": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The commit, branch name, or tag name\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/commits/{sha}/builds": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The SHA id of a commit\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/repository/commits/{sha}/cherry_pick": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* A commit sha to be cherry picked\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/commits/{sha}/comments": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* A commit sha, or the name of a branch or tag\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/repository/commits/{sha}/comments": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The commit's SHA\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/commits/{sha}/diff": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* A commit sha, or the name of a branch or tag\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/commits/{sha}/statuses": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The commit hash\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/compare": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/contributors": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/repository/files": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/files": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/repository/files": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/repository/files": {
+    "params": "\n/**\n* The project ID\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/repository/merged_branches": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/raw_blobs/{sha}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The commit, branch name, or tag name\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/tags": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/repository/tags": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/repository/tags/{tag_name}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the tag\n*/\n tagName: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/tags/{tag_name}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the tag\n*/\n tagName: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/repository/tags/{tag_name}/release": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the tag\n*/\n tagName: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/repository/tags/{tag_name}/release": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The name of the tag\n*/\n tagName: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/repository/tree": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/runners": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/runners": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/runners/{runner_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the runner\n*/\n runnerId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/asana": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/assembla": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/bamboo": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/bugzilla": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/buildkite": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/builds-email": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/campfire": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/custom-issue-tracker": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/drone-ci": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/emails-on-push": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/external-wiki": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/flowdock": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/gemnasium": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/hipchat": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/irker": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/jira": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/kubernetes": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/mattermost": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/mattermost-slash-commands": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/services/mattermost_slash_commands/trigger": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/pipelines-email": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/pivotaltracker": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/pushover": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/redmine": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/slack": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/slack-slash-commands": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/services/slack_slash_commands/trigger": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/services/teamcity": {
+    "params": " id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/services/{service_slug}": {
+    "params": "\n/**\n* The name of the service\n*/\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\", id: number,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "get_/v3/projects/{id}/services/{service_slug}": {
+    "params": "\n/**\n* The name of the service\n*/\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\", id: number,",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "post_/v3/projects/{id}/share": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/share/{group_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the group\n*/\n groupId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/snippets": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{noteable_id}/notes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/snippets/{noteable_id}/notes": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,\n/**\n* The ID of a note\n*/\n noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a note\n*/\n noteId: number,\n/**\n* The ID of the noteable\n*/\n noteableId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of the noteable\n*/\n noteableId: number,\n/**\n* The ID of a note\n*/\n noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/snippets/{snippet_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project snippet\n*/\n snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{snippet_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project snippet\n*/\n snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/snippets/{snippet_id}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project snippet\n*/\n snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of an Issue, Merge Request or Snippet\n*/\n snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
+    "params": " id: number, snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of an award emoji\n*/\n awardId: number, id: number, snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of the award\n*/\n awardId: number, id: number, snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
+    "params": " id: number, snippetId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
+    "params": " id: number, snippetId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of an award emoji\n*/\n awardId: number, id: number, snippetId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "params": "\n/**\n* The ID of the award\n*/\n awardId: number, id: number, snippetId: number, noteId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/snippets/{snippet_id}/raw": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The ID of a project snippet\n*/\n snippetId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/star": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/star": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/statuses/{sha}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The commit hash\n*/\n sha: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/triggers": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/triggers": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/triggers/{token}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The unique token of trigger\n*/\n token: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/triggers/{token}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The unique token of trigger\n*/\n token: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/unarchive": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/uploads": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/users": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/variables": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/projects/{id}/variables": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/projects/{id}/variables/{key}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The key of the variable\n*/\n key: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/projects/{id}/variables/{key}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The key of the variable\n*/\n key: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/projects/{id}/variables/{key}": {
+    "params": "\n/**\n* The ID of a project\n*/\n id: string,\n/**\n* The key of the variable\n*/\n key: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/runners": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/runners/all": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/runners/{id}": {
+    "params": "\n/**\n* The ID of the runner\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/runners/{id}": {
+    "params": "\n/**\n* The ID of the runner\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/runners/{id}": {
+    "params": "\n/**\n* The ID of the runner\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/session": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/sidekiq/compound_metrics": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/sidekiq/job_stats": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/sidekiq/process_metrics": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/sidekiq/queue_metrics": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/snippets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/snippets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/snippets/public": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/snippets/{id}": {
+    "params": "\n/**\n* The ID of a snippet\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/snippets/{id}": {
+    "params": "\n/**\n* The ID of a snippet\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/snippets/{id}": {
+    "params": "\n/**\n* The ID of a snippet\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/snippets/{id}/raw": {
+    "params": "\n/**\n* The ID of a snippet\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/dockerfiles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/dockerfiles/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/gitignores": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/gitignores/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/gitlab_ci_ymls": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/gitlab_ci_ymls/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/licenses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/templates/licenses/{name}": {
+    "params": "\n/**\n* The name of the template\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/todos": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/todos": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "delete_/v3/todos/{id}": {
+    "params": "\n/**\n* The ID of the todo being marked as done\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/user": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/v3/user/emails": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/user/emails": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/user/emails/{email_id}": {
+    "params": "\n/**\n* The ID of the email\n*/\n emailId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/user/emails/{email_id}": {
+    "params": "\n/**\n* The ID of the email\n*/\n emailId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/user/keys": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/user/keys": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/user/keys/{key_id}": {
+    "params": "\n/**\n* The ID of the SSH key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/user/keys/{key_id}": {
+    "params": "\n/**\n* The ID of the SSH key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/users": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/v3/users": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "delete_/v3/users/{id}": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/users/{id}": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/users/{id}": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/users/{id}/block": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/users/{id}/emails": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/users/{id}/emails": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/users/{id}/emails/{email_id}": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,\n/**\n* The ID of the email\n*/\n emailId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/users/{id}/events": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/users/{id}/keys": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/v3/users/{id}/keys": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/v3/users/{id}/keys/{key_id}": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,\n/**\n* The ID of the SSH key\n*/\n keyId: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/v3/users/{id}/unblock": {
+    "params": "\n/**\n* The ID of the user\n*/\n id: number,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/v3/version": { "params": "null", "requireRelaxedTypeAnnotation": false }
+}
