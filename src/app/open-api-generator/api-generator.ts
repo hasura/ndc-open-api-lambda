@@ -25,7 +25,7 @@ export type NdcSchemaComponent = {
 
 export type ApiRoute = {
   route: ParsedRoute;
-  querySchema: TypesParser.ParsedTypes;
+  paramSchema: TypesParser.ParsedTypes;
 };
 
 export class ApiComponents {
@@ -224,10 +224,10 @@ export async function generateOpenApiTypescriptFile(
         // if (routeData.raw.route === "/v3/projects/{id}") {
         //   console.log('\n\n\n\nonCreateRoute: ', CircularJSON.stringify(routeData));
         // }
-        const querySchema = TypesParser.parse(routeData);
+        const paramSchema = TypesParser.parse(routeData);
         const apiRoute: ApiRoute = {
           route: routeData,
-          querySchema: querySchema,
+          paramSchema: paramSchema,
         };
         apiComponents.addRoute(apiRoute);
       },

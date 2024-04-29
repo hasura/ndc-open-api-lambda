@@ -207,7 +207,6 @@ function parsePathParams(
 
   const parsedPathParamsArray: Schema[] = [];
   for (const property in pathParams?.properties) {
-    // console.log('property: ', property);
     const stateParams: StateParams = {
       requireRelaxedTypeAnnotation: false,
     };
