@@ -1,0 +1,69 @@
+{
+  "post_/pet": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "put_/pet": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/pet/findByStatus": {
+    "params": " query: {   \n/**\n* Status values that need to be considered for filter\n*/\n status?: \"available\" | \"pending\" | \"sold\", },",
+    "requireRelaxedTypeAnnotation": true
+  },
+  "get_/pet/findByTags": {
+    "params": " query: {   \n/**\n* Tags to filter by\n*/\n tags?:   string[], },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/pet/{petId}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/pet/{petId}": {
+    "params": " query: {   \n/**\n* Name of pet that needs to be updated\n*/\n name?: string,  \n/**\n* Status of pet that needs to be updated\n*/\n status?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/pet/{petId}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/pet/{petId}/uploadImage": {
+    "params": " query: {   \n/**\n* Additional Metadata\n*/\n additionalMetadata?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/store/inventory": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/store/order": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/store/order/{orderId}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/store/order/{orderId}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/user": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "post_/user/createWithList": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/user/login": {
+    "params": " query: {   \n/**\n* The user name for login\n*/\n username?: string,  \n/**\n* The password for login in clear text\n*/\n password?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/user/logout": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/user/{username}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/user/{username}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/user/{username}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  }
+}
