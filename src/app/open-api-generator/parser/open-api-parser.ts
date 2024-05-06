@@ -7,13 +7,17 @@
 import * as logger from "../../../util/logger";
 
 type TypeSchema = {
-    type?: string,
-    description?: string,
-    properties?: Record<string, TypeSchema>,
-    example?: string,
-}
+  type?: string;
+  description?: string;
+  properties?: Record<string, TypeSchema>;
+  example?: string;
+};
 
-export function fixTypesDescriptions(type: TypeSchema,  schemaType: string, name?: string,) {
+export function fixTypesDescriptions(
+  type: TypeSchema,
+  schemaType: string,
+  name?: string,
+) {
   if (!type) {
     return;
   }
@@ -30,20 +34,28 @@ export function fixTypesDescriptions(type: TypeSchema,  schemaType: string, name
 
 function traverseTypes(name: string, type: TypeSchema, visited: Set<string>) {
   if (visited.has(name)) {
-    return
+    return;
   }
   visited.add(name);
 
-  if (type.description && type.description.indexOf('*/') > -1) {
-    logger.warn(`Encountered '*/' in description, replacing all occurrences with "*'/"`);
-    type.description = type.description.replaceAll('*/', `*'/`);
+  if (type.description && type.description.indexOf("*/") > -1) {
+    logger.warn(
+      `Encountered '*/' in description, replacing all occurrences with "*''/"`,
+    );
+    type.description = type.description.replaceAll("*/", `*''/`);
   }
 
   // console.log('type.example: ', type.example);
   // console.log('typeof of example: ', typeof type.example);
-  if (type.example && typeof type.example === 'string' && type.example.indexOf('*/') > -1) {
-    logger.warn(`Encountered '*/' in example, replacing all occurrences with "*'/"`);
-    type.description = type.example.replaceAll('*/', `*'/`);
+  if (
+    type.example &&
+    typeof type.example === "string" &&
+    type.example.indexOf("*/") > -1
+  ) {
+    logger.warn(
+      `Encountered '*/' in example, replacing all occurrences with "*''/"`,
+    );
+    type.description = type.example.replaceAll("*/", `*''/`);
   }
 
   if (type.properties) {
@@ -58,8 +70,11 @@ export function fixDescription(description?: string): string | undefined {
     return description;
   }
 
-  if (description.indexOf('*/') > -1) {
-    logger.fatal(`Encountered '*/' in description, replacing all occurrences with "*''/"`);
-    return description.replaceAll('*/', `*''/`);
+  if (description.indexOf("*/") > -1) {
+    logger.fatal(
+      `Encountered '*/' in description, replacing all occurrences with "*''/"`,
+    );
+    return description.replaceAll("*/", `*''/`);
   }
+  return description;
 }

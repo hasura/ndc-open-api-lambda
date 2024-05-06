@@ -1,6 +1,7 @@
 import * as assert from "assert";
 import * as fs from "fs";
 import * as path from "path";
+import * as OpenApiParser from "./open-api-parser";
 import { generateRandomDir } from "../../../../tests/testutils";
 import { generateApi } from "swagger-typescript-api";
 import { getTemplatesDirectory } from "../index";
@@ -78,6 +79,9 @@ async function generateCode(testCase: TestCase) {
     silent: true,
     hooks: {
       onCreateRoute: (routeData) => {
+        routeData.raw.description = OpenApiParser.fixDescription(
+          routeData.raw.description,
+        );
         const parsedTypes = parse(routeData);
         const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
 
@@ -104,6 +108,13 @@ async function generateCode(testCase: TestCase) {
             : false,
         };
         gotPathFunctionArgs.set(jsonKey, gotPath);
+        return routeData;
+      },
+      onPreParseSchema: (originalSchema, typeName, schemaType) => {
+        originalSchema.description = OpenApiParser.fixDescription(
+          originalSchema.description,
+        );
+        return originalSchema;
       },
     },
   });
@@ -163,6 +174,11 @@ const queryParamTests: TestCase[] = [
     name: "AwsAutoscaling",
     oasFile: "../tests/oas-docs/aws-autoscaling.json",
     goldenFile: "aws-autoscaling.json",
+  },
+  {
+    name: "Kubernetes",
+    oasFile: "../tests/oas-docs/kubernetes.json",
+    goldenFile: "kubernetes.json",
   },
 ];
 
