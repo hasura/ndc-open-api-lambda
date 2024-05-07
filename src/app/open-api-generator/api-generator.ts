@@ -218,13 +218,8 @@ export async function generateOpenApiTypescriptFile(
           apiComponents.addComponent(component);
         }
       },
-      onCreateRequestParams: (rawType) => {
-        // console.log('\n\n\n onCreateRequestParams: ', CircularJSON.stringify(rawType));
-      },
+      onCreateRequestParams: (rawType) => {},
       onCreateRoute: (routeData) => {
-        // if (routeData.raw.route === "/v3/projects/{id}") {
-        // console.log('\n\n\n\nonCreateRoute: ', CircularJSON.stringify(routeData));
-        // }
         const paramSchema = TypesParser.parse(routeData);
         const apiRoute: ApiRoute = {
           route: routeData,
@@ -250,16 +245,13 @@ export async function generateOpenApiTypescriptFile(
       },
       onInit: (configuration) => {},
       onPreParseSchema: (originalSchema, typeName, schemaType) => {
-        // console.log('\n\n\n\nonPreParseSchema;; originalSchema ', CircularJSON.stringify(originalSchema));
         originalSchema.description = OpenApiParser.fixDescription(
           originalSchema.description,
         );
-        // originalSchema.example = OpenApiParser.fixTypesDescriptions(originalSchema, schemaType, typeName);
         return originalSchema;
       },
       onParseSchema: (originalSchema, parsedSchema) => {},
       onPrepareConfig: (currentConfiguration) => {},
-
       onBuildRoutePath: (data) => {},
     },
   });
