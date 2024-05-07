@@ -97,13 +97,7 @@ Set to "completed", "successful", "failed", "running", or defaults to no filter.
  * @request POST :/project/{username}/{project}
  */
 export async function postProjectProjectCreate(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
   /** Request body */
   data: {
@@ -137,13 +131,7 @@ export async function postProjectProjectCreate(
  * @request DELETE :/project/{username}/{project}/build-cache
  */
 export async function deleteProjectBuildCacheDelete(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
 ): Promise<{
   status?: string;
@@ -165,13 +153,7 @@ export async function deleteProjectBuildCacheDelete(
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
 ): Promise<Keys> {
   const result = await api.project.checkoutKeyDetail({
@@ -191,13 +173,7 @@ export async function getProjectCheckoutKeyDetail(
  * @allowrelaxedtypes
  */
 export async function postProjectCheckoutKeyCreate(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
   /** Request body */
   data: "deploy-key" | "github-user-key",
@@ -219,13 +195,7 @@ export async function postProjectCheckoutKeyCreate(
  * @request DELETE :/project/{username}/{project}/checkout-key/{fingerprint}
  */
 export async function deleteProjectCheckoutKeyDelete(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
   /**
    * XXXXXXXXXX
@@ -253,17 +223,8 @@ export async function deleteProjectCheckoutKeyDelete(
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail2(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
-  /**
-   * XXXXXXXXXX
-   */
   fingerprint: string,
 ): Promise<Key> {
   const result = await api.project.checkoutKeyDetail2({
@@ -284,13 +245,7 @@ export async function getProjectCheckoutKeyDetail2(
  * @readonly
  */
 export async function getProjectEnvvarDetail(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
 ): Promise<Envvars> {
   const result = await api.project.envvarDetail({
@@ -309,13 +264,7 @@ export async function getProjectEnvvarDetail(
  * @request POST :/project/{username}/{project}/envvar
  */
 export async function postProjectEnvvarCreate(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
 ): Promise<Envvar> {
   const result = await api.project.envvarCreate({
@@ -334,13 +283,7 @@ export async function postProjectEnvvarCreate(
  * @request DELETE :/project/{username}/{project}/envvar/{name}
  */
 export async function deleteProjectEnvvarDelete(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
   /**
    * XXXXXXXXXX
@@ -367,17 +310,8 @@ export async function deleteProjectEnvvarDelete(
  * @readonly
  */
 export async function getProjectEnvvarDetail2(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
-  /**
-   * XXXXXXXXXX
-   */
   name: string,
 ): Promise<Envvar> {
   const result = await api.project.envvarDetail2({
@@ -398,13 +332,7 @@ export async function getProjectEnvvarDetail2(
  * @allowrelaxedtypes
  */
 export async function postProjectSshKeyCreate(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
   /** Request body */
   data: {
@@ -429,13 +357,7 @@ export async function postProjectSshKeyCreate(
  * @request POST :/project/{username}/{project}/tree/{branch}
  */
 export async function postProjectTreeCreate(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
   /**
    * The branch name should be url-encoded.
@@ -473,13 +395,7 @@ export async function postProjectTreeCreate(
  * @readonly
  */
 export async function getProjectProjectDetail2(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
   /**
    * XXXXXXXXXX
@@ -504,17 +420,8 @@ export async function getProjectProjectDetail2(
  * @readonly
  */
 export async function getProjectArtifactsDetail(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
-  /**
-   * XXXXXXXXXX
-   */
   buildNum: number,
 ): Promise<Artifacts> {
   const result = await api.project.artifactsDetail({
@@ -534,17 +441,8 @@ export async function getProjectArtifactsDetail(
  * @request POST :/project/{username}/{project}/{build_num}/cancel
  */
 export async function postProjectCancelCreate(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
-  /**
-   * XXXXXXXXXX
-   */
   buildNum: number,
 ): Promise<Build> {
   const result = await api.project.cancelCreate({
@@ -564,17 +462,8 @@ export async function postProjectCancelCreate(
  * @request POST :/project/{username}/{project}/{build_num}/retry
  */
 export async function postProjectRetryCreate(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
-  /**
-   * XXXXXXXXXX
-   */
   buildNum: number,
 ): Promise<Build> {
   const result = await api.project.retryCreate({
@@ -595,17 +484,8 @@ export async function postProjectRetryCreate(
  * @readonly
  */
 export async function getProjectTestsDetail(
-  /**
-   * XXXXXXXXX
-   */
   username: string,
-  /**
-   * XXXXXXXXX
-   */
   project: string,
-  /**
-   * XXXXXXXXXX
-   */
   buildNum: number,
 ): Promise<Tests> {
   const result = await api.project.testsDetail({

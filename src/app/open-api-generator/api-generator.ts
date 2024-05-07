@@ -9,6 +9,7 @@ import { getTemplatesDirectory } from ".";
 import { existsSync } from "fs";
 import * as logger from "../../util/logger";
 import * as TypesParser from "./parser/types-parser";
+import * as OpenApiParser from "./parser/open-api-parser";
 
 const CircularJSON = require("circular-json");
 
@@ -217,19 +218,18 @@ export async function generateOpenApiTypescriptFile(
           apiComponents.addComponent(component);
         }
       },
-      onCreateRequestParams: (rawType) => {
-        // console.log('\n\n\n onCreateRequestParams: ', CircularJSON.stringify(rawType));
-      },
+      onCreateRequestParams: (rawType) => {},
       onCreateRoute: (routeData) => {
-        // if (routeData.raw.route === "/v3/projects/{id}") {
-        //   console.log('\n\n\n\nonCreateRoute: ', CircularJSON.stringify(routeData));
-        // }
         const paramSchema = TypesParser.parse(routeData);
         const apiRoute: ApiRoute = {
           route: routeData,
           paramSchema: paramSchema,
         };
+        routeData.raw.description = OpenApiParser.fixDescription(
+          routeData.raw.description,
+        );
         apiComponents.addRoute(apiRoute);
+        return routeData;
       },
       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {},
       onFormatRouteName: (routeInfo, templateRouteName) => {},
@@ -244,13 +244,15 @@ export async function generateOpenApiTypescriptFile(
         }
       },
       onInit: (configuration) => {},
-      onPreParseSchema: (originalSchema, typeName, schemaType) => {},
+      onPreParseSchema: (originalSchema, typeName, schemaType) => {
+        originalSchema.description = OpenApiParser.fixDescription(
+          originalSchema.description,
+        );
+        return originalSchema;
+      },
       onParseSchema: (originalSchema, parsedSchema) => {},
       onPrepareConfig: (currentConfiguration) => {},
-
-      onBuildRoutePath: (data) => {
-        // console.log('\n\n\n onBuildRoutePath: ', CircularJSON.stringify(data));
-      },
+      onBuildRoutePath: (data) => {},
     },
   });
 

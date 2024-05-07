@@ -1,5 +1,8 @@
 # Open API Lambda Connector Changelog
 
+## Unreleased
+- Bug fix: Replaced `*/` with `*''/` in API descriptions so that multi line comments do not end pre maturely which was resulting in a syntax error ([#21](https://github.com/hasura/ndc-open-api-lambda/pull/21))
+
 ## [[0.0.2-alpha](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.0.2-alpha)] 2024-04-19
 
 - Added [Prettier Code Formatting](https://prettier.io/docs/en/api.html) to the generated `functions.ts` file
