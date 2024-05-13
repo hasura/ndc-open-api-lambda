@@ -1,19 +1,29 @@
-import * as ts from "typescript";
+import * as ts from "ts-morph";
 
 export type FunctionWithTagsAsStringArray = {
-  function: ts.FunctionDeclaration,
-  tags: string[],
-}
+  function: ts.FunctionDeclaration;
+  tags: string[];
+};
 
-export function getFunctionsWithJSDocTags(tsSourceFile: ts.SourceFile): Map<string, FunctionWithTagsAsStringArray> {
-  const functionsWithJSDocTags = new Map<string, FunctionWithTagsAsStringArray>();
+/**
+ *
+ * @param tsSourceFile
+ * @returns map of function name to type FunctionWithTagsAsStringArray
+ */
+export function getFunctionsWithJSDocTags(
+  tsSourceFile: ts.SourceFile,
+): Map<string, FunctionWithTagsAsStringArray> {
+  const functionsWithJSDocTags = new Map<
+    string,
+    FunctionWithTagsAsStringArray
+  >();
   const allFunctions = getAllFunctions(tsSourceFile);
   allFunctions.forEach((func) => {
     const functionName = getFunctionName(func);
     const allJSDocs = getAllJSDocs(func);
     allJSDocs.forEach((jsDoc) => {
       const tags = getAllJSDocsTagsAsStringArray(jsDoc);
-      functionsWithJSDocTags.set(functionName!, {function: func, tags: tags});
+      functionsWithJSDocTags.set(functionName!, { function: func, tags: tags });
     });
   });
   return functionsWithJSDocTags;
@@ -27,7 +37,7 @@ export function getAllFunctions(
     return allFunctions;
   }
   tsSourceFile.forEachChild((node) => {
-    if (ts.isFunctionDeclaration(node)) {
+    if (ts.Node.isFunctionDeclaration(node)) {
       allFunctions.push(node as ts.FunctionDeclaration);
     }
   });
@@ -40,7 +50,7 @@ export function getAllJSDocs(node: ts.Node) {
     return allJSDocTags;
   }
   node.getChildren().forEach((childNode) => {
-    if (ts.isJSDoc(childNode)) {
+    if (ts.Node.isJSDoc(childNode)) {
       allJSDocTags.push(childNode as ts.JSDoc);
     }
   });
@@ -52,12 +62,16 @@ export function getAllJSDocsTagsAsStringArray(node: ts.JSDoc) {
   if (!node) {
     return allTags;
   }
-  node.tags?.forEach((tag) => {
-    allTags.push(tag.tagName.escapedText.toString());
+  node.getTags()?.forEach((tag) => {
+    allTags.push(tag.getTagName());
   });
   return allTags;
 }
 
 export function getFunctionName(node: ts.FunctionDeclaration) {
-  return node.name?.escapedText;
+  return node.getName();
+}
+
+export function isSavedFunction(func: FunctionWithTagsAsStringArray): boolean {
+  return func.tags.indexOf("save") > -1;
 }
