@@ -21,10 +21,11 @@ export function getFunctionsWithJSDocTags(
   allFunctions.forEach((func) => {
     const functionName = getFunctionName(func);
     const allJSDocs = getAllJSDocs(func);
+    let tags: string[] = [];
     allJSDocs.forEach((jsDoc) => {
-      const tags = getAllJSDocsTagsAsStringArray(jsDoc);
-      functionsWithJSDocTags.set(functionName!, { function: func, tags: tags });
+      tags = getAllJSDocsTagsAsStringArray(jsDoc);
     });
+    functionsWithJSDocTags.set(functionName!, { function: func, tags: tags });
   });
   return functionsWithJSDocTags;
 }

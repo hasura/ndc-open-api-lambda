@@ -2,7 +2,6 @@ import * as morph from "./morph";
 import * as ts from "ts-morph";
 import * as assert from "assert";
 import * as fs from "fs";
-import { mergeTsSources } from ".";
 import path from "path";
 import * as prettier from "prettier";
 
