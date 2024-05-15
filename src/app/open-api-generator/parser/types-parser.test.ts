@@ -6,7 +6,10 @@ import { generateRandomDir } from "../../../../tests/testutils";
 import { generateApi } from "swagger-typescript-api";
 import { getTemplatesDirectory } from "../index";
 import { parse } from "./types-parser";
+import * as context from "../../context";
 const CircularJSON = require("circular-json");
+
+context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
 type FunctionParams = {
   params: string;

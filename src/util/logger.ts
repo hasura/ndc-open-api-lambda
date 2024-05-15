@@ -1,28 +1,11 @@
 import { pino } from "pino";
+import * as context from "../app/context";
 
-const logger = getLogger();
+let logger = getLogger();
 
 function getLogLevel(): string {
-  let logLevel = process.env.HASURA_PLUGIN_LOG_LEVEL
-    ? process.env.HASURA_PLUGIN_LOG_LEVEL
-    : "info";
-  const prettyLogs = process.env.NDC_OAS_LAMBDA_PRETTY_LOGS;
-
-  const logLevels = new Set<string>([
-    "trace",
-    "debug",
-    "info",
-    "warn",
-    "error",
-    "fatal",
-    "panic",
-  ]);
-
-  if (!logLevels.has(logLevel)) {
-    return logLevel;
-  }
-
-  if (logLevel === "panic") {
+  let logLevel = context.getInstance().getLogLevel();
+  if (logLevel === context.LogLevel.PANIC) {
     return "silent";
   }
   return logLevel;
@@ -30,8 +13,7 @@ function getLogLevel(): string {
 
 function getLogger() {
   if (
-    process.env.NDC_OAS_LAMBDA_PRETTY_LOGS &&
-    process.env.NDC_OAS_LAMBDA_PRETTY_LOGS === "true"
+    context.getInstance().isPrettyLogs()
   ) {
     return pino({
       transport: {
@@ -48,6 +30,10 @@ function getLogger() {
       level: getLogLevel(),
     });
   }
+}
+
+export function resetLogger() {
+  logger = getLogger();
 }
 
 export function trace(...args: any[]) {
