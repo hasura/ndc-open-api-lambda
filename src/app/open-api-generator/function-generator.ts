@@ -1,9 +1,8 @@
-import * as path from "path";
 import { ApiComponents } from "./api-generator";
 import { ParsedApiRoutes } from "./parsedApiRoutes";
 import { Eta } from "eta";
-import { getTemplatesDirectory } from "./index";
 import * as prettier from "prettier";
+import * as context from "../context";
 
 const CircularJSON = require("circular-json");
 
@@ -21,7 +20,7 @@ export async function generateFunctionsTypescriptFile(
   headers: string | undefined,
   baseUrl: string | undefined,
 ): Promise<string> {
-  templateDir = path.resolve(getTemplatesDirectory(), "./functions");
+  templateDir = context.getInstance().getFunctionTsFileTemplateDirectory();
 
   const parseApiRoutes = new ParsedApiRoutes(
     new Set<string>(apiComponents.getTypeNames()),

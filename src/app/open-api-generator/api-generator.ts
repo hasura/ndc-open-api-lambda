@@ -5,11 +5,11 @@ import {
   SchemaComponent,
 } from "swagger-typescript-api";
 import * as path from "path";
-import { getTemplatesDirectory } from ".";
 import { existsSync } from "fs";
 import * as logger from "../../util/logger";
 import * as TypesParser from "./parser/types-parser";
 import * as OpenApiParser from "./parser/open-api-parser";
+import * as context from "../context";
 
 const CircularJSON = require("circular-json");
 
@@ -49,7 +49,7 @@ export class ApiComponents {
     this.allGeneratedTypes = new Set<string>();
     this.routes = [];
 
-    templateDir = path.resolve(getTemplatesDirectory(), "./custom");
+    templateDir = context.getInstance().getApiTsFileTemplateDirectory();
   }
 
   public addComponent(component: SchemaComponent) {

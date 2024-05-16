@@ -3,6 +3,9 @@ import * as fs from "fs";
 import * as path from "path";
 import { generateRandomDir } from "../../../../tests/testutils";
 import { generateCode } from "..";
+import * as context from "../../context";
+
+context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
 const tests: {
   name: string;

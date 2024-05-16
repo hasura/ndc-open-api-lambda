@@ -4,9 +4,11 @@ import * as path from "path";
 import * as OpenApiParser from "./open-api-parser";
 import { generateRandomDir } from "../../../../tests/testutils";
 import { generateApi } from "swagger-typescript-api";
-import { getTemplatesDirectory } from "../index";
 import { parse } from "./types-parser";
+import * as context from "../../context";
 const CircularJSON = require("circular-json");
+
+context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
 type FunctionParams = {
   params: string;
@@ -67,7 +69,7 @@ function setupTest(testCase: TestCase) {
 }
 
 async function generateCode(testCase: TestCase) {
-  const templateDir = path.resolve(getTemplatesDirectory(), "./custom");
+  const templateDir = context.getInstance().getApiTsFileTemplateDirectory();
 
   const gotQueryFunctionArgs = new Map<string, FunctionParams>();
   const gotPathFunctionArgs = new Map<string, FunctionParams>();
