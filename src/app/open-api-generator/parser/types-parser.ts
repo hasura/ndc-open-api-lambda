@@ -24,7 +24,6 @@
  */
 
 import path from "path";
-import { getTemplatesDirectory } from "..";
 import { Eta } from "eta";
 const CircularJSON = require("circular-json");
 

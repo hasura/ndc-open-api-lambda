@@ -31,6 +31,9 @@ export enum LogLevel {
 const PACKAGE_JSON_FILENAME = 'package.json';
 const TS_CONFIG_FILENAME = 'tsconfig.json'
 
+const API_TS_FILE_TEMPLATE_DIRECTORY = "./custom"; // relative path (to the template directory) of the directory that contains the eta templates for api.ts file
+const FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY = "./functions"; // relative path (to the template directory) of the directory that contains the eta templates for functions.ts file
+
 const NODE_VERSION = 'node20';
 
 export const TS_CONFIG_FILE_CONTENT = `{
@@ -166,4 +169,12 @@ public getTemplatesDirectory(): string {
     return path.resolve(__dirname, "../../../templates");
   }
 };
+
+public getFunctionTsFileTemplateDirectory(): string {
+  return path.resolve(this.getTemplatesDirectory(), FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY);
+}
+
+public getApiTsFileTemplateDirectory(): string {
+  return path.resolve(this.getTemplatesDirectory(), API_TS_FILE_TEMPLATE_DIRECTORY);
+}
 }

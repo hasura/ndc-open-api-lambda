@@ -1,5 +1,4 @@
 import { generateOpenApiTypescriptFile } from "./api-generator";
-import * as path from "path";
 import * as fs from "fs";
 import { generateFunctionsTypescriptFile } from "./function-generator";
 import pacote from "pacote";
@@ -10,19 +9,6 @@ import * as fileUtil from "../../util/file";
 import * as context from "../context";
 
 const PackageJson = require("@npmcli/package-json");
-
-/**
- * this function is added because the variable `__dirname` points to two different
- * locations depending on how the code is being run.
- * If the code is run via tests, it points to the directory in typescript code layout
- * otherwise it points to the genenrated javascript directory
- *
- * @returns the correct parent directory containing templates
- */
-export const getTemplatesDirectory = (): string => {
-  return context.getInstance().getTemplatesDirectory();
-};
-
 
 export async function generatePackageJson(
   outputDir: string,

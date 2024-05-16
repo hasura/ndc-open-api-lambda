@@ -8,7 +8,7 @@ const hasParams = (route) => {
   return (route.allParams && route.allParams.length > 0)
 }
 
-const getParameterAsFunctionParam = (param) => { // parameter accepted by the funciton in function.ts
+const getParameterAsFunctionParam = (param) => { // parameter accepted by the function in function.ts
   if (param.required) {
     return `${param.name}: ${param.tsType} ,`
   } else {
