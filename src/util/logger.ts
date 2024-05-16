@@ -12,9 +12,7 @@ function getLogLevel(): string {
 }
 
 function getLogger() {
-  if (
-    context.getInstance().isPrettyLogs()
-  ) {
+  if (context.getInstance().isPrettyLogs()) {
     return pino({
       transport: {
         target: "pino-pretty",

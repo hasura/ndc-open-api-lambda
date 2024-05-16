@@ -25,16 +25,16 @@ export enum LogLevel {
   WARN = "warn",
   ERROR = "error",
   FATAL = "fatal",
-  PANIC = "panic"
+  PANIC = "panic",
 }
 
-const PACKAGE_JSON_FILENAME = 'package.json';
-const TS_CONFIG_FILENAME = 'tsconfig.json'
+const PACKAGE_JSON_FILENAME = "package.json";
+const TS_CONFIG_FILENAME = "tsconfig.json";
 
 const API_TS_FILE_TEMPLATE_DIRECTORY = "./custom"; // relative path (to the template directory) of the directory that contains the eta templates for api.ts file
 const FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY = "./functions"; // relative path (to the template directory) of the directory that contains the eta templates for functions.ts file
 
-const NODE_VERSION = 'node20';
+const NODE_VERSION = "node20";
 
 export const TS_CONFIG_FILE_CONTENT = `{
   "extends": "./node_modules/@tsconfig/${NODE_VERSION}/tsconfig.json",
@@ -58,16 +58,16 @@ export class Context {
       apiFileName: "api.ts",
       functionsFileName: "functions.ts",
       logLevel: this.readLogLevel(),
-      prettyLogs: process.env.NDC_OAS_LAMBDA_PRETTY_LOGS === 'true',
+      prettyLogs: process.env.NDC_OAS_LAMBDA_PRETTY_LOGS === "true",
       overwriteFiles: false,
     };
   }
 
   public readLogLevel(): LogLevel {
     let logLevel = process.env.HASURA_PLUGIN_LOG_LEVEL
-    ? process.env.HASURA_PLUGIN_LOG_LEVEL
-    : LogLevel.INFO;
-    if ((Object.values(LogLevel) as string[]).includes(logLevel))     {
+      ? process.env.HASURA_PLUGIN_LOG_LEVEL
+      : LogLevel.INFO;
+    if ((Object.values(LogLevel) as string[]).includes(logLevel)) {
       return logLevel as LogLevel;
     }
     return LogLevel.INFO;
@@ -154,27 +154,33 @@ export class Context {
     return this.config.openApiUri;
   }
 
-/**
- * this function is added because the variable `__dirname` points to two different
- * locations depending on how the code is being run.
- * If the code is run via tests, it points to the directory in typescript code layout
- * otherwise it points to the genenrated javascript directory
- *
- * @returns the correct parent directory containing templates
- */
-public getTemplatesDirectory(): string {
-  if (fs.existsSync(path.resolve(__dirname, "../../templates"))) {
-    return path.resolve(__dirname, "../../templates");
-  } else {
-    return path.resolve(__dirname, "../../../templates");
+  /**
+   * this function is added because the variable `__dirname` points to two different
+   * locations depending on how the code is being run.
+   * If the code is run via tests, it points to the directory in typescript code layout
+   * otherwise it points to the genenrated javascript directory
+   *
+   * @returns the correct parent directory containing templates
+   */
+  public getTemplatesDirectory(): string {
+    if (fs.existsSync(path.resolve(__dirname, "../../templates"))) {
+      return path.resolve(__dirname, "../../templates");
+    } else {
+      return path.resolve(__dirname, "../../../templates");
+    }
   }
-};
 
-public getFunctionTsFileTemplateDirectory(): string {
-  return path.resolve(this.getTemplatesDirectory(), FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY);
-}
+  public getFunctionTsFileTemplateDirectory(): string {
+    return path.resolve(
+      this.getTemplatesDirectory(),
+      FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY,
+    );
+  }
 
-public getApiTsFileTemplateDirectory(): string {
-  return path.resolve(this.getTemplatesDirectory(), API_TS_FILE_TEMPLATE_DIRECTORY);
-}
+  public getApiTsFileTemplateDirectory(): string {
+    return path.resolve(
+      this.getTemplatesDirectory(),
+      API_TS_FILE_TEMPLATE_DIRECTORY,
+    );
+  }
 }

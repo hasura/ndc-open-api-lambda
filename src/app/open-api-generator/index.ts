@@ -134,7 +134,9 @@ export async function importOpenApi(args: ImportOpenApiArgs) {
     }
   }
 
-  logger.info(`creating functions file at: ${context.getInstance().getFunctionsFilePath()}`);
+  logger.info(
+    `creating functions file at: ${context.getInstance().getFunctionsFilePath()}`,
+  );
   fs.writeFileSync(
     context.getInstance().getFunctionsFilePath(),
     functionFileContent,
