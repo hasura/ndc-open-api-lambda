@@ -1,7 +1,7 @@
-import { pino } from "pino";
+import { Logger, pino } from "pino";
 import * as context from "../app/context";
 
-let logger = getLogger();
+let logger: Logger<never> | undefined = undefined;
 
 function getLogLevel(): string {
   let logLevel = context.getInstance().getLogLevel();
@@ -35,6 +35,9 @@ export function resetLogger() {
 }
 
 export function trace(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.trace(args[0]);
   } else {
@@ -43,6 +46,9 @@ export function trace(...args: any[]) {
 }
 
 export function debug(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.debug(args[0]);
   } else {
@@ -51,6 +57,9 @@ export function debug(...args: any[]) {
 }
 
 export function info(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.info(args[0]);
   } else {
@@ -59,6 +68,9 @@ export function info(...args: any[]) {
 }
 
 export function warn(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.warn(args[0]);
   } else {
@@ -67,6 +79,9 @@ export function warn(...args: any[]) {
 }
 
 export function error(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.error(args[0]);
   } else {
@@ -75,6 +90,9 @@ export function error(...args: any[]) {
 }
 
 export function fatal(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.fatal(args[0]);
   } else {
