@@ -97,7 +97,7 @@ const tests: {
   },
 ];
 
-describe("funtions-ts-generator", async () => {
+describe("functions-ts-generator", async () => {
   testGenerateFunctionsTsCode();
 });
 
