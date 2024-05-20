@@ -20,77 +20,77 @@ const tests: {
   _headersMap?: Map<string, string>;
 }[] = [
   {
-    name: "GenerateCode_DemoBlogApi",
+    name: "DemoBlogApi",
     openApiUri: "./oas-docs/demo-blog-api.json",
     goldenFile: "./golden-files/demo-blog-api",
     baseUrl: "http://localhost:9191",
   },
   {
-    name: "GenerateCode_Petstore",
+    name: "Petstore",
     openApiUri: "./oas-docs/petstore.yaml",
     goldenFile: "./golden-files/petstore",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: "GenerateCode_DemoBlogApi_headers",
+    name: "DemoBlogApi_headers",
     openApiUri: "./oas-docs/demo-blog-api.json",
     goldenFile: "./golden-files/demo-blog-api-headers",
     headers: "auth=some-token=1&type=json",
     baseUrl: "http://mybaseurl/abc/def",
   },
   {
-    name: "GenerateCode_Petstore_headers",
+    name: "Petstore_headers",
     openApiUri: "./oas-docs/petstore.yaml",
     goldenFile: "./golden-files/petstore-headers",
     headers: "auth=some-token=1&type=json,xml,text",
   },
   {
-    name: "GenerateCode_GitlabApi",
+    name: "GitlabApi",
     openApiUri: "./oas-docs/gitlab.json",
     goldenFile: "./golden-files/gitlab",
   },
   {
-    name: "GenerateCode_Instagram",
+    name: "Instagram",
     openApiUri: "./oas-docs/instagram.json",
     goldenFile: "./golden-files/instagram",
   },
   {
-    name: "GenerateCode_Geomag",
+    name: "Geomag",
     openApiUri: "./oas-docs/geomag.json",
     goldenFile: "./golden-files/geomag",
   },
   {
-    name: "GenerateCode_GoogleHome",
+    name: "GoogleHome",
     openApiUri: "./oas-docs/google-home.json",
     goldenFile: "./golden-files/google-home",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: "GenerateCode_GoogleAdsense",
+    name: "GoogleAdsense",
     openApiUri: "./oas-docs/google-adsense.json",
     goldenFile: "./golden-files/google-adsense",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: "GenerateCode_CircleCI",
+    name: "CircleCI",
     openApiUri: "./oas-docs/circleci.json",
     goldenFile: "./golden-files/circleci",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: "GenerateCode_aws-autoscaling",
+    name: "aws-autoscaling",
     openApiUri: "./oas-docs/aws-autoscaling.json",
     goldenFile: "./golden-files/aws-autoscaling",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: "GenerateCode_adobe",
+    name: "adobe",
     openApiUri: "./oas-docs/adobe.json",
     goldenFile: "./golden-files/adobe",
     baseUrl: "http://localhost:13191",
   },
   {
-    name: "GenerateCode_Kubernetes",
+    name: "Kubernetes",
     openApiUri: "./oas-docs/kubernetes.json",
     goldenFile: "./golden-files/kubernetes",
     baseUrl: "http://localhost:9191",
@@ -130,7 +130,7 @@ async function testGenerateFunctionsTsCode() {
         ).legacyTypedApiComponents;
       });
 
-      it(testCase.name, async () => {
+      it(`should generate functions.ts file content for ${testCase.name}`, async () => {
         const got = await functionTsGenerator.generateFunctionsTsCode(
           testCase._legacyApiComponents!,
           testCase._headersMap,
