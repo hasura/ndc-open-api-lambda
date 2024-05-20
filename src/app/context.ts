@@ -2,6 +2,7 @@ import * as path from "path";
 import * as fs from "fs";
 import * as logger from "../util/logger";
 import { exit } from "process";
+import { SemVer } from "semver";
 
 export function getInstance(): Context {
   return Context.getInstance();
@@ -28,11 +29,14 @@ export enum LogLevel {
   PANIC = "panic",
 }
 
+const NDC_NODEJS_LAMBDA_SDK_VERSION = "v1.4.0";
+
 const PACKAGE_JSON_FILENAME = "package.json";
 const TS_CONFIG_FILENAME = "tsconfig.json";
 
 const API_TS_FILE_TEMPLATE_DIRECTORY = "./custom"; // relative path (to the template directory) of the directory that contains the eta templates for api.ts file
 const FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY = "./functions"; // relative path (to the template directory) of the directory that contains the eta templates for functions.ts file
+const FUNCTIONS_TS_FILE_TEMPLATE_FILE_NAME = "functions.ejs"; // name of the template ejs file that renders the functions.ts file
 
 const NODE_VERSION = "node20";
 
@@ -170,6 +174,7 @@ export class Context {
     }
   }
 
+  // TODO: rename to `getFunctionsTsFileTemplateDirectory`
   public getFunctionTsFileTemplateDirectory(): string {
     return path.resolve(
       this.getTemplatesDirectory(),
@@ -182,5 +187,13 @@ export class Context {
       this.getTemplatesDirectory(),
       API_TS_FILE_TEMPLATE_DIRECTORY,
     );
+  }
+
+  public getFunctionsTsFileTemplateFileName(): string {
+    return FUNCTIONS_TS_FILE_TEMPLATE_FILE_NAME;
+  }
+
+  public getNdcNodeJsLambdaSdkVersion(): SemVer {
+    return new SemVer(NDC_NODEJS_LAMBDA_SDK_VERSION);
   }
 }
