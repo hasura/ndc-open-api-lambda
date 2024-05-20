@@ -1,10 +1,9 @@
 import * as assert from "assert";
 import * as fs from "fs";
 import * as path from "path";
-import * as OpenApiParser from "./open-api-parser";
 import { generateRandomDir } from "../../../../tests/testutils";
-import { generateApi } from "swagger-typescript-api";
 import { parse } from "./types-parser";
+import * as apiTsGenerator from "../../generator/api-ts-generator";
 import * as context from "../../context";
 const CircularJSON = require("circular-json");
 
@@ -28,7 +27,6 @@ type TestCase = {
   expectedQueryParams?: Map<string, FunctionParams>;
   expectedPathParams?: Map<string, FunctionParams>;
 
-  outDir?: string;
   gotQueryParams?: Map<string, FunctionParams>;
   gotPathParams?: Map<string, FunctionParams>;
 };
@@ -45,10 +43,6 @@ function readGoldenFileContent(
 }
 
 function setupTest(testCase: TestCase) {
-  const outDir = generateRandomDir(
-    path.resolve(__dirname, `./_temp/${testCase.name}`),
-  );
-  testCase.outDir = outDir;
   testCase.oasFile = path.resolve(__dirname, testCase.oasFile);
 
   testCase._queryGoldenFile = path.resolve(
@@ -69,66 +63,42 @@ function setupTest(testCase: TestCase) {
 }
 
 async function generateCode(testCase: TestCase) {
-  const templateDir = context.getInstance().getApiTsFileTemplateDirectory();
-
   const gotQueryFunctionArgs = new Map<string, FunctionParams>();
   const gotPathFunctionArgs = new Map<string, FunctionParams>();
-  await generateApi({
-    name: "api.ts",
-    input: testCase.oasFile,
-    output: testCase.outDir,
-    templates: templateDir,
-    silent: true,
-    hooks: {
-      onCreateRoute: (routeData) => {
-        routeData.raw.description = OpenApiParser.fixDescription(
-          routeData.raw.description,
-        );
-        const parsedTypes = parse(routeData);
-        const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
 
-        const gotQuery: FunctionParams = {
-          params:
-            parsedTypes.queryParams && parsedTypes.queryParams?._rendered
-              ? parsedTypes.queryParams?._rendered
-              : "null",
-          requireRelaxedTypeAnnotation:
-            parsedTypes.queryParams &&
+  const generatedApiTsCode = await apiTsGenerator.generateApiTsCode(testCase.oasFile);
+
+  for (let routeData of generatedApiTsCode.routes) {
+    const parsedTypes = parse(routeData);
+    const jsonKey = `${parsedTypes.apiMethod}_${parsedTypes.apiRoute}`;
+
+    const gotQuery: FunctionParams = {
+      params:
+        parsedTypes.queryParams && parsedTypes.queryParams?._rendered
+          ? parsedTypes.queryParams?._rendered
+          : "null",
+      requireRelaxedTypeAnnotation:
+        parsedTypes.queryParams &&
+        parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
+          ? parsedTypes.queryParams &&
             parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
-              ? parsedTypes.queryParams &&
-                parsedTypes.queryParams?._requiresRelaxedTypeAnnotation
-              : false,
-        };
-        gotQueryFunctionArgs.set(jsonKey, gotQuery);
+          : false,
+    };
+    gotQueryFunctionArgs.set(jsonKey, gotQuery);
 
-        const gotPath: FunctionParams = {
-          params: parsedTypes.pathParams
-            ? parsedTypes.pathParams._rendered
-            : "null",
-          requireRelaxedTypeAnnotation: parsedTypes.pathParams
-            ? parsedTypes.pathParams._requiresRelaxedTypeAnnotation
-            : false,
-        };
-        gotPathFunctionArgs.set(jsonKey, gotPath);
-        return routeData;
-      },
-      onPreParseSchema: (originalSchema, typeName, schemaType) => {
-        originalSchema.description = OpenApiParser.fixDescription(
-          originalSchema.description,
-        );
-        return originalSchema;
-      },
-    },
-  });
+    const gotPath: FunctionParams = {
+      params: parsedTypes.pathParams
+        ? parsedTypes.pathParams._rendered
+        : "null",
+      requireRelaxedTypeAnnotation: parsedTypes.pathParams
+        ? parsedTypes.pathParams._requiresRelaxedTypeAnnotation
+        : false,
+    };
+    gotPathFunctionArgs.set(jsonKey, gotPath);
+  }
 
   testCase.gotQueryParams = gotQueryFunctionArgs;
   testCase.gotPathParams = gotPathFunctionArgs;
-}
-
-function cleanup(testCase: TestCase) {
-  // remove generated api.ts files
-  // comment to inspect the generated files
-  fs.rmSync(`${testCase.outDir}`, { recursive: true });
 }
 
 const queryParamTests: TestCase[] = [
@@ -203,10 +173,6 @@ for (const testCase of queryParamTests) {
 
       // Uncomment to update golden file
       // fs.writeFileSync(testCase._pathGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotPathParams!)));
-    });
-
-    after(function () {
-      cleanup(testCase);
     });
   });
 }
