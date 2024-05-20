@@ -97,45 +97,51 @@ const tests: {
   },
 ];
 
-describe("functions-ts-generator::generateFunctionsTsCode", async () => {
-  for (const testCase of tests) {
-    before(async () => {
-      const relativeDirectorToTestFiles = "../open-api-generator/tests/";
-
-      testCase.openApiUri = path.resolve(
-        __dirname,
-        relativeDirectorToTestFiles,
-        testCase.openApiUri,
-      );
-      testCase.goldenFile = path.resolve(
-        __dirname,
-        relativeDirectorToTestFiles,
-        testCase.goldenFile,
-      );
-      testCase._goldenFileContent = readFileSync(
-        testCase.goldenFile,
-      ).toString();
-
-      if (testCase.headers) {
-        testCase._headersMap = headerParser.parseHeaders(testCase.headers);
-      }
-
-      testCase._legacyApiComponents = (
-        await apiTsGenerator.generateApiTsCode(testCase.openApiUri)
-      ).legacyTypedApiComponents;
-    });
-
-    it(testCase.name, async () => {
-      const got = await functionTsGenerator.generateFunctionsTsCode(
-        testCase._legacyApiComponents!,
-        testCase._headersMap,
-        testCase.baseUrl,
-      );
-
-      assert.equal(got.fileContent, testCase._goldenFileContent);
-
-      // uncomment to update golden file
-      // writeFileSync(testCase.goldenFile, got.fileContent);
-    });
-  }
+describe("funtions-ts-generator", async () => {
+  testGenerateFunctionsTsCode();
 });
+
+async function testGenerateFunctionsTsCode() {
+  describe("generateFunctionsTsCode", async () => {
+    for (const testCase of tests) {
+      before(async () => {
+        const relativeDirectorToTestFiles = "../open-api-generator/tests/";
+
+        testCase.openApiUri = path.resolve(
+          __dirname,
+          relativeDirectorToTestFiles,
+          testCase.openApiUri,
+        );
+        testCase.goldenFile = path.resolve(
+          __dirname,
+          relativeDirectorToTestFiles,
+          testCase.goldenFile,
+        );
+        testCase._goldenFileContent = readFileSync(
+          testCase.goldenFile,
+        ).toString();
+
+        if (testCase.headers) {
+          testCase._headersMap = headerParser.parseHeaders(testCase.headers);
+        }
+
+        testCase._legacyApiComponents = (
+          await apiTsGenerator.generateApiTsCode(testCase.openApiUri)
+        ).legacyTypedApiComponents;
+      });
+
+      it(testCase.name, async () => {
+        const got = await functionTsGenerator.generateFunctionsTsCode(
+          testCase._legacyApiComponents!,
+          testCase._headersMap,
+          testCase.baseUrl,
+        );
+
+        assert.equal(got.fileContent, testCase._goldenFileContent);
+
+        // uncomment to update golden file
+        // writeFileSync(testCase.goldenFile, got.fileContent);
+      });
+    }
+  });
+}
