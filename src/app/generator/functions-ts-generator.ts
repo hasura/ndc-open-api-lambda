@@ -4,8 +4,6 @@ import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as legacyApiRouteParser from "../open-api-generator/parsedApiRoutes";
 import * as context from "../context";
 import { Eta } from "eta";
-import * as prettier from "prettier";
-import * as logger from "../../util/logger";
 import * as types from "../types";
 
 type ParsedFunctionComponents = {
@@ -47,17 +45,6 @@ export async function generateFunctionsTsCode(
       headerMap: headersMap,
     },
   );
-
-  try {
-    generatedFunctionsTsCode = await prettier.format(generatedFunctionsTsCode, {
-      parser: "typescript",
-    });
-  } catch (e) {
-    logger.error(
-      "Error while formatting code. The resulting code will be unformatted and may contain syntax errors. Error listed in debug logs",
-    );
-    logger.debug(e);
-  }
 
   const generatedCode: types.GeneratedCode = {
     filePath: context.getInstance().getFunctionsFileName(),

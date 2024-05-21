@@ -4,6 +4,7 @@ import * as legacyApiTsGenerator from "../open-api-generator/api-generator";
 import * as apiTsGenerator from "./api-ts-generator";
 import * as functionTsGenerator from "./functions-ts-generator";
 import * as headerParser from "../open-api-generator/parser/header-parser";
+import * as prettier from "prettier";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
 
@@ -131,11 +132,15 @@ async function testGenerateFunctionsTsCode() {
       });
 
       it(`should generate functions.ts file content for ${testCase.name}`, async () => {
-        const got = await functionTsGenerator.generateFunctionsTsCode(
+        let got = await functionTsGenerator.generateFunctionsTsCode(
           testCase._legacyApiComponents!,
           testCase._headersMap,
           testCase.baseUrl,
         );
+
+        got.fileContent = await prettier.format(got.fileContent, {
+          parser: "typescript",
+        });
 
         assert.equal(got.fileContent, testCase._goldenFileContent);
 

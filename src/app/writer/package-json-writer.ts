@@ -5,7 +5,7 @@ import * as logger from "../../util/logger";
 import { SemVer } from "semver";
 import NPMCliPackageJson, * as PackageJson from "@npmcli/package-json";
 
-async function writePackageJsonToFileSystem() {
+export async function writeToFileSystem() {
   const ndcNodeJsLambdaSdkVersion = await getNdcNodeJsLambdaSdkVersion();
 
   if (packageJsonExists()) {
