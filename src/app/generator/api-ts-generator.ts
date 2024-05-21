@@ -87,7 +87,7 @@ export async function generateApiTsCode(
     },
   });
 
-  typedOpenApiComponents.processNdcComponents();  
+  typedOpenApiComponents.processNdcComponents();
 
   const generatedTsCode: GeneratedApiTsCode = {
     legacyTypedApiComponents: typedOpenApiComponents,

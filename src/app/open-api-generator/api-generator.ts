@@ -1,7 +1,4 @@
-import {
-  ParsedRoute,
-  SchemaComponent,
-} from "swagger-typescript-api";
+import { ParsedRoute, SchemaComponent } from "swagger-typescript-api";
 import * as logger from "../../util/logger";
 import * as TypesParser from "./parser/types-parser";
 import * as context from "../context";

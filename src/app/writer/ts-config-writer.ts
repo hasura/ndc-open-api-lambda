@@ -22,9 +22,12 @@ export function writeToFileSystem() {
     logger.info(`Creating file: ${tsConfigJsonFilePath}`);
   }
 
-  fs.writeFileSync(context.getInstance().getTsConfigFilePath(), TS_CONFIG_FILE_CONTENT);
+  fs.writeFileSync(
+    context.getInstance().getTsConfigFilePath(),
+    TS_CONFIG_FILE_CONTENT,
+  );
 }
 
 function tsConfigJsonAlreadyExists(): boolean {
-    return fs.existsSync(context.getInstance().getTsConfigFilePath());
+  return fs.existsSync(context.getInstance().getTsConfigFilePath());
 }

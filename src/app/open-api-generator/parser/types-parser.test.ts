@@ -66,7 +66,9 @@ async function generateCode(testCase: TestCase) {
   const gotQueryFunctionArgs = new Map<string, FunctionParams>();
   const gotPathFunctionArgs = new Map<string, FunctionParams>();
 
-  const generatedApiTsCode = await apiTsGenerator.generateApiTsCode(testCase.oasFile);
+  const generatedApiTsCode = await apiTsGenerator.generateApiTsCode(
+    testCase.oasFile,
+  );
 
   for (let routeData of generatedApiTsCode.routes) {
     const parsedTypes = parse(routeData);

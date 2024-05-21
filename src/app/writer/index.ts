@@ -9,8 +9,12 @@ import { execSync } from "child_process";
 
 export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
   try {
-    const apiTsCode = codeToWrite.filter((element) => element.fileType === "api-ts" );
-    const functionsTsCode = codeToWrite.filter((element) => element.fileType === "functions-ts" );
+    const apiTsCode = codeToWrite.filter(
+      (element) => element.fileType === "api-ts",
+    );
+    const functionsTsCode = codeToWrite.filter(
+      (element) => element.fileType === "functions-ts",
+    );
 
     apiWriter.writeToFileSystem(apiTsCode[0]!);
     await functionsWriter.writeToFileSystem(functionsTsCode[0]!);
@@ -22,7 +26,7 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
     logger.info("all dependencies installed");
   } catch (e) {
     if (e instanceof apiWriter.SimilarFileContentsError) {
-      logger.fatal('api.ts is up to date, aborting writing files.', e.message);
+      logger.fatal("api.ts is up to date, aborting writing files.", e.message);
       exit(0);
     } else {
       logger.fatal(e);

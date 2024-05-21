@@ -10,11 +10,14 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode) {
     fs.writeFileSync(codeToWrite.filePath, codeToWrite.fileContent);
     return;
   }
-  
+
   logger.info(`Overwriting ${codeToWrite.filePath}`);
   const staleFile = fs.readFileSync(codeToWrite.filePath).toString();
 
-  let freshFile = tsParser.preserveUserChanges(staleFile, codeToWrite.fileContent);
+  let freshFile = tsParser.preserveUserChanges(
+    staleFile,
+    codeToWrite.fileContent,
+  );
 
   try {
     freshFile = await prettier.format(freshFile, {
@@ -22,7 +25,8 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode) {
     });
   } catch (e) {
     logger.error(
-      "Error while formatting code. The resulting code will be unformatted and may contain syntax errors. Error: ", e
+      "Error while formatting code. The resulting code will be unformatted and may contain syntax errors. Error: ",
+      e,
     );
   }
 
