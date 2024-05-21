@@ -40,17 +40,6 @@ const FUNCTIONS_TS_FILE_TEMPLATE_FILE_NAME = "functions.ejs"; // name of the tem
 
 const NODE_VERSION = "node20";
 
-// TODO: remove from context, this should not exist here
-export const TS_CONFIG_FILE_CONTENT = `{
-  "extends": "./node_modules/@tsconfig/${NODE_VERSION}/tsconfig.json",
-  "compilerOptions": {
-    "lib": [
-      "dom"
-    ]
-  }
-}
-`;
-
 /**
  * Context is a singleton class that holds the configuration of the app
  */
@@ -175,8 +164,7 @@ export class Context {
     }
   }
 
-  // TODO: rename to `getFunctionsTsFileTemplateDirectory`
-  public getFunctionTsFileTemplateDirectory(): string {
+  public getFunctionsTsFileTemplateDirectory(): string {
     return path.resolve(
       this.getTemplatesDirectory(),
       FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY,

@@ -32,7 +32,7 @@ export async function generateFunctionsTsCode(
   }
 
   const eta = new Eta({
-    views: context.getInstance().getFunctionTsFileTemplateDirectory(),
+    views: context.getInstance().getFunctionsTsFileTemplateDirectory(),
   });
 
   let generatedFunctionsTsCode = eta.render(
