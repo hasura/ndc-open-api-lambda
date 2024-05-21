@@ -22,7 +22,7 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
     logger.info("all dependencies installed");
   } catch (e) {
     if (e instanceof apiWriter.SimilarFileContentsError) {
-      logger.error('api.ts is up to date, aborting writing files.', e.message);
+      logger.fatal('api.ts is up to date, aborting writing files.', e.message);
       exit(0);
     } else {
       logger.fatal(e);

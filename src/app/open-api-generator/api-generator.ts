@@ -182,81 +182,81 @@ export class ApiComponents {
   }
 }
 
-export async function generateOpenApiTypescriptFile(
-  filename: string,
-  url: string | undefined,
-  filePath: string | undefined,
-  outputDir: string,
-  hooks: Hooks | undefined,
-  shouldOverwriteFile: boolean,
-): Promise<ApiComponents> {
-  const apiComponents = new ApiComponents();
+// export async function generateOpenApiTypescriptFile(
+//   filename: string,
+//   url: string | undefined,
+//   filePath: string | undefined,
+//   outputDir: string,
+//   hooks: Hooks | undefined,
+//   shouldOverwriteFile: boolean,
+// ): Promise<ApiComponents> {
+//   const apiComponents = new ApiComponents();
 
-  if (!shouldOverwriteFile) {
-    if (existsSync(path.resolve(outputDir, filename))) {
-      logger.error(
-        `Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
-      );
-      process.exit(0); // silently exit early
-    }
-  }
+//   if (!shouldOverwriteFile) {
+//     if (existsSync(path.resolve(outputDir, filename))) {
+//       logger.error(
+//         `Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+//       );
+//       process.exit(0); // silently exit early
+//     }
+//   }
 
-  await generateApi({
-    name: filename,
-    url: url ? url : "",
-    input: filePath,
-    output: outputDir,
-    templates: templateDir,
-    silent: true,
-    hooks: {
-      onCreateComponent: (component) => {
-        /**
-         * Contains the full definition of the type, along with individual variables in objects
-         */
-        if (component.componentName === "schemas") {
-          // for now, we are only going to deal with schemas
-          apiComponents.addComponent(component);
-        }
-      },
-      onCreateRequestParams: (rawType) => {},
-      onCreateRoute: (routeData) => {
-        const paramSchema = TypesParser.parse(routeData);
-        const apiRoute: ApiRoute = {
-          route: routeData,
-          paramSchema: paramSchema,
-        };
-        routeData.raw.description = OpenApiParser.fixDescription(
-          routeData.raw.description,
-        );
-        apiComponents.addRoute(apiRoute);
-        return routeData;
-      },
-      onCreateRouteName: (routeNameInfo, rawRouteInfo) => {},
-      onFormatRouteName: (routeInfo, templateRouteName) => {},
-      onFormatTypeName: (typeName, rawTypeName, schemaType) => {
-        /**
-         * typename is the name of the type generated for typescript. eg. MainBlog
-         * rawTypeName is equal to the component.typename from onCreateComponent hook.
-         */
-        apiComponents.addTypes(rawTypeName ? rawTypeName : typeName, typeName);
-        if (schemaType && schemaType === "type-name") {
-          apiComponents.allGeneratedTypes.add(typeName);
-        }
-      },
-      onInit: (configuration) => {},
-      onPreParseSchema: (originalSchema, typeName, schemaType) => {
-        originalSchema.description = OpenApiParser.fixDescription(
-          originalSchema.description,
-        );
-        return originalSchema;
-      },
-      onParseSchema: (originalSchema, parsedSchema) => {},
-      onPrepareConfig: (currentConfiguration) => {},
-      onBuildRoutePath: (data) => {},
-    },
-  });
+//   await generateApi({
+//     name: filename,
+//     url: url ? url : "",
+//     input: filePath,
+//     output: outputDir,
+//     templates: templateDir,
+//     silent: true,
+//     hooks: {
+//       onCreateComponent: (component) => {
+//         /**
+//          * Contains the full definition of the type, along with individual variables in objects
+//          */
+//         if (component.componentName === "schemas") {
+//           // for now, we are only going to deal with schemas
+//           apiComponents.addComponent(component);
+//         }
+//       },
+//       onCreateRequestParams: (rawType) => {},
+//       onCreateRoute: (routeData) => {
+//         const paramSchema = TypesParser.parse(routeData);
+//         const apiRoute: ApiRoute = {
+//           route: routeData,
+//           paramSchema: paramSchema,
+//         };
+//         routeData.raw.description = OpenApiParser.fixDescription(
+//           routeData.raw.description,
+//         );
+//         apiComponents.addRoute(apiRoute);
+//         return routeData;
+//       },
+//       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {},
+//       onFormatRouteName: (routeInfo, templateRouteName) => {},
+//       onFormatTypeName: (typeName, rawTypeName, schemaType) => {
+//         /**
+//          * typename is the name of the type generated for typescript. eg. MainBlog
+//          * rawTypeName is equal to the component.typename from onCreateComponent hook.
+//          */
+//         apiComponents.addTypes(rawTypeName ? rawTypeName : typeName, typeName);
+//         if (schemaType && schemaType === "type-name") {
+//           apiComponents.allGeneratedTypes.add(typeName);
+//         }
+//       },
+//       onInit: (configuration) => {},
+//       onPreParseSchema: (originalSchema, typeName, schemaType) => {
+//         originalSchema.description = OpenApiParser.fixDescription(
+//           originalSchema.description,
+//         );
+//         return originalSchema;
+//       },
+//       onParseSchema: (originalSchema, parsedSchema) => {},
+//       onPrepareConfig: (currentConfiguration) => {},
+//       onBuildRoutePath: (data) => {},
+//     },
+//   });
 
-  apiComponents.processNdcComponents();
+//   apiComponents.processNdcComponents();
 
-  return apiComponents;
-}
+//   return apiComponents;
+// }
