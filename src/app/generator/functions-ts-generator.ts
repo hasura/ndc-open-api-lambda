@@ -6,6 +6,7 @@ import * as context from "../context";
 import { Eta } from "eta";
 import * as prettier from "prettier";
 import * as logger from "../../util/logger";
+import * as types from "../types";
 
 type ParsedFunctionComponents = {
   parsedRoute: swaggerTypescriptApi.ParsedRoute;
@@ -17,17 +18,12 @@ type ParsedFunctionComponents = {
   requiresAllowRelaxedTypeAnnotation: boolean;
 };
 
-type GeneratedFunctionsTsCode = {
-  filename: string;
-  fileContent: string;
-};
-
 export async function generateFunctionsTsCode(
   legacyTypedApiComponents: legacyApiTsGenerator.ApiComponents,
   headersMap: Map<string, string> | undefined,
   baseUrl: string | undefined,
   parsedFunctionComponents?: ParsedFunctionComponents, // TODO: use this for instead of `legacyTypedApiComponents`
-): Promise<GeneratedFunctionsTsCode> {
+): Promise<types.GeneratedCode> {
   const legacyApiRoutesParser = new legacyApiRouteParser.ParsedApiRoutes(
     new Set<string>(legacyTypedApiComponents.getTypeNames()),
     legacyTypedApiComponents,
@@ -63,9 +59,10 @@ export async function generateFunctionsTsCode(
     logger.debug(e);
   }
 
-  const generatedCode: GeneratedFunctionsTsCode = {
-    filename: context.getInstance().getFunctionsFileName(),
+  const generatedCode: types.GeneratedCode = {
+    filePath: context.getInstance().getFunctionsFilePath(),
     fileContent: generatedFunctionsTsCode,
+    fileType: "functions-ts",
   };
   return generatedCode;
 }

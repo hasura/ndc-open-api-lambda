@@ -10,7 +10,7 @@ export type GeneratedApiTsCode = {
   schemaComponents: swaggerTypescriptApi.SchemaComponent[];
   routes: swaggerTypescriptApi.ParsedRoute[];
   typeNames: GeneratedTypeName[];
-  filesOutput: swaggerTypescriptApi.GenerateApiOutput;
+  files: swaggerTypescriptApi.GenerateApiOutput;
 };
 
 type GeneratedTypeName = {
@@ -94,7 +94,7 @@ export async function generateApiTsCode(
     schemaComponents: generatedSchemaComponents,
     routes: generatedRoutes,
     typeNames: generatedTypeNames,
-    filesOutput: genenratedApiTsFiles,
+    files: genenratedApiTsFiles,
   };
 
   return generatedTsCode;
