@@ -60,7 +60,7 @@ export async function generateFunctionsTsCode(
   }
 
   const generatedCode: types.GeneratedCode = {
-    filePath: context.getInstance().getFunctionsFilePath(),
+    filePath: context.getInstance().getFunctionsFileName(),
     fileContent: generatedFunctionsTsCode,
     fileType: "functions-ts",
   };

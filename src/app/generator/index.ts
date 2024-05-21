@@ -21,7 +21,11 @@ export async function generateCode(args: GenerateCodeInput): Promise<types.Gener
     fileType: "api-ts"
   });
 
-  generatedCode.push(functionsTsCode);
+  generatedCode.push({
+    filePath: context.getInstance().getFunctionsFilePath(),
+    fileContent: functionsTsCode.fileContent,
+    fileType: functionsTsCode.fileType,
+  });
 
   return generatedCode;
 }
