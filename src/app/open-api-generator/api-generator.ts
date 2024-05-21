@@ -1,19 +1,12 @@
 import {
   ParsedRoute,
-  generateApi,
-  Hooks,
   SchemaComponent,
 } from "swagger-typescript-api";
-import * as path from "path";
-import { existsSync } from "fs";
 import * as logger from "../../util/logger";
 import * as TypesParser from "./parser/types-parser";
-import * as OpenApiParser from "./parser/open-api-parser";
 import * as context from "../context";
 
 const CircularJSON = require("circular-json");
-
-let templateDir: string; // cannot be a constant because calling `getTemplateDirectory` results in a compilation error
 
 export type NdcSchemaComponent = {
   component: SchemaComponent;
@@ -48,8 +41,6 @@ export class ApiComponents {
     this.refToSchemaComponentMap = new Map<string, NdcSchemaComponent>();
     this.allGeneratedTypes = new Set<string>();
     this.routes = [];
-
-    templateDir = context.getInstance().getApiTsFileTemplateDirectory();
   }
 
   public addComponent(component: SchemaComponent) {
@@ -181,82 +172,3 @@ export class ApiComponents {
     );
   }
 }
-
-// export async function generateOpenApiTypescriptFile(
-//   filename: string,
-//   url: string | undefined,
-//   filePath: string | undefined,
-//   outputDir: string,
-//   hooks: Hooks | undefined,
-//   shouldOverwriteFile: boolean,
-// ): Promise<ApiComponents> {
-//   const apiComponents = new ApiComponents();
-
-//   if (!shouldOverwriteFile) {
-//     if (existsSync(path.resolve(outputDir, filename))) {
-//       logger.error(
-//         `Error: ${filename} already exists at ${outputDir}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
-//       );
-//       process.exit(0); // silently exit early
-//     }
-//   }
-
-//   await generateApi({
-//     name: filename,
-//     url: url ? url : "",
-//     input: filePath,
-//     output: outputDir,
-//     templates: templateDir,
-//     silent: true,
-//     hooks: {
-//       onCreateComponent: (component) => {
-//         /**
-//          * Contains the full definition of the type, along with individual variables in objects
-//          */
-//         if (component.componentName === "schemas") {
-//           // for now, we are only going to deal with schemas
-//           apiComponents.addComponent(component);
-//         }
-//       },
-//       onCreateRequestParams: (rawType) => {},
-//       onCreateRoute: (routeData) => {
-//         const paramSchema = TypesParser.parse(routeData);
-//         const apiRoute: ApiRoute = {
-//           route: routeData,
-//           paramSchema: paramSchema,
-//         };
-//         routeData.raw.description = OpenApiParser.fixDescription(
-//           routeData.raw.description,
-//         );
-//         apiComponents.addRoute(apiRoute);
-//         return routeData;
-//       },
-//       onCreateRouteName: (routeNameInfo, rawRouteInfo) => {},
-//       onFormatRouteName: (routeInfo, templateRouteName) => {},
-//       onFormatTypeName: (typeName, rawTypeName, schemaType) => {
-//         /**
-//          * typename is the name of the type generated for typescript. eg. MainBlog
-//          * rawTypeName is equal to the component.typename from onCreateComponent hook.
-//          */
-//         apiComponents.addTypes(rawTypeName ? rawTypeName : typeName, typeName);
-//         if (schemaType && schemaType === "type-name") {
-//           apiComponents.allGeneratedTypes.add(typeName);
-//         }
-//       },
-//       onInit: (configuration) => {},
-//       onPreParseSchema: (originalSchema, typeName, schemaType) => {
-//         originalSchema.description = OpenApiParser.fixDescription(
-//           originalSchema.description,
-//         );
-//         return originalSchema;
-//       },
-//       onParseSchema: (originalSchema, parsedSchema) => {},
-//       onPrepareConfig: (currentConfiguration) => {},
-//       onBuildRoutePath: (data) => {},
-//     },
-//   });
-
-//   apiComponents.processNdcComponents();
-
-//   return apiComponents;
-// }
