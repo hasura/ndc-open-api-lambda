@@ -1,38 +1,18 @@
-import { pino } from "pino";
+import { Logger, pino } from "pino";
+import * as context from "../app/context";
 
-const logger = getLogger();
+let logger: Logger<never> | undefined = undefined;
 
 function getLogLevel(): string {
-  let logLevel = process.env.HASURA_PLUGIN_LOG_LEVEL
-    ? process.env.HASURA_PLUGIN_LOG_LEVEL
-    : "info";
-  const prettyLogs = process.env.NDC_OAS_LAMBDA_PRETTY_LOGS;
-
-  const logLevels = new Set<string>([
-    "trace",
-    "debug",
-    "info",
-    "warn",
-    "error",
-    "fatal",
-    "panic",
-  ]);
-
-  if (!logLevels.has(logLevel)) {
-    return logLevel;
-  }
-
-  if (logLevel === "panic") {
+  let logLevel = context.getInstance().getLogLevel();
+  if (logLevel === context.LogLevel.PANIC) {
     return "silent";
   }
   return logLevel;
 }
 
 function getLogger() {
-  if (
-    process.env.NDC_OAS_LAMBDA_PRETTY_LOGS &&
-    process.env.NDC_OAS_LAMBDA_PRETTY_LOGS === "true"
-  ) {
+  if (context.getInstance().isPrettyLogs()) {
     return pino({
       transport: {
         target: "pino-pretty",
@@ -50,7 +30,14 @@ function getLogger() {
   }
 }
 
+export function resetLogger() {
+  logger = getLogger();
+}
+
 export function trace(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.trace(args[0]);
   } else {
@@ -59,6 +46,9 @@ export function trace(...args: any[]) {
 }
 
 export function debug(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.debug(args[0]);
   } else {
@@ -67,6 +57,9 @@ export function debug(...args: any[]) {
 }
 
 export function info(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.info(args[0]);
   } else {
@@ -75,6 +68,9 @@ export function info(...args: any[]) {
 }
 
 export function warn(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.warn(args[0]);
   } else {
@@ -83,6 +79,9 @@ export function warn(...args: any[]) {
 }
 
 export function error(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.error(args[0]);
   } else {
@@ -91,6 +90,9 @@ export function error(...args: any[]) {
 }
 
 export function fatal(...args: any[]) {
+  if (!logger) {
+    logger = getLogger();
+  }
   if (args && args.length === 1) {
     logger.fatal(args[0]);
   } else {

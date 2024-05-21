@@ -1,8 +1,8 @@
 import { Command, Option } from "commander";
 import { importOpenApi } from "../app/open-api-generator";
-import { resolve } from "path";
 import { exit } from "process";
 import * as logger from "../util/logger";
+import * as context from "../app/context";
 
 export const cmd = new Command("update")
   .description(
@@ -62,7 +62,7 @@ Further reading:
   .action((args, cmd) => {
     main(
       args.openApi,
-      resolve(args.outputDirectory),
+      args.outputDirectory,
       args.overwrite === "true",
       args.headers,
       args.baseUrl,
@@ -92,11 +92,12 @@ async function main(
   baseUrl: string | undefined,
   ndcLambdaSdk: string | undefined,
 ) {
+  context.getInstance().setOverwriteFiles(overwrite);
+  context.getInstance().setOpenApiUri(openApi);
+  context.getInstance().setOutputDirectory(outputDir);
+
   try {
     await importOpenApi({
-      openApiUri: openApi,
-      outputDirectory: outputDir,
-      shouldOverwrite: overwrite,
       headers: headers && headers.length > 0 ? headers[0] : undefined, // beacuse of headerParser(), the headers array can contain only 1 element,
       baseUrl: baseUrl,
       ndcLambdaSdkVersion: ndcLambdaSdk,

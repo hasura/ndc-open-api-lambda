@@ -1,5 +1,4 @@
 import { generateOpenApiTypescriptFile } from "./api-generator";
-import * as path from "path";
 import * as fs from "fs";
 import { generateFunctionsTypescriptFile } from "./function-generator";
 import pacote from "pacote";
@@ -7,34 +6,9 @@ import { SemVer } from "semver";
 import { execSync } from "child_process";
 import * as logger from "../../util/logger";
 import * as fileUtil from "../../util/file";
+import * as context from "../context";
 
 const PackageJson = require("@npmcli/package-json");
-
-/**
- * this function is added because the variable `__dirname` points to two different
- * locations depending on how the code is being run.
- * If the code is run via tests, it points to the directory in typescript code layout
- * otherwise it points to the genenrated javascript directory
- *
- * @returns the correct parent directory containing templates
- */
-export const getTemplatesDirectory = (): string => {
-  if (fs.existsSync(path.resolve(__dirname, "../../../templates"))) {
-    return path.resolve(__dirname, "../../../templates");
-  } else {
-    return path.resolve(__dirname, "../../../../templates");
-  }
-};
-
-const tsConfigContent = `{
-  "extends": "./node_modules/@tsconfig/node20/tsconfig.json",
-  "compilerOptions": {
-    "lib": [
-      "dom"
-    ]
-  }
-}
-`;
 
 export async function generatePackageJson(
   outputDir: string,
@@ -122,55 +96,57 @@ export async function generateCode(
 }
 
 export type ImportOpenApiArgs = {
-  openApiUri: string;
-  outputDirectory: string;
-  shouldOverwrite: boolean;
   headers: string | undefined; // format: key1=value1&key2=value2&key3=value3...
   baseUrl: string | undefined;
   ndcLambdaSdkVersion: string | undefined;
 };
 
 export async function importOpenApi(args: ImportOpenApiArgs) {
-  const functionFileTs = await generateCode(
-    args.openApiUri,
-    args.outputDirectory,
-    args.shouldOverwrite,
+  const outputDirectory = context.getInstance().getOutputDirectory();
+  const openApiUri = context.getInstance().getOpenApiUri();
+  const overwriteFilesEnabled = context.getInstance().isOverwriteFilesEnabled();
+  const functionFileContent = await generateCode(
+    openApiUri,
+    outputDirectory,
+    overwriteFilesEnabled,
     args.headers,
     args.baseUrl,
   );
 
-  if (!args.shouldOverwrite) {
-    if (fs.existsSync(path.resolve(args.outputDirectory, "functions.ts"))) {
+  if (!overwriteFilesEnabled) {
+    if (fs.existsSync(context.getInstance().getFunctionsFilePath())) {
       logger.error(
-        `Error: functions.ts already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+        `Error: functions.ts already exists at ${outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
       );
       process.exit(0);
     }
-    if (fs.existsSync(path.resolve(args.outputDirectory, "package.json"))) {
+    if (fs.existsSync(context.getInstance().getPackageJsonFilePath())) {
       logger.error(
-        `Error: package.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+        `Error: package.json already exists at ${outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
       );
       process.exit(0);
     }
-    if (fs.existsSync(path.resolve(args.outputDirectory, "tsconfig.json"))) {
+    if (fs.existsSync(context.getInstance().getTsConfigFilePath())) {
       logger.error(
-        `Error: tsconfig.json already exists at ${args.outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
+        `Error: tsconfig.json already exists at ${outputDirectory}\n\nSet env var NDC_OAS_FILE_OVERWRITE=true to enable file overwrite`,
       );
       process.exit(0);
     }
   }
 
-  logger.info("create functions.ts");
+  logger.info(
+    `creating functions file at: ${context.getInstance().getFunctionsFilePath()}`,
+  );
   fs.writeFileSync(
-    path.resolve(args.outputDirectory, "functions.ts"),
-    functionFileTs,
+    context.getInstance().getFunctionsFilePath(),
+    functionFileContent,
   );
 
-  await generatePackageJson(args.outputDirectory, args.ndcLambdaSdkVersion);
+  await generatePackageJson(outputDirectory, args.ndcLambdaSdkVersion);
 
-  logger.info("create tsconfig.json");
+  logger.info(`creating file: ${context.getInstance().getTsConfigFilePath()}`);
   fs.writeFileSync(
-    path.resolve(args.outputDirectory, "tsconfig.json"),
-    tsConfigContent,
+    context.getInstance().getTsConfigFilePath(),
+    context.TS_CONFIG_FILE_CONTENT,
   );
 }
