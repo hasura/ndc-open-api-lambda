@@ -18,7 +18,7 @@ export async function writeToFileSystem() {
     );
   }
 
-  const packageJson = await PackageJson.load(
+  const packageJson = await NPMCliPackageJson.load(
     context.getInstance().getOutputDirectory(),
     { create: true },
   );
@@ -34,6 +34,8 @@ export async function writeToFileSystem() {
     scripts: scripts,
     dependencies: dependencies,
   });
+
+  await packageJson.save();
 }
 
 function getScripts(packageJson: NPMCliPackageJson) {

@@ -1,6 +1,5 @@
 import * as types from "../types";
 import * as fs from "fs";
-import * as diff from "../../util/text-diff";
 import * as logger from "../../util/logger";
 
 export class SimilarFileContentsError extends Error {
@@ -18,11 +17,11 @@ export function writeToFileSystem(codeToWrite: types.GeneratedCode) {
   }
 
   const staleFile = fs.readFileSync(codeToWrite.filePath).toString();
-  const shouldOverwrite = diff.hasDiff(staleFile, codeToWrite.fileContent);
+  const shouldOverwrite = staleFile !== codeToWrite.fileContent;
 
   if (!shouldOverwrite) {
     throw new SimilarFileContentsError(
-      `'${codeToWrite.fileContent}' already represents the latest OpenAPI Document`,
+      `'${codeToWrite.filePath}' already represents the latest OpenAPI Document`,
     );
   }
 

@@ -1,8 +1,8 @@
 import { Command, Option } from "commander";
-import { importOpenApi } from "../app/open-api-generator";
 import { exit } from "process";
 import * as logger from "../util/logger";
 import * as context from "../app/context";
+import * as app from "../app";
 
 export const cmd = new Command("update")
   .description(
@@ -97,10 +97,10 @@ async function main(
   context.getInstance().setOutputDirectory(outputDir);
 
   try {
-    await importOpenApi({
-      headers: headers && headers.length > 0 ? headers[0] : undefined, // beacuse of headerParser(), the headers array can contain only 1 element,
+    await app.runApp({
+      openApiUri: openApi,
+      headers: headers && headers.length > 0 ? headers[0] : undefined,
       baseUrl: baseUrl,
-      ndcLambdaSdkVersion: ndcLambdaSdk,
     });
   } catch (e) {
     logger.fatal(e);
