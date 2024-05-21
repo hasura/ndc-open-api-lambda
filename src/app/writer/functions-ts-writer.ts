@@ -7,7 +7,7 @@ import * as logger from "../../util/logger";
 export async function writeToFileSystem(codeToWrite: types.GeneratedCode) {
   if (!fs.existsSync(codeToWrite.filePath)) {
     logger.info(`Creating ${codeToWrite.filePath}`);
-    fs.writeFileSync(codeToWrite.filePath, codeToWrite.fileContent);
+    await writeContentToFile(codeToWrite.filePath, codeToWrite.fileContent);
     return;
   }
 
@@ -19,8 +19,17 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode) {
     codeToWrite.fileContent,
   );
 
+  await writeContentToFile(codeToWrite.filePath, freshFile);
+}
+
+async function writeContentToFile(filePath: string, codeContent: string) {
+  codeContent = await formatCode(codeContent);
+  fs.writeFileSync(filePath, codeContent);
+}
+
+async function formatCode(code: string): Promise<string> {
   try {
-    freshFile = await prettier.format(freshFile, {
+    code = await prettier.format(code, {
       parser: "typescript",
     });
   } catch (e) {
@@ -29,6 +38,5 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode) {
       e,
     );
   }
-
-  fs.writeFileSync(codeToWrite.filePath, freshFile);
+  return code;
 }
