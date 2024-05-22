@@ -1,6 +1,6 @@
 import * as types from "../types";
 import * as fs from "fs";
-import * as tsParser from "../ts-parser";
+import * as tsParser from "../parser/typescript";
 import * as prettier from "prettier";
 import * as logger from "../../util/logger";
 

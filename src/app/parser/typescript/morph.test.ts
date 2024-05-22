@@ -24,7 +24,7 @@ const tests: TestCase[] = [
   },
 ];
 
-describe("Preserve Saved Functions", async () => {
+describe("morph::preserveSavedFunctions", async () => {
   for (const testCase of tests) {
     before(function () {
       testCase.directory = path.resolve(__dirname, testCase.directory);

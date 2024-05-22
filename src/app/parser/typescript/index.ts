@@ -1,4 +1,4 @@
-import * as context from "../context";
+import * as context from "../../context";
 import * as ts from "ts-morph";
 import * as morph from "./morph";
 import path from "path";
