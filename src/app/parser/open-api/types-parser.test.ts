@@ -155,25 +155,31 @@ const queryParamTests: TestCase[] = [
   },
 ];
 
-for (const testCase of queryParamTests) {
-  describe(`Generate Params for ${testCase.name}`, async () => {
-    before(async () => {
-      setupTest(testCase);
-      await generateCode(testCase);
+describe("types-parser", async() => {
+  await testParameterGeneration();
+});
+
+async function testParameterGeneration() {
+  for (const testCase of queryParamTests) {
+    describe(`Generate Params for ${testCase.name}`, async () => {
+      before(async () => {
+        setupTest(testCase);
+        await generateCode(testCase);
+      });
+  
+      it(`${testCase.name}::Query`, function () {
+        assert.deepEqual(testCase.expectedQueryParams, testCase.gotQueryParams);
+  
+        // Uncomment to update golden file
+        // fs.writeFileSync(testCase._queryGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotQueryParams!)));
+      });
+  
+      it(`${testCase.name}::Path`, function () {
+        assert.deepEqual(testCase.expectedPathParams, testCase.gotPathParams);
+  
+        // Uncomment to update golden file
+        // fs.writeFileSync(testCase._pathGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotPathParams!)));
+      });
     });
-
-    it(`${testCase.name}::Query`, function () {
-      assert.deepEqual(testCase.expectedQueryParams, testCase.gotQueryParams);
-
-      // Uncomment to update golden file
-      // fs.writeFileSync(testCase._queryGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotQueryParams!)));
-    });
-
-    it(`${testCase.name}::Path`, function () {
-      assert.deepEqual(testCase.expectedPathParams, testCase.gotPathParams);
-
-      // Uncomment to update golden file
-      // fs.writeFileSync(testCase._pathGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotPathParams!)));
-    });
-  });
+  }  
 }
