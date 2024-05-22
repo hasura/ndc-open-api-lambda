@@ -2,8 +2,8 @@ import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as uriUtil from "../../util/file";
 import * as context from "../context";
 import * as legacyApiTsGenerator from "../open-api-generator/api-generator";
-import * as functionParamsParser from "../open-api-generator/parser/types-parser";
-import * as openApiParser from "../open-api-generator/parser/open-api-parser";
+import * as functionParamsParser from "../parser/open-api/types-parser";
+import * as openApiParser from "../parser/open-api/open-api-parser";
 
 export type GeneratedApiTsCode = {
   legacyTypedApiComponents: legacyApiTsGenerator.ApiComponents;

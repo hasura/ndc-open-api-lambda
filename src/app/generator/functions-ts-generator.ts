@@ -1,5 +1,5 @@
 import * as legacyApiTsGenerator from "../open-api-generator/api-generator";
-import * as paramsParser from "../open-api-generator/parser/types-parser";
+import * as paramsParser from "../parser/open-api/types-parser";
 import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as legacyApiRouteParser from "../open-api-generator/parsedApiRoutes";
 import * as context from "../context";

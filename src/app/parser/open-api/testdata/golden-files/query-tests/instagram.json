@@ -1,0 +1,110 @@
+{
+  "get_/geographies/{geo-id}/media/recent": {
+    "params": " query: {   \n/**\n* Max number of media to return.\n*/\n count?: number,  \n/**\n* Return media before this `min_id`.\n*/\n min_id?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/locations/search": {
+    "params": " query: {   \n/**\n* Default is 1000m (distance=1000), max distance is 5000.\n*/\n distance?: number,  \n/**\n* Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required.\n*/\n facebook_places_id?: string,  \n/**\n* Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use\n`lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.\n */\n foursquare_id?: string,  \n/**\n* Latitude of the center search coordinate. If used, `lng` is required.\n*/\n lat?: number,  \n/**\n* Longitude of the center search coordinate. If used, `lat` is required.\n*/\n lng?: number,  \n/**\n* Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use\n`lat` and `lng`.\n */\n foursquare_v2_id?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/locations/{location-id}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/locations/{location-id}/media/recent": {
+    "params": " query: {   \n/**\n* Return media after this UNIX timestamp.\n*/\n min_timestamp?: number,  \n/**\n* Return media before this UNIX timestamp.\n*/\n max_timestamp?: number,  \n/**\n* Return media before this `min_id`.\n*/\n min_id?: string,  \n/**\n* Return media after this `max_id`.\n*/\n max_id?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/media/popular": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/media/search": {
+    "params": " query: {   \n/**\n* Latitude of the center search coordinate. If used, `lng` is required.\n*/\n lat: number,  \n/**\n* Longitude of the center search coordinate. If used, `lat` is required.\n*/\n lng: number,  \n/**\n* A unix timestamp. All media returned will be taken later than this timestamp.\n*/\n min_timestamp?: number,  \n/**\n* A unix timestamp. All media returned will be taken earlier than this timestamp.\n*/\n max_timestamp?: number,  \n/**\n* Default is 1km (distance=1000), max distance is 5km.\n*/\n distance?: number, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/media/shortcode/{shortcode}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/media/{media-id}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/media/{media-id}/comments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/media/{media-id}/comments": {
+    "params": " query: {   \n/**\n* Text to post as a comment on the media object as specified in `media-id`.\n*/\n text: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/media/{media-id}/comments/{comment-id}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/media/{media-id}/likes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/media/{media-id}/likes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/media/{media-id}/likes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/tags/search": {
+    "params": " query: {   \n/**\n* A valid tag name without a leading \\#. (eg. snowy, nofilter)\n*/\n q: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/tags/{tag-name}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/tags/{tag-name}/media/recent": {
+    "params": " query: {   \n/**\n* Count of tagged media to return.\n*/\n count?: number,  \n/**\n* Return media before this `min_tag_id`.\n*/\n min_tag_id?: string,  \n/**\n* Return media after this `max_tag_id`.\n*/\n max_tag_id?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/search": {
+    "params": " query: {   \n/**\n* A query string.\n*/\n q: string,  \n/**\n* Number of users to return.\n*/\n count?: number, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/self/feed": {
+    "params": " query: {   \n/**\n* Count of media to return.\n*/\n count?: number,  \n/**\n* Return media later than this `min_id`.\n*/\n min_id?: string,  \n/**\n* Return media earlier than this `max_id`.\n*/\n max_id?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/self/media/liked": {
+    "params": " query: {   \n/**\n* Count of media to return.\n*/\n count?: number,  \n/**\n* Return media liked before this id.\n*/\n max_like_id?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/self/requested-by": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user-id}": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user-id}/followed-by": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user-id}/follows": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user-id}/media/recent": {
+    "params": " query: {   \n/**\n* Count of media to return.\n*/\n count?: number,  \n/**\n* Return media before this UNIX timestamp.\n*/\n max_timestamp?: number,  \n/**\n* Return media after this UNIX timestamp.\n*/\n min_timestamp?: number,  \n/**\n* Return media later than this `min_id`.\n*/\n min_id?: string,  \n/**\n* Return media earlier than this `max_id`.\n*/\n max_id?: string, },",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/users/{user-id}/relationship": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/users/{user-id}/relationship": {
+    "params": " query: {   \n/**\n* Type of action to apply for relationship with the user.\n*/\n action: \"follow\" | \"unfollow\" | \"block\" | \"unblock\" | \"approve\" | \"ignore\", },",
+    "requireRelaxedTypeAnnotation": true
+  }
+}

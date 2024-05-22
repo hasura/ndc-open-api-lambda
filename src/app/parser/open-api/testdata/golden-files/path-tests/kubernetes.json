@@ -1,0 +1,3319 @@
+{
+  "get_/.well-known/openid-configuration/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/api/v1/": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/api/v1/componentstatuses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/componentstatuses/{name}": {
+    "params": "\n/**\n* name of the ComponentStatus\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/configmaps": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/endpoints": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/events": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/limitranges": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/bindings": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/configmaps": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/configmaps": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/configmaps": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/configmaps/{name}": {
+    "params": "\n/**\n* name of the ConfigMap\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/configmaps/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/configmaps/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/configmaps/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/endpoints": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/endpoints": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/endpoints": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/endpoints/{name}": {
+    "params": "\n/**\n* name of the Endpoints\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/endpoints/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/endpoints/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/endpoints/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/events": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/events": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/events": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/events/{name}": {
+    "params": "\n/**\n* name of the Event\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/events/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/events/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/events/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/limitranges": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/limitranges": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/limitranges": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/limitranges/{name}": {
+    "params": "\n/**\n* name of the LimitRange\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/limitranges/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/limitranges/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/limitranges/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/persistentvolumeclaims": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/persistentvolumeclaims": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/persistentvolumeclaims": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}": {
+    "params": "\n/**\n* name of the PersistentVolumeClaim\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status": {
+    "params": "\n/**\n* name of the PersistentVolumeClaim\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/pods": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/pods/{name}": {
+    "params": "\n/**\n* name of the Pod\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/pods/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/pods/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/attach": {
+    "params": "\n/**\n* name of the PodAttachOptions\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods/{name}/attach": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods/{name}/binding": {
+    "params": "\n/**\n* name of the Binding\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers": {
+    "params": "\n/**\n* name of the Pod\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods/{name}/eviction": {
+    "params": "\n/**\n* name of the Eviction\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/exec": {
+    "params": "\n/**\n* name of the PodExecOptions\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods/{name}/exec": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/log": {
+    "params": "\n/**\n* name of the Pod\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/portforward": {
+    "params": "\n/**\n* name of the PodPortForwardOptions\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods/{name}/portforward": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/pods/{name}/proxy": {
+    "params": "\n/**\n* name of the PodProxyOptions\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "head_/api/v1/namespaces/{namespace}/pods/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "options_/api/v1/namespaces/{namespace}/pods/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/pods/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/pods/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}": {
+    "params": "\n/**\n* name of the PodProxyOptions\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,\n/**\n* path to the resource\n*/\n path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "head_/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "options_/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/pods/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/pods/{name}/status": {
+    "params": "\n/**\n* name of the Pod\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/pods/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/pods/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/podtemplates": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/podtemplates": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/podtemplates": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/podtemplates/{name}": {
+    "params": "\n/**\n* name of the PodTemplate\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/podtemplates/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/podtemplates/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/podtemplates/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/replicationcontrollers": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/replicationcontrollers": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/replicationcontrollers": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}": {
+    "params": "\n/**\n* name of the ReplicationController\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale": {
+    "params": "\n/**\n* name of the Scale\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status": {
+    "params": "\n/**\n* name of the ReplicationController\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/resourcequotas": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/resourcequotas": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/resourcequotas": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/resourcequotas/{name}": {
+    "params": "\n/**\n* name of the ResourceQuota\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/resourcequotas/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/resourcequotas/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/resourcequotas/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/resourcequotas/{name}/status": {
+    "params": "\n/**\n* name of the ResourceQuota\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/resourcequotas/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/resourcequotas/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/secrets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/secrets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/secrets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/secrets/{name}": {
+    "params": "\n/**\n* name of the Secret\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/secrets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/secrets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/secrets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/serviceaccounts": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/serviceaccounts": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/serviceaccounts": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/serviceaccounts/{name}": {
+    "params": "\n/**\n* name of the ServiceAccount\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/serviceaccounts/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/serviceaccounts/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/serviceaccounts/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/serviceaccounts/{name}/token": {
+    "params": "\n/**\n* name of the TokenRequest\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/services": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/services": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/services": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/services/{name}": {
+    "params": "\n/**\n* name of the Service\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/services/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/services/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/services/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/services/{name}/proxy": {
+    "params": "\n/**\n* name of the ServiceProxyOptions\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/services/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "head_/api/v1/namespaces/{namespace}/services/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "options_/api/v1/namespaces/{namespace}/services/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/services/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/services/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/services/{name}/proxy": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}": {
+    "params": "\n/**\n* name of the ServiceProxyOptions\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,\n/**\n* path to the resource\n*/\n path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "head_/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "options_/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/services/{name}/proxy/{path}": {
+    "params": " name: string, namespace: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{namespace}/services/{name}/status": {
+    "params": "\n/**\n* name of the Service\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{namespace}/services/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{namespace}/services/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/namespaces/{name}": {
+    "params": "\n/**\n* name of the Namespace\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{name}/finalize": {
+    "params": "\n/**\n* name of the Namespace\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/namespaces/{name}/status": {
+    "params": "\n/**\n* name of the Namespace\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/namespaces/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/namespaces/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/nodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/nodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/nodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/nodes/{name}": {
+    "params": "\n/**\n* name of the Node\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/nodes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/nodes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/nodes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/nodes/{name}/proxy": {
+    "params": "\n/**\n* name of the NodeProxyOptions\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/nodes/{name}/proxy": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "head_/api/v1/nodes/{name}/proxy": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "options_/api/v1/nodes/{name}/proxy": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/nodes/{name}/proxy": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/nodes/{name}/proxy": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/nodes/{name}/proxy": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/nodes/{name}/proxy/{path}": {
+    "params": "\n/**\n* name of the NodeProxyOptions\n*/\n name: string,\n/**\n* path to the resource\n*/\n path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/nodes/{name}/proxy/{path}": {
+    "params": " name: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "head_/api/v1/nodes/{name}/proxy/{path}": {
+    "params": " name: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "options_/api/v1/nodes/{name}/proxy/{path}": {
+    "params": " name: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/nodes/{name}/proxy/{path}": {
+    "params": " name: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/nodes/{name}/proxy/{path}": {
+    "params": " name: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/nodes/{name}/proxy/{path}": {
+    "params": " name: string, path: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/nodes/{name}/status": {
+    "params": "\n/**\n* name of the Node\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/nodes/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/nodes/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/persistentvolumeclaims": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/persistentvolumes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/persistentvolumes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/api/v1/persistentvolumes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/api/v1/persistentvolumes/{name}": {
+    "params": "\n/**\n* name of the PersistentVolume\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/persistentvolumes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/persistentvolumes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/persistentvolumes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/persistentvolumes/{name}/status": {
+    "params": "\n/**\n* name of the PersistentVolume\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/api/v1/persistentvolumes/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/api/v1/persistentvolumes/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/pods": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/podtemplates": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/replicationcontrollers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/resourcequotas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/secrets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/serviceaccounts": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/services": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/configmaps": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/endpoints": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/events": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/limitranges": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/configmaps": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/configmaps/{name}": {
+    "params": "\n/**\n* name of the ConfigMap\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/endpoints": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/endpoints/{name}": {
+    "params": "\n/**\n* name of the Endpoints\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/events": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/events/{name}": {
+    "params": "\n/**\n* name of the Event\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/limitranges": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/limitranges/{name}": {
+    "params": "\n/**\n* name of the LimitRange\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/persistentvolumeclaims": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/persistentvolumeclaims/{name}": {
+    "params": "\n/**\n* name of the PersistentVolumeClaim\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/pods": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/pods/{name}": {
+    "params": "\n/**\n* name of the Pod\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/podtemplates": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/podtemplates/{name}": {
+    "params": "\n/**\n* name of the PodTemplate\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/replicationcontrollers": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/replicationcontrollers/{name}": {
+    "params": "\n/**\n* name of the ReplicationController\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/resourcequotas": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/resourcequotas/{name}": {
+    "params": "\n/**\n* name of the ResourceQuota\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/secrets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/secrets/{name}": {
+    "params": "\n/**\n* name of the Secret\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/serviceaccounts": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/serviceaccounts/{name}": {
+    "params": "\n/**\n* name of the ServiceAccount\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/services": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{namespace}/services/{name}": {
+    "params": "\n/**\n* name of the Service\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/namespaces/{name}": {
+    "params": "\n/**\n* name of the Namespace\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/nodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/nodes/{name}": {
+    "params": "\n/**\n* name of the Node\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/persistentvolumeclaims": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/persistentvolumes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/persistentvolumes/{name}": {
+    "params": "\n/**\n* name of the PersistentVolume\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/pods": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/podtemplates": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/replicationcontrollers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/resourcequotas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/secrets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/serviceaccounts": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/api/v1/watch/services": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/apis/admissionregistration.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}": {
+    "params": "\n/**\n* name of the MutatingWebhookConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}": {
+    "params": "\n/**\n* name of the ValidatingWebhookConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations/{name}": {
+    "params": "\n/**\n* name of the MutatingWebhookConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations/{name}": {
+    "params": "\n/**\n* name of the ValidatingWebhookConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}": {
+    "params": "\n/**\n* name of the ValidatingAdmissionPolicy\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}": {
+    "params": "\n/**\n* name of the ValidatingAdmissionPolicyBinding\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicies/{name}": {
+    "params": "\n/**\n* name of the ValidatingAdmissionPolicy\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicybindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicybindings/{name}": {
+    "params": "\n/**\n* name of the ValidatingAdmissionPolicyBinding\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiextensions.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiextensions.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apiextensions.k8s.io/v1/customresourcedefinitions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiextensions.k8s.io/v1/customresourcedefinitions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/apiextensions.k8s.io/v1/customresourcedefinitions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}": {
+    "params": "\n/**\n* name of the CustomResourceDefinition\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status": {
+    "params": "\n/**\n* name of the CustomResourceDefinition\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions/{name}": {
+    "params": "\n/**\n* name of the CustomResourceDefinition\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiregistration.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiregistration.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apiregistration.k8s.io/v1/apiservices": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiregistration.k8s.io/v1/apiservices": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/apiregistration.k8s.io/v1/apiservices": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apiregistration.k8s.io/v1/apiservices/{name}": {
+    "params": "\n/**\n* name of the APIService\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiregistration.k8s.io/v1/apiservices/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apiregistration.k8s.io/v1/apiservices/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apiregistration.k8s.io/v1/apiservices/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiregistration.k8s.io/v1/apiservices/{name}/status": {
+    "params": "\n/**\n* name of the APIService\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apiregistration.k8s.io/v1/apiservices/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apiregistration.k8s.io/v1/apiservices/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiregistration.k8s.io/v1/watch/apiservices": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apiregistration.k8s.io/v1/watch/apiservices/{name}": {
+    "params": "\n/**\n* name of the APIService\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/controllerrevisions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/daemonsets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/deployments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/controllerrevisions": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/controllerrevisions": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/apps/v1/namespaces/{namespace}/controllerrevisions": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}": {
+    "params": "\n/**\n* name of the ControllerRevision\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/daemonsets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/daemonsets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/apps/v1/namespaces/{namespace}/daemonsets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}": {
+    "params": "\n/**\n* name of the DaemonSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status": {
+    "params": "\n/**\n* name of the DaemonSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/deployments": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/deployments": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/apps/v1/namespaces/{namespace}/deployments": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/deployments/{name}": {
+    "params": "\n/**\n* name of the Deployment\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/deployments/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/deployments/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/deployments/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale": {
+    "params": "\n/**\n* name of the Scale\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status": {
+    "params": "\n/**\n* name of the Deployment\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/replicasets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/replicasets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/apps/v1/namespaces/{namespace}/replicasets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}": {
+    "params": "\n/**\n* name of the ReplicaSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale": {
+    "params": "\n/**\n* name of the Scale\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status": {
+    "params": "\n/**\n* name of the ReplicaSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/statefulsets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/statefulsets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/apps/v1/namespaces/{namespace}/statefulsets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}": {
+    "params": "\n/**\n* name of the StatefulSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale": {
+    "params": "\n/**\n* name of the Scale\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status": {
+    "params": "\n/**\n* name of the StatefulSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/replicasets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/statefulsets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/controllerrevisions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/daemonsets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/deployments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions/{name}": {
+    "params": "\n/**\n* name of the ControllerRevision\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/daemonsets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/daemonsets/{name}": {
+    "params": "\n/**\n* name of the DaemonSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/deployments": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/deployments/{name}": {
+    "params": "\n/**\n* name of the Deployment\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/replicasets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/replicasets/{name}": {
+    "params": "\n/**\n* name of the ReplicaSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/statefulsets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/namespaces/{namespace}/statefulsets/{name}": {
+    "params": "\n/**\n* name of the StatefulSet\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/replicasets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/apps/v1/watch/statefulsets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/authentication.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/authentication.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/authentication.k8s.io/v1/tokenreviews": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/authentication.k8s.io/v1alpha1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/authentication.k8s.io/v1alpha1/selfsubjectreviews": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/authorization.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/authorization.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/authorization.k8s.io/v1/namespaces/{namespace}/localsubjectaccessreviews": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/authorization.k8s.io/v1/selfsubjectaccessreviews": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/authorization.k8s.io/v1/selfsubjectrulesreviews": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/authorization.k8s.io/v1/subjectaccessreviews": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/horizontalpodautoscalers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": "\n/**\n* name of the HorizontalPodAutoscaler\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status": {
+    "params": "\n/**\n* name of the HorizontalPodAutoscaler\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/watch/horizontalpodautoscalers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": "\n/**\n* name of the HorizontalPodAutoscaler\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/horizontalpodautoscalers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": "\n/**\n* name of the HorizontalPodAutoscaler\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status": {
+    "params": "\n/**\n* name of the HorizontalPodAutoscaler\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/watch/horizontalpodautoscalers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/watch/namespaces/{namespace}/horizontalpodautoscalers": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/autoscaling/v2/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}": {
+    "params": "\n/**\n* name of the HorizontalPodAutoscaler\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/cronjobs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/jobs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/batch/v1/namespaces/{namespace}/cronjobs": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/namespaces/{namespace}/cronjobs": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/batch/v1/namespaces/{namespace}/cronjobs": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}": {
+    "params": "\n/**\n* name of the CronJob\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status": {
+    "params": "\n/**\n* name of the CronJob\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/batch/v1/namespaces/{namespace}/jobs": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/namespaces/{namespace}/jobs": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/batch/v1/namespaces/{namespace}/jobs": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/batch/v1/namespaces/{namespace}/jobs/{name}": {
+    "params": "\n/**\n* name of the Job\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/namespaces/{namespace}/jobs/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/batch/v1/namespaces/{namespace}/jobs/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/batch/v1/namespaces/{namespace}/jobs/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status": {
+    "params": "\n/**\n* name of the Job\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/watch/cronjobs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/watch/jobs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/watch/namespaces/{namespace}/cronjobs": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/watch/namespaces/{namespace}/cronjobs/{name}": {
+    "params": "\n/**\n* name of the CronJob\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/watch/namespaces/{namespace}/jobs": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/batch/v1/watch/namespaces/{namespace}/jobs/{name}": {
+    "params": "\n/**\n* name of the Job\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/certificates.k8s.io/v1/certificatesigningrequests": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/v1/certificatesigningrequests": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/certificates.k8s.io/v1/certificatesigningrequests": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}": {
+    "params": "\n/**\n* name of the CertificateSigningRequest\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval": {
+    "params": "\n/**\n* name of the CertificateSigningRequest\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status": {
+    "params": "\n/**\n* name of the CertificateSigningRequest\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/v1/watch/certificatesigningrequests": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/certificates.k8s.io/v1/watch/certificatesigningrequests/{name}": {
+    "params": "\n/**\n* name of the CertificateSigningRequest\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/v1/leases": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}": {
+    "params": "\n/**\n* name of the Lease\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/v1/watch/leases": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases/{name}": {
+    "params": "\n/**\n* name of the Lease\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/v1/endpointslices": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}": {
+    "params": "\n/**\n* name of the EndpointSlice\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/v1/watch/endpointslices": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices/{name}": {
+    "params": "\n/**\n* name of the EndpointSlice\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/v1/events": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/events.k8s.io/v1/namespaces/{namespace}/events": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/v1/namespaces/{namespace}/events": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/events.k8s.io/v1/namespaces/{namespace}/events": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}": {
+    "params": "\n/**\n* name of the Event\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/v1/watch/events": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/v1/watch/namespaces/{namespace}/events": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/events.k8s.io/v1/watch/namespaces/{namespace}/events/{name}": {
+    "params": "\n/**\n* name of the Event\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}": {
+    "params": "\n/**\n* name of the FlowSchema\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status": {
+    "params": "\n/**\n* name of the FlowSchema\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}": {
+    "params": "\n/**\n* name of the PriorityLevelConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status": {
+    "params": "\n/**\n* name of the PriorityLevelConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas/{name}": {
+    "params": "\n/**\n* name of the FlowSchema\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations/{name}": {
+    "params": "\n/**\n* name of the PriorityLevelConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}": {
+    "params": "\n/**\n* name of the FlowSchema\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}/status": {
+    "params": "\n/**\n* name of the FlowSchema\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}": {
+    "params": "\n/**\n* name of the PriorityLevelConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}/status": {
+    "params": "\n/**\n* name of the PriorityLevelConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/flowschemas": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/flowschemas/{name}": {
+    "params": "\n/**\n* name of the FlowSchema\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/prioritylevelconfigurations": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/prioritylevelconfigurations/{name}": {
+    "params": "\n/**\n* name of the PriorityLevelConfiguration\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/internal.apiserver.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/internal.apiserver.k8s.io/v1alpha1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}": {
+    "params": "\n/**\n* name of the StorageVersion\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status": {
+    "params": "\n/**\n* name of the StorageVersion\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions/{name}": {
+    "params": "\n/**\n* name of the StorageVersion\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1/ingressclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/ingressclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/networking.k8s.io/v1/ingressclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1/ingressclasses/{name}": {
+    "params": "\n/**\n* name of the IngressClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/ingressclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/networking.k8s.io/v1/ingressclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/networking.k8s.io/v1/ingressclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/ingresses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}": {
+    "params": "\n/**\n* name of the Ingress\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status": {
+    "params": "\n/**\n* name of the Ingress\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}": {
+    "params": "\n/**\n* name of the NetworkPolicy\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}/status": {
+    "params": "\n/**\n* name of the NetworkPolicy\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/networkpolicies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/ingressclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/ingressclasses/{name}": {
+    "params": "\n/**\n* name of the IngressClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/ingresses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses/{name}": {
+    "params": "\n/**\n* name of the Ingress\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies/{name}": {
+    "params": "\n/**\n* name of the NetworkPolicy\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1/watch/networkpolicies": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1alpha1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1alpha1/clustercidrs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1alpha1/clustercidrs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/networking.k8s.io/v1alpha1/clustercidrs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/networking.k8s.io/v1alpha1/clustercidrs/{name}": {
+    "params": "\n/**\n* name of the ClusterCIDR\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1alpha1/clustercidrs/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/networking.k8s.io/v1alpha1/clustercidrs/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/networking.k8s.io/v1alpha1/clustercidrs/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1alpha1/watch/clustercidrs": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/networking.k8s.io/v1alpha1/watch/clustercidrs/{name}": {
+    "params": "\n/**\n* name of the ClusterCIDR\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/node.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/node.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/node.k8s.io/v1/runtimeclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/node.k8s.io/v1/runtimeclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/node.k8s.io/v1/runtimeclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/node.k8s.io/v1/runtimeclasses/{name}": {
+    "params": "\n/**\n* name of the RuntimeClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/node.k8s.io/v1/runtimeclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/node.k8s.io/v1/runtimeclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/node.k8s.io/v1/runtimeclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/node.k8s.io/v1/watch/runtimeclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/node.k8s.io/v1/watch/runtimeclasses/{name}": {
+    "params": "\n/**\n* name of the RuntimeClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}": {
+    "params": "\n/**\n* name of the PodDisruptionBudget\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status": {
+    "params": "\n/**\n* name of the PodDisruptionBudget\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/poddisruptionbudgets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets/{name}": {
+    "params": "\n/**\n* name of the PodDisruptionBudget\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/policy/v1/watch/poddisruptionbudgets": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/clusterrolebindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/clusterrolebindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/rbac.authorization.k8s.io/v1/clusterrolebindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}": {
+    "params": "\n/**\n* name of the ClusterRoleBinding\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/clusterroles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/clusterroles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/rbac.authorization.k8s.io/v1/clusterroles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}": {
+    "params": "\n/**\n* name of the ClusterRole\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}": {
+    "params": "\n/**\n* name of the RoleBinding\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}": {
+    "params": "\n/**\n* name of the Role\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/rolebindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/roles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings/{name}": {
+    "params": "\n/**\n* name of the ClusterRoleBinding\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/clusterroles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/clusterroles/{name}": {
+    "params": "\n/**\n* name of the ClusterRole\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings/{name}": {
+    "params": "\n/**\n* name of the RoleBinding\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles/{name}": {
+    "params": "\n/**\n* name of the Role\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/rolebindings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/rbac.authorization.k8s.io/v1/watch/roles": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}": {
+    "params": "\n/**\n* name of the PodScheduling\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}/status": {
+    "params": "\n/**\n* name of the PodScheduling\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}": {
+    "params": "\n/**\n* name of the ResourceClaim\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}/status": {
+    "params": "\n/**\n* name of the ResourceClaim\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}/status": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}": {
+    "params": "\n/**\n* name of the ResourceClaimTemplate\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/podschedulings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/resourceclaims": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/resourceclaimtemplates": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/resourceclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/resourceclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/resource.k8s.io/v1alpha1/resourceclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}": {
+    "params": "\n/**\n* name of the ResourceClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/podschedulings": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/podschedulings/{name}": {
+    "params": "\n/**\n* name of the PodScheduling\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaims": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaims/{name}": {
+    "params": "\n/**\n* name of the ResourceClaim\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaimtemplates": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaimtemplates/{name}": {
+    "params": "\n/**\n* name of the ResourceClaimTemplate\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/podschedulings": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/resourceclaims": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/resourceclaimtemplates": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/resourceclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/resource.k8s.io/v1alpha1/watch/resourceclasses/{name}": {
+    "params": "\n/**\n* name of the ResourceClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/scheduling.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/scheduling.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/scheduling.k8s.io/v1/priorityclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/scheduling.k8s.io/v1/priorityclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/scheduling.k8s.io/v1/priorityclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/scheduling.k8s.io/v1/priorityclasses/{name}": {
+    "params": "\n/**\n* name of the PriorityClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/scheduling.k8s.io/v1/priorityclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/scheduling.k8s.io/v1/priorityclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/scheduling.k8s.io/v1/priorityclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/scheduling.k8s.io/v1/watch/priorityclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/scheduling.k8s.io/v1/watch/priorityclasses/{name}": {
+    "params": "\n/**\n* name of the PriorityClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/csidrivers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/csidrivers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/storage.k8s.io/v1/csidrivers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/csidrivers/{name}": {
+    "params": "\n/**\n* name of the CSIDriver\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/csidrivers/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/storage.k8s.io/v1/csidrivers/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/storage.k8s.io/v1/csidrivers/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/csinodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/csinodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/storage.k8s.io/v1/csinodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/csinodes/{name}": {
+    "params": "\n/**\n* name of the CSINode\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/csinodes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/storage.k8s.io/v1/csinodes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/storage.k8s.io/v1/csinodes/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/csistoragecapacities": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": "\n/**\n* name of the CSIStorageCapacity\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/storageclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/storageclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/storage.k8s.io/v1/storageclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/storageclasses/{name}": {
+    "params": "\n/**\n* name of the StorageClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/storageclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/storage.k8s.io/v1/storageclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/storage.k8s.io/v1/storageclasses/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/volumeattachments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/volumeattachments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/storage.k8s.io/v1/volumeattachments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1/volumeattachments/{name}": {
+    "params": "\n/**\n* name of the VolumeAttachment\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/volumeattachments/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/storage.k8s.io/v1/volumeattachments/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/storage.k8s.io/v1/volumeattachments/{name}": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/volumeattachments/{name}/status": {
+    "params": "\n/**\n* name of the VolumeAttachment\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/storage.k8s.io/v1/volumeattachments/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/storage.k8s.io/v1/volumeattachments/{name}/status": {
+    "params": " name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/csidrivers": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/csidrivers/{name}": {
+    "params": "\n/**\n* name of the CSIDriver\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/csinodes": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/csinodes/{name}": {
+    "params": "\n/**\n* name of the CSINode\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/csistoragecapacities": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/namespaces/{namespace}/csistoragecapacities": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": "\n/**\n* name of the CSIStorageCapacity\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/storageclasses": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/storageclasses/{name}": {
+    "params": "\n/**\n* name of the StorageClass\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/volumeattachments": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1/watch/volumeattachments/{name}": {
+    "params": "\n/**\n* name of the VolumeAttachment\n*/\n name: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1beta1/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1beta1/csistoragecapacities": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "post_/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities": {
+    "params": " namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "delete_/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": "\n/**\n* name of the CSIStorageCapacity\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "patch_/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "put_/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": " name: string, namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1beta1/watch/csistoragecapacities": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities": {
+    "params": "\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities/{name}": {
+    "params": "\n/**\n* name of the CSIStorageCapacity\n*/\n name: string,\n/**\n* object name and auth scope, such as for teams and projects\n*/\n namespace: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/logs/": { "params": "null", "requireRelaxedTypeAnnotation": false },
+  "get_/logs/{logpath}": {
+    "params": "\n/**\n* path to the log\n*/\n logpath: string,",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/openid/v1/jwks/": {
+    "params": "null",
+    "requireRelaxedTypeAnnotation": false
+  },
+  "get_/version/": { "params": "null", "requireRelaxedTypeAnnotation": false }
+}

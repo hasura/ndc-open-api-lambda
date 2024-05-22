@@ -3,7 +3,7 @@ import * as context from "../context";
 import * as legacyApiTsGenerator from "../open-api-generator/api-generator";
 import * as apiTsGenerator from "./api-ts-generator";
 import * as functionTsGenerator from "./functions-ts-generator";
-import * as headerParser from "../open-api-generator/parser/header-parser";
+import * as headerParser from "../parser/open-api/header-parser";
 import * as prettier from "prettier";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";

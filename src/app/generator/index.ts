@@ -1,6 +1,6 @@
 import * as apiTsGenerator from "./api-ts-generator";
 import * as functionsTsGenerator from "./functions-ts-generator";
-import * as headersParser from "../open-api-generator/parser/header-parser";
+import * as headersParser from "../parser/open-api/header-parser";
 import * as context from "../context";
 import * as types from "../types";
 import * as logger from "../../util/logger";

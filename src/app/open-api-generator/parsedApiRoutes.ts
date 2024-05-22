@@ -2,7 +2,7 @@ import { ParsedRoute } from "swagger-typescript-api";
 const CircularJSON = require("circular-json");
 import * as logger from "../../util/logger";
 import { ApiComponents } from "./api-generator";
-import * as TypesParser from "./parser/types-parser";
+import * as TypesParser from "../parser/open-api/types-parser";
 
 export enum ParamType {
   QUERY = "query",
