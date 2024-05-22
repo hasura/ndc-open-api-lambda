@@ -46,12 +46,12 @@ function setupTest(testCase: TestCase) {
 
   testCase._queryGoldenFile = path.resolve(
     __dirname,
-    "./testdata/golden-files/query-tests/",
+    "./test-data/golden-files/query-tests/",
     testCase.goldenFile,
   );
   testCase._pathGoldenFile = path.resolve(
     __dirname,
-    "./testdata/golden-files/path-tests/",
+    "./test-data/golden-files/path-tests/",
     testCase.goldenFile,
   );
 
