@@ -1,7 +1,7 @@
 import { ParsedRoute, SchemaComponent } from "swagger-typescript-api";
-import * as logger from "../../util/logger";
-import * as TypesParser from "../parser/open-api/types-parser";
-import * as context from "../context";
+import * as logger from "../../../util/logger";
+import * as TypesParser from "./types-parser";
+import * as context from "../../context";
 
 const CircularJSON = require("circular-json");
 
