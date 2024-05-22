@@ -1,9 +1,9 @@
 import * as assert from "assert";
 import * as context from "../context";
-import * as legacyApiTsGenerator from "../open-api-generator/api-generator";
+import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
 import * as apiTsGenerator from "./api-ts-generator";
 import * as functionTsGenerator from "./functions-ts-generator";
-import * as headerParser from "../open-api-generator/parser/header-parser";
+import * as headerParser from "../parser/open-api/header-parser";
 import * as prettier from "prettier";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
@@ -22,77 +22,77 @@ const tests: {
 }[] = [
   {
     name: "DemoBlogApi",
-    openApiUri: "./oas-docs/demo-blog-api.json",
+    openApiUri: "./open-api-docs/demo-blog-api.json",
     goldenFile: "./golden-files/demo-blog-api",
     baseUrl: "http://localhost:9191",
   },
   {
     name: "Petstore",
-    openApiUri: "./oas-docs/petstore.yaml",
+    openApiUri: "./open-api-docs/petstore.yaml",
     goldenFile: "./golden-files/petstore",
     baseUrl: "http://localhost:13191",
   },
   {
     name: "DemoBlogApi_headers",
-    openApiUri: "./oas-docs/demo-blog-api.json",
+    openApiUri: "./open-api-docs/demo-blog-api.json",
     goldenFile: "./golden-files/demo-blog-api-headers",
     headers: "auth=some-token=1&type=json",
     baseUrl: "http://mybaseurl/abc/def",
   },
   {
     name: "Petstore_headers",
-    openApiUri: "./oas-docs/petstore.yaml",
+    openApiUri: "./open-api-docs/petstore.yaml",
     goldenFile: "./golden-files/petstore-headers",
     headers: "auth=some-token=1&type=json,xml,text",
   },
   {
     name: "GitlabApi",
-    openApiUri: "./oas-docs/gitlab.json",
+    openApiUri: "./open-api-docs/gitlab.json",
     goldenFile: "./golden-files/gitlab",
   },
   {
     name: "Instagram",
-    openApiUri: "./oas-docs/instagram.json",
+    openApiUri: "./open-api-docs/instagram.json",
     goldenFile: "./golden-files/instagram",
   },
   {
     name: "Geomag",
-    openApiUri: "./oas-docs/geomag.json",
+    openApiUri: "./open-api-docs/geomag.json",
     goldenFile: "./golden-files/geomag",
   },
   {
     name: "GoogleHome",
-    openApiUri: "./oas-docs/google-home.json",
+    openApiUri: "./open-api-docs/google-home.json",
     goldenFile: "./golden-files/google-home",
     baseUrl: "http://localhost:13191",
   },
   {
     name: "GoogleAdsense",
-    openApiUri: "./oas-docs/google-adsense.json",
+    openApiUri: "./open-api-docs/google-adsense.json",
     goldenFile: "./golden-files/google-adsense",
     baseUrl: "http://localhost:13191",
   },
   {
     name: "CircleCI",
-    openApiUri: "./oas-docs/circleci.json",
+    openApiUri: "./open-api-docs/circleci.json",
     goldenFile: "./golden-files/circleci",
     baseUrl: "http://localhost:13191",
   },
   {
     name: "aws-autoscaling",
-    openApiUri: "./oas-docs/aws-autoscaling.json",
+    openApiUri: "./open-api-docs/aws-autoscaling.json",
     goldenFile: "./golden-files/aws-autoscaling",
     baseUrl: "http://localhost:13191",
   },
   {
     name: "adobe",
-    openApiUri: "./oas-docs/adobe.json",
+    openApiUri: "./open-api-docs/adobe.json",
     goldenFile: "./golden-files/adobe",
     baseUrl: "http://localhost:13191",
   },
   {
     name: "Kubernetes",
-    openApiUri: "./oas-docs/kubernetes.json",
+    openApiUri: "./open-api-docs/kubernetes.json",
     goldenFile: "./golden-files/kubernetes",
     baseUrl: "http://localhost:9191",
   },
@@ -106,7 +106,7 @@ async function testGenerateFunctionsTsCode() {
   describe("generateFunctionsTsCode", async () => {
     for (const testCase of tests) {
       before(async () => {
-        const relativeDirectorToTestFiles = "../open-api-generator/tests/";
+        const relativeDirectorToTestFiles = "../../../tests/test-data/";
 
         testCase.openApiUri = path.resolve(
           __dirname,

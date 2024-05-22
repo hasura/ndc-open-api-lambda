@@ -1,7 +1,7 @@
-import * as legacyApiTsGenerator from "../open-api-generator/api-generator";
-import * as paramsParser from "../open-api-generator/parser/types-parser";
+import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
+import * as paramsParser from "../parser/open-api/types-parser";
 import * as swaggerTypescriptApi from "swagger-typescript-api";
-import * as legacyApiRouteParser from "../open-api-generator/parsedApiRoutes";
+import * as legacyApiRouteParser from "../parser/open-api/parsedApiRoutes";
 import * as context from "../context";
 import { Eta } from "eta";
 import * as types from "../types";

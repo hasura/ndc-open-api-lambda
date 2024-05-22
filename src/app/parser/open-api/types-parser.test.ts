@@ -1,7 +1,6 @@
 import * as assert from "assert";
 import * as fs from "fs";
 import * as path from "path";
-import { generateRandomDir } from "../../../../tests/testutils";
 import { parse } from "./types-parser";
 import * as apiTsGenerator from "../../generator/api-ts-generator";
 import * as context from "../../context";
@@ -43,16 +42,20 @@ function readGoldenFileContent(
 }
 
 function setupTest(testCase: TestCase) {
-  testCase.oasFile = path.resolve(__dirname, testCase.oasFile);
+  testCase.oasFile = path.resolve(
+    __dirname,
+    "../../../../tests/test-data/open-api-docs/",
+    testCase.oasFile,
+  );
 
   testCase._queryGoldenFile = path.resolve(
     __dirname,
-    "./testdata/golden-files/query-tests/",
+    "./test-data/golden-files/query-tests/",
     testCase.goldenFile,
   );
   testCase._pathGoldenFile = path.resolve(
     __dirname,
-    "./testdata/golden-files/path-tests/",
+    "./test-data/golden-files/path-tests/",
     testCase.goldenFile,
   );
 
@@ -106,75 +109,81 @@ async function generateCode(testCase: TestCase) {
 const queryParamTests: TestCase[] = [
   {
     name: "DemoBlogApi",
-    oasFile: "../tests/oas-docs/demo-blog-api.json",
+    oasFile: "demo-blog-api.json",
     goldenFile: "demo-blog-api.json",
   },
   {
     name: "GeomagApi",
-    oasFile: "../tests/oas-docs/geomag.json",
+    oasFile: "geomag.json",
     goldenFile: "geomag.json",
   },
   {
     name: "Petstore",
-    oasFile: "../tests/oas-docs/petstore.yaml",
+    oasFile: "petstore.yaml",
     goldenFile: "petstore.json",
   },
   {
     name: "GoogleAdsense",
-    oasFile: "../tests/oas-docs/google-adsense.json",
+    oasFile: "google-adsense.json",
     goldenFile: "google-adsense.json",
   },
   {
     name: "Instagram",
-    oasFile: "../tests/oas-docs/instagram.json",
+    oasFile: "instagram.json",
     goldenFile: "instagram.json",
   },
   {
     name: "Gitlab",
-    oasFile: "../tests/oas-docs/gitlab.json",
+    oasFile: "gitlab.json",
     goldenFile: "gitlab.json",
   },
   {
     name: "Dropbox",
-    oasFile: "../tests/oas-docs/dropbox.json",
+    oasFile: "dropbox.json",
     goldenFile: "dropbox.json",
   },
   {
     name: "Adobe",
-    oasFile: "../tests/oas-docs/adobe.json",
+    oasFile: "adobe.json",
     goldenFile: "adobe.json",
   },
   {
     name: "AwsAutoscaling",
-    oasFile: "../tests/oas-docs/aws-autoscaling.json",
+    oasFile: "aws-autoscaling.json",
     goldenFile: "aws-autoscaling.json",
   },
   {
     name: "Kubernetes",
-    oasFile: "../tests/oas-docs/kubernetes.json",
+    oasFile: "kubernetes.json",
     goldenFile: "kubernetes.json",
   },
 ];
 
-for (const testCase of queryParamTests) {
-  describe(`Generate Params for ${testCase.name}`, async () => {
-    before(async () => {
-      setupTest(testCase);
-      await generateCode(testCase);
+describe("types-parser", async () => {
+  await testParameterGeneration();
+});
+
+async function testParameterGeneration() {
+  for (const testCase of queryParamTests) {
+    describe(`Generate Params for ${testCase.name}`, async () => {
+      before(async () => {
+        setupTest(testCase);
+        await generateCode(testCase);
+      });
+
+      it(`${testCase.name}::Query`, function () {
+        assert.deepEqual(testCase.expectedQueryParams, testCase.gotQueryParams);
+
+        // Uncomment to update golden file
+        // fs.writeFileSync(testCase._queryGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotQueryParams!)));
+      });
+
+      it(`${testCase.name}::Path`, function () {
+        assert.deepEqual(testCase.expectedPathParams, testCase.gotPathParams);
+
+        // Uncomment to update golden file
+        // fs.writeFileSync(testCase._pathGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotPathParams!)));
+      });
     });
-
-    it(`${testCase.name}::Query`, function () {
-      assert.deepEqual(testCase.expectedQueryParams, testCase.gotQueryParams);
-
-      // Uncomment to update golden file
-      // fs.writeFileSync(testCase._queryGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotQueryParams!)));
-    });
-
-    it(`${testCase.name}::Path`, function () {
-      assert.deepEqual(testCase.expectedPathParams, testCase.gotPathParams);
-
-      // Uncomment to update golden file
-      // fs.writeFileSync(testCase._pathGoldenFile!, JSON.stringify(Object.fromEntries(testCase.gotPathParams!)));
-    });
-  });
+  }
 }

@@ -16,15 +16,15 @@ type TestCase = {
 const tests: TestCase[] = [
   {
     name: "Add and Replace",
-    directory: "./testdata/morph-tests/add-and-replace/",
+    directory: "./test-data/morph-tests/add-and-replace/",
   },
   {
     name: "No change",
-    directory: "./testdata/morph-tests/no-change/",
+    directory: "./test-data/morph-tests/no-change/",
   },
 ];
 
-describe("Preserve Saved Functions", async () => {
+describe("morph::preserveSavedFunctions", async () => {
   for (const testCase of tests) {
     before(function () {
       testCase.directory = path.resolve(__dirname, testCase.directory);
