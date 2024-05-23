@@ -138,9 +138,7 @@ function parseSchemaProperty(
   if (parserTypes.schemaPropertyIsRelaxedType(schemaProperty)) {
     schema._requiresRelaxedTypeJsDocTag = true;
   } else if (parserTypes.schemaPropertyIsTypeRef(schemaProperty)) {
-    const newSchema = schemaStore.mappings.refToSchemaMap.get(
-      schemaProperty.$ref,
-    );
+    const newSchema = schemaStore.getSchemaByRef(schemaProperty.$ref);
     if (!newSchema) {
       return;
     }
