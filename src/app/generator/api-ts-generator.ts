@@ -4,27 +4,14 @@ import * as context from "../context";
 import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
 import * as functionParamsParser from "../parser/open-api/types-parser";
 import * as openApiParser from "../parser/open-api/open-api-parser";
-
-export type GeneratedApiTsCode = {
-  legacyTypedApiComponents: legacyApiTsGenerator.ApiComponents;
-  schemaComponents: swaggerTypescriptApi.SchemaComponent[];
-  routes: swaggerTypescriptApi.ParsedRoute[];
-  typeNames: GeneratedTypeName[];
-  files: swaggerTypescriptApi.GenerateApiOutput;
-};
-
-type GeneratedTypeName = {
-  typeName: string;
-  rawTypeName: string | undefined;
-  schemaType: "type-name" | "enum-key" | undefined;
-};
+import * as types from "./types";
 
 export async function generateApiTsCode(
   openApiUri: string,
-): Promise<GeneratedApiTsCode> {
+): Promise<types.GeneratedApiTsCode> {
   const generatedSchemaComponents: swaggerTypescriptApi.SchemaComponent[] = [];
   const generatedRoutes: swaggerTypescriptApi.ParsedRoute[] = [];
-  const generatedTypeNames: GeneratedTypeName[] = [];
+  const generatedTypeNames: types.GeneratedTypeName[] = [];
 
   let openApiUrl: string = "";
   let openApiFilePath: string = "";
@@ -70,7 +57,7 @@ export async function generateApiTsCode(
           rawTypeName,
           schemaType,
         );
-        const generatedTypeName: GeneratedTypeName = {
+        const generatedTypeName: types.GeneratedTypeName = {
           typeName,
           rawTypeName,
           schemaType,
@@ -89,7 +76,7 @@ export async function generateApiTsCode(
 
   typedOpenApiComponents.processNdcComponents();
 
-  const generatedTsCode: GeneratedApiTsCode = {
+  const generatedTsCode: types.GeneratedApiTsCode = {
     legacyTypedApiComponents: typedOpenApiComponents,
     schemaComponents: generatedSchemaComponents,
     routes: generatedRoutes,
