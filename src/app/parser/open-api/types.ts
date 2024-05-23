@@ -22,7 +22,7 @@ export type SchemaProperty =
   | SchemaTypeContent
   | SchemaTypeRawArg
   | SchemaTypePrimitive
-  | SecuritySchema;
+  | SchemaTypeSecurityScheme;
 
 export type SchemaTypeObject = {
   type: "object";
@@ -76,8 +76,8 @@ export type SchemaTypePrimitive = {
   content: string;
 };
 
-export type SecuritySchema = {
-  type: "apiKey" | "oauth2";
+export type SchemaTypeSecurityScheme = {
+  type: "apiKey" | "oauth2" | "http";
 }
 
 /**
@@ -169,8 +169,8 @@ export function schemaPropertyIsTypeRawArg(
   return property.in && property.name && property.schema;
 }
 
-export function schemaPropertyIsSecuritySchema(property: any) {
-  return property.type && (property.type === "apiKey" || property.type === "oauth2");
+export function schemaPropertyIsSecurityScheme(property: any): property is SchemaTypeSecurityScheme {
+  return property.type && (property.type === "apiKey" || property.type === "oauth2" || property.type === "http");
 }
 
 export function schemaPropertyIsTypePrimitive(
@@ -204,7 +204,7 @@ function isSchemaPropertyOfAKnownType(schema: SchemaProperty) {
     schemaPropertyIsTypeContent(schema) ||
     schemaPropertyIsTypeRawArg(schema) ||
     schemaPropertyIsTypePrimitive(schema) ||
-    schemaPropertyIsSecuritySchema(schema)
+    schemaPropertyIsSecurityScheme(schema)
   );
 }
 
