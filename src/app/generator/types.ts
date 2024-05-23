@@ -1,5 +1,6 @@
 import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
+import { ParsedSchemaStore } from "../parser/open-api/schema-parser";
 
 export type GeneratedApiTsCode = {
   legacyTypedApiComponents: legacyApiTsGenerator.ApiComponents;
@@ -7,6 +8,7 @@ export type GeneratedApiTsCode = {
   routes: swaggerTypescriptApi.ParsedRoute[];
   typeNames: GeneratedTypeName[];
   files: swaggerTypescriptApi.GenerateApiOutput;
+  schemaStore?: ParsedSchemaStore;
 };
 
 export type GeneratedTypeName = {
