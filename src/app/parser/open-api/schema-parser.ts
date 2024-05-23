@@ -73,6 +73,10 @@ export class ParsedSchemaStore {
     }
     return this.getSchemaByRawTypeName(rawTypeName);
   }
+
+  getAllTypeNames(): string[] {
+    return Object.keys(this.mappings.typeNameToRawTypeMap);
+  }
 }
 
 function createTypeNameMapping(
