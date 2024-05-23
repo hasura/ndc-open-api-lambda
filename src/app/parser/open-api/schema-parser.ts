@@ -100,10 +100,7 @@ function parseSchema(
   schemaStore: ParsedSchemaStore,
 ): boolean {
   if (visitedRefs.has(schema.$ref)) {
-    if (schema._requiresRelaxedTypeJsDocTag === true) {
-      return true;
-    }
-    return false;
+    return schema._requiresRelaxedTypeJsDocTag ?? false;
   }
   visitedRefs.add(schema.$ref);
   if (schema._requiresRelaxedTypeJsDocTag === true) {
