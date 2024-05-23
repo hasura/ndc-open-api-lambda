@@ -113,13 +113,13 @@ describe("schema-parser", async () => {
 
       const got: Map<string, boolean> = new Map<string, boolean>();
       const gotTyped: RelaxedTypeCheck[] = [];
-      schemaStore.mappings.refToSchemaMap.forEach((value, key) => {
-        got.set(key, value._requiresRelaxedTypeJsDocTag ?? false);
+      schemaStore.getAllSchemas().forEach((schema) => {
+        got.set(schema.$ref, schema._requiresRelaxedTypeJsDocTag ?? false);
 
         gotTyped.push({
-          schemaRef: key,
+          schemaRef: schema.$ref,
           requiresRelaxedTypeJsDocTag:
-            value._requiresRelaxedTypeJsDocTag ?? false,
+            schema._requiresRelaxedTypeJsDocTag ?? false,
         });
       });
 

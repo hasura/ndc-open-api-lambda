@@ -28,7 +28,7 @@ export function getParsedSchemaStore(
 
   const schemaStore = new ParsedSchemaStore(mappings);
 
-  Array.from(schemaStore.mappings.refToSchemaMap.values()).forEach((schema) => {
+  schemaStore.getAllSchemas().forEach((schema) => {
     parseSchema(schema, new Set<string>(), schemaStore);
   });
 
@@ -51,7 +51,7 @@ class ParsedSchemaStore {
   }
 
   getAllSchemas(): parserTypes.Schema[] {
-    return Object.values(this.mappings.refToSchemaMap);
+    return Array.from(this.mappings.refToSchemaMap.values());
   }
 
   getSchemaByRef(ref: string): parserTypes.Schema | undefined {
