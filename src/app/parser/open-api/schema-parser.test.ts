@@ -106,14 +106,14 @@ describe("schema-parser", async () => {
       const generatedCode = await apiGenerator.generateApiTsCode(
         testCase.openApiFile,
       );
-      const parser = schemaParser.getParsedSchema(
+      const schemaStore = schemaParser.getParsedSchemaStore(
         generatedCode.typeNames,
         generatedCode.schemaComponents,
       );
 
       const got: Map<string, boolean> = new Map<string, boolean>();
       const gotTyped: RelaxedTypeCheck[] = [];
-      parser.mappings.refToSchemaMap.forEach((value, key) => {
+      schemaStore.mappings.refToSchemaMap.forEach((value, key) => {
         got.set(key, value._requiresRelaxedTypeJsDocTag ?? false);
 
         gotTyped.push({
