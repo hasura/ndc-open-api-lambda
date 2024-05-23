@@ -43,7 +43,7 @@ type Mappings = {
   refToSchemaMap: Map<string, parserTypes.Schema>;
 };
 
-class ParsedSchemaStore {
+export class ParsedSchemaStore {
   mappings: Mappings;
 
   constructor(mappings: Mappings) {
