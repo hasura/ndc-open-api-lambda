@@ -8,27 +8,27 @@ import * as fs from "fs";
 import { SchemaTypeObject } from "./types";
 
 type RelaxedTypeCheck = {
-  schemaRef: string,
-  requiresRelaxedTypeJsDocTag: boolean,
+  schemaRef: string;
+  requiresRelaxedTypeJsDocTag: boolean;
 };
 
 const tests: {
-  name: string,
-  openApiFile: string,
-  goldenFile: string,
-  expected?: Map<string, boolean>, // using a map instead of RelaxedTypeCheck[] so that ordering can be ignored
+  name: string;
+  openApiFile: string;
+  goldenFile: string;
+  expected?: Map<string, boolean>; // using a map instead of RelaxedTypeCheck[] so that ordering can be ignored
 }[] = [
   {
     name: "Petstore",
     openApiFile: "petstore.yaml",
-    goldenFile: "petstore.json"
+    goldenFile: "petstore.json",
   },
   {
     name: "DemoBlogApi",
     openApiFile: "demo-blog-api.json",
-    goldenFile: "demo-blog-api.json"
+    goldenFile: "demo-blog-api.json",
   },
-    {
+  {
     name: "Gitlab",
     openApiFile: "gitlab.json",
     goldenFile: "gitlab.json",
@@ -43,7 +43,7 @@ const tests: {
     openApiFile: "geomag.json",
     goldenFile: "geomag.json",
   },
-    {
+  {
     name: "GoogleHome",
     openApiFile: "google-home.json",
     goldenFile: "google-home.json",
@@ -75,45 +75,62 @@ const tests: {
   },
 ];
 
-describe("schema-parser", async() => {
+describe("schema-parser", async () => {
   for (const testCase of tests) {
-    before(function() {
-      testCase.openApiFile = path.resolve(__dirname, "../../../../tests/test-data/open-api-docs", testCase.openApiFile);
-      testCase.goldenFile = path.resolve(__dirname, "./test-data/golden-files/schema-parser-tests/", testCase.goldenFile);
+    before(function () {
+      testCase.openApiFile = path.resolve(
+        __dirname,
+        "../../../../tests/test-data/open-api-docs",
+        testCase.openApiFile,
+      );
+      testCase.goldenFile = path.resolve(
+        __dirname,
+        "./test-data/golden-files/schema-parser-tests/",
+        testCase.goldenFile,
+      );
       testCase.expected = new Map<string, boolean>();
       try {
-        const expectedArray: RelaxedTypeCheck[] = JSON.parse(fs.readFileSync(testCase.goldenFile).toString());
+        const expectedArray: RelaxedTypeCheck[] = JSON.parse(
+          fs.readFileSync(testCase.goldenFile).toString(),
+        );
         expectedArray.forEach((element) => {
-          testCase.expected!.set(element.schemaRef, element.requiresRelaxedTypeJsDocTag);
-        });        
-      } catch (e) {
-        
-      };
-    })
+          testCase.expected!.set(
+            element.schemaRef,
+            element.requiresRelaxedTypeJsDocTag,
+          );
+        });
+      } catch (e) {}
+    });
 
-    it(testCase.name, async() => {
-      const generatedCode = await apiGenerator.generateApiTsCode(testCase.openApiFile);
-      const parser = schemaParser.getParsedSchema(generatedCode.typeNames, generatedCode.schemaComponents);
+    it(testCase.name, async () => {
+      const generatedCode = await apiGenerator.generateApiTsCode(
+        testCase.openApiFile,
+      );
+      const parser = schemaParser.getParsedSchema(
+        generatedCode.typeNames,
+        generatedCode.schemaComponents,
+      );
 
       // console.log('parser.mappings', parser.mappings);
 
       const got: Map<string, boolean> = new Map<string, boolean>();
       const gotTyped: RelaxedTypeCheck[] = [];
       parser.mappings.refToSchemaMap.forEach((value, key) => {
-        got.set(key,  value._requiresRelaxedTypeJsDocTag ?? false);
+        got.set(key, value._requiresRelaxedTypeJsDocTag ?? false);
 
         gotTyped.push({
           schemaRef: key,
-          requiresRelaxedTypeJsDocTag: value._requiresRelaxedTypeJsDocTag ?? false,
+          requiresRelaxedTypeJsDocTag:
+            value._requiresRelaxedTypeJsDocTag ?? false,
         });
 
         // console.log(`$ref: ${key}; isRelaxedType: ${value._requiresRelaxedTypeJsDocTag}`);
       });
 
-        assert.deepEqual(got, testCase.expected);
+      assert.deepEqual(got, testCase.expected);
 
-        // uncomment to write to golden file
-        // fs.writeFileSync(testCase.goldenFile, JSON.stringify(gotTyped));
+      // uncomment to write to golden file
+      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(gotTyped));
     });
   }
 });

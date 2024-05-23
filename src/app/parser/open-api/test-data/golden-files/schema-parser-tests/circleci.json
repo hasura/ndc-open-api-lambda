@@ -1,1 +1,166 @@
-[{"schemaRef":"#/components/parameters/branch","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/parameters/build_num","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/parameters/envvar_name","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/parameters/filter","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/parameters/fingerprint","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/parameters/limit","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/parameters/offset","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/parameters/project","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/parameters/username","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/responses/envvar","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/responses/envvars","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/responses/key","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Artifact","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Artifacts","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Aws","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Build","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/BuildDetail","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/BuildParameters","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/BuildSummary","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Builds","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/CommitDetail","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/CommitDetails","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Envvar","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Envvars","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Key","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Keys","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Lifecycle","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Outcome","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Parallel","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/PreviousBuild","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Project","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Projects","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Revision","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Scope","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/Sha1","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Status","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/StringOrNull","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Tag","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/schemas/Tests","requiresRelaxedTypeJsDocTag":true},{"schemaRef":"#/components/schemas/User","requiresRelaxedTypeJsDocTag":false},{"schemaRef":"#/components/securitySchemes/apikey","requiresRelaxedTypeJsDocTag":false}]
+[
+  {
+    "schemaRef": "#/components/parameters/branch",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/build_num",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/envvar_name",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/filter",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/parameters/fingerprint",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/limit",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/offset",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/project",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/username",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/envvar",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/envvars",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/key",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Artifact",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Artifacts",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Aws",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Build",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/BuildDetail",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/BuildParameters",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/BuildSummary",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Builds",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CommitDetail",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CommitDetails",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Envvar",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Envvars",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Key",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Keys",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Lifecycle",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Outcome",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Parallel",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PreviousBuild",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Project",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Projects",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Revision",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Scope",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Sha1",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Status",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/StringOrNull",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Tag",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Tests",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/User",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/apikey",
+    "requiresRelaxedTypeJsDocTag": false
+  }
+]

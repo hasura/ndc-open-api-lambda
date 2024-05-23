@@ -77,7 +77,9 @@ export type SchemaTypeRawArg = {
   schema: SchemaProperty;
 };
 
-export function schemaPropertyIsTypeScaler(property: any): property is SchemaTypeScalar {
+export function schemaPropertyIsTypeScaler(
+  property: any,
+): property is SchemaTypeScalar {
   return (
     property.type &&
     (property.type === "integer" ||
@@ -87,27 +89,39 @@ export function schemaPropertyIsTypeScaler(property: any): property is SchemaTyp
   );
 }
 
-export function schemaPropertyIsTypeObject(property: any): property is SchemaTypeObject {
+export function schemaPropertyIsTypeObject(
+  property: any,
+): property is SchemaTypeObject {
   return property.type && property.type === "object";
 }
 
-export function schemaPropertyIsTypeArray(property: any): property is SchemaTypeArray {
+export function schemaPropertyIsTypeArray(
+  property: any,
+): property is SchemaTypeArray {
   return property.type && property.type === "array" && property.items;
 }
 
-export function schemaPropertyIsTypeAllOf(property: any): property is SchemaTypeAllOf {
+export function schemaPropertyIsTypeAllOf(
+  property: any,
+): property is SchemaTypeAllOf {
   return property.allOf !== null && property.allOf !== undefined;
 }
 
-export function schemaPropertyIsTypeRef(property: any): property is SchemaTypeRef {
+export function schemaPropertyIsTypeRef(
+  property: any,
+): property is SchemaTypeRef {
   return property.$ref !== null && property.$ref !== undefined;
 }
 
-export function schemaPropertyIsTypeContent(property: any): property is SchemaTypeContent {
+export function schemaPropertyIsTypeContent(
+  property: any,
+): property is SchemaTypeContent {
   return property.content !== null && property.content !== undefined;
 }
 
-export function schemaPropertyIsTypeRawArg(property: any): property is SchemaTypeRawArg {
+export function schemaPropertyIsTypeRawArg(
+  property: any,
+): property is SchemaTypeRawArg {
   return property.in && property.name && property.schema;
 }
 
@@ -121,28 +135,34 @@ export function schemaPropertyIsEnum(property: any): boolean {
   );
 }
 
-export function getSchemaPropertyChildren(property: SchemaProperty): SchemaProperty[] {
+export function getSchemaPropertyChildren(
+  property: SchemaProperty,
+): SchemaProperty[] {
   if (schemaPropertyIsTypeObject(property)) {
-    console.log('getSchemaPropertyChildren: schemaProperty is object');
+    console.log("getSchemaPropertyChildren: schemaProperty is object");
     return getSchemaTypeObjectChildern(property);
   } else if (schemaPropertyIsTypeArray(property)) {
-    console.log('getSchemaPropertyChildren: schemaProperty is array');
+    console.log("getSchemaPropertyChildren: schemaProperty is array");
     return getSchemaTypeArrayChildern(property);
   } else if (schemaPropertyIsTypeContent(property)) {
-    console.log('getSchemaPropertyChildren: schemaProperty is content');
+    console.log("getSchemaPropertyChildren: schemaProperty is content");
     return getSchemaTypeContentChildren(property);
   } else if (schemaPropertyIsTypeRawArg(property)) {
-    console.log('getSchemaPropertyChildren: schemaProperty is is raw args');
+    console.log("getSchemaPropertyChildren: schemaProperty is is raw args");
     return getSchemaTypeRawArgsChildren(property);
   } else if (schemaPropertyIsTypeAllOf(property)) {
-    console.log('getSchemaPropertyChildren: schemaProperty is all of');
+    console.log("getSchemaPropertyChildren: schemaProperty is all of");
     return getSchemaTypeAllOfChildren(property);
   }
-  console.log('getSchemaPropertyChildren: schemaProperty is likely a scaler or ref. returning empty array');
+  console.log(
+    "getSchemaPropertyChildren: schemaProperty is likely a scaler or ref. returning empty array",
+  );
   return [];
 }
 
-export function getSchemaTypeObjectChildern(schemaProperty: SchemaTypeObject): SchemaProperty[] {
+export function getSchemaTypeObjectChildern(
+  schemaProperty: SchemaTypeObject,
+): SchemaProperty[] {
   if (schemaProperty && schemaProperty.properties) {
     return Object.values(schemaProperty.properties);
   } else {
@@ -150,7 +170,9 @@ export function getSchemaTypeObjectChildern(schemaProperty: SchemaTypeObject): S
   }
 }
 
-export function getSchemaTypeArrayChildern(schemaProperty: SchemaTypeArray): SchemaProperty[] {
+export function getSchemaTypeArrayChildern(
+  schemaProperty: SchemaTypeArray,
+): SchemaProperty[] {
   if (schemaProperty && schemaProperty.items) {
     return [schemaProperty.items];
   } else {
@@ -158,7 +180,9 @@ export function getSchemaTypeArrayChildern(schemaProperty: SchemaTypeArray): Sch
   }
 }
 
-export function getSchemaTypeContentChildren(schemaProperty: SchemaTypeContent): SchemaProperty[] {
+export function getSchemaTypeContentChildren(
+  schemaProperty: SchemaTypeContent,
+): SchemaProperty[] {
   if (schemaProperty && schemaProperty.content) {
     return Object.values(schemaProperty.content);
   } else {
@@ -166,14 +190,18 @@ export function getSchemaTypeContentChildren(schemaProperty: SchemaTypeContent):
   }
 }
 
-export function getSchemaTypeRawArgsChildren(schemaProperty: SchemaTypeRawArg): SchemaProperty[] {
+export function getSchemaTypeRawArgsChildren(
+  schemaProperty: SchemaTypeRawArg,
+): SchemaProperty[] {
   if (schemaProperty && schemaProperty.schema) {
     return [schemaProperty.schema];
   }
   return [];
 }
 
-export function getSchemaTypeAllOfChildren(schemaProperty: SchemaTypeAllOf): SchemaProperty[] {
+export function getSchemaTypeAllOfChildren(
+  schemaProperty: SchemaTypeAllOf,
+): SchemaProperty[] {
   if (schemaProperty && schemaProperty.allOf) {
     return schemaProperty.allOf;
   }

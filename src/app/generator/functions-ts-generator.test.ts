@@ -8,7 +8,7 @@ import * as prettier from "prettier";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
 
-const CircularJSON = require('circular-json');
+const CircularJSON = require("circular-json");
 
 context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
@@ -128,8 +128,11 @@ async function testGenerateFunctionsTsCode() {
           testCase._headersMap = headerParser.parseHeaders(testCase.headers);
         }
 
-        const generatedComponents = await apiTsGenerator.generateApiTsCode(testCase.openApiUri);
-        testCase._legacyApiComponents = generatedComponents.legacyTypedApiComponents;
+        const generatedComponents = await apiTsGenerator.generateApiTsCode(
+          testCase.openApiUri,
+        );
+        testCase._legacyApiComponents =
+          generatedComponents.legacyTypedApiComponents;
       });
 
       it(`should generate functions.ts file content for ${testCase.name}`, async () => {
