@@ -111,8 +111,6 @@ describe("schema-parser", async () => {
         generatedCode.schemaComponents,
       );
 
-      // console.log('parser.mappings', parser.mappings);
-
       const got: Map<string, boolean> = new Map<string, boolean>();
       const gotTyped: RelaxedTypeCheck[] = [];
       parser.mappings.refToSchemaMap.forEach((value, key) => {
@@ -123,8 +121,6 @@ describe("schema-parser", async () => {
           requiresRelaxedTypeJsDocTag:
             value._requiresRelaxedTypeJsDocTag ?? false,
         });
-
-        // console.log(`$ref: ${key}; isRelaxedType: ${value._requiresRelaxedTypeJsDocTag}`);
       });
 
       assert.deepEqual(got, testCase.expected);

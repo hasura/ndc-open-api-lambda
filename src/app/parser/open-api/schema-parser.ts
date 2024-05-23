@@ -76,9 +76,6 @@ class SchemaParser {
   }
 
   parseSchema(schema: parserTypes.Schema, visitedRefs: Set<string>): boolean {
-    // console.log("\n\n\n");
-    // console.log("currentSchema: ", schema.$ref);
-    // console.log("visitedRefs: ", visitedRefs);
     if (visitedRefs.has(schema.$ref)) {
       if (schema._requiresRelaxedTypeJsDocTag === true) {
         return true;
@@ -116,12 +113,9 @@ class SchemaParser {
     schema: parserTypes.Schema,
     visitedRefs: Set<string>,
   ) {
-    // console.log("\nschemaProperty::", schemaProperty);
     if (parserTypes.schemaPropertyIsRelaxedType(schemaProperty)) {
-      // console.log("schemaPropertyIsRelaxedType");
       schema._requiresRelaxedTypeJsDocTag = true;
     } else if (parserTypes.schemaPropertyIsTypeRef(schemaProperty)) {
-      // console.log("schemaPropertyIsRefType");
       const newSchema = this.mappings.refToSchemaMap.get(schemaProperty.$ref);
       if (!newSchema) {
         return;
@@ -134,7 +128,6 @@ class SchemaParser {
         schema._requiresRelaxedTypeJsDocTag = true;
       }
     } else {
-      // console.log("schemaPropertyHasChildern. Getting children");
       parserTypes.getSchemaPropertyChildren(schemaProperty).forEach((child) => {
         this.parseSchemaProperty(child, schema, visitedRefs);
       });

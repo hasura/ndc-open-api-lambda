@@ -78,7 +78,7 @@ export type SchemaTypePrimitive = {
 
 export type SchemaTypeSecurityScheme = {
   type: "apiKey" | "oauth2" | "http";
-}
+};
 
 /**
  * This type represents types that don't have `type` field.
@@ -101,9 +101,7 @@ export function getSchemaPropertyFromSchema(
   if (schema.rawTypeData && isSchemaPropertyOfAKnownType(schema.rawTypeData)) {
     return schema.rawTypeData;
   }
-  // console.log('rawTypeData is not of a known type for schema: ', schema.$ref);
   if (schema.typeData && isSchemaPropertyOfAKnownType(schema.typeData)) {
-    // console.log('schema.typedata: ', schema.typeData);
     return schema.typeData;
   }
 
@@ -126,7 +124,12 @@ export function schemaPropertyIsTypeScaler(
 export function schemaPropertyIsTypeObject(
   property: any,
 ): property is SchemaTypeObject {
-  return property.type && property.type === "object" && property.properties && Object.keys(property.properties).length > 0;
+  return (
+    property.type &&
+    property.type === "object" &&
+    property.properties &&
+    Object.keys(property.properties).length > 0
+  );
 }
 
 export function schemaPropertyIsTypeArray(
@@ -169,8 +172,15 @@ export function schemaPropertyIsTypeRawArg(
   return property.in && property.name && property.schema;
 }
 
-export function schemaPropertyIsSecurityScheme(property: any): property is SchemaTypeSecurityScheme {
-  return property.type && (property.type === "apiKey" || property.type === "oauth2" || property.type === "http");
+export function schemaPropertyIsSecurityScheme(
+  property: any,
+): property is SchemaTypeSecurityScheme {
+  return (
+    property.type &&
+    (property.type === "apiKey" ||
+      property.type === "oauth2" ||
+      property.type === "http")
+  );
 }
 
 export function schemaPropertyIsTypePrimitive(
@@ -178,7 +188,7 @@ export function schemaPropertyIsTypePrimitive(
 ): property is SchemaTypePrimitive {
   return (
     property.type &&
-    property.type === "primitive" && 
+    property.type === "primitive" &&
     property.typeIdentifier &&
     property.content
   );
@@ -212,24 +222,16 @@ export function getSchemaPropertyChildren(
   property: SchemaProperty,
 ): SchemaProperty[] {
   if (schemaPropertyIsTypeObject(property)) {
-    // console.log("getSchemaPropertyChildren: schemaProperty is object");
     return getSchemaTypeObjectChildern(property);
   } else if (schemaPropertyIsTypeArray(property)) {
-    // console.log("getSchemaPropertyChildren: schemaProperty is array");
     return getSchemaTypeArrayChildern(property);
   } else if (schemaPropertyIsTypeContent(property)) {
-    // console.log("getSchemaPropertyChildren: schemaProperty is content");
     return getSchemaTypeContentChildren(property);
   } else if (schemaPropertyIsTypeRawArg(property)) {
-    // console.log("getSchemaPropertyChildren: schemaProperty is is raw args");
     return getSchemaTypeRawArgsChildren(property);
   } else if (schemaPropertyIsTypeAllOf(property)) {
-    // console.log("getSchemaPropertyChildren: schemaProperty is all of");
     return getSchemaTypeAllOfChildren(property);
   }
-  // console.log(
-  //   "getSchemaPropertyChildren: schemaProperty is likely a scaler or ref. returning empty array",
-  // );
   return [];
 }
 
@@ -297,7 +299,6 @@ export function schemaPropertyIsRelaxedType(schemaProperty: SchemaProperty) {
       return true;
     }
   } else if (schemaPropertyIsTypePrimitive(schemaProperty)) {
-    console.log('schemaPropertyType is Primitive');
     return primitiveSchemaPropertiveHasAmbigousType(schemaProperty);
   }
   return false;
