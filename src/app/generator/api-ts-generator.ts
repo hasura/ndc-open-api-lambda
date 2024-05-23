@@ -50,12 +50,6 @@ export async function generateApiTsCode(
        * rawTypeName is equal to the component.typename from onCreateComponent hook.
        */
       onFormatTypeName: (typeName, rawTypeName, schemaType) => {
-        processTypeName(
-          typedOpenApiComponents,
-          typeName,
-          rawTypeName,
-          schemaType,
-        );
         const generatedTypeName: types.GeneratedTypeName = {
           typeName,
           rawTypeName,
@@ -73,8 +67,6 @@ export async function generateApiTsCode(
     },
   });
 
-  typedOpenApiComponents.processNdcComponents();
-
   const generatedTsCode: types.GeneratedApiTsCode = {
     legacyTypedApiComponents: typedOpenApiComponents,
     schemaComponents: generatedSchemaComponents,
@@ -85,16 +77,6 @@ export async function generateApiTsCode(
 
   return generatedTsCode;
 }
-
-// function processApiComponent(
-//   component: swaggerTypescriptApi.SchemaComponent,
-//   typedOpenApiComponents: legacyApiTsGenerator.ApiComponents,
-// ) {
-//   if (component.componentName === "schemas") {
-//     // for now, we are only going to deal with schemas
-//     typedOpenApiComponents.addComponent(component);
-//   }
-// }
 
 function processApiRoute(
   route: swaggerTypescriptApi.ParsedRoute,
@@ -108,19 +90,4 @@ function processApiRoute(
   route.raw.description = openApiParser.fixDescription(route.raw.description);
   typedOpenApiComponents.addRoute(apiRoute);
   return route;
-}
-
-function processTypeName(
-  typedOpenApiComponents: legacyApiTsGenerator.ApiComponents,
-  typeName: string,
-  rawTypeName?: string,
-  schemaType?: string,
-) {
-  typedOpenApiComponents.addTypes(
-    rawTypeName ? rawTypeName : typeName,
-    typeName,
-  );
-  if (schemaType && schemaType === "type-name") {
-    typedOpenApiComponents.allGeneratedTypes.add(typeName);
-  }
 }

@@ -209,7 +209,8 @@ export class ParsedApiRoutes {
           ? param.tsType.substring(0, param.tsType.length - 2)
           : param.tsType;
         sanitizedType = this.sanitizeTypes(sanitizedType);
-        const ndcComponent = this.schemaStore.getSchemaByTypeName(sanitizedType);
+        const ndcComponent =
+          this.schemaStore.getSchemaByTypeName(sanitizedType);
         if (ndcComponent && ndcComponent._requiresRelaxedTypeJsDocTag) {
           return true;
         }

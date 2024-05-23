@@ -131,14 +131,17 @@ async function testGenerateFunctionsTsCode() {
           testCase._headersMap = headerParser.parseHeaders(testCase.headers);
         }
 
-        testCase._generatedApiTsComponents = await apiTsGenerator.generateApiTsCode(
-          testCase.openApiUri,
-        );
+        testCase._generatedApiTsComponents =
+          await apiTsGenerator.generateApiTsCode(testCase.openApiUri);
 
-        const parsedSchemastore = schemaParser.getParsedSchemaStore(testCase._generatedApiTsComponents.typeNames, testCase._generatedApiTsComponents.schemaComponents);
+        const parsedSchemastore = schemaParser.getParsedSchemaStore(
+          testCase._generatedApiTsComponents.typeNames,
+          testCase._generatedApiTsComponents.schemaComponents,
+        );
         testCase._generatedApiTsComponents.schemaStore = parsedSchemastore;
 
-        testCase._legacyApiComponents = testCase._generatedApiTsComponents.legacyTypedApiComponents;
+        testCase._legacyApiComponents =
+          testCase._generatedApiTsComponents.legacyTypedApiComponents;
       });
 
       it(`should generate functions.ts file content for ${testCase.name}`, async () => {

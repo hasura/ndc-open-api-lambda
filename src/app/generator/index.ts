@@ -17,7 +17,10 @@ export async function generateCode(
   const headersMap = headersParser.parseHeaders(args.headers);
   logger.trace("starting function.ts code generation");
 
-  const parsedSchemaStore = schemaParser.getParsedSchemaStore(apiTsCode.typeNames, apiTsCode.schemaComponents);
+  const parsedSchemaStore = schemaParser.getParsedSchemaStore(
+    apiTsCode.typeNames,
+    apiTsCode.schemaComponents,
+  );
   apiTsCode.schemaStore = parsedSchemaStore;
 
   const functionsTsCode = await functionsTsGenerator.generateFunctionsTsCode(
