@@ -1,8 +1,8 @@
 import { ParsedRoute } from "swagger-typescript-api";
 const CircularJSON = require("circular-json");
 import * as logger from "../../../util/logger";
-import { ApiComponents } from "./api-generator";
 import * as TypesParser from "./types-parser";
+import { ParsedSchemaStore } from "./schema-parser";
 
 export enum ParamType {
   QUERY = "query",
@@ -53,12 +53,12 @@ export class ParsedApiRoutes {
   private generatedComponents = new Set<string>();
   private hasEnumVariables = false;
 
-  private apiComponents: ApiComponents;
+  private schemaStore: ParsedSchemaStore;
 
-  constructor(generatedComponents: Set<string>, apiComponents: ApiComponents) {
-    this.generatedComponents = generatedComponents;
-    this.apiComponents = apiComponents;
-    this.importList = generatedComponents;
+  constructor(schemaStore: ParsedSchemaStore) {
+    this.generatedComponents = new Set<string>(schemaStore.getAllTypeNames());
+    this.schemaStore = schemaStore;
+    this.importList = this.generatedComponents;
     this.importList.add("Api");
   }
 
@@ -209,9 +209,8 @@ export class ParsedApiRoutes {
           ? param.tsType.substring(0, param.tsType.length - 2)
           : param.tsType;
         sanitizedType = this.sanitizeTypes(sanitizedType);
-        const ndcComponent =
-          this.apiComponents.getNdcComponentByTypeName(sanitizedType);
-        if (ndcComponent && ndcComponent.isRelaxedType) {
+        const ndcComponent = this.schemaStore.getSchemaByTypeName(sanitizedType);
+        if (ndcComponent && ndcComponent._requiresRelaxedTypeJsDocTag) {
           return true;
         }
       }
@@ -220,9 +219,8 @@ export class ParsedApiRoutes {
       ? responseSuccessType.substring(0, responseSuccessType.length - 2)
       : responseSuccessType;
     sanitizedType = this.sanitizeTypes(sanitizedType);
-    const ndcComponent =
-      this.apiComponents.getNdcComponentByTypeName(sanitizedType);
-    if (ndcComponent && ndcComponent.isRelaxedType) {
+    const ndcComponent = this.schemaStore.getSchemaByTypeName(sanitizedType);
+    if (ndcComponent && ndcComponent._requiresRelaxedTypeJsDocTag) {
       return true;
     }
     return false;
@@ -348,15 +346,13 @@ export class ParsedApiRoutes {
           this.hasEnumVariables = true;
         }
         if (property["$ref"]) {
-          let ndcComponent = this.apiComponents.getNdcComponentByRef(
-            property["$ref"],
-          );
+          let ndcComponent = this.schemaStore.getSchemaByRef(property["$ref"]);
           if (ndcComponent) {
             this.addTypeToImportList(
-              ndcComponent.component.typeName,
-              this.importList,
+              ndcComponent.typeName,
+              this.importList, // Likley not used anymore
             );
-            if (ndcComponent.isRelaxedType) {
+            if (ndcComponent._requiresRelaxedTypeJsDocTag) {
               this.hasEnumVariables = true; // to add @relaxed type annotation
             }
           }

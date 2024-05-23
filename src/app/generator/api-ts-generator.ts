@@ -37,7 +37,6 @@ export async function generateApiTsCode(
        */
       onCreateComponent: (component) => {
         generatedSchemaComponents.push(component);
-        processApiComponent(component, typedOpenApiComponents);
       },
 
       onCreateRoute: (routeData) => {
@@ -87,15 +86,15 @@ export async function generateApiTsCode(
   return generatedTsCode;
 }
 
-function processApiComponent(
-  component: swaggerTypescriptApi.SchemaComponent,
-  typedOpenApiComponents: legacyApiTsGenerator.ApiComponents,
-) {
-  if (component.componentName === "schemas") {
-    // for now, we are only going to deal with schemas
-    typedOpenApiComponents.addComponent(component);
-  }
-}
+// function processApiComponent(
+//   component: swaggerTypescriptApi.SchemaComponent,
+//   typedOpenApiComponents: legacyApiTsGenerator.ApiComponents,
+// ) {
+//   if (component.componentName === "schemas") {
+//     // for now, we are only going to deal with schemas
+//     typedOpenApiComponents.addComponent(component);
+//   }
+// }
 
 function processApiRoute(
   route: swaggerTypescriptApi.ParsedRoute,

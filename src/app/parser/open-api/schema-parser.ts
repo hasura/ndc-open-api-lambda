@@ -17,8 +17,7 @@ export function getParsedSchemaStore(
   for (const typeName of typeNames) {
     createTypeNameMapping(
       mappings,
-      typeName.typeName,
-      typeName.rawTypeName ?? typeName.typeName,
+      typeName,
     );
   }
 
@@ -75,17 +74,19 @@ export class ParsedSchemaStore {
   }
 
   getAllTypeNames(): string[] {
-    return Object.keys(this.mappings.typeNameToRawTypeMap);
+    return Array.from(this.mappings.typeNameToRawTypeMap.keys());
   }
 }
 
 function createTypeNameMapping(
   mappings: Mappings,
-  typeName: string,
-  rawTypeName: string,
+  typeName: generatorTypes.GeneratedTypeName
 ) {
-  mappings.typeNameToRawTypeMap.set(typeName, rawTypeName);
-  mappings.rawTypeToTypeNameMap.set(rawTypeName, typeName);
+  if (typeName.schemaType === "enum-key") {
+    return;
+  }
+  mappings.typeNameToRawTypeMap.set(typeName.typeName, typeName.rawTypeName ?? typeName.typeName);
+  mappings.rawTypeToTypeNameMap.set(typeName.rawTypeName ?? typeName.typeName, typeName.typeName);
 }
 
 function createSchemaMapping(mappings: Mappings, schema: parserTypes.Schema) {

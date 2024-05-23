@@ -7,6 +7,8 @@ import * as headerParser from "../parser/open-api/header-parser";
 import * as prettier from "prettier";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
+import * as types from "./types";
+import * as schemaParser from "../parser/open-api/schema-parser";
 
 const CircularJSON = require("circular-json");
 
@@ -19,6 +21,7 @@ const tests: {
   baseUrl?: string;
   headers?: string;
   _legacyApiComponents?: legacyApiTsGenerator.ApiComponents;
+  _generatedApiTsComponents?: types.GeneratedApiTsCode;
   _goldenFileContent?: string;
   _headersMap?: Map<string, string>;
 }[] = [
@@ -128,16 +131,20 @@ async function testGenerateFunctionsTsCode() {
           testCase._headersMap = headerParser.parseHeaders(testCase.headers);
         }
 
-        const generatedComponents = await apiTsGenerator.generateApiTsCode(
+        testCase._generatedApiTsComponents = await apiTsGenerator.generateApiTsCode(
           testCase.openApiUri,
         );
-        testCase._legacyApiComponents =
-          generatedComponents.legacyTypedApiComponents;
+
+        const parsedSchemastore = schemaParser.getParsedSchemaStore(testCase._generatedApiTsComponents.typeNames, testCase._generatedApiTsComponents.schemaComponents);
+        testCase._generatedApiTsComponents.schemaStore = parsedSchemastore;
+
+        testCase._legacyApiComponents = testCase._generatedApiTsComponents.legacyTypedApiComponents;
       });
 
       it(`should generate functions.ts file content for ${testCase.name}`, async () => {
         let got = await functionTsGenerator.generateFunctionsTsCode(
           testCase._legacyApiComponents!,
+          testCase._generatedApiTsComponents!,
           testCase._headersMap,
           testCase.baseUrl,
         );

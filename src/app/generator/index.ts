@@ -4,6 +4,7 @@ import * as headersParser from "../parser/open-api/header-parser";
 import * as context from "../context";
 import * as types from "../types";
 import * as logger from "../../util/logger";
+import * as schemaParser from "../parser/open-api/schema-parser";
 
 export async function generateCode(
   args: types.GenerateCodeInput,
@@ -15,8 +16,13 @@ export async function generateCode(
   logger.trace("finished api.ts code generation");
   const headersMap = headersParser.parseHeaders(args.headers);
   logger.trace("starting function.ts code generation");
+
+  const parsedSchemaStore = schemaParser.getParsedSchemaStore(apiTsCode.typeNames, apiTsCode.schemaComponents);
+  apiTsCode.schemaStore = parsedSchemaStore;
+
   const functionsTsCode = await functionsTsGenerator.generateFunctionsTsCode(
     apiTsCode.legacyTypedApiComponents,
+    apiTsCode,
     headersMap,
     args.baseUrl,
   );
