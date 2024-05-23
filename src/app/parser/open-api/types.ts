@@ -1,8 +1,13 @@
+import * as logger from "../../../util/logger";
+
+const AMBIGUOUS_PRIMITVE_TYPES = ["any", "object", "void", "object"];
+
 export type Schema = {
   $ref: string;
   typeName: string;
   componentName: string;
   rawTypeData: SchemaProperty | undefined;
+  typeData: SchemaProperty | undefined;
 
   // this variable is calculated by this package
   _requiresRelaxedTypeJsDocTag?: boolean;
@@ -15,7 +20,9 @@ export type SchemaProperty =
   | SchemaTypeAllOf
   | SchemaTypeRef
   | SchemaTypeContent
-  | SchemaTypeRawArg;
+  | SchemaTypeRawArg
+  | SchemaTypePrimitive
+  | SecuritySchema;
 
 export type SchemaTypeObject = {
   type: "object";
@@ -62,6 +69,17 @@ export type SchemaTypeContent = {
   nullable: boolean | undefined;
 };
 
+export type SchemaTypePrimitive = {
+  type: "primitve";
+  typeIdentifier: string;
+  name: string;
+  content: string;
+};
+
+export type SecuritySchema = {
+  type: "apiKey" | "oauth2";
+}
+
 /**
  * This type represents types that don't have `type` field.
  * Instead, they are parsed as raw args
@@ -76,6 +94,22 @@ export type SchemaTypeRawArg = {
   nullable: boolean | undefined;
   schema: SchemaProperty;
 };
+
+export function getSchemaPropertyFromSchema(
+  schema: Schema,
+): SchemaProperty | undefined {
+  if (schema.rawTypeData && isSchemaPropertyOfAKnownType(schema.rawTypeData)) {
+    return schema.rawTypeData;
+  }
+  // console.log('rawTypeData is not of a known type for schema: ', schema.$ref);
+  if (schema.typeData && isSchemaPropertyOfAKnownType(schema.typeData)) {
+    // console.log('schema.typedata: ', schema.typeData);
+    return schema.typeData;
+  }
+
+  logger.error(`Cannot resolve schema types for ${schema.$ref} `);
+  return undefined;
+}
 
 export function schemaPropertyIsTypeScaler(
   property: any,
@@ -92,7 +126,7 @@ export function schemaPropertyIsTypeScaler(
 export function schemaPropertyIsTypeObject(
   property: any,
 ): property is SchemaTypeObject {
-  return property.type && property.type === "object";
+  return property.type && property.type === "object" && property.properties && Object.keys(property.properties).length > 0;
 }
 
 export function schemaPropertyIsTypeArray(
@@ -116,13 +150,38 @@ export function schemaPropertyIsTypeRef(
 export function schemaPropertyIsTypeContent(
   property: any,
 ): property is SchemaTypeContent {
-  return property.content !== null && property.content !== undefined;
+  if (property.content !== null && property.content !== undefined) {
+    try {
+      if (Object.keys(property.content).length > 0) {
+        return true;
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+  return false;
 }
 
 export function schemaPropertyIsTypeRawArg(
   property: any,
 ): property is SchemaTypeRawArg {
   return property.in && property.name && property.schema;
+}
+
+export function schemaPropertyIsSecuritySchema(property: any) {
+  return property.type && (property.type === "apiKey" || property.type === "oauth2");
+}
+
+export function schemaPropertyIsTypePrimitive(
+  property: any,
+): property is SchemaTypePrimitive {
+  return (
+    property.type &&
+    property.type === "primitive" && 
+    property.typeIdentifier &&
+    property.content
+  );
 }
 
 export function schemaPropertyIsEnum(property: any): boolean {
@@ -135,28 +194,42 @@ export function schemaPropertyIsEnum(property: any): boolean {
   );
 }
 
+function isSchemaPropertyOfAKnownType(schema: SchemaProperty) {
+  return (
+    schemaPropertyIsTypeScaler(schema) ||
+    schemaPropertyIsTypeArray(schema) ||
+    schemaPropertyIsTypeObject(schema) ||
+    schemaPropertyIsTypeAllOf(schema) ||
+    schemaPropertyIsTypeRef(schema) ||
+    schemaPropertyIsTypeContent(schema) ||
+    schemaPropertyIsTypeRawArg(schema) ||
+    schemaPropertyIsTypePrimitive(schema) ||
+    schemaPropertyIsSecuritySchema(schema)
+  );
+}
+
 export function getSchemaPropertyChildren(
   property: SchemaProperty,
 ): SchemaProperty[] {
   if (schemaPropertyIsTypeObject(property)) {
-    console.log("getSchemaPropertyChildren: schemaProperty is object");
+    // console.log("getSchemaPropertyChildren: schemaProperty is object");
     return getSchemaTypeObjectChildern(property);
   } else if (schemaPropertyIsTypeArray(property)) {
-    console.log("getSchemaPropertyChildren: schemaProperty is array");
+    // console.log("getSchemaPropertyChildren: schemaProperty is array");
     return getSchemaTypeArrayChildern(property);
   } else if (schemaPropertyIsTypeContent(property)) {
-    console.log("getSchemaPropertyChildren: schemaProperty is content");
+    // console.log("getSchemaPropertyChildren: schemaProperty is content");
     return getSchemaTypeContentChildren(property);
   } else if (schemaPropertyIsTypeRawArg(property)) {
-    console.log("getSchemaPropertyChildren: schemaProperty is is raw args");
+    // console.log("getSchemaPropertyChildren: schemaProperty is is raw args");
     return getSchemaTypeRawArgsChildren(property);
   } else if (schemaPropertyIsTypeAllOf(property)) {
-    console.log("getSchemaPropertyChildren: schemaProperty is all of");
+    // console.log("getSchemaPropertyChildren: schemaProperty is all of");
     return getSchemaTypeAllOfChildren(property);
   }
-  console.log(
-    "getSchemaPropertyChildren: schemaProperty is likely a scaler or ref. returning empty array",
-  );
+  // console.log(
+  //   "getSchemaPropertyChildren: schemaProperty is likely a scaler or ref. returning empty array",
+  // );
   return [];
 }
 
@@ -208,6 +281,12 @@ export function getSchemaTypeAllOfChildren(
   return [];
 }
 
+export function primitiveSchemaPropertiveHasAmbigousType(
+  property: SchemaTypePrimitive,
+) {
+  return AMBIGUOUS_PRIMITVE_TYPES.indexOf(property.content) > -1;
+}
+
 /**
  * Checks whether a type should be marked as a RelaxedType
  * More on RelaxedTypes: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
@@ -217,6 +296,9 @@ export function schemaPropertyIsRelaxedType(schemaProperty: SchemaProperty) {
     if (schemaPropertyIsEnum(schemaProperty)) {
       return true;
     }
+  } else if (schemaPropertyIsTypePrimitive(schemaProperty)) {
+    console.log('schemaPropertyType is Primitive');
+    return primitiveSchemaPropertiveHasAmbigousType(schemaProperty);
   }
   return false;
 }

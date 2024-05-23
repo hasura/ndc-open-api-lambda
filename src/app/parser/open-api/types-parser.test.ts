@@ -6,7 +6,7 @@ import * as apiTsGenerator from "../../generator/api-ts-generator";
 import * as context from "../../context";
 const CircularJSON = require("circular-json");
 
-context.getInstance().setLogLevel(context.LogLevel.PANIC);
+context.getInstance().setLogLevel(context.LogLevel.ERROR);
 
 type FunctionParams = {
   params: string;
