@@ -15,7 +15,11 @@ export function getParsedSchemaStore(
   };
 
   for (const typeName of typeNames) {
-    createTypeNameMapping(mappings, typeName.typeName, typeName.rawTypeName!);
+    createTypeNameMapping(
+      mappings,
+      typeName.typeName,
+      typeName.rawTypeName ?? typeName.typeName,
+    );
   }
 
   for (const component of schemaComponents) {
