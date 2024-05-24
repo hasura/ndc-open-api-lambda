@@ -20,7 +20,7 @@ export function getParsedSchemaStore(
 
   for (const component of schemaComponents) {
     /**
-     * Need to use @ts-ignore in the following lines because the typescript 
+     * Need to use @ts-ignore in the following lines because the typescript
      * compiler does not think that component can be correctly cast to parserTypes.Schema
      */
     // @ts-ignore
