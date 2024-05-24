@@ -20,9 +20,13 @@ export function getParsedSchemaStore(
 
   for (const component of schemaComponents) {
     /**
-     * Need to use @ts-ignore here because typescript does not think
-     * that component can be correctly cast to parserTypes.Schema
+     * Need to use @ts-ignore in the following lines because the typescript 
+     * compiler does not think that component can be correctly cast to parserTypes.Schema
      */
+    // @ts-ignore
+    if (!shouldParseScehma(component as parserTypes.Schema)) {
+      continue;
+    }
     // @ts-ignore
     createSchemaMapping(mappings, component as parserTypes.Schema);
   }
@@ -78,6 +82,10 @@ export class ParsedSchemaStore {
   getAllTypeNames(): string[] {
     return Array.from(this.mappings.typeNameToRawTypeMap.keys());
   }
+
+  getTypeName(schema: parserTypes.Schema): string | undefined {
+    return this.mappings.rawTypeToTypeNameMap.get(schema.typeName);
+  }
 }
 
 function createTypeNameMapping(
@@ -105,6 +113,18 @@ function createSchemaMapping(mappings: Mappings, schema: parserTypes.Schema) {
   } else {
     mappings.rawTypeNameToRefMap.set(schema.typeName, [schema.$ref]);
   }
+}
+
+function shouldParseScehma(component: parserTypes.Schema) {
+  /**
+   * We don't want to parse #/components/examples/ because
+   * 1. they are not used in code
+   * 2. too many examples can slow down the parsing
+   */
+  if (component.$ref.startsWith("#/components/examples/")) {
+    return false;
+  }
+  return true;
 }
 
 function parseSchema(
