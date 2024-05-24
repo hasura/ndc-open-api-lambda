@@ -50,7 +50,7 @@ enum SecuritySchemeTypeEnum {
 }
 
 export type SchemaTypeObject = {
-  type: ObjectTypeEnum;
+  type: ObjectTypeEnum | undefined;
   required: string[] | undefined;
   properties: Map<string, SchemaProperty> | undefined;
   example: string | undefined;
@@ -84,6 +84,7 @@ export type SchemaTypeRef = {
 
 export type SchemaTypeAllOf = {
   allOf: SchemaProperty[];
+  properties: Map<string, SchemaProperty> | undefined;
 };
 
 export type SchemaTypeContent = {
@@ -143,12 +144,11 @@ export function schemaPropertyIsTypeScaler(
 export function schemaPropertyIsTypeObject(
   property: any,
 ): property is SchemaTypeObject {
-  return (
-    property.type &&
-    Object.values(ObjectTypeEnum).includes(property.type) &&
-    property.properties &&
-    Object.keys(property.properties).length > 0
-  );
+  if (property.type && !Object.values(ObjectTypeEnum).includes(property.type)) {
+    // if property.type exists, then it should belong to ObjectTypeEnum
+    return false;
+  }
+  return property.properties && Object.keys(property.properties).length > 0;
 }
 
 export function schemaPropertyIsTypeArray(
@@ -298,10 +298,14 @@ export function getSchemaTypeRawArgsChildren(
 export function getSchemaTypeAllOfChildren(
   schemaProperty: SchemaTypeAllOf,
 ): SchemaProperty[] {
+  const properties: SchemaProperty[] = [];
   if (schemaProperty && schemaProperty.allOf) {
-    return schemaProperty.allOf;
+    properties.push(...schemaProperty.allOf);
   }
-  return [];
+  if (schemaProperty && schemaProperty.properties) {
+    properties.push(...Object.values(schemaProperty.properties));
+  }
+  return properties;
 }
 
 export function primitiveSchemaPropertiveHasAmbigousType(
