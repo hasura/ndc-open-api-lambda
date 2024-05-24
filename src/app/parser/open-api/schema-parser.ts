@@ -21,7 +21,7 @@ export function getParsedSchemaStore(
   for (const component of schemaComponents) {
     /**
      * Need to use @ts-ignore here because typescript does not think
-     * there component can be correctly cast to parserTypes.Schema
+     * that component can be correctly cast to parserTypes.Schema
      */
     // @ts-ignore
     createSchemaMapping(mappings, component as parserTypes.Schema);
