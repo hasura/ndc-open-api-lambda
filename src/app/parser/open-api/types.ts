@@ -24,8 +24,33 @@ export type SchemaProperty =
   | SchemaTypePrimitive
   | SchemaTypeSecurityScheme;
 
+enum ObjectTypeEnum {
+  "object",
+}
+
+enum ArrayTypeEnum {
+  "array",
+}
+
+enum ScalerTypeEnum {
+  "integer",
+  "string",
+  "boolean",
+  "number",
+}
+
+enum PrimitiveTypeEnum {
+  "primitive",
+}
+
+enum SecuritySchemeTypeEnum {
+  "apiKey",
+  "oauth2",
+  "http",
+}
+
 export type SchemaTypeObject = {
-  type: "object";
+  type: ObjectTypeEnum;
   required: string[] | undefined;
   properties: Map<string, SchemaProperty> | undefined;
   example: string | undefined;
@@ -33,7 +58,7 @@ export type SchemaTypeObject = {
 };
 
 export type SchemaTypeScalar = {
-  type: "integer" | "string" | "boolean" | "number";
+  type: ScalerTypeEnum;
   required: boolean | undefined;
   nullable: boolean | undefined;
   format: string | undefined;
@@ -43,7 +68,7 @@ export type SchemaTypeScalar = {
 };
 
 export type SchemaTypeArray = {
-  type: "array";
+  type: ArrayTypeEnum;
   items: SchemaProperty;
   required: boolean | undefined;
   nullable: boolean | undefined;
@@ -70,14 +95,14 @@ export type SchemaTypeContent = {
 };
 
 export type SchemaTypePrimitive = {
-  type: "primitve";
+  type: PrimitiveTypeEnum;
   typeIdentifier: string;
   name: string;
   content: string;
 };
 
 export type SchemaTypeSecurityScheme = {
-  type: "apiKey" | "oauth2" | "http";
+  type: SecuritySchemeTypeEnum;
 };
 
 /**
@@ -112,13 +137,7 @@ export function getSchemaPropertyFromSchema(
 export function schemaPropertyIsTypeScaler(
   property: any,
 ): property is SchemaTypeScalar {
-  return (
-    property.type &&
-    (property.type === "integer" ||
-      property.type === "string" ||
-      property.type === "boolean" ||
-      property.type === "number")
-  );
+  return property.type && Object.values(ScalerTypeEnum).includes(property.type);
 }
 
 export function schemaPropertyIsTypeObject(
@@ -126,7 +145,7 @@ export function schemaPropertyIsTypeObject(
 ): property is SchemaTypeObject {
   return (
     property.type &&
-    property.type === "object" &&
+    Object.values(ObjectTypeEnum).includes(property.type) &&
     property.properties &&
     Object.keys(property.properties).length > 0
   );
@@ -135,7 +154,11 @@ export function schemaPropertyIsTypeObject(
 export function schemaPropertyIsTypeArray(
   property: any,
 ): property is SchemaTypeArray {
-  return property.type && property.type === "array" && property.items;
+  return (
+    property.type &&
+    Object.values(ArrayTypeEnum).includes(property.type) &&
+    property.items
+  );
 }
 
 export function schemaPropertyIsTypeAllOf(
@@ -177,9 +200,7 @@ export function schemaPropertyIsSecurityScheme(
 ): property is SchemaTypeSecurityScheme {
   return (
     property.type &&
-    (property.type === "apiKey" ||
-      property.type === "oauth2" ||
-      property.type === "http")
+    Object.values(SecuritySchemeTypeEnum).includes(property.type)
   );
 }
 
@@ -188,7 +209,7 @@ export function schemaPropertyIsTypePrimitive(
 ): property is SchemaTypePrimitive {
   return (
     property.type &&
-    property.type === "primitive" &&
+    Object.values(PrimitiveTypeEnum).includes(property.type) &&
     property.typeIdentifier &&
     property.content
   );
