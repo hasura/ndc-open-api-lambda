@@ -22,7 +22,8 @@ export type SchemaProperty =
   | SchemaTypeContent
   | SchemaTypeRawArg
   | SchemaTypePrimitive
-  | SchemaTypeSecurityScheme;
+  | SchemaTypeSecurityScheme
+  | SchemaTypeSchema;
 
 enum ObjectTypeEnum {
   "object",
@@ -104,6 +105,11 @@ export type SchemaTypePrimitive = {
 
 export type SchemaTypeSecurityScheme = {
   type: SecuritySchemeTypeEnum;
+};
+
+export type SchemaTypeSchema = {
+  description: string | undefined;
+  schema: SchemaProperty;
 };
 
 /**
@@ -215,6 +221,12 @@ export function schemaPropertyIsTypePrimitive(
   );
 }
 
+export function schemaPropertyIsTypeSchema(
+  property: any,
+): property is SchemaTypeSchema {
+  return property.schema && Object.keys(property.schema).length > 0;
+}
+
 export function schemaPropertyIsEnum(property: any): boolean {
   return (
     (schemaPropertyIsTypeScaler(property) &&
@@ -235,7 +247,8 @@ function isSchemaPropertyOfAKnownType(schema: SchemaProperty) {
     schemaPropertyIsTypeContent(schema) ||
     schemaPropertyIsTypeRawArg(schema) ||
     schemaPropertyIsTypePrimitive(schema) ||
-    schemaPropertyIsSecurityScheme(schema)
+    schemaPropertyIsSecurityScheme(schema) ||
+    schemaPropertyIsTypeSchema(schema)
   );
 }
 
@@ -252,6 +265,8 @@ export function getSchemaPropertyChildren(
     return getSchemaTypeRawArgsChildren(property);
   } else if (schemaPropertyIsTypeAllOf(property)) {
     return getSchemaTypeAllOfChildren(property);
+  } else if (schemaPropertyIsTypeSchema(property)) {
+    return getSchemaTypeSchemaChildren(property);
   }
   return [];
 }
@@ -306,6 +321,15 @@ export function getSchemaTypeAllOfChildren(
     properties.push(...Object.values(schemaProperty.properties));
   }
   return properties;
+}
+
+export function getSchemaTypeSchemaChildren(
+  schemaProperty: SchemaTypeSchema,
+): SchemaProperty[] {
+  if (schemaProperty.schema) {
+    return [schemaProperty.schema];
+  }
+  return [];
 }
 
 export function primitiveSchemaPropertiveHasAmbigousType(
