@@ -131,16 +131,6 @@ const tests: {
     openApiFile: "azure-open-id-connect.json",
     goldenFile: "azure-open-id-connect.json",
   },
-  /**
-   * MicrosoftOData test has been commented out because of it being huge, which is resulting in a flaky behaviour
-   * The flaky behaviour exists because the elements of the array can change their position
-   * and for an unkown reason deepequal on a map is not taking that into account
-   */
-  // {
-  //   name: "MicrosoftOData",
-  //   openApiFile: "microsoft-odata.json",
-  //   goldenFile: "microsoft-odata.json",
-  // },
   {
     name: "AzureAutomationManagement",
     openApiFile: "azure-automation-management.json",
@@ -156,11 +146,6 @@ const tests: {
     openApiFile: "gcp-error-reporting.json",
     goldenFile: "gcp-error-reporting.json",
   },
-  // {
-  //   name: "GcpDatastore",
-  //   openApiFile: "gcp-datastore.json",
-  //   goldenFile: "gcp-datastore.json",
-  // },
   {
     name: "Gmail",
     openApiFile: "gmail.json",
@@ -221,6 +206,22 @@ const tests: {
     openApiFile: "nyt-books.json",
     goldenFile: "nyt-books.json",
   },
+
+  /**
+   * MicrosoftOData test has been commented out because of it being huge, which is resulting in a flaky behaviour
+   * The flaky behaviour exists because the elements of the array can change their position
+   * and for an unkown reason deepequal on a map is not taking that into account
+   */
+  // {
+  //   name: "MicrosoftOData",
+  //   openApiFile: "microsoft-odata.json",
+  //   goldenFile: "microsoft-odata.json",
+  // },
+  // {
+  //   name: "GcpDatastore",
+  //   openApiFile: "gcp-datastore.json",
+  //   goldenFile: "gcp-datastore.json",
+  // },
 ];
 
 describe("schema-parser", async () => {
