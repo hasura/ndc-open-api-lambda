@@ -1,0 +1,674 @@
+[
+  {
+    "schemaRef": "#/components/requestBodies/PerformanceTestConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/requestBodies/idPostDeployApplicationFile",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/applicationFilesResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/grafanaBoardsResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/grafanaConfigResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/k8sConfigRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/k8sContextsRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/listProvidersRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/loadTestPreferencesWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryAdaptersRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryApplicationResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryApplicationsResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryFilterResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryFiltersResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryPatternResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryPatternsResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/mesheryVersionRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/noContentWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/perfSingleResultRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/perfTestPrefsRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/performanceProfileResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/performanceProfilesResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/performanceResultsResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/prometheusBoardImportRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/prometheusConfigResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/prometheusStaticBoardRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/schedulesResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/singleScheduleResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/systemAdaptersRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/userLoadTestPrefsRespWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/v1ServicesMapResponseWrapper",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Adapter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Alert",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertCondition",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertEvaluator",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertNotification",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertOperator",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertQuery",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertReducer",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ApplicationsAPIResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AuthenticateOKBody",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Axis",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/BoolString",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Capabilities",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Capability",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientIPConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Column",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ColumnStyle",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ContainerChangeResponseItem",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ContainerCreateCreatedBody",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ContainerTopOKBody",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ContainerUpdateOKBody",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ContainerWaitOKBody",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ContainerWaitOKBodyError",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Extensions",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Feature",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/FieldConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/FieldsV1",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/FiltersAPIResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/FloatString",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Gauge",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Grafana",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GrafanaBoard",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GrafanaConfigParams",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GrafanaDataSource",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GrafanaTemplateVars",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GraphDriverData",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GraphQLExtension",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GraphQLExtensions",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/HistoryResponseItem",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Href",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/IPFamily",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/IdResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageDeleteResponseItem",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageSummary",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/IntOrString",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/IntString",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/K8SConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/K8SContext",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/K8SNode",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/LatenciesMs",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Legend",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Link",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadBalancerIngress",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadBalancerStatus",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadTestPreferences",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ManagedFieldsEntry",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ManagedFieldsOperationType",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Map",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/MapType",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/MesheryApplication",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/MesheryFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/MesheryPattern",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NavigatorExtension",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NavigatorExtensions",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/OpCategory",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Options",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/OwnerReference",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Panel",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PatternsAPIResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceProfile",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceProfileParameters",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceProfilesAPIResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceResult",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceResultsAPIResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceSpec",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceTestConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceTestConfig_Client",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceTestConfig_Client_Protocol",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PerformanceTestParameters",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Plugin",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginConfigArgs",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginConfigInterface",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginConfigLinux",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginConfigNetwork",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginConfigRootfs",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginConfigUser",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginDevice",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginEnv",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginInterfaceType",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginMount",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PluginSettings",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Port",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Preference",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PreferenceParams",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Prometheus",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Protocol",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ProviderProperties",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ProviderType",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/RangeMap",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/RunnerResults",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Schedule",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SchedulesAPIResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SelectedGrafanaConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SeriesOverride",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Service",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceAffinity",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceExternalTrafficPolicyType",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServicePort",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceSpec",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceStatus",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceType",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceUpdateResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SessionAffinityConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Sort",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SparkLine",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/StackdriverAlignOption",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/StackdriverAlignOptions",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/StringArray",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SupportedOperation",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Target",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Threshold",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Time",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Tooltip",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Type",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UID",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UUID",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UserPrefsExtension",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UserPrefsExtensions",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ValueMap",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Version",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Volume",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/VolumeCreateBody",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/VolumeListOKBody",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/VolumeUsageData",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/token",
+    "requiresRelaxedTypeJsDocTag": false
+  }
+]

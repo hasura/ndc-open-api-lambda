@@ -73,6 +73,146 @@ const tests: {
     openApiFile: "kubernetes.json",
     goldenFile: "kubernetes.json",
   },
+  {
+    name: "1Password",
+    openApiFile: "1password.json",
+    goldenFile: "1password.json",
+  },
+  {
+    name: "AwsCloudMap",
+    openApiFile: "aws-cloud-map.json",
+    goldenFile: "aws-cloud-map.json",
+  },
+  {
+    name: "AmazonWorkspaces",
+    openApiFile: "amazon-workspaces.json",
+    goldenFile: "amazon-workspaces.json",
+  },
+  {
+    name: "ApiDeckCrm",
+    openApiFile: "apideck-crm.json",
+    goldenFile: "apideck-crm.json",
+  },
+  {
+    name: "AckoInsurance",
+    openApiFile: "acko-insurance.json",
+    goldenFile: "acko-insurance.json",
+  },
+  {
+    name: "MicrosoftWorkloadMonitor",
+    openApiFile: "microsoft-workload-monitor.json",
+    goldenFile: "microsoft-workload-monitor.json",
+  },
+  {
+    name: "EbayFinances",
+    openApiFile: "ebay-finances.json",
+    goldenFile: "ebay-finances.json",
+  },
+  {
+    name: "AtlassianJira",
+    openApiFile: "atlassian-jira.json",
+    goldenFile: "atlassian-jira.json",
+  },
+  {
+    name: "AucklandMuseum",
+    openApiFile: "auckland-museum.json",
+    goldenFile: "auckland-museum.json",
+  },
+  {
+    name: "AzureAlertsManagement",
+    openApiFile: "azure-alerts-management.json",
+    goldenFile: "azure-alerts-management.json",
+  },
+  {
+    name: "AzureOpenIdConnect",
+    openApiFile: "azure-open-id-connect.json",
+    goldenFile: "azure-open-id-connect.json",
+  },
+  {
+    name: "MicrosoftOData",
+    openApiFile: "microsoft-odata.json",
+    goldenFile: "microsoft-odata.json",
+  },
+  {
+    name: "AzureAutomationManagement",
+    openApiFile: "azure-automation-management.json",
+    goldenFile: "azure-automation-management.json",
+  },
+  {
+    name: "GoogleAnalyticsHub",
+    openApiFile: "google-analytics-hub.json",
+    goldenFile: "google-analytics-hub.json",
+  },
+  {
+    name: "GcpErrorReporting",
+    openApiFile: "gcp-error-reporting.json",
+    goldenFile: "gcp-error-reporting.json",
+  },
+  // {
+  //   name: "GcpDatastore",
+  //   openApiFile: "gcp-datastore.json",
+  //   goldenFile: "gcp-datastore.json",
+  // },
+  {
+    name: "Gmail",
+    openApiFile: "gmail.json",
+    goldenFile: "gmail.json",
+  },
+  {
+    name: "HereMapsTracking",
+    openApiFile: "here-maps-tracking.json",
+    goldenFile: "here-maps-tracking.json",
+  },
+  {
+    name: "HereMapsPositioning",
+    openApiFile: "here-maps-positioning.json",
+    goldenFile: "here-maps-positioning.json",
+  },
+  {
+    name: "HubSpotEvents",
+    openApiFile: "hubspot-events.json",
+    goldenFile: "hubspot-events.json",
+  },
+  {
+    name: "HubSpotWorkflowActions",
+    openApiFile: "hubspot-workflow-actions.json",
+    goldenFile: "hubspot-workflow-actions.json",
+  },
+  {
+    name: "Lyft",
+    openApiFile: "lyft.json",
+    goldenFile: "lyft.json",
+  },
+  {
+    name: "IntuitMailchimp",
+    openApiFile: "intuit-mailchimp.json",
+    goldenFile: "intuit-mailchimp.json",
+  },
+  {
+    name: "Meshery",
+    openApiFile: "meshery.json",
+    goldenFile: "meshery.json",
+  },
+  {
+    name: "CiscoMeraki",
+    openApiFile: "cisco-meraki.json",
+    goldenFile: "cisco-meraki.json",
+  },
+  {
+    name: "Medium",
+    openApiFile: "medium.json",
+    goldenFile: "medium.json",
+  },
+  {
+    name: "MercedezBenzCarConfigurator",
+    openApiFile: "mercedez-benz-car-configurator.json",
+    goldenFile: "mercedez-benz-car-configurator.json",
+  },
+  {
+    name: "NewYorkTimesBooks",
+    openApiFile: "nyt-books.json",
+    goldenFile: "nyt-books.json",
+  },
 ];
 
 describe("schema-parser", async () => {

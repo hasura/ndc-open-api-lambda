@@ -1,0 +1,666 @@
+[
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Content-Sha256",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Date",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Algorithm",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Credential",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Security-Token",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Signature",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-SignedHeaders",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/hmac",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateHttpNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateHttpNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/InvalidInput",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceAlreadyExists",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceLimitExceeded",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DuplicateRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/TooManyTagsException",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePrivateDnsNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePrivateDnsNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePublicDnsNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePublicDnsNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateServiceResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateServiceRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNotFound",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceAlreadyExists",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceInUse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteServiceResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteServiceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceNotFound",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DeregisterInstanceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeregisterInstanceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceNotFound",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DiscoverInstancesResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DiscoverInstancesRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/RequestLimitExceeded",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstanceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstanceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstancesHealthStatusResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstancesHealthStatusRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetOperationResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetOperationRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationNotFound",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetServiceResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetServiceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ListInstancesResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ListInstancesRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ListNamespacesResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ListNamespacesRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ListOperationsResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ListOperationsRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ListServicesResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ListServicesRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ListTagsForResourceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ListTagsForResourceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceNotFoundException",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/RegisterInstanceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/RegisterInstanceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/TagResourceResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/TagResourceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UntagResourceResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/UntagResourceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateHttpNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateHttpNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateInstanceCustomHealthStatusRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomHealthNotFound",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePrivateDnsNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePrivateDnsNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePublicDnsNamespaceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePublicDnsNamespaceRequest",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateServiceResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateServiceRequest",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/AmazonResourceName",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Arn",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AttrKey",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/AttrValue",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Attributes",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Code",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNameHttp",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceDescription",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/TagList",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNamePrivate",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsNamespaceProperties",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNamePublic",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsNamespaceProperties",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceName",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsConfig",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthCheckConfig",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthCheckCustomConfig",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceTypeOption",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Service",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomHealthStatus",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceName",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DiscoverMaxResults",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthStatusFilter",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpInstanceSummaryList",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/RoutingPolicy",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsRecordList",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsConfigChange",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/SOA",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsProperties",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/RecordType",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/RecordTTL",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsRecord",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/FailureThreshold",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterCondition",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterValue",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterValues",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Instance",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceIdList",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/MaxResults",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NextToken",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceHealthStatusMap",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Namespace",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Operation",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthCheckType",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourcePath",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthStatus",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpInstanceSummary",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpNamespaceChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpProperties",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceSummary",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceSummaryList",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceFilters",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceSummariesList",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationFilters",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationSummaryList",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceFilters",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceSummariesList",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Message",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceType",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceCount",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceProperties",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Timestamp",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceFilterName",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceFilter",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceSummary",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationType",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationStatus",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationTargetsMap",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationFilterName",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationFilter",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationSummary",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationTargetType",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsNamespacePropertiesChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsNamespaceChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsPropertiesMutable",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsPropertiesMutableChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SOAChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsNamespacePropertiesChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsNamespaceChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsPropertiesMutable",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsPropertiesMutableChange",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceType",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceChange",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceFilterName",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceFilter",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceSummary",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/TagKey",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/TagValue",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Tag",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/TagKeyList",
+    "requiresRelaxedTypeJsDocTag": false
+  }
+]

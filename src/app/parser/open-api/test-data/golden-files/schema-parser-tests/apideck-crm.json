@@ -1,0 +1,610 @@
+[
+  {
+    "schemaRef": "#/components/parameters/activitiesFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/applicationId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/companiesFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/companiesSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/parameters/consumerId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/contactsFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/contactsSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/parameters/cursor",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/fields",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/id",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/leadsFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/leadsSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/parameters/limit",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/opportunitiesFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/opportunitiesSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/parameters/raw",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/parameters/serviceId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/BadRequestResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreateActivityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreateCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreateContactResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreateLeadResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreateNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreateOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreatePipelineResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/CreateUserResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeleteActivityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeleteCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeleteContactResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeleteLeadResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeleteNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeleteOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeletePipelineResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/DeleteUserResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetActivitiesResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetActivityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetCompaniesResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetContactResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetContactsResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetCrmLeadResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetLeadsResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetNotesResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetOpportunitiesResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetPipelineResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetPipelinesResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetUserResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/GetUsersResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/NotFoundResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/NotImplementedResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/PaymentRequiredResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/TooManyRequestsResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UnauthorizedResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UnexpectedErrorResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UnprocessableResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdateActivityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdateCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdateContactResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdateLeadResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdateNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdateOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdatePipelineResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/responses/UpdateUserResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivitiesFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Activity",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityAttendee",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Address",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/BadRequestResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/BankAccount",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CompaniesFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CompaniesSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Company",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Contact",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/ContactsFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/ContactsSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateActivityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateContactResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateLeadResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePipelineResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateUserResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/CrmEventType",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CrmWebhookEvent",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Currency",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomField",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteActivityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteContactResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteLeadResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeletePipelineResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteUserResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Email",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/FirstName",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetActivitiesResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetActivityResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetCompaniesResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetContactResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetContactsResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetLeadResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetLeadsResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetNotesResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/GetOpportunitiesResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetPipelineResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetPipelinesResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetUserResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/GetUsersResponse",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/LastName",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Lead",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/LeadsFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/LeadsSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Links",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Meta",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NotFoundResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/NotImplementedResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/Note",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/OpportunitiesFilter",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/OpportunitiesSort",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Opportunity",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/PaymentRequiredResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/PhoneNumber",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Pipeline",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/RowVersion",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SocialLink",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/SortDirection",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Tags",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/TooManyRequestsResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UnauthorizedResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UnexpectedErrorResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UnifiedId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UnprocessableResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateActivityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateCompanyResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateContactResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateLeadResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateNoteResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateOpportunityResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePipelineResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateUserResponse",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/schemas/User",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/schemas/Website",
+    "requiresRelaxedTypeJsDocTag": true
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/apiKey",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/applicationId",
+    "requiresRelaxedTypeJsDocTag": false
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/consumerId",
+    "requiresRelaxedTypeJsDocTag": false
+  }
+]
