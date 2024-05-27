@@ -1,6 +1,7 @@
 import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as parserTypes from "./types";
 import * as generatorTypes from "../../generator/types";
+import * as logger from "../../../util/logger";
 
 export function getParsedSchemaStore(
   typeNames: generatorTypes.GeneratedTypeName[],
@@ -168,26 +169,33 @@ function parseSchemaProperty(
   visitedRefs: Set<string>,
   schemaStore: ParsedSchemaStore,
 ) {
-  if (parserTypes.schemaPropertyIsRelaxedType(schemaProperty)) {
-    schema._requiresRelaxedTypeJsDocTag = true;
-  } else if (parserTypes.schemaPropertyIsTypeRef(schemaProperty)) {
-    const newSchema = schemaStore.getSchemaByRef(schemaProperty.$ref);
-    if (!newSchema) {
-      return;
-    }
-    const requiresRelaxedTypeJsDocTag = parseSchema(
-      newSchema,
-      visitedRefs,
-      schemaStore,
-    );
-    if (requiresRelaxedTypeJsDocTag) {
-      // if a child in this requires an @allowRelaxedType tag,
-      // then the parent requires it too
+  try {
+    if (parserTypes.schemaPropertyIsRelaxedType(schemaProperty)) {
       schema._requiresRelaxedTypeJsDocTag = true;
+    } else if (parserTypes.schemaPropertyIsTypeRef(schemaProperty)) {
+      const newSchema = schemaStore.getSchemaByRef(schemaProperty.$ref);
+      if (!newSchema) {
+        return;
+      }
+      const requiresRelaxedTypeJsDocTag = parseSchema(
+        newSchema,
+        visitedRefs,
+        schemaStore,
+      );
+      if (requiresRelaxedTypeJsDocTag) {
+        // if a child in this requires an @allowRelaxedType tag,
+        // then the parent requires it too
+        schema._requiresRelaxedTypeJsDocTag = true;
+      }
+    } else {
+      parserTypes.getSchemaPropertyChildren(schemaProperty).forEach((child) => {
+        parseSchemaProperty(child, schema, visitedRefs, schemaStore);
+      });
     }
-  } else {
-    parserTypes.getSchemaPropertyChildren(schemaProperty).forEach((child) => {
-      parseSchemaProperty(child, schema, visitedRefs, schemaStore);
-    });
+  } catch (e) {
+    if (e instanceof Error) {
+      logger.error(`Error while parsing schema '${schema.$ref}':\n${e.message}`);
+    }
+    logger.error(`Error while parsing schema '${schema.$ref}':\n${e}`);
   }
 }

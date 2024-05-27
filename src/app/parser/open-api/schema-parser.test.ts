@@ -5,9 +5,7 @@ import * as apiGenerator from "../../generator/api-ts-generator";
 import * as schemaParser from "./schema-parser";
 import * as fs from "fs";
 
-import { SchemaTypeObject } from "./types";
-
-context.getInstance().setLogLevel(context.LogLevel.PANIC);
+context.getInstance().setLogLevel(context.LogLevel.ERROR);
 
 type RelaxedTypeCheck = {
   schemaRef: string;

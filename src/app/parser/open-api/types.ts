@@ -9,6 +9,8 @@ export type Schema = {
   rawTypeData: SchemaProperty | undefined;
   typeData: SchemaProperty | undefined;
 
+  $parsed: $ParsedSchema | undefined;
+
   // this variable is calculated by this package
   _requiresRelaxedTypeJsDocTag?: boolean;
 };
@@ -24,6 +26,11 @@ export type SchemaProperty =
   | SchemaTypePrimitive
   | SchemaTypeSecurityScheme
   | SchemaTypeSchema;
+
+export type $ParsedSchema = {
+  type: string | undefined;
+  content: string | undefined;
+}
 
 enum ObjectTypeEnum {
   "object",
@@ -56,6 +63,7 @@ export type SchemaTypeObject = {
   properties: Map<string, SchemaProperty> | undefined;
   example: string | undefined;
   description: string | undefined;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypeScalar = {
@@ -66,6 +74,7 @@ export type SchemaTypeScalar = {
   example: string | undefined;
   description: string | undefined;
   enum: string[] | undefined;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypeArray = {
@@ -75,17 +84,20 @@ export type SchemaTypeArray = {
   nullable: boolean | undefined;
   example: string | undefined;
   description: string | undefined;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypeRef = {
   $ref: string;
   example: string | undefined;
   description: string | undefined;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypeAllOf = {
   allOf: SchemaProperty[];
   properties: Map<string, SchemaProperty> | undefined;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypeContent = {
@@ -94,6 +106,7 @@ export type SchemaTypeContent = {
   description: string | undefined;
   required: boolean | undefined;
   nullable: boolean | undefined;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypePrimitive = {
@@ -101,15 +114,18 @@ export type SchemaTypePrimitive = {
   typeIdentifier: string;
   name: string;
   content: string;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypeSecurityScheme = {
   type: SecuritySchemeTypeEnum;
+  $parsed: $ParsedSchema | undefined;
 };
 
 export type SchemaTypeSchema = {
   description: string | undefined;
   schema: SchemaProperty;
+  $parsed: $ParsedSchema | undefined;
 };
 
 /**
@@ -218,6 +234,8 @@ export function schemaPropertyIsTypePrimitive(
     Object.values(PrimitiveTypeEnum).includes(property.type) &&
     property.typeIdentifier &&
     property.content
+  ) || (
+    property.$parsed && Object.values(PrimitiveTypeEnum).includes(property.$parsed.type)
   );
 }
 
@@ -267,6 +285,9 @@ export function getSchemaPropertyChildren(
     return getSchemaTypeAllOfChildren(property);
   } else if (schemaPropertyIsTypeSchema(property)) {
     return getSchemaTypeSchemaChildren(property);
+  } else if (!isSchemaPropertyOfAKnownType(property)) {
+    // if schemaProperty is not of a known type, throw an error
+    throw new Error(`Cannot resolve SchemaProperty: ${JSON.stringify(property)}`);
   }
   return [];
 }
@@ -335,7 +356,12 @@ export function getSchemaTypeSchemaChildren(
 export function primitiveSchemaPropertiveHasAmbigousType(
   property: SchemaTypePrimitive,
 ) {
-  return AMBIGUOUS_PRIMITVE_TYPES.indexOf(property.content) > -1;
+  if (property.content) {
+    return AMBIGUOUS_PRIMITVE_TYPES.indexOf(property.content) > -1;
+  } else if (property.$parsed && property.$parsed.content) {
+    return AMBIGUOUS_PRIMITVE_TYPES.indexOf(property.$parsed.content) > -1;
+  }
+
 }
 
 /**
