@@ -146,10 +146,10 @@ export type SchemaTypeRawArg = {
 export function getSchemaPropertyFromSchema(
   schema: Schema,
 ): SchemaProperty | undefined {
-  if (schema.rawTypeData && isSchemaPropertyOfAKnownType(schema.rawTypeData)) {
+  if (schema.rawTypeData && canResolveSchema(schema.rawTypeData)) {
     return schema.rawTypeData;
   }
-  if (schema.typeData && isSchemaPropertyOfAKnownType(schema.typeData)) {
+  if (schema.typeData && canResolveSchema(schema.typeData)) {
     return schema.typeData;
   }
 
@@ -255,7 +255,7 @@ export function schemaPropertyIsEnum(property: any): boolean {
   );
 }
 
-function isSchemaPropertyOfAKnownType(schema: SchemaProperty) {
+function canResolveSchema(schema: SchemaProperty) {
   return (
     schemaPropertyIsTypeScaler(schema) ||
     schemaPropertyIsTypeArray(schema) ||
@@ -285,7 +285,7 @@ export function getSchemaPropertyChildren(
     return getSchemaTypeAllOfChildren(property);
   } else if (schemaPropertyIsTypeSchema(property)) {
     return getSchemaTypeSchemaChildren(property);
-  } else if (!isSchemaPropertyOfAKnownType(property)) {
+  } else if (!canResolveSchema(property)) {
     // if schemaProperty is not of a known type, throw an error
     throw new Error(`Cannot resolve SchemaProperty: ${JSON.stringify(property)}`);
   }
