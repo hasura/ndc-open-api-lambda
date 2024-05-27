@@ -236,12 +236,8 @@ export function schemaPropertyIsTypePrimitive(
 ): property is SchemaTypePrimitive {
   return (
     (property.type &&
-      Object.values(PrimitiveTypeEnum).includes(property.type) &&
-      property.typeIdentifier &&
-      property.content) ||
-    (property.type &&
-      Object.values(PrimitiveTypeEnum).includes(property.type) &&
-      property.$parsed &&
+      Object.values(PrimitiveTypeEnum).includes(property.type)) ||
+    (property.$parsed &&
       Object.values(ParsedPrimitiveTypeEnum).includes(property.$parsed.type))
   );
 }
@@ -344,8 +340,16 @@ export function getSchemaTypeAllOfChildren(
   schemaProperty: SchemaTypeAllOf,
 ): SchemaProperty[] {
   const properties: SchemaProperty[] = [];
-  if (schemaProperty && schemaProperty.allOf) {
-    properties.push(...schemaProperty.allOf);
+  if (
+    schemaProperty &&
+    schemaProperty.allOf &&
+    schemaProperty.allOf.length > 0
+  ) {
+    // we only return the 1st element in allOf[] because
+    // the subsequent elements are primitve any types 
+    // (for unknown reason, this is an issue with the open-api -> typescript lib: swagger-typescript-api)
+    // which result in false positive for the check of relaxed types
+    properties.push(schemaProperty.allOf.at(0)!);
   }
   if (schemaProperty && schemaProperty.properties) {
     properties.push(...Object.values(schemaProperty.properties));
