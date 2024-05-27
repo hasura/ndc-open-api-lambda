@@ -346,7 +346,7 @@ export function getSchemaTypeAllOfChildren(
     schemaProperty.allOf.length > 0
   ) {
     // we only return the 1st element in allOf[] because
-    // the subsequent elements are primitve any types 
+    // the subsequent elements are primitve any types
     // (for unknown reason, this is an issue with the open-api -> typescript lib: swagger-typescript-api)
     // which result in false positive for the check of relaxed types
     properties.push(schemaProperty.allOf.at(0)!);
