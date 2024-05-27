@@ -49,6 +49,11 @@ enum ScalerTypeEnum {
 
 enum PrimitiveTypeEnum {
   "primitive",
+  "object",
+}
+
+enum ParsedPrimitiveTypeEnum {
+  "primitive",
 }
 
 enum SecuritySchemeTypeEnum {
@@ -234,8 +239,10 @@ export function schemaPropertyIsTypePrimitive(
       Object.values(PrimitiveTypeEnum).includes(property.type) &&
       property.typeIdentifier &&
       property.content) ||
-    (property.$parsed &&
-      Object.values(PrimitiveTypeEnum).includes(property.$parsed.type))
+    (property.type &&
+      Object.values(PrimitiveTypeEnum).includes(property.type) &&
+      property.$parsed &&
+      Object.values(ParsedPrimitiveTypeEnum).includes(property.$parsed.type))
   );
 }
 
