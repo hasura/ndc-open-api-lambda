@@ -4,7 +4,8 @@ import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as legacyApiRouteParser from "../parser/open-api/parsedApiRoutes";
 import * as context from "../context";
 import { Eta } from "eta";
-import * as types from "../types";
+import * as appTypes from "../types";
+import * as generatorTypes from "./types";
 
 type ParsedFunctionComponents = {
   parsedRoute: swaggerTypescriptApi.ParsedRoute;
@@ -18,13 +19,13 @@ type ParsedFunctionComponents = {
 
 export async function generateFunctionsTsCode(
   legacyTypedApiComponents: legacyApiTsGenerator.ApiComponents,
+  generatedApiTsCodeComponents: generatorTypes.GeneratedApiTsCode,
   headersMap: Map<string, string> | undefined,
   baseUrl: string | undefined,
   parsedFunctionComponents?: ParsedFunctionComponents, // TODO: use this for instead of `legacyTypedApiComponents`
-): Promise<types.GeneratedCode> {
+): Promise<appTypes.GeneratedCode> {
   const legacyApiRoutesParser = new legacyApiRouteParser.ParsedApiRoutes(
-    new Set<string>(legacyTypedApiComponents.getTypeNames()),
-    legacyTypedApiComponents,
+    generatedApiTsCodeComponents.schemaStore!,
   );
 
   for (let route of legacyTypedApiComponents.routes) {
@@ -46,7 +47,7 @@ export async function generateFunctionsTsCode(
     },
   );
 
-  const generatedCode: types.GeneratedCode = {
+  const generatedCode: appTypes.GeneratedCode = {
     filePath: context.getInstance().getFunctionsFileName(),
     fileContent: generatedFunctionsTsCode,
     fileType: "functions-ts",

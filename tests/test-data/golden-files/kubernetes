@@ -587,6 +587,7 @@ export async function getApiGetCoreV1ApiResources(): Promise<IoK8SApimachineryPk
 /**
  * undefined
  * @request GET :/api/v1/componentstatuses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1ComponentStatus(query: {
@@ -668,6 +669,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/componentstatuses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1ComponentStatus(
@@ -696,6 +698,7 @@ export async function getApiReadCoreV1ComponentStatus(
 /**
  * undefined
  * @request GET :/api/v1/configmaps
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1ConfigMapForAllNamespaces(query: {
@@ -777,6 +780,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/endpoints
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1EndpointsForAllNamespaces(query: {
@@ -858,6 +862,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1EventForAllNamespaces(query: {
@@ -939,6 +944,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/limitranges
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1LimitRangeForAllNamespaces(query: {
@@ -1020,6 +1026,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1Namespace(query: {
@@ -1101,6 +1108,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1Namespace(
   query: {
@@ -1138,6 +1146,7 @@ export async function postApiCreateCoreV1Namespace(
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/bindings
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedBinding(
   query: {
@@ -1278,6 +1287,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/configmaps
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedConfigMap(
@@ -1363,6 +1373,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/configmaps
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedConfigMap(
   query: {
@@ -1453,6 +1464,7 @@ export async function deleteApiDeleteCoreV1NamespacedConfigMap(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/configmaps/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedConfigMap(
@@ -1480,6 +1492,7 @@ export async function getApiReadCoreV1NamespacedConfigMap(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/configmaps/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedConfigMap(
   query: {
@@ -1525,6 +1538,7 @@ export async function patchApiPatchCoreV1NamespacedConfigMap(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/configmaps/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedConfigMap(
   query: {
@@ -1664,6 +1678,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/endpoints
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedEndpoints(
@@ -1749,6 +1764,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/endpoints
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedEndpoints(
   query: {
@@ -1839,6 +1855,7 @@ export async function deleteApiDeleteCoreV1NamespacedEndpoints(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/endpoints/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedEndpoints(
@@ -1866,6 +1883,7 @@ export async function getApiReadCoreV1NamespacedEndpoints(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/endpoints/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedEndpoints(
   query: {
@@ -1911,6 +1929,7 @@ export async function patchApiPatchCoreV1NamespacedEndpoints(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/endpoints/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedEndpoints(
   query: {
@@ -2050,6 +2069,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedEvent(
@@ -2135,6 +2155,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/events
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedEvent(
   query: {
@@ -2225,6 +2246,7 @@ export async function deleteApiDeleteCoreV1NamespacedEvent(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedEvent(
@@ -2252,6 +2274,7 @@ export async function getApiReadCoreV1NamespacedEvent(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedEvent(
   query: {
@@ -2297,6 +2320,7 @@ export async function patchApiPatchCoreV1NamespacedEvent(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedEvent(
   query: {
@@ -2436,6 +2460,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/limitranges
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedLimitRange(
@@ -2521,6 +2546,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/limitranges
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedLimitRange(
   query: {
@@ -2611,6 +2637,7 @@ export async function deleteApiDeleteCoreV1NamespacedLimitRange(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/limitranges/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedLimitRange(
@@ -2638,6 +2665,7 @@ export async function getApiReadCoreV1NamespacedLimitRange(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/limitranges/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedLimitRange(
   query: {
@@ -2683,6 +2711,7 @@ export async function patchApiPatchCoreV1NamespacedLimitRange(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/limitranges/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedLimitRange(
   query: {
@@ -2823,6 +2852,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/persistentvolumeclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedPersistentVolumeClaim(
@@ -2908,6 +2938,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/persistentvolumeclaims
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedPersistentVolumeClaim(
   query: {
@@ -2947,6 +2978,7 @@ export async function postApiCreateCoreV1NamespacedPersistentVolumeClaim(
 /**
  * undefined
  * @request DELETE :/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApiDeleteCoreV1NamespacedPersistentVolumeClaim(
   query: {
@@ -2998,6 +3030,7 @@ export async function deleteApiDeleteCoreV1NamespacedPersistentVolumeClaim(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedPersistentVolumeClaim(
@@ -3025,6 +3058,7 @@ export async function getApiReadCoreV1NamespacedPersistentVolumeClaim(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedPersistentVolumeClaim(
   query: {
@@ -3070,6 +3104,7 @@ export async function patchApiPatchCoreV1NamespacedPersistentVolumeClaim(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedPersistentVolumeClaim(
   query: {
@@ -3111,6 +3146,7 @@ export async function putApiReplaceCoreV1NamespacedPersistentVolumeClaim(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedPersistentVolumeClaimStatus(
@@ -3144,6 +3180,7 @@ export async function getApiReadCoreV1NamespacedPersistentVolumeClaimStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedPersistentVolumeClaimStatus(
   query: {
@@ -3191,6 +3228,7 @@ export async function patchApiPatchCoreV1NamespacedPersistentVolumeClaimStatus(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/persistentvolumeclaims/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedPersistentVolumeClaimStatus(
   query: {
@@ -3331,6 +3369,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/pods
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedPod(
@@ -3416,6 +3455,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/pods
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedPod(
   query: {
@@ -3455,6 +3495,7 @@ export async function postApiCreateCoreV1NamespacedPod(
 /**
  * undefined
  * @request DELETE :/api/v1/namespaces/{namespace}/pods/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApiDeleteCoreV1NamespacedPod(
   query: {
@@ -3506,6 +3547,7 @@ export async function deleteApiDeleteCoreV1NamespacedPod(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/pods/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedPod(
@@ -3533,6 +3575,7 @@ export async function getApiReadCoreV1NamespacedPod(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/pods/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedPod(
   query: {
@@ -3578,6 +3621,7 @@ export async function patchApiPatchCoreV1NamespacedPod(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/pods/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedPod(
   query: {
@@ -3710,6 +3754,7 @@ export async function postApiConnectCoreV1PostNamespacedPodAttach(
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/pods/{name}/binding
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedPodBinding(
   query: {
@@ -3757,6 +3802,7 @@ export async function postApiCreateCoreV1NamespacedPodBinding(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedPodEphemeralcontainers(
@@ -3790,6 +3836,7 @@ export async function getApiReadCoreV1NamespacedPodEphemeralcontainers(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedPodEphemeralcontainers(
   query: {
@@ -3835,6 +3882,7 @@ export async function patchApiPatchCoreV1NamespacedPodEphemeralcontainers(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedPodEphemeralcontainers(
   query: {
@@ -3876,6 +3924,7 @@ export async function putApiReplaceCoreV1NamespacedPodEphemeralcontainers(
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/pods/{name}/eviction
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedPodEviction(
   query: {
@@ -4541,6 +4590,7 @@ export async function putApiConnectCoreV1PutNamespacedPodProxyWithPath(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/pods/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedPodStatus(
@@ -4574,6 +4624,7 @@ export async function getApiReadCoreV1NamespacedPodStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/pods/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedPodStatus(
   query: {
@@ -4619,6 +4670,7 @@ export async function patchApiPatchCoreV1NamespacedPodStatus(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/pods/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedPodStatus(
   query: {
@@ -4758,6 +4810,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/podtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedPodTemplate(
@@ -4843,6 +4896,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/podtemplates
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedPodTemplate(
   query: {
@@ -4882,6 +4936,7 @@ export async function postApiCreateCoreV1NamespacedPodTemplate(
 /**
  * undefined
  * @request DELETE :/api/v1/namespaces/{namespace}/podtemplates/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApiDeleteCoreV1NamespacedPodTemplate(
   query: {
@@ -4933,6 +4988,7 @@ export async function deleteApiDeleteCoreV1NamespacedPodTemplate(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/podtemplates/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedPodTemplate(
@@ -4960,6 +5016,7 @@ export async function getApiReadCoreV1NamespacedPodTemplate(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/podtemplates/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedPodTemplate(
   query: {
@@ -5005,6 +5062,7 @@ export async function patchApiPatchCoreV1NamespacedPodTemplate(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/podtemplates/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedPodTemplate(
   query: {
@@ -5145,6 +5203,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/replicationcontrollers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedReplicationController(
@@ -5230,6 +5289,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/replicationcontrollers
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedReplicationController(
   query: {
@@ -5320,6 +5380,7 @@ export async function deleteApiDeleteCoreV1NamespacedReplicationController(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedReplicationController(
@@ -5347,6 +5408,7 @@ export async function getApiReadCoreV1NamespacedReplicationController(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedReplicationController(
   query: {
@@ -5392,6 +5454,7 @@ export async function patchApiPatchCoreV1NamespacedReplicationController(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedReplicationController(
   query: {
@@ -5433,6 +5496,7 @@ export async function putApiReplaceCoreV1NamespacedReplicationController(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedReplicationControllerScale(
@@ -5466,6 +5530,7 @@ export async function getApiReadCoreV1NamespacedReplicationControllerScale(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedReplicationControllerScale(
   query: {
@@ -5511,6 +5576,7 @@ export async function patchApiPatchCoreV1NamespacedReplicationControllerScale(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedReplicationControllerScale(
   query: {
@@ -5553,6 +5619,7 @@ export async function putApiReplaceCoreV1NamespacedReplicationControllerScale(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedReplicationControllerStatus(
@@ -5586,6 +5653,7 @@ export async function getApiReadCoreV1NamespacedReplicationControllerStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedReplicationControllerStatus(
   query: {
@@ -5633,6 +5701,7 @@ export async function patchApiPatchCoreV1NamespacedReplicationControllerStatus(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/replicationcontrollers/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedReplicationControllerStatus(
   query: {
@@ -5773,6 +5842,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/resourcequotas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedResourceQuota(
@@ -5858,6 +5928,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/resourcequotas
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedResourceQuota(
   query: {
@@ -5897,6 +5968,7 @@ export async function postApiCreateCoreV1NamespacedResourceQuota(
 /**
  * undefined
  * @request DELETE :/api/v1/namespaces/{namespace}/resourcequotas/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApiDeleteCoreV1NamespacedResourceQuota(
   query: {
@@ -5948,6 +6020,7 @@ export async function deleteApiDeleteCoreV1NamespacedResourceQuota(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/resourcequotas/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedResourceQuota(
@@ -5975,6 +6048,7 @@ export async function getApiReadCoreV1NamespacedResourceQuota(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/resourcequotas/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedResourceQuota(
   query: {
@@ -6020,6 +6094,7 @@ export async function patchApiPatchCoreV1NamespacedResourceQuota(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/resourcequotas/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedResourceQuota(
   query: {
@@ -6061,6 +6136,7 @@ export async function putApiReplaceCoreV1NamespacedResourceQuota(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/resourcequotas/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedResourceQuotaStatus(
@@ -6094,6 +6170,7 @@ export async function getApiReadCoreV1NamespacedResourceQuotaStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/resourcequotas/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedResourceQuotaStatus(
   query: {
@@ -6139,6 +6216,7 @@ export async function patchApiPatchCoreV1NamespacedResourceQuotaStatus(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/resourcequotas/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedResourceQuotaStatus(
   query: {
@@ -6278,6 +6356,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedSecret(
@@ -6363,6 +6442,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/secrets
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedSecret(
   query: {
@@ -6453,6 +6533,7 @@ export async function deleteApiDeleteCoreV1NamespacedSecret(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/secrets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedSecret(
@@ -6480,6 +6561,7 @@ export async function getApiReadCoreV1NamespacedSecret(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/secrets/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedSecret(
   query: {
@@ -6525,6 +6607,7 @@ export async function patchApiPatchCoreV1NamespacedSecret(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/secrets/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedSecret(
   query: {
@@ -6664,6 +6747,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/serviceaccounts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedServiceAccount(
@@ -6749,6 +6833,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/serviceaccounts
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedServiceAccount(
   query: {
@@ -6788,6 +6873,7 @@ export async function postApiCreateCoreV1NamespacedServiceAccount(
 /**
  * undefined
  * @request DELETE :/api/v1/namespaces/{namespace}/serviceaccounts/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApiDeleteCoreV1NamespacedServiceAccount(
   query: {
@@ -6839,6 +6925,7 @@ export async function deleteApiDeleteCoreV1NamespacedServiceAccount(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/serviceaccounts/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedServiceAccount(
@@ -6866,6 +6953,7 @@ export async function getApiReadCoreV1NamespacedServiceAccount(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/serviceaccounts/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedServiceAccount(
   query: {
@@ -6911,6 +6999,7 @@ export async function patchApiPatchCoreV1NamespacedServiceAccount(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/serviceaccounts/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedServiceAccount(
   query: {
@@ -6952,6 +7041,7 @@ export async function putApiReplaceCoreV1NamespacedServiceAccount(
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/serviceaccounts/{name}/token
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedServiceAccountToken(
   query: {
@@ -7097,6 +7187,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/services
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1NamespacedService(
@@ -7182,6 +7273,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/namespaces/{namespace}/services
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1NamespacedService(
   query: {
@@ -7221,6 +7313,7 @@ export async function postApiCreateCoreV1NamespacedService(
 /**
  * undefined
  * @request DELETE :/api/v1/namespaces/{namespace}/services/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApiDeleteCoreV1NamespacedService(
   query: {
@@ -7272,6 +7365,7 @@ export async function deleteApiDeleteCoreV1NamespacedService(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/services/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedService(
@@ -7299,6 +7393,7 @@ export async function getApiReadCoreV1NamespacedService(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/services/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedService(
   query: {
@@ -7344,6 +7439,7 @@ export async function patchApiPatchCoreV1NamespacedService(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/services/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedService(
   query: {
@@ -7784,6 +7880,7 @@ export async function putApiConnectCoreV1PutNamespacedServiceProxyWithPath(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{namespace}/services/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespacedServiceStatus(
@@ -7817,6 +7914,7 @@ export async function getApiReadCoreV1NamespacedServiceStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{namespace}/services/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespacedServiceStatus(
   query: {
@@ -7862,6 +7960,7 @@ export async function patchApiPatchCoreV1NamespacedServiceStatus(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{namespace}/services/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespacedServiceStatus(
   query: {
@@ -7949,6 +8048,7 @@ export async function deleteApiDeleteCoreV1Namespace(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1Namespace(
@@ -7974,6 +8074,7 @@ export async function getApiReadCoreV1Namespace(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1Namespace(
   query: {
@@ -8017,6 +8118,7 @@ export async function patchApiPatchCoreV1Namespace(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1Namespace(
   query: {
@@ -8056,6 +8158,7 @@ export async function putApiReplaceCoreV1Namespace(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{name}/finalize
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespaceFinalize(
   query: {
@@ -8098,6 +8201,7 @@ export async function putApiReplaceCoreV1NamespaceFinalize(
 /**
  * undefined
  * @request GET :/api/v1/namespaces/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NamespaceStatus(
@@ -8126,6 +8230,7 @@ export async function getApiReadCoreV1NamespaceStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/namespaces/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NamespaceStatus(
   query: {
@@ -8169,6 +8274,7 @@ export async function patchApiPatchCoreV1NamespaceStatus(
 /**
  * undefined
  * @request PUT :/api/v1/namespaces/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NamespaceStatus(
   query: {
@@ -8301,6 +8407,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/nodes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1Node(query: {
@@ -8382,6 +8489,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/nodes
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1Node(
   query: {
@@ -8465,6 +8573,7 @@ export async function deleteApiDeleteCoreV1Node(
 /**
  * undefined
  * @request GET :/api/v1/nodes/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1Node(
@@ -8490,6 +8599,7 @@ export async function getApiReadCoreV1Node(
 /**
  * undefined
  * @request PATCH :/api/v1/nodes/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1Node(
   query: {
@@ -8533,6 +8643,7 @@ export async function patchApiPatchCoreV1Node(
 /**
  * undefined
  * @request PUT :/api/v1/nodes/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1Node(
   query: {
@@ -8933,6 +9044,7 @@ export async function putApiConnectCoreV1PutNodeProxyWithPath(
 /**
  * undefined
  * @request GET :/api/v1/nodes/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1NodeStatus(
@@ -8961,6 +9073,7 @@ export async function getApiReadCoreV1NodeStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/nodes/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1NodeStatus(
   query: {
@@ -9004,6 +9117,7 @@ export async function patchApiPatchCoreV1NodeStatus(
 /**
  * undefined
  * @request PUT :/api/v1/nodes/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1NodeStatus(
   query: {
@@ -9043,6 +9157,7 @@ export async function putApiReplaceCoreV1NodeStatus(
 /**
  * undefined
  * @request GET :/api/v1/persistentvolumeclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1PersistentVolumeClaimForAllNamespaces(query: {
@@ -9217,6 +9332,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/persistentvolumes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1PersistentVolume(query: {
@@ -9298,6 +9414,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/api/v1/persistentvolumes
+ * @allowrelaxedtypes
  */
 export async function postApiCreateCoreV1PersistentVolume(
   query: {
@@ -9335,6 +9452,7 @@ export async function postApiCreateCoreV1PersistentVolume(
 /**
  * undefined
  * @request DELETE :/api/v1/persistentvolumes/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApiDeleteCoreV1PersistentVolume(
   query: {
@@ -9381,6 +9499,7 @@ export async function deleteApiDeleteCoreV1PersistentVolume(
 /**
  * undefined
  * @request GET :/api/v1/persistentvolumes/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1PersistentVolume(
@@ -9406,6 +9525,7 @@ export async function getApiReadCoreV1PersistentVolume(
 /**
  * undefined
  * @request PATCH :/api/v1/persistentvolumes/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1PersistentVolume(
   query: {
@@ -9449,6 +9569,7 @@ export async function patchApiPatchCoreV1PersistentVolume(
 /**
  * undefined
  * @request PUT :/api/v1/persistentvolumes/{name}
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1PersistentVolume(
   query: {
@@ -9488,6 +9609,7 @@ export async function putApiReplaceCoreV1PersistentVolume(
 /**
  * undefined
  * @request GET :/api/v1/persistentvolumes/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiReadCoreV1PersistentVolumeStatus(
@@ -9516,6 +9638,7 @@ export async function getApiReadCoreV1PersistentVolumeStatus(
 /**
  * undefined
  * @request PATCH :/api/v1/persistentvolumes/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApiPatchCoreV1PersistentVolumeStatus(
   query: {
@@ -9559,6 +9682,7 @@ export async function patchApiPatchCoreV1PersistentVolumeStatus(
 /**
  * undefined
  * @request PUT :/api/v1/persistentvolumes/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApiReplaceCoreV1PersistentVolumeStatus(
   query: {
@@ -9598,6 +9722,7 @@ export async function putApiReplaceCoreV1PersistentVolumeStatus(
 /**
  * undefined
  * @request GET :/api/v1/pods
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1PodForAllNamespaces(query: {
@@ -9679,6 +9804,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/podtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1PodTemplateForAllNamespaces(query: {
@@ -9760,6 +9886,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/replicationcontrollers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1ReplicationControllerForAllNamespaces(query: {
@@ -9841,6 +9968,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/resourcequotas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1ResourceQuotaForAllNamespaces(query: {
@@ -9922,6 +10050,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1SecretForAllNamespaces(query: {
@@ -10003,6 +10132,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/serviceaccounts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1ServiceAccountForAllNamespaces(query: {
@@ -10084,6 +10214,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/services
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiListCoreV1ServiceForAllNamespaces(query: {
@@ -10165,6 +10296,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/configmaps
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1ConfigMapListForAllNamespaces(query: {
@@ -10246,6 +10378,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/endpoints
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1EndpointsListForAllNamespaces(query: {
@@ -10327,6 +10460,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1EventListForAllNamespaces(query: {
@@ -10408,6 +10542,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/limitranges
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1LimitRangeListForAllNamespaces(query: {
@@ -10489,6 +10624,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespaceList(query: {
@@ -10570,6 +10706,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/configmaps
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedConfigMapList(
@@ -10658,6 +10795,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/configmaps/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedConfigMap(
@@ -10751,6 +10889,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/endpoints
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedEndpointsList(
@@ -10839,6 +10978,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/endpoints/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedEndpoints(
@@ -10932,6 +11072,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedEventList(
@@ -11020,6 +11161,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedEvent(
@@ -11113,6 +11255,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/limitranges
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedLimitRangeList(
@@ -11201,6 +11344,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/limitranges/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedLimitRange(
@@ -11294,6 +11438,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/persistentvolumeclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedPersistentVolumeClaimList(
@@ -11382,6 +11527,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/persistentvolumeclaims/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedPersistentVolumeClaim(
@@ -11475,6 +11621,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/pods
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedPodList(
@@ -11563,6 +11710,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/pods/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedPod(
@@ -11656,6 +11804,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/podtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedPodTemplateList(
@@ -11744,6 +11893,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/podtemplates/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedPodTemplate(
@@ -11837,6 +11987,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/replicationcontrollers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedReplicationControllerList(
@@ -11925,6 +12076,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/replicationcontrollers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedReplicationController(
@@ -12018,6 +12170,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/resourcequotas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedResourceQuotaList(
@@ -12106,6 +12259,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/resourcequotas/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedResourceQuota(
@@ -12199,6 +12353,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedSecretList(
@@ -12287,6 +12442,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/secrets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedSecret(
@@ -12380,6 +12536,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/serviceaccounts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedServiceAccountList(
@@ -12468,6 +12625,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/serviceaccounts/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedServiceAccount(
@@ -12561,6 +12719,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/services
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedServiceList(
@@ -12649,6 +12808,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{namespace}/services/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NamespacedService(
@@ -12742,6 +12902,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/namespaces/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1Namespace(
@@ -12830,6 +12991,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/nodes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1NodeList(query: {
@@ -12911,6 +13073,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/nodes/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1Node(
@@ -12999,6 +13162,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/persistentvolumeclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1PersistentVolumeClaimListForAllNamespaces(query: {
@@ -13081,6 +13245,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/persistentvolumes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1PersistentVolumeList(query: {
@@ -13162,6 +13327,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/persistentvolumes/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1PersistentVolume(
@@ -13250,6 +13416,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/pods
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1PodListForAllNamespaces(query: {
@@ -13331,6 +13498,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/podtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1PodTemplateListForAllNamespaces(query: {
@@ -13412,6 +13580,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/replicationcontrollers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1ReplicationControllerListForAllNamespaces(query: {
@@ -13494,6 +13663,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/resourcequotas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1ResourceQuotaListForAllNamespaces(query: {
@@ -13575,6 +13745,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1SecretListForAllNamespaces(query: {
@@ -13656,6 +13827,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/serviceaccounts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1ServiceAccountListForAllNamespaces(query: {
@@ -13737,6 +13909,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/api/v1/watch/services
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApiWatchCoreV1ServiceListForAllNamespaces(query: {
@@ -13956,6 +14129,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAdmissionregistrationV1MutatingWebhookConfiguration(query: {
@@ -14038,6 +14212,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAdmissionregistrationV1MutatingWebhookConfiguration(
   query: {
@@ -14123,6 +14298,7 @@ export async function deleteApisDeleteAdmissionregistrationV1MutatingWebhookConf
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAdmissionregistrationV1MutatingWebhookConfiguration(
@@ -14149,6 +14325,7 @@ export async function getApisReadAdmissionregistrationV1MutatingWebhookConfigura
 /**
  * undefined
  * @request PATCH :/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAdmissionregistrationV1MutatingWebhookConfiguration(
   query: {
@@ -14193,6 +14370,7 @@ export async function patchApisPatchAdmissionregistrationV1MutatingWebhookConfig
 /**
  * undefined
  * @request PUT :/apis/admissionregistration.k8s.io/v1/mutatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAdmissionregistrationV1MutatingWebhookConfiguration(
   query: {
@@ -14329,6 +14507,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAdmissionregistrationV1ValidatingWebhookConfiguration(query: {
@@ -14411,6 +14590,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAdmissionregistrationV1ValidatingWebhookConfiguration(
   query: {
@@ -14496,6 +14676,7 @@ export async function deleteApisDeleteAdmissionregistrationV1ValidatingWebhookCo
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAdmissionregistrationV1ValidatingWebhookConfiguration(
@@ -14522,6 +14703,7 @@ export async function getApisReadAdmissionregistrationV1ValidatingWebhookConfigu
 /**
  * undefined
  * @request PATCH :/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAdmissionregistrationV1ValidatingWebhookConfiguration(
   query: {
@@ -14566,6 +14748,7 @@ export async function patchApisPatchAdmissionregistrationV1ValidatingWebhookConf
 /**
  * undefined
  * @request PUT :/apis/admissionregistration.k8s.io/v1/validatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAdmissionregistrationV1ValidatingWebhookConfiguration(
   query: {
@@ -14608,6 +14791,7 @@ export async function putApisReplaceAdmissionregistrationV1ValidatingWebhookConf
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1MutatingWebhookConfigurationList(query: {
@@ -14692,6 +14876,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/watch/mutatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1MutatingWebhookConfiguration(
@@ -14781,6 +14966,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1ValidatingWebhookConfigurationList(query: {
@@ -14865,6 +15051,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1/watch/validatingwebhookconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1ValidatingWebhookConfiguration(
@@ -15066,6 +15253,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAdmissionregistrationV1Alpha1ValidatingAdmissionPolicy(query: {
@@ -15148,6 +15336,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAdmissionregistrationV1Alpha1ValidatingAdmissionPolicy(
   query: {
@@ -15237,6 +15426,7 @@ export async function deleteApisDeleteAdmissionregistrationV1Alpha1ValidatingAdm
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAdmissionregistrationV1Alpha1ValidatingAdmissionPolicy(
@@ -15263,6 +15453,7 @@ export async function getApisReadAdmissionregistrationV1Alpha1ValidatingAdmissio
 /**
  * undefined
  * @request PATCH :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAdmissionregistrationV1Alpha1ValidatingAdmissionPolicy(
   query: {
@@ -15307,6 +15498,7 @@ export async function patchApisPatchAdmissionregistrationV1Alpha1ValidatingAdmis
 /**
  * undefined
  * @request PUT :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAdmissionregistrationV1Alpha1ValidatingAdmissionPolicy(
   query: {
@@ -15445,6 +15637,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyBinding(query: {
@@ -15529,6 +15722,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyBinding(
   query: {
@@ -15618,6 +15812,7 @@ export async function deleteApisDeleteAdmissionregistrationV1Alpha1ValidatingAdm
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyBinding(
@@ -15646,6 +15841,7 @@ export async function getApisReadAdmissionregistrationV1Alpha1ValidatingAdmissio
 /**
  * undefined
  * @request PATCH :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyBinding(
   query: {
@@ -15692,6 +15888,7 @@ export async function patchApisPatchAdmissionregistrationV1Alpha1ValidatingAdmis
 /**
  * undefined
  * @request PUT :/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyBinding(
   query: {
@@ -15734,6 +15931,7 @@ export async function putApisReplaceAdmissionregistrationV1Alpha1ValidatingAdmis
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicies
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyList(query: {
@@ -15818,6 +16016,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicies/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1Alpha1ValidatingAdmissionPolicy(
@@ -15907,6 +16106,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicybindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyBindingList(query: {
@@ -15991,6 +16191,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/admissionregistration.k8s.io/v1alpha1/watch/validatingadmissionpolicybindings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAdmissionregistrationV1Alpha1ValidatingAdmissionPolicyBinding(
@@ -16204,6 +16405,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apiextensions.k8s.io/v1/customresourcedefinitions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListApiextensionsV1CustomResourceDefinition(query: {
@@ -16285,6 +16487,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/apiextensions.k8s.io/v1/customresourcedefinitions
+ * @allowrelaxedtypes
  */
 export async function postApisCreateApiextensionsV1CustomResourceDefinition(
   query: {
@@ -16368,6 +16571,7 @@ export async function deleteApisDeleteApiextensionsV1CustomResourceDefinition(
 /**
  * undefined
  * @request GET :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadApiextensionsV1CustomResourceDefinition(
@@ -16393,6 +16597,7 @@ export async function getApisReadApiextensionsV1CustomResourceDefinition(
 /**
  * undefined
  * @request PATCH :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchApiextensionsV1CustomResourceDefinition(
   query: {
@@ -16436,6 +16641,7 @@ export async function patchApisPatchApiextensionsV1CustomResourceDefinition(
 /**
  * undefined
  * @request PUT :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceApiextensionsV1CustomResourceDefinition(
   query: {
@@ -16475,6 +16681,7 @@ export async function putApisReplaceApiextensionsV1CustomResourceDefinition(
 /**
  * undefined
  * @request GET :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadApiextensionsV1CustomResourceDefinitionStatus(
@@ -16504,6 +16711,7 @@ export async function getApisReadApiextensionsV1CustomResourceDefinitionStatus(
 /**
  * undefined
  * @request PATCH :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchApiextensionsV1CustomResourceDefinitionStatus(
   query: {
@@ -16548,6 +16756,7 @@ export async function patchApisPatchApiextensionsV1CustomResourceDefinitionStatu
 /**
  * undefined
  * @request PUT :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceApiextensionsV1CustomResourceDefinitionStatus(
   query: {
@@ -16588,6 +16797,7 @@ export async function putApisReplaceApiextensionsV1CustomResourceDefinitionStatu
 /**
  * undefined
  * @request GET :/apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchApiextensionsV1CustomResourceDefinitionList(query: {
@@ -16670,6 +16880,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apiextensions.k8s.io/v1/watch/customresourcedefinitions/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchApiextensionsV1CustomResourceDefinition(
@@ -16879,6 +17090,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apiregistration.k8s.io/v1/apiservices
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListApiregistrationV1ApiService(query: {
@@ -16960,6 +17172,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/apiregistration.k8s.io/v1/apiservices
+ * @allowrelaxedtypes
  */
 export async function postApisCreateApiregistrationV1ApiService(
   query: {
@@ -17043,6 +17256,7 @@ export async function deleteApisDeleteApiregistrationV1ApiService(
 /**
  * undefined
  * @request GET :/apis/apiregistration.k8s.io/v1/apiservices/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadApiregistrationV1ApiService(
@@ -17068,6 +17282,7 @@ export async function getApisReadApiregistrationV1ApiService(
 /**
  * undefined
  * @request PATCH :/apis/apiregistration.k8s.io/v1/apiservices/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchApiregistrationV1ApiService(
   query: {
@@ -17111,6 +17326,7 @@ export async function patchApisPatchApiregistrationV1ApiService(
 /**
  * undefined
  * @request PUT :/apis/apiregistration.k8s.io/v1/apiservices/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceApiregistrationV1ApiService(
   query: {
@@ -17150,6 +17366,7 @@ export async function putApisReplaceApiregistrationV1ApiService(
 /**
  * undefined
  * @request GET :/apis/apiregistration.k8s.io/v1/apiservices/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadApiregistrationV1ApiServiceStatus(
@@ -17178,6 +17395,7 @@ export async function getApisReadApiregistrationV1ApiServiceStatus(
 /**
  * undefined
  * @request PATCH :/apis/apiregistration.k8s.io/v1/apiservices/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchApiregistrationV1ApiServiceStatus(
   query: {
@@ -17221,6 +17439,7 @@ export async function patchApisPatchApiregistrationV1ApiServiceStatus(
 /**
  * undefined
  * @request PUT :/apis/apiregistration.k8s.io/v1/apiservices/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceApiregistrationV1ApiServiceStatus(
   query: {
@@ -17260,6 +17479,7 @@ export async function putApisReplaceApiregistrationV1ApiServiceStatus(
 /**
  * undefined
  * @request GET :/apis/apiregistration.k8s.io/v1/watch/apiservices
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchApiregistrationV1ApiServiceList(query: {
@@ -17341,6 +17561,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apiregistration.k8s.io/v1/watch/apiservices/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchApiregistrationV1ApiService(
@@ -17457,6 +17678,7 @@ export async function getApisGetAppsV1ApiResources(): Promise<IoK8SApimachineryP
 /**
  * undefined
  * @request GET :/apis/apps/v1/controllerrevisions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1ControllerRevisionForAllNamespaces(query: {
@@ -17538,6 +17760,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/daemonsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1DaemonSetForAllNamespaces(query: {
@@ -17619,6 +17842,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/deployments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1DeploymentForAllNamespaces(query: {
@@ -17799,6 +18023,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/controllerrevisions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1NamespacedControllerRevision(
@@ -17884,6 +18109,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/apps/v1/namespaces/{namespace}/controllerrevisions
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAppsV1NamespacedControllerRevision(
   query: {
@@ -17974,6 +18200,7 @@ export async function deleteApisDeleteAppsV1NamespacedControllerRevision(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedControllerRevision(
@@ -18001,6 +18228,7 @@ export async function getApisReadAppsV1NamespacedControllerRevision(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedControllerRevision(
   query: {
@@ -18046,6 +18274,7 @@ export async function patchApisPatchAppsV1NamespacedControllerRevision(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/controllerrevisions/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedControllerRevision(
   query: {
@@ -18185,6 +18414,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/daemonsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1NamespacedDaemonSet(
@@ -18270,6 +18500,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/apps/v1/namespaces/{namespace}/daemonsets
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAppsV1NamespacedDaemonSet(
   query: {
@@ -18360,6 +18591,7 @@ export async function deleteApisDeleteAppsV1NamespacedDaemonSet(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedDaemonSet(
@@ -18387,6 +18619,7 @@ export async function getApisReadAppsV1NamespacedDaemonSet(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedDaemonSet(
   query: {
@@ -18432,6 +18665,7 @@ export async function patchApisPatchAppsV1NamespacedDaemonSet(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedDaemonSet(
   query: {
@@ -18473,6 +18707,7 @@ export async function putApisReplaceAppsV1NamespacedDaemonSet(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedDaemonSetStatus(
@@ -18506,6 +18741,7 @@ export async function getApisReadAppsV1NamespacedDaemonSetStatus(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedDaemonSetStatus(
   query: {
@@ -18551,6 +18787,7 @@ export async function patchApisPatchAppsV1NamespacedDaemonSetStatus(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/daemonsets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedDaemonSetStatus(
   query: {
@@ -18690,6 +18927,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/deployments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1NamespacedDeployment(
@@ -18775,6 +19013,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/apps/v1/namespaces/{namespace}/deployments
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAppsV1NamespacedDeployment(
   query: {
@@ -18865,6 +19104,7 @@ export async function deleteApisDeleteAppsV1NamespacedDeployment(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/deployments/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedDeployment(
@@ -18892,6 +19132,7 @@ export async function getApisReadAppsV1NamespacedDeployment(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/deployments/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedDeployment(
   query: {
@@ -18937,6 +19178,7 @@ export async function patchApisPatchAppsV1NamespacedDeployment(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/deployments/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedDeployment(
   query: {
@@ -18978,6 +19220,7 @@ export async function putApisReplaceAppsV1NamespacedDeployment(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedDeploymentScale(
@@ -19011,6 +19254,7 @@ export async function getApisReadAppsV1NamespacedDeploymentScale(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedDeploymentScale(
   query: {
@@ -19056,6 +19300,7 @@ export async function patchApisPatchAppsV1NamespacedDeploymentScale(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/deployments/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedDeploymentScale(
   query: {
@@ -19097,6 +19342,7 @@ export async function putApisReplaceAppsV1NamespacedDeploymentScale(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedDeploymentStatus(
@@ -19130,6 +19376,7 @@ export async function getApisReadAppsV1NamespacedDeploymentStatus(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedDeploymentStatus(
   query: {
@@ -19175,6 +19422,7 @@ export async function patchApisPatchAppsV1NamespacedDeploymentStatus(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/deployments/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedDeploymentStatus(
   query: {
@@ -19314,6 +19562,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/replicasets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1NamespacedReplicaSet(
@@ -19399,6 +19648,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/apps/v1/namespaces/{namespace}/replicasets
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAppsV1NamespacedReplicaSet(
   query: {
@@ -19489,6 +19739,7 @@ export async function deleteApisDeleteAppsV1NamespacedReplicaSet(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedReplicaSet(
@@ -19516,6 +19767,7 @@ export async function getApisReadAppsV1NamespacedReplicaSet(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedReplicaSet(
   query: {
@@ -19561,6 +19813,7 @@ export async function patchApisPatchAppsV1NamespacedReplicaSet(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedReplicaSet(
   query: {
@@ -19602,6 +19855,7 @@ export async function putApisReplaceAppsV1NamespacedReplicaSet(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedReplicaSetScale(
@@ -19635,6 +19889,7 @@ export async function getApisReadAppsV1NamespacedReplicaSetScale(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedReplicaSetScale(
   query: {
@@ -19680,6 +19935,7 @@ export async function patchApisPatchAppsV1NamespacedReplicaSetScale(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedReplicaSetScale(
   query: {
@@ -19721,6 +19977,7 @@ export async function putApisReplaceAppsV1NamespacedReplicaSetScale(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedReplicaSetStatus(
@@ -19754,6 +20011,7 @@ export async function getApisReadAppsV1NamespacedReplicaSetStatus(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedReplicaSetStatus(
   query: {
@@ -19799,6 +20057,7 @@ export async function patchApisPatchAppsV1NamespacedReplicaSetStatus(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/replicasets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedReplicaSetStatus(
   query: {
@@ -19938,6 +20197,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/statefulsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1NamespacedStatefulSet(
@@ -20023,6 +20283,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/apps/v1/namespaces/{namespace}/statefulsets
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAppsV1NamespacedStatefulSet(
   query: {
@@ -20113,6 +20374,7 @@ export async function deleteApisDeleteAppsV1NamespacedStatefulSet(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedStatefulSet(
@@ -20140,6 +20402,7 @@ export async function getApisReadAppsV1NamespacedStatefulSet(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedStatefulSet(
   query: {
@@ -20185,6 +20448,7 @@ export async function patchApisPatchAppsV1NamespacedStatefulSet(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedStatefulSet(
   query: {
@@ -20226,6 +20490,7 @@ export async function putApisReplaceAppsV1NamespacedStatefulSet(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedStatefulSetScale(
@@ -20259,6 +20524,7 @@ export async function getApisReadAppsV1NamespacedStatefulSetScale(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedStatefulSetScale(
   query: {
@@ -20304,6 +20570,7 @@ export async function patchApisPatchAppsV1NamespacedStatefulSetScale(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/scale
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedStatefulSetScale(
   query: {
@@ -20345,6 +20612,7 @@ export async function putApisReplaceAppsV1NamespacedStatefulSetScale(
 /**
  * undefined
  * @request GET :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAppsV1NamespacedStatefulSetStatus(
@@ -20378,6 +20646,7 @@ export async function getApisReadAppsV1NamespacedStatefulSetStatus(
 /**
  * undefined
  * @request PATCH :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAppsV1NamespacedStatefulSetStatus(
   query: {
@@ -20423,6 +20692,7 @@ export async function patchApisPatchAppsV1NamespacedStatefulSetStatus(
 /**
  * undefined
  * @request PUT :/apis/apps/v1/namespaces/{namespace}/statefulsets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAppsV1NamespacedStatefulSetStatus(
   query: {
@@ -20464,6 +20734,7 @@ export async function putApisReplaceAppsV1NamespacedStatefulSetStatus(
 /**
  * undefined
  * @request GET :/apis/apps/v1/replicasets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1ReplicaSetForAllNamespaces(query: {
@@ -20545,6 +20816,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/statefulsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAppsV1StatefulSetForAllNamespaces(query: {
@@ -20626,6 +20898,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/controllerrevisions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1ControllerRevisionListForAllNamespaces(query: {
@@ -20708,6 +20981,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/daemonsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1DaemonSetListForAllNamespaces(query: {
@@ -20789,6 +21063,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/deployments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1DeploymentListForAllNamespaces(query: {
@@ -20870,6 +21145,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedControllerRevisionList(
@@ -20958,6 +21234,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/controllerrevisions/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedControllerRevision(
@@ -21051,6 +21328,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/daemonsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedDaemonSetList(
@@ -21139,6 +21417,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/daemonsets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedDaemonSet(
@@ -21232,6 +21511,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/deployments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedDeploymentList(
@@ -21320,6 +21600,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/deployments/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedDeployment(
@@ -21413,6 +21694,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/replicasets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedReplicaSetList(
@@ -21501,6 +21783,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/replicasets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedReplicaSet(
@@ -21594,6 +21877,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/statefulsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedStatefulSetList(
@@ -21682,6 +21966,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/namespaces/{namespace}/statefulsets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1NamespacedStatefulSet(
@@ -21775,6 +22060,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/replicasets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1ReplicaSetListForAllNamespaces(query: {
@@ -21856,6 +22142,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/apps/v1/watch/statefulsets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAppsV1StatefulSetListForAllNamespaces(query: {
@@ -21965,6 +22252,7 @@ export async function getApisGetAuthenticationV1ApiResources(): Promise<IoK8SApi
 /**
  * undefined
  * @request POST :/apis/authentication.k8s.io/v1/tokenreviews
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAuthenticationV1TokenReview(
   query: {
@@ -22016,6 +22304,7 @@ export async function getApisGetAuthenticationV1Alpha1ApiResources(): Promise<Io
 /**
  * undefined
  * @request POST :/apis/authentication.k8s.io/v1alpha1/selfsubjectreviews
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAuthenticationV1Alpha1SelfSubjectReview(
   query: {
@@ -22081,6 +22370,7 @@ export async function getApisGetAuthorizationV1ApiResources(): Promise<IoK8SApim
 /**
  * undefined
  * @request POST :/apis/authorization.k8s.io/v1/namespaces/{namespace}/localsubjectaccessreviews
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAuthorizationV1NamespacedLocalSubjectAccessReview(
   query: {
@@ -22124,6 +22414,7 @@ export async function postApisCreateAuthorizationV1NamespacedLocalSubjectAccessR
 /**
  * undefined
  * @request POST :/apis/authorization.k8s.io/v1/selfsubjectaccessreviews
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAuthorizationV1SelfSubjectAccessReview(
   query: {
@@ -22161,6 +22452,7 @@ export async function postApisCreateAuthorizationV1SelfSubjectAccessReview(
 /**
  * undefined
  * @request POST :/apis/authorization.k8s.io/v1/selfsubjectrulesreviews
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAuthorizationV1SelfSubjectRulesReview(
   query: {
@@ -22198,6 +22490,7 @@ export async function postApisCreateAuthorizationV1SelfSubjectRulesReview(
 /**
  * undefined
  * @request POST :/apis/authorization.k8s.io/v1/subjectaccessreviews
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAuthorizationV1SubjectAccessReview(
   query: {
@@ -22263,6 +22556,7 @@ export async function getApisGetAutoscalingV1ApiResources(): Promise<IoK8SApimac
 /**
  * undefined
  * @request GET :/apis/autoscaling/v1/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAutoscalingV1HorizontalPodAutoscalerForAllNamespaces(query: {
@@ -22446,6 +22740,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAutoscalingV1NamespacedHorizontalPodAutoscaler(
@@ -22532,6 +22827,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAutoscalingV1NamespacedHorizontalPodAutoscaler(
   query: {
@@ -22624,6 +22920,7 @@ export async function deleteApisDeleteAutoscalingV1NamespacedHorizontalPodAutosc
 /**
  * undefined
  * @request GET :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAutoscalingV1NamespacedHorizontalPodAutoscaler(
@@ -22652,6 +22949,7 @@ export async function getApisReadAutoscalingV1NamespacedHorizontalPodAutoscaler(
 /**
  * undefined
  * @request PATCH :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAutoscalingV1NamespacedHorizontalPodAutoscaler(
   query: {
@@ -22698,6 +22996,7 @@ export async function patchApisPatchAutoscalingV1NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request PUT :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAutoscalingV1NamespacedHorizontalPodAutoscaler(
   query: {
@@ -22740,6 +23039,7 @@ export async function putApisReplaceAutoscalingV1NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request GET :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(
@@ -22774,6 +23074,7 @@ export async function getApisReadAutoscalingV1NamespacedHorizontalPodAutoscalerS
 /**
  * undefined
  * @request PATCH :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(
   query: {
@@ -22820,6 +23121,7 @@ export async function patchApisPatchAutoscalingV1NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request PUT :/apis/autoscaling/v1/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAutoscalingV1NamespacedHorizontalPodAutoscalerStatus(
   query: {
@@ -22862,6 +23164,7 @@ export async function putApisReplaceAutoscalingV1NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request GET :/apis/autoscaling/v1/watch/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAutoscalingV1HorizontalPodAutoscalerListForAllNamespaces(query: {
@@ -22946,6 +23249,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAutoscalingV1NamespacedHorizontalPodAutoscalerList(
@@ -23035,6 +23339,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/autoscaling/v1/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAutoscalingV1NamespacedHorizontalPodAutoscaler(
@@ -23143,6 +23448,7 @@ export async function getApisGetAutoscalingV2ApiResources(): Promise<IoK8SApimac
 /**
  * undefined
  * @request GET :/apis/autoscaling/v2/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAutoscalingV2HorizontalPodAutoscalerForAllNamespaces(query: {
@@ -23326,6 +23632,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListAutoscalingV2NamespacedHorizontalPodAutoscaler(
@@ -23412,6 +23719,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers
+ * @allowrelaxedtypes
  */
 export async function postApisCreateAutoscalingV2NamespacedHorizontalPodAutoscaler(
   query: {
@@ -23504,6 +23812,7 @@ export async function deleteApisDeleteAutoscalingV2NamespacedHorizontalPodAutosc
 /**
  * undefined
  * @request GET :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAutoscalingV2NamespacedHorizontalPodAutoscaler(
@@ -23532,6 +23841,7 @@ export async function getApisReadAutoscalingV2NamespacedHorizontalPodAutoscaler(
 /**
  * undefined
  * @request PATCH :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAutoscalingV2NamespacedHorizontalPodAutoscaler(
   query: {
@@ -23578,6 +23888,7 @@ export async function patchApisPatchAutoscalingV2NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request PUT :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAutoscalingV2NamespacedHorizontalPodAutoscaler(
   query: {
@@ -23620,6 +23931,7 @@ export async function putApisReplaceAutoscalingV2NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request GET :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadAutoscalingV2NamespacedHorizontalPodAutoscalerStatus(
@@ -23654,6 +23966,7 @@ export async function getApisReadAutoscalingV2NamespacedHorizontalPodAutoscalerS
 /**
  * undefined
  * @request PATCH :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchAutoscalingV2NamespacedHorizontalPodAutoscalerStatus(
   query: {
@@ -23700,6 +24013,7 @@ export async function patchApisPatchAutoscalingV2NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request PUT :/apis/autoscaling/v2/namespaces/{namespace}/horizontalpodautoscalers/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceAutoscalingV2NamespacedHorizontalPodAutoscalerStatus(
   query: {
@@ -23742,6 +24056,7 @@ export async function putApisReplaceAutoscalingV2NamespacedHorizontalPodAutoscal
 /**
  * undefined
  * @request GET :/apis/autoscaling/v2/watch/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAutoscalingV2HorizontalPodAutoscalerListForAllNamespaces(query: {
@@ -23826,6 +24141,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/autoscaling/v2/watch/namespaces/{namespace}/horizontalpodautoscalers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAutoscalingV2NamespacedHorizontalPodAutoscalerList(
@@ -23915,6 +24231,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/autoscaling/v2/watch/namespaces/{namespace}/horizontalpodautoscalers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchAutoscalingV2NamespacedHorizontalPodAutoscaler(
@@ -24037,6 +24354,7 @@ export async function getApisGetBatchV1ApiResources(): Promise<IoK8SApimachinery
 /**
  * undefined
  * @request GET :/apis/batch/v1/cronjobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListBatchV1CronJobForAllNamespaces(query: {
@@ -24118,6 +24436,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/jobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListBatchV1JobForAllNamespaces(query: {
@@ -24297,6 +24616,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/namespaces/{namespace}/cronjobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListBatchV1NamespacedCronJob(
@@ -24382,6 +24702,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/batch/v1/namespaces/{namespace}/cronjobs
+ * @allowrelaxedtypes
  */
 export async function postApisCreateBatchV1NamespacedCronJob(
   query: {
@@ -24472,6 +24793,7 @@ export async function deleteApisDeleteBatchV1NamespacedCronJob(
 /**
  * undefined
  * @request GET :/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadBatchV1NamespacedCronJob(
@@ -24499,6 +24821,7 @@ export async function getApisReadBatchV1NamespacedCronJob(
 /**
  * undefined
  * @request PATCH :/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchBatchV1NamespacedCronJob(
   query: {
@@ -24544,6 +24867,7 @@ export async function patchApisPatchBatchV1NamespacedCronJob(
 /**
  * undefined
  * @request PUT :/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceBatchV1NamespacedCronJob(
   query: {
@@ -24585,6 +24909,7 @@ export async function putApisReplaceBatchV1NamespacedCronJob(
 /**
  * undefined
  * @request GET :/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadBatchV1NamespacedCronJobStatus(
@@ -24618,6 +24943,7 @@ export async function getApisReadBatchV1NamespacedCronJobStatus(
 /**
  * undefined
  * @request PATCH :/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchBatchV1NamespacedCronJobStatus(
   query: {
@@ -24663,6 +24989,7 @@ export async function patchApisPatchBatchV1NamespacedCronJobStatus(
 /**
  * undefined
  * @request PUT :/apis/batch/v1/namespaces/{namespace}/cronjobs/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceBatchV1NamespacedCronJobStatus(
   query: {
@@ -24802,6 +25129,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/namespaces/{namespace}/jobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListBatchV1NamespacedJob(
@@ -24887,6 +25215,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/batch/v1/namespaces/{namespace}/jobs
+ * @allowrelaxedtypes
  */
 export async function postApisCreateBatchV1NamespacedJob(
   query: {
@@ -24977,6 +25306,7 @@ export async function deleteApisDeleteBatchV1NamespacedJob(
 /**
  * undefined
  * @request GET :/apis/batch/v1/namespaces/{namespace}/jobs/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadBatchV1NamespacedJob(
@@ -25004,6 +25334,7 @@ export async function getApisReadBatchV1NamespacedJob(
 /**
  * undefined
  * @request PATCH :/apis/batch/v1/namespaces/{namespace}/jobs/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchBatchV1NamespacedJob(
   query: {
@@ -25049,6 +25380,7 @@ export async function patchApisPatchBatchV1NamespacedJob(
 /**
  * undefined
  * @request PUT :/apis/batch/v1/namespaces/{namespace}/jobs/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceBatchV1NamespacedJob(
   query: {
@@ -25090,6 +25422,7 @@ export async function putApisReplaceBatchV1NamespacedJob(
 /**
  * undefined
  * @request GET :/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadBatchV1NamespacedJobStatus(
@@ -25123,6 +25456,7 @@ export async function getApisReadBatchV1NamespacedJobStatus(
 /**
  * undefined
  * @request PATCH :/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchBatchV1NamespacedJobStatus(
   query: {
@@ -25168,6 +25502,7 @@ export async function patchApisPatchBatchV1NamespacedJobStatus(
 /**
  * undefined
  * @request PUT :/apis/batch/v1/namespaces/{namespace}/jobs/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceBatchV1NamespacedJobStatus(
   query: {
@@ -25209,6 +25544,7 @@ export async function putApisReplaceBatchV1NamespacedJobStatus(
 /**
  * undefined
  * @request GET :/apis/batch/v1/watch/cronjobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchBatchV1CronJobListForAllNamespaces(query: {
@@ -25290,6 +25626,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/watch/jobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchBatchV1JobListForAllNamespaces(query: {
@@ -25371,6 +25708,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/watch/namespaces/{namespace}/cronjobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchBatchV1NamespacedCronJobList(
@@ -25459,6 +25797,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/watch/namespaces/{namespace}/cronjobs/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchBatchV1NamespacedCronJob(
@@ -25552,6 +25891,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/watch/namespaces/{namespace}/jobs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchBatchV1NamespacedJobList(
@@ -25640,6 +25980,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/batch/v1/watch/namespaces/{namespace}/jobs/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchBatchV1NamespacedJob(
@@ -25855,6 +26196,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/certificates.k8s.io/v1/certificatesigningrequests
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListCertificatesV1CertificateSigningRequest(query: {
@@ -25936,6 +26278,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/certificates.k8s.io/v1/certificatesigningrequests
+ * @allowrelaxedtypes
  */
 export async function postApisCreateCertificatesV1CertificateSigningRequest(
   query: {
@@ -26019,6 +26362,7 @@ export async function deleteApisDeleteCertificatesV1CertificateSigningRequest(
 /**
  * undefined
  * @request GET :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadCertificatesV1CertificateSigningRequest(
@@ -26044,6 +26388,7 @@ export async function getApisReadCertificatesV1CertificateSigningRequest(
 /**
  * undefined
  * @request PATCH :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchCertificatesV1CertificateSigningRequest(
   query: {
@@ -26087,6 +26432,7 @@ export async function patchApisPatchCertificatesV1CertificateSigningRequest(
 /**
  * undefined
  * @request PUT :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceCertificatesV1CertificateSigningRequest(
   query: {
@@ -26126,6 +26472,7 @@ export async function putApisReplaceCertificatesV1CertificateSigningRequest(
 /**
  * undefined
  * @request GET :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadCertificatesV1CertificateSigningRequestApproval(
@@ -26155,6 +26502,7 @@ export async function getApisReadCertificatesV1CertificateSigningRequestApproval
 /**
  * undefined
  * @request PATCH :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchCertificatesV1CertificateSigningRequestApproval(
   query: {
@@ -26199,6 +26547,7 @@ export async function patchApisPatchCertificatesV1CertificateSigningRequestAppro
 /**
  * undefined
  * @request PUT :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/approval
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceCertificatesV1CertificateSigningRequestApproval(
   query: {
@@ -26239,6 +26588,7 @@ export async function putApisReplaceCertificatesV1CertificateSigningRequestAppro
 /**
  * undefined
  * @request GET :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadCertificatesV1CertificateSigningRequestStatus(
@@ -26268,6 +26618,7 @@ export async function getApisReadCertificatesV1CertificateSigningRequestStatus(
 /**
  * undefined
  * @request PATCH :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchCertificatesV1CertificateSigningRequestStatus(
   query: {
@@ -26312,6 +26663,7 @@ export async function patchApisPatchCertificatesV1CertificateSigningRequestStatu
 /**
  * undefined
  * @request PUT :/apis/certificates.k8s.io/v1/certificatesigningrequests/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceCertificatesV1CertificateSigningRequestStatus(
   query: {
@@ -26352,6 +26704,7 @@ export async function putApisReplaceCertificatesV1CertificateSigningRequestStatu
 /**
  * undefined
  * @request GET :/apis/certificates.k8s.io/v1/watch/certificatesigningrequests
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchCertificatesV1CertificateSigningRequestList(query: {
@@ -26434,6 +26787,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/certificates.k8s.io/v1/watch/certificatesigningrequests/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchCertificatesV1CertificateSigningRequest(
@@ -26550,6 +26904,7 @@ export async function getApisGetCoordinationV1ApiResources(): Promise<IoK8SApima
 /**
  * undefined
  * @request GET :/apis/coordination.k8s.io/v1/leases
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListCoordinationV1LeaseForAllNamespaces(query: {
@@ -26729,6 +27084,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListCoordinationV1NamespacedLease(
@@ -26814,6 +27170,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases
+ * @allowrelaxedtypes
  */
 export async function postApisCreateCoordinationV1NamespacedLease(
   query: {
@@ -26904,6 +27261,7 @@ export async function deleteApisDeleteCoordinationV1NamespacedLease(
 /**
  * undefined
  * @request GET :/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadCoordinationV1NamespacedLease(
@@ -26931,6 +27289,7 @@ export async function getApisReadCoordinationV1NamespacedLease(
 /**
  * undefined
  * @request PATCH :/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchCoordinationV1NamespacedLease(
   query: {
@@ -26976,6 +27335,7 @@ export async function patchApisPatchCoordinationV1NamespacedLease(
 /**
  * undefined
  * @request PUT :/apis/coordination.k8s.io/v1/namespaces/{namespace}/leases/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceCoordinationV1NamespacedLease(
   query: {
@@ -27017,6 +27377,7 @@ export async function putApisReplaceCoordinationV1NamespacedLease(
 /**
  * undefined
  * @request GET :/apis/coordination.k8s.io/v1/watch/leases
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchCoordinationV1LeaseListForAllNamespaces(query: {
@@ -27098,6 +27459,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchCoordinationV1NamespacedLeaseList(
@@ -27186,6 +27548,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/coordination.k8s.io/v1/watch/namespaces/{namespace}/leases/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchCoordinationV1NamespacedLease(
@@ -27307,6 +27670,7 @@ export async function getApisGetDiscoveryV1ApiResources(): Promise<IoK8SApimachi
 /**
  * undefined
  * @request GET :/apis/discovery.k8s.io/v1/endpointslices
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListDiscoveryV1EndpointSliceForAllNamespaces(query: {
@@ -27487,6 +27851,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListDiscoveryV1NamespacedEndpointSlice(
@@ -27572,6 +27937,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices
+ * @allowrelaxedtypes
  */
 export async function postApisCreateDiscoveryV1NamespacedEndpointSlice(
   query: {
@@ -27662,6 +28028,7 @@ export async function deleteApisDeleteDiscoveryV1NamespacedEndpointSlice(
 /**
  * undefined
  * @request GET :/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadDiscoveryV1NamespacedEndpointSlice(
@@ -27689,6 +28056,7 @@ export async function getApisReadDiscoveryV1NamespacedEndpointSlice(
 /**
  * undefined
  * @request PATCH :/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchDiscoveryV1NamespacedEndpointSlice(
   query: {
@@ -27734,6 +28102,7 @@ export async function patchApisPatchDiscoveryV1NamespacedEndpointSlice(
 /**
  * undefined
  * @request PUT :/apis/discovery.k8s.io/v1/namespaces/{namespace}/endpointslices/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceDiscoveryV1NamespacedEndpointSlice(
   query: {
@@ -27775,6 +28144,7 @@ export async function putApisReplaceDiscoveryV1NamespacedEndpointSlice(
 /**
  * undefined
  * @request GET :/apis/discovery.k8s.io/v1/watch/endpointslices
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchDiscoveryV1EndpointSliceListForAllNamespaces(query: {
@@ -27857,6 +28227,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchDiscoveryV1NamespacedEndpointSliceList(
@@ -27945,6 +28316,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/discovery.k8s.io/v1/watch/namespaces/{namespace}/endpointslices/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchDiscoveryV1NamespacedEndpointSlice(
@@ -28066,6 +28438,7 @@ export async function getApisGetEventsV1ApiResources(): Promise<IoK8SApimachiner
 /**
  * undefined
  * @request GET :/apis/events.k8s.io/v1/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListEventsV1EventForAllNamespaces(query: {
@@ -28245,6 +28618,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/events.k8s.io/v1/namespaces/{namespace}/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListEventsV1NamespacedEvent(
@@ -28330,6 +28704,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/events.k8s.io/v1/namespaces/{namespace}/events
+ * @allowrelaxedtypes
  */
 export async function postApisCreateEventsV1NamespacedEvent(
   query: {
@@ -28420,6 +28795,7 @@ export async function deleteApisDeleteEventsV1NamespacedEvent(
 /**
  * undefined
  * @request GET :/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadEventsV1NamespacedEvent(
@@ -28447,6 +28823,7 @@ export async function getApisReadEventsV1NamespacedEvent(
 /**
  * undefined
  * @request PATCH :/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchEventsV1NamespacedEvent(
   query: {
@@ -28492,6 +28869,7 @@ export async function patchApisPatchEventsV1NamespacedEvent(
 /**
  * undefined
  * @request PUT :/apis/events.k8s.io/v1/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceEventsV1NamespacedEvent(
   query: {
@@ -28533,6 +28911,7 @@ export async function putApisReplaceEventsV1NamespacedEvent(
 /**
  * undefined
  * @request GET :/apis/events.k8s.io/v1/watch/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchEventsV1EventListForAllNamespaces(query: {
@@ -28614,6 +28993,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/events.k8s.io/v1/watch/namespaces/{namespace}/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchEventsV1NamespacedEventList(
@@ -28702,6 +29082,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/events.k8s.io/v1/watch/namespaces/{namespace}/events/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchEventsV1NamespacedEvent(
@@ -28917,6 +29298,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListFlowcontrolApiserverV1Beta2FlowSchema(query: {
@@ -28998,6 +29380,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas
+ * @allowrelaxedtypes
  */
 export async function postApisCreateFlowcontrolApiserverV1Beta2FlowSchema(
   query: {
@@ -29081,6 +29464,7 @@ export async function deleteApisDeleteFlowcontrolApiserverV1Beta2FlowSchema(
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta2FlowSchema(
@@ -29106,6 +29490,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta2FlowSchema(
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta2FlowSchema(
   query: {
@@ -29149,6 +29534,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta2FlowSchema(
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta2FlowSchema(
   query: {
@@ -29188,6 +29574,7 @@ export async function putApisReplaceFlowcontrolApiserverV1Beta2FlowSchema(
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta2FlowSchemaStatus(
@@ -29218,6 +29605,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta2FlowSchemaStatus(
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta2FlowSchemaStatus(
   query: {
@@ -29262,6 +29650,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta2FlowSchemaStatus(
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta2/flowschemas/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta2FlowSchemaStatus(
   query: {
@@ -29398,6 +29787,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListFlowcontrolApiserverV1Beta2PriorityLevelConfiguration(query: {
@@ -29480,6 +29870,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations
+ * @allowrelaxedtypes
  */
 export async function postApisCreateFlowcontrolApiserverV1Beta2PriorityLevelConfiguration(
   query: {
@@ -29565,6 +29956,7 @@ export async function deleteApisDeleteFlowcontrolApiserverV1Beta2PriorityLevelCo
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta2PriorityLevelConfiguration(
@@ -29591,6 +29983,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta2PriorityLevelConfigu
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta2PriorityLevelConfiguration(
   query: {
@@ -29635,6 +30028,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta2PriorityLevelConf
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta2PriorityLevelConfiguration(
   query: {
@@ -29677,6 +30071,7 @@ export async function putApisReplaceFlowcontrolApiserverV1Beta2PriorityLevelConf
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta2PriorityLevelConfigurationStatus(
@@ -29708,6 +30103,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta2PriorityLevelConfigu
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta2PriorityLevelConfigurationStatus(
   query: {
@@ -29754,6 +30150,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta2PriorityLevelConf
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta2/prioritylevelconfigurations/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta2PriorityLevelConfigurationStatus(
   query: {
@@ -29796,6 +30193,7 @@ export async function putApisReplaceFlowcontrolApiserverV1Beta2PriorityLevelConf
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta2FlowSchemaList(query: {
@@ -29877,6 +30275,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/flowschemas/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta2FlowSchema(
@@ -29965,6 +30364,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta2PriorityLevelConfigurationList(query: {
@@ -30049,6 +30449,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta2/watch/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta2PriorityLevelConfiguration(
@@ -30246,6 +30647,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListFlowcontrolApiserverV1Beta3FlowSchema(query: {
@@ -30327,6 +30729,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas
+ * @allowrelaxedtypes
  */
 export async function postApisCreateFlowcontrolApiserverV1Beta3FlowSchema(
   query: {
@@ -30410,6 +30813,7 @@ export async function deleteApisDeleteFlowcontrolApiserverV1Beta3FlowSchema(
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta3FlowSchema(
@@ -30435,6 +30839,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta3FlowSchema(
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta3FlowSchema(
   query: {
@@ -30478,6 +30883,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta3FlowSchema(
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta3FlowSchema(
   query: {
@@ -30517,6 +30923,7 @@ export async function putApisReplaceFlowcontrolApiserverV1Beta3FlowSchema(
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta3FlowSchemaStatus(
@@ -30547,6 +30954,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta3FlowSchemaStatus(
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta3FlowSchemaStatus(
   query: {
@@ -30591,6 +30999,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta3FlowSchemaStatus(
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta3/flowschemas/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta3FlowSchemaStatus(
   query: {
@@ -30727,6 +31136,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListFlowcontrolApiserverV1Beta3PriorityLevelConfiguration(query: {
@@ -30809,6 +31219,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations
+ * @allowrelaxedtypes
  */
 export async function postApisCreateFlowcontrolApiserverV1Beta3PriorityLevelConfiguration(
   query: {
@@ -30894,6 +31305,7 @@ export async function deleteApisDeleteFlowcontrolApiserverV1Beta3PriorityLevelCo
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta3PriorityLevelConfiguration(
@@ -30920,6 +31332,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta3PriorityLevelConfigu
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta3PriorityLevelConfiguration(
   query: {
@@ -30964,6 +31377,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta3PriorityLevelConf
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta3PriorityLevelConfiguration(
   query: {
@@ -31006,6 +31420,7 @@ export async function putApisReplaceFlowcontrolApiserverV1Beta3PriorityLevelConf
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadFlowcontrolApiserverV1Beta3PriorityLevelConfigurationStatus(
@@ -31037,6 +31452,7 @@ export async function getApisReadFlowcontrolApiserverV1Beta3PriorityLevelConfigu
 /**
  * undefined
  * @request PATCH :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchFlowcontrolApiserverV1Beta3PriorityLevelConfigurationStatus(
   query: {
@@ -31083,6 +31499,7 @@ export async function patchApisPatchFlowcontrolApiserverV1Beta3PriorityLevelConf
 /**
  * undefined
  * @request PUT :/apis/flowcontrol.apiserver.k8s.io/v1beta3/prioritylevelconfigurations/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceFlowcontrolApiserverV1Beta3PriorityLevelConfigurationStatus(
   query: {
@@ -31125,6 +31542,7 @@ export async function putApisReplaceFlowcontrolApiserverV1Beta3PriorityLevelConf
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/flowschemas
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta3FlowSchemaList(query: {
@@ -31206,6 +31624,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/flowschemas/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta3FlowSchema(
@@ -31294,6 +31713,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/prioritylevelconfigurations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta3PriorityLevelConfigurationList(query: {
@@ -31378,6 +31798,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/flowcontrol.apiserver.k8s.io/v1beta3/watch/prioritylevelconfigurations/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchFlowcontrolApiserverV1Beta3PriorityLevelConfiguration(
@@ -31589,6 +32010,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListInternalApiserverV1Alpha1StorageVersion(query: {
@@ -31670,6 +32092,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions
+ * @allowrelaxedtypes
  */
 export async function postApisCreateInternalApiserverV1Alpha1StorageVersion(
   query: {
@@ -31753,6 +32176,7 @@ export async function deleteApisDeleteInternalApiserverV1Alpha1StorageVersion(
 /**
  * undefined
  * @request GET :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadInternalApiserverV1Alpha1StorageVersion(
@@ -31778,6 +32202,7 @@ export async function getApisReadInternalApiserverV1Alpha1StorageVersion(
 /**
  * undefined
  * @request PATCH :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchInternalApiserverV1Alpha1StorageVersion(
   query: {
@@ -31821,6 +32246,7 @@ export async function patchApisPatchInternalApiserverV1Alpha1StorageVersion(
 /**
  * undefined
  * @request PUT :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceInternalApiserverV1Alpha1StorageVersion(
   query: {
@@ -31860,6 +32286,7 @@ export async function putApisReplaceInternalApiserverV1Alpha1StorageVersion(
 /**
  * undefined
  * @request GET :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadInternalApiserverV1Alpha1StorageVersionStatus(
@@ -31889,6 +32316,7 @@ export async function getApisReadInternalApiserverV1Alpha1StorageVersionStatus(
 /**
  * undefined
  * @request PATCH :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchInternalApiserverV1Alpha1StorageVersionStatus(
   query: {
@@ -31933,6 +32361,7 @@ export async function patchApisPatchInternalApiserverV1Alpha1StorageVersionStatu
 /**
  * undefined
  * @request PUT :/apis/internal.apiserver.k8s.io/v1alpha1/storageversions/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceInternalApiserverV1Alpha1StorageVersionStatus(
   query: {
@@ -31973,6 +32402,7 @@ export async function putApisReplaceInternalApiserverV1Alpha1StorageVersionStatu
 /**
  * undefined
  * @request GET :/apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchInternalApiserverV1Alpha1StorageVersionList(query: {
@@ -32055,6 +32485,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/internal.apiserver.k8s.io/v1alpha1/watch/storageversions/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchInternalApiserverV1Alpha1StorageVersion(
@@ -32264,6 +32695,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/ingressclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListNetworkingV1IngressClass(query: {
@@ -32345,6 +32777,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/networking.k8s.io/v1/ingressclasses
+ * @allowrelaxedtypes
  */
 export async function postApisCreateNetworkingV1IngressClass(
   query: {
@@ -32428,6 +32861,7 @@ export async function deleteApisDeleteNetworkingV1IngressClass(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/ingressclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadNetworkingV1IngressClass(
@@ -32453,6 +32887,7 @@ export async function getApisReadNetworkingV1IngressClass(
 /**
  * undefined
  * @request PATCH :/apis/networking.k8s.io/v1/ingressclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchNetworkingV1IngressClass(
   query: {
@@ -32496,6 +32931,7 @@ export async function patchApisPatchNetworkingV1IngressClass(
 /**
  * undefined
  * @request PUT :/apis/networking.k8s.io/v1/ingressclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceNetworkingV1IngressClass(
   query: {
@@ -32535,6 +32971,7 @@ export async function putApisReplaceNetworkingV1IngressClass(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/ingresses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListNetworkingV1IngressForAllNamespaces(query: {
@@ -32714,6 +33151,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListNetworkingV1NamespacedIngress(
@@ -32799,6 +33237,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses
+ * @allowrelaxedtypes
  */
 export async function postApisCreateNetworkingV1NamespacedIngress(
   query: {
@@ -32889,6 +33328,7 @@ export async function deleteApisDeleteNetworkingV1NamespacedIngress(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadNetworkingV1NamespacedIngress(
@@ -32916,6 +33356,7 @@ export async function getApisReadNetworkingV1NamespacedIngress(
 /**
  * undefined
  * @request PATCH :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchNetworkingV1NamespacedIngress(
   query: {
@@ -32961,6 +33402,7 @@ export async function patchApisPatchNetworkingV1NamespacedIngress(
 /**
  * undefined
  * @request PUT :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceNetworkingV1NamespacedIngress(
   query: {
@@ -33002,6 +33444,7 @@ export async function putApisReplaceNetworkingV1NamespacedIngress(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadNetworkingV1NamespacedIngressStatus(
@@ -33035,6 +33478,7 @@ export async function getApisReadNetworkingV1NamespacedIngressStatus(
 /**
  * undefined
  * @request PATCH :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchNetworkingV1NamespacedIngressStatus(
   query: {
@@ -33080,6 +33524,7 @@ export async function patchApisPatchNetworkingV1NamespacedIngressStatus(
 /**
  * undefined
  * @request PUT :/apis/networking.k8s.io/v1/namespaces/{namespace}/ingresses/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceNetworkingV1NamespacedIngressStatus(
   query: {
@@ -33220,6 +33665,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListNetworkingV1NamespacedNetworkPolicy(
@@ -33305,6 +33751,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies
+ * @allowrelaxedtypes
  */
 export async function postApisCreateNetworkingV1NamespacedNetworkPolicy(
   query: {
@@ -33395,6 +33842,7 @@ export async function deleteApisDeleteNetworkingV1NamespacedNetworkPolicy(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadNetworkingV1NamespacedNetworkPolicy(
@@ -33422,6 +33870,7 @@ export async function getApisReadNetworkingV1NamespacedNetworkPolicy(
 /**
  * undefined
  * @request PATCH :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchNetworkingV1NamespacedNetworkPolicy(
   query: {
@@ -33467,6 +33916,7 @@ export async function patchApisPatchNetworkingV1NamespacedNetworkPolicy(
 /**
  * undefined
  * @request PUT :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceNetworkingV1NamespacedNetworkPolicy(
   query: {
@@ -33508,6 +33958,7 @@ export async function putApisReplaceNetworkingV1NamespacedNetworkPolicy(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadNetworkingV1NamespacedNetworkPolicyStatus(
@@ -33541,6 +33992,7 @@ export async function getApisReadNetworkingV1NamespacedNetworkPolicyStatus(
 /**
  * undefined
  * @request PATCH :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchNetworkingV1NamespacedNetworkPolicyStatus(
   query: {
@@ -33586,6 +34038,7 @@ export async function patchApisPatchNetworkingV1NamespacedNetworkPolicyStatus(
 /**
  * undefined
  * @request PUT :/apis/networking.k8s.io/v1/namespaces/{namespace}/networkpolicies/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceNetworkingV1NamespacedNetworkPolicyStatus(
   query: {
@@ -33628,6 +34081,7 @@ export async function putApisReplaceNetworkingV1NamespacedNetworkPolicyStatus(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/networkpolicies
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListNetworkingV1NetworkPolicyForAllNamespaces(query: {
@@ -33709,6 +34163,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/ingressclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1IngressClassList(query: {
@@ -33790,6 +34245,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/ingressclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1IngressClass(
@@ -33878,6 +34334,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/ingresses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1IngressListForAllNamespaces(query: {
@@ -33959,6 +34416,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1NamespacedIngressList(
@@ -34047,6 +34505,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/ingresses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1NamespacedIngress(
@@ -34140,6 +34599,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1NamespacedNetworkPolicyList(
@@ -34228,6 +34688,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/namespaces/{namespace}/networkpolicies/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1NamespacedNetworkPolicy(
@@ -34321,6 +34782,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1/watch/networkpolicies
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1NetworkPolicyListForAllNamespaces(query: {
@@ -34510,6 +34972,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1alpha1/clustercidrs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListNetworkingV1Alpha1ClusterCidr(query: {
@@ -34591,6 +35054,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/networking.k8s.io/v1alpha1/clustercidrs
+ * @allowrelaxedtypes
  */
 export async function postApisCreateNetworkingV1Alpha1ClusterCidr(
   query: {
@@ -34674,6 +35138,7 @@ export async function deleteApisDeleteNetworkingV1Alpha1ClusterCidr(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1alpha1/clustercidrs/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadNetworkingV1Alpha1ClusterCidr(
@@ -34699,6 +35164,7 @@ export async function getApisReadNetworkingV1Alpha1ClusterCidr(
 /**
  * undefined
  * @request PATCH :/apis/networking.k8s.io/v1alpha1/clustercidrs/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchNetworkingV1Alpha1ClusterCidr(
   query: {
@@ -34742,6 +35208,7 @@ export async function patchApisPatchNetworkingV1Alpha1ClusterCidr(
 /**
  * undefined
  * @request PUT :/apis/networking.k8s.io/v1alpha1/clustercidrs/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceNetworkingV1Alpha1ClusterCidr(
   query: {
@@ -34781,6 +35248,7 @@ export async function putApisReplaceNetworkingV1Alpha1ClusterCidr(
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1alpha1/watch/clustercidrs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1Alpha1ClusterCidrList(query: {
@@ -34862,6 +35330,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/networking.k8s.io/v1alpha1/watch/clustercidrs/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNetworkingV1Alpha1ClusterCidr(
@@ -35071,6 +35540,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/node.k8s.io/v1/runtimeclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListNodeV1RuntimeClass(query: {
@@ -35152,6 +35622,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/node.k8s.io/v1/runtimeclasses
+ * @allowrelaxedtypes
  */
 export async function postApisCreateNodeV1RuntimeClass(
   query: {
@@ -35235,6 +35706,7 @@ export async function deleteApisDeleteNodeV1RuntimeClass(
 /**
  * undefined
  * @request GET :/apis/node.k8s.io/v1/runtimeclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadNodeV1RuntimeClass(
@@ -35260,6 +35732,7 @@ export async function getApisReadNodeV1RuntimeClass(
 /**
  * undefined
  * @request PATCH :/apis/node.k8s.io/v1/runtimeclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchNodeV1RuntimeClass(
   query: {
@@ -35303,6 +35776,7 @@ export async function patchApisPatchNodeV1RuntimeClass(
 /**
  * undefined
  * @request PUT :/apis/node.k8s.io/v1/runtimeclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceNodeV1RuntimeClass(
   query: {
@@ -35342,6 +35816,7 @@ export async function putApisReplaceNodeV1RuntimeClass(
 /**
  * undefined
  * @request GET :/apis/node.k8s.io/v1/watch/runtimeclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNodeV1RuntimeClassList(query: {
@@ -35423,6 +35898,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/node.k8s.io/v1/watch/runtimeclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchNodeV1RuntimeClass(
@@ -35638,6 +36114,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListPolicyV1NamespacedPodDisruptionBudget(
@@ -35723,6 +36200,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets
+ * @allowrelaxedtypes
  */
 export async function postApisCreatePolicyV1NamespacedPodDisruptionBudget(
   query: {
@@ -35813,6 +36291,7 @@ export async function deleteApisDeletePolicyV1NamespacedPodDisruptionBudget(
 /**
  * undefined
  * @request GET :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadPolicyV1NamespacedPodDisruptionBudget(
@@ -35840,6 +36319,7 @@ export async function getApisReadPolicyV1NamespacedPodDisruptionBudget(
 /**
  * undefined
  * @request PATCH :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchPolicyV1NamespacedPodDisruptionBudget(
   query: {
@@ -35885,6 +36365,7 @@ export async function patchApisPatchPolicyV1NamespacedPodDisruptionBudget(
 /**
  * undefined
  * @request PUT :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplacePolicyV1NamespacedPodDisruptionBudget(
   query: {
@@ -35926,6 +36407,7 @@ export async function putApisReplacePolicyV1NamespacedPodDisruptionBudget(
 /**
  * undefined
  * @request GET :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadPolicyV1NamespacedPodDisruptionBudgetStatus(
@@ -35961,6 +36443,7 @@ export async function getApisReadPolicyV1NamespacedPodDisruptionBudgetStatus(
 /**
  * undefined
  * @request PATCH :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchPolicyV1NamespacedPodDisruptionBudgetStatus(
   query: {
@@ -36007,6 +36490,7 @@ export async function patchApisPatchPolicyV1NamespacedPodDisruptionBudgetStatus(
 /**
  * undefined
  * @request PUT :/apis/policy/v1/namespaces/{namespace}/poddisruptionbudgets/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplacePolicyV1NamespacedPodDisruptionBudgetStatus(
   query: {
@@ -36049,6 +36533,7 @@ export async function putApisReplacePolicyV1NamespacedPodDisruptionBudgetStatus(
 /**
  * undefined
  * @request GET :/apis/policy/v1/poddisruptionbudgets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListPolicyV1PodDisruptionBudgetForAllNamespaces(query: {
@@ -36132,6 +36617,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchPolicyV1NamespacedPodDisruptionBudgetList(
@@ -36220,6 +36706,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/policy/v1/watch/namespaces/{namespace}/poddisruptionbudgets/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchPolicyV1NamespacedPodDisruptionBudget(
@@ -36313,6 +36800,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/policy/v1/watch/poddisruptionbudgets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchPolicyV1PodDisruptionBudgetListForAllNamespaces(query: {
@@ -36517,6 +37005,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/clusterrolebindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListRbacAuthorizationV1ClusterRoleBinding(query: {
@@ -36598,6 +37087,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/rbac.authorization.k8s.io/v1/clusterrolebindings
+ * @allowrelaxedtypes
  */
 export async function postApisCreateRbacAuthorizationV1ClusterRoleBinding(
   query: {
@@ -36681,6 +37171,7 @@ export async function deleteApisDeleteRbacAuthorizationV1ClusterRoleBinding(
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadRbacAuthorizationV1ClusterRoleBinding(
@@ -36706,6 +37197,7 @@ export async function getApisReadRbacAuthorizationV1ClusterRoleBinding(
 /**
  * undefined
  * @request PATCH :/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchRbacAuthorizationV1ClusterRoleBinding(
   query: {
@@ -36749,6 +37241,7 @@ export async function patchApisPatchRbacAuthorizationV1ClusterRoleBinding(
 /**
  * undefined
  * @request PUT :/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceRbacAuthorizationV1ClusterRoleBinding(
   query: {
@@ -36881,6 +37374,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/clusterroles
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListRbacAuthorizationV1ClusterRole(query: {
@@ -36962,6 +37456,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/rbac.authorization.k8s.io/v1/clusterroles
+ * @allowrelaxedtypes
  */
 export async function postApisCreateRbacAuthorizationV1ClusterRole(
   query: {
@@ -37045,6 +37540,7 @@ export async function deleteApisDeleteRbacAuthorizationV1ClusterRole(
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadRbacAuthorizationV1ClusterRole(
@@ -37070,6 +37566,7 @@ export async function getApisReadRbacAuthorizationV1ClusterRole(
 /**
  * undefined
  * @request PATCH :/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchRbacAuthorizationV1ClusterRole(
   query: {
@@ -37113,6 +37610,7 @@ export async function patchApisPatchRbacAuthorizationV1ClusterRole(
 /**
  * undefined
  * @request PUT :/apis/rbac.authorization.k8s.io/v1/clusterroles/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceRbacAuthorizationV1ClusterRole(
   query: {
@@ -37251,6 +37749,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListRbacAuthorizationV1NamespacedRoleBinding(
@@ -37336,6 +37835,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings
+ * @allowrelaxedtypes
  */
 export async function postApisCreateRbacAuthorizationV1NamespacedRoleBinding(
   query: {
@@ -37426,6 +37926,7 @@ export async function deleteApisDeleteRbacAuthorizationV1NamespacedRoleBinding(
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadRbacAuthorizationV1NamespacedRoleBinding(
@@ -37453,6 +37954,7 @@ export async function getApisReadRbacAuthorizationV1NamespacedRoleBinding(
 /**
  * undefined
  * @request PATCH :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchRbacAuthorizationV1NamespacedRoleBinding(
   query: {
@@ -37498,6 +38000,7 @@ export async function patchApisPatchRbacAuthorizationV1NamespacedRoleBinding(
 /**
  * undefined
  * @request PUT :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/rolebindings/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceRbacAuthorizationV1NamespacedRoleBinding(
   query: {
@@ -37640,6 +38143,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListRbacAuthorizationV1NamespacedRole(
@@ -37725,6 +38229,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles
+ * @allowrelaxedtypes
  */
 export async function postApisCreateRbacAuthorizationV1NamespacedRole(
   query: {
@@ -37815,6 +38320,7 @@ export async function deleteApisDeleteRbacAuthorizationV1NamespacedRole(
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadRbacAuthorizationV1NamespacedRole(
@@ -37842,6 +38348,7 @@ export async function getApisReadRbacAuthorizationV1NamespacedRole(
 /**
  * undefined
  * @request PATCH :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchRbacAuthorizationV1NamespacedRole(
   query: {
@@ -37887,6 +38394,7 @@ export async function patchApisPatchRbacAuthorizationV1NamespacedRole(
 /**
  * undefined
  * @request PUT :/apis/rbac.authorization.k8s.io/v1/namespaces/{namespace}/roles/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceRbacAuthorizationV1NamespacedRole(
   query: {
@@ -37928,6 +38436,7 @@ export async function putApisReplaceRbacAuthorizationV1NamespacedRole(
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/rolebindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListRbacAuthorizationV1RoleBindingForAllNamespaces(query: {
@@ -38010,6 +38519,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/roles
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListRbacAuthorizationV1RoleForAllNamespaces(query: {
@@ -38091,6 +38601,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1ClusterRoleBindingList(query: {
@@ -38172,6 +38683,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/clusterrolebindings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1ClusterRoleBinding(
@@ -38260,6 +38772,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/clusterroles
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1ClusterRoleList(query: {
@@ -38341,6 +38854,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/clusterroles/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1ClusterRole(
@@ -38429,6 +38943,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1NamespacedRoleBindingList(
@@ -38518,6 +39033,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/rolebindings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1NamespacedRoleBinding(
@@ -38611,6 +39127,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1NamespacedRoleList(
@@ -38699,6 +39216,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/namespaces/{namespace}/roles/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1NamespacedRole(
@@ -38792,6 +39310,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/rolebindings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1RoleBindingListForAllNamespaces(query: {
@@ -38874,6 +39393,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/rbac.authorization.k8s.io/v1/watch/roles
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchRbacAuthorizationV1RoleListForAllNamespaces(query: {
@@ -39083,6 +39603,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListResourceV1Alpha1NamespacedPodScheduling(
@@ -39168,6 +39689,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings
+ * @allowrelaxedtypes
  */
 export async function postApisCreateResourceV1Alpha1NamespacedPodScheduling(
   query: {
@@ -39207,6 +39729,7 @@ export async function postApisCreateResourceV1Alpha1NamespacedPodScheduling(
 /**
  * undefined
  * @request DELETE :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteResourceV1Alpha1NamespacedPodScheduling(
   query: {
@@ -39258,6 +39781,7 @@ export async function deleteApisDeleteResourceV1Alpha1NamespacedPodScheduling(
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadResourceV1Alpha1NamespacedPodScheduling(
@@ -39285,6 +39809,7 @@ export async function getApisReadResourceV1Alpha1NamespacedPodScheduling(
 /**
  * undefined
  * @request PATCH :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchResourceV1Alpha1NamespacedPodScheduling(
   query: {
@@ -39330,6 +39855,7 @@ export async function patchApisPatchResourceV1Alpha1NamespacedPodScheduling(
 /**
  * undefined
  * @request PUT :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceResourceV1Alpha1NamespacedPodScheduling(
   query: {
@@ -39371,6 +39897,7 @@ export async function putApisReplaceResourceV1Alpha1NamespacedPodScheduling(
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadResourceV1Alpha1NamespacedPodSchedulingStatus(
@@ -39405,6 +39932,7 @@ export async function getApisReadResourceV1Alpha1NamespacedPodSchedulingStatus(
 /**
  * undefined
  * @request PATCH :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchResourceV1Alpha1NamespacedPodSchedulingStatus(
   query: {
@@ -39451,6 +39979,7 @@ export async function patchApisPatchResourceV1Alpha1NamespacedPodSchedulingStatu
 /**
  * undefined
  * @request PUT :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/podschedulings/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceResourceV1Alpha1NamespacedPodSchedulingStatus(
   query: {
@@ -39592,6 +40121,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListResourceV1Alpha1NamespacedResourceClaim(
@@ -39677,6 +40207,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims
+ * @allowrelaxedtypes
  */
 export async function postApisCreateResourceV1Alpha1NamespacedResourceClaim(
   query: {
@@ -39716,6 +40247,7 @@ export async function postApisCreateResourceV1Alpha1NamespacedResourceClaim(
 /**
  * undefined
  * @request DELETE :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteResourceV1Alpha1NamespacedResourceClaim(
   query: {
@@ -39767,6 +40299,7 @@ export async function deleteApisDeleteResourceV1Alpha1NamespacedResourceClaim(
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadResourceV1Alpha1NamespacedResourceClaim(
@@ -39794,6 +40327,7 @@ export async function getApisReadResourceV1Alpha1NamespacedResourceClaim(
 /**
  * undefined
  * @request PATCH :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchResourceV1Alpha1NamespacedResourceClaim(
   query: {
@@ -39839,6 +40373,7 @@ export async function patchApisPatchResourceV1Alpha1NamespacedResourceClaim(
 /**
  * undefined
  * @request PUT :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceResourceV1Alpha1NamespacedResourceClaim(
   query: {
@@ -39880,6 +40415,7 @@ export async function putApisReplaceResourceV1Alpha1NamespacedResourceClaim(
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadResourceV1Alpha1NamespacedResourceClaimStatus(
@@ -39914,6 +40450,7 @@ export async function getApisReadResourceV1Alpha1NamespacedResourceClaimStatus(
 /**
  * undefined
  * @request PATCH :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchResourceV1Alpha1NamespacedResourceClaimStatus(
   query: {
@@ -39960,6 +40497,7 @@ export async function patchApisPatchResourceV1Alpha1NamespacedResourceClaimStatu
 /**
  * undefined
  * @request PUT :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaims/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceResourceV1Alpha1NamespacedResourceClaimStatus(
   query: {
@@ -40103,6 +40641,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListResourceV1Alpha1NamespacedResourceClaimTemplate(
@@ -40189,6 +40728,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates
+ * @allowrelaxedtypes
  */
 export async function postApisCreateResourceV1Alpha1NamespacedResourceClaimTemplate(
   query: {
@@ -40229,6 +40769,7 @@ export async function postApisCreateResourceV1Alpha1NamespacedResourceClaimTempl
 /**
  * undefined
  * @request DELETE :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteResourceV1Alpha1NamespacedResourceClaimTemplate(
   query: {
@@ -40281,6 +40822,7 @@ export async function deleteApisDeleteResourceV1Alpha1NamespacedResourceClaimTem
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadResourceV1Alpha1NamespacedResourceClaimTemplate(
@@ -40309,6 +40851,7 @@ export async function getApisReadResourceV1Alpha1NamespacedResourceClaimTemplate
 /**
  * undefined
  * @request PATCH :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchResourceV1Alpha1NamespacedResourceClaimTemplate(
   query: {
@@ -40355,6 +40898,7 @@ export async function patchApisPatchResourceV1Alpha1NamespacedResourceClaimTempl
 /**
  * undefined
  * @request PUT :/apis/resource.k8s.io/v1alpha1/namespaces/{namespace}/resourceclaimtemplates/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceResourceV1Alpha1NamespacedResourceClaimTemplate(
   query: {
@@ -40397,6 +40941,7 @@ export async function putApisReplaceResourceV1Alpha1NamespacedResourceClaimTempl
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/podschedulings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListResourceV1Alpha1PodSchedulingForAllNamespaces(query: {
@@ -40479,6 +41024,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/resourceclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListResourceV1Alpha1ResourceClaimForAllNamespaces(query: {
@@ -40561,6 +41107,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/resourceclaimtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListResourceV1Alpha1ResourceClaimTemplateForAllNamespaces(query: {
@@ -40736,6 +41283,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/resourceclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListResourceV1Alpha1ResourceClass(query: {
@@ -40817,6 +41365,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/resource.k8s.io/v1alpha1/resourceclasses
+ * @allowrelaxedtypes
  */
 export async function postApisCreateResourceV1Alpha1ResourceClass(
   query: {
@@ -40854,6 +41403,7 @@ export async function postApisCreateResourceV1Alpha1ResourceClass(
 /**
  * undefined
  * @request DELETE :/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteResourceV1Alpha1ResourceClass(
   query: {
@@ -40900,6 +41450,7 @@ export async function deleteApisDeleteResourceV1Alpha1ResourceClass(
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadResourceV1Alpha1ResourceClass(
@@ -40925,6 +41476,7 @@ export async function getApisReadResourceV1Alpha1ResourceClass(
 /**
  * undefined
  * @request PATCH :/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchResourceV1Alpha1ResourceClass(
   query: {
@@ -40968,6 +41520,7 @@ export async function patchApisPatchResourceV1Alpha1ResourceClass(
 /**
  * undefined
  * @request PUT :/apis/resource.k8s.io/v1alpha1/resourceclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceResourceV1Alpha1ResourceClass(
   query: {
@@ -41007,6 +41560,7 @@ export async function putApisReplaceResourceV1Alpha1ResourceClass(
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/podschedulings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1NamespacedPodSchedulingList(
@@ -41096,6 +41650,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/podschedulings/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1NamespacedPodScheduling(
@@ -41189,6 +41744,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1NamespacedResourceClaimList(
@@ -41278,6 +41834,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaims/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1NamespacedResourceClaim(
@@ -41371,6 +41928,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaimtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1NamespacedResourceClaimTemplateList(
@@ -41460,6 +42018,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/namespaces/{namespace}/resourceclaimtemplates/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1NamespacedResourceClaimTemplate(
@@ -41554,6 +42113,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/podschedulings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1PodSchedulingListForAllNamespaces(query: {
@@ -41636,6 +42196,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/resourceclaims
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1ResourceClaimListForAllNamespaces(query: {
@@ -41718,6 +42279,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/resourceclaimtemplates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1ResourceClaimTemplateListForAllNamespaces(query: {
@@ -41802,6 +42364,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/resourceclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1ResourceClassList(query: {
@@ -41883,6 +42446,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/resource.k8s.io/v1alpha1/watch/resourceclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchResourceV1Alpha1ResourceClass(
@@ -42092,6 +42656,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/scheduling.k8s.io/v1/priorityclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListSchedulingV1PriorityClass(query: {
@@ -42173,6 +42738,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/scheduling.k8s.io/v1/priorityclasses
+ * @allowrelaxedtypes
  */
 export async function postApisCreateSchedulingV1PriorityClass(
   query: {
@@ -42256,6 +42822,7 @@ export async function deleteApisDeleteSchedulingV1PriorityClass(
 /**
  * undefined
  * @request GET :/apis/scheduling.k8s.io/v1/priorityclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadSchedulingV1PriorityClass(
@@ -42281,6 +42848,7 @@ export async function getApisReadSchedulingV1PriorityClass(
 /**
  * undefined
  * @request PATCH :/apis/scheduling.k8s.io/v1/priorityclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchSchedulingV1PriorityClass(
   query: {
@@ -42324,6 +42892,7 @@ export async function patchApisPatchSchedulingV1PriorityClass(
 /**
  * undefined
  * @request PUT :/apis/scheduling.k8s.io/v1/priorityclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceSchedulingV1PriorityClass(
   query: {
@@ -42363,6 +42932,7 @@ export async function putApisReplaceSchedulingV1PriorityClass(
 /**
  * undefined
  * @request GET :/apis/scheduling.k8s.io/v1/watch/priorityclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchSchedulingV1PriorityClassList(query: {
@@ -42444,6 +43014,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/scheduling.k8s.io/v1/watch/priorityclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchSchedulingV1PriorityClass(
@@ -42653,6 +43224,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/csidrivers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1CsiDriver(query: {
@@ -42734,6 +43306,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/storage.k8s.io/v1/csidrivers
+ * @allowrelaxedtypes
  */
 export async function postApisCreateStorageV1CsiDriver(
   query: {
@@ -42771,6 +43344,7 @@ export async function postApisCreateStorageV1CsiDriver(
 /**
  * undefined
  * @request DELETE :/apis/storage.k8s.io/v1/csidrivers/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteStorageV1CsiDriver(
   query: {
@@ -42817,6 +43391,7 @@ export async function deleteApisDeleteStorageV1CsiDriver(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/csidrivers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadStorageV1CsiDriver(
@@ -42842,6 +43417,7 @@ export async function getApisReadStorageV1CsiDriver(
 /**
  * undefined
  * @request PATCH :/apis/storage.k8s.io/v1/csidrivers/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchStorageV1CsiDriver(
   query: {
@@ -42885,6 +43461,7 @@ export async function patchApisPatchStorageV1CsiDriver(
 /**
  * undefined
  * @request PUT :/apis/storage.k8s.io/v1/csidrivers/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceStorageV1CsiDriver(
   query: {
@@ -43017,6 +43594,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/csinodes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1CsiNode(query: {
@@ -43098,6 +43676,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/storage.k8s.io/v1/csinodes
+ * @allowrelaxedtypes
  */
 export async function postApisCreateStorageV1CsiNode(
   query: {
@@ -43135,6 +43714,7 @@ export async function postApisCreateStorageV1CsiNode(
 /**
  * undefined
  * @request DELETE :/apis/storage.k8s.io/v1/csinodes/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteStorageV1CsiNode(
   query: {
@@ -43181,6 +43761,7 @@ export async function deleteApisDeleteStorageV1CsiNode(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/csinodes/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadStorageV1CsiNode(
@@ -43206,6 +43787,7 @@ export async function getApisReadStorageV1CsiNode(
 /**
  * undefined
  * @request PATCH :/apis/storage.k8s.io/v1/csinodes/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchStorageV1CsiNode(
   query: {
@@ -43249,6 +43831,7 @@ export async function patchApisPatchStorageV1CsiNode(
 /**
  * undefined
  * @request PUT :/apis/storage.k8s.io/v1/csinodes/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceStorageV1CsiNode(
   query: {
@@ -43288,6 +43871,7 @@ export async function putApisReplaceStorageV1CsiNode(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1CsiStorageCapacityForAllNamespaces(query: {
@@ -43470,6 +44054,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1NamespacedCsiStorageCapacity(
@@ -43555,6 +44140,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities
+ * @allowrelaxedtypes
  */
 export async function postApisCreateStorageV1NamespacedCsiStorageCapacity(
   query: {
@@ -43645,6 +44231,7 @@ export async function deleteApisDeleteStorageV1NamespacedCsiStorageCapacity(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadStorageV1NamespacedCsiStorageCapacity(
@@ -43672,6 +44259,7 @@ export async function getApisReadStorageV1NamespacedCsiStorageCapacity(
 /**
  * undefined
  * @request PATCH :/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchStorageV1NamespacedCsiStorageCapacity(
   query: {
@@ -43717,6 +44305,7 @@ export async function patchApisPatchStorageV1NamespacedCsiStorageCapacity(
 /**
  * undefined
  * @request PUT :/apis/storage.k8s.io/v1/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceStorageV1NamespacedCsiStorageCapacity(
   query: {
@@ -43851,6 +44440,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/storageclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1StorageClass(query: {
@@ -43932,6 +44522,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/storage.k8s.io/v1/storageclasses
+ * @allowrelaxedtypes
  */
 export async function postApisCreateStorageV1StorageClass(
   query: {
@@ -43969,6 +44560,7 @@ export async function postApisCreateStorageV1StorageClass(
 /**
  * undefined
  * @request DELETE :/apis/storage.k8s.io/v1/storageclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteStorageV1StorageClass(
   query: {
@@ -44015,6 +44607,7 @@ export async function deleteApisDeleteStorageV1StorageClass(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/storageclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadStorageV1StorageClass(
@@ -44040,6 +44633,7 @@ export async function getApisReadStorageV1StorageClass(
 /**
  * undefined
  * @request PATCH :/apis/storage.k8s.io/v1/storageclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchStorageV1StorageClass(
   query: {
@@ -44083,6 +44677,7 @@ export async function patchApisPatchStorageV1StorageClass(
 /**
  * undefined
  * @request PUT :/apis/storage.k8s.io/v1/storageclasses/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceStorageV1StorageClass(
   query: {
@@ -44215,6 +44810,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/volumeattachments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1VolumeAttachment(query: {
@@ -44296,6 +44892,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/storage.k8s.io/v1/volumeattachments
+ * @allowrelaxedtypes
  */
 export async function postApisCreateStorageV1VolumeAttachment(
   query: {
@@ -44333,6 +44930,7 @@ export async function postApisCreateStorageV1VolumeAttachment(
 /**
  * undefined
  * @request DELETE :/apis/storage.k8s.io/v1/volumeattachments/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteApisDeleteStorageV1VolumeAttachment(
   query: {
@@ -44379,6 +44977,7 @@ export async function deleteApisDeleteStorageV1VolumeAttachment(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/volumeattachments/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadStorageV1VolumeAttachment(
@@ -44404,6 +45003,7 @@ export async function getApisReadStorageV1VolumeAttachment(
 /**
  * undefined
  * @request PATCH :/apis/storage.k8s.io/v1/volumeattachments/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchStorageV1VolumeAttachment(
   query: {
@@ -44447,6 +45047,7 @@ export async function patchApisPatchStorageV1VolumeAttachment(
 /**
  * undefined
  * @request PUT :/apis/storage.k8s.io/v1/volumeattachments/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceStorageV1VolumeAttachment(
   query: {
@@ -44486,6 +45087,7 @@ export async function putApisReplaceStorageV1VolumeAttachment(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/volumeattachments/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadStorageV1VolumeAttachmentStatus(
@@ -44514,6 +45116,7 @@ export async function getApisReadStorageV1VolumeAttachmentStatus(
 /**
  * undefined
  * @request PATCH :/apis/storage.k8s.io/v1/volumeattachments/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchStorageV1VolumeAttachmentStatus(
   query: {
@@ -44557,6 +45160,7 @@ export async function patchApisPatchStorageV1VolumeAttachmentStatus(
 /**
  * undefined
  * @request PUT :/apis/storage.k8s.io/v1/volumeattachments/{name}/status
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceStorageV1VolumeAttachmentStatus(
   query: {
@@ -44596,6 +45200,7 @@ export async function putApisReplaceStorageV1VolumeAttachmentStatus(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/csidrivers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1CsiDriverList(query: {
@@ -44677,6 +45282,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/csidrivers/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1CsiDriver(
@@ -44765,6 +45371,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/csinodes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1CsiNodeList(query: {
@@ -44846,6 +45453,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/csinodes/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1CsiNode(
@@ -44934,6 +45542,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1CsiStorageCapacityListForAllNamespaces(query: {
@@ -45016,6 +45625,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/namespaces/{namespace}/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1NamespacedCsiStorageCapacityList(
@@ -45104,6 +45714,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1NamespacedCsiStorageCapacity(
@@ -45197,6 +45808,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/storageclasses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1StorageClassList(query: {
@@ -45278,6 +45890,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/storageclasses/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1StorageClass(
@@ -45366,6 +45979,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/volumeattachments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1VolumeAttachmentList(query: {
@@ -45447,6 +46061,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1/watch/volumeattachments/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1VolumeAttachment(
@@ -45549,6 +46164,7 @@ export async function getApisGetStorageV1Beta1ApiResources(): Promise<IoK8SApima
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1beta1/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1Beta1CsiStorageCapacityForAllNamespaces(query: {
@@ -45730,6 +46346,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListStorageV1Beta1NamespacedCsiStorageCapacity(
@@ -45815,6 +46432,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request POST :/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities
+ * @allowrelaxedtypes
  */
 export async function postApisCreateStorageV1Beta1NamespacedCsiStorageCapacity(
   query: {
@@ -45907,6 +46525,7 @@ export async function deleteApisDeleteStorageV1Beta1NamespacedCsiStorageCapacity
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadStorageV1Beta1NamespacedCsiStorageCapacity(
@@ -45934,6 +46553,7 @@ export async function getApisReadStorageV1Beta1NamespacedCsiStorageCapacity(
 /**
  * undefined
  * @request PATCH :/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchStorageV1Beta1NamespacedCsiStorageCapacity(
   query: {
@@ -45981,6 +46601,7 @@ export async function patchApisPatchStorageV1Beta1NamespacedCsiStorageCapacity(
 /**
  * undefined
  * @request PUT :/apis/storage.k8s.io/v1beta1/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  */
 export async function putApisReplaceStorageV1Beta1NamespacedCsiStorageCapacity(
   query: {
@@ -46023,6 +46644,7 @@ export async function putApisReplaceStorageV1Beta1NamespacedCsiStorageCapacity(
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1beta1/watch/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1Beta1CsiStorageCapacityListForAllNamespaces(query: {
@@ -46105,6 +46727,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1Beta1NamespacedCsiStorageCapacityList(
@@ -46194,6 +46817,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 /**
  * undefined
  * @request GET :/apis/storage.k8s.io/v1beta1/watch/namespaces/{namespace}/csistoragecapacities/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisWatchStorageV1Beta1NamespacedCsiStorageCapacity(

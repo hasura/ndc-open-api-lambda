@@ -4,27 +4,14 @@ import * as context from "../context";
 import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
 import * as functionParamsParser from "../parser/open-api/types-parser";
 import * as openApiParser from "../parser/open-api/open-api-parser";
-
-export type GeneratedApiTsCode = {
-  legacyTypedApiComponents: legacyApiTsGenerator.ApiComponents;
-  schemaComponents: swaggerTypescriptApi.SchemaComponent[];
-  routes: swaggerTypescriptApi.ParsedRoute[];
-  typeNames: GeneratedTypeName[];
-  files: swaggerTypescriptApi.GenerateApiOutput;
-};
-
-type GeneratedTypeName = {
-  typeName: string;
-  rawTypeName: string | undefined;
-  schemaType: "type-name" | "enum-key" | undefined;
-};
+import * as types from "./types";
 
 export async function generateApiTsCode(
   openApiUri: string,
-): Promise<GeneratedApiTsCode> {
+): Promise<types.GeneratedApiTsCode> {
   const generatedSchemaComponents: swaggerTypescriptApi.SchemaComponent[] = [];
   const generatedRoutes: swaggerTypescriptApi.ParsedRoute[] = [];
-  const generatedTypeNames: GeneratedTypeName[] = [];
+  const generatedTypeNames: types.GeneratedTypeName[] = [];
 
   let openApiUrl: string = "";
   let openApiFilePath: string = "";
@@ -50,7 +37,6 @@ export async function generateApiTsCode(
        */
       onCreateComponent: (component) => {
         generatedSchemaComponents.push(component);
-        processApiComponent(component, typedOpenApiComponents);
       },
 
       onCreateRoute: (routeData) => {
@@ -64,13 +50,7 @@ export async function generateApiTsCode(
        * rawTypeName is equal to the component.typename from onCreateComponent hook.
        */
       onFormatTypeName: (typeName, rawTypeName, schemaType) => {
-        processTypeName(
-          typedOpenApiComponents,
-          typeName,
-          rawTypeName,
-          schemaType,
-        );
-        const generatedTypeName: GeneratedTypeName = {
+        const generatedTypeName: types.GeneratedTypeName = {
           typeName,
           rawTypeName,
           schemaType,
@@ -87,9 +67,7 @@ export async function generateApiTsCode(
     },
   });
 
-  typedOpenApiComponents.processNdcComponents();
-
-  const generatedTsCode: GeneratedApiTsCode = {
+  const generatedTsCode: types.GeneratedApiTsCode = {
     legacyTypedApiComponents: typedOpenApiComponents,
     schemaComponents: generatedSchemaComponents,
     routes: generatedRoutes,
@@ -98,16 +76,6 @@ export async function generateApiTsCode(
   };
 
   return generatedTsCode;
-}
-
-function processApiComponent(
-  component: swaggerTypescriptApi.SchemaComponent,
-  typedOpenApiComponents: legacyApiTsGenerator.ApiComponents,
-) {
-  if (component.componentName === "schemas") {
-    // for now, we are only going to deal with schemas
-    typedOpenApiComponents.addComponent(component);
-  }
 }
 
 function processApiRoute(
@@ -122,19 +90,4 @@ function processApiRoute(
   route.raw.description = openApiParser.fixDescription(route.raw.description);
   typedOpenApiComponents.addRoute(apiRoute);
   return route;
-}
-
-function processTypeName(
-  typedOpenApiComponents: legacyApiTsGenerator.ApiComponents,
-  typeName: string,
-  rawTypeName?: string,
-  schemaType?: string,
-) {
-  typedOpenApiComponents.addTypes(
-    rawTypeName ? rawTypeName : typeName,
-    typeName,
-  );
-  if (schemaType && schemaType === "type-name") {
-    typedOpenApiComponents.allGeneratedTypes.add(typeName);
-  }
 }

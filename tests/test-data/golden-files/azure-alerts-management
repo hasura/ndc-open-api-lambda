@@ -1,0 +1,217 @@
+import {
+  AzureResource,
+  AlertRuleProperties,
+  AlertRulePatchProperties,
+  ActionGroupsInformation,
+  ThrottlingInformation,
+  Detector,
+  AlertRule,
+  AlertRulesList,
+  AlertRulePatchObject,
+  ErrorResponse,
+  Api,
+} from "./api";
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * undefined
+ * @request GET :/subscriptions/{subscriptionId}/providers/microsoft.alertsManagement/smartDetectorAlertRules
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getSubscriptionsSmartDetectorAlertRulesList(
+  query: {
+    /**
+     * Client Api Version.
+     */
+    "api-version": string;
+    /**
+     * Indicates if Smart Detector should be expanded.
+     */
+    expandDetector?: boolean;
+  },
+  /**
+   * The ID of the target subscription.
+   */
+  subscriptionId: string,
+): Promise<AlertRulesList> {
+  const result = await api.subscriptions.smartDetectorAlertRulesList({
+    query: query,
+    subscriptionId: subscriptionId,
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getSubscriptionsSmartDetectorAlertRulesListByResourceGroup(
+  query: {
+    /**
+     * Client Api Version.
+     */
+    "api-version": string;
+    /**
+     * Indicates if Smart Detector should be expanded.
+     */
+    expandDetector?: boolean;
+  },
+  subscriptionId: string,
+  /**
+   * The name of the resource group.
+   */
+  resourceGroupName: string,
+): Promise<AlertRulesList> {
+  const result =
+    await api.subscriptions.smartDetectorAlertRulesListByResourceGroup({
+      query: query,
+      subscriptionId: subscriptionId,
+      resourceGroupName: resourceGroupName,
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request DELETE :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}
+ * @allowrelaxedtypes
+ */
+export async function deleteSubscriptionsSmartDetectorAlertRulesDelete(
+  query: {
+    /**
+     * Client Api Version.
+     */
+    "api-version": string;
+  },
+  subscriptionId: string,
+  resourceGroupName: string,
+  /**
+   * The name of the alert rule.
+   */
+  alertRuleName: string,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.subscriptions.smartDetectorAlertRulesDelete({
+    query: query,
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    alertRuleName: alertRuleName,
+  });
+  if (result.error) {
+    throw result.error;
+  } else {
+    return new hasuraSdk.JSONValue(result.data);
+  }
+}
+
+/**
+ * undefined
+ * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getSubscriptionsSmartDetectorAlertRulesGet(
+  query: {
+    /**
+     * Client Api Version.
+     */
+    "api-version": string;
+    /**
+     * Indicates if Smart Detector should be expanded.
+     */
+    expandDetector?: boolean;
+  },
+  subscriptionId: string,
+  resourceGroupName: string,
+  alertRuleName: string,
+): Promise<AlertRule> {
+  const result = await api.subscriptions.smartDetectorAlertRulesGet({
+    query: query,
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    alertRuleName: alertRuleName,
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request PATCH :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}
+ * @allowrelaxedtypes
+ */
+export async function patchSubscriptionsSmartDetectorAlertRulesPatch(
+  query: {
+    /**
+     * Client Api Version.
+     */
+    "api-version": string;
+  },
+  subscriptionId: string,
+  resourceGroupName: string,
+  alertRuleName: string,
+  /** Request body */
+  parameters: AlertRulePatchObject,
+): Promise<AlertRule> {
+  const result = await api.subscriptions.smartDetectorAlertRulesPatch({
+    query: query,
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    alertRuleName: alertRuleName,
+    parameters: parameters,
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request PUT :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}
+ * @allowrelaxedtypes
+ */
+export async function putSubscriptionsSmartDetectorAlertRulesCreateOrUpdate(
+  query: {
+    /**
+     * Client Api Version.
+     */
+    "api-version": string;
+  },
+  subscriptionId: string,
+  resourceGroupName: string,
+  alertRuleName: string,
+  /** Request body */
+  parameters: AlertRule,
+): Promise<AlertRule> {
+  const result = await api.subscriptions.smartDetectorAlertRulesCreateOrUpdate({
+    query: query,
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    alertRuleName: alertRuleName,
+    parameters: parameters,
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

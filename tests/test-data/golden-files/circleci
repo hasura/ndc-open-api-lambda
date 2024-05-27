@@ -38,6 +38,7 @@ const api = new Api({
 /**
  * undefined
  * @request GET :/me
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetMe(): Promise<User> {
@@ -95,6 +96,7 @@ Set to "completed", "successful", "failed", "running", or defaults to no filter.
 /**
  * undefined
  * @request POST :/project/{username}/{project}
+ * @allowrelaxedtypes
  */
 export async function postProjectProjectCreate(
   username: string,
@@ -150,6 +152,7 @@ export async function deleteProjectBuildCacheDelete(
 /**
  * undefined
  * @request GET :/project/{username}/{project}/checkout-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail(
@@ -355,6 +358,7 @@ export async function postProjectSshKeyCreate(
 /**
  * undefined
  * @request POST :/project/{username}/{project}/tree/{branch}
+ * @allowrelaxedtypes
  */
 export async function postProjectTreeCreate(
   username: string,
@@ -392,6 +396,7 @@ export async function postProjectTreeCreate(
 /**
  * undefined
  * @request GET :/project/{username}/{project}/{build_num}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectProjectDetail2(
@@ -439,6 +444,7 @@ export async function getProjectArtifactsDetail(
 /**
  * undefined
  * @request POST :/project/{username}/{project}/{build_num}/cancel
+ * @allowrelaxedtypes
  */
 export async function postProjectCancelCreate(
   username: string,
@@ -460,6 +466,7 @@ export async function postProjectCancelCreate(
 /**
  * undefined
  * @request POST :/project/{username}/{project}/{build_num}/retry
+ * @allowrelaxedtypes
  */
 export async function postProjectRetryCreate(
   username: string,
@@ -481,6 +488,7 @@ export async function postProjectRetryCreate(
 /**
  * undefined
  * @request GET :/project/{username}/{project}/{build_num}/tests
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectTestsDetail(
@@ -503,6 +511,7 @@ export async function getProjectTestsDetail(
 /**
  * undefined
  * @request GET :/projects
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectsProjectsList(): Promise<Projects> {
@@ -517,6 +526,7 @@ export async function getProjectsProjectsList(): Promise<Projects> {
 /**
  * undefined
  * @request GET :/recent-builds
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRecentBuildsRecentBuildsList(query: {
