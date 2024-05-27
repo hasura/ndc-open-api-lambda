@@ -158,7 +158,9 @@ export function getSchemaPropertyFromSchema(
     return schema.typeData;
   }
 
-  logger.error(`Cannot resolve schema types for ${schema.$ref} `);
+  logger.error(
+    `Cannot resolve schema types for ${schema.$ref}.\nSchema: ${JSON.stringify(schema)}`,
+  );
   return undefined;
 }
 
@@ -291,7 +293,7 @@ export function getSchemaPropertyChildren(
   } else if (!canResolveSchema(property)) {
     // if schemaProperty is not of a known type, throw an error
     throw new Error(
-      `Cannot resolve SchemaProperty: ${JSON.stringify(property)}`,
+      `Cannot resolve Schema Property: ${JSON.stringify(property)}`,
     );
   }
   return [];
