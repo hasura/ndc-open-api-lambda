@@ -30,7 +30,7 @@ export type SchemaProperty =
 export type $ParsedSchema = {
   type: string | undefined;
   content: string | undefined;
-}
+};
 
 enum ObjectTypeEnum {
   "object",
@@ -230,12 +230,12 @@ export function schemaPropertyIsTypePrimitive(
   property: any,
 ): property is SchemaTypePrimitive {
   return (
-    property.type &&
-    Object.values(PrimitiveTypeEnum).includes(property.type) &&
-    property.typeIdentifier &&
-    property.content
-  ) || (
-    property.$parsed && Object.values(PrimitiveTypeEnum).includes(property.$parsed.type)
+    (property.type &&
+      Object.values(PrimitiveTypeEnum).includes(property.type) &&
+      property.typeIdentifier &&
+      property.content) ||
+    (property.$parsed &&
+      Object.values(PrimitiveTypeEnum).includes(property.$parsed.type))
   );
 }
 
@@ -287,7 +287,9 @@ export function getSchemaPropertyChildren(
     return getSchemaTypeSchemaChildren(property);
   } else if (!canResolveSchema(property)) {
     // if schemaProperty is not of a known type, throw an error
-    throw new Error(`Cannot resolve SchemaProperty: ${JSON.stringify(property)}`);
+    throw new Error(
+      `Cannot resolve SchemaProperty: ${JSON.stringify(property)}`,
+    );
   }
   return [];
 }
@@ -361,7 +363,6 @@ export function primitiveSchemaPropertiveHasAmbigousType(
   } else if (property.$parsed && property.$parsed.content) {
     return AMBIGUOUS_PRIMITVE_TYPES.indexOf(property.$parsed.content) > -1;
   }
-
 }
 
 /**

@@ -194,7 +194,9 @@ function parseSchemaProperty(
     }
   } catch (e) {
     if (e instanceof Error) {
-      logger.error(`Error while parsing schema '${schema.$ref}':\n${e.message}`);
+      logger.error(
+        `Error while parsing schema '${schema.$ref}':\n${e.message}`,
+      );
     }
     logger.error(`Error while parsing schema '${schema.$ref}':\n${e}`);
   }
