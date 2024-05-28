@@ -24,7 +24,7 @@ export interface FullRequestParams extends Omit<RequestInit, "body"> {
   cancelToken?: CancelToken;
 }
 
-export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">
+export type RequestParams = Omit<FullRequestParams, "body" | "method" | "path">
 
 export interface ApiConfig<SecurityDataType = unknown> {
     baseUrl?: string;
@@ -170,6 +170,16 @@ export class HttpClient<SecurityDataType = unknown> {
 <% } else { %>
     }: FullRequestParams): Promise<HttpResponse<T, E>> => {
 <% } %>
+
+        if (secureParams && secureParams.query) {
+            // add secure params to query if required
+            if (query) {
+                query = { ...query, ...secureParams.query};
+            } else {
+                query = secureParams.query;
+            }
+        }
+
         const secureParams = ((typeof secure === 'boolean' ? secure : this.baseApiParams.secure) && this.securityWorker && await this.securityWorker(this.securityData)) || {};
         const requestParams = this.mergeRequestParams(params, secureParams);
         const queryString = query && this.toQueryString(query);
