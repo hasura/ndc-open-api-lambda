@@ -5,7 +5,7 @@ import * as logger from "../../../util/logger";
 
 export function getParsedSchemaStore(
   typeNames: generatorTypes.GeneratedTypeName[],
-  schemaComponents: swaggerTypescriptApi.SchemaComponent[],
+  schemaComponents: parserTypes.Schema[],
 ): ParsedSchemaStore {
   const mappings: Mappings = {
     rawTypeToTypeNameMap: new Map<string, string>(),
@@ -25,11 +25,11 @@ export function getParsedSchemaStore(
      * compiler does not think that component can be correctly cast to parserTypes.Schema
      */
     // @ts-ignore
-    if (!shouldParseScehma(component as parserTypes.Schema)) {
+    if (!shouldParseScehma(component)) {
       continue;
     }
     // @ts-ignore
-    createSchemaMapping(mappings, component as parserTypes.Schema);
+    createSchemaMapping(mappings, component);
   }
 
   const schemaStore = new ParsedSchemaStore(mappings);

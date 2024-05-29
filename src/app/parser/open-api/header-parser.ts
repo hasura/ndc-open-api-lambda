@@ -1,3 +1,7 @@
+import * as schemaTypes from "./types";
+import * as routeTypes from "./route-types";
+import * as logger from "../../../util/logger";
+
 /**
  *
  * @param headersString The list of headers in the format: `key1=value1&key2=value2&key3=value3`
@@ -17,4 +21,20 @@ export function parseHeaders(
     headerMap.set(key, value);
   }
   return headerMap;
+}
+
+export function parseRouteHeaders(route: routeTypes.ApiRoute): routeTypes.ParsedHeaders | undefined {
+  if (!route.headersObjectSchema) {
+    return undefined;
+  }
+  if (!schemaTypes.schemaPropertyIsTypeObject(route.headersObjectSchema)) {
+    const basicChars = routeTypes.getBasicCharacteristics(route);
+    logger.error(`Cannot parse headers for API Route: ${basicChars.method} ${basicChars.route}\nERROR: route.headersObjectSchema is not of type object`);
+    return undefined;
+  }
+  const headers: Set<string> = new Set<string>(Object.keys(route.headersObjectSchema.properties));
+  if (headers.size === 0) {
+    return undefined;
+  } 
+  return headers;
 }

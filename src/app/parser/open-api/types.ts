@@ -60,12 +60,14 @@ enum SecuritySchemeTypeEnum {
   "apiKey",
   "oauth2",
   "http",
+  "mutualTLS",
+  "openIdConnect",
 }
 
 export type SchemaTypeObject = {
   type: ObjectTypeEnum | undefined;
   required: string[] | undefined;
-  properties: Map<string, SchemaProperty> | undefined;
+  properties: Map<string, SchemaProperty>;
   example: string | undefined;
   description: string | undefined;
   $parsed: $ParsedSchema | undefined;
@@ -177,7 +179,7 @@ export function schemaPropertyIsTypeObject(
     // if property.type exists, then it should belong to ObjectTypeEnum
     return false;
   }
-  return property.properties && Object.keys(property.properties).length > 0;
+  return property.properties && Object.keys(property.properties).length >= 0;
 }
 
 export function schemaPropertyIsTypeArray(
