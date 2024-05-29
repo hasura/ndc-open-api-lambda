@@ -38,7 +38,7 @@ export async function generateApiTsCode(
        * Contains the full definition of the type, along with individual variables in objects
        */
       onCreateComponent: (component) => {
-        const anyComponent: any = component
+        const anyComponent: any = component;
         generatedSchemaComponents.push(anyComponent as schemaTypes.Schema);
       },
 

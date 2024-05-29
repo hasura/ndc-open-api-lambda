@@ -24,10 +24,10 @@ export function getBasicCharacteristics(
 }
 
 export type ParsedApiRoute = {
-  originalRoute: ApiRoute,
+  originalRoute: ApiRoute;
 
-  basicCharacteristics: BasicRouteCharacterstics,
+  basicCharacteristics: BasicRouteCharacterstics;
   headers: ParsedHeaders | undefined;
-}
+};
 
 export type ParsedHeaders = Set<string>;

@@ -9,33 +9,33 @@ import * as fs from "fs";
 context.getInstance().setLogLevel(context.LogLevel.ERROR);
 
 type Test = {
-  name: string,
-  openApiFile: string,
-  goldenFile: string,
+  name: string;
+  openApiFile: string;
+  goldenFile: string;
   expected?: Map<string, string[] | undefined>;
   routes?: routeTypes.ApiRoute[];
-}
+};
 
 const tests: Test[] = [
   {
-  name: "Petstore",
-  openApiFile: "petstore.yaml",
-  goldenFile: "petstore.json",
-},
-{
-  name: "aws-autoscaling",
-  openApiFile: "aws-autoscaling.json",
-  goldenFile: "aws-autoscaling.json",
-},
+    name: "Petstore",
+    openApiFile: "petstore.yaml",
+    goldenFile: "petstore.json",
+  },
+  {
+    name: "aws-autoscaling",
+    openApiFile: "aws-autoscaling.json",
+    goldenFile: "aws-autoscaling.json",
+  },
 ];
 
 function getRouteId(routeChars: routeTypes.BasicRouteCharacterstics) {
   return `${routeChars.method}__${routeChars.route}`;
 }
 
-describe("header-parser", function() {
+describe("header-parser", function () {
   for (const testCase of tests) {
-    before(async() => {
+    before(async () => {
       testCase.openApiFile = path.resolve(
         __dirname,
         "../../../../tests/test-data/open-api-docs",
@@ -47,17 +47,28 @@ describe("header-parser", function() {
       );
       testCase.routes = generatedCode.routes;
 
-      testCase.goldenFile = path.resolve(__dirname, "./test-data/golden-files/header-parser-tests", testCase.goldenFile);
+      testCase.goldenFile = path.resolve(
+        __dirname,
+        "./test-data/golden-files/header-parser-tests",
+        testCase.goldenFile,
+      );
 
       try {
-        testCase.expected = new Map(Object.entries(JSON.parse(fs.readFileSync(testCase.goldenFile).toString())));
+        testCase.expected = new Map(
+          Object.entries(
+            JSON.parse(fs.readFileSync(testCase.goldenFile).toString()),
+          ),
+        );
       } catch (e) {
         testCase.expected = new Map<string, string[] | undefined>();
       }
     });
 
-    it(`header-parser::${testCase.name}`, function() {
-      const got: Map<string, string[] | undefined> = new Map<string, string[] | undefined>();
+    it(`header-parser::${testCase.name}`, function () {
+      const got: Map<string, string[] | undefined> = new Map<
+        string,
+        string[] | undefined
+      >();
       for (const route of testCase.routes!) {
         const headers = headerParser.parseRouteHeaders(route);
         const routeId = getRouteId(routeTypes.getBasicCharacteristics(route));
