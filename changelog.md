@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added support for adding secruity param as a query param in `api.ts` ([#27](https://github.com/hasura/ndc-open-api-lambda/pull/27))
 - Added support for `@save` annotation to preserve user's changes ([#24](https://github.com/hasura/ndc-open-api-lambda/pull/24))
 - Bug fix: Replaced `*/` with `*''/` in API descriptions so that multi line comments do not end pre maturely which was resulting in a syntax error ([#21](https://github.com/hasura/ndc-open-api-lambda/pull/21))
 
