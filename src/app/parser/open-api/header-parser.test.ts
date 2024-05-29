@@ -73,10 +73,10 @@ describe("header-parser", function () {
         const headers = headerParser.parseRouteHeaders(route);
         const routeId = getRouteId(routeTypes.getBasicCharacteristics(route));
 
-        got.set(routeId, headers ? Array.from(headers) : []);
+        got.set(routeId, headers?.headers ? Array.from(headers.headers) : []);
       }
 
-      assert.deepEqual(got, testCase.expected);
+      assert.deepStrictEqual(got, testCase.expected);
 
       // uncomment to update golden file
       // fs.writeFileSync(testCase.goldenFile, JSON.stringify(Object.fromEntries(got)));
