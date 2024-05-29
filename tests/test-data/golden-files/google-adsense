@@ -36,46 +36,52 @@ const api = new Api({
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getAccountsAdsenseAccountsList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-  /**
-   * The maximum number of accounts to include in the response, used for paging.
-   */
-  maxResults?: number;
-  /**
-   * A continuation token, used to page through accounts. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-   */
-  pageToken?: string;
-}): Promise<Accounts> {
+export async function getAccountsAdsenseAccountsList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * The maximum number of accounts to include in the response, used for paging.
+     */
+    maxResults?: number;
+    /**
+     * A continuation token, used to page through accounts. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    pageToken?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Accounts> {
   const result = await api.accounts.adsenseAccountsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -129,10 +135,14 @@ export async function getAccountsAdsenseAccountsGet(
    * Account to get information about.
    */
   accountId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Account> {
   const result = await api.accounts.adsenseAccountsGet({
     query: query,
     accountId: accountId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -190,10 +200,14 @@ export async function getAccountsAdsenseAccountsAdclientsList(
    * Account for which to list ad clients.
    */
   accountId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdClients> {
   const result = await api.accounts.adsenseAccountsAdclientsList({
     query: query,
     accountId: accountId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -251,11 +265,15 @@ export async function getAccountsAdsenseAccountsAdclientsGetAdCode(
    * Ad client to get the code for.
    */
   adClientId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdCode> {
   const result = await api.accounts.adsenseAccountsAdclientsGetAdCode({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -321,11 +339,15 @@ export async function getAccountsAdsenseAccountsAdunitsList(
    * Ad client for which to list ad units.
    */
   adClientId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdUnits> {
   const result = await api.accounts.adsenseAccountsAdunitsList({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -383,12 +405,16 @@ export async function getAccountsAdsenseAccountsAdunitsGet(
    * Ad unit to retrieve.
    */
   adUnitId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdUnit> {
   const result = await api.accounts.adsenseAccountsAdunitsGet({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -446,12 +472,16 @@ export async function getAccountsAdsenseAccountsAdunitsGetAdCode(
    * Ad unit to get the code for.
    */
   adUnitId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdCode> {
   const result = await api.accounts.adsenseAccountsAdunitsGetAdCode({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -517,12 +547,16 @@ export async function getAccountsAdsenseAccountsAdunitsCustomchannelsList(
    * Ad unit for which to list custom channels.
    */
   adUnitId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CustomChannels> {
   const result = await api.accounts.adsenseAccountsAdunitsCustomchannelsList({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
     adUnitId: adUnitId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -584,11 +618,15 @@ export async function getAccountsAdsenseAccountsCustomchannelsList(
    * Ad client for which to list custom channels.
    */
   adClientId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CustomChannels> {
   const result = await api.accounts.adsenseAccountsCustomchannelsList({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -646,12 +684,16 @@ export async function getAccountsAdsenseAccountsCustomchannelsGet(
    * Custom channel to retrieve.
    */
   customChannelId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CustomChannel> {
   const result = await api.accounts.adsenseAccountsCustomchannelsGet({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
     customChannelId: customChannelId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -721,12 +763,16 @@ export async function getAccountsAdsenseAccountsCustomchannelsAdunitsList(
    * Custom channel for which to list ad units.
    */
   customChannelId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdUnits> {
   const result = await api.accounts.adsenseAccountsCustomchannelsAdunitsList({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
     customChannelId: customChannelId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -788,11 +834,15 @@ export async function getAccountsAdsenseAccountsUrlchannelsList(
    * Ad client for which to list URL channels.
    */
   adClientId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<UrlChannels> {
   const result = await api.accounts.adsenseAccountsUrlchannelsList({
     query: query,
     accountId: accountId,
     adClientId: adClientId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -846,10 +896,14 @@ export async function getAccountsAdsenseAccountsAlertsList(
    * Account for which to retrieve the alerts.
    */
   accountId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Alerts> {
   const result = await api.accounts.adsenseAccountsAlertsList({
     query: query,
     accountId: accountId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -902,11 +956,15 @@ export async function deleteAccountsAdsenseAccountsAlertsDelete(
    * Alert to delete.
    */
   alertId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.accounts.adsenseAccountsAlertsDelete({
     query: query,
     accountId: accountId,
     alertId: alertId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -956,10 +1014,14 @@ export async function getAccountsAdsenseAccountsPaymentsList(
    * Account for which to retrieve the payments.
    */
   accountId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Payments> {
   const result = await api.accounts.adsenseAccountsPaymentsList({
     query: query,
     accountId: accountId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1053,10 +1115,14 @@ export async function getAccountsAdsenseAccountsReportsGenerate(
    * Account upon which to report.
    */
   accountId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.accounts.adsenseAccountsReportsGenerate({
     query: query,
     accountId: accountId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1114,10 +1180,14 @@ export async function getAccountsAdsenseAccountsReportsSavedList(
    * Account to which the saved reports belong.
    */
   accountId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SavedReports> {
   const result = await api.accounts.adsenseAccountsReportsSavedList({
     query: query,
     accountId: accountId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1183,11 +1253,15 @@ export async function getAccountsAdsenseAccountsReportsSavedGenerate(
    * The saved report to retrieve.
    */
   savedReportId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.accounts.adsenseAccountsReportsSavedGenerate({
     query: query,
     accountId: accountId,
     savedReportId: savedReportId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1245,10 +1319,14 @@ export async function getAccountsAdsenseAccountsSavedadstylesList(
    * Account for which to list saved ad styles.
    */
   accountId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SavedAdStyles> {
   const result = await api.accounts.adsenseAccountsSavedadstylesList({
     query: query,
     accountId: accountId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1302,11 +1380,15 @@ export async function getAccountsAdsenseAccountsSavedadstylesGet(
    * Saved ad style to retrieve.
    */
   savedAdStyleId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SavedAdStyle> {
   const result = await api.accounts.adsenseAccountsSavedadstylesGet({
     query: query,
     accountId: accountId,
     savedAdStyleId: savedAdStyleId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1321,46 +1403,52 @@ export async function getAccountsAdsenseAccountsSavedadstylesGet(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getAdclientsAdsenseAdclientsList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-  /**
-   * The maximum number of ad clients to include in the response, used for paging.
-   */
-  maxResults?: number;
-  /**
-   * A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-   */
-  pageToken?: string;
-}): Promise<AdClients> {
+export async function getAdclientsAdsenseAdclientsList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * The maximum number of ad clients to include in the response, used for paging.
+     */
+    maxResults?: number;
+    /**
+     * A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    pageToken?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<AdClients> {
   const result = await api.adclients.adsenseAdclientsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1422,10 +1510,14 @@ export async function getAdclientsAdsenseAdunitsList(
    * Ad client for which to list ad units.
    */
   adClientId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdUnits> {
   const result = await api.adclients.adsenseAdunitsList({
     query: query,
     adClientId: adClientId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1479,11 +1571,15 @@ export async function getAdclientsAdsenseAdunitsGet(
    * Ad unit to retrieve.
    */
   adUnitId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdUnit> {
   const result = await api.adclients.adsenseAdunitsGet({
     query: query,
     adClientId: adClientId,
     adUnitId: adUnitId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1537,11 +1633,15 @@ export async function getAdclientsAdsenseAdunitsGetAdCode(
    * Ad unit to get the code for.
    */
   adUnitId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdCode> {
   const result = await api.adclients.adsenseAdunitsGetAdCode({
     query: query,
     adClientId: adClientId,
     adUnitId: adUnitId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1603,11 +1703,15 @@ export async function getAdclientsAdsenseAdunitsCustomchannelsList(
    * Ad unit for which to list custom channels.
    */
   adUnitId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CustomChannels> {
   const result = await api.adclients.adsenseAdunitsCustomchannelsList({
     query: query,
     adClientId: adClientId,
     adUnitId: adUnitId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1665,10 +1769,14 @@ export async function getAdclientsAdsenseCustomchannelsList(
    * Ad client for which to list custom channels.
    */
   adClientId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CustomChannels> {
   const result = await api.adclients.adsenseCustomchannelsList({
     query: query,
     adClientId: adClientId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1722,11 +1830,15 @@ export async function getAdclientsAdsenseCustomchannelsGet(
    * Custom channel to retrieve.
    */
   customChannelId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CustomChannel> {
   const result = await api.adclients.adsenseCustomchannelsGet({
     query: query,
     adClientId: adClientId,
     customChannelId: customChannelId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1792,11 +1904,15 @@ export async function getAdclientsAdsenseCustomchannelsAdunitsList(
    * Custom channel for which to list ad units.
    */
   customChannelId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdUnits> {
   const result = await api.adclients.adsenseCustomchannelsAdunitsList({
     query: query,
     adClientId: adClientId,
     customChannelId: customChannelId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1854,10 +1970,14 @@ export async function getAdclientsAdsenseUrlchannelsList(
    * Ad client for which to list URL channels.
    */
   adClientId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<UrlChannels> {
   const result = await api.adclients.adsenseUrlchannelsList({
     query: query,
     adClientId: adClientId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1872,42 +1992,48 @@ export async function getAdclientsAdsenseUrlchannelsList(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getAlertsAdsenseAlertsList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-  /**
-   * The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.
-   */
-  locale?: string;
-}): Promise<Alerts> {
+export async function getAlertsAdsenseAlertsList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.
+     */
+    locale?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Alerts> {
   const result = await api.alerts.adsenseAlertsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1956,10 +2082,14 @@ export async function deleteAlertsAdsenseAlertsDelete(
    * Alert to delete.
    */
   alertId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.alerts.adsenseAlertsDelete({
     query: query,
     alertId: alertId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -1974,38 +2104,44 @@ export async function deleteAlertsAdsenseAlertsDelete(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getMetadataAdsenseMetadataDimensionsList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-}): Promise<Metadata> {
+export async function getMetadataAdsenseMetadataDimensionsList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Metadata> {
   const result = await api.metadata.adsenseMetadataDimensionsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2020,38 +2156,44 @@ export async function getMetadataAdsenseMetadataDimensionsList(query: {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getMetadataAdsenseMetadataMetricsList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-}): Promise<Metadata> {
+export async function getMetadataAdsenseMetadataMetricsList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Metadata> {
   const result = await api.metadata.adsenseMetadataMetricsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2066,38 +2208,44 @@ export async function getMetadataAdsenseMetadataMetricsList(query: {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getPaymentsAdsensePaymentsList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-}): Promise<Payments> {
+export async function getPaymentsAdsensePaymentsList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Payments> {
   const result = await api.payments.adsensePaymentsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2112,86 +2260,92 @@ export async function getPaymentsAdsensePaymentsList(query: {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getReportsAdsenseReportsGenerate(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-  /**
-   * Start of the date range to report on in "YYYY-MM-DD" format, inclusive.
-   */
-  startDate: string;
-  /**
-   * End of the date range to report on in "YYYY-MM-DD" format, inclusive.
-   */
-  endDate: string;
-  /**
-   * Accounts upon which to report.
-   */
-  accountId?: string[];
-  /**
-   * Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
-   */
-  currency?: string;
-  /**
-   * Dimensions to base the report on.
-   */
-  dimension?: string[];
-  /**
-   * Filters to be run on the report.
-   */
-  filter?: string[];
-  /**
-   * Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
-   */
-  locale?: string;
-  /**
-   * The maximum number of rows of report data to return.
-   */
-  maxResults?: number;
-  /**
-   * Numeric columns to include in the report.
-   */
-  metric?: string[];
-  /**
-   * The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
-   */
-  sort?: string[];
-  /**
-   * Index of the first row of report data to return.
-   */
-  startIndex?: number;
-  /**
-   * Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.
-   */
-  useTimezoneReporting?: boolean;
-}): Promise<AdsenseReportsGenerateResponse> {
+export async function getReportsAdsenseReportsGenerate(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * Start of the date range to report on in "YYYY-MM-DD" format, inclusive.
+     */
+    startDate: string;
+    /**
+     * End of the date range to report on in "YYYY-MM-DD" format, inclusive.
+     */
+    endDate: string;
+    /**
+     * Accounts upon which to report.
+     */
+    accountId?: string[];
+    /**
+     * Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
+     */
+    currency?: string;
+    /**
+     * Dimensions to base the report on.
+     */
+    dimension?: string[];
+    /**
+     * Filters to be run on the report.
+     */
+    filter?: string[];
+    /**
+     * Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+     */
+    locale?: string;
+    /**
+     * The maximum number of rows of report data to return.
+     */
+    maxResults?: number;
+    /**
+     * Numeric columns to include in the report.
+     */
+    metric?: string[];
+    /**
+     * The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
+     */
+    sort?: string[];
+    /**
+     * Index of the first row of report data to return.
+     */
+    startIndex?: number;
+    /**
+     * Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.
+     */
+    useTimezoneReporting?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.reports.adsenseReportsGenerate({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2206,46 +2360,52 @@ export async function getReportsAdsenseReportsGenerate(query: {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getReportsAdsenseReportsSavedList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-  /**
-   * The maximum number of saved reports to include in the response, used for paging.
-   */
-  maxResults?: number;
-  /**
-   * A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-   */
-  pageToken?: string;
-}): Promise<SavedReports> {
+export async function getReportsAdsenseReportsSavedList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * The maximum number of saved reports to include in the response, used for paging.
+     */
+    maxResults?: number;
+    /**
+     * A continuation token, used to page through saved reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    pageToken?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<SavedReports> {
   const result = await api.reports.adsenseReportsSavedList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2307,10 +2467,14 @@ export async function getReportsAdsenseReportsSavedGenerate(
    * The saved report to retrieve.
    */
   savedReportId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AdsenseReportsGenerateResponse> {
   const result = await api.reports.adsenseReportsSavedGenerate({
     query: query,
     savedReportId: savedReportId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2325,46 +2489,52 @@ export async function getReportsAdsenseReportsSavedGenerate(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getSavedadstylesAdsenseSavedadstylesList(query: {
-  /**
-   * Data format for the response.
-   */
-  alt?: "csv" | "json";
-  /**
-   * Selector specifying which fields to include in a partial response.
-   */
-  fields?: string;
-  /**
-   * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
-   */
-  key?: string;
-  /**
-   * OAuth 2.0 token for the current user.
-   */
-  oauth_token?: string;
-  /**
-   * Returns response with indentations and line breaks.
-   */
-  prettyPrint?: boolean;
-  /**
-   * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
-   */
-  quotaUser?: string;
-  /**
-   * Deprecated. Please use quotaUser instead.
-   */
-  userIp?: string;
-  /**
-   * The maximum number of saved ad styles to include in the response, used for paging.
-   */
-  maxResults?: number;
-  /**
-   * A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
-   */
-  pageToken?: string;
-}): Promise<SavedAdStyles> {
+export async function getSavedadstylesAdsenseSavedadstylesList(
+  query: {
+    /**
+     * Data format for the response.
+     */
+    alt?: "csv" | "json";
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    fields?: string;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    key?: string;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    oauth_token?: string;
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    prettyPrint?: boolean;
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    quotaUser?: string;
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    userIp?: string;
+    /**
+     * The maximum number of saved ad styles to include in the response, used for paging.
+     */
+    maxResults?: number;
+    /**
+     * A continuation token, used to page through saved ad styles. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    pageToken?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<SavedAdStyles> {
   const result = await api.savedadstyles.adsenseSavedadstylesList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2414,10 +2584,14 @@ export async function getSavedadstylesAdsenseSavedadstylesGet(
    * Saved ad style to retrieve.
    */
   savedAdStyleId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SavedAdStyle> {
   const result = await api.savedadstyles.adsenseSavedadstylesGet({
     query: query,
     savedAdStyleId: savedAdStyleId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;

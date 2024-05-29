@@ -18,9 +18,13 @@ const api = new Api({
 export async function postAuthorAuthorCreate(
   /** Request body */
   author: MainAuthor,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MainAuthor> {
   const result = await api.author.authorCreate({
     author: author,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -38,9 +42,13 @@ export async function deleteAuthorAuthorDelete(
    * delete author
    */
   authorId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MainAuthor> {
   const result = await api.author.authorDelete({
     authorId: authorId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -54,8 +62,14 @@ export async function deleteAuthorAuthorDelete(
  * @request GET :/authors
  * @readonly
  */
-export async function getAuthorsAuthorsList(): Promise<MainAuthor[]> {
-  const result = await api.authors.authorsList({});
+export async function getAuthorsAuthorsList(
+  headers?: hasuraSdk.JSONValue,
+): Promise<MainAuthor[]> {
+  const result = await api.authors.authorsList({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -70,9 +84,13 @@ export async function getAuthorsAuthorsList(): Promise<MainAuthor[]> {
 export async function putBlogBlogUpdate(
   /** Request body */
   blog: MainBlogRequestDto,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MainBlog> {
   const result = await api.blog.blogUpdate({
     blog: blog,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -88,9 +106,13 @@ export async function putBlogBlogUpdate(
 export async function postBlogBlogCreate(
   /** Request body */
   blog: MainBlogRequestDto,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MainBlog> {
   const result = await api.blog.blogCreate({
     blog: blog,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -103,14 +125,20 @@ export async function postBlogBlogCreate(
  * dislike a blog post
  * @request PATCH :/blog/dislike
  */
-export async function patchBlogDislikePartialUpdate(query: {
-  /**
-   * blog to dislike
-   */
-  blogId: string;
-}): Promise<MainBlog> {
+export async function patchBlogDislikePartialUpdate(
+  query: {
+    /**
+     * blog to dislike
+     */
+    blogId: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<MainBlog> {
   const result = await api.blog.dislikePartialUpdate({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -123,14 +151,20 @@ export async function patchBlogDislikePartialUpdate(query: {
  * like a blog post
  * @request PATCH :/blog/like
  */
-export async function patchBlogLikePartialUpdate(query: {
-  /**
-   * blog to like
-   */
-  blogId: string;
-}): Promise<MainBlog> {
+export async function patchBlogLikePartialUpdate(
+  query: {
+    /**
+     * blog to like
+     */
+    blogId: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<MainBlog> {
   const result = await api.blog.likePartialUpdate({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -148,9 +182,13 @@ export async function deleteBlogBlogDelete(
    * blog to delete
    */
   blogId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MainBlog> {
   const result = await api.blog.blogDelete({
     blogId: blogId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -182,10 +220,14 @@ export async function patchBlogBlogPartialUpdate(
    * blog to update
    */
   blogId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MainBlog> {
   const result = await api.blog.blogPartialUpdate({
     query: query,
     blogId: blogId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -199,14 +241,20 @@ export async function patchBlogBlogPartialUpdate(
  * @request GET :/blogs/
  * @readonly
  */
-export async function getBlogsBlogsList(query: {
-  /**
-   * id of the author
-   */
-  authorId: string;
-}): Promise<MainBlog[]> {
+export async function getBlogsBlogsList(
+  query: {
+    /**
+     * id of the author
+     */
+    authorId: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<MainBlog[]> {
   const result = await api.blogs.blogsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;

@@ -27,12 +27,15 @@ const api = new Api({
  * @request POST :/.cqactions.html
  * @allowrelaxedtypes
  */
-export async function postCqactionsHtmlPostCqActions(query: {
-  authorizableId: string;
-  changelog: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postCqactionsHtmlPostCqActions(
+  query: { authorizableId: string; changelog: string },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.cqactionsHtml.postCqActions({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -46,59 +49,65 @@ export async function postCqactionsHtmlPostCqActions(query: {
  * @request POST :/apps/system/config/com.adobe.granite.auth.saml.SamlAuthenticationHandler.config
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(query: {
-  keyStorePassword?: string;
-  "keyStorePassword@TypeHint"?: string;
-  serviceRanking?: number;
-  serviceRankingTypeHint?: string;
-  idpHttpRedirect?: boolean;
-  "idpHttpRedirect@TypeHint"?: string;
-  createUser?: boolean;
-  "createUser@TypeHint"?: string;
-  defaultRedirectUrl?: string;
-  "defaultRedirectUrl@TypeHint"?: string;
-  userIDAttribute?: string;
-  "userIDAttribute@TypeHint"?: string;
-  defaultGroups?: string[];
-  "defaultGroups@TypeHint"?: string;
-  idpCertAlias?: string;
-  "idpCertAlias@TypeHint"?: string;
-  addGroupMemberships?: boolean;
-  "addGroupMemberships@TypeHint"?: string;
-  path?: string[];
-  "path@TypeHint"?: string;
-  synchronizeAttributes?: string[];
-  "synchronizeAttributes@TypeHint"?: string;
-  clockTolerance?: number;
-  "clockTolerance@TypeHint"?: string;
-  groupMembershipAttribute?: string;
-  "groupMembershipAttribute@TypeHint"?: string;
-  idpUrl?: string;
-  "idpUrl@TypeHint"?: string;
-  logoutUrl?: string;
-  "logoutUrl@TypeHint"?: string;
-  serviceProviderEntityId?: string;
-  "serviceProviderEntityId@TypeHint"?: string;
-  assertionConsumerServiceURL?: string;
-  "assertionConsumerServiceURL@TypeHint"?: string;
-  handleLogout?: boolean;
-  "handleLogout@TypeHint"?: string;
-  spPrivateKeyAlias?: string;
-  "spPrivateKeyAlias@TypeHint"?: string;
-  useEncryption?: boolean;
-  "useEncryption@TypeHint"?: string;
-  nameIdFormat?: string;
-  "nameIdFormat@TypeHint"?: string;
-  digestMethod?: string;
-  "digestMethod@TypeHint"?: string;
-  signatureMethod?: string;
-  "signatureMethod@TypeHint"?: string;
-  userIntermediatePath?: string;
-  "userIntermediatePath@TypeHint"?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(
+  query: {
+    keyStorePassword?: string;
+    "keyStorePassword@TypeHint"?: string;
+    serviceRanking?: number;
+    serviceRankingTypeHint?: string;
+    idpHttpRedirect?: boolean;
+    "idpHttpRedirect@TypeHint"?: string;
+    createUser?: boolean;
+    "createUser@TypeHint"?: string;
+    defaultRedirectUrl?: string;
+    "defaultRedirectUrl@TypeHint"?: string;
+    userIDAttribute?: string;
+    "userIDAttribute@TypeHint"?: string;
+    defaultGroups?: string[];
+    "defaultGroups@TypeHint"?: string;
+    idpCertAlias?: string;
+    "idpCertAlias@TypeHint"?: string;
+    addGroupMemberships?: boolean;
+    "addGroupMemberships@TypeHint"?: string;
+    path?: string[];
+    "path@TypeHint"?: string;
+    synchronizeAttributes?: string[];
+    "synchronizeAttributes@TypeHint"?: string;
+    clockTolerance?: number;
+    "clockTolerance@TypeHint"?: string;
+    groupMembershipAttribute?: string;
+    "groupMembershipAttribute@TypeHint"?: string;
+    idpUrl?: string;
+    "idpUrl@TypeHint"?: string;
+    logoutUrl?: string;
+    "logoutUrl@TypeHint"?: string;
+    serviceProviderEntityId?: string;
+    "serviceProviderEntityId@TypeHint"?: string;
+    assertionConsumerServiceURL?: string;
+    "assertionConsumerServiceURL@TypeHint"?: string;
+    handleLogout?: boolean;
+    "handleLogout@TypeHint"?: string;
+    spPrivateKeyAlias?: string;
+    "spPrivateKeyAlias@TypeHint"?: string;
+    useEncryption?: boolean;
+    "useEncryption@TypeHint"?: string;
+    nameIdFormat?: string;
+    "nameIdFormat@TypeHint"?: string;
+    digestMethod?: string;
+    "digestMethod@TypeHint"?: string;
+    signatureMethod?: string;
+    "signatureMethod@TypeHint"?: string;
+    userIntermediatePath?: string;
+    "userIntermediatePath@TypeHint"?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigAdobeGraniteSamlAuthenticationHandler(
     {
       query: query,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -113,12 +122,18 @@ export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(qu
  * @request POST :/apps/system/config/com.shinesolutions.aem.passwordreset.Activator
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigAemPasswordReset(query: {
-  pwdresetAuthorizables?: string[];
-  pwdresetAuthorizablesTypeHint?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigAemPasswordReset(
+  query: {
+    pwdresetAuthorizables?: string[];
+    pwdresetAuthorizablesTypeHint?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigAemPasswordReset({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -132,12 +147,15 @@ export async function postAppsPostConfigAemPasswordReset(query: {
  * @request POST :/apps/system/config/com.shinesolutions.healthcheck.hc.impl.ActiveBundleHealthCheck
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigAemHealthCheckServlet(query: {
-  bundlesIgnored?: string[];
-  bundlesIgnoredTypeHint?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigAemHealthCheckServlet(
+  query: { bundlesIgnored?: string[]; bundlesIgnoredTypeHint?: string },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigAemHealthCheckServlet({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -151,30 +169,36 @@ export async function postAppsPostConfigAemHealthCheckServlet(query: {
  * @request POST :/apps/system/config/org.apache.felix.http
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigApacheFelixJettyBasedHttpService(query: {
-  orgApacheFelixHttpsNio?: boolean;
-  orgApacheFelixHttpsNioTypeHint?: string;
-  orgApacheFelixHttpsKeystore?: string;
-  orgApacheFelixHttpsKeystoreTypeHint?: string;
-  orgApacheFelixHttpsKeystorePassword?: string;
-  orgApacheFelixHttpsKeystorePasswordTypeHint?: string;
-  orgApacheFelixHttpsKeystoreKey?: string;
-  orgApacheFelixHttpsKeystoreKeyTypeHint?: string;
-  orgApacheFelixHttpsKeystoreKeyPassword?: string;
-  orgApacheFelixHttpsKeystoreKeyPasswordTypeHint?: string;
-  orgApacheFelixHttpsTruststore?: string;
-  orgApacheFelixHttpsTruststoreTypeHint?: string;
-  orgApacheFelixHttpsTruststorePassword?: string;
-  orgApacheFelixHttpsTruststorePasswordTypeHint?: string;
-  orgApacheFelixHttpsClientcertificate?: string;
-  orgApacheFelixHttpsClientcertificateTypeHint?: string;
-  orgApacheFelixHttpsEnable?: boolean;
-  orgApacheFelixHttpsEnableTypeHint?: string;
-  orgOsgiServiceHttpPortSecure?: string;
-  orgOsgiServiceHttpPortSecureTypeHint?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigApacheFelixJettyBasedHttpService(
+  query: {
+    orgApacheFelixHttpsNio?: boolean;
+    orgApacheFelixHttpsNioTypeHint?: string;
+    orgApacheFelixHttpsKeystore?: string;
+    orgApacheFelixHttpsKeystoreTypeHint?: string;
+    orgApacheFelixHttpsKeystorePassword?: string;
+    orgApacheFelixHttpsKeystorePasswordTypeHint?: string;
+    orgApacheFelixHttpsKeystoreKey?: string;
+    orgApacheFelixHttpsKeystoreKeyTypeHint?: string;
+    orgApacheFelixHttpsKeystoreKeyPassword?: string;
+    orgApacheFelixHttpsKeystoreKeyPasswordTypeHint?: string;
+    orgApacheFelixHttpsTruststore?: string;
+    orgApacheFelixHttpsTruststoreTypeHint?: string;
+    orgApacheFelixHttpsTruststorePassword?: string;
+    orgApacheFelixHttpsTruststorePasswordTypeHint?: string;
+    orgApacheFelixHttpsClientcertificate?: string;
+    orgApacheFelixHttpsClientcertificateTypeHint?: string;
+    orgApacheFelixHttpsEnable?: boolean;
+    orgApacheFelixHttpsEnableTypeHint?: string;
+    orgOsgiServiceHttpPortSecure?: string;
+    orgOsgiServiceHttpPortSecureTypeHint?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigApacheFelixJettyBasedHttpService({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -188,23 +212,29 @@ export async function postAppsPostConfigApacheFelixJettyBasedHttpService(query: 
  * @request POST :/apps/system/config/org.apache.http.proxyconfigurator.config
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(query: {
-  proxyHost?: string;
-  proxyHostTypeHint?: string;
-  proxyPort?: number;
-  proxyPortTypeHint?: string;
-  proxyExceptions?: string[];
-  proxyExceptionsTypeHint?: string;
-  proxyEnabled?: boolean;
-  proxyEnabledTypeHint?: string;
-  proxyUser?: string;
-  proxyUserTypeHint?: string;
-  proxyPassword?: string;
-  proxyPasswordTypeHint?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(
+  query: {
+    proxyHost?: string;
+    proxyHostTypeHint?: string;
+    proxyPort?: number;
+    proxyPortTypeHint?: string;
+    proxyExceptions?: string[];
+    proxyExceptionsTypeHint?: string;
+    proxyEnabled?: boolean;
+    proxyEnabledTypeHint?: string;
+    proxyUser?: string;
+    proxyUserTypeHint?: string;
+    proxyPassword?: string;
+    proxyPasswordTypeHint?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result =
     await api.apps.postConfigApacheHttpComponentsProxyConfiguration({
       query: query,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -218,14 +248,20 @@ export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(q
  * @request POST :/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigApacheSlingDavExServlet(query: {
-  alias?: string;
-  "alias@TypeHint"?: string;
-  davCreateAbsoluteUri?: boolean;
-  davCreateAbsoluteUriTypeHint?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigApacheSlingDavExServlet(
+  query: {
+    alias?: string;
+    "alias@TypeHint"?: string;
+    davCreateAbsoluteUri?: boolean;
+    davCreateAbsoluteUriTypeHint?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigApacheSlingDavExServlet({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -239,18 +275,24 @@ export async function postAppsPostConfigApacheSlingDavExServlet(query: {
  * @request POST :/apps/system/config/org.apache.sling.security.impl.ReferrerFilter
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigApacheSlingReferrerFilter(query: {
-  allowEmpty?: boolean;
-  allowEmptyTypeHint?: string;
-  allowHosts?: string;
-  allowHostsTypeHint?: string;
-  allowHostsRegexp?: string;
-  allowHostsRegexpTypeHint?: string;
-  filterMethods?: string;
-  filterMethodsTypeHint?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigApacheSlingReferrerFilter(
+  query: {
+    allowEmpty?: boolean;
+    allowEmptyTypeHint?: string;
+    allowHosts?: string;
+    allowHostsTypeHint?: string;
+    allowHostsRegexp?: string;
+    allowHostsRegexpTypeHint?: string;
+    filterMethods?: string;
+    filterMethodsTypeHint?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigApacheSlingReferrerFilter({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -264,18 +306,24 @@ export async function postAppsPostConfigApacheSlingReferrerFilter(query: {
  * @request POST :/apps/system/config/org.apache.sling.servlets.get.DefaultGetServlet
  * @allowrelaxedtypes
  */
-export async function postAppsPostConfigApacheSlingGetServlet(query: {
-  jsonMaximumresults?: string;
-  jsonMaximumresultsTypeHint?: string;
-  enableHtml?: boolean;
-  enableHtmlTypeHint?: string;
-  enableTxt?: boolean;
-  enableTxtTypeHint?: string;
-  enableXml?: boolean;
-  enableXmlTypeHint?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postAppsPostConfigApacheSlingGetServlet(
+  query: {
+    jsonMaximumresults?: string;
+    jsonMaximumresultsTypeHint?: string;
+    enableHtml?: boolean;
+    enableHtmlTypeHint?: string;
+    enableTxt?: boolean;
+    enableTxtTypeHint?: string;
+    enableXml?: boolean;
+    enableXmlTypeHint?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigApacheSlingGetServlet({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -291,9 +339,13 @@ export async function postAppsPostConfigApacheSlingGetServlet(query: {
  */
 export async function postAppsPostConfigProperty(
   configNodeName: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigProperty({
     configNodeName: configNodeName,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -308,14 +360,20 @@ export async function postAppsPostConfigProperty(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getBinGetQuery(query: {
-  path: string;
-  pLimit: number;
-  "1_property": string;
-  "1PropertyValue": string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function getBinGetQuery(
+  query: {
+    path: string;
+    pLimit: number;
+    "1_property": string;
+    "1PropertyValue": string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.bin.getQuery({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -329,14 +387,20 @@ export async function getBinGetQuery(query: {
  * @request POST :/bin/querybuilder.json
  * @allowrelaxedtypes
  */
-export async function postBinPostQuery(query: {
-  path: string;
-  pLimit: number;
-  "1_property": string;
-  "1PropertyValue": string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postBinPostQuery(
+  query: {
+    path: string;
+    pLimit: number;
+    "1_property": string;
+    "1PropertyValue": string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.bin.postQuery({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -350,13 +414,15 @@ export async function postBinPostQuery(query: {
  * @request POST :/crx/explorer/ui/setpassword.jsp
  * @allowrelaxedtypes
  */
-export async function postCrxPostSetPassword(query: {
-  old: string;
-  plain: string;
-  verify: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postCrxPostSetPassword(
+  query: { old: string; plain: string; verify: string },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.crx.postSetPassword({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -370,8 +436,14 @@ export async function postCrxPostSetPassword(query: {
  * @request GET :/crx/packmgr/installstatus.jsp
  * @readonly
  */
-export async function getCrxGetInstallStatus(): Promise<InstallStatus> {
-  const result = await api.crx.getInstallStatus({});
+export async function getCrxGetInstallStatus(
+  headers?: hasuraSdk.JSONValue,
+): Promise<InstallStatus> {
+  const result = await api.crx.getInstallStatus({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -384,11 +456,15 @@ export async function getCrxGetInstallStatus(): Promise<InstallStatus> {
  * @request POST :/crx/packmgr/service.jsp
  * @allowrelaxedtypes
  */
-export async function postCrxPostPackageService(query: {
-  cmd: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postCrxPostPackageService(
+  query: { cmd: string },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.crx.postPackageService({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -418,11 +494,15 @@ export async function postCrxPostPackageServiceJson(
     /** @format binary */
     package?: File;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.crx.postPackageServiceJson({
     query: query,
     path: path,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -437,8 +517,14 @@ export async function postCrxPostPackageServiceJson(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getCrxGetPackageManagerServlet(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.crx.getPackageManagerServlet({});
+export async function getCrxGetPackageManagerServlet(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.crx.getPackageManagerServlet({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
   } else {
@@ -451,16 +537,22 @@ export async function getCrxGetPackageManagerServlet(): Promise<hasuraSdk.JSONVa
  * @request POST :/crx/packmgr/update.jsp
  * @allowrelaxedtypes
  */
-export async function postCrxPostPackageUpdate(query: {
-  groupName: string;
-  packageName: string;
-  version: string;
-  path: string;
-  filter?: string;
-  _charset_?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postCrxPostPackageUpdate(
+  query: {
+    groupName: string;
+    packageName: string;
+    version: string;
+    path: string;
+    filter?: string;
+    _charset_?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.crx.postPackageUpdate({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -474,9 +566,15 @@ export async function postCrxPostPackageUpdate(query: {
  * @request GET :/crx/server/crx.default/jcr:root/.1.json
  * @readonly
  */
-export async function getCrxGetCrxdeStatus(root: string): Promise<string> {
+export async function getCrxGetCrxdeStatus(
+  root: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<string> {
   const result = await api.crx.getCrxdeStatus({
     root: root,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -495,11 +593,15 @@ export async function getEtcGetPackage(
   group: string,
   name: string,
   version: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getPackage({
     group: group,
     name: name,
     version: version,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -520,6 +622,7 @@ export async function getEtcGetPackageFilter(
   version: string,
   content: string,
   definition: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getPackageFilter({
     group: group,
@@ -527,6 +630,9 @@ export async function getEtcGetPackageFilter(
     version: version,
     content: content,
     definition: definition,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -543,9 +649,13 @@ export async function getEtcGetPackageFilter(
  */
 export async function getEtcGetAgents(
   runmode: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getAgents({
     runmode: runmode,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -562,10 +672,14 @@ export async function getEtcGetAgents(
 export async function deleteEtcDeleteAgent(
   runmode: string,
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.deleteAgent({
     runmode: runmode,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -583,10 +697,14 @@ export async function deleteEtcDeleteAgent(
 export async function getEtcGetAgent(
   runmode: string,
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.getAgent({
     runmode: runmode,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -655,11 +773,15 @@ export async function postEtcPostAgent(
   },
   runmode: string,
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.postAgent({
     query: query,
     runmode: runmode,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -679,9 +801,13 @@ export async function postEtcPostTruststorePkcs12(
     /** @format binary */
     "truststore.p12"?: File;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.postTruststorePkcs12({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -696,8 +822,14 @@ export async function postEtcPostTruststorePkcs12(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getEtcGetTruststore(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.etc.getTruststore({});
+export async function getEtcGetTruststore(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.etc.getTruststore({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
   } else {
@@ -711,8 +843,14 @@ export async function getEtcGetTruststore(): Promise<hasuraSdk.JSONValue> {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getLibsGetLoginPage(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.libs.getLoginPage({});
+export async function getLibsGetLoginPage(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.libs.getLoginPage({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
   } else {
@@ -725,16 +863,22 @@ export async function getLibsGetLoginPage(): Promise<hasuraSdk.JSONValue> {
  * @request POST :/libs/granite/security/post/authorizables
  * @allowrelaxedtypes
  */
-export async function postLibsPostAuthorizables(query: {
-  authorizableId: string;
-  intermediatePath: string;
-  createUser?: string;
-  createGroup?: string;
-  "rep:password"?: string;
-  "profile/givenName"?: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postLibsPostAuthorizables(
+  query: {
+    authorizableId: string;
+    intermediatePath: string;
+    createUser?: string;
+    createGroup?: string;
+    "rep:password"?: string;
+    "profile/givenName"?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.libs.postAuthorizables({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -764,10 +908,14 @@ export async function postLibsSslSetup(
     /** @format binary */
     privatekeyFile?: File;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.libs.sslSetup({
     query: query,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -794,10 +942,14 @@ export async function postLibsPostTruststore(
     /** @format binary */
     certificate?: File;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.libs.postTruststore({
     query: query,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -811,8 +963,14 @@ export async function postLibsPostTruststore(
  * @request GET :/libs/granite/security/truststore.json
  * @readonly
  */
-export async function getLibsGetTruststoreInfo(): Promise<TruststoreInfo> {
-  const result = await api.libs.getTruststoreInfo({});
+export async function getLibsGetTruststoreInfo(
+  headers?: hasuraSdk.JSONValue,
+): Promise<TruststoreInfo> {
+  const result = await api.libs.getTruststoreInfo({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -825,14 +983,20 @@ export async function getLibsGetTruststoreInfo(): Promise<TruststoreInfo> {
  * @request POST :/libs/replication/treeactivation.html
  * @allowrelaxedtypes
  */
-export async function postLibsPostTreeActivation(query: {
-  ignoredeactivated: boolean;
-  onlymodified: boolean;
-  path: string;
-  cmd: string;
-}): Promise<hasuraSdk.JSONValue> {
+export async function postLibsPostTreeActivation(
+  query: {
+    ignoredeactivated: boolean;
+    onlymodified: boolean;
+    path: string;
+    cmd: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.libs.postTreeActivation({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -849,10 +1013,14 @@ export async function postLibsPostTreeActivation(query: {
 export async function postSystemPostBundle(
   query: { action: string },
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.system.postBundle({
     query: query,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -868,9 +1036,13 @@ export async function postSystemPostBundle(
  */
 export async function getSystemGetBundleInfo(
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<BundleInfo> {
   const result = await api.system.getBundleInfo({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -884,8 +1056,14 @@ export async function getSystemGetBundleInfo(
  * @request GET :/system/console/configMgr
  * @readonly
  */
-export async function getSystemGetConfigMgr(): Promise<string> {
-  const result = await api.system.getConfigMgr({});
+export async function getSystemGetConfigMgr(
+  headers?: hasuraSdk.JSONValue,
+): Promise<string> {
+  const result = await api.system.getConfigMgr({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -897,40 +1075,46 @@ export async function getSystemGetConfigMgr(): Promise<string> {
  * undefined
  * @request POST :/system/console/configMgr/com.adobe.granite.auth.saml.SamlAuthenticationHandler
  */
-export async function postSystemPostSamlConfiguration(query: {
-  post?: boolean;
-  apply?: boolean;
-  delete?: boolean;
-  action?: string;
-  $location?: string;
-  path?: string[];
-  serviceRanking?: number;
-  idpUrl?: string;
-  idpCertAlias?: string;
-  idpHttpRedirect?: boolean;
-  serviceProviderEntityId?: string;
-  assertionConsumerServiceURL?: string;
-  spPrivateKeyAlias?: string;
-  keyStorePassword?: string;
-  defaultRedirectUrl?: string;
-  userIDAttribute?: string;
-  useEncryption?: boolean;
-  createUser?: boolean;
-  addGroupMemberships?: boolean;
-  groupMembershipAttribute?: string;
-  defaultGroups?: string[];
-  nameIdFormat?: string;
-  synchronizeAttributes?: string[];
-  handleLogout?: boolean;
-  logoutUrl?: string;
-  clockTolerance?: number;
-  digestMethod?: string;
-  signatureMethod?: string;
-  userIntermediatePath?: string;
-  propertylist?: string[];
-}): Promise<SamlConfigurationInfo> {
+export async function postSystemPostSamlConfiguration(
+  query: {
+    post?: boolean;
+    apply?: boolean;
+    delete?: boolean;
+    action?: string;
+    $location?: string;
+    path?: string[];
+    serviceRanking?: number;
+    idpUrl?: string;
+    idpCertAlias?: string;
+    idpHttpRedirect?: boolean;
+    serviceProviderEntityId?: string;
+    assertionConsumerServiceURL?: string;
+    spPrivateKeyAlias?: string;
+    keyStorePassword?: string;
+    defaultRedirectUrl?: string;
+    userIDAttribute?: string;
+    useEncryption?: boolean;
+    createUser?: boolean;
+    addGroupMemberships?: boolean;
+    groupMembershipAttribute?: string;
+    defaultGroups?: string[];
+    nameIdFormat?: string;
+    synchronizeAttributes?: string[];
+    handleLogout?: boolean;
+    logoutUrl?: string;
+    clockTolerance?: number;
+    digestMethod?: string;
+    signatureMethod?: string;
+    userIntermediatePath?: string;
+    propertylist?: string[];
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<SamlConfigurationInfo> {
   const result = await api.system.postSamlConfiguration({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -947,10 +1131,14 @@ export async function postSystemPostSamlConfiguration(query: {
 export async function postSystemPostJmxRepository(
   action: string,
   type: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.system.postJmxRepository({
     action: action,
     type: type,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -965,8 +1153,14 @@ export async function postSystemPostJmxRepository(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getSystemGetAemProductInfo(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.system.getAemProductInfo({});
+export async function getSystemGetAemProductInfo(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.system.getAemProductInfo({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
   } else {
@@ -980,12 +1174,15 @@ export async function getSystemGetAemProductInfo(): Promise<hasuraSdk.JSONValue>
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getSystemGetAemHealthCheck(query: {
-  tags?: string;
-  combineTagsOr?: boolean;
-}): Promise<hasuraSdk.JSONValue> {
+export async function getSystemGetAemHealthCheck(
+  query: { tags?: string; combineTagsOr?: boolean },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.system.getAemHealthCheck({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -1021,12 +1218,16 @@ export async function postIntermediatePathPostAuthorizableKeystore(
     /** @format binary */
     pk?: File;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<KeystoreInfo> {
   const result = await api.intermediatePath.postAuthorizableKeystore({
     query: query,
     intermediatePath: intermediatePath,
     authorizableId: authorizableId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1043,10 +1244,14 @@ export async function postIntermediatePathPostAuthorizableKeystore(
 export async function getIntermediatePathGetAuthorizableKeystore(
   intermediatePath: string,
   authorizableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<KeystoreInfo> {
   const result = await api.intermediatePath.getAuthorizableKeystore({
     intermediatePath: intermediatePath,
     authorizableId: authorizableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1064,10 +1269,14 @@ export async function getIntermediatePathGetAuthorizableKeystore(
 export async function getIntermediatePathGetKeystore(
   intermediatePath: string,
   authorizableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.intermediatePath.getKeystore({
     intermediatePath: intermediatePath,
     authorizableId: authorizableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -1084,10 +1293,14 @@ export async function getIntermediatePathGetKeystore(
 export async function postPathPostPath(
   query: { "jcr:primaryType": string; ":name": string },
   path: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postPath({
     query: query,
     path: path,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -1104,10 +1317,14 @@ export async function postPathPostPath(
 export async function deletePathDeleteNode(
   path: string,
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.deleteNode({
     path: path,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -1125,10 +1342,14 @@ export async function deletePathDeleteNode(
 export async function getPathGetNode(
   path: string,
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.getNode({
     path: path,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -1151,12 +1372,16 @@ export async function postPathPostNode(
     /** @format binary */
     file?: File;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postNode({
     query: query,
     path: path,
     name: name,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -1174,11 +1399,15 @@ export async function postPathPostNodeRw(
   query: { addMembers?: string },
   path: string,
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postNodeRw({
     query: query,
     path: path,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);

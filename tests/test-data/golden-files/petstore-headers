@@ -29,9 +29,13 @@ const api = new Api({
 export async function postPetAddPet(
   /** Request body */
   data: Pet,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pet> {
   const result = await api.pet.addPet({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -48,9 +52,13 @@ export async function postPetAddPet(
 export async function putPetUpdatePet(
   /** Request body */
   data: Pet,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pet> {
   const result = await api.pet.updatePet({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -65,14 +73,20 @@ export async function putPetUpdatePet(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getPetFindPetsByStatus(query: {
-  /**
-   * Status values that need to be considered for filter
-   */
-  status?: "available" | "pending" | "sold";
-}): Promise<Pet[]> {
+export async function getPetFindPetsByStatus(
+  query: {
+    /**
+     * Status values that need to be considered for filter
+     */
+    status?: "available" | "pending" | "sold";
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Pet[]> {
   const result = await api.pet.findPetsByStatus({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -87,14 +101,20 @@ export async function getPetFindPetsByStatus(query: {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getPetFindPetsByTags(query: {
-  /**
-   * Tags to filter by
-   */
-  tags?: string[];
-}): Promise<Pet[]> {
+export async function getPetFindPetsByTags(
+  query: {
+    /**
+     * Tags to filter by
+     */
+    tags?: string[];
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Pet[]> {
   const result = await api.pet.findPetsByTags({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -114,9 +134,13 @@ export async function getPetGetPetById(
    * ID of pet to return
    */
   petId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pet> {
   const result = await api.pet.getPetById({
     petId: petId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -145,10 +169,14 @@ export async function postPetUpdatePetWithForm(
    * ID of pet that needs to be updated
    */
   petId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.pet.updatePetWithForm({
     query: query,
     petId: petId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -167,9 +195,13 @@ export async function deletePetDeletePet(
    * Pet id to delete
    */
   petId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.pet.deletePet({
     petId: petId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -195,11 +227,15 @@ export async function postPetUploadFile(
   petId: number,
   /** Request body */
   data: File,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ApiResponse> {
   const result = await api.pet.uploadFile({
     query: query,
     petId: petId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -214,8 +250,14 @@ export async function postPetUploadFile(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getStoreGetInventory(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.store.getInventory({});
+export async function getStoreGetInventory(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.store.getInventory({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
   } else {
@@ -231,9 +273,13 @@ export async function getStoreGetInventory(): Promise<hasuraSdk.JSONValue> {
 export async function postStorePlaceOrder(
   /** Request body */
   data: Order,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Order> {
   const result = await api.store.placeOrder({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -253,9 +299,13 @@ export async function getStoreGetOrderById(
    * ID of order that needs to be fetched
    */
   orderId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Order> {
   const result = await api.store.getOrderById({
     orderId: orderId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -274,9 +324,13 @@ export async function deleteStoreDeleteOrder(
    * ID of the order that needs to be deleted
    */
   orderId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.store.deleteOrder({
     orderId: orderId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -293,9 +347,13 @@ export async function deleteStoreDeleteOrder(
 export async function postUserCreateUser(
   /** Request body */
   data: User,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.user.createUser({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -311,9 +369,13 @@ export async function postUserCreateUser(
 export async function postUserCreateUsersWithListInput(
   /** Request body */
   data: User[],
+  headers?: hasuraSdk.JSONValue,
 ): Promise<User> {
   const result = await api.user.createUsersWithListInput({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -327,18 +389,24 @@ export async function postUserCreateUsersWithListInput(
  * @request GET :/user/login
  * @readonly
  */
-export async function getUserLoginUser(query: {
-  /**
-   * The user name for login
-   */
-  username?: string;
-  /**
-   * The password for login in clear text
-   */
-  password?: string;
-}): Promise<string> {
+export async function getUserLoginUser(
+  query: {
+    /**
+     * The user name for login
+     */
+    username?: string;
+    /**
+     * The password for login in clear text
+     */
+    password?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<string> {
   const result = await api.user.loginUser({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -353,8 +421,14 @@ export async function getUserLoginUser(query: {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getUserLogoutUser(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.user.logoutUser({});
+export async function getUserLogoutUser(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.user.logoutUser({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
   } else {
@@ -372,9 +446,13 @@ export async function getUserGetUserByName(
    * The name that needs to be fetched. Use user1 for testing.
    */
   username: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<User> {
   const result = await api.user.getUserByName({
     username: username,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -395,10 +473,14 @@ export async function putUserUpdateUser(
   username: string,
   /** Request body */
   data: User,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.user.updateUser({
     username: username,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -417,9 +499,13 @@ export async function deleteUserDeleteUser(
    * The name that needs to be deleted
    */
   username: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.user.deleteUser({
     username: username,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
