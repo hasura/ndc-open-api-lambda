@@ -31,6 +31,6 @@ export type ParsedApiRoute = {
 };
 
 export type ParsedHeaders = {
-  headers: Set<string> | undefined,
-  rendered: string | undefined,
+  headers: Set<string> | undefined;
+  rendered: string | undefined;
 };

@@ -11,7 +11,6 @@ import * as logger from "../../../util/logger";
 export function parseRouteHeaders(
   route: routeTypes.ApiRoute,
 ): routeTypes.ParsedHeaders | undefined {
-
   let localHeaders = new Set<string>();
 
   if (!schemaTypes.schemaPropertyIsTypeObject(route.headersObjectSchema)) {
@@ -20,12 +19,13 @@ export function parseRouteHeaders(
       `Cannot parse headers for API Route '${basicChars.method.toUpperCase()} ${basicChars.route}': route.headersObjectSchema is not of type object\nroute.headersObjectSchema: ${JSON.stringify(route.headersObjectSchema)}`,
     );
   } else {
-    localHeaders = route.headersObjectSchema ? new Set<string>(
-      Object.keys(route.headersObjectSchema.properties),
-    ) : new Set<string>();
+    localHeaders = route.headersObjectSchema
+      ? new Set<string>(Object.keys(route.headersObjectSchema.properties))
+      : new Set<string>();
   }
 
-  const globalHeaders = /* context.getInstance().getGlobalHeaders()  ?? */ new Set<string>();
+  const globalHeaders =
+    /* context.getInstance().getGlobalHeaders()  ?? */ new Set<string>();
   const allHeaders = new Set<string>([...localHeaders, ...globalHeaders]);
 
   if (allHeaders.size === 0) {
@@ -33,11 +33,11 @@ export function parseRouteHeaders(
     return {
       headers: undefined,
       rendered: undefined,
-    }
+    };
   }
 
   return {
     headers: allHeaders,
     rendered: undefined,
-  }
+  };
 }
