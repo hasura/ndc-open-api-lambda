@@ -1,7 +1,6 @@
 import * as schemaTypes from "./types";
 import * as routeTypes from "./route-types";
 import * as logger from "../../../util/logger";
-import * as context from "../../context";
 
 /**
  *
@@ -24,6 +23,12 @@ export function parseHeaders(
   return headerMap;
 }
 
+/**
+ * For now, we won't be parsing headers for from api routes.
+ * The DDN engine will send headers in as a parameter in the API requests
+ * that we can simply add in our api calls.
+ */
+
 export function parseRouteHeaders(
   route: routeTypes.ApiRoute,
 ): routeTypes.ParsedHeaders | undefined {
@@ -41,7 +46,7 @@ export function parseRouteHeaders(
     ) : new Set<string>();
   }
 
-  const globalHeaders = context.getInstance().getGlobalHeaders() ?? new Set<string>();
+  const globalHeaders = /* context.getInstance().getGlobalHeaders()  ?? */ new Set<string>();
   const allHeaders = new Set<string>([...localHeaders, ...globalHeaders]);
 
   if (allHeaders.size === 0) {
