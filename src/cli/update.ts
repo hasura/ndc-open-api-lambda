@@ -35,14 +35,6 @@ Further reading:
   )
   .addOption(
     new Option(
-      "-H --headers <key=value...>",
-      "Headers to be included in the requests",
-    )
-      .env("NDC_OAS_HEADERS")
-      .argParser(headerParser),
-  )
-  .addOption(
-    new Option(
       "--overwrite [bool]",
       "Overwrite files if already present in the output directory.",
     )
@@ -64,7 +56,6 @@ Further reading:
       args.openApi,
       args.outputDirectory,
       args.overwrite === "true",
-      args.headers,
       args.baseUrl,
       args.ndcLambdaSdk,
     );
@@ -88,7 +79,6 @@ async function main(
   openApi: string,
   outputDir: string,
   overwrite: boolean,
-  headers: string[],
   baseUrl: string | undefined,
   ndcLambdaSdk: string | undefined,
 ) {
@@ -99,7 +89,6 @@ async function main(
   try {
     await app.runApp({
       openApiUri: openApi,
-      headers: headers && headers.length > 0 ? headers[0] : undefined,
       baseUrl: baseUrl,
     });
   } catch (e) {

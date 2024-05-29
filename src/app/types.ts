@@ -6,6 +6,5 @@ export type GeneratedCode = {
 
 export type GenerateCodeInput = {
   openApiUri: string;
-  headers?: string;
   baseUrl?: string;
 };

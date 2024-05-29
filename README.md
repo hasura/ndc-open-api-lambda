@@ -44,11 +44,10 @@ This connector is published as a Docker Image. The image name is `ghcr.io/hasura
 
 1. `NDC_OAS_DOCUMENT_URI`: The URI to your Open API Document. If you're using a file instead of a HTTP link, please ensure that it is named `swagger.json` and is present in the root directory of the volume being mounted to `/etc/connector`. This env var is nullable.
 2. `NDC_OAS_BASE_URL`: The base URL of your API. This env var is nullable.
-3. `NDC_OAS_HEADERS`: Headers to be added to your API calls. The expected syntax is `key1=value1&key2=value2&key3=value3....`. This env var is nullable.
-4. `NDC_OAS_FILE_OVERWRITE`: Boolean flag to allow previously generated files to be over-written. Defaults to `false`. Please note that the codegen will fail with an error if this is set to `false` and the files that the codegen would create already exist.
-5. `HASURA_PLUGIN_LOG_LEVEL`: The log level. Possible values: `trace`, `debug`, `info`, `warn`, `error`, `fatal`, `panic`. Defaults to `info`
-6. `NDC_OAS_LAMBDA_PRETTY_LOGS`: Boolean flag to print human readable logs instead of JSON
-7. `NDC_LAMBDA_SDK_VERSION`: NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version
+3. `NDC_OAS_FILE_OVERWRITE`: Boolean flag to allow previously generated files to be over-written. Defaults to `false`. Please note that the codegen will fail with an error if this is set to `false` and the files that the codegen would create already exist.
+4. `HASURA_PLUGIN_LOG_LEVEL`: The log level. Possible values: `trace`, `debug`, `info`, `warn`, `error`, `fatal`, `panic`. Defaults to `info`
+5. `NDC_OAS_LAMBDA_PRETTY_LOGS`: Boolean flag to print human readable logs instead of JSON
+6. `NDC_LAMBDA_SDK_VERSION`: NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version
 
 ### Usage without the DDN CLI
 
@@ -69,12 +68,6 @@ docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API 
 
 # run the code generation (using CLI flags)
 docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v0.0.1-alpha update --open-api ${url to open API document}
-
-# with headers (using env vars)
-docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_HEADERS=${key1=value1&key2=value2&key3=value3...} ghcr.io/hasura/ndc-open-api-lambda:v0.0.1-alpha update
-
-# with headers (using CLI flags)
-docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v0.0.1-alpha update --open-api ${url to open API document} -H key1=value1 -H key2=value2 -H key3=value3
 
 # with baseUrl (using env vars)
 docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_BASE_URL=http://demoapi.com/ ghcr.io/hasura/ndc-open-api-lambda:v0.0.1-alpha update
@@ -109,11 +102,8 @@ docker run --rm ndc-oas-lambda:latest update -h
 # run the code generation
 docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ndc-oas-lambda:latest update
 
-# with headers
-docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_HEADERS=${key1=value1&key2=value2&key3=value3...} ndc-oas-lambda:latest update
-
-# with headers and baseUrl
-docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_HEADERS=${key1=value1&key2=value2&key3=value3...} -e NDC_OAS_BASE_URL=http://demoapi.com/ ndc-oas-lambda:latest update
+# with baseUrl
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_BASE_URL=http://demoapi.com/ ndc-oas-lambda:latest update
 
 # **** END: Examples ****
 
