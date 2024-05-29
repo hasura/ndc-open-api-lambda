@@ -5,12 +5,14 @@ import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
 import * as functionParamsParser from "../parser/open-api/types-parser";
 import * as openApiParser from "../parser/open-api/open-api-parser";
 import * as types from "./types";
+import * as schemaTypes from "../parser/open-api/types";
+import * as routeTypes from "../parser/open-api/route-types";
 
 export async function generateApiTsCode(
   openApiUri: string,
 ): Promise<types.GeneratedApiTsCode> {
-  const generatedSchemaComponents: swaggerTypescriptApi.SchemaComponent[] = [];
-  const generatedRoutes: swaggerTypescriptApi.ParsedRoute[] = [];
+  const generatedSchemaComponents: schemaTypes.Schema[] = [];
+  const generatedRoutes: routeTypes.ApiRoute[] = [];
   const generatedTypeNames: types.GeneratedTypeName[] = [];
 
   let openApiUrl: string = "";
@@ -36,12 +38,13 @@ export async function generateApiTsCode(
        * Contains the full definition of the type, along with individual variables in objects
        */
       onCreateComponent: (component) => {
-        generatedSchemaComponents.push(component);
+        const anyComponent: any = component;
+        generatedSchemaComponents.push(anyComponent as schemaTypes.Schema);
       },
 
       onCreateRoute: (routeData) => {
         const route = processApiRoute(routeData, typedOpenApiComponents);
-        generatedRoutes.push(routeData);
+        generatedRoutes.push(routeData as routeTypes.ApiRoute);
         return route;
       },
 
