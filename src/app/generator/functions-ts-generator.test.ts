@@ -19,7 +19,6 @@ const tests: {
   openApiUri: string; // for now, we only consider files on disks in test cases
   goldenFile: string;
   baseUrl?: string;
-  headers?: string;
   _legacyApiComponents?: legacyApiTsGenerator.ApiComponents;
   _generatedApiTsComponents?: types.GeneratedApiTsCode;
   _goldenFileContent?: string;
@@ -36,19 +35,6 @@ const tests: {
     openApiUri: "./open-api-docs/petstore.yaml",
     goldenFile: "./golden-files/petstore",
     baseUrl: "http://localhost:13191",
-  },
-  {
-    name: "DemoBlogApi_headers",
-    openApiUri: "./open-api-docs/demo-blog-api.json",
-    goldenFile: "./golden-files/demo-blog-api-headers",
-    headers: "auth=some-token=1&type=json",
-    baseUrl: "http://mybaseurl/abc/def",
-  },
-  {
-    name: "Petstore_headers",
-    openApiUri: "./open-api-docs/petstore.yaml",
-    goldenFile: "./golden-files/petstore-headers",
-    headers: "auth=some-token=1&type=json,xml,text",
   },
   {
     name: "GitlabApi",
@@ -126,10 +112,6 @@ async function testGenerateFunctionsTsCode() {
         testCase._goldenFileContent = readFileSync(
           testCase.goldenFile,
         ).toString();
-
-        if (testCase.headers) {
-          testCase._headersMap = headerParser.parseHeaders(testCase.headers);
-        }
 
         testCase._generatedApiTsComponents =
           await apiTsGenerator.generateApiTsCode(testCase.openApiUri);

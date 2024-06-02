@@ -30,4 +30,7 @@ export type ParsedApiRoute = {
   headers: ParsedHeaders | undefined;
 };
 
-export type ParsedHeaders = Set<string>;
+export type ParsedHeaders = {
+  headers: Set<string> | undefined;
+  rendered: string | undefined;
+};

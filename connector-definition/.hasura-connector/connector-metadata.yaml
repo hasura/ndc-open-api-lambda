@@ -5,8 +5,6 @@ supportedEnvironmentVariables:
     description: "The URI of OAS Document. If not provided, the connector will look for `/etc/connector/swagger.json` by default"
   - name: NDC_OAS_BASE_URL
     description: "Base url of the API"
-  - name: NDC_OAS_HEADERS
-    description: "Headers to be added to api call. Expected format: key1=value1&key2=value2&key3=value3...."
   - name: NDC_OAS_LAMBDA_PRETTY_LOGS
     description: "Print logs in a human readable format instead of JSON"
     default: "true"
@@ -16,7 +14,7 @@ supportedEnvironmentVariables:
   - name: NDC_LAMBDA_SDK_VERSION
     description: "Version of the NDC Lambda SDK to be used"
 commands:
-  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -e NDC_OAS_BASE_URL -e NDC_OAS_HEADERS -e NDC_OAS_DOCUMENT_URI -e NDC_OAS_LAMBDA_PRETTY_LOGS -e NDC_OAS_FILE_OVERWRITE -e NDC_LAMBDA_SDK_VERSION -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector ghcr.io/hasura/ndc-open-api-lambda:v0.0.2-alpha update"
+  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -e NDC_OAS_BASE_URL -e NDC_OAS_DOCUMENT_URI -e NDC_OAS_LAMBDA_PRETTY_LOGS -e NDC_OAS_FILE_OVERWRITE -e NDC_LAMBDA_SDK_VERSION -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector ghcr.io/hasura/ndc-open-api-lambda:v0.0.2-alpha update"
 dockerComposeWatch:
   # Rebuild the container if a new package restore is required because package[-lock].json changed
   - path: package.json

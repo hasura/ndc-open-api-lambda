@@ -80,8 +80,14 @@ const api = new Api({
  * @request GET :/v3/application/settings
  * @readonly
  */
-export async function getV3GetV3ApplicationSettings(): Promise<ApplicationSetting> {
-  const result = await api.v3.getV3ApplicationSettings({});
+export async function getV3GetV3ApplicationSettings(
+  headers?: hasuraSdk.JSONValue,
+): Promise<ApplicationSetting> {
+  const result = await api.v3.getV3ApplicationSettings({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -293,9 +299,13 @@ export async function putV3PutV3ApplicationSettings(
      */
     housekeeping_gc_period: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ApplicationSetting> {
   const result = await api.v3.putV3ApplicationSettings({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -315,9 +325,13 @@ export async function postV3PostV3CiLint(
     /** Content of .gitlab-ci.yml */
     content: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3CiLint({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -332,8 +346,14 @@ export async function postV3PostV3CiLint(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3DeployKeys(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3DeployKeys({});
+export async function getV3GetV3DeployKeys(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3DeployKeys({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -346,8 +366,14 @@ export async function getV3GetV3DeployKeys(): Promise<hasuraSdk.JSONValue> {
  * @request GET :/v3/dockerfiles
  * @readonly
  */
-export async function getV3GetV3Dockerfiles(): Promise<TemplatesList> {
-  const result = await api.v3.getV3Dockerfiles({});
+export async function getV3GetV3Dockerfiles(
+  headers?: hasuraSdk.JSONValue,
+): Promise<TemplatesList> {
+  const result = await api.v3.getV3Dockerfiles({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -365,9 +391,13 @@ export async function getV3GetV3DockerfilesName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Template> {
   const result = await api.v3.getV3DockerfilesName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -381,8 +411,14 @@ export async function getV3GetV3DockerfilesName(
  * @request GET :/v3/gitignores
  * @readonly
  */
-export async function getV3GetV3Gitignores(): Promise<TemplatesList> {
-  const result = await api.v3.getV3Gitignores({});
+export async function getV3GetV3Gitignores(
+  headers?: hasuraSdk.JSONValue,
+): Promise<TemplatesList> {
+  const result = await api.v3.getV3Gitignores({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -400,9 +436,13 @@ export async function getV3GetV3GitignoresName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Template> {
   const result = await api.v3.getV3GitignoresName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -416,8 +456,14 @@ export async function getV3GetV3GitignoresName(
  * @request GET :/v3/gitlab_ci_ymls
  * @readonly
  */
-export async function getV3GetV3GitlabCiYmls(): Promise<TemplatesList> {
-  const result = await api.v3.getV3GitlabCiYmls({});
+export async function getV3GetV3GitlabCiYmls(
+  headers?: hasuraSdk.JSONValue,
+): Promise<TemplatesList> {
+  const result = await api.v3.getV3GitlabCiYmls({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -435,9 +481,13 @@ export async function getV3GetV3GitlabCiYmlsName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Template> {
   const result = await api.v3.getV3GitlabCiYmlsName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -488,10 +538,14 @@ export async function getV3GetV3Groups(
     /** Array of group ids to exclude from list */
     skip_groups?: number[];
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Group> {
   const result = await api.v3.getV3Groups({
     query: query,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -523,9 +577,13 @@ export async function postV3PostV3Groups(
     /** Allow users to request member access */
     request_access_enabled?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Group> {
   const result = await api.v3.postV3Groups({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -539,22 +597,28 @@ export async function postV3PostV3Groups(
  * @request GET :/v3/groups/owned
  * @readonly
  */
-export async function getV3GetV3GroupsOwned(query: {
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-  /**
-   * Include project statistics
-   */
-  statistics?: boolean;
-}): Promise<Group> {
+export async function getV3GetV3GroupsOwned(
+  query: {
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+    /**
+     * Include project statistics
+     */
+    statistics?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Group> {
   const result = await api.v3.getV3GroupsOwned({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -573,9 +637,13 @@ export async function deleteV3DeleteV3GroupsId(
    * The ID of a group
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3GroupsId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -594,9 +662,13 @@ export async function getV3GetV3GroupsId(
    * The ID of a group
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<GroupDetail> {
   const result = await api.v3.getV3GroupsId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -632,10 +704,14 @@ export async function putV3PutV3GroupsId(
     /** Allow users to request member access */
     request_access_enabled?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Group> {
   const result = await api.v3.putV3GroupsId({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -664,10 +740,14 @@ export async function getV3GetV3GroupsIdAccessRequests(
    * The group ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AccessRequester> {
   const result = await api.v3.getV3GroupsIdAccessRequests({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -685,9 +765,13 @@ export async function postV3PostV3GroupsIdAccessRequests(
    * The group ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AccessRequester> {
   const result = await api.v3.postV3GroupsIdAccessRequests({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -710,10 +794,14 @@ export async function deleteV3DeleteV3GroupsIdAccessRequestsUserId(
    * The user ID of the access requester
    */
   userId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3GroupsIdAccessRequestsUserId({
     id: id,
     userId: userId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -743,11 +831,15 @@ export async function putV3PutV3GroupsIdAccessRequestsUserIdApprove(
      */
     access_level?: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.putV3GroupsIdAccessRequestsUserIdApprove({
     id: id,
     userId: userId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -797,10 +889,14 @@ export async function getV3GetV3GroupsIdIssues(
    * The ID of a group
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.getV3GroupsIdIssues({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -833,10 +929,14 @@ export async function getV3GetV3GroupsIdMembers(
    * The group ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.getV3GroupsIdMembers({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -872,10 +972,14 @@ export async function postV3PostV3GroupsIdMembers(
      */
     expires_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.postV3GroupsIdMembers({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -898,10 +1002,14 @@ export async function deleteV3DeleteV3GroupsIdMembersUserId(
    * The user ID of the member
    */
   userId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3GroupsIdMembersUserId({
     id: id,
     userId: userId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -924,10 +1032,14 @@ export async function getV3GetV3GroupsIdMembersUserId(
    * The user ID of the member
    */
   userId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.getV3GroupsIdMembersUserId({
     id: id,
     userId: userId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -962,11 +1074,15 @@ export async function putV3PutV3GroupsIdMembersUserId(
      */
     expires_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.putV3GroupsIdMembersUserId({
     id: id,
     userId: userId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -985,9 +1101,13 @@ export async function getV3GetV3GroupsIdNotificationSettings(
    * The group ID or project ID or project NAMESPACE/PROJECT_NAME
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<NotificationSetting> {
   const result = await api.v3.getV3GroupsIdNotificationSettings({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1034,10 +1154,14 @@ export async function putV3PutV3GroupsIdNotificationSettings(
     /** Enable/disable this notification */
     success_pipeline?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<NotificationSetting> {
   const result = await api.v3.putV3GroupsIdNotificationSettings({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1097,10 +1221,14 @@ export async function getV3GetV3GroupsIdProjects(
    * The ID of a group
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.getV3GroupsIdProjects({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1122,10 +1250,14 @@ export async function postV3PostV3GroupsIdProjectsProjectId(
    * The ID or path of the project
    */
   projectId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<GroupDetail> {
   const result = await api.v3.postV3GroupsIdProjectsProjectId({
     id: id,
     projectId: projectId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1139,8 +1271,14 @@ export async function postV3PostV3GroupsIdProjectsProjectId(
  * @request GET :/v3/hooks
  * @readonly
  */
-export async function getV3GetV3Hooks(): Promise<Hook> {
-  const result = await api.v3.getV3Hooks({});
+export async function getV3GetV3Hooks(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Hook> {
+  const result = await api.v3.getV3Hooks({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -1166,9 +1304,13 @@ export async function postV3PostV3Hooks(
     /** Do SSL verification when triggering the hook */
     enable_ssl_verification?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Hook> {
   const result = await api.v3.postV3Hooks({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1186,9 +1328,13 @@ export async function deleteV3DeleteV3HooksId(
    * The ID of the system hook
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Hook> {
   const result = await api.v3.deleteV3HooksId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1207,9 +1353,13 @@ export async function getV3GetV3HooksId(
    * The ID of the system hook
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Hook> {
   const result = await api.v3.getV3HooksId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1223,8 +1373,14 @@ export async function getV3GetV3HooksId(
  * @request POST :/v3/internal/allowed
  * @allowrelaxedtypes
  */
-export async function postV3PostV3InternalAllowed(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.postV3InternalAllowed({});
+export async function postV3PostV3InternalAllowed(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.postV3InternalAllowed({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -1238,8 +1394,14 @@ export async function postV3PostV3InternalAllowed(): Promise<hasuraSdk.JSONValue
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3InternalBroadcastMessage(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3InternalBroadcastMessage({});
+export async function getV3GetV3InternalBroadcastMessage(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3InternalBroadcastMessage({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -1253,8 +1415,14 @@ export async function getV3GetV3InternalBroadcastMessage(): Promise<hasuraSdk.JS
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3InternalCheck(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3InternalCheck({});
+export async function getV3GetV3InternalCheck(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3InternalCheck({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -1268,8 +1436,14 @@ export async function getV3GetV3InternalCheck(): Promise<hasuraSdk.JSONValue> {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3InternalDiscover(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3InternalDiscover({});
+export async function getV3GetV3InternalDiscover(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3InternalDiscover({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -1282,8 +1456,14 @@ export async function getV3GetV3InternalDiscover(): Promise<hasuraSdk.JSONValue>
  * @request POST :/v3/internal/lfs_authenticate
  * @allowrelaxedtypes
  */
-export async function postV3PostV3InternalLfsAuthenticate(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.postV3InternalLfsAuthenticate({});
+export async function postV3PostV3InternalLfsAuthenticate(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.postV3InternalLfsAuthenticate({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -1297,8 +1477,14 @@ export async function postV3PostV3InternalLfsAuthenticate(): Promise<hasuraSdk.J
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3InternalMergeRequestUrls(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3InternalMergeRequestUrls({});
+export async function getV3GetV3InternalMergeRequestUrls(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3InternalMergeRequestUrls({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -1311,8 +1497,14 @@ export async function getV3GetV3InternalMergeRequestUrls(): Promise<hasuraSdk.JS
  * @request POST :/v3/internal/two_factor_recovery_codes
  * @allowrelaxedtypes
  */
-export async function postV3PostV3InternalTwoFactorRecoveryCodes(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.postV3InternalTwoFactorRecoveryCodes({});
+export async function postV3PostV3InternalTwoFactorRecoveryCodes(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.postV3InternalTwoFactorRecoveryCodes({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -1326,38 +1518,44 @@ export async function postV3PostV3InternalTwoFactorRecoveryCodes(): Promise<hasu
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3Issues(query: {
-  /**
-   * Return opened, closed, or all issues
-   */
-  state?: "opened" | "closed" | "all";
-  /**
-   * Comma-separated list of label names
-   */
-  labels?: string;
-  /**
-   * Return issues for a specific milestone
-   */
-  milestone?: string;
-  /**
-   * Return issues ordered by `created_at` or `updated_at` fields.
-   */
-  order_by?: "created_at" | "updated_at";
-  /**
-   * Return issues sorted in `asc` or `desc` order.
-   */
-  sort?: "asc" | "desc";
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<Issue> {
+export async function getV3GetV3Issues(
+  query: {
+    /**
+     * Return opened, closed, or all issues
+     */
+    state?: "opened" | "closed" | "all";
+    /**
+     * Comma-separated list of label names
+     */
+    labels?: string;
+    /**
+     * Return issues for a specific milestone
+     */
+    milestone?: string;
+    /**
+     * Return issues ordered by `created_at` or `updated_at` fields.
+     */
+    order_by?: "created_at" | "updated_at";
+    /**
+     * Return issues sorted in `asc` or `desc` order.
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Issue> {
   const result = await api.v3.getV3Issues({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1371,9 +1569,15 @@ export async function getV3GetV3Issues(query: {
  * @request GET :/v3/keys/{id}
  * @readonly
  */
-export async function getV3GetV3KeysId(id: number): Promise<SSHKeyWithUser> {
+export async function getV3GetV3KeysId(
+  id: number,
+  headers?: hasuraSdk.JSONValue,
+): Promise<SSHKeyWithUser> {
   const result = await api.v3.getV3KeysId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1387,14 +1591,20 @@ export async function getV3GetV3KeysId(id: number): Promise<SSHKeyWithUser> {
  * @request GET :/v3/licenses
  * @readonly
  */
-export async function getV3GetV3Licenses(query: {
-  /**
-   * If passed, returns only popular licenses
-   */
-  popular?: boolean;
-}): Promise<RepoLicense> {
+export async function getV3GetV3Licenses(
+  query: {
+    /**
+     * If passed, returns only popular licenses
+     */
+    popular?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<RepoLicense> {
   const result = await api.v3.getV3Licenses({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1413,9 +1623,13 @@ export async function getV3GetV3LicensesName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoLicense> {
   const result = await api.v3.getV3LicensesName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1429,22 +1643,28 @@ export async function getV3GetV3LicensesName(
  * @request GET :/v3/namespaces
  * @readonly
  */
-export async function getV3GetV3Namespaces(query: {
-  /**
-   * Search query for namespaces
-   */
-  search?: string;
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<Namespace> {
+export async function getV3GetV3Namespaces(
+  query: {
+    /**
+     * Search query for namespaces
+     */
+    search?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Namespace> {
   const result = await api.v3.getV3Namespaces({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1458,8 +1678,14 @@ export async function getV3GetV3Namespaces(query: {
  * @request GET :/v3/notification_settings
  * @readonly
  */
-export async function getV3GetV3NotificationSettings(): Promise<GlobalNotificationSetting> {
-  const result = await api.v3.getV3NotificationSettings({});
+export async function getV3GetV3NotificationSettings(
+  headers?: hasuraSdk.JSONValue,
+): Promise<GlobalNotificationSetting> {
+  const result = await api.v3.getV3NotificationSettings({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -1503,9 +1729,13 @@ export async function putV3PutV3NotificationSettings(
     /** Enable/disable this notification */
     success_pipeline?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<GlobalNotificationSetting> {
   const result = await api.v3.putV3NotificationSettings({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1520,48 +1750,54 @@ export async function putV3PutV3NotificationSettings(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3Projects(query: {
-  /**
-   * Return projects ordered by field
-   */
-  order_by?:
-    | "id"
-    | "name"
-    | "path"
-    | "created_at"
-    | "updated_at"
-    | "last_activity_at";
-  /**
-   * Return projects sorted in ascending and descending order
-   */
-  sort?: "asc" | "desc";
-  /**
-   * Limit by archived status
-   */
-  archived?: boolean;
-  /**
-   * Limit by visibility
-   */
-  visibility?: "public" | "internal" | "private";
-  /**
-   * Return list of authorized projects matching the search criteria
-   */
-  search?: string;
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-  /**
-   * Return only the ID, URL, name, and path of each project
-   */
-  simple?: boolean;
-}): Promise<BasicProjectDetails> {
+export async function getV3GetV3Projects(
+  query: {
+    /**
+     * Return projects ordered by field
+     */
+    order_by?:
+      | "id"
+      | "name"
+      | "path"
+      | "created_at"
+      | "updated_at"
+      | "last_activity_at";
+    /**
+     * Return projects sorted in ascending and descending order
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Limit by archived status
+     */
+    archived?: boolean;
+    /**
+     * Limit by visibility
+     */
+    visibility?: "public" | "internal" | "private";
+    /**
+     * Return list of authorized projects matching the search criteria
+     */
+    search?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+    /**
+     * Return only the ID, URL, name, and path of each project
+     */
+    simple?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3Projects({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1623,9 +1859,13 @@ export async function postV3PostV3Projects(
     /** URL from which the project is imported */
     import_url?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.postV3Projects({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1640,52 +1880,58 @@ export async function postV3PostV3Projects(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3ProjectsAll(query: {
-  /**
-   * Return projects ordered by field
-   */
-  order_by?:
-    | "id"
-    | "name"
-    | "path"
-    | "created_at"
-    | "updated_at"
-    | "last_activity_at";
-  /**
-   * Return projects sorted in ascending and descending order
-   */
-  sort?: "asc" | "desc";
-  /**
-   * Limit by archived status
-   */
-  archived?: boolean;
-  /**
-   * Limit by visibility
-   */
-  visibility?: "public" | "internal" | "private";
-  /**
-   * Return list of authorized projects matching the search criteria
-   */
-  search?: string;
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-  /**
-   * Return only the ID, URL, name, and path of each project
-   */
-  simple?: boolean;
-  /**
-   * Include project statistics
-   */
-  statistics?: boolean;
-}): Promise<BasicProjectDetails> {
+export async function getV3GetV3ProjectsAll(
+  query: {
+    /**
+     * Return projects ordered by field
+     */
+    order_by?:
+      | "id"
+      | "name"
+      | "path"
+      | "created_at"
+      | "updated_at"
+      | "last_activity_at";
+    /**
+     * Return projects sorted in ascending and descending order
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Limit by archived status
+     */
+    archived?: boolean;
+    /**
+     * Limit by visibility
+     */
+    visibility?: "public" | "internal" | "private";
+    /**
+     * Return list of authorized projects matching the search criteria
+     */
+    search?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+    /**
+     * Return only the ID, URL, name, and path of each project
+     */
+    simple?: boolean;
+    /**
+     * Include project statistics
+     */
+    statistics?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsAll({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1708,10 +1954,14 @@ export async function postV3PostV3ProjectsForkId(
     /** The ID or name of the namespace that the project will be forked into */
     namespace?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsForkId({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1726,52 +1976,58 @@ export async function postV3PostV3ProjectsForkId(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3ProjectsOwned(query: {
-  /**
-   * Return projects ordered by field
-   */
-  order_by?:
-    | "id"
-    | "name"
-    | "path"
-    | "created_at"
-    | "updated_at"
-    | "last_activity_at";
-  /**
-   * Return projects sorted in ascending and descending order
-   */
-  sort?: "asc" | "desc";
-  /**
-   * Limit by archived status
-   */
-  archived?: boolean;
-  /**
-   * Limit by visibility
-   */
-  visibility?: "public" | "internal" | "private";
-  /**
-   * Return list of authorized projects matching the search criteria
-   */
-  search?: string;
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-  /**
-   * Return only the ID, URL, name, and path of each project
-   */
-  simple?: boolean;
-  /**
-   * Include project statistics
-   */
-  statistics?: boolean;
-}): Promise<BasicProjectDetails> {
+export async function getV3GetV3ProjectsOwned(
+  query: {
+    /**
+     * Return projects ordered by field
+     */
+    order_by?:
+      | "id"
+      | "name"
+      | "path"
+      | "created_at"
+      | "updated_at"
+      | "last_activity_at";
+    /**
+     * Return projects sorted in ascending and descending order
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Limit by archived status
+     */
+    archived?: boolean;
+    /**
+     * Limit by visibility
+     */
+    visibility?: "public" | "internal" | "private";
+    /**
+     * Return list of authorized projects matching the search criteria
+     */
+    search?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+    /**
+     * Return only the ID, URL, name, and path of each project
+     */
+    simple?: boolean;
+    /**
+     * Include project statistics
+     */
+    statistics?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsOwned({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1815,10 +2071,14 @@ export async function getV3GetV3ProjectsSearchQuery(
    * The project name to be searched
    */
   query: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.getV3ProjectsSearchQuery({
     queryParams: queryParams,
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1833,48 +2093,54 @@ export async function getV3GetV3ProjectsSearchQuery(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3ProjectsStarred(query: {
-  /**
-   * Return projects ordered by field
-   */
-  order_by?:
-    | "id"
-    | "name"
-    | "path"
-    | "created_at"
-    | "updated_at"
-    | "last_activity_at";
-  /**
-   * Return projects sorted in ascending and descending order
-   */
-  sort?: "asc" | "desc";
-  /**
-   * Limit by archived status
-   */
-  archived?: boolean;
-  /**
-   * Limit by visibility
-   */
-  visibility?: "public" | "internal" | "private";
-  /**
-   * Return list of authorized projects matching the search criteria
-   */
-  search?: string;
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-  /**
-   * Return only the ID, URL, name, and path of each project
-   */
-  simple?: boolean;
-}): Promise<BasicProjectDetails> {
+export async function getV3GetV3ProjectsStarred(
+  query: {
+    /**
+     * Return projects ordered by field
+     */
+    order_by?:
+      | "id"
+      | "name"
+      | "path"
+      | "created_at"
+      | "updated_at"
+      | "last_activity_at";
+    /**
+     * Return projects sorted in ascending and descending order
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Limit by archived status
+     */
+    archived?: boolean;
+    /**
+     * Limit by visibility
+     */
+    visibility?: "public" | "internal" | "private";
+    /**
+     * Return list of authorized projects matching the search criteria
+     */
+    search?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+    /**
+     * Return only the ID, URL, name, and path of each project
+     */
+    simple?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsStarred({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1940,10 +2206,14 @@ export async function postV3PostV3ProjectsUserUserId(
     /** URL from which the project is imported */
     import_url?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsUserUserId({
     userId: userId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -1958,48 +2228,54 @@ export async function postV3PostV3ProjectsUserUserId(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3ProjectsVisible(query: {
-  /**
-   * Return projects ordered by field
-   */
-  order_by?:
-    | "id"
-    | "name"
-    | "path"
-    | "created_at"
-    | "updated_at"
-    | "last_activity_at";
-  /**
-   * Return projects sorted in ascending and descending order
-   */
-  sort?: "asc" | "desc";
-  /**
-   * Limit by archived status
-   */
-  archived?: boolean;
-  /**
-   * Limit by visibility
-   */
-  visibility?: "public" | "internal" | "private";
-  /**
-   * Return list of authorized projects matching the search criteria
-   */
-  search?: string;
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-  /**
-   * Return only the ID, URL, name, and path of each project
-   */
-  simple?: boolean;
-}): Promise<BasicProjectDetails> {
+export async function getV3GetV3ProjectsVisible(
+  query: {
+    /**
+     * Return projects ordered by field
+     */
+    order_by?:
+      | "id"
+      | "name"
+      | "path"
+      | "created_at"
+      | "updated_at"
+      | "last_activity_at";
+    /**
+     * Return projects sorted in ascending and descending order
+     */
+    sort?: "asc" | "desc";
+    /**
+     * Limit by archived status
+     */
+    archived?: boolean;
+    /**
+     * Limit by visibility
+     */
+    visibility?: "public" | "internal" | "private";
+    /**
+     * Return list of authorized projects matching the search criteria
+     */
+    search?: string;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+    /**
+     * Return only the ID, URL, name, and path of each project
+     */
+    simple?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<BasicProjectDetails> {
   const result = await api.v3.getV3ProjectsVisible({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2018,9 +2294,13 @@ export async function deleteV3DeleteV3ProjectsId(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -2039,9 +2319,13 @@ export async function getV3GetV3ProjectsId(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectWithAccess> {
   const result = await api.v3.getV3ProjectsId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2102,10 +2386,14 @@ export async function putV3PutV3ProjectsId(
     /** Only allow to merge if all discussions are resolved */
     only_allow_merge_if_all_discussions_are_resolved?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.putV3ProjectsId({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2132,11 +2420,15 @@ export async function postV3PostV3ProjectsIdRefRefTriggerBuilds(
     /** The unique token of trigger */
     token: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<TriggerRequest> {
   const result = await api.v3.postV3ProjectsIdRefRefTriggerBuilds({
     id: id,
     ref: ref,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2165,10 +2457,14 @@ export async function getV3GetV3ProjectsIdAccessRequests(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AccessRequester> {
   const result = await api.v3.getV3ProjectsIdAccessRequests({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2186,9 +2482,13 @@ export async function postV3PostV3ProjectsIdAccessRequests(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AccessRequester> {
   const result = await api.v3.postV3ProjectsIdAccessRequests({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2211,10 +2511,14 @@ export async function deleteV3DeleteV3ProjectsIdAccessRequestsUserId(
    * The user ID of the access requester
    */
   userId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdAccessRequestsUserId({
     id: id,
     userId: userId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -2244,11 +2548,15 @@ export async function putV3PutV3ProjectsIdAccessRequestsUserIdApprove(
      */
     access_level?: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.putV3ProjectsIdAccessRequestsUserIdApprove({
     id: id,
     userId: userId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2266,9 +2574,13 @@ export async function postV3PostV3ProjectsIdArchive(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsIdArchive({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2287,9 +2599,13 @@ export async function getV3GetV3ProjectsIdBoards(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Board> {
   const result = await api.v3.getV3ProjectsIdBoards({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2312,10 +2628,14 @@ export async function getV3GetV3ProjectsIdBoardsBoardIdLists(
    * The ID of a board
    */
   boardId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<List> {
   const result = await api.v3.getV3ProjectsIdBoardsBoardIdLists({
     id: id,
     boardId: boardId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2345,11 +2665,15 @@ export async function postV3PostV3ProjectsIdBoardsBoardIdLists(
      */
     label_id: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<List> {
   const result = await api.v3.postV3ProjectsIdBoardsBoardIdLists({
     id: id,
     boardId: boardId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2375,11 +2699,15 @@ export async function deleteV3DeleteV3ProjectsIdBoardsBoardIdListsListId(
    * The ID of a board list
    */
   listId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<List> {
   const result = await api.v3.deleteV3ProjectsIdBoardsBoardIdListsListId({
     id: id,
     boardId: boardId,
     listId: listId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2406,11 +2734,15 @@ export async function getV3GetV3ProjectsIdBoardsBoardIdListsListId(
    * The ID of a list
    */
   listId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<List> {
   const result = await api.v3.getV3ProjectsIdBoardsBoardIdListsListId({
     id: id,
     boardId: boardId,
     listId: listId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2444,12 +2776,16 @@ export async function putV3PutV3ProjectsIdBoardsBoardIdListsListId(
      */
     position: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<List> {
   const result = await api.v3.putV3ProjectsIdBoardsBoardIdListsListId({
     id: id,
     boardId: boardId,
     listId: listId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2483,10 +2819,14 @@ export async function getV3GetV3ProjectsIdBuilds(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.getV3ProjectsIdBuilds({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2516,11 +2856,15 @@ export async function getV3GetV3ProjectsIdBuildsArtifactsRefNameDownload(
    * The ref from repository
    */
   refName: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdBuildsArtifactsRefNameDownload({
     query: query,
     id: id,
     refName: refName,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -2543,10 +2887,14 @@ export async function getV3GetV3ProjectsIdBuildsBuildId(
    * The ID of a build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.getV3ProjectsIdBuildsBuildId({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2570,10 +2918,14 @@ export async function getV3GetV3ProjectsIdBuildsBuildIdArtifacts(
    * The ID of a build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdBuildsBuildIdArtifacts({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -2595,10 +2947,14 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdArtifactsKeep(
    * The ID of a build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdArtifactsKeep({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2620,10 +2976,14 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdCancel(
    * The ID of a build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdCancel({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2645,10 +3005,14 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdErase(
    * The ID of a build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdErase({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2670,10 +3034,14 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdPlay(
    * The ID of a Build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdPlay({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2695,10 +3063,14 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdRetry(
    * The ID of a build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.postV3ProjectsIdBuildsBuildIdRetry({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2722,10 +3094,14 @@ export async function getV3GetV3ProjectsIdBuildsBuildIdTrace(
    * The ID of a build
    */
   buildId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdBuildsBuildIdTrace({
     id: id,
     buildId: buildId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -2744,9 +3120,13 @@ export async function getV3GetV3ProjectsIdDeployKeys(
    * The ID of the project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdDeployKeys({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2771,10 +3151,14 @@ export async function postV3PostV3ProjectsIdDeployKeys(
     /** The name of the deploy key */
     title: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3ProjectsIdDeployKeys({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2796,10 +3180,14 @@ export async function deleteV3DeleteV3ProjectsIdDeployKeysKeyId(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdDeployKeysKeyId({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2822,10 +3210,14 @@ export async function getV3GetV3ProjectsIdDeployKeysKeyId(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdDeployKeysKeyId({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2847,10 +3239,14 @@ export async function deleteV3DeleteV3ProjectsIdDeployKeysKeyIdDisable(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdDeployKeysKeyIdDisable({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2872,10 +3268,14 @@ export async function postV3PostV3ProjectsIdDeployKeysKeyIdEnable(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3ProjectsIdDeployKeysKeyIdEnable({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2904,10 +3304,14 @@ export async function getV3GetV3ProjectsIdDeployments(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Deployment> {
   const result = await api.v3.getV3ProjectsIdDeployments({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2930,10 +3334,14 @@ export async function getV3GetV3ProjectsIdDeploymentsDeploymentId(
    * The deployment ID
    */
   deploymentId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Deployment> {
   const result = await api.v3.getV3ProjectsIdDeploymentsDeploymentId({
     id: id,
     deploymentId: deploymentId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2962,10 +3370,14 @@ export async function getV3GetV3ProjectsIdEnvironments(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Environment> {
   const result = await api.v3.getV3ProjectsIdEnvironments({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -2991,10 +3403,14 @@ export async function postV3PostV3ProjectsIdEnvironments(
     external_url?: string;
     slug?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Environment> {
   const result = await api.v3.postV3ProjectsIdEnvironments({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3016,10 +3432,14 @@ export async function deleteV3DeleteV3ProjectsIdEnvironmentsEnvironmentId(
    * The environment ID
    */
   environmentId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Environment> {
   const result = await api.v3.deleteV3ProjectsIdEnvironmentsEnvironmentId({
     id: id,
     environmentId: environmentId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3049,11 +3469,15 @@ export async function putV3PutV3ProjectsIdEnvironmentsEnvironmentId(
     external_url?: string;
     slug?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Environment> {
   const result = await api.v3.putV3ProjectsIdEnvironmentsEnvironmentId({
     id: id,
     environmentId: environmentId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3082,10 +3506,14 @@ export async function getV3GetV3ProjectsIdEvents(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Event> {
   const result = await api.v3.getV3ProjectsIdEvents({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3104,9 +3532,13 @@ export async function deleteV3DeleteV3ProjectsIdFork(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdFork({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3129,10 +3561,14 @@ export async function postV3PostV3ProjectsIdForkForkedFromId(
    * The ID of the project it was forked from
    */
   forkedFromId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdForkForkedFromId({
     id: id,
     forkedFromId: forkedFromId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3161,10 +3597,14 @@ export async function getV3GetV3ProjectsIdHooks(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectHook> {
   const result = await api.v3.getV3ProjectsIdHooks({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3207,10 +3647,14 @@ export async function postV3PostV3ProjectsIdHooks(
     /** Secret token to validate received payloads; this will not be returned in the response */
     token?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectHook> {
   const result = await api.v3.postV3ProjectsIdHooks({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3232,10 +3676,14 @@ export async function deleteV3DeleteV3ProjectsIdHooksHookId(
    * The ID of the hook to delete
    */
   hookId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectHook> {
   const result = await api.v3.deleteV3ProjectsIdHooksHookId({
     id: id,
     hookId: hookId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3258,10 +3706,14 @@ export async function getV3GetV3ProjectsIdHooksHookId(
    * The ID of a project hook
    */
   hookId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectHook> {
   const result = await api.v3.getV3ProjectsIdHooksHookId({
     id: id,
     hookId: hookId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3308,11 +3760,15 @@ export async function putV3PutV3ProjectsIdHooksHookId(
     /** Secret token to validate received payloads; this will not be returned in the response */
     token?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectHook> {
   const result = await api.v3.putV3ProjectsIdHooksHookId({
     id: id,
     hookId: hookId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3366,10 +3822,14 @@ export async function getV3GetV3ProjectsIdIssues(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.getV3ProjectsIdIssues({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3420,10 +3880,14 @@ export async function postV3PostV3ProjectsIdIssues(
     /** Boolean parameter if the issue should be confidential */
     confidential?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.postV3ProjectsIdIssues({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3446,10 +3910,14 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueId(
    * The ID of a project issue
    */
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdIssuesIssueId({
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3472,10 +3940,14 @@ export async function getV3GetV3ProjectsIdIssuesIssueId(
    * The ID of a project issue
    */
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueId({
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3529,11 +4001,15 @@ export async function putV3PutV3ProjectsIdIssuesIssueId(
     confidential?: boolean;
     created_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.putV3ProjectsIdIssuesIssueId({
     id: id,
     issueId: issueId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3561,11 +4037,15 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdAddSpentTime(
     /** The duration to be parsed */
     duration: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdAddSpentTime({
     id: id,
     issueId: issueId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3598,11 +4078,15 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdAwardEmoji(
    * The ID of an Issue, Merge Request or Snippet
    */
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdAwardEmoji({
     query: query,
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3623,11 +4107,15 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdAwardEmoji(
     /** The name of a award_emoji (without colons) */
     name: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdAwardEmoji({
     id: id,
     issueId: issueId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3647,11 +4135,15 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueIdAwardEmojiAwardId(
   awardId: number,
   id: number,
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.deleteV3ProjectsIdIssuesIssueIdAwardEmojiAwardId({
     awardId: awardId,
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3672,11 +4164,15 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdAwardEmojiAwardId(
   awardId: number,
   id: number,
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdAwardEmojiAwardId({
     awardId: awardId,
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3706,11 +4202,15 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdMove(
      */
     to_project_id: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdMove({
     id: id,
     issueId: issueId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3738,6 +4238,7 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
   id: number,
   issueId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
     {
@@ -3745,6 +4246,9 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
       id: id,
       issueId: issueId,
       noteId: noteId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -3767,6 +4271,7 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
     /** The name of a award_emoji (without colons) */
     name: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.postV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji({
@@ -3774,6 +4279,9 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmoji(
       issueId: issueId,
       noteId: noteId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -3794,6 +4302,7 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmo
   id: number,
   issueId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.deleteV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwardId({
@@ -3801,6 +4310,9 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmo
       id: id,
       issueId: issueId,
       noteId: noteId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -3822,6 +4334,7 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwar
   id: number,
   issueId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.getV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwardId({
@@ -3829,6 +4342,9 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwar
       id: id,
       issueId: issueId,
       noteId: noteId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -3851,10 +4367,14 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdResetSpentTime(
    * The ID of a project issue
    */
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdResetSpentTime({
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3877,10 +4397,14 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdResetTimeEstimate(
    * The ID of a project issue
    */
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdResetTimeEstimate({
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3908,11 +4432,15 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdTimeEstimate(
     /** The duration to be parsed */
     duration: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdTimeEstimate({
     id: id,
     issueId: issueId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3936,10 +4464,14 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdTimeStats(
    * The ID of a project issue
    */
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdIssuesIssueIdTimeStats({
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -3961,10 +4493,14 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdTodo(
    * The ID of an issuable
    */
   issueId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Todo> {
   const result = await api.v3.postV3ProjectsIdIssuesIssueIdTodo({
     id: id,
     issueId: issueId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -3997,11 +4533,15 @@ export async function getV3GetV3ProjectsIdIssuesNoteableIdNotes(
    * The ID of the noteable
    */
   noteableId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdIssuesNoteableIdNotes({
     query: query,
     id: id,
     noteableId: noteableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4030,11 +4570,15 @@ export async function postV3PostV3ProjectsIdIssuesNoteableIdNotes(
     /** The creation date of the note */
     created_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.postV3ProjectsIdIssuesNoteableIdNotes({
     id: id,
     noteableId: noteableId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4060,11 +4604,15 @@ export async function deleteV3DeleteV3ProjectsIdIssuesNoteableIdNotesNoteId(
    * The ID of a note
    */
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.deleteV3ProjectsIdIssuesNoteableIdNotesNoteId({
     id: id,
     noteableId: noteableId,
     noteId: noteId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4091,11 +4639,15 @@ export async function getV3GetV3ProjectsIdIssuesNoteableIdNotesNoteId(
    * The ID of the noteable
    */
   noteableId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdIssuesNoteableIdNotesNoteId({
     id: id,
     noteId: noteId,
     noteableId: noteableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4126,12 +4678,16 @@ export async function putV3PutV3ProjectsIdIssuesNoteableIdNotesNoteId(
     /** The content of a note */
     body: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.putV3ProjectsIdIssuesNoteableIdNotesNoteId({
     id: id,
     noteableId: noteableId,
     noteId: noteId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4153,11 +4709,15 @@ export async function deleteV3DeleteV3ProjectsIdIssuesSubscribableIdSubscription
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result =
     await api.v3.deleteV3ProjectsIdIssuesSubscribableIdSubscription({
       id: id,
       subscribableId: subscribableId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -4179,10 +4739,14 @@ export async function postV3PostV3ProjectsIdIssuesSubscribableIdSubscription(
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.postV3ProjectsIdIssuesSubscribableIdSubscription({
     id: id,
     subscribableId: subscribableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4201,9 +4765,13 @@ export async function getV3GetV3ProjectsIdKeys(
    * The ID of the project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdKeys({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4228,10 +4796,14 @@ export async function postV3PostV3ProjectsIdKeys(
     /** The name of the deploy key */
     title: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3ProjectsIdKeys({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4253,10 +4825,14 @@ export async function deleteV3DeleteV3ProjectsIdKeysKeyId(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdKeysKeyId({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4279,10 +4855,14 @@ export async function getV3GetV3ProjectsIdKeysKeyId(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3ProjectsIdKeysKeyId({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4304,10 +4884,14 @@ export async function deleteV3DeleteV3ProjectsIdKeysKeyIdDisable(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3ProjectsIdKeysKeyIdDisable({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4329,10 +4913,14 @@ export async function postV3PostV3ProjectsIdKeysKeyIdEnable(
    * The ID of the deploy key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3ProjectsIdKeysKeyIdEnable({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4356,10 +4944,14 @@ export async function deleteV3DeleteV3ProjectsIdLabels(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Label> {
   const result = await api.v3.deleteV3ProjectsIdLabels({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4378,9 +4970,13 @@ export async function getV3GetV3ProjectsIdLabels(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Label> {
   const result = await api.v3.getV3ProjectsIdLabels({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4412,10 +5008,14 @@ export async function postV3PostV3ProjectsIdLabels(
      */
     priority?: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Label> {
   const result = await api.v3.postV3ProjectsIdLabels({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4449,10 +5049,14 @@ export async function putV3PutV3ProjectsIdLabels(
      */
     priority?: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Label> {
   const result = await api.v3.putV3ProjectsIdLabels({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4474,11 +5078,15 @@ export async function deleteV3DeleteV3ProjectsIdLabelsSubscribableIdSubscription
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Label> {
   const result =
     await api.v3.deleteV3ProjectsIdLabelsSubscribableIdSubscription({
       id: id,
       subscribableId: subscribableId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -4500,10 +5108,14 @@ export async function postV3PostV3ProjectsIdLabelsSubscribableIdSubscription(
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Label> {
   const result = await api.v3.postV3ProjectsIdLabelsSubscribableIdSubscription({
     id: id,
     subscribableId: subscribableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4536,10 +5148,14 @@ export async function getV3GetV3ProjectsIdMembers(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.getV3ProjectsIdMembers({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4575,10 +5191,14 @@ export async function postV3PostV3ProjectsIdMembers(
      */
     expires_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.postV3ProjectsIdMembers({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4601,10 +5221,14 @@ export async function deleteV3DeleteV3ProjectsIdMembersUserId(
    * The user ID of the member
    */
   userId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdMembersUserId({
     id: id,
     userId: userId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -4627,10 +5251,14 @@ export async function getV3GetV3ProjectsIdMembersUserId(
    * The user ID of the member
    */
   userId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.getV3ProjectsIdMembersUserId({
     id: id,
     userId: userId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4665,11 +5293,15 @@ export async function putV3PutV3ProjectsIdMembersUserId(
      */
     expires_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Member> {
   const result = await api.v3.putV3ProjectsIdMembersUserId({
     id: id,
     userId: userId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4692,10 +5324,14 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestId(
    * The ID of a merge request
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestId({
     id: id,
     mergeRequestId: mergeRequestId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4740,11 +5376,15 @@ export async function putV3PutV3ProjectsIdMergeRequestMergeRequestId(
     /** Remove source branch when merging */
     remove_source_branch?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.putV3ProjectsIdMergeRequestMergeRequestId({
     id: id,
     mergeRequestId: mergeRequestId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4763,12 +5403,16 @@ export async function postV3PostV3ProjectsIdMergeRequestMergeRequestIdCancelMerg
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestMergeRequestIdCancelMergeWhenBuildSucceeds(
       {
         id: id,
         mergeRequestId: mergeRequestId,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -4789,10 +5433,14 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdChanges(
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequestChanges> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestIdChanges({
     id: id,
     mergeRequestId: mergeRequestId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4822,12 +5470,16 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdClosesIssues
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MRNote> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestMergeRequestIdClosesIssues({
       query: query,
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -4857,12 +5509,16 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdComments(
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MRNote> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestIdComments(
     {
       query: query,
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -4887,12 +5543,16 @@ export async function postV3PostV3ProjectsIdMergeRequestMergeRequestIdComments(
     /** The text of the comment */
     note: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MRNote> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestMergeRequestIdComments({
       id: id,
       mergeRequestId: mergeRequestId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -4912,10 +5572,14 @@ export async function getV3GetV3ProjectsIdMergeRequestMergeRequestIdCommits(
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoCommit> {
   const result = await api.v3.getV3ProjectsIdMergeRequestMergeRequestIdCommits({
     id: id,
     mergeRequestId: mergeRequestId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4945,11 +5609,15 @@ export async function putV3PutV3ProjectsIdMergeRequestMergeRequestIdMerge(
     /** When present, must have the HEAD SHA of the source branch */
     sha?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.putV3ProjectsIdMergeRequestMergeRequestIdMerge({
     id: id,
     mergeRequestId: mergeRequestId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -4971,11 +5639,15 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestSubscribableIdSubscr
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result =
     await api.v3.deleteV3ProjectsIdMergeRequestSubscribableIdSubscription({
       id: id,
       subscribableId: subscribableId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -4997,11 +5669,15 @@ export async function postV3PostV3ProjectsIdMergeRequestSubscribableIdSubscripti
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestSubscribableIdSubscription({
       id: id,
       subscribableId: subscribableId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5048,11 +5724,15 @@ export async function getV3GetV3ProjectsIdMergeRequests(
     /** The IID of the merge requests */
     iid?: number[];
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.getV3ProjectsIdMergeRequests({
     query: query,
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5100,10 +5780,14 @@ export async function postV3PostV3ProjectsIdMergeRequests(
     /** Remove source branch when merging */
     remove_source_branch?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.postV3ProjectsIdMergeRequests({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5126,10 +5810,14 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestId(
    * The ID of a merge request
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdMergeRequestsMergeRequestId({
     id: id,
     mergeRequestId: mergeRequestId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -5149,10 +5837,14 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestId(
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsMergeRequestId({
     id: id,
     mergeRequestId: mergeRequestId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5197,11 +5889,15 @@ export async function putV3PutV3ProjectsIdMergeRequestsMergeRequestId(
     /** Remove source branch when merging */
     remove_source_branch?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.putV3ProjectsIdMergeRequestsMergeRequestId({
     id: id,
     mergeRequestId: mergeRequestId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5229,12 +5925,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAddSpentT
     /** The duration to be parsed */
     duration: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdAddSpentTime({
       id: id,
       mergeRequestId: mergeRequestId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.error) {
     throw result.error;
@@ -5267,12 +5967,16 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoji(
    * The ID of an Issue, Merge Request or Snippet
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoji({
       query: query,
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5293,12 +5997,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoj
     /** The name of a award_emoji (without colons) */
     name: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdAwardEmoji({
       id: id,
       mergeRequestId: mergeRequestId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5318,6 +6026,7 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdAward
   awardId: number,
   id: number,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.deleteV3ProjectsIdMergeRequestsMergeRequestIdAwardEmojiAwardId(
@@ -5325,6 +6034,9 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdAward
         awardId: awardId,
         id: id,
         mergeRequestId: mergeRequestId,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -5346,12 +6058,16 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdAwardEmojiA
   awardId: number,
   id: number,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdAwardEmojiAwardId({
       awardId: awardId,
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5370,12 +6086,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdCancelMer
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdCancelMergeWhenBuildSucceeds(
       {
         id: id,
         mergeRequestId: mergeRequestId,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -5396,11 +6116,15 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdChanges(
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequestChanges> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdChanges(
     {
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -5431,12 +6155,16 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdClosesIssue
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MRNote> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdClosesIssues({
       query: query,
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5466,12 +6194,16 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdComments(
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MRNote> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdComments({
       query: query,
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5495,12 +6227,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdComments(
     /** The text of the comment */
     note: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MRNote> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdComments({
       id: id,
       mergeRequestId: mergeRequestId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5520,11 +6256,15 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdCommits(
    */
   id: string,
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoCommit> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdCommits(
     {
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -5555,11 +6295,15 @@ export async function putV3PutV3ProjectsIdMergeRequestsMergeRequestIdMerge(
     /** When present, must have the HEAD SHA of the source branch */
     sha?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result = await api.v3.putV3ProjectsIdMergeRequestsMergeRequestIdMerge({
     id: id,
     mergeRequestId: mergeRequestId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5587,6 +6331,7 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
   id: number,
   mergeRequestId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmoji(
@@ -5595,6 +6340,9 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
         id: id,
         mergeRequestId: mergeRequestId,
         noteId: noteId,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -5617,6 +6365,7 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdNotesNote
     /** The name of a award_emoji (without colons) */
     name: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmoji(
@@ -5625,6 +6374,9 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdNotesNote
         mergeRequestId: mergeRequestId,
         noteId: noteId,
         data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -5646,6 +6398,7 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdNotes
   id: number,
   mergeRequestId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.deleteV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmojiAwardId(
@@ -5654,6 +6407,9 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestIdNotes
         id: id,
         mergeRequestId: mergeRequestId,
         noteId: noteId,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -5676,6 +6432,7 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
   id: number,
   mergeRequestId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteIdAwardEmojiAwardId(
@@ -5684,6 +6441,9 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
         id: id,
         mergeRequestId: mergeRequestId,
         noteId: noteId,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -5707,11 +6467,15 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetSpen
    * The ID of a project merge_request
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdResetSpentTime({
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.error) {
     throw result.error;
@@ -5734,11 +6498,15 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetTime
    * The ID of a project merge_request
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdResetTimeEstimate({
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.error) {
     throw result.error;
@@ -5766,12 +6534,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTimeEstim
     /** The duration to be parsed */
     duration: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdTimeEstimate({
       id: id,
       mergeRequestId: mergeRequestId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.error) {
     throw result.error;
@@ -5795,11 +6567,15 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdTimeStats(
    * The ID of a project merge_request
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdTimeStats({
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.error) {
     throw result.error;
@@ -5821,10 +6597,14 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTodo(
    * The ID of an issuable
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Todo> {
   const result = await api.v3.postV3ProjectsIdMergeRequestsMergeRequestIdTodo({
     id: id,
     mergeRequestId: mergeRequestId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5847,11 +6627,15 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdVersions(
    * The ID of a merge request
    */
   mergeRequestId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequestDiff> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdVersions({
       id: id,
       mergeRequestId: mergeRequestId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5878,12 +6662,16 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdVersionsVer
    * The ID of a merge request diff version
    */
   versionId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequestDiffFull> {
   const result =
     await api.v3.getV3ProjectsIdMergeRequestsMergeRequestIdVersionsVersionId({
       id: id,
       mergeRequestId: mergeRequestId,
       versionId: versionId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -5916,11 +6704,15 @@ export async function getV3GetV3ProjectsIdMergeRequestsNoteableIdNotes(
    * The ID of the noteable
    */
   noteableId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsNoteableIdNotes({
     query: query,
     id: id,
     noteableId: noteableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5949,11 +6741,15 @@ export async function postV3PostV3ProjectsIdMergeRequestsNoteableIdNotes(
     /** The creation date of the note */
     created_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.postV3ProjectsIdMergeRequestsNoteableIdNotes({
     id: id,
     noteableId: noteableId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -5979,12 +6775,16 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsNoteableIdNotesNote
    * The ID of a note
    */
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result =
     await api.v3.deleteV3ProjectsIdMergeRequestsNoteableIdNotesNoteId({
       id: id,
       noteableId: noteableId,
       noteId: noteId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -6011,12 +6811,16 @@ export async function getV3GetV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
    * The ID of the noteable
    */
   noteableId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
     {
       id: id,
       noteId: noteId,
       noteableId: noteableId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -6048,6 +6852,7 @@ export async function putV3PutV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
     /** The content of a note */
     body: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.putV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
     {
@@ -6055,6 +6860,9 @@ export async function putV3PutV3ProjectsIdMergeRequestsNoteableIdNotesNoteId(
       noteableId: noteableId,
       noteId: noteId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -6077,11 +6885,15 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsSubscribableIdSubsc
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result =
     await api.v3.deleteV3ProjectsIdMergeRequestsSubscribableIdSubscription({
       id: id,
       subscribableId: subscribableId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -6103,11 +6915,15 @@ export async function postV3PostV3ProjectsIdMergeRequestsSubscribableIdSubscript
    * The ID of a resource
    */
   subscribableId: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<MergeRequest> {
   const result =
     await api.v3.postV3ProjectsIdMergeRequestsSubscribableIdSubscription({
       id: id,
       subscribableId: subscribableId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -6146,11 +6962,15 @@ export async function getV3GetV3ProjectsIdMilestones(
     /** The IID of the milestone */
     iid?: number[];
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Milestone> {
   const result = await api.v3.getV3ProjectsIdMilestones({
     query: query,
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6179,10 +6999,14 @@ export async function postV3PostV3ProjectsIdMilestones(
     /** The start date of the milestone. The ISO 8601 date format (%Y-%m-%d) */
     start_date?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Milestone> {
   const result = await api.v3.postV3ProjectsIdMilestones({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6205,10 +7029,14 @@ export async function getV3GetV3ProjectsIdMilestonesMilestoneId(
    * The ID of a project milestone
    */
   milestoneId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Milestone> {
   const result = await api.v3.getV3ProjectsIdMilestonesMilestoneId({
     id: id,
     milestoneId: milestoneId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6244,11 +7072,15 @@ export async function putV3PutV3ProjectsIdMilestonesMilestoneId(
     /** The start date of the milestone. The ISO 8601 date format (%Y-%m-%d) */
     start_date?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Milestone> {
   const result = await api.v3.putV3ProjectsIdMilestonesMilestoneId({
     id: id,
     milestoneId: milestoneId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6281,11 +7113,15 @@ export async function getV3GetV3ProjectsIdMilestonesMilestoneIdIssues(
    * The ID of a project milestone
    */
   milestoneId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Issue> {
   const result = await api.v3.getV3ProjectsIdMilestonesMilestoneIdIssues({
     query: query,
     id: id,
     milestoneId: milestoneId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6304,9 +7140,13 @@ export async function getV3GetV3ProjectsIdNotificationSettings(
    * The group ID or project ID or project NAMESPACE/PROJECT_NAME
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<NotificationSetting> {
   const result = await api.v3.getV3ProjectsIdNotificationSettings({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6353,10 +7193,14 @@ export async function putV3PutV3ProjectsIdNotificationSettings(
     /** Enable/disable this notification */
     success_pipeline?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<NotificationSetting> {
   const result = await api.v3.putV3ProjectsIdNotificationSettings({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6379,10 +7223,14 @@ export async function postV3PostV3ProjectsIdPipeline(
     /** Reference */
     ref: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pipeline> {
   const result = await api.v3.postV3ProjectsIdPipeline({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6416,10 +7264,14 @@ export async function getV3GetV3ProjectsIdPipelines(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pipeline> {
   const result = await api.v3.getV3ProjectsIdPipelines({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6442,10 +7294,14 @@ export async function getV3GetV3ProjectsIdPipelinesPipelineId(
    * The pipeline ID
    */
   pipelineId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pipeline> {
   const result = await api.v3.getV3ProjectsIdPipelinesPipelineId({
     id: id,
     pipelineId: pipelineId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6467,10 +7323,14 @@ export async function postV3PostV3ProjectsIdPipelinesPipelineIdCancel(
    * The pipeline ID
    */
   pipelineId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pipeline> {
   const result = await api.v3.postV3ProjectsIdPipelinesPipelineIdCancel({
     id: id,
     pipelineId: pipelineId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6492,10 +7352,14 @@ export async function postV3PostV3ProjectsIdPipelinesPipelineIdRetry(
    * The pipeline ID
    */
   pipelineId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Pipeline> {
   const result = await api.v3.postV3ProjectsIdPipelinesPipelineIdRetry({
     id: id,
     pipelineId: pipelineId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6525,10 +7389,14 @@ export async function getV3GetV3ProjectsIdRepositoryArchive(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryArchive({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -6558,11 +7426,15 @@ export async function getV3GetV3ProjectsIdRepositoryBlobsSha(
    * The commit, branch name, or tag name
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryBlobsSha({
     query: query,
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -6581,9 +7453,13 @@ export async function getV3GetV3ProjectsIdRepositoryBranches(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoBranch> {
   const result = await api.v3.getV3ProjectsIdRepositoryBranches({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6608,10 +7484,14 @@ export async function postV3PostV3ProjectsIdRepositoryBranches(
     /** Create branch from commit sha or existing branch */
     ref: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoBranch> {
   const result = await api.v3.postV3ProjectsIdRepositoryBranches({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6634,10 +7514,14 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryBranchesBranch(
    * The name of the branch
    */
   branch: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryBranchesBranch({
     id: id,
     branch: branch,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -6660,10 +7544,14 @@ export async function getV3GetV3ProjectsIdRepositoryBranchesBranch(
    * The name of the branch
    */
   branch: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoBranch> {
   const result = await api.v3.getV3ProjectsIdRepositoryBranchesBranch({
     id: id,
     branch: branch,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6692,11 +7580,15 @@ export async function putV3PutV3ProjectsIdRepositoryBranchesBranchProtect(
     /** Flag if developers can merge to that branch */
     developers_can_merge?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoBranch> {
   const result = await api.v3.putV3ProjectsIdRepositoryBranchesBranchProtect({
     id: id,
     branch: branch,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6718,10 +7610,14 @@ export async function putV3PutV3ProjectsIdRepositoryBranchesBranchUnprotect(
    * The name of the branch
    */
   branch: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoBranch> {
   const result = await api.v3.putV3ProjectsIdRepositoryBranchesBranchUnprotect({
     id: id,
     branch: branch,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6766,10 +7662,14 @@ export async function getV3GetV3ProjectsIdRepositoryCommits(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoCommit> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommits({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6800,10 +7700,14 @@ export async function postV3PostV3ProjectsIdRepositoryCommits(
     /** Author name for commit */
     author_name?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoCommitDetail> {
   const result = await api.v3.postV3ProjectsIdRepositoryCommits({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6826,10 +7730,14 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsSha(
    * A commit sha, or the name of a branch or tag
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoCommitDetail> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsSha({
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6859,11 +7767,15 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaBlob(
    * The commit, branch name, or tag name
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaBlob({
     query: query,
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -6901,11 +7813,15 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaBuilds(
    * The SHA id of a commit
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaBuilds({
     query: query,
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6932,11 +7848,15 @@ export async function postV3PostV3ProjectsIdRepositoryCommitsShaCherryPick(
     /** The name of the branch */
     branch: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoCommit> {
   const result = await api.v3.postV3ProjectsIdRepositoryCommitsShaCherryPick({
     id: id,
     sha: sha,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -6969,11 +7889,15 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaComments(
    * A commit sha, or the name of a branch or tag
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CommitNote> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaComments({
     query: query,
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7013,11 +7937,15 @@ export async function postV3PostV3ProjectsIdRepositoryCommitsShaComments(
      */
     line_type: "new" | "old";
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CommitNote> {
   const result = await api.v3.postV3ProjectsIdRepositoryCommitsShaComments({
     id: id,
     sha: sha,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7041,10 +7969,14 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaDiff(
    * A commit sha, or the name of a branch or tag
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaDiff({
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   return new hasuraSdk.JSONValue(result);
 }
@@ -7089,11 +8021,15 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaStatuses(
    * The commit hash
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CommitStatus> {
   const result = await api.v3.getV3ProjectsIdRepositoryCommitsShaStatuses({
     query: query,
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7122,10 +8058,14 @@ export async function getV3GetV3ProjectsIdRepositoryCompare(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Compare> {
   const result = await api.v3.getV3ProjectsIdRepositoryCompare({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7144,9 +8084,13 @@ export async function getV3GetV3ProjectsIdRepositoryContributors(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Contributor> {
   const result = await api.v3.getV3ProjectsIdRepositoryContributors({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7187,10 +8131,14 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryFiles(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryFiles({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7220,10 +8168,14 @@ export async function getV3GetV3ProjectsIdRepositoryFiles(
    * The project ID
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryFiles({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7259,10 +8211,14 @@ export async function postV3PostV3ProjectsIdRepositoryFiles(
     /** File encoding */
     encoding?: "base64";
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdRepositoryFiles({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7298,10 +8254,14 @@ export async function putV3PutV3ProjectsIdRepositoryFiles(
     /** File encoding */
     encoding?: "base64";
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdRepositoryFiles({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7320,9 +8280,13 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryMergedBranches(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryMergedBranches({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7346,10 +8310,14 @@ export async function getV3GetV3ProjectsIdRepositoryRawBlobsSha(
    * The commit, branch name, or tag name
    */
   sha: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdRepositoryRawBlobsSha({
     id: id,
     sha: sha,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7368,9 +8336,13 @@ export async function getV3GetV3ProjectsIdRepositoryTags(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoTag> {
   const result = await api.v3.getV3ProjectsIdRepositoryTags({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7399,10 +8371,14 @@ export async function postV3PostV3ProjectsIdRepositoryTags(
     /** Specifying release notes stored in the GitLab database */
     release_description?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoTag> {
   const result = await api.v3.postV3ProjectsIdRepositoryTags({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7425,10 +8401,14 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryTagsTagName(
    * The name of the tag
    */
   tagName: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdRepositoryTagsTagName({
     id: id,
     tagName: tagName,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7451,10 +8431,14 @@ export async function getV3GetV3ProjectsIdRepositoryTagsTagName(
    * The name of the tag
    */
   tagName: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoTag> {
   const result = await api.v3.getV3ProjectsIdRepositoryTagsTagName({
     id: id,
     tagName: tagName,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7481,11 +8465,15 @@ export async function postV3PostV3ProjectsIdRepositoryTagsTagNameRelease(
     /** Release notes with markdown support */
     description: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Release> {
   const result = await api.v3.postV3ProjectsIdRepositoryTagsTagNameRelease({
     id: id,
     tagName: tagName,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7512,11 +8500,15 @@ export async function putV3PutV3ProjectsIdRepositoryTagsTagNameRelease(
     /** Release notes with markdown support */
     description: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Release> {
   const result = await api.v3.putV3ProjectsIdRepositoryTagsTagNameRelease({
     id: id,
     tagName: tagName,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7549,10 +8541,14 @@ export async function getV3GetV3ProjectsIdRepositoryTree(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoTreeObject> {
   const result = await api.v3.getV3ProjectsIdRepositoryTree({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7586,10 +8582,14 @@ export async function getV3GetV3ProjectsIdRunners(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Runner> {
   const result = await api.v3.getV3ProjectsIdRunners({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7615,10 +8615,14 @@ export async function postV3PostV3ProjectsIdRunners(
      */
     runner_id: number;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Runner> {
   const result = await api.v3.postV3ProjectsIdRunners({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7640,10 +8644,14 @@ export async function deleteV3DeleteV3ProjectsIdRunnersRunnerId(
    * The ID of the runner
    */
   runnerId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Runner> {
   const result = await api.v3.deleteV3ProjectsIdRunnersRunnerId({
     id: id,
     runnerId: runnerId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -7668,10 +8676,14 @@ export async function putV3PutV3ProjectsIdServicesAsana(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesAsana({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7696,10 +8708,14 @@ export async function putV3PutV3ProjectsIdServicesAssembla(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesAssembla({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7728,10 +8744,14 @@ export async function putV3PutV3ProjectsIdServicesBamboo(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesBamboo({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7762,10 +8782,14 @@ export async function putV3PutV3ProjectsIdServicesBugzilla(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesBugzilla({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7792,10 +8816,14 @@ export async function putV3PutV3ProjectsIdServicesBuildkite(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesBuildkite({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7822,10 +8850,14 @@ export async function putV3PutV3ProjectsIdServicesBuildsEmail(
     /** Event will be triggered when a build status changes */
     build_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesBuildsEmail({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7852,10 +8884,14 @@ export async function putV3PutV3ProjectsIdServicesCampfire(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesCampfire({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7886,10 +8922,14 @@ export async function putV3PutV3ProjectsIdServicesCustomIssueTracker(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesCustomIssueTracker({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7920,10 +8960,14 @@ export async function putV3PutV3ProjectsIdServicesDroneCi(
     /** Event will be triggered when a new tag is pushed to the repository */
     tag_push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesDroneCi({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7952,10 +8996,14 @@ export async function putV3PutV3ProjectsIdServicesEmailsOnPush(
     /** Event will be triggered when a new tag is pushed to the repository */
     tag_push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesEmailsOnPush({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -7976,10 +9024,14 @@ export async function putV3PutV3ProjectsIdServicesExternalWiki(
     /** The URL of the external Wiki */
     external_wiki_url: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesExternalWiki({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8002,10 +9054,14 @@ export async function putV3PutV3ProjectsIdServicesFlowdock(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesFlowdock({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8030,10 +9086,14 @@ export async function putV3PutV3ProjectsIdServicesGemnasium(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesGemnasium({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8078,10 +9138,14 @@ export async function putV3PutV3ProjectsIdServicesHipchat(
     /** Event will be triggered when a build status changes */
     build_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesHipchat({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8115,10 +9179,14 @@ export async function putV3PutV3ProjectsIdServicesIrker(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesIrker({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8154,10 +9222,14 @@ export async function putV3PutV3ProjectsIdServicesJira(
     /** Event will be triggered when a merge request is created/updated/merged */
     merge_request_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesJira({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8184,10 +9256,14 @@ export async function putV3PutV3ProjectsIdServicesKubernetes(
     /** A custom certificate authority bundle to verify the Kubernetes cluster with (PEM format) */
     ca_pem?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesKubernetes({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8225,10 +9301,14 @@ export async function putV3PutV3ProjectsIdServicesMattermost(
     /** Event will be triggered when a wiki page is created/updated */
     wiki_page_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesMattermost({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8249,10 +9329,14 @@ export async function putV3PutV3ProjectsIdServicesMattermostSlashCommands(
     /** The Mattermost token */
     token: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesMattermostSlashCommands({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8276,11 +9360,15 @@ export async function postV3PostV3ProjectsIdServicesMattermostSlashCommandsTrigg
     /** The Mattermost token */
     token: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result =
     await api.v3.postV3ProjectsIdServicesMattermostSlashCommandsTrigger({
       id: id,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.error) {
     throw result.error;
@@ -8304,10 +9392,14 @@ export async function putV3PutV3ProjectsIdServicesPipelinesEmail(
     notify_only_broken_builds?: boolean;
     pipeline_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesPipelinesEmail({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8332,10 +9424,14 @@ export async function putV3PutV3ProjectsIdServicesPivotaltracker(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesPivotaltracker({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8366,10 +9462,14 @@ export async function putV3PutV3ProjectsIdServicesPushover(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesPushover({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8398,10 +9498,14 @@ export async function putV3PutV3ProjectsIdServicesRedmine(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesRedmine({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8443,10 +9547,14 @@ export async function putV3PutV3ProjectsIdServicesSlack(
     /** Event will be triggered when a wiki page is created/updated */
     wiki_page_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesSlack({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8467,10 +9575,14 @@ export async function putV3PutV3ProjectsIdServicesSlackSlashCommands(
     /** The Slack token */
     token: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesSlackSlashCommands({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8494,11 +9606,15 @@ export async function postV3PostV3ProjectsIdServicesSlackSlashCommandsTrigger(
     /** The Slack token */
     token: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdServicesSlackSlashCommandsTrigger(
     {
       id: id,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.error) {
@@ -8528,10 +9644,14 @@ export async function putV3PutV3ProjectsIdServicesTeamcity(
     /** Event will be triggered by a push to the repository */
     push_events?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3ProjectsIdServicesTeamcity({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8577,10 +9697,14 @@ export async function deleteV3DeleteV3ProjectsIdServicesServiceSlug(
     | "mattermost"
     | "teamcity",
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdServicesServiceSlug({
     serviceSlug: serviceSlug,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8627,10 +9751,14 @@ export async function getV3GetV3ProjectsIdServicesServiceSlug(
     | "mattermost"
     | "teamcity",
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectService> {
   const result = await api.v3.getV3ProjectsIdServicesServiceSlug({
     serviceSlug: serviceSlug,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8667,10 +9795,14 @@ export async function postV3PostV3ProjectsIdShare(
      */
     expires_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectGroupLink> {
   const result = await api.v3.postV3ProjectsIdShare({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8693,10 +9825,14 @@ export async function deleteV3DeleteV3ProjectsIdShareGroupId(
    * The ID of the group
    */
   groupId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdShareGroupId({
     id: id,
     groupId: groupId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8725,10 +9861,14 @@ export async function getV3GetV3ProjectsIdSnippets(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectSnippet> {
   const result = await api.v3.getV3ProjectsIdSnippets({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8761,10 +9901,14 @@ export async function postV3PostV3ProjectsIdSnippets(
      */
     visibility_level: 0 | 10 | 20;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectSnippet> {
   const result = await api.v3.postV3ProjectsIdSnippets({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8797,11 +9941,15 @@ export async function getV3GetV3ProjectsIdSnippetsNoteableIdNotes(
    * The ID of the noteable
    */
   noteableId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdSnippetsNoteableIdNotes({
     query: query,
     id: id,
     noteableId: noteableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8830,11 +9978,15 @@ export async function postV3PostV3ProjectsIdSnippetsNoteableIdNotes(
     /** The creation date of the note */
     created_at?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.postV3ProjectsIdSnippetsNoteableIdNotes({
     id: id,
     noteableId: noteableId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8860,11 +10012,15 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsNoteableIdNotesNoteId(
    * The ID of a note
    */
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.deleteV3ProjectsIdSnippetsNoteableIdNotesNoteId({
     id: id,
     noteableId: noteableId,
     noteId: noteId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8891,11 +10047,15 @@ export async function getV3GetV3ProjectsIdSnippetsNoteableIdNotesNoteId(
    * The ID of the noteable
    */
   noteableId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.getV3ProjectsIdSnippetsNoteableIdNotesNoteId({
     id: id,
     noteId: noteId,
     noteableId: noteableId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8926,12 +10086,16 @@ export async function putV3PutV3ProjectsIdSnippetsNoteableIdNotesNoteId(
     /** The content of a note */
     body: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Note> {
   const result = await api.v3.putV3ProjectsIdSnippetsNoteableIdNotesNoteId({
     id: id,
     noteableId: noteableId,
     noteId: noteId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -8954,10 +10118,14 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetId(
    * The ID of a project snippet
    */
   snippetId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3ProjectsIdSnippetsSnippetId({
     id: id,
     snippetId: snippetId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -8980,10 +10148,14 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetId(
    * The ID of a project snippet
    */
   snippetId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectSnippet> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetId({
     id: id,
     snippetId: snippetId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9020,11 +10192,15 @@ export async function putV3PutV3ProjectsIdSnippetsSnippetId(
      */
     visibility_level?: 0 | 10 | 20;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<ProjectSnippet> {
   const result = await api.v3.putV3ProjectsIdSnippetsSnippetId({
     id: id,
     snippetId: snippetId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9057,11 +10233,15 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdAwardEmoji(
    * The ID of an Issue, Merge Request or Snippet
    */
   snippetId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetIdAwardEmoji({
     query: query,
     id: id,
     snippetId: snippetId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9082,11 +10262,15 @@ export async function postV3PostV3ProjectsIdSnippetsSnippetIdAwardEmoji(
     /** The name of a award_emoji (without colons) */
     name: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.postV3ProjectsIdSnippetsSnippetIdAwardEmoji({
     id: id,
     snippetId: snippetId,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9106,12 +10290,16 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetIdAwardEmojiAward
   awardId: number,
   id: number,
   snippetId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.deleteV3ProjectsIdSnippetsSnippetIdAwardEmojiAwardId({
       awardId: awardId,
       id: id,
       snippetId: snippetId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -9132,12 +10320,16 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdAwardEmojiAwardId(
   awardId: number,
   id: number,
   snippetId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetIdAwardEmojiAwardId(
     {
       awardId: awardId,
       id: id,
       snippetId: snippetId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     },
   );
   if (result.data) {
@@ -9166,6 +10358,7 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
   id: number,
   snippetId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.getV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji({
@@ -9173,6 +10366,9 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
       id: id,
       snippetId: snippetId,
       noteId: noteId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -9194,6 +10390,7 @@ export async function postV3PostV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmo
     /** The name of a award_emoji (without colons) */
     name: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.postV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji({
@@ -9201,6 +10398,9 @@ export async function postV3PostV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmo
       snippetId: snippetId,
       noteId: noteId,
       data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -9221,6 +10421,7 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwar
   id: number,
   snippetId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.deleteV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmojiAwardId(
@@ -9229,6 +10430,9 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwar
         id: id,
         snippetId: snippetId,
         noteId: noteId,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
       },
     );
   if (result.data) {
@@ -9251,6 +10455,7 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
   id: number,
   snippetId: number,
   noteId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<AwardEmoji> {
   const result =
     await api.v3.getV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmojiAwardId({
@@ -9258,6 +10463,9 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
       id: id,
       snippetId: snippetId,
       noteId: noteId,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
     });
   if (result.data) {
     return result.data;
@@ -9281,10 +10489,14 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdRaw(
    * The ID of a project snippet
    */
   snippetId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3ProjectsIdSnippetsSnippetIdRaw({
     id: id,
     snippetId: snippetId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -9302,9 +10514,13 @@ export async function deleteV3DeleteV3ProjectsIdStar(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.deleteV3ProjectsIdStar({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9322,9 +10538,13 @@ export async function postV3PostV3ProjectsIdStar(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsIdStar({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9362,11 +10582,15 @@ export async function postV3PostV3ProjectsIdStatusesSha(
     /** A string label to differentiate this status from the status of other systems. Default: "default" */
     context?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<CommitStatus> {
   const result = await api.v3.postV3ProjectsIdStatusesSha({
     id: id,
     sha: sha,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9395,10 +10619,14 @@ export async function getV3GetV3ProjectsIdTriggers(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Trigger> {
   const result = await api.v3.getV3ProjectsIdTriggers({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9416,9 +10644,13 @@ export async function postV3PostV3ProjectsIdTriggers(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Trigger> {
   const result = await api.v3.postV3ProjectsIdTriggers({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9440,10 +10672,14 @@ export async function deleteV3DeleteV3ProjectsIdTriggersToken(
    * The unique token of trigger
    */
   token: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Trigger> {
   const result = await api.v3.deleteV3ProjectsIdTriggersToken({
     id: id,
     token: token,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9466,10 +10702,14 @@ export async function getV3GetV3ProjectsIdTriggersToken(
    * The unique token of trigger
    */
   token: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Trigger> {
   const result = await api.v3.getV3ProjectsIdTriggersToken({
     id: id,
     token: token,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9487,9 +10727,13 @@ export async function postV3PostV3ProjectsIdUnarchive(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Project> {
   const result = await api.v3.postV3ProjectsIdUnarchive({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9513,10 +10757,14 @@ export async function postV3PostV3ProjectsIdUploads(
     /** The file to be uploaded */
     file: File;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.postV3ProjectsIdUploads({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -9549,10 +10797,14 @@ export async function getV3GetV3ProjectsIdUsers(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<UserBasic> {
   const result = await api.v3.getV3ProjectsIdUsers({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9581,10 +10833,14 @@ export async function getV3GetV3ProjectsIdVariables(
    * The ID of a project
    */
   id: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Variable> {
   const result = await api.v3.getV3ProjectsIdVariables({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9609,10 +10865,14 @@ export async function postV3PostV3ProjectsIdVariables(
     /** The value of the variable */
     value: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Variable> {
   const result = await api.v3.postV3ProjectsIdVariables({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9634,10 +10894,14 @@ export async function deleteV3DeleteV3ProjectsIdVariablesKey(
    * The key of the variable
    */
   key: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Variable> {
   const result = await api.v3.deleteV3ProjectsIdVariablesKey({
     id: id,
     key: key,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9660,10 +10924,14 @@ export async function getV3GetV3ProjectsIdVariablesKey(
    * The key of the variable
    */
   key: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Variable> {
   const result = await api.v3.getV3ProjectsIdVariablesKey({
     id: id,
     key: key,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9690,11 +10958,15 @@ export async function putV3PutV3ProjectsIdVariablesKey(
     /** The value of the variable */
     value?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Variable> {
   const result = await api.v3.putV3ProjectsIdVariablesKey({
     id: id,
     key: key,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9709,22 +10981,28 @@ export async function putV3PutV3ProjectsIdVariablesKey(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3Runners(query: {
-  /**
-   * The scope of specific runners to show
-   */
-  scope?: "active" | "paused" | "online";
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<Runner> {
+export async function getV3GetV3Runners(
+  query: {
+    /**
+     * The scope of specific runners to show
+     */
+    scope?: "active" | "paused" | "online";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Runner> {
   const result = await api.v3.getV3Runners({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9739,22 +11017,28 @@ export async function getV3GetV3Runners(query: {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3RunnersAll(query: {
-  /**
-   * The scope of specific runners to show
-   */
-  scope?: "active" | "paused" | "online" | "specific" | "shared";
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<Runner> {
+export async function getV3GetV3RunnersAll(
+  query: {
+    /**
+     * The scope of specific runners to show
+     */
+    scope?: "active" | "paused" | "online" | "specific" | "shared";
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Runner> {
   const result = await api.v3.getV3RunnersAll({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9772,9 +11056,13 @@ export async function deleteV3DeleteV3RunnersId(
    * The ID of the runner
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Runner> {
   const result = await api.v3.deleteV3RunnersId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9793,9 +11081,13 @@ export async function getV3GetV3RunnersId(
    * The ID of the runner
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RunnerDetails> {
   const result = await api.v3.getV3RunnersId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9826,10 +11118,14 @@ export async function putV3PutV3RunnersId(
     /** Flag indicating the runner is locked */
     locked?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RunnerDetails> {
   const result = await api.v3.putV3RunnersId({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9852,9 +11148,13 @@ export async function postV3PostV3Session(
     /** The password of the user */
     password: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<UserWithPrivateToken> {
   const result = await api.v3.postV3Session({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9869,8 +11169,14 @@ export async function postV3PostV3Session(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3SidekiqCompoundMetrics(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3SidekiqCompoundMetrics({});
+export async function getV3GetV3SidekiqCompoundMetrics(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3SidekiqCompoundMetrics({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -9884,8 +11190,14 @@ export async function getV3GetV3SidekiqCompoundMetrics(): Promise<hasuraSdk.JSON
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3SidekiqJobStats(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3SidekiqJobStats({});
+export async function getV3GetV3SidekiqJobStats(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3SidekiqJobStats({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -9899,8 +11211,14 @@ export async function getV3GetV3SidekiqJobStats(): Promise<hasuraSdk.JSONValue> 
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3SidekiqProcessMetrics(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3SidekiqProcessMetrics({});
+export async function getV3GetV3SidekiqProcessMetrics(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3SidekiqProcessMetrics({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -9914,8 +11232,14 @@ export async function getV3GetV3SidekiqProcessMetrics(): Promise<hasuraSdk.JSONV
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3SidekiqQueueMetrics(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3SidekiqQueueMetrics({});
+export async function getV3GetV3SidekiqQueueMetrics(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3SidekiqQueueMetrics({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -9928,18 +11252,24 @@ export async function getV3GetV3SidekiqQueueMetrics(): Promise<hasuraSdk.JSONVal
  * @request GET :/v3/snippets
  * @readonly
  */
-export async function getV3GetV3Snippets(query: {
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<PersonalSnippet> {
+export async function getV3GetV3Snippets(
+  query: {
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PersonalSnippet> {
   const result = await api.v3.getV3Snippets({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9969,9 +11299,13 @@ export async function postV3PostV3Snippets(
      */
     visibility_level?: 0 | 10 | 20;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<PersonalSnippet> {
   const result = await api.v3.postV3Snippets({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -9985,18 +11319,24 @@ export async function postV3PostV3Snippets(
  * @request GET :/v3/snippets/public
  * @readonly
  */
-export async function getV3GetV3SnippetsPublic(query: {
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<PersonalSnippet> {
+export async function getV3GetV3SnippetsPublic(
+  query: {
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PersonalSnippet> {
   const result = await api.v3.getV3SnippetsPublic({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10014,9 +11354,13 @@ export async function deleteV3DeleteV3SnippetsId(
    * The ID of a snippet
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<PersonalSnippet> {
   const result = await api.v3.deleteV3SnippetsId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10035,9 +11379,13 @@ export async function getV3GetV3SnippetsId(
    * The ID of a snippet
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<PersonalSnippet> {
   const result = await api.v3.getV3SnippetsId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10070,10 +11418,14 @@ export async function putV3PutV3SnippetsId(
      */
     visibility_level?: 0 | 10 | 20;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<PersonalSnippet> {
   const result = await api.v3.putV3SnippetsId({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10093,9 +11445,13 @@ export async function getV3GetV3SnippetsIdRaw(
    * The ID of a snippet
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.getV3SnippetsIdRaw({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -10109,8 +11465,14 @@ export async function getV3GetV3SnippetsIdRaw(
  * @request GET :/v3/templates/dockerfiles
  * @readonly
  */
-export async function getV3GetV3TemplatesDockerfiles(): Promise<TemplatesList> {
-  const result = await api.v3.getV3TemplatesDockerfiles({});
+export async function getV3GetV3TemplatesDockerfiles(
+  headers?: hasuraSdk.JSONValue,
+): Promise<TemplatesList> {
+  const result = await api.v3.getV3TemplatesDockerfiles({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -10128,9 +11490,13 @@ export async function getV3GetV3TemplatesDockerfilesName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Template> {
   const result = await api.v3.getV3TemplatesDockerfilesName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10144,8 +11510,14 @@ export async function getV3GetV3TemplatesDockerfilesName(
  * @request GET :/v3/templates/gitignores
  * @readonly
  */
-export async function getV3GetV3TemplatesGitignores(): Promise<TemplatesList> {
-  const result = await api.v3.getV3TemplatesGitignores({});
+export async function getV3GetV3TemplatesGitignores(
+  headers?: hasuraSdk.JSONValue,
+): Promise<TemplatesList> {
+  const result = await api.v3.getV3TemplatesGitignores({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -10163,9 +11535,13 @@ export async function getV3GetV3TemplatesGitignoresName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Template> {
   const result = await api.v3.getV3TemplatesGitignoresName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10179,8 +11555,14 @@ export async function getV3GetV3TemplatesGitignoresName(
  * @request GET :/v3/templates/gitlab_ci_ymls
  * @readonly
  */
-export async function getV3GetV3TemplatesGitlabCiYmls(): Promise<TemplatesList> {
-  const result = await api.v3.getV3TemplatesGitlabCiYmls({});
+export async function getV3GetV3TemplatesGitlabCiYmls(
+  headers?: hasuraSdk.JSONValue,
+): Promise<TemplatesList> {
+  const result = await api.v3.getV3TemplatesGitlabCiYmls({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -10198,9 +11580,13 @@ export async function getV3GetV3TemplatesGitlabCiYmlsName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Template> {
   const result = await api.v3.getV3TemplatesGitlabCiYmlsName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10214,14 +11600,20 @@ export async function getV3GetV3TemplatesGitlabCiYmlsName(
  * @request GET :/v3/templates/licenses
  * @readonly
  */
-export async function getV3GetV3TemplatesLicenses(query: {
-  /**
-   * If passed, returns only popular licenses
-   */
-  popular?: boolean;
-}): Promise<RepoLicense> {
+export async function getV3GetV3TemplatesLicenses(
+  query: {
+    /**
+     * If passed, returns only popular licenses
+     */
+    popular?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<RepoLicense> {
   const result = await api.v3.getV3TemplatesLicenses({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10240,9 +11632,13 @@ export async function getV3GetV3TemplatesLicensesName(
    * The name of the template
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<RepoLicense> {
   const result = await api.v3.getV3TemplatesLicensesName({
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10256,8 +11652,14 @@ export async function getV3GetV3TemplatesLicensesName(
  * @request DELETE :/v3/todos
  * @allowrelaxedtypes
  */
-export async function deleteV3DeleteV3Todos(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.deleteV3Todos({});
+export async function deleteV3DeleteV3Todos(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.deleteV3Todos({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -10270,18 +11672,24 @@ export async function deleteV3DeleteV3Todos(): Promise<hasuraSdk.JSONValue> {
  * @request GET :/v3/todos
  * @readonly
  */
-export async function getV3GetV3Todos(query: {
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<Todo> {
+export async function getV3GetV3Todos(
+  query: {
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Todo> {
   const result = await api.v3.getV3Todos({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10299,9 +11707,13 @@ export async function deleteV3DeleteV3TodosId(
    * The ID of the todo being marked as done
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Todo> {
   const result = await api.v3.deleteV3TodosId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10315,8 +11727,14 @@ export async function deleteV3DeleteV3TodosId(
  * @request GET :/v3/user
  * @readonly
  */
-export async function getV3GetV3User(): Promise<UserPublic> {
-  const result = await api.v3.getV3User({});
+export async function getV3GetV3User(
+  headers?: hasuraSdk.JSONValue,
+): Promise<UserPublic> {
+  const result = await api.v3.getV3User({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -10329,8 +11747,14 @@ export async function getV3GetV3User(): Promise<UserPublic> {
  * @request GET :/v3/user/emails
  * @readonly
  */
-export async function getV3GetV3UserEmails(): Promise<Email> {
-  const result = await api.v3.getV3UserEmails({});
+export async function getV3GetV3UserEmails(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Email> {
+  const result = await api.v3.getV3UserEmails({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -10348,9 +11772,13 @@ export async function postV3PostV3UserEmails(
     /** The new email */
     email: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Email> {
   const result = await api.v3.postV3UserEmails({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10369,9 +11797,13 @@ export async function deleteV3DeleteV3UserEmailsEmailId(
    * The ID of the email
    */
   emailId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.deleteV3UserEmailsEmailId({
     emailId: emailId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -10390,9 +11822,13 @@ export async function getV3GetV3UserEmailsEmailId(
    * The ID of the email
    */
   emailId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Email> {
   const result = await api.v3.getV3UserEmailsEmailId({
     emailId: emailId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10406,8 +11842,14 @@ export async function getV3GetV3UserEmailsEmailId(
  * @request GET :/v3/user/keys
  * @readonly
  */
-export async function getV3GetV3UserKeys(): Promise<SSHKey> {
-  const result = await api.v3.getV3UserKeys({});
+export async function getV3GetV3UserKeys(
+  headers?: hasuraSdk.JSONValue,
+): Promise<SSHKey> {
+  const result = await api.v3.getV3UserKeys({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -10427,9 +11869,13 @@ export async function postV3PostV3UserKeys(
     /** The title of the new SSH key */
     title: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3UserKeys({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10447,9 +11893,13 @@ export async function deleteV3DeleteV3UserKeysKeyId(
    * The ID of the SSH key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3UserKeysKeyId({
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10468,9 +11918,13 @@ export async function getV3GetV3UserKeysKeyId(
    * The ID of the SSH key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3UserKeysKeyId({
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10484,38 +11938,44 @@ export async function getV3GetV3UserKeysKeyId(
  * @request GET :/v3/users
  * @readonly
  */
-export async function getV3GetV3Users(query: {
-  /**
-   * Get a single user with a specific username
-   */
-  username?: string;
-  /**
-   * Search for a username
-   */
-  search?: string;
-  /**
-   * Filters only active users
-   */
-  active?: boolean;
-  /**
-   * Filters only external users
-   */
-  external?: boolean;
-  /**
-   * Filters only blocked users
-   */
-  blocked?: boolean;
-  /**
-   * Current page number
-   */
-  page?: number;
-  /**
-   * Number of items per page
-   */
-  per_page?: number;
-}): Promise<UserBasic> {
+export async function getV3GetV3Users(
+  query: {
+    /**
+     * Get a single user with a specific username
+     */
+    username?: string;
+    /**
+     * Search for a username
+     */
+    search?: string;
+    /**
+     * Filters only active users
+     */
+    active?: boolean;
+    /**
+     * Filters only external users
+     */
+    external?: boolean;
+    /**
+     * Filters only blocked users
+     */
+    blocked?: boolean;
+    /**
+     * Current page number
+     */
+    page?: number;
+    /**
+     * Number of items per page
+     */
+    per_page?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<UserBasic> {
   const result = await api.v3.getV3Users({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10571,9 +12031,13 @@ export async function postV3PostV3Users(
     /** Flag indicating the user is an external user */
     external?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<UserPublic> {
   const result = await api.v3.postV3Users({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10591,9 +12055,13 @@ export async function deleteV3DeleteV3UsersId(
    * The ID of the user
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Email> {
   const result = await api.v3.deleteV3UsersId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10612,9 +12080,13 @@ export async function getV3GetV3UsersId(
    * The ID of the user
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<UserBasic> {
   const result = await api.v3.getV3UsersId({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10674,10 +12146,14 @@ export async function putV3PutV3UsersId(
     /** Flag indicating the user is an external user */
     external?: boolean;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<UserPublic> {
   const result = await api.v3.putV3UsersId({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10696,9 +12172,13 @@ export async function putV3PutV3UsersIdBlock(
    * The ID of the user
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3UsersIdBlock({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -10717,9 +12197,13 @@ export async function getV3GetV3UsersIdEmails(
    * The ID of the user
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Email> {
   const result = await api.v3.getV3UsersIdEmails({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10742,10 +12226,14 @@ export async function postV3PostV3UsersIdEmails(
     /** The email of the user */
     email: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Email> {
   const result = await api.v3.postV3UsersIdEmails({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10767,10 +12255,14 @@ export async function deleteV3DeleteV3UsersIdEmailsEmailId(
    * The ID of the email
    */
   emailId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Email> {
   const result = await api.v3.deleteV3UsersIdEmailsEmailId({
     id: id,
     emailId: emailId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10799,10 +12291,14 @@ export async function getV3GetV3UsersIdEvents(
    * The ID of the user
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Event> {
   const result = await api.v3.getV3UsersIdEvents({
     query: query,
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10821,9 +12317,13 @@ export async function getV3GetV3UsersIdKeys(
    * The ID of the user
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.getV3UsersIdKeys({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10848,10 +12348,14 @@ export async function postV3PostV3UsersIdKeys(
     /** The title of the new SSH key */
     title: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.postV3UsersIdKeys({
     id: id,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10873,10 +12377,14 @@ export async function deleteV3DeleteV3UsersIdKeysKeyId(
    * The ID of the SSH key
    */
   keyId: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<SSHKey> {
   const result = await api.v3.deleteV3UsersIdKeysKeyId({
     id: id,
     keyId: keyId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -10895,9 +12403,13 @@ export async function putV3PutV3UsersIdUnblock(
    * The ID of the user
    */
   id: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.v3.putV3UsersIdUnblock({
     id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -10912,8 +12424,14 @@ export async function putV3PutV3UsersIdUnblock(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getV3GetV3Version(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.v3.getV3Version({});
+export async function getV3GetV3Version(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.v3.getV3Version({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {

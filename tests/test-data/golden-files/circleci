@@ -41,8 +41,12 @@ const api = new Api({
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getMeGetMe(): Promise<User> {
-  const result = await api.me.getMe({});
+export async function getMeGetMe(headers?: hasuraSdk.JSONValue): Promise<User> {
+  const result = await api.me.getMe({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -80,11 +84,15 @@ Set to "completed", "successful", "failed", "running", or defaults to no filter.
    * XXXXXXXXX
    */
   project: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Builds> {
   const result = await api.project.projectDetail({
     query: query,
     username: username,
     project: project,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -115,11 +123,15 @@ export async function postProjectProjectCreate(
     /** The tag to build. Default is null. Cannot be used with revision parameter. */
     tag?: Tag;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<BuildSummary> {
   const result = await api.project.projectCreate({
     username: username,
     project: project,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -135,12 +147,16 @@ export async function postProjectProjectCreate(
 export async function deleteProjectBuildCacheDelete(
   username: string,
   project: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<{
   status?: string;
 }> {
   const result = await api.project.buildCacheDelete({
     username: username,
     project: project,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -158,10 +174,14 @@ export async function deleteProjectBuildCacheDelete(
 export async function getProjectCheckoutKeyDetail(
   username: string,
   project: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Keys> {
   const result = await api.project.checkoutKeyDetail({
     username: username,
     project: project,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -180,11 +200,15 @@ export async function postProjectCheckoutKeyCreate(
   project: string,
   /** Request body */
   data: "deploy-key" | "github-user-key",
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Key> {
   const result = await api.project.checkoutKeyCreate({
     username: username,
     project: project,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -204,6 +228,7 @@ export async function deleteProjectCheckoutKeyDelete(
    * XXXXXXXXXX
    */
   fingerprint: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<{
   message?: "OK";
 }> {
@@ -211,6 +236,9 @@ export async function deleteProjectCheckoutKeyDelete(
     username: username,
     project: project,
     fingerprint: fingerprint,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -229,11 +257,15 @@ export async function getProjectCheckoutKeyDetail2(
   username: string,
   project: string,
   fingerprint: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Key> {
   const result = await api.project.checkoutKeyDetail2({
     username: username,
     project: project,
     fingerprint: fingerprint,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -250,10 +282,14 @@ export async function getProjectCheckoutKeyDetail2(
 export async function getProjectEnvvarDetail(
   username: string,
   project: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Envvars> {
   const result = await api.project.envvarDetail({
     username: username,
     project: project,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -269,10 +305,14 @@ export async function getProjectEnvvarDetail(
 export async function postProjectEnvvarCreate(
   username: string,
   project: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Envvar> {
   const result = await api.project.envvarCreate({
     username: username,
     project: project,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -292,6 +332,7 @@ export async function deleteProjectEnvvarDelete(
    * XXXXXXXXXX
    */
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<{
   message?: "OK";
 }> {
@@ -299,6 +340,9 @@ export async function deleteProjectEnvvarDelete(
     username: username,
     project: project,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -316,11 +360,15 @@ export async function getProjectEnvvarDetail2(
   username: string,
   project: string,
   name: string,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Envvar> {
   const result = await api.project.envvarDetail2({
     username: username,
     project: project,
     name: name,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -342,11 +390,15 @@ export async function postProjectSshKeyCreate(
     hostname?: string;
     private_key?: string;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.project.sshKeyCreate({
     username: username,
     project: project,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
@@ -379,12 +431,16 @@ export async function postProjectTreeCreate(
      */
     revision?: Revision;
   },
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.project.treeCreate({
     username: username,
     project: project,
     branch: branch,
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -406,11 +462,15 @@ export async function getProjectProjectDetail2(
    * XXXXXXXXXX
    */
   buildNum: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<BuildDetail> {
   const result = await api.project.projectDetail2({
     username: username,
     project: project,
     buildNum: buildNum,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -428,11 +488,15 @@ export async function getProjectArtifactsDetail(
   username: string,
   project: string,
   buildNum: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Artifacts> {
   const result = await api.project.artifactsDetail({
     username: username,
     project: project,
     buildNum: buildNum,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -450,11 +514,15 @@ export async function postProjectCancelCreate(
   username: string,
   project: string,
   buildNum: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.project.cancelCreate({
     username: username,
     project: project,
     buildNum: buildNum,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -472,11 +540,15 @@ export async function postProjectRetryCreate(
   username: string,
   project: string,
   buildNum: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Build> {
   const result = await api.project.retryCreate({
     username: username,
     project: project,
     buildNum: buildNum,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -495,11 +567,15 @@ export async function getProjectTestsDetail(
   username: string,
   project: string,
   buildNum: number,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Tests> {
   const result = await api.project.testsDetail({
     username: username,
     project: project,
     buildNum: buildNum,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -514,8 +590,14 @@ export async function getProjectTestsDetail(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getProjectsProjectsList(): Promise<Projects> {
-  const result = await api.projects.projectsList({});
+export async function getProjectsProjectsList(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Projects> {
+  const result = await api.projects.projectsList({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -529,18 +611,24 @@ export async function getProjectsProjectsList(): Promise<Projects> {
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getRecentBuildsRecentBuildsList(query: {
-  /**
-   * The number of builds to return. Maximum 100, defaults to 30.
-   */
-  limit?: number;
-  /**
-   * The API returns builds starting from this offset, defaults to 0.
-   */
-  offset?: number;
-}): Promise<Builds> {
+export async function getRecentBuildsRecentBuildsList(
+  query: {
+    /**
+     * The number of builds to return. Maximum 100, defaults to 30.
+     */
+    limit?: number;
+    /**
+     * The API returns builds starting from this offset, defaults to 0.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Builds> {
   const result = await api.recentBuilds.recentBuildsList({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -554,8 +642,14 @@ export async function getRecentBuildsRecentBuildsList(query: {
  * @request POST :/user/heroku-key
  * @allowrelaxedtypes
  */
-export async function postUserHerokuKeyCreate(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.user.herokuKeyCreate({});
+export async function postUserHerokuKeyCreate(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.user.herokuKeyCreate({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return new hasuraSdk.JSONValue(result.data);
   } else {

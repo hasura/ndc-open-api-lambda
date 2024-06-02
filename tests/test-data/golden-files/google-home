@@ -82,8 +82,14 @@ const api = new Api({
  * @request GET :/NOTICE.html.gz
  * @readonly
  */
-export async function getNoticeHtmlGzLegalNotice(): Promise<string> {
-  const result = await api.noticeHtmlGz.legalNotice({});
+export async function getNoticeHtmlGzLegalNotice(
+  headers?: hasuraSdk.JSONValue,
+): Promise<string> {
+  const result = await api.noticeHtmlGz.legalNotice({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -98,9 +104,13 @@ export async function getNoticeHtmlGzLegalNotice(): Promise<string> {
 export async function postAssistantAccessibility(
   /** Request body */
   data: AccessibilityRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Getcurrentvalues> {
   const result = await api.assistant.accessibility({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -114,8 +124,14 @@ export async function postAssistantAccessibility(
  * @request GET :/assistant/alarms
  * @readonly
  */
-export async function getAssistantGetAlarmsandTimers(): Promise<Example18> {
-  const result = await api.assistant.getAlarmsandTimers({});
+export async function getAssistantGetAlarmsandTimers(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example18> {
+  const result = await api.assistant.getAlarmsandTimers({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -130,9 +146,13 @@ export async function getAssistantGetAlarmsandTimers(): Promise<Example18> {
 export async function postAssistantDeleteAlarmsandTimers(
   /** Request body */
   data: DeleteAlarmsandTimersRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Example19> {
   const result = await api.assistant.deleteAlarmsandTimers({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -148,9 +168,13 @@ export async function postAssistantDeleteAlarmsandTimers(
 export async function postAssistantAlarmVolume(
   /** Request body */
   data: AlarmVolumeRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Getvolume> {
   const result = await api.assistant.alarmVolume({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -166,9 +190,13 @@ export async function postAssistantAlarmVolume(
 export async function postAssistantCheckReadyStatus(
   /** Request body */
   data: CheckReadyStatusRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Example13> {
   const result = await api.assistant.checkReadyStatus({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -181,8 +209,14 @@ export async function postAssistantCheckReadyStatus(
  * Do Not Disturb
  * @request POST :/assistant/notifications
  */
-export async function postAssistantDoNotDisturb(): Promise<Getcurrentstate> {
-  const result = await api.assistant.doNotDisturb({});
+export async function postAssistantDoNotDisturb(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Getcurrentstate> {
+  const result = await api.assistant.doNotDisturb({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -197,9 +231,13 @@ export async function postAssistantDoNotDisturb(): Promise<Getcurrentstate> {
 export async function postAssistantNightModesettings(
   /** Request body */
   data: NightModesettingsRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Example17> {
   const result = await api.assistant.nightModesettings({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -215,9 +253,13 @@ export async function postAssistantNightModesettings(
 export async function postBluetoothForgetpaireddevice(
   /** Request body */
   data: ForgetpaireddeviceRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.bluetooth.forgetpaireddevice({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -233,9 +275,13 @@ export async function postBluetoothForgetpaireddevice(
 export async function postBluetoothPairwithSpeaker(
   /** Request body */
   data: PairwithSpeakerRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.bluetooth.pairwithSpeaker({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -251,9 +297,13 @@ export async function postBluetoothPairwithSpeaker(
 export async function postBluetoothChangeDiscoverability(
   /** Request body */
   data: ChangeDiscoverabilityRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.bluetooth.changeDiscoverability({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -267,8 +317,14 @@ export async function postBluetoothChangeDiscoverability(
  * @request GET :/bluetooth/get_bonded
  * @readonly
  */
-export async function getBluetoothGetPairedDevices(): Promise<Example111[]> {
-  const result = await api.bluetooth.getPairedDevices({});
+export async function getBluetoothGetPairedDevices(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example111[]> {
+  const result = await api.bluetooth.getPairedDevices({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -283,9 +339,13 @@ export async function getBluetoothGetPairedDevices(): Promise<Example111[]> {
 export async function postBluetoothScanfordevices(
   /** Request body */
   data: ScanfordevicesRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.bluetooth.scanfordevices({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -299,8 +359,14 @@ export async function postBluetoothScanfordevices(
  * @request GET :/bluetooth/scan_results
  * @readonly
  */
-export async function getBluetoothGetScanResults(): Promise<Example112[]> {
-  const result = await api.bluetooth.getScanResults({});
+export async function getBluetoothGetScanResults(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example112[]> {
+  const result = await api.bluetooth.getScanResults({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -313,8 +379,14 @@ export async function getBluetoothGetScanResults(): Promise<Example112[]> {
  * @request GET :/bluetooth/status
  * @readonly
  */
-export async function getBluetoothStatus(): Promise<Example110> {
-  const result = await api.bluetooth.status({});
+export async function getBluetoothStatus(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example110> {
+  const result = await api.bluetooth.status({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -327,10 +399,14 @@ export async function getBluetoothStatus(): Promise<Example110> {
  * @request GET :/configured_networks
  * @readonly
  */
-export async function getConfiguredNetworksGetSavedNetworks(): Promise<
-  Example113[]
-> {
-  const result = await api.configuredNetworks.getSavedNetworks({});
+export async function getConfiguredNetworksGetSavedNetworks(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example113[]> {
+  const result = await api.configuredNetworks.getSavedNetworks({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -346,9 +422,13 @@ export async function getConfiguredNetworksGetSavedNetworks(): Promise<
 export async function postConnectWifiConnecttoWiFiNetwork(
   /** Request body */
   data: ConnecttoWiFiNetworkRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.connectWifi.connecttoWiFiNetwork({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.error) {
     throw result.error;
@@ -363,13 +443,15 @@ export async function postConnectWifiConnecttoWiFiNetwork(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getEurekaInfoEurekaInfo(query: {
-  params: string;
-  options: string;
-  nonce: number;
-}): Promise<Example1> {
+export async function getEurekaInfoEurekaInfo(
+  query: { params: string; options: string; nonce: number },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example1> {
   const result = await api.eurekaInfo.eurekaInfo({
     query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -385,9 +467,13 @@ export async function getEurekaInfoEurekaInfo(query: {
 export async function postForgetWifiForgetWiFiNetwork(
   /** Request body */
   data: ForgetWiFiNetworkRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.forgetWifi.forgetWiFiNetwork({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -403,9 +489,13 @@ export async function postForgetWifiForgetWiFiNetwork(
 export async function postGetAppDeviceIdAppDeviceId(
   /** Request body */
   data: AppDeviceIDRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Example11> {
   const result = await api.getAppDeviceId.appDeviceId({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -420,8 +510,14 @@ export async function postGetAppDeviceIdAppDeviceId(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getIconPngChromecastIcon(): Promise<hasuraSdk.JSONValue> {
-  const result = await api.iconPng.chromecastIcon({});
+export async function getIconPngChromecastIcon(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.iconPng.chromecastIcon({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.error) {
     throw result.error;
   } else {
@@ -434,8 +530,14 @@ export async function getIconPngChromecastIcon(): Promise<hasuraSdk.JSONValue> {
  * @request GET :/offer
  * @readonly
  */
-export async function getOfferOffer(): Promise<Example12> {
-  const result = await api.offer.offer({});
+export async function getOfferOffer(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example12> {
+  const result = await api.offer.offer({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -450,9 +552,13 @@ export async function getOfferOffer(): Promise<Example12> {
 export async function postRebootRebootandFactoryReset(
   /** Request body */
   data: RebootandFactoryResetRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.reboot.rebootandFactoryReset({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -466,10 +572,14 @@ export async function postRebootRebootandFactoryReset(
  * @request GET :/scan_results
  * @readonly
  */
-export async function getScanResultsGetWiFiScanResults(): Promise<
-  Example114[]
-> {
-  const result = await api.scanResults.getWiFiScanResults({});
+export async function getScanResultsGetWiFiScanResults(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example114[]> {
+  const result = await api.scanResults.getWiFiScanResults({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -481,8 +591,14 @@ export async function getScanResultsGetWiFiScanResults(): Promise<
  * Scan for Networks
  * @request POST :/scan_wifi
  */
-export async function postScanWifiScanforNetworks(): Promise<object> {
-  const result = await api.scanWifi.scanforNetworks({});
+export async function postScanWifiScanforNetworks(
+  headers?: hasuraSdk.JSONValue,
+): Promise<object> {
+  const result = await api.scanWifi.scanforNetworks({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -497,9 +613,13 @@ export async function postScanWifiScanforNetworks(): Promise<object> {
 export async function postSetEurekaInfoSetEurekaInfo(
   /** Request body */
   data: SetEurekaInfoRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.setEurekaInfo.setEurekaInfo({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -513,8 +633,14 @@ export async function postSetEurekaInfoSetEurekaInfo(
  * @request GET :/supported_locales
  * @readonly
  */
-export async function getSupportedLocalesLocales(): Promise<Example15[]> {
-  const result = await api.supportedLocales.locales({});
+export async function getSupportedLocalesLocales(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example15[]> {
+  const result = await api.supportedLocales.locales({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -527,8 +653,14 @@ export async function getSupportedLocalesLocales(): Promise<Example15[]> {
  * @request GET :/supported_timezones
  * @readonly
  */
-export async function getSupportedTimezonesTimezones(): Promise<Example14[]> {
-  const result = await api.supportedTimezones.timezones({});
+export async function getSupportedTimezonesTimezones(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example14[]> {
+  const result = await api.supportedTimezones.timezones({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
   if (result.data) {
     return result.data;
   } else {
@@ -543,9 +675,13 @@ export async function getSupportedTimezonesTimezones(): Promise<Example14[]> {
 export async function postTestInternetDownloadSpeedTestInternetDownloadSpeed(
   /** Request body */
   data: TestInternetDownloadSpeedRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<Example16> {
   const result = await api.testInternetDownloadSpeed.testInternetDownloadSpeed({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
@@ -561,9 +697,13 @@ export async function postTestInternetDownloadSpeedTestInternetDownloadSpeed(
 export async function postUserEqSetEqualizerValues(
   /** Request body */
   data: SetEqualizerValuesRequest,
+  headers?: hasuraSdk.JSONValue,
 ): Promise<object> {
   const result = await api.userEq.setEqualizerValues({
     data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
   });
   if (result.data) {
     return result.data;
