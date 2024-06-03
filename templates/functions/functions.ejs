@@ -23,15 +23,6 @@ const hasHeaders = (headers) => {
 
 const api = new Api({
   baseUrl: '<%~ baseUrl %>',
-<% if (hasHeaders(headerMap)) { %>
-  baseApiParams: {
-    headers: {
-<% for (const [key, value] of headerMap) { %>
-      "<%~key%>": "<%~value%>",
-<% } %>
-    }
-  }
-<% } %>
 });
 
 <%- for (let req of apiRoutes) { %>

@@ -20,7 +20,6 @@ type ParsedFunctionComponents = {
 export async function generateFunctionsTsCode(
   legacyTypedApiComponents: legacyApiTsGenerator.ApiComponents,
   generatedApiTsCodeComponents: generatorTypes.GeneratedApiTsCode,
-  headersMap: Map<string, string> | undefined,
   baseUrl: string | undefined,
   parsedFunctionComponents?: ParsedFunctionComponents, // TODO: use this for instead of `legacyTypedApiComponents`
 ): Promise<appTypes.GeneratedCode> {
@@ -43,7 +42,6 @@ export async function generateFunctionsTsCode(
       apiRoutes: legacyApiRoutesParser.getApiRoutes(),
       importList: legacyApiRoutesParser.getImportList(),
       baseUrl: baseUrl ? baseUrl : "",
-      headerMap: headersMap,
     },
   );
 

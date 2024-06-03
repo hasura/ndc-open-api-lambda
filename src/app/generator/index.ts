@@ -14,7 +14,6 @@ export async function generateCode(
   logger.trace("starting api.ts code generation");
   const apiTsCode = await apiTsGenerator.generateApiTsCode(args.openApiUri);
   logger.trace("finished api.ts code generation");
-  const headersMap = headersParser.parseHeaders(args.headers);
   logger.trace("starting function.ts code generation");
 
   const parsedSchemaStore = schemaParser.getParsedSchemaStore(
@@ -26,7 +25,6 @@ export async function generateCode(
   const functionsTsCode = await functionsTsGenerator.generateFunctionsTsCode(
     apiTsCode.legacyTypedApiComponents,
     apiTsCode,
-    headersMap,
     args.baseUrl,
   );
   logger.trace("finished function.ts code generation");
