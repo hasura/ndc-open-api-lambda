@@ -12,22 +12,18 @@ Functions that wrap GET requests are marked with `@readonly` annotation, and are
 - [Hasura V3 Documentation](https://hasura.io/docs/3.0)
 - [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda)
 
-## Important
-
-This connector is under active development right now and is not stable. It has [known limitations](https://github.com/hasura/ndc-open-api-lambda?tab=readme-ov-file#known-limiations) and might have undocumented issues. Please create an issue if you run into any problems.
-
 ## Features
 
 - Convert Open API/swagger documentation into Typescript functions compatible with NodeJS Lambda Connector
 - Supported request types
 
-| Request Type | Query | Path | Body | Headers              |
-| ------------ | ----- | ---- | ---- | -------------------- |
-| GET          | y     | y    | NA   | Need Manual Addition |
-| POST         | y     | y    | y    | Need Manual Addition |
-| DELETE       | y     | y    | y    | Need Manual Addition |
-| PUT          | y     | y    | y    | Need Manual Addition |
-| PATCH        | y     | y    | y    | Need Manual Addition |
+| Request Type | Query | Path | Body | Headers |
+| ------------ | ----- | ---- | ---- | ------- |
+| GET          | y     | y    | NA   | y       |
+| POST         | y     | y    | y    | y       |
+| DELETE       | y     | y    | y    | y       |
+| PUT          | y     | y    | y    | y       |
+| PATCH        | y     | y    | y    | y       |
 
 ## Before you get Started
 
@@ -42,12 +38,15 @@ The Connector can be used with the DDN CLI. Use the `ddn dev` command to tell th
 
 This connector is published as a Docker Image. The image name is `ghcr.io/hasura/ndc-open-api-lambda`. The Docker Image accepts the following environment variables that can be used to alter its functionality. These variables, if present in the `ConnectorManifest` of your DDN Metadata, will be passed by the DDN CLI to the Connector.
 
-1. `NDC_OAS_DOCUMENT_URI`: The URI to your Open API Document. If you're using a file instead of a HTTP link, please ensure that it is named `swagger.json` and is present in the root directory of the volume being mounted to `/etc/connector`. This env var is nullable.
-2. `NDC_OAS_BASE_URL`: The base URL of your API. This env var is nullable.
-3. `NDC_OAS_FILE_OVERWRITE`: Boolean flag to allow previously generated files to be over-written. Defaults to `false`. Please note that the codegen will fail with an error if this is set to `false` and the files that the codegen would create already exist.
-4. `HASURA_PLUGIN_LOG_LEVEL`: The log level. Possible values: `trace`, `debug`, `info`, `warn`, `error`, `fatal`, `panic`. Defaults to `info`
-5. `NDC_OAS_LAMBDA_PRETTY_LOGS`: Boolean flag to print human readable logs instead of JSON
-6. `NDC_LAMBDA_SDK_VERSION`: NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version
+1. `NDC_OAS_DOCUMENT_URI` (optional): The URI to your Open API Document. If you're using a file instead of a HTTP link, please ensure that it is named `swagger.json` and is present in the root directory of the volume being mounted to `/etc/connector`. This env var is nullable.
+2. `NDC_OAS_BASE_URL` (optional): The base URL of your API. This env var is nullable.
+3. `NDC_OAS_FILE_OVERWRITE` (optional): Boolean flag to allow previously generated files to be over-written. Defaults to `false`. Please note that the codegen will fail with an error if this is set to `false` and the files that the codegen would create already exist.
+4. `HASURA_PLUGIN_LOG_LEVEL` (optional): The log level. Possible values: `trace`, `debug`, `info`, `warn`, `error`, `fatal`, `panic`. Defaults to `info`
+5. `NDC_OAS_LAMBDA_PRETTY_LOGS` (optional): Boolean flag to print human readable logs instead of JSON. Defaults to `false`
+
+### Saving User Changes
+
+When re-running the codegen on already generated files, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a function. This will ensure that that function is not overwritten and it will be added if missing in the newly generated `functions.ts`
 
 ### Usage without the DDN CLI
 
@@ -144,7 +143,6 @@ npm run watch
 - `Record<>` and `Map<>` return types are wrapped as JSON.
 - Support for [Relaxed Types](https://github.com/hasura/ndc-nodejs-lambda/tree/main?tab=readme-ov-file#relaxed-types) is a WiP.
 - [Types not supported by the NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#unsupported-types) are not supported.
-- If `*/` is present in examples or descriptions, it causes a syntax error because it denotes the end of a multi line comment in Typescript. This causes the codegen to crash. This is a high priority issue that will be fixed in upcoming releases.
 
 ## Contributing
 
