@@ -9,6 +9,9 @@ The OpenAPI Lambda Connector allows you to import APIs that have an OpenAPI/Swag
 
 Functions that wrap GET requests are marked with `@readonly` annotation, and are exposed as GraphQL Queries by the [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda). All other request types are exposed as GraphQL Mutations.
 
+This Connector implements the [Data Connector Spec](https://github.com/hasura/ndc-spec)
+
+
 - [Hasura V3 Documentation](https://hasura.io/docs/3.0)
 - [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda)
 
@@ -27,8 +30,10 @@ Functions that wrap GET requests are marked with `@readonly` annotation, and are
 
 ## Before you get Started
 
-- Please ensure that you have [downloaded and installed the DDN CLI](https://hasura.io/docs/3.0/cli/installation/).
-- Please ensure that you have Docker installed and the Docker Daemon is running.
+1. Create a [Hasura Cloud account](https://console.hasura.io)
+2. Install the [CLI](https://hasura.io/docs/3.0/cli/installation/)
+3. [Create a project](https://hasura.io/docs/3.0/getting-started/create-a-project)
+4. Please ensure that you have Docker installed and the Docker Daemon is running.
 
 ## For Hasura Users
 
