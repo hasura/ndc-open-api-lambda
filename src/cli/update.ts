@@ -44,20 +44,12 @@ Further reading:
       .env("NDC_OAS_FILE_OVERWRITE"),
   )
 
-  .addOption(
-    new Option(
-      "--ndc-lambda-sdk <version>",
-      "NDC Lambda SDK Version to be used by the SDK. Defaults to the latest version",
-    ).env("NDC_LAMBDA_SDK_VERSION"),
-  )
-
   .action((args, cmd) => {
     main(
       args.openApi,
       args.outputDirectory,
       args.overwrite === "true",
       args.baseUrl,
-      args.ndcLambdaSdk,
     );
   });
 
@@ -80,7 +72,6 @@ async function main(
   outputDir: string,
   overwrite: boolean,
   baseUrl: string | undefined,
-  ndcLambdaSdk: string | undefined,
 ) {
   context.getInstance().setOverwriteFiles(overwrite);
   context.getInstance().setOpenApiUri(openApi);
