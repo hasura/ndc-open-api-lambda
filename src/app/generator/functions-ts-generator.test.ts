@@ -22,7 +22,6 @@ const tests: {
   _legacyApiComponents?: legacyApiTsGenerator.ApiComponents;
   _generatedApiTsComponents?: types.GeneratedApiTsCode;
   _goldenFileContent?: string;
-  _headersMap?: Map<string, string>;
 }[] = [
   {
     name: "DemoBlogApi",
@@ -130,7 +129,6 @@ async function testGenerateFunctionsTsCode() {
         let got = await functionTsGenerator.generateFunctionsTsCode(
           testCase._legacyApiComponents!,
           testCase._generatedApiTsComponents!,
-          testCase._headersMap,
           testCase.baseUrl,
         );
 
