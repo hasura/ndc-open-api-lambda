@@ -51,7 +51,7 @@ This connector is published as a Docker Image. The image name is `ghcr.io/hasura
 
 ### Saving User Changes
 
-When re-running the codegen on already generated files, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a function. This will ensure that that function is not overwritten and it will be added if missing in the newly generated `functions.ts`
+When re-running the codegen on already generated files, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a function. This will ensure that that function is not overwritten and the saved function will be added if missing in the newly generated `functions.ts`
 
 ### Usage without the DDN CLI
 
