@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[0.1.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.0)] 2024-06-03
+
 - Update `ghcr.io/hasura/ndc-nodejs-lambda` to version `v1.4.0` and remove env var `NDC_LAMBDA_SDK_VERSION` ([30](https://github.com/hasura/ndc-open-api-lambda/pull/30)).
 - API requests support forwarding headers that are sent to the data connector. Manual addition of headers via the `--headers` flag and `NDC_OAS_HEADERS` env var has been removed ([#28](https://github.com/hasura/ndc-open-api-lambda/pull/28)).
 - Added support for adding secruity param as a query param in `api.ts` ([#27](https://github.com/hasura/ndc-open-api-lambda/pull/27))
