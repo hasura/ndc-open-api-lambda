@@ -127,10 +127,15 @@ async function testGenerateFunctionsTsCode() {
       before(async () => {
         const relativeDirectorToTestFiles = "../../../tests/test-data/";
 
-        context.getInstance().setOutputDirectory(path.resolve(__dirname,
-          relativeDirectorToTestFiles,
-          "golden-files")
-        );
+        context
+          .getInstance()
+          .setOutputDirectory(
+            path.resolve(
+              __dirname,
+              relativeDirectorToTestFiles,
+              "golden-files",
+            ),
+          );
 
         testCase.openApiUri = path.resolve(
           __dirname,
@@ -153,11 +158,16 @@ async function testGenerateFunctionsTsCode() {
           baseUrl: testCase.baseUrl,
         });
 
-        const gotFunctionTs = got.filter((item) => item.fileType === "functions-ts")[0]!;
+        const gotFunctionTs = got.filter(
+          (item) => item.fileType === "functions-ts",
+        )[0]!;
 
-        gotFunctionTs.fileContent = await prettier.format(gotFunctionTs.fileContent, {
-          parser: "typescript",
-        });
+        gotFunctionTs.fileContent = await prettier.format(
+          gotFunctionTs.fileContent,
+          {
+            parser: "typescript",
+          },
+        );
 
         assert.equal(gotFunctionTs.fileContent, testCase._goldenFileContent);
 

@@ -10,23 +10,28 @@ const tests: {
   _goldenFileContent?: string;
   _functionsTsFile?: appTypes.GeneratedCode;
   _goldenFilePath?: string;
-
 }[] = [
   {
-  name: "atlassian-jira",
-}
+    name: "atlassian-jira",
+  },
 ];
 
-describe('cleanup::fixImports', async() => {
+describe("cleanup::fixImports", async () => {
   for (const testCase of tests) {
-    before(async() => {
-      const testFileDir = path.resolve(__dirname, "./test-data/cleanup-tests/", testCase.name);
-      
+    before(async () => {
+      const testFileDir = path.resolve(
+        __dirname,
+        "./test-data/cleanup-tests/",
+        testCase.name,
+      );
+
       const apiFilePath = path.resolve(testFileDir, "api");
       const functionsFilePath = path.resolve(testFileDir, "test");
       testCase._goldenFilePath = path.resolve(testFileDir, "golden-file");
-      testCase._goldenFileContent = fs.readFileSync(testCase._goldenFilePath).toString();
-      
+      testCase._goldenFileContent = fs
+        .readFileSync(testCase._goldenFilePath)
+        .toString();
+
       const apiTsFile: appTypes.GeneratedCode = {
         fileContent: fs.readFileSync(apiFilePath).toString(),
         filePath: `${apiFilePath}.ts`,
@@ -39,19 +44,22 @@ describe('cleanup::fixImports', async() => {
         fileType: "functions-ts",
       };
 
-      console.log('functions len: ', functionsTsFile.fileContent.length);
+      console.log("functions len: ", functionsTsFile.fileContent.length);
 
       testCase._files = [apiTsFile, functionsTsFile];
       testCase._functionsTsFile = functionsTsFile;
     });
 
-    it(`${testCase.name}`, async() => {
+    it(`${testCase.name}`, async () => {
       cleanup.fixImports(testCase._files!);
 
-      assert.equal(testCase._functionsTsFile!.fileContent, testCase._goldenFileContent!);
+      assert.equal(
+        testCase._functionsTsFile!.fileContent,
+        testCase._goldenFileContent!,
+      );
 
       // update golden file
       // fs.writeFileSync(testCase._goldenFilePath!, testCase._functionsTsFile!.fileContent);
     });
   }
-})
+});
