@@ -1,5 +1,5 @@
 import * as ts from "ts-morph";
-import * as types from "../types";
+import * as types from "../../types";
 
 export function fixImports(generatedCodeList: types.GeneratedCode[]) {
   const project = new ts.Project();

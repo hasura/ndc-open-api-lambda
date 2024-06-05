@@ -5,7 +5,7 @@ import * as context from "../context";
 import * as types from "../types";
 import * as logger from "../../util/logger";
 import * as schemaParser from "../parser/open-api/schema-parser";
-import * as cleanup from "./cleanup";
+import * as cleanup from "../parser/typescript/cleanup";
 
 export async function generateCode(
   args: types.GenerateCodeInput,
