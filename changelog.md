@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[0.1.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.1)] 2024-06-05
+
 - remove unused imports, organize imports and fix import issues ([#32](https://github.com/hasura/ndc-open-api-lambda/pull/32))
 
 ## [[0.1.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.0)] 2024-06-03
