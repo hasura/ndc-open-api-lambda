@@ -85,6 +85,36 @@ const tests: {
     goldenFile: "./golden-files/atlassian-jira",
     baseUrl: "",
   },
+  {
+    name: "1Password",
+    openApiUri: "./open-api-docs/1password.json",
+    goldenFile: "./golden-files/1password",
+    baseUrl: "",
+  },
+  {
+    name: "AwsCloudMap",
+    openApiUri: "./open-api-docs/aws-cloud-map.json",
+    goldenFile: "./golden-files/aws-cloud-map",
+    baseUrl: "",
+  },
+  {
+    name: "AmazonWorkspaces",
+    openApiUri: "./open-api-docs/amazon-workspaces.json",
+    goldenFile: "./golden-files/amazon-workspaces",
+    baseUrl: "",
+  },
+  {
+    name: "AckoInsurance",
+    openApiUri: "./open-api-docs/acko-insurance.json",
+    goldenFile: "./golden-files/acko-insurance",
+    baseUrl: "",
+  },
+  {
+    name: "MicrosoftWorkloadMonitor",
+    openApiUri: "./open-api-docs/microsoft-workload-monitor.json",
+    goldenFile: "./golden-files/microsoft-workload-monitor",
+    baseUrl: "",
+  },
 ];
 
 describe("functions-ts-generator", async () => {
