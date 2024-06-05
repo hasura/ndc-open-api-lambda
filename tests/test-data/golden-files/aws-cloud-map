@@ -1,0 +1,755 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import {
+  Api,
+  CreateHttpNamespaceRequest,
+  CreateHttpNamespaceResponse,
+  CreatePrivateDnsNamespaceRequest,
+  CreatePrivateDnsNamespaceResponse,
+  CreatePublicDnsNamespaceRequest,
+  CreatePublicDnsNamespaceResponse,
+  CreateServiceRequest,
+  CreateServiceResponse,
+  DeleteNamespaceRequest,
+  DeleteNamespaceResponse,
+  DeleteServiceRequest,
+  DeleteServiceResponse,
+  DeregisterInstanceRequest,
+  DeregisterInstanceResponse,
+  DiscoverInstancesRequest,
+  DiscoverInstancesResponse,
+  GetInstanceRequest,
+  GetInstanceResponse,
+  GetInstancesHealthStatusRequest,
+  GetInstancesHealthStatusResponse,
+  GetNamespaceRequest,
+  GetNamespaceResponse,
+  GetOperationRequest,
+  GetOperationResponse,
+  GetServiceRequest,
+  GetServiceResponse,
+  ListInstancesRequest,
+  ListInstancesResponse,
+  ListNamespacesRequest,
+  ListNamespacesResponse,
+  ListOperationsRequest,
+  ListOperationsResponse,
+  ListServicesRequest,
+  ListServicesResponse,
+  ListTagsForResourceRequest,
+  ListTagsForResourceResponse,
+  RegisterInstanceRequest,
+  RegisterInstanceResponse,
+  TagResourceRequest,
+  TagResourceResponse,
+  UntagResourceRequest,
+  UntagResourceResponse,
+  UpdateHttpNamespaceRequest,
+  UpdateHttpNamespaceResponse,
+  UpdateInstanceCustomHealthStatusRequest,
+  UpdatePrivateDnsNamespaceRequest,
+  UpdatePrivateDnsNamespaceResponse,
+  UpdatePublicDnsNamespaceRequest,
+  UpdatePublicDnsNamespaceResponse,
+  UpdateServiceRequest,
+  UpdateServiceResponse,
+} from "./api";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.CreateHttpNamespace
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314CreateHttpNamespaceCreateHttpNamespace(
+  /** Request body */
+  data: CreateHttpNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateHttpNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314CreateHttpNamespace.createHttpNamespace(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.CreatePrivateDnsNamespace
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314CreatePrivateDnsNamespaceCreatePrivateDnsNamespace(
+  /** Request body */
+  data: CreatePrivateDnsNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreatePrivateDnsNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314CreatePrivateDnsNamespace.createPrivateDnsNamespace(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.CreatePublicDnsNamespace
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314CreatePublicDnsNamespaceCreatePublicDnsNamespace(
+  /** Request body */
+  data: CreatePublicDnsNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreatePublicDnsNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314CreatePublicDnsNamespace.createPublicDnsNamespace(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.CreateService
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314CreateServiceCreateService(
+  /** Request body */
+  data: CreateServiceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateServiceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314CreateService.createService({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.DeleteNamespace
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314DeleteNamespaceDeleteNamespace(
+  /** Request body */
+  data: DeleteNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314DeleteNamespace.deleteNamespace(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.DeleteService
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314DeleteServiceDeleteService(
+  /** Request body */
+  data: DeleteServiceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteServiceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314DeleteService.deleteService({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.DeregisterInstance
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314DeregisterInstanceDeregisterInstance(
+  /** Request body */
+  data: DeregisterInstanceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeregisterInstanceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314DeregisterInstance.deregisterInstance(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.DiscoverInstances
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314DiscoverInstancesDiscoverInstances(
+  /** Request body */
+  data: DiscoverInstancesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DiscoverInstancesResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314DiscoverInstances.discoverInstances(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.GetInstance
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314GetInstanceGetInstance(
+  /** Request body */
+  data: GetInstanceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetInstanceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314GetInstance.getInstance({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.GetInstancesHealthStatus
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314GetInstancesHealthStatusGetInstancesHealthStatus(
+  query: {
+    /**
+     * Pagination limit
+     */
+    MaxResults?: string;
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: GetInstancesHealthStatusRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetInstancesHealthStatusResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314GetInstancesHealthStatus.getInstancesHealthStatus(
+      {
+        query: query,
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.GetNamespace
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314GetNamespaceGetNamespace(
+  /** Request body */
+  data: GetNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314GetNamespace.getNamespace({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.GetOperation
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314GetOperationGetOperation(
+  /** Request body */
+  data: GetOperationRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetOperationResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314GetOperation.getOperation({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.GetService
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314GetServiceGetService(
+  /** Request body */
+  data: GetServiceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetServiceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314GetService.getService({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.ListInstances
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314ListInstancesListInstances(
+  query: {
+    /**
+     * Pagination limit
+     */
+    MaxResults?: string;
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: ListInstancesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ListInstancesResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314ListInstances.listInstances({
+      query: query,
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.ListNamespaces
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314ListNamespacesListNamespaces(
+  query: {
+    /**
+     * Pagination limit
+     */
+    MaxResults?: string;
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: ListNamespacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ListNamespacesResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314ListNamespaces.listNamespaces(
+      {
+        query: query,
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.ListOperations
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314ListOperationsListOperations(
+  query: {
+    /**
+     * Pagination limit
+     */
+    MaxResults?: string;
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: ListOperationsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ListOperationsResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314ListOperations.listOperations(
+      {
+        query: query,
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.ListServices
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314ListServicesListServices(
+  query: {
+    /**
+     * Pagination limit
+     */
+    MaxResults?: string;
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: ListServicesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ListServicesResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314ListServices.listServices({
+      query: query,
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.ListTagsForResource
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314ListTagsForResourceListTagsForResource(
+  /** Request body */
+  data: ListTagsForResourceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ListTagsForResourceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314ListTagsForResource.listTagsForResource(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.RegisterInstance
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314RegisterInstanceRegisterInstance(
+  /** Request body */
+  data: RegisterInstanceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<RegisterInstanceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314RegisterInstance.registerInstance(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.TagResource
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314TagResourceTagResource(
+  /** Request body */
+  data: TagResourceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<TagResourceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314TagResource.tagResource({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.UntagResource
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314UntagResourceUntagResource(
+  /** Request body */
+  data: UntagResourceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UntagResourceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314UntagResource.untagResource({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.UpdateHttpNamespace
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314UpdateHttpNamespaceUpdateHttpNamespace(
+  /** Request body */
+  data: UpdateHttpNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateHttpNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314UpdateHttpNamespace.updateHttpNamespace(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.UpdateInstanceCustomHealthStatus
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314UpdateInstanceCustomHealthStatusUpdateInstanceCustomHealthStatus(
+  /** Request body */
+  data: UpdateInstanceCustomHealthStatusRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314UpdateInstanceCustomHealthStatus.updateInstanceCustomHealthStatus(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.error) {
+    throw result.error;
+  } else {
+    return new hasuraSdk.JSONValue(result.data);
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.UpdatePrivateDnsNamespace
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314UpdatePrivateDnsNamespaceUpdatePrivateDnsNamespace(
+  /** Request body */
+  data: UpdatePrivateDnsNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdatePrivateDnsNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314UpdatePrivateDnsNamespace.updatePrivateDnsNamespace(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.UpdatePublicDnsNamespace
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314UpdatePublicDnsNamespaceUpdatePublicDnsNamespace(
+  /** Request body */
+  data: UpdatePublicDnsNamespaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdatePublicDnsNamespaceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314UpdatePublicDnsNamespace.updatePublicDnsNamespace(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.UpdateService
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetRoute53AutoNamingV20170314UpdateServiceUpdateService(
+  /** Request body */
+  data: UpdateServiceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateServiceResponse> {
+  const result =
+    await api.xAmzTargetRoute53AutoNamingV20170314UpdateService.updateService({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

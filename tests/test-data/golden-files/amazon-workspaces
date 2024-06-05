@@ -1,0 +1,1791 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import {
+  Api,
+  AssociateConnectionAliasRequest,
+  AssociateConnectionAliasResult,
+  AssociateIpGroupsRequest,
+  AssociateIpGroupsResult,
+  AuthorizeIpRulesRequest,
+  AuthorizeIpRulesResult,
+  CopyWorkspaceImageRequest,
+  CopyWorkspaceImageResult,
+  CreateConnectClientAddInRequest,
+  CreateConnectClientAddInResult,
+  CreateConnectionAliasRequest,
+  CreateConnectionAliasResult,
+  CreateIpGroupRequest,
+  CreateIpGroupResult,
+  CreateStandbyWorkspacesRequest,
+  CreateStandbyWorkspacesResult,
+  CreateTagsRequest,
+  CreateTagsResult,
+  CreateUpdatedWorkspaceImageRequest,
+  CreateUpdatedWorkspaceImageResult,
+  CreateWorkspaceBundleRequest,
+  CreateWorkspaceBundleResult,
+  CreateWorkspaceImageRequest,
+  CreateWorkspaceImageResult,
+  CreateWorkspacesRequest,
+  CreateWorkspacesResult,
+  DeleteClientBrandingRequest,
+  DeleteClientBrandingResult,
+  DeleteConnectClientAddInRequest,
+  DeleteConnectClientAddInResult,
+  DeleteConnectionAliasRequest,
+  DeleteConnectionAliasResult,
+  DeleteIpGroupRequest,
+  DeleteIpGroupResult,
+  DeleteTagsRequest,
+  DeleteTagsResult,
+  DeleteWorkspaceBundleRequest,
+  DeleteWorkspaceBundleResult,
+  DeleteWorkspaceImageRequest,
+  DeleteWorkspaceImageResult,
+  DeregisterWorkspaceDirectoryRequest,
+  DeregisterWorkspaceDirectoryResult,
+  DescribeAccountModificationsRequest,
+  DescribeAccountModificationsResult,
+  DescribeAccountRequest,
+  DescribeAccountResult,
+  DescribeClientBrandingRequest,
+  DescribeClientBrandingResult,
+  DescribeClientPropertiesRequest,
+  DescribeClientPropertiesResult,
+  DescribeConnectClientAddInsRequest,
+  DescribeConnectClientAddInsResult,
+  DescribeConnectionAliasPermissionsRequest,
+  DescribeConnectionAliasPermissionsResult,
+  DescribeConnectionAliasesRequest,
+  DescribeConnectionAliasesResult,
+  DescribeIpGroupsRequest,
+  DescribeIpGroupsResult,
+  DescribeTagsRequest,
+  DescribeTagsResult,
+  DescribeWorkspaceBundlesRequest,
+  DescribeWorkspaceBundlesResult,
+  DescribeWorkspaceDirectoriesRequest,
+  DescribeWorkspaceDirectoriesResult,
+  DescribeWorkspaceImagePermissionsRequest,
+  DescribeWorkspaceImagePermissionsResult,
+  DescribeWorkspaceImagesRequest,
+  DescribeWorkspaceImagesResult,
+  DescribeWorkspaceSnapshotsRequest,
+  DescribeWorkspaceSnapshotsResult,
+  DescribeWorkspacesConnectionStatusRequest,
+  DescribeWorkspacesConnectionStatusResult,
+  DescribeWorkspacesRequest,
+  DescribeWorkspacesResult,
+  DisassociateConnectionAliasRequest,
+  DisassociateConnectionAliasResult,
+  DisassociateIpGroupsRequest,
+  DisassociateIpGroupsResult,
+  ImportClientBrandingRequest,
+  ImportClientBrandingResult,
+  ImportWorkspaceImageRequest,
+  ImportWorkspaceImageResult,
+  ListAvailableManagementCidrRangesRequest,
+  ListAvailableManagementCidrRangesResult,
+  MigrateWorkspaceRequest,
+  MigrateWorkspaceResult,
+  ModifyAccountRequest,
+  ModifyAccountResult,
+  ModifyCertificateBasedAuthPropertiesRequest,
+  ModifyCertificateBasedAuthPropertiesResult,
+  ModifyClientPropertiesRequest,
+  ModifyClientPropertiesResult,
+  ModifySamlPropertiesRequest,
+  ModifySamlPropertiesResult,
+  ModifySelfservicePermissionsRequest,
+  ModifySelfservicePermissionsResult,
+  ModifyWorkspaceAccessPropertiesRequest,
+  ModifyWorkspaceAccessPropertiesResult,
+  ModifyWorkspaceCreationPropertiesRequest,
+  ModifyWorkspaceCreationPropertiesResult,
+  ModifyWorkspacePropertiesRequest,
+  ModifyWorkspacePropertiesResult,
+  ModifyWorkspaceStateRequest,
+  ModifyWorkspaceStateResult,
+  RebootWorkspacesRequest,
+  RebootWorkspacesResult,
+  RebuildWorkspacesRequest,
+  RebuildWorkspacesResult,
+  RegisterWorkspaceDirectoryRequest,
+  RegisterWorkspaceDirectoryResult,
+  RestoreWorkspaceRequest,
+  RestoreWorkspaceResult,
+  RevokeIpRulesRequest,
+  RevokeIpRulesResult,
+  StartWorkspacesRequest,
+  StartWorkspacesResult,
+  StopWorkspacesRequest,
+  StopWorkspacesResult,
+  TerminateWorkspacesRequest,
+  TerminateWorkspacesResult,
+  UpdateConnectClientAddInRequest,
+  UpdateConnectClientAddInResult,
+  UpdateConnectionAliasPermissionRequest,
+  UpdateConnectionAliasPermissionResult,
+  UpdateRulesOfIpGroupRequest,
+  UpdateRulesOfIpGroupResult,
+  UpdateWorkspaceBundleRequest,
+  UpdateWorkspaceBundleResult,
+  UpdateWorkspaceImagePermissionRequest,
+  UpdateWorkspaceImagePermissionResult,
+} from "./api";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.AssociateConnectionAlias
+ */
+export async function postXAmzTargetWorkspacesServiceAssociateConnectionAliasAssociateConnectionAlias(
+  /** Request body */
+  data: AssociateConnectionAliasRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<AssociateConnectionAliasResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceAssociateConnectionAlias.associateConnectionAlias(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.AssociateIpGroups
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceAssociateIpGroupsAssociateIpGroups(
+  /** Request body */
+  data: AssociateIpGroupsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<AssociateIpGroupsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceAssociateIpGroups.associateIpGroups({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.AuthorizeIpRules
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceAuthorizeIpRulesAuthorizeIpRules(
+  /** Request body */
+  data: AuthorizeIpRulesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<AuthorizeIpRulesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceAuthorizeIpRules.authorizeIpRules({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CopyWorkspaceImage
+ */
+export async function postXAmzTargetWorkspacesServiceCopyWorkspaceImageCopyWorkspaceImage(
+  /** Request body */
+  data: CopyWorkspaceImageRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CopyWorkspaceImageResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCopyWorkspaceImage.copyWorkspaceImage({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateConnectClientAddIn
+ */
+export async function postXAmzTargetWorkspacesServiceCreateConnectClientAddInCreateConnectClientAddIn(
+  /** Request body */
+  data: CreateConnectClientAddInRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateConnectClientAddInResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateConnectClientAddIn.createConnectClientAddIn(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateConnectionAlias
+ */
+export async function postXAmzTargetWorkspacesServiceCreateConnectionAliasCreateConnectionAlias(
+  /** Request body */
+  data: CreateConnectionAliasRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateConnectionAliasResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateConnectionAlias.createConnectionAlias(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateIpGroup
+ */
+export async function postXAmzTargetWorkspacesServiceCreateIpGroupCreateIpGroup(
+  /** Request body */
+  data: CreateIpGroupRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateIpGroupResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateIpGroup.createIpGroup({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateStandbyWorkspaces
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceCreateStandbyWorkspacesCreateStandbyWorkspaces(
+  /** Request body */
+  data: CreateStandbyWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateStandbyWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateStandbyWorkspaces.createStandbyWorkspaces(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateTags
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceCreateTagsCreateTags(
+  /** Request body */
+  data: CreateTagsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateTagsResult> {
+  const result = await api.xAmzTargetWorkspacesServiceCreateTags.createTags({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateUpdatedWorkspaceImage
+ */
+export async function postXAmzTargetWorkspacesServiceCreateUpdatedWorkspaceImageCreateUpdatedWorkspaceImage(
+  /** Request body */
+  data: CreateUpdatedWorkspaceImageRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateUpdatedWorkspaceImageResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateUpdatedWorkspaceImage.createUpdatedWorkspaceImage(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateWorkspaceBundle
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceCreateWorkspaceBundleCreateWorkspaceBundle(
+  /** Request body */
+  data: CreateWorkspaceBundleRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateWorkspaceBundleResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateWorkspaceBundle.createWorkspaceBundle(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateWorkspaceImage
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceCreateWorkspaceImageCreateWorkspaceImage(
+  /** Request body */
+  data: CreateWorkspaceImageRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateWorkspaceImageResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateWorkspaceImage.createWorkspaceImage(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.CreateWorkspaces
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceCreateWorkspacesCreateWorkspaces(
+  /** Request body */
+  data: CreateWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceCreateWorkspaces.createWorkspaces({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeleteClientBranding
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeleteClientBrandingDeleteClientBranding(
+  /** Request body */
+  data: DeleteClientBrandingRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteClientBrandingResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDeleteClientBranding.deleteClientBranding(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeleteConnectClientAddIn
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeleteConnectClientAddInDeleteConnectClientAddIn(
+  /** Request body */
+  data: DeleteConnectClientAddInRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteConnectClientAddInResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDeleteConnectClientAddIn.deleteConnectClientAddIn(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeleteConnectionAlias
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeleteConnectionAliasDeleteConnectionAlias(
+  /** Request body */
+  data: DeleteConnectionAliasRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteConnectionAliasResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDeleteConnectionAlias.deleteConnectionAlias(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeleteIpGroup
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeleteIpGroupDeleteIpGroup(
+  /** Request body */
+  data: DeleteIpGroupRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteIpGroupResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDeleteIpGroup.deleteIpGroup({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeleteTags
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeleteTagsDeleteTags(
+  /** Request body */
+  data: DeleteTagsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteTagsResult> {
+  const result = await api.xAmzTargetWorkspacesServiceDeleteTags.deleteTags({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeleteWorkspaceBundle
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeleteWorkspaceBundleDeleteWorkspaceBundle(
+  /** Request body */
+  data: DeleteWorkspaceBundleRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteWorkspaceBundleResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDeleteWorkspaceBundle.deleteWorkspaceBundle(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeleteWorkspaceImage
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeleteWorkspaceImageDeleteWorkspaceImage(
+  /** Request body */
+  data: DeleteWorkspaceImageRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteWorkspaceImageResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDeleteWorkspaceImage.deleteWorkspaceImage(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DeregisterWorkspaceDirectory
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDeregisterWorkspaceDirectoryDeregisterWorkspaceDirectory(
+  /** Request body */
+  data: DeregisterWorkspaceDirectoryRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeregisterWorkspaceDirectoryResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDeregisterWorkspaceDirectory.deregisterWorkspaceDirectory(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeAccount
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeAccountDescribeAccount(
+  /** Request body */
+  data: DescribeAccountRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeAccountResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeAccount.describeAccount({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeAccountModifications
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeAccountModificationsDescribeAccountModifications(
+  /** Request body */
+  data: DescribeAccountModificationsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeAccountModificationsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeAccountModifications.describeAccountModifications(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeClientBranding
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeClientBrandingDescribeClientBranding(
+  /** Request body */
+  data: DescribeClientBrandingRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeClientBrandingResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeClientBranding.describeClientBranding(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeClientProperties
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeClientPropertiesDescribeClientProperties(
+  /** Request body */
+  data: DescribeClientPropertiesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeClientPropertiesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeClientProperties.describeClientProperties(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeConnectClientAddIns
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeConnectClientAddInsDescribeConnectClientAddIns(
+  /** Request body */
+  data: DescribeConnectClientAddInsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeConnectClientAddInsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeConnectClientAddIns.describeConnectClientAddIns(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeConnectionAliasPermissions
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeConnectionAliasPermissionsDescribeConnectionAliasPermissions(
+  /** Request body */
+  data: DescribeConnectionAliasPermissionsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeConnectionAliasPermissionsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeConnectionAliasPermissions.describeConnectionAliasPermissions(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeConnectionAliases
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeConnectionAliasesDescribeConnectionAliases(
+  /** Request body */
+  data: DescribeConnectionAliasesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeConnectionAliasesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeConnectionAliases.describeConnectionAliases(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeIpGroups
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeIpGroupsDescribeIpGroups(
+  /** Request body */
+  data: DescribeIpGroupsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeIpGroupsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeIpGroups.describeIpGroups({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeTags
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeTagsDescribeTags(
+  /** Request body */
+  data: DescribeTagsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeTagsResult> {
+  const result = await api.xAmzTargetWorkspacesServiceDescribeTags.describeTags(
+    {
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    },
+  );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeWorkspaceBundles
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeWorkspaceBundlesDescribeWorkspaceBundles(
+  query: {
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: DescribeWorkspaceBundlesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeWorkspaceBundlesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeWorkspaceBundles.describeWorkspaceBundles(
+      {
+        query: query,
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeWorkspaceDirectories
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeWorkspaceDirectoriesDescribeWorkspaceDirectories(
+  query: {
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: DescribeWorkspaceDirectoriesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeWorkspaceDirectoriesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeWorkspaceDirectories.describeWorkspaceDirectories(
+      {
+        query: query,
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeWorkspaceImagePermissions
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeWorkspaceImagePermissionsDescribeWorkspaceImagePermissions(
+  /** Request body */
+  data: DescribeWorkspaceImagePermissionsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeWorkspaceImagePermissionsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeWorkspaceImagePermissions.describeWorkspaceImagePermissions(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeWorkspaceImages
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeWorkspaceImagesDescribeWorkspaceImages(
+  /** Request body */
+  data: DescribeWorkspaceImagesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeWorkspaceImagesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeWorkspaceImages.describeWorkspaceImages(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeWorkspaceSnapshots
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeWorkspaceSnapshotsDescribeWorkspaceSnapshots(
+  /** Request body */
+  data: DescribeWorkspaceSnapshotsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeWorkspaceSnapshotsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeWorkspaceSnapshots.describeWorkspaceSnapshots(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeWorkspaces
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeWorkspacesDescribeWorkspaces(
+  query: {
+    /**
+     * Pagination limit
+     */
+    Limit?: string;
+    /**
+     * Pagination token
+     */
+    NextToken?: string;
+  },
+  /** Request body */
+  data: DescribeWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeWorkspaces.describeWorkspaces({
+      query: query,
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DescribeWorkspacesConnectionStatus
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDescribeWorkspacesConnectionStatusDescribeWorkspacesConnectionStatus(
+  /** Request body */
+  data: DescribeWorkspacesConnectionStatusRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DescribeWorkspacesConnectionStatusResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDescribeWorkspacesConnectionStatus.describeWorkspacesConnectionStatus(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DisassociateConnectionAlias
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDisassociateConnectionAliasDisassociateConnectionAlias(
+  /** Request body */
+  data: DisassociateConnectionAliasRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DisassociateConnectionAliasResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDisassociateConnectionAlias.disassociateConnectionAlias(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.DisassociateIpGroups
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceDisassociateIpGroupsDisassociateIpGroups(
+  /** Request body */
+  data: DisassociateIpGroupsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DisassociateIpGroupsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceDisassociateIpGroups.disassociateIpGroups(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ImportClientBranding
+ */
+export async function postXAmzTargetWorkspacesServiceImportClientBrandingImportClientBranding(
+  /** Request body */
+  data: ImportClientBrandingRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ImportClientBrandingResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceImportClientBranding.importClientBranding(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ImportWorkspaceImage
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceImportWorkspaceImageImportWorkspaceImage(
+  /** Request body */
+  data: ImportWorkspaceImageRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ImportWorkspaceImageResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceImportWorkspaceImage.importWorkspaceImage(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ListAvailableManagementCidrRanges
+ */
+export async function postXAmzTargetWorkspacesServiceListAvailableManagementCidrRangesListAvailableManagementCidrRanges(
+  /** Request body */
+  data: ListAvailableManagementCidrRangesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ListAvailableManagementCidrRangesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceListAvailableManagementCidrRanges.listAvailableManagementCidrRanges(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.MigrateWorkspace
+ */
+export async function postXAmzTargetWorkspacesServiceMigrateWorkspaceMigrateWorkspace(
+  /** Request body */
+  data: MigrateWorkspaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<MigrateWorkspaceResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceMigrateWorkspace.migrateWorkspace({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifyAccount
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifyAccountModifyAccount(
+  /** Request body */
+  data: ModifyAccountRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifyAccountResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifyAccount.modifyAccount({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifyCertificateBasedAuthProperties
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifyCertificateBasedAuthPropertiesModifyCertificateBasedAuthProperties(
+  /** Request body */
+  data: ModifyCertificateBasedAuthPropertiesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifyCertificateBasedAuthPropertiesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifyCertificateBasedAuthProperties.modifyCertificateBasedAuthProperties(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifyClientProperties
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifyClientPropertiesModifyClientProperties(
+  /** Request body */
+  data: ModifyClientPropertiesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifyClientPropertiesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifyClientProperties.modifyClientProperties(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifySamlProperties
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifySamlPropertiesModifySamlProperties(
+  /** Request body */
+  data: ModifySamlPropertiesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifySamlPropertiesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifySamlProperties.modifySamlProperties(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifySelfservicePermissions
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifySelfservicePermissionsModifySelfservicePermissions(
+  /** Request body */
+  data: ModifySelfservicePermissionsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifySelfservicePermissionsResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifySelfservicePermissions.modifySelfservicePermissions(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifyWorkspaceAccessProperties
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifyWorkspaceAccessPropertiesModifyWorkspaceAccessProperties(
+  /** Request body */
+  data: ModifyWorkspaceAccessPropertiesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifyWorkspaceAccessPropertiesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifyWorkspaceAccessProperties.modifyWorkspaceAccessProperties(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifyWorkspaceCreationProperties
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifyWorkspaceCreationPropertiesModifyWorkspaceCreationProperties(
+  /** Request body */
+  data: ModifyWorkspaceCreationPropertiesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifyWorkspaceCreationPropertiesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifyWorkspaceCreationProperties.modifyWorkspaceCreationProperties(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifyWorkspaceProperties
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifyWorkspacePropertiesModifyWorkspaceProperties(
+  /** Request body */
+  data: ModifyWorkspacePropertiesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifyWorkspacePropertiesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifyWorkspaceProperties.modifyWorkspaceProperties(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.ModifyWorkspaceState
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceModifyWorkspaceStateModifyWorkspaceState(
+  /** Request body */
+  data: ModifyWorkspaceStateRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ModifyWorkspaceStateResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceModifyWorkspaceState.modifyWorkspaceState(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.RebootWorkspaces
+ */
+export async function postXAmzTargetWorkspacesServiceRebootWorkspacesRebootWorkspaces(
+  /** Request body */
+  data: RebootWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<RebootWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceRebootWorkspaces.rebootWorkspaces({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.RebuildWorkspaces
+ */
+export async function postXAmzTargetWorkspacesServiceRebuildWorkspacesRebuildWorkspaces(
+  /** Request body */
+  data: RebuildWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<RebuildWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceRebuildWorkspaces.rebuildWorkspaces({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.RegisterWorkspaceDirectory
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceRegisterWorkspaceDirectoryRegisterWorkspaceDirectory(
+  /** Request body */
+  data: RegisterWorkspaceDirectoryRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<RegisterWorkspaceDirectoryResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceRegisterWorkspaceDirectory.registerWorkspaceDirectory(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.RestoreWorkspace
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceRestoreWorkspaceRestoreWorkspace(
+  /** Request body */
+  data: RestoreWorkspaceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<RestoreWorkspaceResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceRestoreWorkspace.restoreWorkspace({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.RevokeIpRules
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceRevokeIpRulesRevokeIpRules(
+  /** Request body */
+  data: RevokeIpRulesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<RevokeIpRulesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceRevokeIpRules.revokeIpRules({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.StartWorkspaces
+ */
+export async function postXAmzTargetWorkspacesServiceStartWorkspacesStartWorkspaces(
+  /** Request body */
+  data: StartWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<StartWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceStartWorkspaces.startWorkspaces({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.StopWorkspaces
+ */
+export async function postXAmzTargetWorkspacesServiceStopWorkspacesStopWorkspaces(
+  /** Request body */
+  data: StopWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<StopWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceStopWorkspaces.stopWorkspaces({
+      data: data,
+      params: {
+        headers: (headers?.value as Record<string, string>) ?? undefined,
+      },
+    });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.TerminateWorkspaces
+ */
+export async function postXAmzTargetWorkspacesServiceTerminateWorkspacesTerminateWorkspaces(
+  /** Request body */
+  data: TerminateWorkspacesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<TerminateWorkspacesResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceTerminateWorkspaces.terminateWorkspaces(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.UpdateConnectClientAddIn
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceUpdateConnectClientAddInUpdateConnectClientAddIn(
+  /** Request body */
+  data: UpdateConnectClientAddInRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateConnectClientAddInResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceUpdateConnectClientAddIn.updateConnectClientAddIn(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.UpdateConnectionAliasPermission
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceUpdateConnectionAliasPermissionUpdateConnectionAliasPermission(
+  /** Request body */
+  data: UpdateConnectionAliasPermissionRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateConnectionAliasPermissionResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceUpdateConnectionAliasPermission.updateConnectionAliasPermission(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.UpdateRulesOfIpGroup
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceUpdateRulesOfIpGroupUpdateRulesOfIpGroup(
+  /** Request body */
+  data: UpdateRulesOfIpGroupRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateRulesOfIpGroupResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceUpdateRulesOfIpGroup.updateRulesOfIpGroup(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.UpdateWorkspaceBundle
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceUpdateWorkspaceBundleUpdateWorkspaceBundle(
+  /** Request body */
+  data: UpdateWorkspaceBundleRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateWorkspaceBundleResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceUpdateWorkspaceBundle.updateWorkspaceBundle(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * undefined
+ * @request POST :/#X-Amz-Target=WorkspacesService.UpdateWorkspaceImagePermission
+ * @allowrelaxedtypes
+ */
+export async function postXAmzTargetWorkspacesServiceUpdateWorkspaceImagePermissionUpdateWorkspaceImagePermission(
+  /** Request body */
+  data: UpdateWorkspaceImagePermissionRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateWorkspaceImagePermissionResult> {
+  const result =
+    await api.xAmzTargetWorkspacesServiceUpdateWorkspaceImagePermission.updateWorkspaceImagePermission(
+      {
+        data: data,
+        params: {
+          headers: (headers?.value as Record<string, string>) ?? undefined,
+        },
+      },
+    );
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

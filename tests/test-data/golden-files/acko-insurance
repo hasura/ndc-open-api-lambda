@@ -1,0 +1,141 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import { Api, ConsentArtifactSchema } from "./api";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * Insurance Policy - Car
+ * @request POST :/cripc/certificate
+ * @allowrelaxedtypes
+ */
+export async function postCripcCripc(
+  /** Request body */
+  data: {
+    certificateParameters?: {
+      /**
+       * Phone Number
+       * @example "10 Digits without any prefix"
+       */
+      phoneno: string;
+      /**
+       * Policy Number
+       * @example "DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX"
+       */
+      policyno: string;
+    };
+    consentArtifact?: ConsentArtifactSchema;
+    /** The format of the certificate in response. */
+    format: "pdf";
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     * @format uuid
+     * @example "f7f1469c-29b0-4325-9dfc-c567200a70f7"
+     */
+    txnId: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.cripc.cripc({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.error) {
+    throw result.error;
+  } else {
+    return new hasuraSdk.JSONValue(result.data);
+  }
+}
+
+/**
+ * Insurance Policy - Health
+ * @request POST :/hlipc/certificate
+ * @allowrelaxedtypes
+ */
+export async function postHlipcHlipc(
+  /** Request body */
+  data: {
+    certificateParameters?: {
+      /**
+       * Phone Number
+       * @example "10 Digits without any prefix"
+       */
+      phoneno: string;
+      /**
+       * Policy Number
+       * @example "DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX"
+       */
+      policyno: string;
+    };
+    consentArtifact?: ConsentArtifactSchema;
+    /** The format of the certificate in response. */
+    format: "pdf";
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     * @format uuid
+     * @example "f7f1469c-29b0-4325-9dfc-c567200a70f7"
+     */
+    txnId: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.hlipc.hlipc({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.error) {
+    throw result.error;
+  } else {
+    return new hasuraSdk.JSONValue(result.data);
+  }
+}
+
+/**
+ * Insurance Policy - Two Wheeler
+ * @request POST :/twipc/certificate
+ * @allowrelaxedtypes
+ */
+export async function postTwipcTwipc(
+  /** Request body */
+  data: {
+    certificateParameters?: {
+      /**
+       * Phone Number
+       * @example "10 Digits without any prefix"
+       */
+      phoneno: string;
+      /**
+       * Policy Number
+       * @example "DXXXXXXXXXXXXX/XX OR AROGXXXXXXXXXX"
+       */
+      policyno: string;
+    };
+    consentArtifact?: ConsentArtifactSchema;
+    /** The format of the certificate in response. */
+    format: "pdf";
+    /**
+     * A unique transaction id for this request in UUID format. It is used for tracking the request.
+     * @format uuid
+     * @example "f7f1469c-29b0-4325-9dfc-c567200a70f7"
+     */
+    txnId: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.twipc.twipc({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.error) {
+    throw result.error;
+  } else {
+    return new hasuraSdk.JSONValue(result.data);
+  }
+}

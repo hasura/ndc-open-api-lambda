@@ -11,13 +11,13 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
   try {
     const apiTsCode = codeToWrite.filter(
       (element) => element.fileType === "api-ts",
-    );
+    )[0]!;
     const functionsTsCode = codeToWrite.filter(
       (element) => element.fileType === "functions-ts",
-    );
+    )[0]!;
 
-    apiWriter.writeToFileSystem(apiTsCode[0]!);
-    await functionsWriter.writeToFileSystem(functionsTsCode[0]!);
+    apiWriter.writeToFileSystem(apiTsCode);
+    await functionsWriter.writeToFileSystem(functionsTsCode, apiTsCode);
     await packageJsonWriter.writeToFileSystem();
     tsConfigWriter.writeToFileSystem();
 
