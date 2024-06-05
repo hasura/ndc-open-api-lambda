@@ -5,6 +5,7 @@ import * as context from "../context";
 import * as types from "../types";
 import * as logger from "../../util/logger";
 import * as schemaParser from "../parser/open-api/schema-parser";
+import * as cleanup from "./cleanup";
 
 export async function generateCode(
   args: types.GenerateCodeInput,
@@ -40,6 +41,8 @@ export async function generateCode(
     fileContent: functionsTsCode.fileContent,
     fileType: functionsTsCode.fileType,
   });
+
+  cleanup.fixImports(generatedCode);
 
   return generatedCode;
 }

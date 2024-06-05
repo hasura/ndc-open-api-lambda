@@ -1,22 +1,12 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 import {
-  BundleDataProp,
-  BundleData,
-  KeystoreItems,
-  KeystoreChainItems,
-  SamlConfigurationProperties,
-  SamlConfigurationPropertyItemsBoolean,
-  SamlConfigurationPropertyItemsString,
-  SamlConfigurationPropertyItemsLong,
-  SamlConfigurationPropertyItemsArray,
-  TruststoreItems,
+  Api,
   BundleInfo,
   InstallStatus,
   KeystoreInfo,
   SamlConfigurationInfo,
   TruststoreInfo,
-  Api,
 } from "./api";
-import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
 
 const api = new Api({
   baseUrl: "http://localhost:13191",

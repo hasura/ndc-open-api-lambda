@@ -1,14 +1,9 @@
 import * as assert from "assert";
 import * as context from "../context";
-import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
-import * as apiTsGenerator from "./api-ts-generator";
-import * as functionTsGenerator from "./functions-ts-generator";
-import * as headerParser from "../parser/open-api/header-parser";
 import * as prettier from "prettier";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
-import * as types from "./types";
-import * as schemaParser from "../parser/open-api/schema-parser";
+import * as generator from ".";
 
 const CircularJSON = require("circular-json");
 
@@ -19,8 +14,6 @@ const tests: {
   openApiUri: string; // for now, we only consider files on disks in test cases
   goldenFile: string;
   baseUrl?: string;
-  _legacyApiComponents?: legacyApiTsGenerator.ApiComponents;
-  _generatedApiTsComponents?: types.GeneratedApiTsCode;
   _goldenFileContent?: string;
 }[] = [
   {
@@ -86,6 +79,12 @@ const tests: {
     goldenFile: "./golden-files/kubernetes",
     baseUrl: "http://localhost:9191",
   },
+  {
+    name: "AtlassianJira",
+    openApiUri: "./open-api-docs/atlassian-jira.json",
+    goldenFile: "./golden-files/atlassian-jira",
+    baseUrl: "",
+  },
 ];
 
 describe("functions-ts-generator", async () => {
@@ -97,6 +96,11 @@ async function testGenerateFunctionsTsCode() {
     for (const testCase of tests) {
       before(async () => {
         const relativeDirectorToTestFiles = "../../../tests/test-data/";
+
+        context.getInstance().setOutputDirectory(path.resolve(__dirname,
+          relativeDirectorToTestFiles,
+          "golden-files")
+        );
 
         testCase.openApiUri = path.resolve(
           __dirname,
@@ -111,35 +115,24 @@ async function testGenerateFunctionsTsCode() {
         testCase._goldenFileContent = readFileSync(
           testCase.goldenFile,
         ).toString();
-
-        testCase._generatedApiTsComponents =
-          await apiTsGenerator.generateApiTsCode(testCase.openApiUri);
-
-        const parsedSchemastore = schemaParser.getParsedSchemaStore(
-          testCase._generatedApiTsComponents.typeNames,
-          testCase._generatedApiTsComponents.schemaComponents,
-        );
-        testCase._generatedApiTsComponents.schemaStore = parsedSchemastore;
-
-        testCase._legacyApiComponents =
-          testCase._generatedApiTsComponents.legacyTypedApiComponents;
       });
 
       it(`should generate functions.ts file content for ${testCase.name}`, async () => {
-        let got = await functionTsGenerator.generateFunctionsTsCode(
-          testCase._legacyApiComponents!,
-          testCase._generatedApiTsComponents!,
-          testCase.baseUrl,
-        );
+        const got = await generator.generateCode({
+          openApiUri: testCase.openApiUri,
+          baseUrl: testCase.baseUrl,
+        });
 
-        got.fileContent = await prettier.format(got.fileContent, {
+        const gotFunctionTs = got.filter((item) => item.fileType === "functions-ts")[0]!;
+
+        gotFunctionTs.fileContent = await prettier.format(gotFunctionTs.fileContent, {
           parser: "typescript",
         });
 
-        assert.equal(got.fileContent, testCase._goldenFileContent);
+        assert.equal(gotFunctionTs.fileContent, testCase._goldenFileContent);
 
         // uncomment to update golden file
-        // writeFileSync(testCase.goldenFile, got.fileContent);
+        // writeFileSync(testCase.goldenFile, gotFunctionTs.fileContent);
       });
     }
   });
