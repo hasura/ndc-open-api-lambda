@@ -11,7 +11,6 @@ Functions that wrap GET requests are marked with `@readonly` annotation, and are
 
 This Connector implements the [Data Connector Spec](https://github.com/hasura/ndc-spec)
 
-
 - [Hasura V3 Documentation](https://hasura.io/docs/3.0)
 - [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda)
 
