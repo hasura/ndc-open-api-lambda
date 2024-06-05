@@ -44,8 +44,6 @@ describe("cleanup::fixImports", async () => {
         fileType: "functions-ts",
       };
 
-      console.log("functions len: ", functionsTsFile.fileContent.length);
-
       testCase._files = [apiTsFile, functionsTsFile];
       testCase._functionsTsFile = functionsTsFile;
     });
