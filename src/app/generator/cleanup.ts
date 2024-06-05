@@ -4,7 +4,9 @@ import * as types from "../types";
 export function fixImports(generatedCodeList: types.GeneratedCode[]) {
   const project = new ts.Project();
   for (const generatedCode of generatedCodeList) {
-    project.createSourceFile(generatedCode.filePath, generatedCode.fileContent);
+    project.createSourceFile(generatedCode.filePath, generatedCode.fileContent, {
+      overwrite: true,
+    });
   }
 
   for (const sourceFile of project.getSourceFiles()) {
