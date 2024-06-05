@@ -1,42 +1,43 @@
 import * as types from "../types";
 import * as fs from "fs";
 import * as tsParser from "../parser/typescript";
-import * as prettier from "prettier";
 import * as logger from "../../util/logger";
+import * as cleanup from "../parser/typescript/cleanup";
+import * as format from "../parser/typescript/fomat";
 
-export async function writeToFileSystem(codeToWrite: types.GeneratedCode) {
-  if (!fs.existsSync(codeToWrite.filePath)) {
-    logger.info(`Creating ${codeToWrite.filePath}`);
-    await writeContentToFile(codeToWrite.filePath, codeToWrite.fileContent);
+export async function writeToFileSystem(
+  functionsTs: types.GeneratedCode,
+  apiTs: types.GeneratedCode,
+) {
+  if (!fs.existsSync(functionsTs.filePath)) {
+    logger.info(`Creating ${functionsTs.filePath}`);
+    await writeContentToFile(functionsTs, apiTs);
     return;
   }
 
-  logger.info(`Overwriting ${codeToWrite.filePath}`);
-  const staleFile = fs.readFileSync(codeToWrite.filePath).toString();
+  logger.info(`Overwriting ${functionsTs.filePath}`);
+  const staleFile = fs.readFileSync(functionsTs.filePath).toString();
 
-  let freshFile = tsParser.preserveUserChanges(
+  functionsTs.fileContent = tsParser.preserveUserChanges(
     staleFile,
-    codeToWrite.fileContent,
+    functionsTs.fileContent,
   );
 
-  await writeContentToFile(codeToWrite.filePath, freshFile);
+  await writeContentToFile(functionsTs, apiTs);
 }
 
-async function writeContentToFile(filePath: string, codeContent: string) {
-  codeContent = await formatCode(codeContent);
-  fs.writeFileSync(filePath, codeContent);
+async function writeContentToFile(
+  functionsTs: types.GeneratedCode,
+  apiTs: types.GeneratedCode,
+) {
+  await cleanupAndFormat(functionsTs, apiTs);
+  fs.writeFileSync(functionsTs.filePath, functionsTs.fileContent);
 }
 
-async function formatCode(code: string): Promise<string> {
-  try {
-    code = await prettier.format(code, {
-      parser: "typescript",
-    });
-  } catch (e) {
-    logger.error(
-      "Error while formatting code. The resulting code will be unformatted and may contain syntax errors. Error: ",
-      e,
-    );
-  }
-  return code;
+export async function cleanupAndFormat(
+  functionsTs: types.GeneratedCode,
+  apiTs: types.GeneratedCode,
+) {
+  cleanup.fixImports([functionsTs, apiTs]);
+  functionsTs.fileContent = await format.format(functionsTs.fileContent);
 }

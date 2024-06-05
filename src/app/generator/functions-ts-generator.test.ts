@@ -1,9 +1,9 @@
 import * as assert from "assert";
 import * as context from "../context";
-import * as prettier from "prettier";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
 import * as generator from ".";
+import { cleanupAndFormat } from "../writer/functions-ts-writer";
 
 const CircularJSON = require("circular-json");
 
@@ -162,12 +162,9 @@ async function testGenerateFunctionsTsCode() {
           (item) => item.fileType === "functions-ts",
         )[0]!;
 
-        gotFunctionTs.fileContent = await prettier.format(
-          gotFunctionTs.fileContent,
-          {
-            parser: "typescript",
-          },
-        );
+        const gotApiTs = got.filter((item) => item.fileType === "api-ts")[0]!;
+
+        await cleanupAndFormat(gotFunctionTs, gotApiTs);
 
         assert.equal(gotFunctionTs.fileContent, testCase._goldenFileContent);
 
