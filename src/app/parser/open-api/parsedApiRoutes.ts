@@ -205,6 +205,9 @@ export class ParsedApiRoutes {
     }
     if (allParams && allParams.length > 0) {
       for (const param of allParams) {
+        if (!param.tsType) {
+          continue;
+        }
         let sanitizedType = param.tsType.endsWith("[]")
           ? param.tsType.substring(0, param.tsType.length - 2)
           : param.tsType;
@@ -228,6 +231,9 @@ export class ParsedApiRoutes {
   }
 
   private addTypeToImportList(type: string, importList: Set<string>) {
+    if (!type) {
+      return;
+    }
     const allTypes = this.splitGenericType(type);
     for (type of allTypes) {
       type = this.convertDataTypeToTypeName(type);

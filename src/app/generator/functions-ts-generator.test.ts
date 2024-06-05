@@ -115,6 +115,12 @@ const tests: {
     goldenFile: "./golden-files/microsoft-workload-monitor",
     baseUrl: "",
   },
+  {
+    name: "ApiDeckCrm",
+    openApiUri: "./open-api-docs/apideck-crm.json",
+    goldenFile: "./golden-files/apideck-crm",
+    baseUrl: "",
+  },
 ];
 
 describe("functions-ts-generator", async () => {
@@ -152,7 +158,7 @@ async function testGenerateFunctionsTsCode() {
         ).toString();
       });
 
-      it(`should generate functions.ts file content for ${testCase.name}`, async () => {
+      it(`functions-ts-generator::${testCase.name}`, async () => {
         const got = await generator.generateCode({
           openApiUri: testCase.openApiUri,
           baseUrl: testCase.baseUrl,

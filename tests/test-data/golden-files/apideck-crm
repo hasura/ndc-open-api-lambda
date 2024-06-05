@@ -1,0 +1,1412 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import {
+  ActivitiesFilter,
+  Activity,
+  Api,
+  CompaniesFilter,
+  CompaniesSort,
+  Company,
+  Contact,
+  ContactsFilter,
+  ContactsSort,
+  CreateActivityResponse,
+  CreateCompanyResponse,
+  CreateContactResponse,
+  CreateLeadResponse,
+  CreateNoteResponse,
+  CreateOpportunityResponse,
+  CreatePipelineResponse,
+  CreateUserResponse,
+  DeleteActivityResponse,
+  DeleteCompanyResponse,
+  DeleteContactResponse,
+  DeleteLeadResponse,
+  DeleteNoteResponse,
+  DeleteOpportunityResponse,
+  DeletePipelineResponse,
+  DeleteUserResponse,
+  GetActivitiesResponse,
+  GetActivityResponse,
+  GetCompaniesResponse,
+  GetCompanyResponse,
+  GetContactResponse,
+  GetContactsResponse,
+  GetLeadResponse,
+  GetLeadsResponse,
+  GetNoteResponse,
+  GetNotesResponse,
+  GetOpportunitiesResponse,
+  GetOpportunityResponse,
+  GetPipelineResponse,
+  GetPipelinesResponse,
+  GetUserResponse,
+  GetUsersResponse,
+  Lead,
+  LeadsFilter,
+  LeadsSort,
+  Note,
+  OpportunitiesFilter,
+  OpportunitiesSort,
+  Opportunity,
+  Pipeline,
+  UpdateActivityResponse,
+  UpdateCompanyResponse,
+  UpdateContactResponse,
+  UpdateLeadResponse,
+  UpdateNoteResponse,
+  UpdateOpportunityResponse,
+  UpdatePipelineResponse,
+  UpdateUserResponse,
+  User,
+} from "./api";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * List activities
+ * @request GET :/crm/activities
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmActivitiesAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * Apply filters
+     */
+    filter?: ActivitiesFilter;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetActivitiesResponse> {
+  const result = await api.crm.activitiesAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create activity
+ * @request POST :/crm/activities
+ * @allowrelaxedtypes
+ */
+export async function postCrmActivitiesAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: Activity,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateActivityResponse> {
+  const result = await api.crm.activitiesAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete activity
+ * @request DELETE :/crm/activities/{id}
+ */
+export async function deleteCrmActivitiesDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /**
+   * ID of the record you are acting upon.
+   */
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteActivityResponse> {
+  const result = await api.crm.activitiesDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get activity
+ * @request GET :/crm/activities/{id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmActivitiesOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetActivityResponse> {
+  const result = await api.crm.activitiesOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update activity
+ * @request PATCH :/crm/activities/{id}
+ * @allowrelaxedtypes
+ */
+export async function patchCrmActivitiesUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: Activity,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateActivityResponse> {
+  const result = await api.crm.activitiesUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * List companies
+ * @request GET :/crm/companies
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmCompaniesAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * Apply filters
+     */
+    filter?: CompaniesFilter;
+    /**
+     * Apply sorting
+     */
+    sort?: CompaniesSort;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetCompaniesResponse> {
+  const result = await api.crm.companiesAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create company
+ * @request POST :/crm/companies
+ * @allowrelaxedtypes
+ */
+export async function postCrmCompaniesAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: Company,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateCompanyResponse> {
+  const result = await api.crm.companiesAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete company
+ * @request DELETE :/crm/companies/{id}
+ */
+export async function deleteCrmCompaniesDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteCompanyResponse> {
+  const result = await api.crm.companiesDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get company
+ * @request GET :/crm/companies/{id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmCompaniesOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetCompanyResponse> {
+  const result = await api.crm.companiesOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update company
+ * @request PATCH :/crm/companies/{id}
+ * @allowrelaxedtypes
+ */
+export async function patchCrmCompaniesUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: Company,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateCompanyResponse> {
+  const result = await api.crm.companiesUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * List contacts
+ * @request GET :/crm/contacts
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmContactsAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * Apply filters
+     */
+    filter?: ContactsFilter;
+    /**
+     * Apply sorting
+     */
+    sort?: ContactsSort;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetContactsResponse> {
+  const result = await api.crm.contactsAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create contact
+ * @request POST :/crm/contacts
+ * @allowrelaxedtypes
+ */
+export async function postCrmContactsAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: Contact,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateContactResponse> {
+  const result = await api.crm.contactsAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete contact
+ * @request DELETE :/crm/contacts/{id}
+ */
+export async function deleteCrmContactsDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteContactResponse> {
+  const result = await api.crm.contactsDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get contact
+ * @request GET :/crm/contacts/{id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmContactsOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetContactResponse> {
+  const result = await api.crm.contactsOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update contact
+ * @request PATCH :/crm/contacts/{id}
+ * @allowrelaxedtypes
+ */
+export async function patchCrmContactsUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: Contact,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateContactResponse> {
+  const result = await api.crm.contactsUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * List leads
+ * @request GET :/crm/leads
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmLeadsAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * Apply filters
+     */
+    filter?: LeadsFilter;
+    /**
+     * Apply sorting
+     */
+    sort?: LeadsSort;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetLeadsResponse> {
+  const result = await api.crm.leadsAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create lead
+ * @request POST :/crm/leads
+ * @allowrelaxedtypes
+ */
+export async function postCrmLeadsAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: Lead,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateLeadResponse> {
+  const result = await api.crm.leadsAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete lead
+ * @request DELETE :/crm/leads/{id}
+ */
+export async function deleteCrmLeadsDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteLeadResponse> {
+  const result = await api.crm.leadsDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get lead
+ * @request GET :/crm/leads/{id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmLeadsOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetLeadResponse> {
+  const result = await api.crm.leadsOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update lead
+ * @request PATCH :/crm/leads/{id}
+ * @allowrelaxedtypes
+ */
+export async function patchCrmLeadsUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: Lead,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateLeadResponse> {
+  const result = await api.crm.leadsUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * List notes
+ * @request GET :/crm/notes
+ * @readonly
+ */
+export async function getCrmNotesAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetNotesResponse> {
+  const result = await api.crm.notesAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create note
+ * @request POST :/crm/notes
+ */
+export async function postCrmNotesAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: Note,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateNoteResponse> {
+  const result = await api.crm.notesAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete note
+ * @request DELETE :/crm/notes/{id}
+ */
+export async function deleteCrmNotesDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteNoteResponse> {
+  const result = await api.crm.notesDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get note
+ * @request GET :/crm/notes/{id}
+ * @readonly
+ */
+export async function getCrmNotesOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetNoteResponse> {
+  const result = await api.crm.notesOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update note
+ * @request PATCH :/crm/notes/{id}
+ */
+export async function patchCrmNotesUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: Note,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateNoteResponse> {
+  const result = await api.crm.notesUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * List opportunities
+ * @request GET :/crm/opportunities
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmOpportunitiesAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * Apply filters
+     */
+    filter?: OpportunitiesFilter;
+    /**
+     * Apply sorting
+     */
+    sort?: OpportunitiesSort;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetOpportunitiesResponse> {
+  const result = await api.crm.opportunitiesAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create opportunity
+ * @request POST :/crm/opportunities
+ * @allowrelaxedtypes
+ */
+export async function postCrmOpportunitiesAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: Opportunity,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateOpportunityResponse> {
+  const result = await api.crm.opportunitiesAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete opportunity
+ * @request DELETE :/crm/opportunities/{id}
+ */
+export async function deleteCrmOpportunitiesDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteOpportunityResponse> {
+  const result = await api.crm.opportunitiesDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get opportunity
+ * @request GET :/crm/opportunities/{id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmOpportunitiesOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetOpportunityResponse> {
+  const result = await api.crm.opportunitiesOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update opportunity
+ * @request PATCH :/crm/opportunities/{id}
+ * @allowrelaxedtypes
+ */
+export async function patchCrmOpportunitiesUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: Opportunity,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateOpportunityResponse> {
+  const result = await api.crm.opportunitiesUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * List pipelines
+ * @request GET :/crm/pipelines
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmPipelinesAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetPipelinesResponse> {
+  const result = await api.crm.pipelinesAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create pipeline
+ * @request POST :/crm/pipelines
+ * @allowrelaxedtypes
+ */
+export async function postCrmPipelinesAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: Pipeline,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreatePipelineResponse> {
+  const result = await api.crm.pipelinesAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete pipeline
+ * @request DELETE :/crm/pipelines/{id}
+ */
+export async function deleteCrmPipelinesDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeletePipelineResponse> {
+  const result = await api.crm.pipelinesDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get pipeline
+ * @request GET :/crm/pipelines/{id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmPipelinesOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetPipelineResponse> {
+  const result = await api.crm.pipelinesOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update pipeline
+ * @request PATCH :/crm/pipelines/{id}
+ * @allowrelaxedtypes
+ */
+export async function patchCrmPipelinesUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: Pipeline,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdatePipelineResponse> {
+  const result = await api.crm.pipelinesUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * List users
+ * @request GET :/crm/users
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmUsersAll(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    cursor?: string;
+    /**
+     * Number of results to return. Minimum 1, Maximum 200, Default 20
+     */
+    limit?: number;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetUsersResponse> {
+  const result = await api.crm.usersAll({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create user
+ * @request POST :/crm/users
+ * @allowrelaxedtypes
+ */
+export async function postCrmUsersAdd(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  /** Request body */
+  data: User,
+  headers?: hasuraSdk.JSONValue,
+): Promise<CreateUserResponse> {
+  const result = await api.crm.usersAdd({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete user
+ * @request DELETE :/crm/users/{id}
+ */
+export async function deleteCrmUsersDelete(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<DeleteUserResponse> {
+  const result = await api.crm.usersDelete({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get user
+ * @request GET :/crm/users/{id}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getCrmUsersOne(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    fields?: string;
+  },
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<GetUserResponse> {
+  const result = await api.crm.usersOne({
+    query: query,
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update user
+ * @request PATCH :/crm/users/{id}
+ * @allowrelaxedtypes
+ */
+export async function patchCrmUsersUpdate(
+  query: {
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    raw?: boolean;
+  },
+  id: string,
+  /** Request body */
+  data: User,
+  headers?: hasuraSdk.JSONValue,
+): Promise<UpdateUserResponse> {
+  const result = await api.crm.usersUpdate({
+    query: query,
+    id: id,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
