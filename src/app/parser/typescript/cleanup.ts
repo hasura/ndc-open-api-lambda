@@ -1,8 +1,18 @@
 import * as ts from "ts-morph";
 import * as types from "../../types";
+import * as context from "../../context";
+import * as fs from "fs";
 
 export function fixImports(generatedCodeList: types.GeneratedCode[]) {
-  const project = new ts.Project();
+  let project: ts.Project;
+  if (fs.existsSync(context.getInstance().getTsConfigFilePath())) {
+    project = new ts.Project({
+      tsConfigFilePath: context.getInstance().getTsConfigFilePath(),
+    });
+  } else {
+    project = new ts.Project();
+  }
+
   for (const generatedCode of generatedCodeList) {
     project.createSourceFile(
       generatedCode.filePath,
