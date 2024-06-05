@@ -11,9 +11,11 @@ The NDC Open API Lambda Connector uses GitHub Releases for release management.
 5. Build a cross platform Docker Image using the command `docker buildx build --platform=linux/amd64,linux/arm64 -t ghcr.io/hasura/ndc-open-api-lambda:${git-tag} .`
 6. Publish a Docker Image to GHCR with the name `ghcr.io/hasura/ndc-open-api-lambda` and the version tagged with the Git Tag using `docker push ${image:tag}`. More on [GHRC](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
 7. Update [Changelog](./changelog.md)
-8. Create .tgz file of `connector-definition` using the commands (MacOS) 
+8. Create .tgz file of `connector-definition` using the commands (MacOS)
+
 ```
 $ cd ndc-open-api-lambda/connector-definition
 $ tar -czf connector-definition.tgz .hasura-connector
 ```
+
 9. Create a GitHub Release and add the .tgz file as an asset
