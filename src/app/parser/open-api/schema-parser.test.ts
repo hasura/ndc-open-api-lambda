@@ -4,6 +4,9 @@ import path from "path";
 import * as apiGenerator from "../../generator/api-ts-generator";
 import * as schemaParser from "./schema-parser";
 import * as fs from "fs";
+import * as generatorTypes from "../../generator/types";
+
+const cj = require('circular-json');
 
 context.getInstance().setLogLevel(context.LogLevel.ERROR);
 
@@ -13,11 +16,15 @@ type RelaxedTypeCheck = {
   typeName: string | undefined;
 };
 
+const OPEN_API_FILES_DIR = "../../../../tests/test-data/open-api-docs";
+const RELAXED_TYPES_GOLDEN_FILES_DIR = "./test-data/golden-files/schema-parser-tests/relaxed-type-tests/";
+
 const tests: {
   name: string;
   openApiFile: string;
   goldenFile: string;
   expected?: Map<string, RelaxedTypeCheck>; // using a map instead of RelaxedTypeCheck[] so that ordering can be ignored
+  generatedApiTsCode?: generatorTypes.GeneratedApiTsCode;
 }[] = [
   {
     name: "Petstore",
@@ -224,36 +231,26 @@ const tests: {
 
 describe("schema-parser", async () => {
   for (const testCase of tests) {
-    before(function () {
+    before(async () => {
       testCase.openApiFile = path.resolve(
         __dirname,
-        "../../../../tests/test-data/open-api-docs",
+        OPEN_API_FILES_DIR,
         testCase.openApiFile,
       );
-      testCase.goldenFile = path.resolve(
-        __dirname,
-        "./test-data/golden-files/schema-parser-tests/",
-        testCase.goldenFile,
+
+      testCase.generatedApiTsCode =  await apiGenerator.generateApiTsCode(
+        testCase.openApiFile,
       );
-      testCase.expected = new Map<string, RelaxedTypeCheck>();
-      try {
-        const expectedArray: RelaxedTypeCheck[] = JSON.parse(
-          fs.readFileSync(testCase.goldenFile).toString(),
-        );
-        expectedArray.forEach((element) => {
-          testCase.expected!.set(element.schemaRef, element);
-        });
-      } catch (e) {}
+
     });
 
-    it(`schema-parser::${testCase.name}`, async () => {
-      const generatedCode = await apiGenerator.generateApiTsCode(
-        testCase.openApiFile,
-      );
+    it(`relaxed-types::${testCase.name}`, async () => {
       const schemaStore = schemaParser.getParsedSchemaStore(
-        generatedCode.typeNames,
-        generatedCode.schemaComponents,
+        testCase.generatedApiTsCode!.typeNames,
+        testCase.generatedApiTsCode!.schemaComponents,
       );
+      const goldenFile = path.resolve(__dirname, RELAXED_TYPES_GOLDEN_FILES_DIR, testCase.goldenFile);
+      const expected = readRelaxedTypeGoldenFile(goldenFile);
 
       const got: Map<string, RelaxedTypeCheck> = new Map<
         string,
@@ -273,10 +270,25 @@ describe("schema-parser", async () => {
         gotTyped.push(gotRelaxedTypeCheck);
       });
 
-      assert.deepEqual(got, testCase.expected);
+      assert.deepStrictEqual(got, expected);
 
       // uncomment to write to golden file
-      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(gotTyped));
+      // fs.writeFileSync(goldenFile, JSON.stringify(gotTyped));
     });
   }
 });
+
+function readRelaxedTypeGoldenFile(goldenFilPath: string): Map<string, RelaxedTypeCheck> | undefined {
+  try {
+    const expectedArray: RelaxedTypeCheck[] = JSON.parse(
+      fs.readFileSync(goldenFilPath).toString(),
+    );
+    const returnMap: Map<string, RelaxedTypeCheck> = new Map<string, RelaxedTypeCheck>();
+    expectedArray.forEach((element) => {
+      returnMap.set(element.schemaRef, element);
+    });
+    return returnMap;
+  } catch (e) {
+    return undefined;
+  }
+}
