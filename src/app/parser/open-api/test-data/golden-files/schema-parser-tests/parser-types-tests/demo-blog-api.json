@@ -1,0 +1,37 @@
+[
+  {
+    "schemaRef": "#/components/schemas/main.author",
+    "properties": {
+      "main.author": "object",
+      "main.author.email.": "scaler",
+      "main.author.id.": "scaler",
+      "main.author.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/main.blog",
+    "properties": {
+      "main.blog": "object",
+      "main.blog.author.MainAuthor": "ref",
+      "main.blog.dislikes.": "scaler",
+      "main.blog.id.": "scaler",
+      "main.blog.likes.": "scaler",
+      "main.blog.summary.": "scaler",
+      "main.blog.text.": "scaler",
+      "main.blog.title.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/main.blogRequestDto",
+    "properties": {
+      "main.blogRequestDto": "object",
+      "main.blogRequestDto.authorId.": "scaler",
+      "main.blogRequestDto.dislikes.": "scaler",
+      "main.blogRequestDto.id.": "scaler",
+      "main.blogRequestDto.likes.": "scaler",
+      "main.blogRequestDto.summary.": "scaler",
+      "main.blogRequestDto.text.": "scaler",
+      "main.blogRequestDto.title.": "scaler"
+    }
+  }
+]

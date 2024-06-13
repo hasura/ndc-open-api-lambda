@@ -1,0 +1,80 @@
+[
+  {
+    "schemaRef": "#/components/responses/Error",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CollectionResponseExternalUnifiedEvent",
+    "properties": {
+      "CollectionResponseExternalUnifiedEvent": "object",
+      "CollectionResponseExternalUnifiedEvent.paging.Paging": "ref",
+      "CollectionResponseExternalUnifiedEvent.results.": "array",
+      "CollectionResponseExternalUnifiedEvent.results..ExternalUnifiedEvent": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Error",
+    "properties": {
+      "Error": "object",
+      "Error.category.": "scaler",
+      "Error.context.": "primitive",
+      "Error.correlationId.": "scaler",
+      "Error.errors.": "array",
+      "Error.errors..ErrorDetail": "ref",
+      "Error.links.": "primitive",
+      "Error.message.": "scaler",
+      "Error.subCategory.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorDetail",
+    "properties": {
+      "ErrorDetail": "object",
+      "ErrorDetail.code.": "scaler",
+      "ErrorDetail.context.": "primitive",
+      "ErrorDetail.in.": "scaler",
+      "ErrorDetail.message.": "scaler",
+      "ErrorDetail.subCategory.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExternalUnifiedEvent",
+    "properties": {
+      "ExternalUnifiedEvent": "object",
+      "ExternalUnifiedEvent.eventType.": "scaler",
+      "ExternalUnifiedEvent.id.": "scaler",
+      "ExternalUnifiedEvent.objectId.": "scaler",
+      "ExternalUnifiedEvent.objectType.": "scaler",
+      "ExternalUnifiedEvent.occurredAt.": "scaler",
+      "ExternalUnifiedEvent.properties.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NextPage",
+    "properties": {
+      "NextPage": "object",
+      "NextPage.after.": "scaler",
+      "NextPage.link.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Paging",
+    "properties": { "Paging": "object", "Paging.next.NextPage": "ref" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/hapikey",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/oauth2_legacy",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/private_apps_legacy",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

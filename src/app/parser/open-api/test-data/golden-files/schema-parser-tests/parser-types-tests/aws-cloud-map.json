@@ -1,0 +1,1275 @@
+[
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Content-Sha256",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Date",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Algorithm",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Credential",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Security-Token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Signature",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-SignedHeaders",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/hmac",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateHttpNamespaceResponse",
+    "properties": {
+      "CreateHttpNamespaceResponse": "object",
+      "CreateHttpNamespaceResponse.OperationId.": "allOf",
+      "CreateHttpNamespaceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateHttpNamespaceRequest",
+    "properties": {
+      "CreateHttpNamespaceRequest": "object",
+      "CreateHttpNamespaceRequest.Name.": "allOf",
+      "CreateHttpNamespaceRequest.Name..NamespaceNameHttp": "ref",
+      "CreateHttpNamespaceRequest.CreatorRequestId.": "allOf",
+      "CreateHttpNamespaceRequest.CreatorRequestId..ResourceId": "ref",
+      "CreateHttpNamespaceRequest.Description.": "allOf",
+      "CreateHttpNamespaceRequest.Description..ResourceDescription": "ref",
+      "CreateHttpNamespaceRequest.Tags.": "allOf",
+      "CreateHttpNamespaceRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InvalidInput",
+    "properties": { "InvalidInput": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceAlreadyExists",
+    "properties": { "NamespaceAlreadyExists": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceLimitExceeded",
+    "properties": { "ResourceLimitExceeded": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DuplicateRequest",
+    "properties": { "DuplicateRequest": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TooManyTagsException",
+    "properties": { "TooManyTagsException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePrivateDnsNamespaceResponse",
+    "properties": {
+      "CreatePrivateDnsNamespaceResponse": "object",
+      "CreatePrivateDnsNamespaceResponse.OperationId.": "allOf",
+      "CreatePrivateDnsNamespaceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePrivateDnsNamespaceRequest",
+    "properties": {
+      "CreatePrivateDnsNamespaceRequest": "object",
+      "CreatePrivateDnsNamespaceRequest.Name.": "allOf",
+      "CreatePrivateDnsNamespaceRequest.Name..NamespaceNamePrivate": "ref",
+      "CreatePrivateDnsNamespaceRequest.CreatorRequestId.": "allOf",
+      "CreatePrivateDnsNamespaceRequest.CreatorRequestId..ResourceId": "ref",
+      "CreatePrivateDnsNamespaceRequest.Description.": "allOf",
+      "CreatePrivateDnsNamespaceRequest.Description..ResourceDescription": "ref",
+      "CreatePrivateDnsNamespaceRequest.Vpc.": "allOf",
+      "CreatePrivateDnsNamespaceRequest.Vpc..ResourceId": "ref",
+      "CreatePrivateDnsNamespaceRequest.Tags.": "allOf",
+      "CreatePrivateDnsNamespaceRequest.Tags..TagList": "ref",
+      "CreatePrivateDnsNamespaceRequest.Properties.": "allOf",
+      "CreatePrivateDnsNamespaceRequest.Properties..PrivateDnsNamespaceProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePublicDnsNamespaceResponse",
+    "properties": {
+      "CreatePublicDnsNamespaceResponse": "object",
+      "CreatePublicDnsNamespaceResponse.OperationId.": "allOf",
+      "CreatePublicDnsNamespaceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreatePublicDnsNamespaceRequest",
+    "properties": {
+      "CreatePublicDnsNamespaceRequest": "object",
+      "CreatePublicDnsNamespaceRequest.Name.": "allOf",
+      "CreatePublicDnsNamespaceRequest.Name..NamespaceNamePublic": "ref",
+      "CreatePublicDnsNamespaceRequest.CreatorRequestId.": "allOf",
+      "CreatePublicDnsNamespaceRequest.CreatorRequestId..ResourceId": "ref",
+      "CreatePublicDnsNamespaceRequest.Description.": "allOf",
+      "CreatePublicDnsNamespaceRequest.Description..ResourceDescription": "ref",
+      "CreatePublicDnsNamespaceRequest.Tags.": "allOf",
+      "CreatePublicDnsNamespaceRequest.Tags..TagList": "ref",
+      "CreatePublicDnsNamespaceRequest.Properties.": "allOf",
+      "CreatePublicDnsNamespaceRequest.Properties..PublicDnsNamespaceProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateServiceResponse",
+    "properties": {
+      "CreateServiceResponse": "object",
+      "CreateServiceResponse.Service.": "allOf",
+      "CreateServiceResponse.Service..Service": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateServiceRequest",
+    "properties": {
+      "CreateServiceRequest": "object",
+      "CreateServiceRequest.Name.": "allOf",
+      "CreateServiceRequest.Name..ServiceName": "ref",
+      "CreateServiceRequest.NamespaceId.": "allOf",
+      "CreateServiceRequest.NamespaceId..ResourceId": "ref",
+      "CreateServiceRequest.CreatorRequestId.": "allOf",
+      "CreateServiceRequest.CreatorRequestId..ResourceId": "ref",
+      "CreateServiceRequest.Description.": "allOf",
+      "CreateServiceRequest.Description..ResourceDescription": "ref",
+      "CreateServiceRequest.DnsConfig.": "allOf",
+      "CreateServiceRequest.DnsConfig..DnsConfig": "ref",
+      "CreateServiceRequest.HealthCheckConfig.": "allOf",
+      "CreateServiceRequest.HealthCheckConfig..HealthCheckConfig": "ref",
+      "CreateServiceRequest.HealthCheckCustomConfig.": "allOf",
+      "CreateServiceRequest.HealthCheckCustomConfig..HealthCheckCustomConfig": "ref",
+      "CreateServiceRequest.Tags.": "allOf",
+      "CreateServiceRequest.Tags..TagList": "ref",
+      "CreateServiceRequest.Type.": "allOf",
+      "CreateServiceRequest.Type..ServiceTypeOption": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNotFound",
+    "properties": { "NamespaceNotFound": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceAlreadyExists",
+    "properties": { "ServiceAlreadyExists": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteNamespaceResponse",
+    "properties": {
+      "DeleteNamespaceResponse": "object",
+      "DeleteNamespaceResponse.OperationId.": "allOf",
+      "DeleteNamespaceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteNamespaceRequest",
+    "properties": {
+      "DeleteNamespaceRequest": "object",
+      "DeleteNamespaceRequest.Id.": "allOf",
+      "DeleteNamespaceRequest.Id..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceInUse",
+    "properties": { "ResourceInUse": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteServiceResponse",
+    "properties": { "DeleteServiceResponse": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteServiceRequest",
+    "properties": {
+      "DeleteServiceRequest": "object",
+      "DeleteServiceRequest.Id.": "allOf",
+      "DeleteServiceRequest.Id..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceNotFound",
+    "properties": { "ServiceNotFound": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeregisterInstanceResponse",
+    "properties": {
+      "DeregisterInstanceResponse": "object",
+      "DeregisterInstanceResponse.OperationId.": "allOf",
+      "DeregisterInstanceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeregisterInstanceRequest",
+    "properties": {
+      "DeregisterInstanceRequest": "object",
+      "DeregisterInstanceRequest.ServiceId.": "allOf",
+      "DeregisterInstanceRequest.ServiceId..ResourceId": "ref",
+      "DeregisterInstanceRequest.InstanceId.": "allOf",
+      "DeregisterInstanceRequest.InstanceId..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceNotFound",
+    "properties": { "InstanceNotFound": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DiscoverInstancesResponse",
+    "properties": {
+      "DiscoverInstancesResponse": "object",
+      "DiscoverInstancesResponse.Instances.": "allOf",
+      "DiscoverInstancesResponse.Instances..HttpInstanceSummaryList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DiscoverInstancesRequest",
+    "properties": {
+      "DiscoverInstancesRequest": "object",
+      "DiscoverInstancesRequest.NamespaceName.": "allOf",
+      "DiscoverInstancesRequest.NamespaceName..NamespaceName": "ref",
+      "DiscoverInstancesRequest.ServiceName.": "allOf",
+      "DiscoverInstancesRequest.ServiceName..ServiceName": "ref",
+      "DiscoverInstancesRequest.MaxResults.": "allOf",
+      "DiscoverInstancesRequest.MaxResults..DiscoverMaxResults": "ref",
+      "DiscoverInstancesRequest.QueryParameters.": "allOf",
+      "DiscoverInstancesRequest.QueryParameters..Attributes": "ref",
+      "DiscoverInstancesRequest.OptionalParameters.": "allOf",
+      "DiscoverInstancesRequest.OptionalParameters..Attributes": "ref",
+      "DiscoverInstancesRequest.HealthStatus.": "allOf",
+      "DiscoverInstancesRequest.HealthStatus..HealthStatusFilter": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RequestLimitExceeded",
+    "properties": { "RequestLimitExceeded": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstanceResponse",
+    "properties": {
+      "GetInstanceResponse": "object",
+      "GetInstanceResponse.Instance.": "allOf",
+      "GetInstanceResponse.Instance..Instance": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstanceRequest",
+    "properties": {
+      "GetInstanceRequest": "object",
+      "GetInstanceRequest.ServiceId.": "allOf",
+      "GetInstanceRequest.ServiceId..ResourceId": "ref",
+      "GetInstanceRequest.InstanceId.": "allOf",
+      "GetInstanceRequest.InstanceId..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstancesHealthStatusResponse",
+    "properties": {
+      "GetInstancesHealthStatusResponse": "object",
+      "GetInstancesHealthStatusResponse.Status.": "allOf",
+      "GetInstancesHealthStatusResponse.Status..InstanceHealthStatusMap": "ref",
+      "GetInstancesHealthStatusResponse.NextToken.": "allOf",
+      "GetInstancesHealthStatusResponse.NextToken..NextToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetInstancesHealthStatusRequest",
+    "properties": {
+      "GetInstancesHealthStatusRequest": "object",
+      "GetInstancesHealthStatusRequest.ServiceId.": "allOf",
+      "GetInstancesHealthStatusRequest.ServiceId..ResourceId": "ref",
+      "GetInstancesHealthStatusRequest.Instances.": "allOf",
+      "GetInstancesHealthStatusRequest.Instances..InstanceIdList": "ref",
+      "GetInstancesHealthStatusRequest.MaxResults.": "allOf",
+      "GetInstancesHealthStatusRequest.MaxResults..MaxResults": "ref",
+      "GetInstancesHealthStatusRequest.NextToken.": "allOf",
+      "GetInstancesHealthStatusRequest.NextToken..NextToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetNamespaceResponse",
+    "properties": {
+      "GetNamespaceResponse": "object",
+      "GetNamespaceResponse.Namespace.": "allOf",
+      "GetNamespaceResponse.Namespace..Namespace": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetNamespaceRequest",
+    "properties": {
+      "GetNamespaceRequest": "object",
+      "GetNamespaceRequest.Id.": "allOf",
+      "GetNamespaceRequest.Id..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetOperationResponse",
+    "properties": {
+      "GetOperationResponse": "object",
+      "GetOperationResponse.Operation.": "allOf",
+      "GetOperationResponse.Operation..Operation": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetOperationRequest",
+    "properties": {
+      "GetOperationRequest": "object",
+      "GetOperationRequest.OperationId.": "allOf",
+      "GetOperationRequest.OperationId..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationNotFound",
+    "properties": { "OperationNotFound": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetServiceResponse",
+    "properties": {
+      "GetServiceResponse": "object",
+      "GetServiceResponse.Service.": "allOf",
+      "GetServiceResponse.Service..Service": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetServiceRequest",
+    "properties": {
+      "GetServiceRequest": "object",
+      "GetServiceRequest.Id.": "allOf",
+      "GetServiceRequest.Id..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListInstancesResponse",
+    "properties": {
+      "ListInstancesResponse": "object",
+      "ListInstancesResponse.Instances.": "allOf",
+      "ListInstancesResponse.Instances..InstanceSummaryList": "ref",
+      "ListInstancesResponse.NextToken.": "allOf",
+      "ListInstancesResponse.NextToken..NextToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListInstancesRequest",
+    "properties": {
+      "ListInstancesRequest": "object",
+      "ListInstancesRequest.ServiceId.": "allOf",
+      "ListInstancesRequest.ServiceId..ResourceId": "ref",
+      "ListInstancesRequest.NextToken.": "allOf",
+      "ListInstancesRequest.NextToken..NextToken": "ref",
+      "ListInstancesRequest.MaxResults.": "allOf",
+      "ListInstancesRequest.MaxResults..MaxResults": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListNamespacesResponse",
+    "properties": {
+      "ListNamespacesResponse": "object",
+      "ListNamespacesResponse.Namespaces.": "allOf",
+      "ListNamespacesResponse.Namespaces..NamespaceSummariesList": "ref",
+      "ListNamespacesResponse.NextToken.": "allOf",
+      "ListNamespacesResponse.NextToken..NextToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListNamespacesRequest",
+    "properties": {
+      "ListNamespacesRequest": "object",
+      "ListNamespacesRequest.NextToken.": "allOf",
+      "ListNamespacesRequest.NextToken..NextToken": "ref",
+      "ListNamespacesRequest.MaxResults.": "allOf",
+      "ListNamespacesRequest.MaxResults..MaxResults": "ref",
+      "ListNamespacesRequest.Filters.": "allOf",
+      "ListNamespacesRequest.Filters..NamespaceFilters": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListOperationsResponse",
+    "properties": {
+      "ListOperationsResponse": "object",
+      "ListOperationsResponse.Operations.": "allOf",
+      "ListOperationsResponse.Operations..OperationSummaryList": "ref",
+      "ListOperationsResponse.NextToken.": "allOf",
+      "ListOperationsResponse.NextToken..NextToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListOperationsRequest",
+    "properties": {
+      "ListOperationsRequest": "object",
+      "ListOperationsRequest.NextToken.": "allOf",
+      "ListOperationsRequest.NextToken..NextToken": "ref",
+      "ListOperationsRequest.MaxResults.": "allOf",
+      "ListOperationsRequest.MaxResults..MaxResults": "ref",
+      "ListOperationsRequest.Filters.": "allOf",
+      "ListOperationsRequest.Filters..OperationFilters": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListServicesResponse",
+    "properties": {
+      "ListServicesResponse": "object",
+      "ListServicesResponse.Services.": "allOf",
+      "ListServicesResponse.Services..ServiceSummariesList": "ref",
+      "ListServicesResponse.NextToken.": "allOf",
+      "ListServicesResponse.NextToken..NextToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListServicesRequest",
+    "properties": {
+      "ListServicesRequest": "object",
+      "ListServicesRequest.NextToken.": "allOf",
+      "ListServicesRequest.NextToken..NextToken": "ref",
+      "ListServicesRequest.MaxResults.": "allOf",
+      "ListServicesRequest.MaxResults..MaxResults": "ref",
+      "ListServicesRequest.Filters.": "allOf",
+      "ListServicesRequest.Filters..ServiceFilters": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListTagsForResourceResponse",
+    "properties": {
+      "ListTagsForResourceResponse": "object",
+      "ListTagsForResourceResponse.Tags.": "allOf",
+      "ListTagsForResourceResponse.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListTagsForResourceRequest",
+    "properties": {
+      "ListTagsForResourceRequest": "object",
+      "ListTagsForResourceRequest.ResourceARN.": "allOf",
+      "ListTagsForResourceRequest.ResourceARN..AmazonResourceName": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceNotFoundException",
+    "properties": { "ResourceNotFoundException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RegisterInstanceResponse",
+    "properties": {
+      "RegisterInstanceResponse": "object",
+      "RegisterInstanceResponse.OperationId.": "allOf",
+      "RegisterInstanceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RegisterInstanceRequest",
+    "properties": {
+      "RegisterInstanceRequest": "object",
+      "RegisterInstanceRequest.ServiceId.": "allOf",
+      "RegisterInstanceRequest.ServiceId..ResourceId": "ref",
+      "RegisterInstanceRequest.InstanceId.": "allOf",
+      "RegisterInstanceRequest.InstanceId..InstanceId": "ref",
+      "RegisterInstanceRequest.CreatorRequestId.": "allOf",
+      "RegisterInstanceRequest.CreatorRequestId..ResourceId": "ref",
+      "RegisterInstanceRequest.Attributes.": "allOf",
+      "RegisterInstanceRequest.Attributes..Attributes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagResourceResponse",
+    "properties": { "TagResourceResponse": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagResourceRequest",
+    "properties": {
+      "TagResourceRequest": "object",
+      "TagResourceRequest.ResourceARN.": "allOf",
+      "TagResourceRequest.ResourceARN..AmazonResourceName": "ref",
+      "TagResourceRequest.Tags.": "allOf",
+      "TagResourceRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UntagResourceResponse",
+    "properties": { "UntagResourceResponse": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UntagResourceRequest",
+    "properties": {
+      "UntagResourceRequest": "object",
+      "UntagResourceRequest.ResourceARN.": "allOf",
+      "UntagResourceRequest.ResourceARN..AmazonResourceName": "ref",
+      "UntagResourceRequest.TagKeys.": "allOf",
+      "UntagResourceRequest.TagKeys..TagKeyList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateHttpNamespaceResponse",
+    "properties": {
+      "UpdateHttpNamespaceResponse": "object",
+      "UpdateHttpNamespaceResponse.OperationId.": "allOf",
+      "UpdateHttpNamespaceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateHttpNamespaceRequest",
+    "properties": {
+      "UpdateHttpNamespaceRequest": "object",
+      "UpdateHttpNamespaceRequest.Id.": "allOf",
+      "UpdateHttpNamespaceRequest.Id..ResourceId": "ref",
+      "UpdateHttpNamespaceRequest.UpdaterRequestId.": "allOf",
+      "UpdateHttpNamespaceRequest.UpdaterRequestId..ResourceId": "ref",
+      "UpdateHttpNamespaceRequest.Namespace.": "allOf",
+      "UpdateHttpNamespaceRequest.Namespace..HttpNamespaceChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateInstanceCustomHealthStatusRequest",
+    "properties": {
+      "UpdateInstanceCustomHealthStatusRequest": "object",
+      "UpdateInstanceCustomHealthStatusRequest.ServiceId.": "allOf",
+      "UpdateInstanceCustomHealthStatusRequest.ServiceId..ResourceId": "ref",
+      "UpdateInstanceCustomHealthStatusRequest.InstanceId.": "allOf",
+      "UpdateInstanceCustomHealthStatusRequest.InstanceId..ResourceId": "ref",
+      "UpdateInstanceCustomHealthStatusRequest.Status.": "allOf",
+      "UpdateInstanceCustomHealthStatusRequest.Status..CustomHealthStatus": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomHealthNotFound",
+    "properties": { "CustomHealthNotFound": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePrivateDnsNamespaceResponse",
+    "properties": {
+      "UpdatePrivateDnsNamespaceResponse": "object",
+      "UpdatePrivateDnsNamespaceResponse.OperationId.": "allOf",
+      "UpdatePrivateDnsNamespaceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePrivateDnsNamespaceRequest",
+    "properties": {
+      "UpdatePrivateDnsNamespaceRequest": "object",
+      "UpdatePrivateDnsNamespaceRequest.Id.": "allOf",
+      "UpdatePrivateDnsNamespaceRequest.Id..ResourceId": "ref",
+      "UpdatePrivateDnsNamespaceRequest.UpdaterRequestId.": "allOf",
+      "UpdatePrivateDnsNamespaceRequest.UpdaterRequestId..ResourceId": "ref",
+      "UpdatePrivateDnsNamespaceRequest.Namespace.": "allOf",
+      "UpdatePrivateDnsNamespaceRequest.Namespace..PrivateDnsNamespaceChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePublicDnsNamespaceResponse",
+    "properties": {
+      "UpdatePublicDnsNamespaceResponse": "object",
+      "UpdatePublicDnsNamespaceResponse.OperationId.": "allOf",
+      "UpdatePublicDnsNamespaceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdatePublicDnsNamespaceRequest",
+    "properties": {
+      "UpdatePublicDnsNamespaceRequest": "object",
+      "UpdatePublicDnsNamespaceRequest.Id.": "allOf",
+      "UpdatePublicDnsNamespaceRequest.Id..ResourceId": "ref",
+      "UpdatePublicDnsNamespaceRequest.UpdaterRequestId.": "allOf",
+      "UpdatePublicDnsNamespaceRequest.UpdaterRequestId..ResourceId": "ref",
+      "UpdatePublicDnsNamespaceRequest.Namespace.": "allOf",
+      "UpdatePublicDnsNamespaceRequest.Namespace..PublicDnsNamespaceChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateServiceResponse",
+    "properties": {
+      "UpdateServiceResponse": "object",
+      "UpdateServiceResponse.OperationId.": "allOf",
+      "UpdateServiceResponse.OperationId..OperationId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateServiceRequest",
+    "properties": {
+      "UpdateServiceRequest": "object",
+      "UpdateServiceRequest.Id.": "allOf",
+      "UpdateServiceRequest.Id..ResourceId": "ref",
+      "UpdateServiceRequest.Service.": "allOf",
+      "UpdateServiceRequest.Service..ServiceChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AmazonResourceName",
+    "properties": { "AmazonResourceName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Arn",
+    "properties": { "Arn": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttrKey",
+    "properties": { "AttrKey": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttrValue",
+    "properties": { "AttrValue": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Attributes",
+    "properties": { "Attributes": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Code",
+    "properties": { "Code": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNameHttp",
+    "properties": { "NamespaceNameHttp": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceId",
+    "properties": { "ResourceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceDescription",
+    "properties": { "ResourceDescription": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagList",
+    "properties": { "TagList": "array", "TagList.Tag": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationId",
+    "properties": { "OperationId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNamePrivate",
+    "properties": { "NamespaceNamePrivate": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsNamespaceProperties",
+    "properties": {
+      "PrivateDnsNamespaceProperties": "object",
+      "PrivateDnsNamespaceProperties.DnsProperties.": "allOf",
+      "PrivateDnsNamespaceProperties.DnsProperties..PrivateDnsPropertiesMutable": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceNamePublic",
+    "properties": { "NamespaceNamePublic": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsNamespaceProperties",
+    "properties": {
+      "PublicDnsNamespaceProperties": "object",
+      "PublicDnsNamespaceProperties.DnsProperties.": "allOf",
+      "PublicDnsNamespaceProperties.DnsProperties..PublicDnsPropertiesMutable": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceName",
+    "properties": { "ServiceName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsConfig",
+    "properties": {
+      "DnsConfig": "object",
+      "DnsConfig.NamespaceId.": "allOf",
+      "DnsConfig.NamespaceId..ResourceId": "ref",
+      "DnsConfig.RoutingPolicy.": "allOf",
+      "DnsConfig.RoutingPolicy..RoutingPolicy": "ref",
+      "DnsConfig.DnsRecords.": "allOf",
+      "DnsConfig.DnsRecords..DnsRecordList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthCheckConfig",
+    "properties": {
+      "HealthCheckConfig": "object",
+      "HealthCheckConfig.Type.": "allOf",
+      "HealthCheckConfig.Type..HealthCheckType": "ref",
+      "HealthCheckConfig.ResourcePath.": "allOf",
+      "HealthCheckConfig.ResourcePath..ResourcePath": "ref",
+      "HealthCheckConfig.FailureThreshold.": "allOf",
+      "HealthCheckConfig.FailureThreshold..FailureThreshold": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthCheckCustomConfig",
+    "properties": {
+      "HealthCheckCustomConfig": "object",
+      "HealthCheckCustomConfig.FailureThreshold.": "allOf",
+      "HealthCheckCustomConfig.FailureThreshold..FailureThreshold": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceTypeOption",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Service",
+    "properties": {
+      "Service": "object",
+      "Service.Id.": "allOf",
+      "Service.Id..ResourceId": "ref",
+      "Service.Arn.": "allOf",
+      "Service.Arn..Arn": "ref",
+      "Service.Name.": "allOf",
+      "Service.Name..ServiceName": "ref",
+      "Service.NamespaceId.": "allOf",
+      "Service.NamespaceId..ResourceId": "ref",
+      "Service.Description.": "allOf",
+      "Service.Description..ResourceDescription": "ref",
+      "Service.InstanceCount.": "allOf",
+      "Service.InstanceCount..ResourceCount": "ref",
+      "Service.DnsConfig.": "allOf",
+      "Service.DnsConfig..DnsConfig": "ref",
+      "Service.Type.": "allOf",
+      "Service.Type..ServiceType": "ref",
+      "Service.HealthCheckConfig.": "allOf",
+      "Service.HealthCheckConfig..HealthCheckConfig": "ref",
+      "Service.HealthCheckCustomConfig.": "allOf",
+      "Service.HealthCheckCustomConfig..HealthCheckCustomConfig": "ref",
+      "Service.CreateDate.": "allOf",
+      "Service.CreateDate..Timestamp": "ref",
+      "Service.CreatorRequestId.": "allOf",
+      "Service.CreatorRequestId..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomHealthStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceName",
+    "properties": { "NamespaceName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DiscoverMaxResults",
+    "properties": { "DiscoverMaxResults": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthStatusFilter",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpInstanceSummaryList",
+    "properties": {
+      "HttpInstanceSummaryList": "array",
+      "HttpInstanceSummaryList.HttpInstanceSummary": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RoutingPolicy",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsRecordList",
+    "properties": { "DnsRecordList": "array", "DnsRecordList.DnsRecord": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsConfigChange",
+    "properties": {
+      "DnsConfigChange": "object",
+      "DnsConfigChange.DnsRecords.": "allOf",
+      "DnsConfigChange.DnsRecords..DnsRecordList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SOA",
+    "properties": {
+      "SOA": "object",
+      "SOA.TTL.": "allOf",
+      "SOA.TTL..RecordTTL": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsProperties",
+    "properties": {
+      "DnsProperties": "object",
+      "DnsProperties.HostedZoneId.": "allOf",
+      "DnsProperties.HostedZoneId..ResourceId": "ref",
+      "DnsProperties.SOA.": "allOf",
+      "DnsProperties.SOA..SOA": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RecordType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RecordTTL",
+    "properties": { "RecordTTL": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsRecord",
+    "properties": {
+      "DnsRecord": "object",
+      "DnsRecord.Type.": "allOf",
+      "DnsRecord.Type..RecordType": "ref",
+      "DnsRecord.TTL.": "allOf",
+      "DnsRecord.TTL..RecordTTL": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailureThreshold",
+    "properties": { "FailureThreshold": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterCondition",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterValue",
+    "properties": { "FilterValue": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterValues",
+    "properties": { "FilterValues": "array", "FilterValues.FilterValue": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Instance",
+    "properties": {
+      "Instance": "object",
+      "Instance.Id.": "allOf",
+      "Instance.Id..ResourceId": "ref",
+      "Instance.CreatorRequestId.": "allOf",
+      "Instance.CreatorRequestId..ResourceId": "ref",
+      "Instance.Attributes.": "allOf",
+      "Instance.Attributes..Attributes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceIdList",
+    "properties": {
+      "InstanceIdList": "array",
+      "InstanceIdList.ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MaxResults",
+    "properties": { "MaxResults": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NextToken",
+    "properties": { "NextToken": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceHealthStatusMap",
+    "properties": { "InstanceHealthStatusMap": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Namespace",
+    "properties": {
+      "Namespace": "object",
+      "Namespace.Id.": "allOf",
+      "Namespace.Id..ResourceId": "ref",
+      "Namespace.Arn.": "allOf",
+      "Namespace.Arn..Arn": "ref",
+      "Namespace.Name.": "allOf",
+      "Namespace.Name..NamespaceName": "ref",
+      "Namespace.Type.": "allOf",
+      "Namespace.Type..NamespaceType": "ref",
+      "Namespace.Description.": "allOf",
+      "Namespace.Description..ResourceDescription": "ref",
+      "Namespace.ServiceCount.": "allOf",
+      "Namespace.ServiceCount..ResourceCount": "ref",
+      "Namespace.Properties.": "allOf",
+      "Namespace.Properties..NamespaceProperties": "ref",
+      "Namespace.CreateDate.": "allOf",
+      "Namespace.CreateDate..Timestamp": "ref",
+      "Namespace.CreatorRequestId.": "allOf",
+      "Namespace.CreatorRequestId..ResourceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Operation",
+    "properties": {
+      "Operation": "object",
+      "Operation.Id.": "allOf",
+      "Operation.Id..OperationId": "ref",
+      "Operation.Type.": "allOf",
+      "Operation.Type..OperationType": "ref",
+      "Operation.Status.": "allOf",
+      "Operation.Status..OperationStatus": "ref",
+      "Operation.ErrorMessage.": "allOf",
+      "Operation.ErrorMessage..Message": "ref",
+      "Operation.ErrorCode.": "allOf",
+      "Operation.ErrorCode..Code": "ref",
+      "Operation.CreateDate.": "allOf",
+      "Operation.CreateDate..Timestamp": "ref",
+      "Operation.UpdateDate.": "allOf",
+      "Operation.UpdateDate..Timestamp": "ref",
+      "Operation.Targets.": "allOf",
+      "Operation.Targets..OperationTargetsMap": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthCheckType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourcePath",
+    "properties": { "ResourcePath": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpInstanceSummary",
+    "properties": {
+      "HttpInstanceSummary": "object",
+      "HttpInstanceSummary.InstanceId.": "allOf",
+      "HttpInstanceSummary.InstanceId..ResourceId": "ref",
+      "HttpInstanceSummary.NamespaceName.": "allOf",
+      "HttpInstanceSummary.NamespaceName..NamespaceNameHttp": "ref",
+      "HttpInstanceSummary.ServiceName.": "allOf",
+      "HttpInstanceSummary.ServiceName..ServiceName": "ref",
+      "HttpInstanceSummary.HealthStatus.": "allOf",
+      "HttpInstanceSummary.HealthStatus..HealthStatus": "ref",
+      "HttpInstanceSummary.Attributes.": "allOf",
+      "HttpInstanceSummary.Attributes..Attributes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpNamespaceChange",
+    "properties": {
+      "HttpNamespaceChange": "object",
+      "HttpNamespaceChange.Description.": "allOf",
+      "HttpNamespaceChange.Description..ResourceDescription": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpProperties",
+    "properties": {
+      "HttpProperties": "object",
+      "HttpProperties.HttpName.": "allOf",
+      "HttpProperties.HttpName..NamespaceName": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceId",
+    "properties": { "InstanceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceSummary",
+    "properties": {
+      "InstanceSummary": "object",
+      "InstanceSummary.Id.": "allOf",
+      "InstanceSummary.Id..ResourceId": "ref",
+      "InstanceSummary.Attributes.": "allOf",
+      "InstanceSummary.Attributes..Attributes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceSummaryList",
+    "properties": {
+      "InstanceSummaryList": "array",
+      "InstanceSummaryList.InstanceSummary": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceFilters",
+    "properties": {
+      "NamespaceFilters": "array",
+      "NamespaceFilters.NamespaceFilter": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceSummariesList",
+    "properties": {
+      "NamespaceSummariesList": "array",
+      "NamespaceSummariesList.NamespaceSummary": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationFilters",
+    "properties": {
+      "OperationFilters": "array",
+      "OperationFilters.OperationFilter": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationSummaryList",
+    "properties": {
+      "OperationSummaryList": "array",
+      "OperationSummaryList.OperationSummary": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceFilters",
+    "properties": {
+      "ServiceFilters": "array",
+      "ServiceFilters.ServiceFilter": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceSummariesList",
+    "properties": {
+      "ServiceSummariesList": "array",
+      "ServiceSummariesList.ServiceSummary": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Message",
+    "properties": { "Message": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceCount",
+    "properties": { "ResourceCount": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceProperties",
+    "properties": {
+      "NamespaceProperties": "object",
+      "NamespaceProperties.DnsProperties.": "allOf",
+      "NamespaceProperties.DnsProperties..DnsProperties": "ref",
+      "NamespaceProperties.HttpProperties.": "allOf",
+      "NamespaceProperties.HttpProperties..HttpProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Timestamp",
+    "properties": { "Timestamp": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceFilterName",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceFilter",
+    "properties": {
+      "NamespaceFilter": "object",
+      "NamespaceFilter.Name.": "allOf",
+      "NamespaceFilter.Name..NamespaceFilterName": "ref",
+      "NamespaceFilter.Values.": "allOf",
+      "NamespaceFilter.Values..FilterValues": "ref",
+      "NamespaceFilter.Condition.": "allOf",
+      "NamespaceFilter.Condition..FilterCondition": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NamespaceSummary",
+    "properties": {
+      "NamespaceSummary": "object",
+      "NamespaceSummary.Id.": "allOf",
+      "NamespaceSummary.Id..ResourceId": "ref",
+      "NamespaceSummary.Arn.": "allOf",
+      "NamespaceSummary.Arn..Arn": "ref",
+      "NamespaceSummary.Name.": "allOf",
+      "NamespaceSummary.Name..NamespaceName": "ref",
+      "NamespaceSummary.Type.": "allOf",
+      "NamespaceSummary.Type..NamespaceType": "ref",
+      "NamespaceSummary.Description.": "allOf",
+      "NamespaceSummary.Description..ResourceDescription": "ref",
+      "NamespaceSummary.ServiceCount.": "allOf",
+      "NamespaceSummary.ServiceCount..ResourceCount": "ref",
+      "NamespaceSummary.Properties.": "allOf",
+      "NamespaceSummary.Properties..NamespaceProperties": "ref",
+      "NamespaceSummary.CreateDate.": "allOf",
+      "NamespaceSummary.CreateDate..Timestamp": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationTargetsMap",
+    "properties": { "OperationTargetsMap": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationFilterName",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationFilter",
+    "properties": {
+      "OperationFilter": "object",
+      "OperationFilter.Name.": "allOf",
+      "OperationFilter.Name..OperationFilterName": "ref",
+      "OperationFilter.Values.": "allOf",
+      "OperationFilter.Values..FilterValues": "ref",
+      "OperationFilter.Condition.": "allOf",
+      "OperationFilter.Condition..FilterCondition": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationSummary",
+    "properties": {
+      "OperationSummary": "object",
+      "OperationSummary.Id.": "allOf",
+      "OperationSummary.Id..OperationId": "ref",
+      "OperationSummary.Status.": "allOf",
+      "OperationSummary.Status..OperationStatus": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationTargetType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsNamespacePropertiesChange",
+    "properties": {
+      "PrivateDnsNamespacePropertiesChange": "object",
+      "PrivateDnsNamespacePropertiesChange.DnsProperties.": "allOf",
+      "PrivateDnsNamespacePropertiesChange.DnsProperties..PrivateDnsPropertiesMutableChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsNamespaceChange",
+    "properties": {
+      "PrivateDnsNamespaceChange": "object",
+      "PrivateDnsNamespaceChange.Description.": "allOf",
+      "PrivateDnsNamespaceChange.Description..ResourceDescription": "ref",
+      "PrivateDnsNamespaceChange.Properties.": "allOf",
+      "PrivateDnsNamespaceChange.Properties..PrivateDnsNamespacePropertiesChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsPropertiesMutable",
+    "properties": {
+      "PrivateDnsPropertiesMutable": "object",
+      "PrivateDnsPropertiesMutable.SOA.": "allOf",
+      "PrivateDnsPropertiesMutable.SOA..SOA": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PrivateDnsPropertiesMutableChange",
+    "properties": {
+      "PrivateDnsPropertiesMutableChange": "object",
+      "PrivateDnsPropertiesMutableChange.SOA.": "allOf",
+      "PrivateDnsPropertiesMutableChange.SOA..SOAChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SOAChange",
+    "properties": {
+      "SOAChange": "object",
+      "SOAChange.TTL.": "allOf",
+      "SOAChange.TTL..RecordTTL": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsNamespacePropertiesChange",
+    "properties": {
+      "PublicDnsNamespacePropertiesChange": "object",
+      "PublicDnsNamespacePropertiesChange.DnsProperties.": "allOf",
+      "PublicDnsNamespacePropertiesChange.DnsProperties..PublicDnsPropertiesMutableChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsNamespaceChange",
+    "properties": {
+      "PublicDnsNamespaceChange": "object",
+      "PublicDnsNamespaceChange.Description.": "allOf",
+      "PublicDnsNamespaceChange.Description..ResourceDescription": "ref",
+      "PublicDnsNamespaceChange.Properties.": "allOf",
+      "PublicDnsNamespaceChange.Properties..PublicDnsNamespacePropertiesChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsPropertiesMutable",
+    "properties": {
+      "PublicDnsPropertiesMutable": "object",
+      "PublicDnsPropertiesMutable.SOA.": "allOf",
+      "PublicDnsPropertiesMutable.SOA..SOA": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PublicDnsPropertiesMutableChange",
+    "properties": {
+      "PublicDnsPropertiesMutableChange": "object",
+      "PublicDnsPropertiesMutableChange.SOA.": "allOf",
+      "PublicDnsPropertiesMutableChange.SOA..SOAChange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceChange",
+    "properties": {
+      "ServiceChange": "object",
+      "ServiceChange.Description.": "allOf",
+      "ServiceChange.Description..ResourceDescription": "ref",
+      "ServiceChange.DnsConfig.": "allOf",
+      "ServiceChange.DnsConfig..DnsConfigChange": "ref",
+      "ServiceChange.HealthCheckConfig.": "allOf",
+      "ServiceChange.HealthCheckConfig..HealthCheckConfig": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceFilterName",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceFilter",
+    "properties": {
+      "ServiceFilter": "object",
+      "ServiceFilter.Name.": "allOf",
+      "ServiceFilter.Name..ServiceFilterName": "ref",
+      "ServiceFilter.Values.": "allOf",
+      "ServiceFilter.Values..FilterValues": "ref",
+      "ServiceFilter.Condition.": "allOf",
+      "ServiceFilter.Condition..FilterCondition": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceSummary",
+    "properties": {
+      "ServiceSummary": "object",
+      "ServiceSummary.Id.": "allOf",
+      "ServiceSummary.Id..ResourceId": "ref",
+      "ServiceSummary.Arn.": "allOf",
+      "ServiceSummary.Arn..Arn": "ref",
+      "ServiceSummary.Name.": "allOf",
+      "ServiceSummary.Name..ServiceName": "ref",
+      "ServiceSummary.Type.": "allOf",
+      "ServiceSummary.Type..ServiceType": "ref",
+      "ServiceSummary.Description.": "allOf",
+      "ServiceSummary.Description..ResourceDescription": "ref",
+      "ServiceSummary.InstanceCount.": "allOf",
+      "ServiceSummary.InstanceCount..ResourceCount": "ref",
+      "ServiceSummary.DnsConfig.": "allOf",
+      "ServiceSummary.DnsConfig..DnsConfig": "ref",
+      "ServiceSummary.HealthCheckConfig.": "allOf",
+      "ServiceSummary.HealthCheckConfig..HealthCheckConfig": "ref",
+      "ServiceSummary.HealthCheckCustomConfig.": "allOf",
+      "ServiceSummary.HealthCheckCustomConfig..HealthCheckCustomConfig": "ref",
+      "ServiceSummary.CreateDate.": "allOf",
+      "ServiceSummary.CreateDate..Timestamp": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagKey",
+    "properties": { "TagKey": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagValue",
+    "properties": { "TagValue": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tag",
+    "properties": {
+      "Tag": "object",
+      "Tag.Key.": "allOf",
+      "Tag.Key..TagKey": "ref",
+      "Tag.Value.": "allOf",
+      "Tag.Value..TagValue": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagKeyList",
+    "properties": { "TagKeyList": "array", "TagKeyList.TagKey": "ref" }
+  }
+]

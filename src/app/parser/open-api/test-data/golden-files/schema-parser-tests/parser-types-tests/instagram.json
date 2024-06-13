@@ -1,0 +1,339 @@
+[
+  {
+    "schemaRef": "#/components/securitySchemes/api_key",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/instagram_auth",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CaptionData",
+    "properties": {
+      "CaptionData": "object",
+      "CaptionData.created_time.": "scaler",
+      "CaptionData.from.UserShortInfo": "ref",
+      "CaptionData.id.": "scaler",
+      "CaptionData.text.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CommentEntry",
+    "properties": {
+      "CommentEntry": "object",
+      "CommentEntry.created_time.": "scaler",
+      "CommentEntry.from.UserShortInfo": "ref",
+      "CommentEntry.id.": "scaler",
+      "CommentEntry.text.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CommentsCollection",
+    "properties": {
+      "CommentsCollection": "object",
+      "CommentsCollection.count.": "scaler",
+      "CommentsCollection.data.": "array",
+      "CommentsCollection.data..CommentEntry": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CommentsResponse",
+    "properties": {
+      "CommentsResponse": "object",
+      "CommentsResponse.data.": "array",
+      "CommentsResponse.data..CommentEntry": "ref",
+      "CommentsResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CursorPaginationInfo",
+    "properties": {
+      "CursorPaginationInfo": "object",
+      "CursorPaginationInfo.next_cursor.": "scaler",
+      "CursorPaginationInfo.next_url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/IdPaginationInfo",
+    "properties": {
+      "IdPaginationInfo": "object",
+      "IdPaginationInfo.next_max_id.": "scaler",
+      "IdPaginationInfo.next_url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageInfo",
+    "properties": {
+      "ImageInfo": "object",
+      "ImageInfo.height.": "scaler",
+      "ImageInfo.url.": "scaler",
+      "ImageInfo.width.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImagesData",
+    "properties": {
+      "ImagesData": "object",
+      "ImagesData.low_resolution.ImageInfo": "ref",
+      "ImagesData.standard_resolution.ImageInfo": "ref",
+      "ImagesData.thumbnail.ImageInfo": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LikesCollection",
+    "properties": {
+      "LikesCollection": "object",
+      "LikesCollection.count.": "scaler",
+      "LikesCollection.data.": "array",
+      "LikesCollection.data..UserShortInfo": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LocationInfo",
+    "properties": {
+      "LocationInfo": "object",
+      "LocationInfo.id.": "scaler",
+      "LocationInfo.latitude.": "scaler",
+      "LocationInfo.longitude.": "scaler",
+      "LocationInfo.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LocationInfoResponse",
+    "properties": {
+      "LocationInfoResponse": "object",
+      "LocationInfoResponse.data.LocationInfo": "ref",
+      "LocationInfoResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LocationSearchResponse",
+    "properties": {
+      "LocationSearchResponse": "object",
+      "LocationSearchResponse.data.": "array",
+      "LocationSearchResponse.data..LocationInfo": "ref",
+      "LocationSearchResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MediaEntry",
+    "properties": {
+      "MediaEntry": "object",
+      "MediaEntry.attribution.": "scaler",
+      "MediaEntry.caption.CaptionData": "ref",
+      "MediaEntry.comments.CommentsCollection": "ref",
+      "MediaEntry.created_time.": "scaler",
+      "MediaEntry.filter.": "scaler",
+      "MediaEntry.id.": "scaler",
+      "MediaEntry.images.ImagesData": "ref",
+      "MediaEntry.likes.LikesCollection": "ref",
+      "MediaEntry.link.": "scaler",
+      "MediaEntry.location.LocationInfo": "ref",
+      "MediaEntry.tags.": "array",
+      "MediaEntry.tags..": "scaler",
+      "__undefined_0": "scaler",
+      "MediaEntry.user.UserShortInfo": "ref",
+      "MediaEntry.user_has_liked.": "scaler",
+      "MediaEntry.users_in_photo.": "array",
+      "MediaEntry.users_in_photo..UserInPhoto": "ref",
+      "MediaEntry.videos.VideosData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MediaEntryResponse",
+    "properties": {
+      "MediaEntryResponse": "object",
+      "MediaEntryResponse.data.MediaEntry": "ref",
+      "MediaEntryResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MediaListResponse",
+    "properties": {
+      "MediaListResponse": "object",
+      "MediaListResponse.data.": "array",
+      "MediaListResponse.data..MediaEntry": "ref",
+      "MediaListResponse.meta.MetaData": "ref",
+      "MediaListResponse.pagination.IdPaginationInfo": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MediaSearchResponse",
+    "properties": {
+      "MediaSearchResponse": "object",
+      "MediaSearchResponse.data.": "array",
+      "MediaSearchResponse.data..MediaEntry": "ref",
+      "MediaSearchResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetaData",
+    "properties": { "MetaData": "object", "MetaData.code.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Position",
+    "properties": {
+      "Position": "object",
+      "Position.x.": "scaler",
+      "Position.y.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RelationshipInfo",
+    "properties": {
+      "RelationshipInfo": "object",
+      "__undefined_0": "scaler",
+      "RelationshipInfo.target_user_is_private.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RelationshipPostResponse",
+    "properties": {
+      "RelationshipPostResponse": "object",
+      "RelationshipPostResponse.data.RelationshipStatus": "ref",
+      "RelationshipPostResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RelationshipResponse",
+    "properties": {
+      "RelationshipResponse": "object",
+      "RelationshipResponse.data.RelationshipInfo": "ref",
+      "RelationshipResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RelationshipStatus",
+    "properties": { "RelationshipStatus": "object", "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StatusResponse",
+    "properties": {
+      "StatusResponse": "object",
+      "StatusResponse.data.": "scaler",
+      "StatusResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagInfo",
+    "properties": {
+      "TagInfo": "object",
+      "TagInfo.media_count.": "scaler",
+      "TagInfo.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagInfoResponse",
+    "properties": {
+      "TagInfoResponse": "object",
+      "TagInfoResponse.data.TagInfo": "ref",
+      "TagInfoResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagMediaListResponse",
+    "properties": {
+      "TagMediaListResponse": "object",
+      "TagMediaListResponse.data.": "array",
+      "TagMediaListResponse.data..MediaEntry": "ref",
+      "TagMediaListResponse.meta.MetaData": "ref",
+      "TagMediaListResponse.pagination.TagPaginationInfo": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagPaginationInfo",
+    "properties": {
+      "TagPaginationInfo": "object",
+      "TagPaginationInfo.deprecation_warning.": "scaler",
+      "TagPaginationInfo.min_tag_id.": "scaler",
+      "TagPaginationInfo.next_max_id.": "scaler",
+      "TagPaginationInfo.next_max_tag_id.": "scaler",
+      "TagPaginationInfo.next_min_id.": "scaler",
+      "TagPaginationInfo.next_url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagSearchResponse",
+    "properties": {
+      "TagSearchResponse": "object",
+      "TagSearchResponse.data.": "array",
+      "TagSearchResponse.data..TagInfo": "ref",
+      "TagSearchResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserCounts",
+    "properties": {
+      "UserCounts": "object",
+      "UserCounts.followed_by.": "scaler",
+      "UserCounts.follows.": "scaler",
+      "UserCounts.media.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserInPhoto",
+    "properties": {
+      "UserInPhoto": "object",
+      "UserInPhoto.position.Position": "ref",
+      "UserInPhoto.user.UserShortInfo": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserInfo",
+    "properties": {
+      "UserInfo": "object",
+      "UserInfo.bio.": "scaler",
+      "UserInfo.counts.UserCounts": "ref",
+      "UserInfo.full_name.": "scaler",
+      "UserInfo.id.": "scaler",
+      "UserInfo.profile_picture.": "scaler",
+      "UserInfo.username.": "scaler",
+      "UserInfo.website.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserResponse",
+    "properties": {
+      "UserResponse": "object",
+      "UserResponse.data.UserInfo": "ref",
+      "UserResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserShortInfo",
+    "properties": {
+      "UserShortInfo": "object",
+      "UserShortInfo.full_name.": "scaler",
+      "UserShortInfo.id.": "scaler",
+      "UserShortInfo.profile_picture.": "scaler",
+      "UserShortInfo.username.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UsersInfoResponse",
+    "properties": {
+      "UsersInfoResponse": "object",
+      "UsersInfoResponse.data.": "array",
+      "UsersInfoResponse.data..UserShortInfo": "ref",
+      "UsersInfoResponse.meta.MetaData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UsersPagingResponse",
+    "properties": {
+      "UsersPagingResponse": "object",
+      "UsersPagingResponse.data.": "array",
+      "UsersPagingResponse.data..UserShortInfo": "ref",
+      "UsersPagingResponse.meta.MetaData": "ref",
+      "UsersPagingResponse.pagination.CursorPaginationInfo": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VideosData",
+    "properties": {
+      "VideosData": "object",
+      "VideosData.low_resolution.ImageInfo": "ref",
+      "VideosData.standard_resolution.ImageInfo": "ref"
+    }
+  }
+]

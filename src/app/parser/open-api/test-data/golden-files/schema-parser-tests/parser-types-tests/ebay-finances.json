@@ -1,0 +1,275 @@
+[
+  {
+    "schemaRef": "#/components/schemas/Amount",
+    "properties": {
+      "Amount": "object",
+      "Amount.convertedFromCurrency.": "scaler",
+      "Amount.convertedFromValue.": "scaler",
+      "Amount.currency.": "scaler",
+      "Amount.exchangeRate.": "scaler",
+      "Amount.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BalanceAdjustment",
+    "properties": {
+      "BalanceAdjustment": "object",
+      "BalanceAdjustment.adjustmentAmount.Amount": "ref",
+      "BalanceAdjustment.adjustmentType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Buyer",
+    "properties": { "Buyer": "object", "Buyer.username.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Charge",
+    "properties": {
+      "Charge": "object",
+      "Charge.cancellationId.": "scaler",
+      "Charge.caseId.": "scaler",
+      "Charge.chargeNetAmount.Amount": "ref",
+      "Charge.inquiryId.": "scaler",
+      "Charge.orderId.": "scaler",
+      "Charge.paymentDisputeId.": "scaler",
+      "Charge.refundId.": "scaler",
+      "Charge.returnId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Error",
+    "properties": {
+      "Error": "object",
+      "Error.category.": "scaler",
+      "Error.domain.": "scaler",
+      "Error.errorId.": "scaler",
+      "Error.inputRefIds.": "array",
+      "Error.inputRefIds..": "scaler",
+      "Error.longMessage.": "scaler",
+      "Error.message.": "scaler",
+      "Error.outputRefIds.": "array",
+      "Error.outputRefIds..": "scaler",
+      "Error.parameters.": "array",
+      "Error.parameters..ErrorParameter": "ref",
+      "Error.subdomain.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorParameter",
+    "properties": {
+      "ErrorParameter": "object",
+      "ErrorParameter.name.": "scaler",
+      "ErrorParameter.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Fee",
+    "properties": {
+      "Fee": "object",
+      "Fee.amount.Amount": "ref",
+      "Fee.feeJurisdiction.FeeJurisdiction": "ref",
+      "Fee.feeMemo.": "scaler",
+      "Fee.feeType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FeeJurisdiction",
+    "properties": {
+      "FeeJurisdiction": "object",
+      "FeeJurisdiction.regionName.": "scaler",
+      "FeeJurisdiction.regionType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FundingSource",
+    "properties": {
+      "FundingSource": "object",
+      "FundingSource.brand.": "scaler",
+      "FundingSource.memo.": "scaler",
+      "FundingSource.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OrderLineItem",
+    "properties": {
+      "OrderLineItem": "object",
+      "OrderLineItem.feeBasisAmount.Amount": "ref",
+      "OrderLineItem.lineItemId.": "scaler",
+      "OrderLineItem.marketplaceFees.": "array",
+      "OrderLineItem.marketplaceFees..Fee": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Payout",
+    "properties": {
+      "Payout": "object",
+      "Payout.amount.Amount": "ref",
+      "Payout.bankReference.": "scaler",
+      "Payout.lastAttemptedPayoutDate.": "scaler",
+      "Payout.payoutDate.": "scaler",
+      "Payout.payoutId.": "scaler",
+      "Payout.payoutInstrument.PayoutInstrument": "ref",
+      "Payout.payoutMemo.": "scaler",
+      "Payout.payoutStatus.": "scaler",
+      "Payout.payoutStatusDescription.": "scaler",
+      "Payout.totalAmount.Amount": "ref",
+      "Payout.totalFee.Amount": "ref",
+      "Payout.transactionCount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PayoutInstrument",
+    "properties": {
+      "PayoutInstrument": "object",
+      "PayoutInstrument.accountLastFourDigits.": "scaler",
+      "PayoutInstrument.instrumentType.": "scaler",
+      "PayoutInstrument.nickname.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PayoutSummaryResponse",
+    "properties": {
+      "PayoutSummaryResponse": "object",
+      "PayoutSummaryResponse.amount.Amount": "ref",
+      "PayoutSummaryResponse.payoutCount.": "scaler",
+      "PayoutSummaryResponse.transactionCount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Payouts",
+    "properties": {
+      "Payouts": "object",
+      "Payouts.href.": "scaler",
+      "Payouts.limit.": "scaler",
+      "Payouts.next.": "scaler",
+      "Payouts.offset.": "scaler",
+      "Payouts.payouts.": "array",
+      "Payouts.payouts..Payout": "ref",
+      "Payouts.prev.": "scaler",
+      "Payouts.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Reference",
+    "properties": {
+      "Reference": "object",
+      "Reference.referenceId.": "scaler",
+      "Reference.referenceType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SellerFundsSummaryResponse",
+    "properties": {
+      "SellerFundsSummaryResponse": "object",
+      "SellerFundsSummaryResponse.availableFunds.Amount": "ref",
+      "SellerFundsSummaryResponse.fundsOnHold.Amount": "ref",
+      "SellerFundsSummaryResponse.processingFunds.Amount": "ref",
+      "SellerFundsSummaryResponse.totalFunds.Amount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Transaction",
+    "properties": {
+      "Transaction": "object",
+      "Transaction.amount.Amount": "ref",
+      "Transaction.bookingEntry.": "scaler",
+      "Transaction.buyer.Buyer": "ref",
+      "Transaction.eBayCollectedTaxAmount.Amount": "ref",
+      "Transaction.feeJurisdiction.FeeJurisdiction": "ref",
+      "Transaction.feeType.": "scaler",
+      "Transaction.orderId.": "scaler",
+      "Transaction.orderLineItems.": "array",
+      "Transaction.orderLineItems..OrderLineItem": "ref",
+      "Transaction.paymentsEntity.": "scaler",
+      "Transaction.payoutId.": "scaler",
+      "Transaction.references.": "array",
+      "Transaction.references..Reference": "ref",
+      "Transaction.salesRecordReference.": "scaler",
+      "Transaction.totalFeeAmount.Amount": "ref",
+      "Transaction.totalFeeBasisAmount.Amount": "ref",
+      "Transaction.transactionDate.": "scaler",
+      "Transaction.transactionId.": "scaler",
+      "Transaction.transactionMemo.": "scaler",
+      "Transaction.transactionStatus.": "scaler",
+      "Transaction.transactionType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TransactionSummaryResponse",
+    "properties": {
+      "TransactionSummaryResponse": "object",
+      "TransactionSummaryResponse.adjustmentAmount.Amount": "ref",
+      "TransactionSummaryResponse.adjustmentBookingEntry.": "scaler",
+      "TransactionSummaryResponse.adjustmentCount.": "scaler",
+      "TransactionSummaryResponse.balanceTransferAmount.Amount": "ref",
+      "TransactionSummaryResponse.balanceTransferBookingEntry.": "scaler",
+      "TransactionSummaryResponse.balanceTransferCount.": "scaler",
+      "TransactionSummaryResponse.creditAmount.Amount": "ref",
+      "TransactionSummaryResponse.creditBookingEntry.": "scaler",
+      "TransactionSummaryResponse.creditCount.": "scaler",
+      "TransactionSummaryResponse.disputeAmount.Amount": "ref",
+      "TransactionSummaryResponse.disputeBookingEntry.": "scaler",
+      "TransactionSummaryResponse.disputeCount.": "scaler",
+      "TransactionSummaryResponse.loanRepaymentAmount.Amount": "ref",
+      "TransactionSummaryResponse.loanRepaymentBookingEntry.": "scaler",
+      "TransactionSummaryResponse.loanRepaymentCount.": "scaler",
+      "TransactionSummaryResponse.nonSaleChargeAmount.Amount": "ref",
+      "TransactionSummaryResponse.nonSaleChargeBookingEntry.": "scaler",
+      "TransactionSummaryResponse.nonSaleChargeCount.": "scaler",
+      "TransactionSummaryResponse.onHoldAmount.Amount": "ref",
+      "TransactionSummaryResponse.onHoldBookingEntry.": "scaler",
+      "TransactionSummaryResponse.onHoldCount.": "scaler",
+      "TransactionSummaryResponse.refundAmount.Amount": "ref",
+      "TransactionSummaryResponse.refundBookingEntry.": "scaler",
+      "TransactionSummaryResponse.refundCount.": "scaler",
+      "TransactionSummaryResponse.shippingLabelAmount.Amount": "ref",
+      "TransactionSummaryResponse.shippingLabelBookingEntry.": "scaler",
+      "TransactionSummaryResponse.shippingLabelCount.": "scaler",
+      "TransactionSummaryResponse.transferAmount.Amount": "ref",
+      "TransactionSummaryResponse.transferBookingEntry.": "scaler",
+      "TransactionSummaryResponse.transferCount.": "scaler",
+      "TransactionSummaryResponse.withdrawalAmount.Amount": "ref",
+      "TransactionSummaryResponse.withdrawalBookingEntry.": "scaler",
+      "TransactionSummaryResponse.withdrawalCount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Transactions",
+    "properties": {
+      "Transactions": "object",
+      "Transactions.href.": "scaler",
+      "Transactions.limit.": "scaler",
+      "Transactions.next.": "scaler",
+      "Transactions.offset.": "scaler",
+      "Transactions.prev.": "scaler",
+      "Transactions.total.": "scaler",
+      "Transactions.transactions.": "array",
+      "Transactions.transactions..Transaction": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Transfer",
+    "properties": {
+      "Transfer": "object",
+      "Transfer.fundingSource.FundingSource": "ref",
+      "Transfer.transactionDate.": "scaler",
+      "Transfer.transferAmount.Amount": "ref",
+      "Transfer.transferDetail.TransferDetail": "ref",
+      "Transfer.transferId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TransferDetail",
+    "properties": {
+      "TransferDetail": "object",
+      "TransferDetail.balanceAdjustment.BalanceAdjustment": "ref",
+      "TransferDetail.charges.": "array",
+      "TransferDetail.charges..Charge": "ref",
+      "TransferDetail.totalChargeNetAmount.Amount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/api_auth",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

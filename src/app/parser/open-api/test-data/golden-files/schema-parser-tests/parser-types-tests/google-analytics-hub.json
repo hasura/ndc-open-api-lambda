@@ -1,0 +1,270 @@
+[
+  {
+    "schemaRef": "#/components/parameters/_.xgafv",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/access_token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/alt",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/callback",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/fields",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/key",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/oauth_token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/prettyPrint",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/quotaUser",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/uploadType",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/upload_protocol",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AuditConfig",
+    "properties": {
+      "AuditConfig": "object",
+      "AuditConfig.auditLogConfigs.": "array",
+      "AuditConfig.auditLogConfigs..AuditLogConfig": "ref",
+      "AuditConfig.service.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AuditLogConfig",
+    "properties": {
+      "AuditLogConfig": "object",
+      "AuditLogConfig.exemptedMembers.": "array",
+      "AuditLogConfig.exemptedMembers..": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BigQueryDatasetSource",
+    "properties": {
+      "BigQueryDatasetSource": "object",
+      "BigQueryDatasetSource.dataset.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Binding",
+    "properties": {
+      "Binding": "object",
+      "Binding.condition.Expr": "ref",
+      "Binding.members.": "array",
+      "Binding.members..": "scaler",
+      "Binding.role.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DataExchange",
+    "properties": {
+      "DataExchange": "object",
+      "DataExchange.description.": "scaler",
+      "DataExchange.displayName.": "scaler",
+      "DataExchange.documentation.": "scaler",
+      "DataExchange.icon.": "scaler",
+      "DataExchange.listingCount.": "scaler",
+      "DataExchange.name.": "scaler",
+      "DataExchange.primaryContact.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DataProvider",
+    "properties": {
+      "DataProvider": "object",
+      "DataProvider.name.": "scaler",
+      "DataProvider.primaryContact.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DestinationDataset",
+    "properties": {
+      "DestinationDataset": "object",
+      "DestinationDataset.datasetReference.DestinationDatasetReference": "ref",
+      "DestinationDataset.description.": "scaler",
+      "DestinationDataset.friendlyName.": "scaler",
+      "DestinationDataset.labels.": "primitive",
+      "DestinationDataset.location.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DestinationDatasetReference",
+    "properties": {
+      "DestinationDatasetReference": "object",
+      "DestinationDatasetReference.datasetId.": "scaler",
+      "DestinationDatasetReference.projectId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Empty",
+    "properties": { "Empty": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Expr",
+    "properties": {
+      "Expr": "object",
+      "Expr.description.": "scaler",
+      "Expr.expression.": "scaler",
+      "Expr.location.": "scaler",
+      "Expr.title.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetIamPolicyRequest",
+    "properties": {
+      "GetIamPolicyRequest": "object",
+      "GetIamPolicyRequest.options.GetPolicyOptions": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetPolicyOptions",
+    "properties": {
+      "GetPolicyOptions": "object",
+      "GetPolicyOptions.requestedPolicyVersion.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListDataExchangesResponse",
+    "properties": {
+      "ListDataExchangesResponse": "object",
+      "ListDataExchangesResponse.dataExchanges.": "array",
+      "ListDataExchangesResponse.dataExchanges..DataExchange": "ref",
+      "ListDataExchangesResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListListingsResponse",
+    "properties": {
+      "ListListingsResponse": "object",
+      "ListListingsResponse.listings.": "array",
+      "ListListingsResponse.listings..Listing": "ref",
+      "ListListingsResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListOrgDataExchangesResponse",
+    "properties": {
+      "ListOrgDataExchangesResponse": "object",
+      "ListOrgDataExchangesResponse.dataExchanges.": "array",
+      "ListOrgDataExchangesResponse.dataExchanges..DataExchange": "ref",
+      "ListOrgDataExchangesResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Listing",
+    "properties": {
+      "Listing": "object",
+      "Listing.bigqueryDataset.BigQueryDatasetSource": "ref",
+      "Listing.categories.": "array",
+      "__undefined_0": "scaler",
+      "Listing.dataProvider.DataProvider": "ref",
+      "Listing.description.": "scaler",
+      "Listing.displayName.": "scaler",
+      "Listing.documentation.": "scaler",
+      "Listing.icon.": "scaler",
+      "Listing.name.": "scaler",
+      "Listing.primaryContact.": "scaler",
+      "Listing.publisher.Publisher": "ref",
+      "Listing.requestAccess.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationMetadata",
+    "properties": {
+      "OperationMetadata": "object",
+      "OperationMetadata.apiVersion.": "scaler",
+      "OperationMetadata.cancelRequested.": "scaler",
+      "OperationMetadata.createTime.": "scaler",
+      "OperationMetadata.endTime.": "scaler",
+      "OperationMetadata.statusDetail.": "scaler",
+      "OperationMetadata.target.": "scaler",
+      "OperationMetadata.verb.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Policy",
+    "properties": {
+      "Policy": "object",
+      "Policy.auditConfigs.": "array",
+      "Policy.auditConfigs..AuditConfig": "ref",
+      "Policy.bindings.": "array",
+      "Policy.bindings..Binding": "ref",
+      "Policy.etag.": "scaler",
+      "Policy.version.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Publisher",
+    "properties": {
+      "Publisher": "object",
+      "Publisher.name.": "scaler",
+      "Publisher.primaryContact.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SetIamPolicyRequest",
+    "properties": {
+      "SetIamPolicyRequest": "object",
+      "SetIamPolicyRequest.policy.Policy": "ref",
+      "SetIamPolicyRequest.updateMask.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SubscribeListingRequest",
+    "properties": {
+      "SubscribeListingRequest": "object",
+      "SubscribeListingRequest.destinationDataset.DestinationDataset": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SubscribeListingResponse",
+    "properties": { "SubscribeListingResponse": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TestIamPermissionsRequest",
+    "properties": {
+      "TestIamPermissionsRequest": "object",
+      "TestIamPermissionsRequest.permissions.": "array",
+      "TestIamPermissionsRequest.permissions..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TestIamPermissionsResponse",
+    "properties": {
+      "TestIamPermissionsResponse": "object",
+      "TestIamPermissionsResponse.permissions.": "array",
+      "TestIamPermissionsResponse.permissions..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2c",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

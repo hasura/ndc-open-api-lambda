@@ -1,0 +1,582 @@
+[
+  {
+    "schemaRef": "#/components/headers/CorrelationID",
+    "properties": { "__undefined_0": "schema", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/headers/RequestID",
+    "properties": { "__undefined_0": "schema", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/Confidence",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/ContentEncoding",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/CorrelationID",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/Desired",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "__undefined_1": "array",
+      "__undefined_2": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/Fallback",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "__undefined_1": "array",
+      "__undefined_2": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/RequestID",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/Required",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "__undefined_1": "array",
+      "__undefined_2": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error400",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error401",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error403",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error405",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error413",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error414",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error415",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error500",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/Error503",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/SuccessLocate",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "object",
+      "postLocate.SuccessLocate.location.PositionLocate": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ApiHealthStatus",
+    "properties": {
+      "ApiHealthStatus": "object",
+      "ApiHealthStatus.status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ApiVersion",
+    "properties": {
+      "ApiVersion": "object",
+      "ApiVersion.apiVersion.": "scaler",
+      "ApiVersion.serviceVersion.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AuthError",
+    "properties": {
+      "AuthError": "object",
+      "AuthError.error.": "scaler",
+      "AuthError.error_description.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BaseLat",
+    "properties": { "BaseLat": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BaseLng",
+    "properties": { "BaseLng": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Bcch",
+    "properties": { "Bcch": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Bsic",
+    "properties": { "Bsic": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Bsid",
+    "properties": { "Bsid": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Cdma",
+    "properties": {
+      "Cdma": "object",
+      "Cdma.baseLat.BaseLat": "ref",
+      "Cdma.baseLng.BaseLng": "ref",
+      "Cdma.bsid.Bsid": "ref",
+      "Cdma.localId.CdmaLocalId": "ref",
+      "Cdma.nid.Nid": "ref",
+      "Cdma.nmr.CdmaNmrArray": "ref",
+      "Cdma.pilotPower.PilotPower": "ref",
+      "Cdma.rz.RegistrationZone": "ref",
+      "Cdma.sid.Sid": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CdmaLocalId",
+    "properties": {
+      "CdmaLocalId": "object",
+      "CdmaLocalId.channel.Channel": "ref",
+      "CdmaLocalId.pnOffset.PnOffset": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CdmaNmr",
+    "properties": {
+      "CdmaNmr": "object",
+      "CdmaNmr.bsid.Bsid": "ref",
+      "CdmaNmr.channel.Channel": "ref",
+      "CdmaNmr.pilotPower.PilotPower": "ref",
+      "CdmaNmr.pnOffset.PnOffset": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CdmaNmrArray",
+    "properties": { "CdmaNmrArray": "array", "CdmaNmrArray.CdmaNmr": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CellParams",
+    "properties": { "CellParams": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Channel",
+    "properties": { "Channel": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientInfo",
+    "properties": {
+      "ClientInfo": "object",
+      "ClientInfo.firmware.": "scaler",
+      "ClientInfo.manufacturer.": "scaler",
+      "ClientInfo.model.": "scaler",
+      "ClientInfo.name.": "scaler",
+      "ClientInfo.platform.": "scaler",
+      "ClientInfo.version.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Earfcn",
+    "properties": { "Earfcn": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Error",
+    "properties": {
+      "Error": "object",
+      "Error.action.": "scaler",
+      "Error.cause.": "scaler",
+      "Error.code.": "scaler",
+      "Error.correlationId.": "scaler",
+      "Error.details.": "array",
+      "Error.details..ErrorDetail": "ref",
+      "Error.status.": "scaler",
+      "Error.title.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorDetail",
+    "properties": {
+      "ErrorDetail": "object",
+      "ErrorDetail.message.": "scaler",
+      "ErrorDetail.messagePlaceholders.": "primitive",
+      "ErrorDetail.messageTemplate.": "scaler",
+      "ErrorDetail.source.": "scaler",
+      "ErrorDetail.title.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EutranCid",
+    "properties": { "EutranCid": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/EutranCidNmr",
+    "properties": { "EutranCidNmr": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/GeranCid",
+    "properties": { "GeranCid": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Gsm",
+    "properties": {
+      "Gsm": "object",
+      "Gsm.cid.GeranCid": "ref",
+      "Gsm.lac.Lac": "ref",
+      "Gsm.localId.GsmLocalId": "ref",
+      "Gsm.mcc.Mcc": "ref",
+      "Gsm.mnc.Mnc": "ref",
+      "Gsm.nmr.GsmNmrArray": "ref",
+      "Gsm.rxLevel.RxLevel": "ref",
+      "Gsm.ta.GsmTimingAdvance": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GsmLocalId",
+    "properties": {
+      "GsmLocalId": "object",
+      "GsmLocalId.bcch.Bcch": "ref",
+      "GsmLocalId.bsic.Bsic": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GsmNmr",
+    "properties": {
+      "GsmNmr": "object",
+      "GsmNmr.bcch.Bcch": "ref",
+      "GsmNmr.bsic.Bsic": "ref",
+      "GsmNmr.globalIdentity.GsmNmrGlobalId": "ref",
+      "GsmNmr.rxLevel.RxLevel": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GsmNmrArray",
+    "properties": { "GsmNmrArray": "array", "GsmNmrArray.GsmNmr": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/GsmNmrGlobalId",
+    "properties": {
+      "GsmNmrGlobalId": "object",
+      "GsmNmrGlobalId.cid.GeranCid": "ref",
+      "GsmNmrGlobalId.lac.Lac": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GsmTimingAdvance",
+    "properties": { "GsmTimingAdvance": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Lac",
+    "properties": { "Lac": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Latitude",
+    "properties": { "Latitude": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Locate",
+    "properties": {
+      "Locate": "object",
+      "Locate.cdma.": "array",
+      "Locate.cdma..Cdma": "ref",
+      "Locate.client.ClientInfo": "ref",
+      "Locate.gsm.": "array",
+      "Locate.gsm..Gsm": "ref",
+      "Locate.lte.": "array",
+      "Locate.lte..Lte": "ref",
+      "Locate.tdscdma.": "array",
+      "Locate.tdscdma..Tdscdma": "ref",
+      "Locate.wcdma.": "array",
+      "Locate.wcdma..Wcdma": "ref",
+      "Locate.wlan.": "array",
+      "Locate.wlan..WlanLocate": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Longitude",
+    "properties": { "Longitude": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Lte",
+    "properties": {
+      "Lte": "object",
+      "Lte.cid.EutranCid": "ref",
+      "Lte.localId.LteLocalId": "ref",
+      "Lte.mcc.Mcc": "ref",
+      "Lte.mnc.Mnc": "ref",
+      "Lte.nmr.LteNmrArray": "ref",
+      "Lte.rsrp.Rsrp": "ref",
+      "Lte.rsrq.Rsrq": "ref",
+      "Lte.ta.LteTimingAdvance": "ref",
+      "Lte.tac.Tac": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LteLocalId",
+    "properties": {
+      "LteLocalId": "object",
+      "LteLocalId.earfcn.Earfcn": "ref",
+      "LteLocalId.pci.Pci": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LteNmr",
+    "properties": {
+      "LteNmr": "object",
+      "LteNmr.cid.EutranCid": "ref",
+      "LteNmr.earfcn.Earfcn": "ref",
+      "LteNmr.pci.Pci": "ref",
+      "LteNmr.rsrp.Rsrp": "ref",
+      "LteNmr.rsrq.Rsrq": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LteNmrArray",
+    "properties": { "LteNmrArray": "array", "LteNmrArray.LteNmr": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LteTimingAdvance",
+    "properties": { "LteTimingAdvance": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Mcc",
+    "properties": { "Mcc": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Mnc",
+    "properties": { "Mnc": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Nid",
+    "properties": { "Nid": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Pathloss",
+    "properties": { "Pathloss": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Pci",
+    "properties": { "Pci": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PilotPower",
+    "properties": { "PilotPower": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PnOffset",
+    "properties": { "PnOffset": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PositionLocate",
+    "properties": {
+      "PositionLocate": "object",
+      "PositionLocate.accuracy.": "scaler",
+      "PositionLocate.alt.": "scaler",
+      "PositionLocate.altAccuracy.": "scaler",
+      "PositionLocate.lat.Latitude": "ref",
+      "PositionLocate.lng.Longitude": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Psc",
+    "properties": { "Psc": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RegistrationZone",
+    "properties": { "RegistrationZone": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Rscp",
+    "properties": { "Rscp": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Rsrp",
+    "properties": { "Rsrp": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Rsrq",
+    "properties": { "Rsrq": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Rss",
+    "properties": { "Rss": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RxLevel",
+    "properties": { "RxLevel": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Sid",
+    "properties": { "Sid": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tac",
+    "properties": { "Tac": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tdscdma",
+    "properties": {
+      "Tdscdma": "object",
+      "Tdscdma.cid.UtranCid": "ref",
+      "Tdscdma.lac.Lac": "ref",
+      "Tdscdma.localId.TdscdmaLocalId": "ref",
+      "Tdscdma.mcc.Mcc": "ref",
+      "Tdscdma.mnc.Mnc": "ref",
+      "Tdscdma.nmr.TdscdmaNmrArray": "ref",
+      "Tdscdma.pathloss.Pathloss": "ref",
+      "Tdscdma.rscp.Rscp": "ref",
+      "Tdscdma.ta.TdscdmaTimingAdvance": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TdscdmaLocalId",
+    "properties": {
+      "TdscdmaLocalId": "object",
+      "TdscdmaLocalId.cellParams.CellParams": "ref",
+      "TdscdmaLocalId.uarfcn.Uarfcn": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TdscdmaNmr",
+    "properties": {
+      "TdscdmaNmr": "object",
+      "TdscdmaNmr.cellParams.CellParams": "ref",
+      "TdscdmaNmr.cid.UtranCid": "ref",
+      "TdscdmaNmr.pathloss.Pathloss": "ref",
+      "TdscdmaNmr.rscp.Rscp": "ref",
+      "TdscdmaNmr.uarfcn.Uarfcn": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TdscdmaNmrArray",
+    "properties": {
+      "TdscdmaNmrArray": "array",
+      "TdscdmaNmrArray.TdscdmaNmr": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TdscdmaTimingAdvance",
+    "properties": { "TdscdmaTimingAdvance": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Uarfcn",
+    "properties": { "Uarfcn": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Uarfcndl",
+    "properties": { "Uarfcndl": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UtranCid",
+    "properties": { "UtranCid": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UtranCidNmr",
+    "properties": { "UtranCidNmr": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Wcdma",
+    "properties": {
+      "Wcdma": "object",
+      "Wcdma.cid.UtranCid": "ref",
+      "Wcdma.lac.Lac": "ref",
+      "Wcdma.localId.WcdmaLocalId": "ref",
+      "Wcdma.mcc.Mcc": "ref",
+      "Wcdma.mnc.Mnc": "ref",
+      "Wcdma.nmr.WcdmaNmrArray": "ref",
+      "Wcdma.pathloss.Pathloss": "ref",
+      "Wcdma.rscp.Rscp": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WcdmaLocalId",
+    "properties": {
+      "WcdmaLocalId": "object",
+      "WcdmaLocalId.psc.Psc": "ref",
+      "WcdmaLocalId.uarfcndl.Uarfcndl": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WcdmaNmr",
+    "properties": {
+      "WcdmaNmr": "object",
+      "WcdmaNmr.cid.UtranCid": "ref",
+      "WcdmaNmr.pathloss.Pathloss": "ref",
+      "WcdmaNmr.psc.Psc": "ref",
+      "WcdmaNmr.rscp.Rscp": "ref",
+      "WcdmaNmr.uarfcndl.Uarfcndl": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WcdmaNmrArray",
+    "properties": { "WcdmaNmrArray": "array", "WcdmaNmrArray.WcdmaNmr": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WlanLocate",
+    "properties": {
+      "WlanLocate": "object",
+      "WlanLocate.mac.": "scaler",
+      "WlanLocate.rss.Rss": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/APIKey",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/AccessToken",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

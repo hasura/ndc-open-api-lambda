@@ -1,0 +1,669 @@
+[
+  {
+    "schemaRef": "#/components/parameters/baumuster4prefixParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/baumusterParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/bodyId",
+    "properties": { "__undefined_0": "rawArg", "BodyGetParams.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/bodyIdParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/classId",
+    "properties": { "__undefined_0": "rawArg", "ClassGetParams.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/classIdParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/componentCode",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "ImageComponentsEquipmentsByCodeGetParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/componentList",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "ModelConfigurationAlternativesGetParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/componentTypes",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "__undefined_1": "array",
+      "__undefined_2": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/configurationId",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "ModelConfigurationGetParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/countryParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/fieldsFilter",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "__undefined_1": "array",
+      "MarketsGetParams..fieldsFilter..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/languageParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/marketId",
+    "properties": { "__undefined_0": "rawArg", "MarketGetParams.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/modelId",
+    "properties": { "__undefined_0": "rawArg", "ModelGetParams.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/nationalSalesTypeParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/night",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/onlineCode",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "OnlineCodeGetParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/perspectives",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/productGroups",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "__undefined_1": "array",
+      "__undefined_2": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/roofOpen",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AllEquipmentImagesResponse",
+    "properties": {
+      "AllEquipmentImagesResponse": "object",
+      "AllEquipmentImagesResponse.equipments.EquipmentImageMap": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Amount",
+    "properties": {
+      "Amount": "object",
+      "Amount.unit.": "scaler",
+      "Amount.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CodeImage",
+    "properties": {
+      "CodeImage": "object",
+      "CodeImage.code.": "scaler",
+      "CodeImage.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ComponentsImages",
+    "properties": {
+      "ComponentsImages": "object",
+      "ComponentsImages.engine.ImageUrl": "ref",
+      "ComponentsImages.equipments.EquipmentImageMap": "ref",
+      "ComponentsImages.paint.PaintsImages": "ref",
+      "ComponentsImages.rim.CodeImage": "ref",
+      "ComponentsImages.trim.CodeImage": "ref",
+      "ComponentsImages.upholstery.CodeImage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ComponentsImagesResponse",
+    "properties": {
+      "ComponentsImagesResponse": "object",
+      "ComponentsImagesResponse.components.ComponentsImages": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DriveConcept",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Engine",
+    "properties": {
+      "Engine": "object",
+      "Engine.alternativeFuelType.FuelType": "ref",
+      "Engine.capacity.Amount": "ref",
+      "Engine.cylinder.": "scaler",
+      "Engine.driveConcept.DriveConcept": "ref",
+      "Engine.emissionStandard.": "scaler",
+      "Engine.engineConcept.EngineConcept": "ref",
+      "Engine.fuelEconomy.FuelEconomy": "ref",
+      "Engine.fuelType.FuelType": "ref",
+      "Engine.powerHp.Amount": "ref",
+      "Engine.powerHybridExtensionHp.Amount": "ref",
+      "Engine.powerHybridExtensionKw.Amount": "ref",
+      "Engine.powerKw.Amount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EngineConcept",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/EngineImageResponse",
+    "properties": {
+      "EngineImageResponse": "object",
+      "EngineImageResponse.engine.ImageUrl": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EquipmentImageMap",
+    "properties": { "EquipmentImageMap": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/EquipmentImageResponse",
+    "properties": {
+      "EquipmentImageResponse": "object",
+      "EquipmentImageResponse.equipment.ImageUrl": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FuelEconomy",
+    "properties": {
+      "FuelEconomy": "object",
+      "FuelEconomy.consumptionOfElectricityMax.Amount": "ref",
+      "FuelEconomy.consumptionOfElectricityMin.Amount": "ref",
+      "FuelEconomy.emissionCO2Max.Amount": "ref",
+      "FuelEconomy.emissionCO2Min.Amount": "ref",
+      "FuelEconomy.fuelConsumptionCityMax.Amount": "ref",
+      "FuelEconomy.fuelConsumptionCityMin.Amount": "ref",
+      "FuelEconomy.fuelConsumptionCombinedMax.Amount": "ref",
+      "FuelEconomy.fuelConsumptionCombinedMin.Amount": "ref",
+      "FuelEconomy.fuelConsumptionElectricity.Amount": "ref",
+      "FuelEconomy.fuelConsumptionOverlandMax.Amount": "ref",
+      "FuelEconomy.fuelConsumptionOverlandMin.Amount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FuelType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HRef",
+    "properties": { "HRef": "object", "HRef.href.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageComponentLink",
+    "properties": {
+      "ImageComponentLink": "object",
+      "ImageComponentLink.imageapi_component.HRef": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageError",
+    "properties": {
+      "ImageError": "object",
+      "ImageError.code.": "scaler",
+      "ImageError.message.": "scaler",
+      "ImageError.uuid.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageUrl",
+    "properties": { "ImageUrl": "object", "ImageUrl.url.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageUrlWithError",
+    "properties": {
+      "ImageUrlWithError": "object",
+      "ImageUrlWithError.error.ImageError": "ref",
+      "ImageUrlWithError.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Market",
+    "properties": {
+      "Market": "object",
+      "Market._links.SelfReferencesLinks": "ref",
+      "Market.country.": "scaler",
+      "Market.language.": "scaler",
+      "Market.marketId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Nedc",
+    "properties": {
+      "Nedc": "object",
+      "Nedc.consumption.NedcConsumption": "ref",
+      "Nedc.electricRange.NedcAmount": "ref",
+      "Nedc.emission.NedcEmission": "ref",
+      "Nedc.weight.NedcAmount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NedcAmount",
+    "properties": {
+      "NedcAmount": "object",
+      "NedcAmount.individual.Amount": "ref",
+      "NedcAmount.max.Amount": "ref",
+      "NedcAmount.min.Amount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NedcConsumption",
+    "properties": {
+      "NedcConsumption": "object",
+      "NedcConsumption.city.NedcGear": "ref",
+      "NedcConsumption.combined.NedcGear": "ref",
+      "NedcConsumption.country.NedcGear": "ref",
+      "NedcConsumption.electric.NedcAmount": "ref",
+      "NedcConsumption.weighted.NedcGear": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NedcEmission",
+    "properties": {
+      "NedcEmission": "object",
+      "NedcEmission.city.NedcGear": "ref",
+      "NedcEmission.combined.NedcGear": "ref",
+      "NedcEmission.country.NedcGear": "ref",
+      "NedcEmission.weighted.NedcAmount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NedcGear",
+    "properties": {
+      "NedcGear": "object",
+      "NedcGear.primaryGear.NedcAmount": "ref",
+      "NedcGear.secondaryGear.NedcAmount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OnlineCodeRequestBody",
+    "properties": {
+      "OnlineCodeRequestBody": "object",
+      "OnlineCodeRequestBody.configurationId.": "scaler",
+      "OnlineCodeRequestBody.modelId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OnlineCodeResponseBody",
+    "properties": {
+      "OnlineCodeResponseBody": "object",
+      "OnlineCodeResponseBody.onlineCode.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PaintImageResponse",
+    "properties": {
+      "PaintImageResponse": "object",
+      "PaintImageResponse.paint.PaintsImages": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PaintsImages",
+    "properties": {
+      "PaintsImages": "object",
+      "PaintsImages.paint1.CodeImage": "ref",
+      "PaintsImages.paint2.CodeImage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PriceInformation",
+    "properties": {
+      "PriceInformation": "object",
+      "PriceInformation.currency.": "scaler",
+      "PriceInformation.instalmentPrice.": "scaler",
+      "PriceInformation.netPrice.": "scaler",
+      "PriceInformation.price.": "scaler",
+      "PriceInformation.taxes.": "array",
+      "PriceInformation.taxes..Tax": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ProductGroup",
+    "properties": { "__undefined_0": "object", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ProductGroupsPerMarket",
+    "properties": {
+      "ProductGroupsPerMarket": "object",
+      "ProductGroupsPerMarket._links.SelfModelLinks": "ref",
+      "ProductGroupsPerMarket.market.Market": "ref",
+      "ProductGroupsPerMarket.productGroups.": "array",
+      "ProductGroupsPerMarket.productGroups..ProductGroup": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RimImageResponse",
+    "properties": {
+      "RimImageResponse": "object",
+      "RimImageResponse.rim.CodeImage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SelfConfigurationLinks",
+    "properties": {
+      "SelfConfigurationLinks": "object",
+      "SelfConfigurationLinks.configuration.HRef": "ref",
+      "SelfConfigurationLinks.self.HRef": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SelfLink",
+    "properties": { "SelfLink": "object", "SelfLink.self.HRef": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SelfModelLinks",
+    "properties": {
+      "SelfModelLinks": "object",
+      "SelfModelLinks.models.HRef": "ref",
+      "SelfModelLinks.self.HRef": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SelfReferencesLinks",
+    "properties": {
+      "SelfReferencesLinks": "object",
+      "SelfReferencesLinks.bodies.HRef": "ref",
+      "SelfReferencesLinks.classes.HRef": "ref",
+      "SelfReferencesLinks.models.HRef": "ref",
+      "SelfReferencesLinks.productgroups.HRef": "ref",
+      "SelfReferencesLinks.self.HRef": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SelfSelectablesImageVehicleLinks",
+    "properties": {
+      "SelfSelectablesImageVehicleLinks": "object",
+      "SelfSelectablesImageVehicleLinks.imageapi_vehicle.HRef": "ref",
+      "SelfSelectablesImageVehicleLinks.selectables.HRef": "ref",
+      "SelfSelectablesImageVehicleLinks.self.HRef": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tax",
+    "properties": {
+      "Tax": "object",
+      "Tax.amount.": "scaler",
+      "Tax.baseAmount.": "scaler",
+      "Tax.charge.": "scaler",
+      "Tax.id.": "scaler",
+      "Tax.rate.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TechnicalInformation",
+    "properties": {
+      "TechnicalInformation": "object",
+      "TechnicalInformation.acceleration.Amount": "ref",
+      "TechnicalInformation.doors.": "scaler",
+      "TechnicalInformation.energyEfficiencyClass.": "scaler",
+      "TechnicalInformation.engine.Engine": "ref",
+      "TechnicalInformation.nedc.Nedc": "ref",
+      "TechnicalInformation.seats.": "scaler",
+      "TechnicalInformation.topSpeed.Amount": "ref",
+      "TechnicalInformation.transmission.Transmission": "ref",
+      "TechnicalInformation.wltp.Wltp": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Transmission",
+    "properties": {
+      "Transmission": "object",
+      "Transmission.code.": "scaler",
+      "Transmission.codeType.": "scaler",
+      "Transmission.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TrimImageResponse",
+    "properties": {
+      "TrimImageResponse": "object",
+      "TrimImageResponse.trim.CodeImage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpholsteryImageResponse",
+    "properties": {
+      "UpholsteryImageResponse": "object",
+      "UpholsteryImageResponse.upholstery.CodeImage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleAlternative",
+    "properties": {
+      "VehicleAlternative": "object",
+      "VehicleAlternative._links.SelfSelectablesImageVehicleLinks": "ref",
+      "VehicleAlternative.addedComponents.": "array",
+      "VehicleAlternative.addedComponents..VehicleComponent": "ref",
+      "VehicleAlternative.configurationId.": "scaler",
+      "VehicleAlternative.marketId.": "scaler",
+      "VehicleAlternative.modelId.": "scaler",
+      "VehicleAlternative.priceInformation.": "primitive",
+      "VehicleAlternative.removedComponents.": "array",
+      "VehicleAlternative.removedComponents..VehicleComponent": "ref",
+      "VehicleAlternative.updatedComponents.": "array",
+      "VehicleAlternative.updatedComponents..VehicleComponent": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleBody",
+    "properties": {
+      "VehicleBody": "object",
+      "VehicleBody._links.SelfModelLinks": "ref",
+      "VehicleBody.bodyId.": "scaler",
+      "VehicleBody.bodyName.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleClass",
+    "properties": {
+      "VehicleClass": "object",
+      "VehicleClass._links.SelfModelLinks": "ref",
+      "VehicleClass.classId.": "scaler",
+      "VehicleClass.className.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleComponent",
+    "properties": {
+      "VehicleComponent": "object",
+      "VehicleComponent._links.ImageComponentLink": "ref",
+      "VehicleComponent.code.": "scaler",
+      "VehicleComponent.codeType.": "scaler",
+      "VehicleComponent.componentSortId.": "scaler",
+      "VehicleComponent.componentType.VehicleComponentType": "ref",
+      "VehicleComponent.description.": "scaler",
+      "VehicleComponent.fixed.": "scaler",
+      "VehicleComponent.hidden.": "scaler",
+      "VehicleComponent.id.": "scaler",
+      "VehicleComponent.name.": "scaler",
+      "VehicleComponent.priceInformation.PriceInformation": "ref",
+      "VehicleComponent.pseudoCode.": "scaler",
+      "VehicleComponent.selected.": "scaler",
+      "VehicleComponent.standard.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleComponentCategory",
+    "properties": {
+      "VehicleComponentCategory": "object",
+      "VehicleComponentCategory.cardinality.VehicleComponentCategoryCardinality": "ref",
+      "VehicleComponentCategory.categoryId.": "scaler",
+      "VehicleComponentCategory.categoryName.": "scaler",
+      "VehicleComponentCategory.categorySortId.": "scaler",
+      "VehicleComponentCategory.componentIds.": "array",
+      "VehicleComponentCategory.componentIds..VehicleComponentId": "ref",
+      "VehicleComponentCategory.subcategories.": "array",
+      "VehicleComponentCategory.subcategories..VehicleComponentCategory": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleComponentCategoryCardinality",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleComponentId",
+    "properties": {
+      "VehicleComponentId": "object",
+      "VehicleComponentId.componentId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleComponentTree",
+    "properties": {
+      "VehicleComponentTree": "object",
+      "VehicleComponentTree._links.SelfLink": "ref",
+      "VehicleComponentTree.componentCategories.": "array",
+      "VehicleComponentTree.componentCategories..VehicleComponentCategory": "ref",
+      "VehicleComponentTree.vehicleComponents.": "object",
+      "VehicleComponentTree.vehicleComponents..componentId.VehicleComponent": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleComponentType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleConfiguration",
+    "properties": {
+      "VehicleConfiguration": "object",
+      "VehicleConfiguration._links.SelfSelectablesImageVehicleLinks": "ref",
+      "VehicleConfiguration.changeYear.": "scaler",
+      "VehicleConfiguration.configurationId.": "scaler",
+      "VehicleConfiguration.configurationPrice.PriceInformation": "ref",
+      "VehicleConfiguration.initialPrice.PriceInformation": "ref",
+      "VehicleConfiguration.marketId.": "scaler",
+      "VehicleConfiguration.modelId.": "scaler",
+      "VehicleConfiguration.modelYear.": "scaler",
+      "VehicleConfiguration.technicalInformation.TechnicalInformation": "ref",
+      "VehicleConfiguration.vehicleComponents.": "array",
+      "VehicleConfiguration.vehicleComponents..VehicleComponent": "ref",
+      "VehicleConfiguration.wltpConfiguration.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleImageResponse",
+    "properties": {
+      "VehicleImageResponse": "object",
+      "VehicleImageResponse.vehicle.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleModel",
+    "properties": {
+      "VehicleModel": "object",
+      "VehicleModel._links.SelfConfigurationLinks": "ref",
+      "VehicleModel.baumuster.": "scaler",
+      "VehicleModel.modelId.": "scaler",
+      "VehicleModel.name.": "scaler",
+      "VehicleModel.nationalSalesType.": "scaler",
+      "VehicleModel.priceInformation.PriceInformation": "ref",
+      "VehicleModel.productGroup.ProductGroup": "ref",
+      "VehicleModel.shortName.": "scaler",
+      "VehicleModel.vehicleBody.VehicleBody": "ref",
+      "VehicleModel.vehicleClass.VehicleClass": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Wltp",
+    "properties": {
+      "Wltp": "object",
+      "Wltp.consumption.WltpConsumption": "ref",
+      "Wltp.emission.WltpEmission": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WltpAmount",
+    "properties": {
+      "WltpAmount": "object",
+      "WltpAmount.individual.Amount": "ref",
+      "WltpAmount.max.Amount": "ref",
+      "WltpAmount.min.Amount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WltpConsumption",
+    "properties": {
+      "WltpConsumption": "object",
+      "WltpConsumption.chargeDeplete.WltpGear": "ref",
+      "WltpConsumption.chargeDepleteCop.WltpGear": "ref",
+      "WltpConsumption.extraHigh.WltpGear": "ref",
+      "WltpConsumption.high.WltpGear": "ref",
+      "WltpConsumption.low.WltpGear": "ref",
+      "WltpConsumption.medium.WltpGear": "ref",
+      "WltpConsumption.total.WltpGear": "ref",
+      "WltpConsumption.weighted.WltpGear": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WltpElectricRange",
+    "properties": {
+      "WltpElectricRange": "object",
+      "WltpElectricRange.all.WltpAmount": "ref",
+      "WltpElectricRange.equivalentAll.WltpAmount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WltpEmission",
+    "properties": {
+      "WltpEmission": "object",
+      "WltpEmission.chargeDeplete.WltpGear": "ref",
+      "WltpEmission.chargeDepleteCop.WltpGear": "ref",
+      "WltpEmission.chargeDepleteWeighted.WltpGear": "ref",
+      "WltpEmission.extraHigh.WltpGear": "ref",
+      "WltpEmission.high.WltpGear": "ref",
+      "WltpEmission.low.WltpGear": "ref",
+      "WltpEmission.lowMid.WltpGear": "ref",
+      "WltpEmission.medium.WltpGear": "ref",
+      "WltpEmission.total.WltpGear": "ref",
+      "WltpEmission.weighted.WltpGear": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WltpGear",
+    "properties": {
+      "WltpGear": "object",
+      "WltpGear.primaryGear.WltpAmount": "ref",
+      "WltpGear.secondaryGear.WltpAmount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WltpRange",
+    "properties": {
+      "WltpRange": "object",
+      "WltpRange.high.WltpElectricRange": "ref",
+      "WltpRange.low.WltpElectricRange": "ref",
+      "WltpRange.lowMid.WltpElectricRange": "ref",
+      "WltpRange.medium.WltpElectricRange": "ref",
+      "WltpRange.total.WltpElectricRange": "ref"
+    }
+  }
+]

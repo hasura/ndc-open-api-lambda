@@ -1,0 +1,267 @@
+[
+  {
+    "schemaRef": "#/components/parameters/api-version",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/componentId",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "ComponentsGetParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/monitorId",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/monitorInstanceId",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "MonitorInstancesGetParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/notificationSettingName",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/_apply",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/_expand",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/_filter",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/_orderby",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/_select",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/_skiptoken",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/_top",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/azure_auth",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Component",
+    "properties": {
+      "Component": "object",
+      "Component..etag.": "scaler",
+      "Component..properties.ComponentProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ComponentProperties",
+    "properties": {
+      "ComponentProperties": "object",
+      "ComponentProperties.aggregateProperties.": "primitive",
+      "ComponentProperties.children.": "array",
+      "ComponentProperties.children..Component": "ref",
+      "ComponentProperties.componentName.": "scaler",
+      "ComponentProperties.componentTypeGroupCategory.": "scaler",
+      "ComponentProperties.componentTypeId.": "scaler",
+      "ComponentProperties.componentTypeName.": "scaler",
+      "__undefined_0": "scaler",
+      "ComponentProperties.healthStateChangesEndTime.": "scaler",
+      "ComponentProperties.healthStateChangesStartTime.": "scaler",
+      "ComponentProperties.lastHealthStateChangeTime.": "scaler",
+      "ComponentProperties.solutionId.": "scaler",
+      "ComponentProperties.vmId.": "scaler",
+      "ComponentProperties.vmName.": "scaler",
+      "ComponentProperties.vmTags.": "primitive",
+      "ComponentProperties.workspaceId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ComponentsCollection",
+    "properties": {
+      "ComponentsCollection": "object",
+      "ComponentsCollection.nextLink.": "scaler",
+      "ComponentsCollection.value.": "array",
+      "ComponentsCollection.value..Component": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorFieldContract",
+    "properties": {
+      "ErrorFieldContract": "object",
+      "ErrorFieldContract.code.": "scaler",
+      "ErrorFieldContract.message.": "scaler",
+      "ErrorFieldContract.target.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorResponse",
+    "properties": {
+      "ErrorResponse": "object",
+      "ErrorResponse.code.": "scaler",
+      "ErrorResponse.details.": "array",
+      "ErrorResponse.details..ErrorFieldContract": "ref",
+      "ErrorResponse.message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthStateChange",
+    "properties": {
+      "HealthStateChange": "object",
+      "__undefined_0": "scaler",
+      "HealthStateChange.healthStateChangeTime.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Monitor",
+    "properties": {
+      "Monitor": "object",
+      "Monitor..etag.": "scaler",
+      "Monitor..properties.MonitorProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MonitorCriteria",
+    "properties": {
+      "MonitorCriteria": "object",
+      "__undefined_0": "scaler",
+      "MonitorCriteria.threshold.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MonitorInstance",
+    "properties": {
+      "MonitorInstance": "object",
+      "MonitorInstance..etag.": "scaler",
+      "MonitorInstance..properties.MonitorInstanceProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MonitorInstanceProperties",
+    "properties": {
+      "MonitorInstanceProperties": "object",
+      "MonitorInstanceProperties.aggregateProperties.": "primitive",
+      "__undefined_0": "scaler",
+      "MonitorInstanceProperties.children.": "array",
+      "MonitorInstanceProperties.children..MonitorInstance": "ref",
+      "MonitorInstanceProperties.componentId.": "scaler",
+      "MonitorInstanceProperties.componentName.": "scaler",
+      "MonitorInstanceProperties.componentTypeId.": "scaler",
+      "MonitorInstanceProperties.componentTypeName.": "scaler",
+      "MonitorInstanceProperties.healthStateChanges.": "array",
+      "MonitorInstanceProperties.healthStateChanges..HealthStateChange": "ref",
+      "MonitorInstanceProperties.healthStateChangesEndTime.": "scaler",
+      "MonitorInstanceProperties.healthStateChangesStartTime.": "scaler",
+      "MonitorInstanceProperties.lastHealthStateChangeTime.": "scaler",
+      "MonitorInstanceProperties.monitorId.": "scaler",
+      "MonitorInstanceProperties.monitorName.": "scaler",
+      "MonitorInstanceProperties.solutionId.": "scaler",
+      "MonitorInstanceProperties.workspaceId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MonitorInstancesCollection",
+    "properties": {
+      "MonitorInstancesCollection": "object",
+      "MonitorInstancesCollection.nextLink.": "scaler",
+      "MonitorInstancesCollection.value.": "array",
+      "MonitorInstancesCollection.value..MonitorInstance": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MonitorProperties",
+    "properties": {
+      "MonitorProperties": "object",
+      "__undefined_0": "scaler",
+      "MonitorProperties.componentTypeDisplayName.": "scaler",
+      "MonitorProperties.componentTypeId.": "scaler",
+      "MonitorProperties.componentTypeName.": "scaler",
+      "MonitorProperties.criteria.": "array",
+      "MonitorProperties.criteria..MonitorCriteria": "ref",
+      "MonitorProperties.description.": "scaler",
+      "MonitorProperties.documentationURL.": "scaler",
+      "MonitorProperties.frequency.": "scaler",
+      "MonitorProperties.lookbackDuration.": "scaler",
+      "MonitorProperties.monitorDisplayName.": "scaler",
+      "MonitorProperties.monitorId.": "scaler",
+      "MonitorProperties.monitorName.": "scaler",
+      "MonitorProperties.parentMonitorDisplayName.": "scaler",
+      "MonitorProperties.parentMonitorName.": "scaler",
+      "MonitorProperties.signalName.": "scaler",
+      "MonitorProperties.signalType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MonitorsCollection",
+    "properties": {
+      "MonitorsCollection": "object",
+      "MonitorsCollection.nextLink.": "scaler",
+      "MonitorsCollection.value.": "array",
+      "MonitorsCollection.value..Monitor": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NotificationSetting",
+    "properties": {
+      "NotificationSetting": "object",
+      "NotificationSetting..etag.": "scaler",
+      "NotificationSetting..properties.NotificationSettingProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NotificationSettingProperties",
+    "properties": {
+      "NotificationSettingProperties": "object",
+      "NotificationSettingProperties.actionGroupResourceIds.": "array",
+      "NotificationSettingProperties.actionGroupResourceIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NotificationSettingsCollection",
+    "properties": {
+      "NotificationSettingsCollection": "object",
+      "NotificationSettingsCollection.nextLink.": "scaler",
+      "NotificationSettingsCollection.value.": "array",
+      "NotificationSettingsCollection.value..NotificationSetting": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Operation",
+    "properties": {
+      "Operation": "object",
+      "Operation.display.OperationProperties": "ref",
+      "Operation.name.": "scaler",
+      "Operation.origin.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationListResult",
+    "properties": {
+      "OperationListResult": "object",
+      "OperationListResult.nextLink.": "scaler",
+      "OperationListResult.value.": "array",
+      "OperationListResult.value..Operation": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationProperties",
+    "properties": {
+      "OperationProperties": "object",
+      "OperationProperties.description.": "scaler",
+      "OperationProperties.operation.": "scaler",
+      "OperationProperties.provider.": "scaler",
+      "OperationProperties.resource.": "scaler"
+    }
+  }
+]

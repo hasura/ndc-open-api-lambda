@@ -1,0 +1,550 @@
+[
+  {
+    "schemaRef": "#/components/parameters/_.xgafv",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/access_token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/alt",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/callback",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/fields",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/key",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/oauth_token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/prettyPrint",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/quotaUser",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/uploadType",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/upload_protocol",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoForwarding",
+    "properties": {
+      "AutoForwarding": "object",
+      "__undefined_0": "scaler",
+      "AutoForwarding.emailAddress.": "scaler",
+      "AutoForwarding.enabled.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BatchDeleteMessagesRequest",
+    "properties": {
+      "BatchDeleteMessagesRequest": "object",
+      "BatchDeleteMessagesRequest.ids.": "array",
+      "BatchDeleteMessagesRequest.ids..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BatchModifyMessagesRequest",
+    "properties": {
+      "BatchModifyMessagesRequest": "object",
+      "BatchModifyMessagesRequest.addLabelIds.": "array",
+      "BatchModifyMessagesRequest.addLabelIds..": "scaler",
+      "BatchModifyMessagesRequest.ids.": "array",
+      "BatchModifyMessagesRequest.ids..": "scaler",
+      "BatchModifyMessagesRequest.removeLabelIds.": "array",
+      "BatchModifyMessagesRequest.removeLabelIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CseIdentity",
+    "properties": {
+      "CseIdentity": "object",
+      "CseIdentity.emailAddress.": "scaler",
+      "CseIdentity.primaryKeyPairId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CseKeyPair",
+    "properties": {
+      "CseKeyPair": "object",
+      "CseKeyPair.disableTime.": "scaler",
+      "__undefined_0": "scaler",
+      "CseKeyPair.keyPairId.": "scaler",
+      "CseKeyPair.pem.": "scaler",
+      "CseKeyPair.pkcs7.": "scaler",
+      "CseKeyPair.privateKeyMetadata.": "array",
+      "CseKeyPair.privateKeyMetadata..CsePrivateKeyMetadata": "ref",
+      "CseKeyPair.subjectEmailAddresses.": "array",
+      "CseKeyPair.subjectEmailAddresses..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CsePrivateKeyMetadata",
+    "properties": {
+      "CsePrivateKeyMetadata": "object",
+      "CsePrivateKeyMetadata.kaclsKeyMetadata.KaclsKeyMetadata": "ref",
+      "CsePrivateKeyMetadata.privateKeyMetadataId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Delegate",
+    "properties": {
+      "Delegate": "object",
+      "Delegate.delegateEmail.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DisableCseKeyPairRequest",
+    "properties": { "DisableCseKeyPairRequest": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Draft",
+    "properties": {
+      "Draft": "object",
+      "Draft.id.": "scaler",
+      "Draft.message.Message": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EnableCseKeyPairRequest",
+    "properties": { "EnableCseKeyPairRequest": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Filter",
+    "properties": {
+      "Filter": "object",
+      "Filter.action.FilterAction": "ref",
+      "Filter.criteria.FilterCriteria": "ref",
+      "Filter.id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterAction",
+    "properties": {
+      "FilterAction": "object",
+      "FilterAction.addLabelIds.": "array",
+      "FilterAction.addLabelIds..": "scaler",
+      "FilterAction.forward.": "scaler",
+      "FilterAction.removeLabelIds.": "array",
+      "FilterAction.removeLabelIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FilterCriteria",
+    "properties": {
+      "FilterCriteria": "object",
+      "FilterCriteria.excludeChats.": "scaler",
+      "FilterCriteria.from.": "scaler",
+      "FilterCriteria.hasAttachment.": "scaler",
+      "FilterCriteria.negatedQuery.": "scaler",
+      "FilterCriteria.query.": "scaler",
+      "FilterCriteria.size.": "scaler",
+      "__undefined_0": "scaler",
+      "FilterCriteria.subject.": "scaler",
+      "FilterCriteria.to.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ForwardingAddress",
+    "properties": {
+      "ForwardingAddress": "object",
+      "ForwardingAddress.forwardingEmail.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/History",
+    "properties": {
+      "History": "object",
+      "History.id.": "scaler",
+      "History.labelsAdded.": "array",
+      "History.labelsAdded..HistoryLabelAdded": "ref",
+      "History.labelsRemoved.": "array",
+      "History.labelsRemoved..HistoryLabelRemoved": "ref",
+      "History.messages.": "array",
+      "History.messages..Message": "ref",
+      "History.messagesAdded.": "array",
+      "History.messagesAdded..HistoryMessageAdded": "ref",
+      "History.messagesDeleted.": "array",
+      "History.messagesDeleted..HistoryMessageDeleted": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HistoryLabelAdded",
+    "properties": {
+      "HistoryLabelAdded": "object",
+      "HistoryLabelAdded.labelIds.": "array",
+      "HistoryLabelAdded.labelIds..": "scaler",
+      "HistoryLabelAdded.message.Message": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HistoryLabelRemoved",
+    "properties": {
+      "HistoryLabelRemoved": "object",
+      "HistoryLabelRemoved.labelIds.": "array",
+      "HistoryLabelRemoved.labelIds..": "scaler",
+      "HistoryLabelRemoved.message.Message": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HistoryMessageAdded",
+    "properties": {
+      "HistoryMessageAdded": "object",
+      "HistoryMessageAdded.message.Message": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HistoryMessageDeleted",
+    "properties": {
+      "HistoryMessageDeleted": "object",
+      "HistoryMessageDeleted.message.Message": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImapSettings",
+    "properties": {
+      "ImapSettings": "object",
+      "ImapSettings.autoExpunge.": "scaler",
+      "ImapSettings.enabled.": "scaler",
+      "__undefined_0": "scaler",
+      "ImapSettings.maxFolderSize.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/KaclsKeyMetadata",
+    "properties": {
+      "KaclsKeyMetadata": "object",
+      "KaclsKeyMetadata.kaclsData.": "scaler",
+      "KaclsKeyMetadata.kaclsUri.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Label",
+    "properties": {
+      "Label": "object",
+      "Label.color.LabelColor": "ref",
+      "Label.id.": "scaler",
+      "__undefined_0": "scaler",
+      "Label.messagesTotal.": "scaler",
+      "Label.messagesUnread.": "scaler",
+      "Label.name.": "scaler",
+      "Label.threadsTotal.": "scaler",
+      "Label.threadsUnread.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LabelColor",
+    "properties": {
+      "LabelColor": "object",
+      "LabelColor.backgroundColor.": "scaler",
+      "LabelColor.textColor.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LanguageSettings",
+    "properties": {
+      "LanguageSettings": "object",
+      "LanguageSettings.displayLanguage.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListCseIdentitiesResponse",
+    "properties": {
+      "ListCseIdentitiesResponse": "object",
+      "ListCseIdentitiesResponse.cseIdentities.": "array",
+      "ListCseIdentitiesResponse.cseIdentities..CseIdentity": "ref",
+      "ListCseIdentitiesResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListCseKeyPairsResponse",
+    "properties": {
+      "ListCseKeyPairsResponse": "object",
+      "ListCseKeyPairsResponse.cseKeyPairs.": "array",
+      "ListCseKeyPairsResponse.cseKeyPairs..CseKeyPair": "ref",
+      "ListCseKeyPairsResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListDelegatesResponse",
+    "properties": {
+      "ListDelegatesResponse": "object",
+      "ListDelegatesResponse.delegates.": "array",
+      "ListDelegatesResponse.delegates..Delegate": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListDraftsResponse",
+    "properties": {
+      "ListDraftsResponse": "object",
+      "ListDraftsResponse.drafts.": "array",
+      "ListDraftsResponse.drafts..Draft": "ref",
+      "ListDraftsResponse.nextPageToken.": "scaler",
+      "ListDraftsResponse.resultSizeEstimate.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListFiltersResponse",
+    "properties": {
+      "ListFiltersResponse": "object",
+      "ListFiltersResponse.filter.": "array",
+      "ListFiltersResponse.filter..Filter": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListForwardingAddressesResponse",
+    "properties": {
+      "ListForwardingAddressesResponse": "object",
+      "ListForwardingAddressesResponse.forwardingAddresses.": "array",
+      "ListForwardingAddressesResponse.forwardingAddresses..ForwardingAddress": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListHistoryResponse",
+    "properties": {
+      "ListHistoryResponse": "object",
+      "ListHistoryResponse.history.": "array",
+      "ListHistoryResponse.history..History": "ref",
+      "ListHistoryResponse.historyId.": "scaler",
+      "ListHistoryResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListLabelsResponse",
+    "properties": {
+      "ListLabelsResponse": "object",
+      "ListLabelsResponse.labels.": "array",
+      "ListLabelsResponse.labels..Label": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListMessagesResponse",
+    "properties": {
+      "ListMessagesResponse": "object",
+      "ListMessagesResponse.messages.": "array",
+      "ListMessagesResponse.messages..Message": "ref",
+      "ListMessagesResponse.nextPageToken.": "scaler",
+      "ListMessagesResponse.resultSizeEstimate.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListSendAsResponse",
+    "properties": {
+      "ListSendAsResponse": "object",
+      "ListSendAsResponse.sendAs.": "array",
+      "ListSendAsResponse.sendAs..SendAs": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListSmimeInfoResponse",
+    "properties": {
+      "ListSmimeInfoResponse": "object",
+      "ListSmimeInfoResponse.smimeInfo.": "array",
+      "ListSmimeInfoResponse.smimeInfo..SmimeInfo": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListThreadsResponse",
+    "properties": {
+      "ListThreadsResponse": "object",
+      "ListThreadsResponse.nextPageToken.": "scaler",
+      "ListThreadsResponse.resultSizeEstimate.": "scaler",
+      "ListThreadsResponse.threads.": "array",
+      "ListThreadsResponse.threads..Thread": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Message",
+    "properties": {
+      "Message": "object",
+      "Message.historyId.": "scaler",
+      "Message.id.": "scaler",
+      "Message.internalDate.": "scaler",
+      "Message.labelIds.": "array",
+      "Message.labelIds..": "scaler",
+      "Message.payload.MessagePart": "ref",
+      "Message.raw.": "scaler",
+      "Message.sizeEstimate.": "scaler",
+      "Message.snippet.": "scaler",
+      "Message.threadId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MessagePart",
+    "properties": {
+      "MessagePart": "object",
+      "MessagePart.body.MessagePartBody": "ref",
+      "MessagePart.filename.": "scaler",
+      "MessagePart.headers.": "array",
+      "MessagePart.headers..MessagePartHeader": "ref",
+      "MessagePart.mimeType.": "scaler",
+      "MessagePart.partId.": "scaler",
+      "MessagePart.parts.": "array",
+      "MessagePart.parts..MessagePart": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MessagePartBody",
+    "properties": {
+      "MessagePartBody": "object",
+      "MessagePartBody.attachmentId.": "scaler",
+      "MessagePartBody.data.": "scaler",
+      "MessagePartBody.size.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MessagePartHeader",
+    "properties": {
+      "MessagePartHeader": "object",
+      "MessagePartHeader.name.": "scaler",
+      "MessagePartHeader.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyMessageRequest",
+    "properties": {
+      "ModifyMessageRequest": "object",
+      "ModifyMessageRequest.addLabelIds.": "array",
+      "ModifyMessageRequest.addLabelIds..": "scaler",
+      "ModifyMessageRequest.removeLabelIds.": "array",
+      "ModifyMessageRequest.removeLabelIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyThreadRequest",
+    "properties": {
+      "ModifyThreadRequest": "object",
+      "ModifyThreadRequest.addLabelIds.": "array",
+      "ModifyThreadRequest.addLabelIds..": "scaler",
+      "ModifyThreadRequest.removeLabelIds.": "array",
+      "ModifyThreadRequest.removeLabelIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ObliterateCseKeyPairRequest",
+    "properties": { "ObliterateCseKeyPairRequest": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PopSettings",
+    "properties": { "PopSettings": "object", "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Profile",
+    "properties": {
+      "Profile": "object",
+      "Profile.emailAddress.": "scaler",
+      "Profile.historyId.": "scaler",
+      "Profile.messagesTotal.": "scaler",
+      "Profile.threadsTotal.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SendAs",
+    "properties": {
+      "SendAs": "object",
+      "SendAs.displayName.": "scaler",
+      "SendAs.isDefault.": "scaler",
+      "SendAs.isPrimary.": "scaler",
+      "SendAs.replyToAddress.": "scaler",
+      "SendAs.sendAsEmail.": "scaler",
+      "SendAs.signature.": "scaler",
+      "SendAs.smtpMsa.SmtpMsa": "ref",
+      "SendAs.treatAsAlias.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SmimeInfo",
+    "properties": {
+      "SmimeInfo": "object",
+      "SmimeInfo.encryptedKeyPassword.": "scaler",
+      "SmimeInfo.expiration.": "scaler",
+      "SmimeInfo.id.": "scaler",
+      "SmimeInfo.isDefault.": "scaler",
+      "SmimeInfo.issuerCn.": "scaler",
+      "SmimeInfo.pem.": "scaler",
+      "SmimeInfo.pkcs12.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SmtpMsa",
+    "properties": {
+      "SmtpMsa": "object",
+      "SmtpMsa.host.": "scaler",
+      "SmtpMsa.password.": "scaler",
+      "SmtpMsa.port.": "scaler",
+      "__undefined_0": "scaler",
+      "SmtpMsa.username.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Thread",
+    "properties": {
+      "Thread": "object",
+      "Thread.historyId.": "scaler",
+      "Thread.id.": "scaler",
+      "Thread.messages.": "array",
+      "Thread.messages..Message": "ref",
+      "Thread.snippet.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VacationSettings",
+    "properties": {
+      "VacationSettings": "object",
+      "VacationSettings.enableAutoReply.": "scaler",
+      "VacationSettings.endTime.": "scaler",
+      "VacationSettings.responseBodyHtml.": "scaler",
+      "VacationSettings.responseBodyPlainText.": "scaler",
+      "VacationSettings.responseSubject.": "scaler",
+      "VacationSettings.restrictToContacts.": "scaler",
+      "VacationSettings.restrictToDomain.": "scaler",
+      "VacationSettings.startTime.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WatchRequest",
+    "properties": {
+      "WatchRequest": "object",
+      "__undefined_0": "scaler",
+      "WatchRequest.labelIds.": "array",
+      "WatchRequest.labelIds..": "scaler",
+      "WatchRequest.topicName.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WatchResponse",
+    "properties": {
+      "WatchResponse": "object",
+      "WatchResponse.expiration.": "scaler",
+      "WatchResponse.historyId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2c",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

@@ -1,0 +1,716 @@
+[
+  {
+    "schemaRef": "#/components/schemas/AccessibilityRequest",
+    "properties": {
+      "AccessibilityRequest": "object",
+      "AccessibilityRequest.endpoint_enabled.": "scaler",
+      "AccessibilityRequest.hotword_enabled.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Alarm",
+    "properties": {
+      "Alarm": "object",
+      "Alarm.date_pattern.DatePattern": "ref",
+      "Alarm.fire_time.": "scaler",
+      "Alarm.id.": "scaler",
+      "Alarm.status.": "scaler",
+      "Alarm.time_pattern.TimePattern": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AlarmVolumeRequest",
+    "properties": {
+      "AlarmVolumeRequest": "object",
+      "AlarmVolumeRequest.volume.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Aogh",
+    "properties": { "Aogh": "object", "Aogh.aogh_api_version.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AppDeviceIDRequest",
+    "properties": {
+      "AppDeviceIDRequest": "object",
+      "AppDeviceIDRequest.app_id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Audio",
+    "properties": { "Audio": "object", "Audio.digital.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BuildInfo",
+    "properties": {
+      "BuildInfo": "object",
+      "BuildInfo.build_type.": "scaler",
+      "BuildInfo.cast_build_revision.": "scaler",
+      "BuildInfo.cast_control_version.": "scaler",
+      "BuildInfo.preview_channel_state.": "scaler",
+      "BuildInfo.release_track.": "scaler",
+      "BuildInfo.system_build_number.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Capabilities",
+    "properties": {
+      "Capabilities": "object",
+      "Capabilities.aogh_supported.": "scaler",
+      "Capabilities.assistant_supported.": "scaler",
+      "Capabilities.audio_hdr_supported.": "scaler",
+      "Capabilities.audio_surround_mode_supported.": "scaler",
+      "Capabilities.ble_supported.": "scaler",
+      "Capabilities.bluetooth_audio_sink_supported.": "scaler",
+      "Capabilities.bluetooth_audio_source_supported.": "scaler",
+      "Capabilities.bluetooth_supported.": "scaler",
+      "Capabilities.cloudcast_supported.": "scaler",
+      "Capabilities.content_filters_supported.": "scaler",
+      "Capabilities.display_supported.": "scaler",
+      "Capabilities.fdr_supported.": "scaler",
+      "Capabilities.hdmi_prefer_50hz_supported.": "scaler",
+      "Capabilities.hdmi_prefer_high_fps_supported.": "scaler",
+      "Capabilities.hotspot_supported.": "scaler",
+      "Capabilities.https_setup_supported.": "scaler",
+      "Capabilities.input_management_supported.": "scaler",
+      "Capabilities.keep_hotspot_until_connected_supported.": "scaler",
+      "Capabilities.multi_user_supported.": "scaler",
+      "Capabilities.multichannel_group_supported.": "scaler",
+      "Capabilities.multizone_supported.": "scaler",
+      "Capabilities.night_mode_supported.": "scaler",
+      "Capabilities.night_mode_supported_v2.": "scaler",
+      "Capabilities.opencast_supported.": "scaler",
+      "Capabilities.preview_channel_supported.": "scaler",
+      "Capabilities.reboot_supported.": "scaler",
+      "Capabilities.remote_ducking_supported.": "scaler",
+      "Capabilities.separate_tts_volume_supported.": "scaler",
+      "Capabilities.setup_supported.": "scaler",
+      "Capabilities.sleep_mode_supported.": "scaler",
+      "Capabilities.stats_supported.": "scaler",
+      "Capabilities.system_sound_effects_supported.": "scaler",
+      "Capabilities.user_eq_supported.": "scaler",
+      "Capabilities.wifi_auto_save_supported.": "scaler",
+      "Capabilities.wifi_regulatory_domain_locked.": "scaler",
+      "Capabilities.wifi_supported.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ChangeDiscoverabilityRequest",
+    "properties": {
+      "ChangeDiscoverabilityRequest": "object",
+      "ChangeDiscoverabilityRequest.enable_discovery.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CheckReadyStatusRequest",
+    "properties": {
+      "CheckReadyStatusRequest": "object",
+      "CheckReadyStatusRequest.play_ready_message.": "scaler",
+      "CheckReadyStatusRequest.user_id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectedDevice",
+    "properties": {
+      "ConnectedDevice": "object",
+      "ConnectedDevice.device.Device": "ref",
+      "ConnectedDevice.enabled_profiles.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnecttoWi-FiNetworkRequest",
+    "properties": {
+      "ConnecttoWi-FiNetworkRequest": "object",
+      "ConnecttoWi-FiNetworkRequest.bssid.": "scaler",
+      "ConnecttoWi-FiNetworkRequest.enc_passwd.": "scaler",
+      "ConnecttoWi-FiNetworkRequest.signal_level.": "scaler",
+      "ConnecttoWi-FiNetworkRequest.ssid.": "scaler",
+      "ConnecttoWi-FiNetworkRequest.wpa_auth.": "scaler",
+      "ConnecttoWi-FiNetworkRequest.wpa_cipher.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DatePattern",
+    "properties": {
+      "DatePattern": "object",
+      "DatePattern.day.": "scaler",
+      "DatePattern.month.": "scaler",
+      "DatePattern.year.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteAlarmsandTimersRequest",
+    "properties": {
+      "DeleteAlarmsandTimersRequest": "object",
+      "DeleteAlarmsandTimersRequest.ids.": "array",
+      "DeleteAlarmsandTimersRequest.ids..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Detail",
+    "properties": {
+      "Detail": "object",
+      "Detail.icon_list.": "array",
+      "Detail.icon_list..IconList": "ref",
+      "Detail.locale.Locale": "ref",
+      "Detail.timezone.Timezone": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Device",
+    "properties": {
+      "Device": "object",
+      "Device.bond_date.": "scaler",
+      "Device.device_class.": "scaler",
+      "Device.device_type.": "scaler",
+      "Device.last_connect_date.": "scaler",
+      "Device.mac_address.": "scaler",
+      "Device.name.": "scaler",
+      "Device.rssi.": "scaler",
+      "Device.service_uuids.": "array",
+      "Device.service_uuids..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeviceInfo",
+    "properties": {
+      "DeviceInfo": "object",
+      "DeviceInfo.4k_blocked.": "scaler",
+      "DeviceInfo.capabilities.Capabilities": "ref",
+      "DeviceInfo.cloud_device_id.": "scaler",
+      "DeviceInfo.factory_country_code.": "scaler",
+      "DeviceInfo.hotspot_bssid.": "scaler",
+      "DeviceInfo.local_authorization_token_hash.": "scaler",
+      "DeviceInfo.mac_address.": "scaler",
+      "DeviceInfo.manufacturer.": "scaler",
+      "DeviceInfo.model_name.": "scaler",
+      "DeviceInfo.product_name.": "scaler",
+      "DeviceInfo.public_key.": "scaler",
+      "DeviceInfo.ssdp_udn.": "scaler",
+      "DeviceInfo.uma_client_id.": "scaler",
+      "DeviceInfo.uptime.": "scaler",
+      "DeviceInfo.weave_device_id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example1",
+    "properties": {
+      "Example1": "object",
+      "Example1.aogh.Aogh": "ref",
+      "Example1.audio.Audio": "ref",
+      "Example1.build_info.BuildInfo": "ref",
+      "Example1.detail.Detail": "ref",
+      "Example1.device_info.DeviceInfo": "ref",
+      "Example1.multizone.Multizone": "ref",
+      "Example1.name.": "scaler",
+      "Example1.net.Net": "ref",
+      "Example1.night_mode_params.NightModeParams": "ref",
+      "Example1.opencast.Opencast": "ref",
+      "Example1.opt_in.OptIn": "ref",
+      "Example1.proxy.Proxy": "ref",
+      "Example1.settings.Settings": "ref",
+      "Example1.setup.Setup": "ref",
+      "Example1.sign.Sign": "ref",
+      "Example1.user_eq.UserEq": "ref",
+      "Example1.version.": "scaler",
+      "Example1.wifi.Wifi": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example11",
+    "properties": {
+      "Example11": "object",
+      "Example11.app_device_id.": "scaler",
+      "Example11.certificate.": "scaler",
+      "Example11.signed_data.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example110",
+    "properties": {
+      "Example110": "object",
+      "Example110.audio_mode.": "scaler",
+      "Example110.connected_devices.": "array",
+      "Example110.connected_devices..ConnectedDevice": "ref",
+      "Example110.connecting_devices.": "array",
+      "Example110.connecting_devices..": "scaler",
+      "Example110.discovery_enabled.": "scaler",
+      "Example110.remote_sink.RemoteSink": "ref",
+      "Example110.scanning_enabled.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example111",
+    "properties": {
+      "Example111": "object",
+      "Example111.bond_date.": "scaler",
+      "Example111.device_class.": "scaler",
+      "Example111.device_type.": "scaler",
+      "Example111.last_connect_date.": "scaler",
+      "Example111.mac_address.": "scaler",
+      "Example111.name.": "scaler",
+      "Example111.rssi.": "scaler",
+      "Example111.service_uuids.": "array",
+      "Example111.service_uuids..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example112",
+    "properties": {
+      "Example112": "object",
+      "Example112.device_class.": "scaler",
+      "Example112.device_type.": "scaler",
+      "Example112.expected_profiles.": "scaler",
+      "Example112.mac_address.": "scaler",
+      "Example112.name.": "scaler",
+      "Example112.rssi.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example113",
+    "properties": {
+      "Example113": "object",
+      "Example113.ssid.": "scaler",
+      "Example113.wpa_auth.": "scaler",
+      "Example113.wpa_cipher.": "scaler",
+      "Example113.wpa_id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example114",
+    "properties": {
+      "Example114": "object",
+      "Example114.bssid.": "scaler",
+      "Example114.signal_level.": "scaler",
+      "Example114.ssid.": "scaler",
+      "Example114.wpa_auth.": "scaler",
+      "Example114.wpa_cipher.": "scaler",
+      "Example114.wpa_id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example12",
+    "properties": { "Example12": "object", "Example12.token.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example13",
+    "properties": {
+      "Example13": "object",
+      "Example13.can_enroll.": "scaler",
+      "Example13.enrollment_state.": "scaler",
+      "Example13.error_code.": "scaler",
+      "Example13.ready.": "scaler",
+      "Example13.retryable.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example14",
+    "properties": {
+      "Example14": "object",
+      "Example14.display_string.": "scaler",
+      "Example14.offset.": "scaler",
+      "Example14.timezone.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example15",
+    "properties": {
+      "Example15": "object",
+      "Example15.display_string.": "scaler",
+      "Example15.locale.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example16",
+    "properties": {
+      "Example16": "object",
+      "Example16.bytes_received.": "scaler",
+      "Example16.response_code.": "scaler",
+      "Example16.time_for_data_fetch.": "scaler",
+      "Example16.time_for_http_response.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example17",
+    "properties": {
+      "Example17": "object",
+      "Example17.do_not_disturb.": "scaler",
+      "Example17.enabled.": "scaler",
+      "Example17.led_brightness.": "scaler",
+      "Example17.volume.": "scaler",
+      "Example17.windows.": "array",
+      "Example17.windows..Window2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example18",
+    "properties": {
+      "Example18": "object",
+      "Example18.alarm.": "array",
+      "Example18.alarm..Alarm": "ref",
+      "Example18.timer.": "array",
+      "Example18.timer..Timer": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Example19",
+    "properties": { "Example19": "object", "Example19.success.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ForgetWi-FiNetworkRequest",
+    "properties": {
+      "ForgetWi-FiNetworkRequest": "object",
+      "ForgetWi-FiNetworkRequest.wpa_id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ForgetpaireddeviceRequest",
+    "properties": {
+      "ForgetpaireddeviceRequest": "object",
+      "ForgetpaireddeviceRequest.bond.": "scaler",
+      "ForgetpaireddeviceRequest.mac_address.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Getcurrentstate",
+    "properties": {
+      "Getcurrentstate": "object",
+      "Getcurrentstate.notifications_enabled.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Getcurrentvalues",
+    "properties": {
+      "Getcurrentvalues": "object",
+      "Getcurrentvalues.endpoint_enabled.": "scaler",
+      "Getcurrentvalues.hotword_enabled.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Getvolume",
+    "properties": { "Getvolume": "object", "Getvolume.volume.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HighShelf",
+    "properties": {
+      "HighShelf": "object",
+      "HighShelf.frequency.": "scaler",
+      "HighShelf.gain_db.": "scaler",
+      "HighShelf.quality.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HighShelf1",
+    "properties": { "HighShelf1": "object", "HighShelf1.gain_db.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IconList",
+    "properties": {
+      "IconList": "object",
+      "IconList.depth.": "scaler",
+      "IconList.height.": "scaler",
+      "IconList.mimetype.": "scaler",
+      "IconList.url.": "scaler",
+      "IconList.width.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Locale",
+    "properties": { "Locale": "object", "Locale.display_string.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LowShelf",
+    "properties": {
+      "LowShelf": "object",
+      "LowShelf.frequency.": "scaler",
+      "LowShelf.gain_db.": "scaler",
+      "LowShelf.quality.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LowShelf1",
+    "properties": { "LowShelf1": "object", "LowShelf1.gain_db.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Multizone",
+    "properties": {
+      "Multizone": "object",
+      "Multizone.audio_output_delay.": "scaler",
+      "Multizone.audio_output_delay_hdmi.": "scaler",
+      "Multizone.audio_output_delay_oem.": "scaler",
+      "Multizone.aux_in_group.": "scaler",
+      "Multizone.dynamic_groups.": "array",
+      "Multizone.dynamic_groups..": "scaler",
+      "Multizone.groups.": "array",
+      "Multizone.groups..": "scaler",
+      "Multizone.multichannel_status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Net",
+    "properties": {
+      "Net": "object",
+      "Net.ethernet_connected.": "scaler",
+      "Net.ip_address.": "scaler",
+      "Net.online.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NightModeParams",
+    "properties": {
+      "NightModeParams": "object",
+      "NightModeParams.device_override_do_not_disturb.": "scaler",
+      "NightModeParams.do_not_disturb.": "scaler",
+      "NightModeParams.enabled.": "scaler",
+      "NightModeParams.led_brightness.": "scaler",
+      "NightModeParams.volume.": "scaler",
+      "NightModeParams.windows.": "array",
+      "NightModeParams.windows..Window": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NightModesettingsRequest",
+    "properties": {
+      "NightModesettingsRequest": "object",
+      "NightModesettingsRequest.demo_to_user.": "scaler",
+      "NightModesettingsRequest.do_not_disturb.": "scaler",
+      "NightModesettingsRequest.enabled.": "scaler",
+      "NightModesettingsRequest.led_brightness.": "scaler",
+      "NightModesettingsRequest.volume.": "scaler",
+      "NightModesettingsRequest.windows.": "array",
+      "NightModesettingsRequest.windows..Window": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Opencast",
+    "properties": { "Opencast": "object", "Opencast.pin_code.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OptIn",
+    "properties": {
+      "OptIn": "object",
+      "OptIn.audio_hdr.": "scaler",
+      "OptIn.audio_surround_mode.": "scaler",
+      "OptIn.autoplay_on_signal.": "scaler",
+      "OptIn.cloud_ipc.": "scaler",
+      "OptIn.hdmi_prefer_50hz.": "scaler",
+      "OptIn.hdmi_prefer_high_fps.": "scaler",
+      "OptIn.managed_mode.": "scaler",
+      "OptIn.opencast.": "scaler",
+      "OptIn.preview_channel.": "scaler",
+      "OptIn.remote_ducking.": "scaler",
+      "OptIn.stats.": "scaler",
+      "OptIn.ui_flipped.": "scaler",
+      "OptIn.wpa3_support_enabled.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OptIn1",
+    "properties": {
+      "OptIn1": "object",
+      "OptIn1.opencast.": "scaler",
+      "OptIn1.preview_channel.": "scaler",
+      "OptIn1.remote_ducking.": "scaler",
+      "OptIn1.stats.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PairwithSpeakerRequest",
+    "properties": {
+      "PairwithSpeakerRequest": "object",
+      "PairwithSpeakerRequest.connect.": "scaler",
+      "PairwithSpeakerRequest.mac_address.": "scaler",
+      "PairwithSpeakerRequest.profile.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Proxy",
+    "properties": { "Proxy": "object", "Proxy.mode.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebootandFactoryResetRequest",
+    "properties": {
+      "RebootandFactoryResetRequest": "object",
+      "RebootandFactoryResetRequest.params.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RemoteSink",
+    "properties": {
+      "RemoteSink": "object",
+      "RemoteSink.bond_date.": "scaler",
+      "RemoteSink.device_class.": "scaler",
+      "RemoteSink.device_type.": "scaler",
+      "RemoteSink.last_connect_date.": "scaler",
+      "RemoteSink.mac_address.": "scaler",
+      "RemoteSink.name.": "scaler",
+      "RemoteSink.rssi.": "scaler",
+      "RemoteSink.service_uuids.": "array",
+      "RemoteSink.service_uuids..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScanfordevicesRequest",
+    "properties": {
+      "ScanfordevicesRequest": "object",
+      "ScanfordevicesRequest.clear_results.": "scaler",
+      "ScanfordevicesRequest.enable.": "scaler",
+      "ScanfordevicesRequest.timeout.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SetEqualizerValuesRequest",
+    "properties": {
+      "SetEqualizerValuesRequest": "object",
+      "SetEqualizerValuesRequest.high_shelf.HighShelf1": "ref",
+      "SetEqualizerValuesRequest.low_shelf.LowShelf1": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SetEurekaInfoRequest",
+    "properties": {
+      "SetEurekaInfoRequest": "object",
+      "SetEurekaInfoRequest.name.": "scaler",
+      "SetEurekaInfoRequest.opt_in.OptIn1": "ref",
+      "SetEurekaInfoRequest.settings.Settings1": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Settings",
+    "properties": {
+      "Settings": "object",
+      "Settings.closed_caption.": "primitive",
+      "Settings.control_notifications.": "scaler",
+      "Settings.country_code.": "scaler",
+      "Settings.locale.": "scaler",
+      "Settings.network_standby.": "scaler",
+      "Settings.system_sound_effects.": "scaler",
+      "Settings.time_format.": "scaler",
+      "Settings.timezone.": "scaler",
+      "Settings.wake_on_cast.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Settings1",
+    "properties": {
+      "Settings1": "object",
+      "Settings1.control_notifications.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Setup",
+    "properties": {
+      "Setup": "object",
+      "Setup.qr_ssid_suffix.": "scaler",
+      "Setup.setup_state.": "scaler",
+      "Setup.ssid_suffix.": "scaler",
+      "Setup.stats.Stats": "ref",
+      "Setup.tos_accepted.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Sign",
+    "properties": {
+      "Sign": "object",
+      "Sign.certificate.": "scaler",
+      "Sign.intermediate_certs.": "array",
+      "Sign.intermediate_certs..": "scaler",
+      "Sign.nonce.": "scaler",
+      "Sign.signed_data.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Stats",
+    "properties": {
+      "Stats": "object",
+      "Stats.num_check_connectivity.": "scaler",
+      "Stats.num_connect_wifi.": "scaler",
+      "Stats.num_connected_wifi_not_saved.": "scaler",
+      "Stats.num_initial_eureka_info.": "scaler",
+      "Stats.num_obtain_ip.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TestInternetDownloadSpeedRequest",
+    "properties": {
+      "TestInternetDownloadSpeedRequest": "object",
+      "TestInternetDownloadSpeedRequest.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TimePattern",
+    "properties": {
+      "TimePattern": "object",
+      "TimePattern.hour.": "scaler",
+      "TimePattern.minute.": "scaler",
+      "TimePattern.second.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Timer",
+    "properties": {
+      "Timer": "object",
+      "Timer.fire_time.": "scaler",
+      "Timer.id.": "scaler",
+      "Timer.original_duration.": "scaler",
+      "Timer.status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Timezone",
+    "properties": {
+      "Timezone": "object",
+      "Timezone.display_string.": "scaler",
+      "Timezone.offset.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserEq",
+    "properties": {
+      "UserEq": "object",
+      "UserEq.high_shelf.HighShelf": "ref",
+      "UserEq.low_shelf.LowShelf": "ref",
+      "UserEq.max_peaking_eqs.": "scaler",
+      "UserEq.peaking_eqs.": "array",
+      "UserEq.peaking_eqs..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Wifi",
+    "properties": {
+      "Wifi": "object",
+      "Wifi.bssid.": "scaler",
+      "Wifi.has_changes.": "scaler",
+      "Wifi.noise_level.": "scaler",
+      "Wifi.signal_level.": "scaler",
+      "Wifi.ssid.": "scaler",
+      "Wifi.wpa_configured.": "scaler",
+      "Wifi.wpa_id.": "scaler",
+      "Wifi.wpa_state.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Window",
+    "properties": {
+      "Window": "object",
+      "Window.days.": "array",
+      "Window.days..": "scaler",
+      "Window.length_hours.": "scaler",
+      "Window.start_hour.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Window2",
+    "properties": {
+      "Window2": "object",
+      "Window2.days.": "array",
+      "Window2.days..": "scaler",
+      "Window2.length_hours.": "scaler",
+      "Window2.start_hour.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/cast-local-authorization-token",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

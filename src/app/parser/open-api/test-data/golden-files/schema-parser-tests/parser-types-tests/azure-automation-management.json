@@ -1,0 +1,176 @@
+[
+  {
+    "schemaRef": "#/components/securitySchemes/azure_auth",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Activity",
+    "properties": {
+      "Activity": "object",
+      "Activity.id.": "scaler",
+      "Activity.name.": "scaler",
+      "Activity.properties.ActivityProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityListResult",
+    "properties": {
+      "ActivityListResult": "object",
+      "ActivityListResult.nextLink.": "scaler",
+      "ActivityListResult.value.": "array",
+      "ActivityListResult.value..Activity": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityOutputType",
+    "properties": {
+      "ActivityOutputType": "object",
+      "ActivityOutputType.name.": "scaler",
+      "ActivityOutputType.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityParameter",
+    "properties": {
+      "ActivityParameter": "object",
+      "ActivityParameter.description.": "scaler",
+      "ActivityParameter.isDynamic.": "scaler",
+      "ActivityParameter.isMandatory.": "scaler",
+      "ActivityParameter.name.": "scaler",
+      "ActivityParameter.position.": "scaler",
+      "ActivityParameter.type.": "scaler",
+      "ActivityParameter.validationSet.": "array",
+      "ActivityParameter.validationSet..ActivityParameterValidationSet": "ref",
+      "ActivityParameter.valueFromPipeline.": "scaler",
+      "ActivityParameter.valueFromPipelineByPropertyName.": "scaler",
+      "ActivityParameter.valueFromRemainingArguments.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityParameterSet",
+    "properties": {
+      "ActivityParameterSet": "object",
+      "ActivityParameterSet.name.": "scaler",
+      "ActivityParameterSet.parameters.": "array",
+      "ActivityParameterSet.parameters..ActivityParameter": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityParameterValidationSet",
+    "properties": {
+      "ActivityParameterValidationSet": "object",
+      "ActivityParameterValidationSet.memberValue.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityProperties",
+    "properties": {
+      "ActivityProperties": "object",
+      "ActivityProperties.creationTime.": "scaler",
+      "ActivityProperties.definition.": "scaler",
+      "ActivityProperties.description.": "scaler",
+      "ActivityProperties.lastModifiedTime.": "scaler",
+      "ActivityProperties.outputTypes.": "array",
+      "ActivityProperties.outputTypes..ActivityOutputType": "ref",
+      "ActivityProperties.parameterSets.": "array",
+      "ActivityProperties.parameterSets..ActivityParameterSet": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ContentHash",
+    "properties": {
+      "ContentHash": "object",
+      "ContentHash.algorithm.": "scaler",
+      "ContentHash.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ContentLink",
+    "properties": {
+      "ContentLink": "object",
+      "ContentLink.contentHash.ContentHash": "ref",
+      "ContentLink.uri.": "scaler",
+      "ContentLink.version.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Module",
+    "properties": {
+      "Module": "object",
+      "Module..etag.": "scaler",
+      "Module..properties.ModuleProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModuleErrorInfo",
+    "properties": {
+      "ModuleErrorInfo": "object",
+      "ModuleErrorInfo.code.": "scaler",
+      "ModuleErrorInfo.message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModuleListResult",
+    "properties": {
+      "ModuleListResult": "object",
+      "ModuleListResult.nextLink.": "scaler",
+      "ModuleListResult.value.": "array",
+      "ModuleListResult.value..Module": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModuleProperties",
+    "properties": {
+      "ModuleProperties": "object",
+      "ModuleProperties.activityCount.": "scaler",
+      "ModuleProperties.contentLink.ContentLink": "ref",
+      "ModuleProperties.creationTime.": "scaler",
+      "ModuleProperties.description.": "scaler",
+      "ModuleProperties.error.ModuleErrorInfo": "ref",
+      "ModuleProperties.isComposite.": "scaler",
+      "ModuleProperties.isGlobal.": "scaler",
+      "ModuleProperties.lastModifiedTime.": "scaler",
+      "__undefined_0": "scaler",
+      "ModuleProperties.sizeInBytes.": "scaler",
+      "ModuleProperties.version.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PythonPackageCreateParameters",
+    "properties": {
+      "PythonPackageCreateParameters": "object",
+      "PythonPackageCreateParameters.properties.PythonPackageCreateProperties": "ref",
+      "PythonPackageCreateParameters.tags.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PythonPackageCreateProperties",
+    "properties": {
+      "PythonPackageCreateProperties": "object",
+      "PythonPackageCreateProperties.contentLink.ContentLink": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PythonPackageUpdateParameters",
+    "properties": {
+      "PythonPackageUpdateParameters": "object",
+      "PythonPackageUpdateParameters.tags.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TypeField",
+    "properties": {
+      "TypeField": "object",
+      "TypeField.name.": "scaler",
+      "TypeField.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TypeFieldListResult",
+    "properties": {
+      "TypeFieldListResult": "object",
+      "TypeFieldListResult.value.": "array",
+      "TypeFieldListResult.value..TypeField": "ref"
+    }
+  }
+]

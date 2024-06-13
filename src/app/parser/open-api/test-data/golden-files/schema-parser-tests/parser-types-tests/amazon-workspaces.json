@@ -1,0 +1,2638 @@
+[
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Content-Sha256",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Date",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Algorithm",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Credential",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Security-Token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Signature",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-SignedHeaders",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/hmac",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AssociateConnectionAliasResult",
+    "properties": {
+      "AssociateConnectionAliasResult": "object",
+      "AssociateConnectionAliasResult.ConnectionIdentifier.": "allOf",
+      "AssociateConnectionAliasResult.ConnectionIdentifier..ConnectionIdentifier": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AssociateConnectionAliasRequest",
+    "properties": {
+      "AssociateConnectionAliasRequest": "object",
+      "AssociateConnectionAliasRequest.AliasId.": "allOf",
+      "AssociateConnectionAliasRequest.AliasId..ConnectionAliasId": "ref",
+      "AssociateConnectionAliasRequest.ResourceId.": "allOf",
+      "AssociateConnectionAliasRequest.ResourceId..NonEmptyString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceAssociatedException",
+    "properties": { "ResourceAssociatedException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AccessDeniedException",
+    "properties": { "AccessDeniedException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceNotFoundException",
+    "properties": { "ResourceNotFoundException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InvalidParameterValuesException",
+    "properties": { "InvalidParameterValuesException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InvalidResourceStateException",
+    "properties": { "InvalidResourceStateException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationNotSupportedException",
+    "properties": { "OperationNotSupportedException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AssociateIpGroupsResult",
+    "properties": { "AssociateIpGroupsResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AssociateIpGroupsRequest",
+    "properties": {
+      "AssociateIpGroupsRequest": "object",
+      "AssociateIpGroupsRequest.DirectoryId.": "allOf",
+      "AssociateIpGroupsRequest.DirectoryId..DirectoryId": "ref",
+      "AssociateIpGroupsRequest.GroupIds.": "allOf",
+      "AssociateIpGroupsRequest.GroupIds..IpGroupIdList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceLimitExceededException",
+    "properties": { "ResourceLimitExceededException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AuthorizeIpRulesResult",
+    "properties": { "AuthorizeIpRulesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AuthorizeIpRulesRequest",
+    "properties": {
+      "AuthorizeIpRulesRequest": "object",
+      "AuthorizeIpRulesRequest.GroupId.": "allOf",
+      "AuthorizeIpRulesRequest.GroupId..IpGroupId": "ref",
+      "AuthorizeIpRulesRequest.UserRules.": "allOf",
+      "AuthorizeIpRulesRequest.UserRules..IpRuleList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CopyWorkspaceImageResult",
+    "properties": {
+      "CopyWorkspaceImageResult": "object",
+      "CopyWorkspaceImageResult.ImageId.": "allOf",
+      "CopyWorkspaceImageResult.ImageId..WorkspaceImageId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CopyWorkspaceImageRequest",
+    "properties": {
+      "CopyWorkspaceImageRequest": "object",
+      "CopyWorkspaceImageRequest.Name.": "allOf",
+      "CopyWorkspaceImageRequest.Name..WorkspaceImageName": "ref",
+      "CopyWorkspaceImageRequest.Description.": "allOf",
+      "CopyWorkspaceImageRequest.Description..WorkspaceImageDescription": "ref",
+      "CopyWorkspaceImageRequest.SourceImageId.": "allOf",
+      "CopyWorkspaceImageRequest.SourceImageId..WorkspaceImageId": "ref",
+      "CopyWorkspaceImageRequest.SourceRegion.": "allOf",
+      "CopyWorkspaceImageRequest.SourceRegion..Region": "ref",
+      "CopyWorkspaceImageRequest.Tags.": "allOf",
+      "CopyWorkspaceImageRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceAlreadyExistsException",
+    "properties": { "ResourceAlreadyExistsException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceUnavailableException",
+    "properties": { "ResourceUnavailableException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateConnectClientAddInResult",
+    "properties": {
+      "CreateConnectClientAddInResult": "object",
+      "CreateConnectClientAddInResult.AddInId.": "allOf",
+      "CreateConnectClientAddInResult.AddInId..AmazonUuid": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateConnectClientAddInRequest",
+    "properties": {
+      "CreateConnectClientAddInRequest": "object",
+      "CreateConnectClientAddInRequest.ResourceId.": "allOf",
+      "CreateConnectClientAddInRequest.ResourceId..DirectoryId": "ref",
+      "CreateConnectClientAddInRequest.Name.": "allOf",
+      "CreateConnectClientAddInRequest.Name..AddInName": "ref",
+      "CreateConnectClientAddInRequest.URL.": "allOf",
+      "CreateConnectClientAddInRequest.URL..AddInUrl": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceCreationFailedException",
+    "properties": { "ResourceCreationFailedException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateConnectionAliasResult",
+    "properties": {
+      "CreateConnectionAliasResult": "object",
+      "CreateConnectionAliasResult.AliasId.": "allOf",
+      "CreateConnectionAliasResult.AliasId..ConnectionAliasId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateConnectionAliasRequest",
+    "properties": {
+      "CreateConnectionAliasRequest": "object",
+      "CreateConnectionAliasRequest.ConnectionString.": "allOf",
+      "CreateConnectionAliasRequest.ConnectionString..ConnectionString": "ref",
+      "CreateConnectionAliasRequest.Tags.": "allOf",
+      "CreateConnectionAliasRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateIpGroupResult",
+    "properties": {
+      "CreateIpGroupResult": "object",
+      "CreateIpGroupResult.GroupId.": "allOf",
+      "CreateIpGroupResult.GroupId..IpGroupId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateIpGroupRequest",
+    "properties": {
+      "CreateIpGroupRequest": "object",
+      "CreateIpGroupRequest.GroupName.": "allOf",
+      "CreateIpGroupRequest.GroupName..IpGroupName": "ref",
+      "CreateIpGroupRequest.GroupDesc.": "allOf",
+      "CreateIpGroupRequest.GroupDesc..IpGroupDesc": "ref",
+      "CreateIpGroupRequest.UserRules.": "allOf",
+      "CreateIpGroupRequest.UserRules..IpRuleList": "ref",
+      "CreateIpGroupRequest.Tags.": "allOf",
+      "CreateIpGroupRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateStandbyWorkspacesResult",
+    "properties": {
+      "CreateStandbyWorkspacesResult": "object",
+      "CreateStandbyWorkspacesResult.FailedStandbyRequests.": "allOf",
+      "CreateStandbyWorkspacesResult.FailedStandbyRequests..FailedCreateStandbyWorkspacesRequestList": "ref",
+      "CreateStandbyWorkspacesResult.PendingStandbyRequests.": "allOf",
+      "CreateStandbyWorkspacesResult.PendingStandbyRequests..PendingCreateStandbyWorkspacesRequestList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateStandbyWorkspacesRequest",
+    "properties": {
+      "CreateStandbyWorkspacesRequest": "object",
+      "CreateStandbyWorkspacesRequest.PrimaryRegion.": "allOf",
+      "CreateStandbyWorkspacesRequest.PrimaryRegion..Region": "ref",
+      "CreateStandbyWorkspacesRequest.StandbyWorkspaces.": "allOf",
+      "CreateStandbyWorkspacesRequest.StandbyWorkspaces..StandbyWorkspacesList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateTagsResult",
+    "properties": { "CreateTagsResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateTagsRequest",
+    "properties": {
+      "CreateTagsRequest": "object",
+      "CreateTagsRequest.ResourceId.": "allOf",
+      "CreateTagsRequest.ResourceId..NonEmptyString": "ref",
+      "CreateTagsRequest.Tags.": "allOf",
+      "CreateTagsRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateUpdatedWorkspaceImageResult",
+    "properties": {
+      "CreateUpdatedWorkspaceImageResult": "object",
+      "CreateUpdatedWorkspaceImageResult.ImageId.": "allOf",
+      "CreateUpdatedWorkspaceImageResult.ImageId..WorkspaceImageId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateUpdatedWorkspaceImageRequest",
+    "properties": {
+      "CreateUpdatedWorkspaceImageRequest": "object",
+      "CreateUpdatedWorkspaceImageRequest.Name.": "allOf",
+      "CreateUpdatedWorkspaceImageRequest.Name..WorkspaceImageName": "ref",
+      "CreateUpdatedWorkspaceImageRequest.Description.": "allOf",
+      "CreateUpdatedWorkspaceImageRequest.Description..WorkspaceImageDescription": "ref",
+      "CreateUpdatedWorkspaceImageRequest.SourceImageId.": "allOf",
+      "CreateUpdatedWorkspaceImageRequest.SourceImageId..WorkspaceImageId": "ref",
+      "CreateUpdatedWorkspaceImageRequest.Tags.": "allOf",
+      "CreateUpdatedWorkspaceImageRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateWorkspaceBundleResult",
+    "properties": {
+      "CreateWorkspaceBundleResult": "object",
+      "CreateWorkspaceBundleResult.WorkspaceBundle.WorkspaceBundle": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateWorkspaceBundleRequest",
+    "properties": {
+      "CreateWorkspaceBundleRequest": "object",
+      "CreateWorkspaceBundleRequest.BundleName.": "allOf",
+      "CreateWorkspaceBundleRequest.BundleName..WorkspaceBundleName": "ref",
+      "CreateWorkspaceBundleRequest.BundleDescription.": "allOf",
+      "CreateWorkspaceBundleRequest.BundleDescription..WorkspaceBundleDescription": "ref",
+      "CreateWorkspaceBundleRequest.ImageId.": "allOf",
+      "CreateWorkspaceBundleRequest.ImageId..WorkspaceImageId": "ref",
+      "CreateWorkspaceBundleRequest.ComputeType.ComputeType": "ref",
+      "CreateWorkspaceBundleRequest.UserStorage.UserStorage": "ref",
+      "CreateWorkspaceBundleRequest.RootStorage.RootStorage": "ref",
+      "CreateWorkspaceBundleRequest.Tags.": "allOf",
+      "CreateWorkspaceBundleRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateWorkspaceImageResult",
+    "properties": {
+      "CreateWorkspaceImageResult": "object",
+      "CreateWorkspaceImageResult.ImageId.": "allOf",
+      "CreateWorkspaceImageResult.ImageId..WorkspaceImageId": "ref",
+      "CreateWorkspaceImageResult.Name.": "allOf",
+      "CreateWorkspaceImageResult.Name..WorkspaceImageName": "ref",
+      "CreateWorkspaceImageResult.Description.": "allOf",
+      "CreateWorkspaceImageResult.Description..WorkspaceImageDescription": "ref",
+      "CreateWorkspaceImageResult.OperatingSystem.": "allOf",
+      "CreateWorkspaceImageResult.OperatingSystem..OperatingSystem": "ref",
+      "CreateWorkspaceImageResult.State.": "allOf",
+      "CreateWorkspaceImageResult.State..WorkspaceImageState": "ref",
+      "CreateWorkspaceImageResult.RequiredTenancy.": "allOf",
+      "CreateWorkspaceImageResult.RequiredTenancy..WorkspaceImageRequiredTenancy": "ref",
+      "CreateWorkspaceImageResult.Created.": "allOf",
+      "CreateWorkspaceImageResult.Created..Timestamp": "ref",
+      "CreateWorkspaceImageResult.OwnerAccountId.": "allOf",
+      "CreateWorkspaceImageResult.OwnerAccountId..AwsAccount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateWorkspaceImageRequest",
+    "properties": {
+      "CreateWorkspaceImageRequest": "object",
+      "CreateWorkspaceImageRequest.Name.": "allOf",
+      "CreateWorkspaceImageRequest.Name..WorkspaceImageName": "ref",
+      "CreateWorkspaceImageRequest.Description.": "allOf",
+      "CreateWorkspaceImageRequest.Description..WorkspaceImageDescription": "ref",
+      "CreateWorkspaceImageRequest.WorkspaceId.": "allOf",
+      "CreateWorkspaceImageRequest.WorkspaceId..WorkspaceId": "ref",
+      "CreateWorkspaceImageRequest.Tags.": "allOf",
+      "CreateWorkspaceImageRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateWorkspacesResult",
+    "properties": {
+      "CreateWorkspacesResult": "object",
+      "CreateWorkspacesResult.FailedRequests.": "allOf",
+      "CreateWorkspacesResult.FailedRequests..FailedCreateWorkspaceRequests": "ref",
+      "CreateWorkspacesResult.PendingRequests.": "allOf",
+      "CreateWorkspacesResult.PendingRequests..WorkspaceList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateWorkspacesRequest",
+    "properties": {
+      "CreateWorkspacesRequest": "object",
+      "CreateWorkspacesRequest.Workspaces.": "allOf",
+      "CreateWorkspacesRequest.Workspaces..WorkspaceRequestList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteClientBrandingResult",
+    "properties": { "DeleteClientBrandingResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteClientBrandingRequest",
+    "properties": {
+      "DeleteClientBrandingRequest": "object",
+      "DeleteClientBrandingRequest.ResourceId.": "allOf",
+      "DeleteClientBrandingRequest.ResourceId..DirectoryId": "ref",
+      "DeleteClientBrandingRequest.Platforms.": "allOf",
+      "DeleteClientBrandingRequest.Platforms..ClientDeviceTypeList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteConnectClientAddInResult",
+    "properties": { "DeleteConnectClientAddInResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteConnectClientAddInRequest",
+    "properties": {
+      "DeleteConnectClientAddInRequest": "object",
+      "DeleteConnectClientAddInRequest.AddInId.": "allOf",
+      "DeleteConnectClientAddInRequest.AddInId..AmazonUuid": "ref",
+      "DeleteConnectClientAddInRequest.ResourceId.": "allOf",
+      "DeleteConnectClientAddInRequest.ResourceId..DirectoryId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteConnectionAliasResult",
+    "properties": { "DeleteConnectionAliasResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteConnectionAliasRequest",
+    "properties": {
+      "DeleteConnectionAliasRequest": "object",
+      "DeleteConnectionAliasRequest.AliasId.": "allOf",
+      "DeleteConnectionAliasRequest.AliasId..ConnectionAliasId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteIpGroupResult",
+    "properties": { "DeleteIpGroupResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteIpGroupRequest",
+    "properties": {
+      "DeleteIpGroupRequest": "object",
+      "DeleteIpGroupRequest.GroupId.": "allOf",
+      "DeleteIpGroupRequest.GroupId..IpGroupId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteTagsResult",
+    "properties": { "DeleteTagsResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteTagsRequest",
+    "properties": {
+      "DeleteTagsRequest": "object",
+      "DeleteTagsRequest.ResourceId.": "allOf",
+      "DeleteTagsRequest.ResourceId..NonEmptyString": "ref",
+      "DeleteTagsRequest.TagKeys.": "allOf",
+      "DeleteTagsRequest.TagKeys..TagKeyList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteWorkspaceBundleResult",
+    "properties": { "DeleteWorkspaceBundleResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteWorkspaceBundleRequest",
+    "properties": {
+      "DeleteWorkspaceBundleRequest": "object",
+      "DeleteWorkspaceBundleRequest.BundleId.": "allOf",
+      "DeleteWorkspaceBundleRequest.BundleId..BundleId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteWorkspaceImageResult",
+    "properties": { "DeleteWorkspaceImageResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteWorkspaceImageRequest",
+    "properties": {
+      "DeleteWorkspaceImageRequest": "object",
+      "DeleteWorkspaceImageRequest.ImageId.": "allOf",
+      "DeleteWorkspaceImageRequest.ImageId..WorkspaceImageId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeregisterWorkspaceDirectoryResult",
+    "properties": { "DeregisterWorkspaceDirectoryResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeregisterWorkspaceDirectoryRequest",
+    "properties": {
+      "DeregisterWorkspaceDirectoryRequest": "object",
+      "DeregisterWorkspaceDirectoryRequest.DirectoryId.": "allOf",
+      "DeregisterWorkspaceDirectoryRequest.DirectoryId..DirectoryId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAccountResult",
+    "properties": {
+      "DescribeAccountResult": "object",
+      "DescribeAccountResult.DedicatedTenancySupport.": "allOf",
+      "DescribeAccountResult.DedicatedTenancySupport..DedicatedTenancySupportResultEnum": "ref",
+      "DescribeAccountResult.DedicatedTenancyManagementCidrRange.": "allOf",
+      "DescribeAccountResult.DedicatedTenancyManagementCidrRange..DedicatedTenancyManagementCidrRange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAccountRequest",
+    "properties": { "DescribeAccountRequest": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAccountModificationsResult",
+    "properties": {
+      "DescribeAccountModificationsResult": "object",
+      "DescribeAccountModificationsResult.AccountModifications.": "allOf",
+      "DescribeAccountModificationsResult.AccountModifications..AccountModificationList": "ref",
+      "DescribeAccountModificationsResult.NextToken.": "allOf",
+      "DescribeAccountModificationsResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAccountModificationsRequest",
+    "properties": {
+      "DescribeAccountModificationsRequest": "object",
+      "DescribeAccountModificationsRequest.NextToken.": "allOf",
+      "DescribeAccountModificationsRequest.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeClientBrandingResult",
+    "properties": {
+      "DescribeClientBrandingResult": "object",
+      "DescribeClientBrandingResult.DeviceTypeWindows.": "allOf",
+      "DescribeClientBrandingResult.DeviceTypeWindows..DefaultClientBrandingAttributes": "ref",
+      "DescribeClientBrandingResult.DeviceTypeOsx.": "allOf",
+      "DescribeClientBrandingResult.DeviceTypeOsx..DefaultClientBrandingAttributes": "ref",
+      "DescribeClientBrandingResult.DeviceTypeAndroid.": "allOf",
+      "DescribeClientBrandingResult.DeviceTypeAndroid..DefaultClientBrandingAttributes": "ref",
+      "DescribeClientBrandingResult.DeviceTypeIos.": "allOf",
+      "DescribeClientBrandingResult.DeviceTypeIos..IosClientBrandingAttributes": "ref",
+      "DescribeClientBrandingResult.DeviceTypeLinux.": "allOf",
+      "DescribeClientBrandingResult.DeviceTypeLinux..DefaultClientBrandingAttributes": "ref",
+      "DescribeClientBrandingResult.DeviceTypeWeb.": "allOf",
+      "DescribeClientBrandingResult.DeviceTypeWeb..DefaultClientBrandingAttributes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeClientBrandingRequest",
+    "properties": {
+      "DescribeClientBrandingRequest": "object",
+      "DescribeClientBrandingRequest.ResourceId.": "allOf",
+      "DescribeClientBrandingRequest.ResourceId..DirectoryId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeClientPropertiesResult",
+    "properties": {
+      "DescribeClientPropertiesResult": "object",
+      "DescribeClientPropertiesResult.ClientPropertiesList.": "allOf",
+      "DescribeClientPropertiesResult.ClientPropertiesList..ClientPropertiesList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeClientPropertiesRequest",
+    "properties": {
+      "DescribeClientPropertiesRequest": "object",
+      "DescribeClientPropertiesRequest.ResourceIds.": "allOf",
+      "DescribeClientPropertiesRequest.ResourceIds..ResourceIdList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeConnectClientAddInsResult",
+    "properties": {
+      "DescribeConnectClientAddInsResult": "object",
+      "DescribeConnectClientAddInsResult.AddIns.": "allOf",
+      "DescribeConnectClientAddInsResult.AddIns..ConnectClientAddInList": "ref",
+      "DescribeConnectClientAddInsResult.NextToken.": "allOf",
+      "DescribeConnectClientAddInsResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeConnectClientAddInsRequest",
+    "properties": {
+      "DescribeConnectClientAddInsRequest": "object",
+      "DescribeConnectClientAddInsRequest.ResourceId.": "allOf",
+      "DescribeConnectClientAddInsRequest.ResourceId..DirectoryId": "ref",
+      "DescribeConnectClientAddInsRequest.NextToken.": "allOf",
+      "DescribeConnectClientAddInsRequest.NextToken..PaginationToken": "ref",
+      "DescribeConnectClientAddInsRequest.MaxResults.": "allOf",
+      "DescribeConnectClientAddInsRequest.MaxResults..Limit": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeConnectionAliasPermissionsResult",
+    "properties": {
+      "DescribeConnectionAliasPermissionsResult": "object",
+      "DescribeConnectionAliasPermissionsResult.AliasId.": "allOf",
+      "DescribeConnectionAliasPermissionsResult.AliasId..ConnectionAliasId": "ref",
+      "DescribeConnectionAliasPermissionsResult.ConnectionAliasPermissions.": "allOf",
+      "DescribeConnectionAliasPermissionsResult.ConnectionAliasPermissions..ConnectionAliasPermissions": "ref",
+      "DescribeConnectionAliasPermissionsResult.NextToken.": "allOf",
+      "DescribeConnectionAliasPermissionsResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeConnectionAliasPermissionsRequest",
+    "properties": {
+      "DescribeConnectionAliasPermissionsRequest": "object",
+      "DescribeConnectionAliasPermissionsRequest.AliasId.": "allOf",
+      "DescribeConnectionAliasPermissionsRequest.AliasId..ConnectionAliasId": "ref",
+      "DescribeConnectionAliasPermissionsRequest.NextToken.": "allOf",
+      "DescribeConnectionAliasPermissionsRequest.NextToken..PaginationToken": "ref",
+      "DescribeConnectionAliasPermissionsRequest.MaxResults.": "allOf",
+      "DescribeConnectionAliasPermissionsRequest.MaxResults..Limit": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeConnectionAliasesResult",
+    "properties": {
+      "DescribeConnectionAliasesResult": "object",
+      "DescribeConnectionAliasesResult.ConnectionAliases.": "allOf",
+      "DescribeConnectionAliasesResult.ConnectionAliases..ConnectionAliasList": "ref",
+      "DescribeConnectionAliasesResult.NextToken.": "allOf",
+      "DescribeConnectionAliasesResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeConnectionAliasesRequest",
+    "properties": {
+      "DescribeConnectionAliasesRequest": "object",
+      "DescribeConnectionAliasesRequest.AliasIds.": "allOf",
+      "DescribeConnectionAliasesRequest.AliasIds..ConnectionAliasIdList": "ref",
+      "DescribeConnectionAliasesRequest.ResourceId.": "allOf",
+      "DescribeConnectionAliasesRequest.ResourceId..NonEmptyString": "ref",
+      "DescribeConnectionAliasesRequest.Limit.": "allOf",
+      "DescribeConnectionAliasesRequest.Limit..Limit": "ref",
+      "DescribeConnectionAliasesRequest.NextToken.": "allOf",
+      "DescribeConnectionAliasesRequest.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeIpGroupsResult",
+    "properties": {
+      "DescribeIpGroupsResult": "object",
+      "DescribeIpGroupsResult.Result.": "allOf",
+      "DescribeIpGroupsResult.Result..WorkspacesIpGroupsList": "ref",
+      "DescribeIpGroupsResult.NextToken.": "allOf",
+      "DescribeIpGroupsResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeIpGroupsRequest",
+    "properties": {
+      "DescribeIpGroupsRequest": "object",
+      "DescribeIpGroupsRequest.GroupIds.": "allOf",
+      "DescribeIpGroupsRequest.GroupIds..IpGroupIdList": "ref",
+      "DescribeIpGroupsRequest.NextToken.": "allOf",
+      "DescribeIpGroupsRequest.NextToken..PaginationToken": "ref",
+      "DescribeIpGroupsRequest.MaxResults.": "allOf",
+      "DescribeIpGroupsRequest.MaxResults..Limit": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeTagsResult",
+    "properties": {
+      "DescribeTagsResult": "object",
+      "DescribeTagsResult.TagList.": "allOf",
+      "DescribeTagsResult.TagList..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeTagsRequest",
+    "properties": {
+      "DescribeTagsRequest": "object",
+      "DescribeTagsRequest.ResourceId.": "allOf",
+      "DescribeTagsRequest.ResourceId..NonEmptyString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceBundlesResult",
+    "properties": {
+      "DescribeWorkspaceBundlesResult": "object",
+      "DescribeWorkspaceBundlesResult.Bundles.": "allOf",
+      "DescribeWorkspaceBundlesResult.Bundles..BundleList": "ref",
+      "DescribeWorkspaceBundlesResult.NextToken.": "allOf",
+      "DescribeWorkspaceBundlesResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceBundlesRequest",
+    "properties": {
+      "DescribeWorkspaceBundlesRequest": "object",
+      "DescribeWorkspaceBundlesRequest.BundleIds.": "allOf",
+      "DescribeWorkspaceBundlesRequest.BundleIds..BundleIdList": "ref",
+      "DescribeWorkspaceBundlesRequest.Owner.": "allOf",
+      "DescribeWorkspaceBundlesRequest.Owner..BundleOwner": "ref",
+      "DescribeWorkspaceBundlesRequest.NextToken.": "allOf",
+      "DescribeWorkspaceBundlesRequest.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceDirectoriesResult",
+    "properties": {
+      "DescribeWorkspaceDirectoriesResult": "object",
+      "DescribeWorkspaceDirectoriesResult.Directories.": "allOf",
+      "DescribeWorkspaceDirectoriesResult.Directories..DirectoryList": "ref",
+      "DescribeWorkspaceDirectoriesResult.NextToken.": "allOf",
+      "DescribeWorkspaceDirectoriesResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceDirectoriesRequest",
+    "properties": {
+      "DescribeWorkspaceDirectoriesRequest": "object",
+      "DescribeWorkspaceDirectoriesRequest.DirectoryIds.": "allOf",
+      "DescribeWorkspaceDirectoriesRequest.DirectoryIds..DirectoryIdList": "ref",
+      "DescribeWorkspaceDirectoriesRequest.Limit.": "allOf",
+      "DescribeWorkspaceDirectoriesRequest.Limit..Limit": "ref",
+      "DescribeWorkspaceDirectoriesRequest.NextToken.": "allOf",
+      "DescribeWorkspaceDirectoriesRequest.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceImagePermissionsResult",
+    "properties": {
+      "DescribeWorkspaceImagePermissionsResult": "object",
+      "DescribeWorkspaceImagePermissionsResult.ImageId.": "allOf",
+      "DescribeWorkspaceImagePermissionsResult.ImageId..WorkspaceImageId": "ref",
+      "DescribeWorkspaceImagePermissionsResult.ImagePermissions.": "allOf",
+      "DescribeWorkspaceImagePermissionsResult.ImagePermissions..ImagePermissions": "ref",
+      "DescribeWorkspaceImagePermissionsResult.NextToken.": "allOf",
+      "DescribeWorkspaceImagePermissionsResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceImagePermissionsRequest",
+    "properties": {
+      "DescribeWorkspaceImagePermissionsRequest": "object",
+      "DescribeWorkspaceImagePermissionsRequest.ImageId.": "allOf",
+      "DescribeWorkspaceImagePermissionsRequest.ImageId..WorkspaceImageId": "ref",
+      "DescribeWorkspaceImagePermissionsRequest.NextToken.": "allOf",
+      "DescribeWorkspaceImagePermissionsRequest.NextToken..PaginationToken": "ref",
+      "DescribeWorkspaceImagePermissionsRequest.MaxResults.": "allOf",
+      "DescribeWorkspaceImagePermissionsRequest.MaxResults..Limit": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceImagesResult",
+    "properties": {
+      "DescribeWorkspaceImagesResult": "object",
+      "DescribeWorkspaceImagesResult.Images.": "allOf",
+      "DescribeWorkspaceImagesResult.Images..WorkspaceImageList": "ref",
+      "DescribeWorkspaceImagesResult.NextToken.": "allOf",
+      "DescribeWorkspaceImagesResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceImagesRequest",
+    "properties": {
+      "DescribeWorkspaceImagesRequest": "object",
+      "DescribeWorkspaceImagesRequest.ImageIds.": "allOf",
+      "DescribeWorkspaceImagesRequest.ImageIds..WorkspaceImageIdList": "ref",
+      "DescribeWorkspaceImagesRequest.ImageType.": "allOf",
+      "DescribeWorkspaceImagesRequest.ImageType..ImageType": "ref",
+      "DescribeWorkspaceImagesRequest.NextToken.": "allOf",
+      "DescribeWorkspaceImagesRequest.NextToken..PaginationToken": "ref",
+      "DescribeWorkspaceImagesRequest.MaxResults.": "allOf",
+      "DescribeWorkspaceImagesRequest.MaxResults..Limit": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceSnapshotsResult",
+    "properties": {
+      "DescribeWorkspaceSnapshotsResult": "object",
+      "DescribeWorkspaceSnapshotsResult.RebuildSnapshots.": "allOf",
+      "DescribeWorkspaceSnapshotsResult.RebuildSnapshots..SnapshotList": "ref",
+      "DescribeWorkspaceSnapshotsResult.RestoreSnapshots.": "allOf",
+      "DescribeWorkspaceSnapshotsResult.RestoreSnapshots..SnapshotList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspaceSnapshotsRequest",
+    "properties": {
+      "DescribeWorkspaceSnapshotsRequest": "object",
+      "DescribeWorkspaceSnapshotsRequest.WorkspaceId.": "allOf",
+      "DescribeWorkspaceSnapshotsRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspacesResult",
+    "properties": {
+      "DescribeWorkspacesResult": "object",
+      "DescribeWorkspacesResult.Workspaces.": "allOf",
+      "DescribeWorkspacesResult.Workspaces..WorkspaceList": "ref",
+      "DescribeWorkspacesResult.NextToken.": "allOf",
+      "DescribeWorkspacesResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspacesRequest",
+    "properties": {
+      "DescribeWorkspacesRequest": "object",
+      "DescribeWorkspacesRequest.WorkspaceIds.": "allOf",
+      "DescribeWorkspacesRequest.WorkspaceIds..WorkspaceIdList": "ref",
+      "DescribeWorkspacesRequest.DirectoryId.": "allOf",
+      "DescribeWorkspacesRequest.DirectoryId..DirectoryId": "ref",
+      "DescribeWorkspacesRequest.UserName.": "allOf",
+      "DescribeWorkspacesRequest.UserName..UserName": "ref",
+      "DescribeWorkspacesRequest.BundleId.": "allOf",
+      "DescribeWorkspacesRequest.BundleId..BundleId": "ref",
+      "DescribeWorkspacesRequest.Limit.": "allOf",
+      "DescribeWorkspacesRequest.Limit..Limit": "ref",
+      "DescribeWorkspacesRequest.NextToken.": "allOf",
+      "DescribeWorkspacesRequest.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspacesConnectionStatusResult",
+    "properties": {
+      "DescribeWorkspacesConnectionStatusResult": "object",
+      "DescribeWorkspacesConnectionStatusResult.WorkspacesConnectionStatus.": "allOf",
+      "DescribeWorkspacesConnectionStatusResult.WorkspacesConnectionStatus..WorkspaceConnectionStatusList": "ref",
+      "DescribeWorkspacesConnectionStatusResult.NextToken.": "allOf",
+      "DescribeWorkspacesConnectionStatusResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWorkspacesConnectionStatusRequest",
+    "properties": {
+      "DescribeWorkspacesConnectionStatusRequest": "object",
+      "DescribeWorkspacesConnectionStatusRequest.WorkspaceIds.": "allOf",
+      "DescribeWorkspacesConnectionStatusRequest.WorkspaceIds..WorkspaceIdList": "ref",
+      "DescribeWorkspacesConnectionStatusRequest.NextToken.": "allOf",
+      "DescribeWorkspacesConnectionStatusRequest.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DisassociateConnectionAliasResult",
+    "properties": { "DisassociateConnectionAliasResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DisassociateConnectionAliasRequest",
+    "properties": {
+      "DisassociateConnectionAliasRequest": "object",
+      "DisassociateConnectionAliasRequest.AliasId.": "allOf",
+      "DisassociateConnectionAliasRequest.AliasId..ConnectionAliasId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DisassociateIpGroupsResult",
+    "properties": { "DisassociateIpGroupsResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DisassociateIpGroupsRequest",
+    "properties": {
+      "DisassociateIpGroupsRequest": "object",
+      "DisassociateIpGroupsRequest.DirectoryId.": "allOf",
+      "DisassociateIpGroupsRequest.DirectoryId..DirectoryId": "ref",
+      "DisassociateIpGroupsRequest.GroupIds.": "allOf",
+      "DisassociateIpGroupsRequest.GroupIds..IpGroupIdList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImportClientBrandingResult",
+    "properties": {
+      "ImportClientBrandingResult": "object",
+      "ImportClientBrandingResult.DeviceTypeWindows.": "allOf",
+      "ImportClientBrandingResult.DeviceTypeWindows..DefaultClientBrandingAttributes": "ref",
+      "ImportClientBrandingResult.DeviceTypeOsx.": "allOf",
+      "ImportClientBrandingResult.DeviceTypeOsx..DefaultClientBrandingAttributes": "ref",
+      "ImportClientBrandingResult.DeviceTypeAndroid.": "allOf",
+      "ImportClientBrandingResult.DeviceTypeAndroid..DefaultClientBrandingAttributes": "ref",
+      "ImportClientBrandingResult.DeviceTypeIos.": "allOf",
+      "ImportClientBrandingResult.DeviceTypeIos..IosClientBrandingAttributes": "ref",
+      "ImportClientBrandingResult.DeviceTypeLinux.": "allOf",
+      "ImportClientBrandingResult.DeviceTypeLinux..DefaultClientBrandingAttributes": "ref",
+      "ImportClientBrandingResult.DeviceTypeWeb.": "allOf",
+      "ImportClientBrandingResult.DeviceTypeWeb..DefaultClientBrandingAttributes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImportClientBrandingRequest",
+    "properties": {
+      "ImportClientBrandingRequest": "object",
+      "ImportClientBrandingRequest.ResourceId.": "allOf",
+      "ImportClientBrandingRequest.ResourceId..DirectoryId": "ref",
+      "ImportClientBrandingRequest.DeviceTypeWindows.": "allOf",
+      "ImportClientBrandingRequest.DeviceTypeWindows..DefaultImportClientBrandingAttributes": "ref",
+      "ImportClientBrandingRequest.DeviceTypeOsx.": "allOf",
+      "ImportClientBrandingRequest.DeviceTypeOsx..DefaultImportClientBrandingAttributes": "ref",
+      "ImportClientBrandingRequest.DeviceTypeAndroid.": "allOf",
+      "ImportClientBrandingRequest.DeviceTypeAndroid..DefaultImportClientBrandingAttributes": "ref",
+      "ImportClientBrandingRequest.DeviceTypeIos.": "allOf",
+      "ImportClientBrandingRequest.DeviceTypeIos..IosImportClientBrandingAttributes": "ref",
+      "ImportClientBrandingRequest.DeviceTypeLinux.": "allOf",
+      "ImportClientBrandingRequest.DeviceTypeLinux..DefaultImportClientBrandingAttributes": "ref",
+      "ImportClientBrandingRequest.DeviceTypeWeb.": "allOf",
+      "ImportClientBrandingRequest.DeviceTypeWeb..DefaultImportClientBrandingAttributes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImportWorkspaceImageResult",
+    "properties": {
+      "ImportWorkspaceImageResult": "object",
+      "ImportWorkspaceImageResult.ImageId.": "allOf",
+      "ImportWorkspaceImageResult.ImageId..WorkspaceImageId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImportWorkspaceImageRequest",
+    "properties": {
+      "ImportWorkspaceImageRequest": "object",
+      "ImportWorkspaceImageRequest.Ec2ImageId.": "allOf",
+      "ImportWorkspaceImageRequest.Ec2ImageId..Ec2ImageId": "ref",
+      "ImportWorkspaceImageRequest.IngestionProcess.": "allOf",
+      "ImportWorkspaceImageRequest.IngestionProcess..WorkspaceImageIngestionProcess": "ref",
+      "ImportWorkspaceImageRequest.ImageName.": "allOf",
+      "ImportWorkspaceImageRequest.ImageName..WorkspaceImageName": "ref",
+      "ImportWorkspaceImageRequest.ImageDescription.": "allOf",
+      "ImportWorkspaceImageRequest.ImageDescription..WorkspaceImageDescription": "ref",
+      "ImportWorkspaceImageRequest.Tags.": "allOf",
+      "ImportWorkspaceImageRequest.Tags..TagList": "ref",
+      "ImportWorkspaceImageRequest.Applications.": "allOf",
+      "ImportWorkspaceImageRequest.Applications..ApplicationList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListAvailableManagementCidrRangesResult",
+    "properties": {
+      "ListAvailableManagementCidrRangesResult": "object",
+      "ListAvailableManagementCidrRangesResult.ManagementCidrRanges.": "allOf",
+      "ListAvailableManagementCidrRangesResult.ManagementCidrRanges..DedicatedTenancyCidrRangeList": "ref",
+      "ListAvailableManagementCidrRangesResult.NextToken.": "allOf",
+      "ListAvailableManagementCidrRangesResult.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListAvailableManagementCidrRangesRequest",
+    "properties": {
+      "ListAvailableManagementCidrRangesRequest": "object",
+      "ListAvailableManagementCidrRangesRequest.ManagementCidrRangeConstraint.": "allOf",
+      "ListAvailableManagementCidrRangesRequest.ManagementCidrRangeConstraint..ManagementCidrRangeConstraint": "ref",
+      "ListAvailableManagementCidrRangesRequest.MaxResults.": "allOf",
+      "ListAvailableManagementCidrRangesRequest.MaxResults..ManagementCidrRangeMaxResults": "ref",
+      "ListAvailableManagementCidrRangesRequest.NextToken.": "allOf",
+      "ListAvailableManagementCidrRangesRequest.NextToken..PaginationToken": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MigrateWorkspaceResult",
+    "properties": {
+      "MigrateWorkspaceResult": "object",
+      "MigrateWorkspaceResult.SourceWorkspaceId.": "allOf",
+      "MigrateWorkspaceResult.SourceWorkspaceId..WorkspaceId": "ref",
+      "MigrateWorkspaceResult.TargetWorkspaceId.": "allOf",
+      "MigrateWorkspaceResult.TargetWorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MigrateWorkspaceRequest",
+    "properties": {
+      "MigrateWorkspaceRequest": "object",
+      "MigrateWorkspaceRequest.SourceWorkspaceId.": "allOf",
+      "MigrateWorkspaceRequest.SourceWorkspaceId..WorkspaceId": "ref",
+      "MigrateWorkspaceRequest.BundleId.": "allOf",
+      "MigrateWorkspaceRequest.BundleId..BundleId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperationInProgressException",
+    "properties": { "OperationInProgressException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyAccountResult",
+    "properties": { "ModifyAccountResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyAccountRequest",
+    "properties": {
+      "ModifyAccountRequest": "object",
+      "ModifyAccountRequest.DedicatedTenancySupport.": "allOf",
+      "ModifyAccountRequest.DedicatedTenancySupport..DedicatedTenancySupportEnum": "ref",
+      "ModifyAccountRequest.DedicatedTenancyManagementCidrRange.": "allOf",
+      "ModifyAccountRequest.DedicatedTenancyManagementCidrRange..DedicatedTenancyManagementCidrRange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyCertificateBasedAuthPropertiesResult",
+    "properties": { "ModifyCertificateBasedAuthPropertiesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyCertificateBasedAuthPropertiesRequest",
+    "properties": {
+      "ModifyCertificateBasedAuthPropertiesRequest": "object",
+      "ModifyCertificateBasedAuthPropertiesRequest.ResourceId.": "allOf",
+      "ModifyCertificateBasedAuthPropertiesRequest.ResourceId..DirectoryId": "ref",
+      "ModifyCertificateBasedAuthPropertiesRequest.CertificateBasedAuthProperties.": "allOf",
+      "ModifyCertificateBasedAuthPropertiesRequest.CertificateBasedAuthProperties..CertificateBasedAuthProperties": "ref",
+      "ModifyCertificateBasedAuthPropertiesRequest.PropertiesToDelete.": "allOf",
+      "ModifyCertificateBasedAuthPropertiesRequest.PropertiesToDelete..DeletableCertificateBasedAuthPropertiesList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyClientPropertiesResult",
+    "properties": { "ModifyClientPropertiesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyClientPropertiesRequest",
+    "properties": {
+      "ModifyClientPropertiesRequest": "object",
+      "ModifyClientPropertiesRequest.ResourceId.": "allOf",
+      "ModifyClientPropertiesRequest.ResourceId..NonEmptyString": "ref",
+      "ModifyClientPropertiesRequest.ClientProperties.": "allOf",
+      "ModifyClientPropertiesRequest.ClientProperties..ClientProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifySamlPropertiesResult",
+    "properties": { "ModifySamlPropertiesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifySamlPropertiesRequest",
+    "properties": {
+      "ModifySamlPropertiesRequest": "object",
+      "ModifySamlPropertiesRequest.ResourceId.": "allOf",
+      "ModifySamlPropertiesRequest.ResourceId..DirectoryId": "ref",
+      "ModifySamlPropertiesRequest.SamlProperties.": "allOf",
+      "ModifySamlPropertiesRequest.SamlProperties..SamlProperties": "ref",
+      "ModifySamlPropertiesRequest.PropertiesToDelete.": "allOf",
+      "ModifySamlPropertiesRequest.PropertiesToDelete..DeletableSamlPropertiesList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifySelfservicePermissionsResult",
+    "properties": { "ModifySelfservicePermissionsResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifySelfservicePermissionsRequest",
+    "properties": {
+      "ModifySelfservicePermissionsRequest": "object",
+      "ModifySelfservicePermissionsRequest.ResourceId.": "allOf",
+      "ModifySelfservicePermissionsRequest.ResourceId..DirectoryId": "ref",
+      "ModifySelfservicePermissionsRequest.SelfservicePermissions.": "allOf",
+      "ModifySelfservicePermissionsRequest.SelfservicePermissions..SelfservicePermissions": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspaceAccessPropertiesResult",
+    "properties": { "ModifyWorkspaceAccessPropertiesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspaceAccessPropertiesRequest",
+    "properties": {
+      "ModifyWorkspaceAccessPropertiesRequest": "object",
+      "ModifyWorkspaceAccessPropertiesRequest.ResourceId.": "allOf",
+      "ModifyWorkspaceAccessPropertiesRequest.ResourceId..DirectoryId": "ref",
+      "ModifyWorkspaceAccessPropertiesRequest.WorkspaceAccessProperties.": "allOf",
+      "ModifyWorkspaceAccessPropertiesRequest.WorkspaceAccessProperties..WorkspaceAccessProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspaceCreationPropertiesResult",
+    "properties": { "ModifyWorkspaceCreationPropertiesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspaceCreationPropertiesRequest",
+    "properties": {
+      "ModifyWorkspaceCreationPropertiesRequest": "object",
+      "ModifyWorkspaceCreationPropertiesRequest.ResourceId.": "allOf",
+      "ModifyWorkspaceCreationPropertiesRequest.ResourceId..DirectoryId": "ref",
+      "ModifyWorkspaceCreationPropertiesRequest.WorkspaceCreationProperties.": "allOf",
+      "ModifyWorkspaceCreationPropertiesRequest.WorkspaceCreationProperties..WorkspaceCreationProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspacePropertiesResult",
+    "properties": { "ModifyWorkspacePropertiesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspacePropertiesRequest",
+    "properties": {
+      "ModifyWorkspacePropertiesRequest": "object",
+      "ModifyWorkspacePropertiesRequest.WorkspaceId.": "allOf",
+      "ModifyWorkspacePropertiesRequest.WorkspaceId..WorkspaceId": "ref",
+      "ModifyWorkspacePropertiesRequest.WorkspaceProperties.": "allOf",
+      "ModifyWorkspacePropertiesRequest.WorkspaceProperties..WorkspaceProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UnsupportedWorkspaceConfigurationException",
+    "properties": { "UnsupportedWorkspaceConfigurationException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspaceStateResult",
+    "properties": { "ModifyWorkspaceStateResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModifyWorkspaceStateRequest",
+    "properties": {
+      "ModifyWorkspaceStateRequest": "object",
+      "ModifyWorkspaceStateRequest.WorkspaceId.": "allOf",
+      "ModifyWorkspaceStateRequest.WorkspaceId..WorkspaceId": "ref",
+      "ModifyWorkspaceStateRequest.WorkspaceState.": "allOf",
+      "ModifyWorkspaceStateRequest.WorkspaceState..TargetWorkspaceState": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebootWorkspacesResult",
+    "properties": {
+      "RebootWorkspacesResult": "object",
+      "RebootWorkspacesResult.FailedRequests.": "allOf",
+      "RebootWorkspacesResult.FailedRequests..FailedRebootWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebootWorkspacesRequest",
+    "properties": {
+      "RebootWorkspacesRequest": "object",
+      "RebootWorkspacesRequest.RebootWorkspaceRequests.": "allOf",
+      "RebootWorkspacesRequest.RebootWorkspaceRequests..RebootWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebuildWorkspacesResult",
+    "properties": {
+      "RebuildWorkspacesResult": "object",
+      "RebuildWorkspacesResult.FailedRequests.": "allOf",
+      "RebuildWorkspacesResult.FailedRequests..FailedRebuildWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebuildWorkspacesRequest",
+    "properties": {
+      "RebuildWorkspacesRequest": "object",
+      "RebuildWorkspacesRequest.RebuildWorkspaceRequests.": "allOf",
+      "RebuildWorkspacesRequest.RebuildWorkspaceRequests..RebuildWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RegisterWorkspaceDirectoryResult",
+    "properties": { "RegisterWorkspaceDirectoryResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RegisterWorkspaceDirectoryRequest",
+    "properties": {
+      "RegisterWorkspaceDirectoryRequest": "object",
+      "RegisterWorkspaceDirectoryRequest.DirectoryId.": "allOf",
+      "RegisterWorkspaceDirectoryRequest.DirectoryId..DirectoryId": "ref",
+      "RegisterWorkspaceDirectoryRequest.SubnetIds.": "allOf",
+      "RegisterWorkspaceDirectoryRequest.SubnetIds..SubnetIds": "ref",
+      "RegisterWorkspaceDirectoryRequest.EnableWorkDocs.": "allOf",
+      "RegisterWorkspaceDirectoryRequest.EnableWorkDocs..BooleanObject": "ref",
+      "RegisterWorkspaceDirectoryRequest.EnableSelfService.": "allOf",
+      "RegisterWorkspaceDirectoryRequest.EnableSelfService..BooleanObject": "ref",
+      "RegisterWorkspaceDirectoryRequest.Tenancy.": "allOf",
+      "RegisterWorkspaceDirectoryRequest.Tenancy..Tenancy": "ref",
+      "RegisterWorkspaceDirectoryRequest.Tags.": "allOf",
+      "RegisterWorkspaceDirectoryRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspacesDefaultRoleNotFoundException",
+    "properties": { "WorkspacesDefaultRoleNotFoundException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UnsupportedNetworkConfigurationException",
+    "properties": { "UnsupportedNetworkConfigurationException": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RestoreWorkspaceResult",
+    "properties": { "RestoreWorkspaceResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RestoreWorkspaceRequest",
+    "properties": {
+      "RestoreWorkspaceRequest": "object",
+      "RestoreWorkspaceRequest.WorkspaceId.": "allOf",
+      "RestoreWorkspaceRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RevokeIpRulesResult",
+    "properties": { "RevokeIpRulesResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RevokeIpRulesRequest",
+    "properties": {
+      "RevokeIpRulesRequest": "object",
+      "RevokeIpRulesRequest.GroupId.": "allOf",
+      "RevokeIpRulesRequest.GroupId..IpGroupId": "ref",
+      "RevokeIpRulesRequest.UserRules.": "allOf",
+      "RevokeIpRulesRequest.UserRules..IpRevokedRuleList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StartWorkspacesResult",
+    "properties": {
+      "StartWorkspacesResult": "object",
+      "StartWorkspacesResult.FailedRequests.": "allOf",
+      "StartWorkspacesResult.FailedRequests..FailedStartWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StartWorkspacesRequest",
+    "properties": {
+      "StartWorkspacesRequest": "object",
+      "StartWorkspacesRequest.StartWorkspaceRequests.": "allOf",
+      "StartWorkspacesRequest.StartWorkspaceRequests..StartWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StopWorkspacesResult",
+    "properties": {
+      "StopWorkspacesResult": "object",
+      "StopWorkspacesResult.FailedRequests.": "allOf",
+      "StopWorkspacesResult.FailedRequests..FailedStopWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StopWorkspacesRequest",
+    "properties": {
+      "StopWorkspacesRequest": "object",
+      "StopWorkspacesRequest.StopWorkspaceRequests.": "allOf",
+      "StopWorkspacesRequest.StopWorkspaceRequests..StopWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TerminateWorkspacesResult",
+    "properties": {
+      "TerminateWorkspacesResult": "object",
+      "TerminateWorkspacesResult.FailedRequests.": "allOf",
+      "TerminateWorkspacesResult.FailedRequests..FailedTerminateWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TerminateWorkspacesRequest",
+    "properties": {
+      "TerminateWorkspacesRequest": "object",
+      "TerminateWorkspacesRequest.TerminateWorkspaceRequests.": "allOf",
+      "TerminateWorkspacesRequest.TerminateWorkspaceRequests..TerminateWorkspaceRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateConnectClientAddInResult",
+    "properties": { "UpdateConnectClientAddInResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateConnectClientAddInRequest",
+    "properties": {
+      "UpdateConnectClientAddInRequest": "object",
+      "UpdateConnectClientAddInRequest.AddInId.": "allOf",
+      "UpdateConnectClientAddInRequest.AddInId..AmazonUuid": "ref",
+      "UpdateConnectClientAddInRequest.ResourceId.": "allOf",
+      "UpdateConnectClientAddInRequest.ResourceId..DirectoryId": "ref",
+      "UpdateConnectClientAddInRequest.Name.": "allOf",
+      "UpdateConnectClientAddInRequest.Name..AddInName": "ref",
+      "UpdateConnectClientAddInRequest.URL.": "allOf",
+      "UpdateConnectClientAddInRequest.URL..AddInUrl": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateConnectionAliasPermissionResult",
+    "properties": { "UpdateConnectionAliasPermissionResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateConnectionAliasPermissionRequest",
+    "properties": {
+      "UpdateConnectionAliasPermissionRequest": "object",
+      "UpdateConnectionAliasPermissionRequest.AliasId.": "allOf",
+      "UpdateConnectionAliasPermissionRequest.AliasId..ConnectionAliasId": "ref",
+      "UpdateConnectionAliasPermissionRequest.ConnectionAliasPermission.": "allOf",
+      "UpdateConnectionAliasPermissionRequest.ConnectionAliasPermission..ConnectionAliasPermission": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateRulesOfIpGroupResult",
+    "properties": { "UpdateRulesOfIpGroupResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateRulesOfIpGroupRequest",
+    "properties": {
+      "UpdateRulesOfIpGroupRequest": "object",
+      "UpdateRulesOfIpGroupRequest.GroupId.": "allOf",
+      "UpdateRulesOfIpGroupRequest.GroupId..IpGroupId": "ref",
+      "UpdateRulesOfIpGroupRequest.UserRules.": "allOf",
+      "UpdateRulesOfIpGroupRequest.UserRules..IpRuleList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateWorkspaceBundleResult",
+    "properties": { "UpdateWorkspaceBundleResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateWorkspaceBundleRequest",
+    "properties": {
+      "UpdateWorkspaceBundleRequest": "object",
+      "UpdateWorkspaceBundleRequest.BundleId.": "allOf",
+      "UpdateWorkspaceBundleRequest.BundleId..BundleId": "ref",
+      "UpdateWorkspaceBundleRequest.ImageId.": "allOf",
+      "UpdateWorkspaceBundleRequest.ImageId..WorkspaceImageId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateWorkspaceImagePermissionResult",
+    "properties": { "UpdateWorkspaceImagePermissionResult": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateWorkspaceImagePermissionRequest",
+    "properties": {
+      "UpdateWorkspaceImagePermissionRequest": "object",
+      "UpdateWorkspaceImagePermissionRequest.ImageId.": "allOf",
+      "UpdateWorkspaceImagePermissionRequest.ImageId..WorkspaceImageId": "ref",
+      "UpdateWorkspaceImagePermissionRequest.AllowCopyImage.": "allOf",
+      "UpdateWorkspaceImagePermissionRequest.AllowCopyImage..BooleanObject": "ref",
+      "UpdateWorkspaceImagePermissionRequest.SharedAccountId.": "allOf",
+      "UpdateWorkspaceImagePermissionRequest.SharedAccountId..AwsAccount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ARN",
+    "properties": { "ARN": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AccessPropertyValue",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DedicatedTenancyModificationStateEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DedicatedTenancySupportResultEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DedicatedTenancyManagementCidrRange",
+    "properties": { "DedicatedTenancyManagementCidrRange": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Timestamp",
+    "properties": { "Timestamp": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceErrorCode",
+    "properties": { "WorkspaceErrorCode": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Description",
+    "properties": { "Description": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AccountModification",
+    "properties": {
+      "AccountModification": "object",
+      "AccountModification.ModificationState.": "allOf",
+      "AccountModification.ModificationState..DedicatedTenancyModificationStateEnum": "ref",
+      "AccountModification.DedicatedTenancySupport.": "allOf",
+      "AccountModification.DedicatedTenancySupport..DedicatedTenancySupportResultEnum": "ref",
+      "AccountModification.DedicatedTenancyManagementCidrRange.": "allOf",
+      "AccountModification.DedicatedTenancyManagementCidrRange..DedicatedTenancyManagementCidrRange": "ref",
+      "AccountModification.StartTime.": "allOf",
+      "AccountModification.StartTime..Timestamp": "ref",
+      "AccountModification.ErrorCode.": "allOf",
+      "AccountModification.ErrorCode..WorkspaceErrorCode": "ref",
+      "AccountModification.ErrorMessage.": "allOf",
+      "AccountModification.ErrorMessage..Description": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AccountModificationList",
+    "properties": {
+      "AccountModificationList": "array",
+      "AccountModificationList.AccountModification": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AddInName",
+    "properties": { "AddInName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AddInUrl",
+    "properties": { "AddInUrl": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Alias",
+    "properties": { "Alias": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AmazonUuid",
+    "properties": { "AmazonUuid": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Application",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ApplicationList",
+    "properties": {
+      "ApplicationList": "array",
+      "ApplicationList.Application": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasId",
+    "properties": { "ConnectionAliasId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NonEmptyString",
+    "properties": { "NonEmptyString": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionIdentifier",
+    "properties": { "ConnectionIdentifier": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DirectoryId",
+    "properties": { "DirectoryId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpGroupIdList",
+    "properties": { "IpGroupIdList": "array", "IpGroupIdList.IpGroupId": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AssociationStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpGroupId",
+    "properties": { "IpGroupId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpRuleList",
+    "properties": { "IpRuleList": "array", "IpRuleList.IpRuleItem": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AwsAccount",
+    "properties": { "AwsAccount": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BooleanObject",
+    "properties": { "BooleanObject": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BundleId",
+    "properties": { "BundleId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BundleIdList",
+    "properties": { "BundleIdList": "array", "BundleIdList.BundleId": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceBundle",
+    "properties": {
+      "WorkspaceBundle": "object",
+      "WorkspaceBundle.BundleId.": "allOf",
+      "WorkspaceBundle.BundleId..BundleId": "ref",
+      "WorkspaceBundle.Name.": "allOf",
+      "WorkspaceBundle.Name..NonEmptyString": "ref",
+      "WorkspaceBundle.Owner.": "allOf",
+      "WorkspaceBundle.Owner..BundleOwner": "ref",
+      "WorkspaceBundle.Description.": "allOf",
+      "WorkspaceBundle.Description..Description": "ref",
+      "WorkspaceBundle.ImageId.": "allOf",
+      "WorkspaceBundle.ImageId..WorkspaceImageId": "ref",
+      "WorkspaceBundle.RootStorage.": "allOf",
+      "WorkspaceBundle.RootStorage..RootStorage": "ref",
+      "WorkspaceBundle.UserStorage.": "allOf",
+      "WorkspaceBundle.UserStorage..UserStorage": "ref",
+      "WorkspaceBundle.ComputeType.": "allOf",
+      "WorkspaceBundle.ComputeType..ComputeType": "ref",
+      "WorkspaceBundle.LastUpdatedTime.": "allOf",
+      "WorkspaceBundle.LastUpdatedTime..Timestamp": "ref",
+      "WorkspaceBundle.CreationTime.": "allOf",
+      "WorkspaceBundle.CreationTime..Timestamp": "ref",
+      "WorkspaceBundle.State.": "allOf",
+      "WorkspaceBundle.State..WorkspaceBundleState": "ref",
+      "WorkspaceBundle.BundleType.": "allOf",
+      "WorkspaceBundle.BundleType..BundleType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BundleList",
+    "properties": { "BundleList": "array", "BundleList.WorkspaceBundle": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BundleOwner",
+    "properties": { "BundleOwner": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BundleType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CertificateAuthorityArn",
+    "properties": { "CertificateAuthorityArn": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CertificateBasedAuthStatusEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CertificateBasedAuthProperties",
+    "properties": {
+      "CertificateBasedAuthProperties": "object",
+      "CertificateBasedAuthProperties.Status.": "allOf",
+      "CertificateBasedAuthProperties.Status..CertificateBasedAuthStatusEnum": "ref",
+      "CertificateBasedAuthProperties.CertificateAuthorityArn.": "allOf",
+      "CertificateBasedAuthProperties.CertificateAuthorityArn..CertificateAuthorityArn": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientDeviceType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientDeviceTypeList",
+    "properties": {
+      "ClientDeviceTypeList": "array",
+      "ClientDeviceTypeList.ClientDeviceType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientEmail",
+    "properties": { "ClientEmail": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientLocale",
+    "properties": { "ClientLocale": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientLoginMessage",
+    "properties": { "ClientLoginMessage": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ReconnectEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LogUploadEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientProperties",
+    "properties": {
+      "ClientProperties": "object",
+      "ClientProperties.ReconnectEnabled.": "allOf",
+      "ClientProperties.ReconnectEnabled..ReconnectEnum": "ref",
+      "ClientProperties.LogUploadEnabled.": "allOf",
+      "ClientProperties.LogUploadEnabled..LogUploadEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientPropertiesResult",
+    "properties": {
+      "ClientPropertiesResult": "object",
+      "ClientPropertiesResult.ResourceId.": "allOf",
+      "ClientPropertiesResult.ResourceId..NonEmptyString": "ref",
+      "ClientPropertiesResult.ClientProperties.": "allOf",
+      "ClientPropertiesResult.ClientProperties..ClientProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientPropertiesList",
+    "properties": {
+      "ClientPropertiesList": "array",
+      "ClientPropertiesList.ClientPropertiesResult": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClientUrl",
+    "properties": { "ClientUrl": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Compute",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ComputeType",
+    "properties": {
+      "ComputeType": "object",
+      "ComputeType.Name.": "allOf",
+      "ComputeType.Name..Compute": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ComputerName",
+    "properties": { "ComputerName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectClientAddIn",
+    "properties": {
+      "ConnectClientAddIn": "object",
+      "ConnectClientAddIn.AddInId.": "allOf",
+      "ConnectClientAddIn.AddInId..AmazonUuid": "ref",
+      "ConnectClientAddIn.ResourceId.": "allOf",
+      "ConnectClientAddIn.ResourceId..DirectoryId": "ref",
+      "ConnectClientAddIn.Name.": "allOf",
+      "ConnectClientAddIn.Name..AddInName": "ref",
+      "ConnectClientAddIn.URL.": "allOf",
+      "ConnectClientAddIn.URL..AddInUrl": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectClientAddInList",
+    "properties": {
+      "ConnectClientAddInList": "array",
+      "ConnectClientAddInList.ConnectClientAddIn": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionString",
+    "properties": { "ConnectionString": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasAssociationList",
+    "properties": {
+      "ConnectionAliasAssociationList": "array",
+      "ConnectionAliasAssociationList.ConnectionAliasAssociation": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAlias",
+    "properties": {
+      "ConnectionAlias": "object",
+      "ConnectionAlias.ConnectionString.": "allOf",
+      "ConnectionAlias.ConnectionString..ConnectionString": "ref",
+      "ConnectionAlias.AliasId.": "allOf",
+      "ConnectionAlias.AliasId..ConnectionAliasId": "ref",
+      "ConnectionAlias.State.": "allOf",
+      "ConnectionAlias.State..ConnectionAliasState": "ref",
+      "ConnectionAlias.OwnerAccountId.": "allOf",
+      "ConnectionAlias.OwnerAccountId..AwsAccount": "ref",
+      "ConnectionAlias.Associations.": "allOf",
+      "ConnectionAlias.Associations..ConnectionAliasAssociationList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasAssociation",
+    "properties": {
+      "ConnectionAliasAssociation": "object",
+      "ConnectionAliasAssociation.AssociationStatus.": "allOf",
+      "ConnectionAliasAssociation.AssociationStatus..AssociationStatus": "ref",
+      "ConnectionAliasAssociation.AssociatedAccountId.": "allOf",
+      "ConnectionAliasAssociation.AssociatedAccountId..AwsAccount": "ref",
+      "ConnectionAliasAssociation.ResourceId.": "allOf",
+      "ConnectionAliasAssociation.ResourceId..NonEmptyString": "ref",
+      "ConnectionAliasAssociation.ConnectionIdentifier.": "allOf",
+      "ConnectionAliasAssociation.ConnectionIdentifier..ConnectionIdentifier": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasIdList",
+    "properties": {
+      "ConnectionAliasIdList": "array",
+      "ConnectionAliasIdList.ConnectionAliasId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasList",
+    "properties": {
+      "ConnectionAliasList": "array",
+      "ConnectionAliasList.ConnectionAlias": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasPermission",
+    "properties": {
+      "ConnectionAliasPermission": "object",
+      "ConnectionAliasPermission.SharedAccountId.": "allOf",
+      "ConnectionAliasPermission.SharedAccountId..AwsAccount": "ref",
+      "ConnectionAliasPermission.AllowAssociation.": "allOf",
+      "ConnectionAliasPermission.AllowAssociation..BooleanObject": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionAliasPermissions",
+    "properties": {
+      "ConnectionAliasPermissions": "array",
+      "ConnectionAliasPermissions.ConnectionAliasPermission": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConnectionState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageName",
+    "properties": { "WorkspaceImageName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageDescription",
+    "properties": { "WorkspaceImageDescription": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageId",
+    "properties": { "WorkspaceImageId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Region",
+    "properties": { "Region": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagList",
+    "properties": { "TagList": "array", "TagList.Tag": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpGroupName",
+    "properties": { "IpGroupName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpGroupDesc",
+    "properties": { "IpGroupDesc": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StandbyWorkspacesList",
+    "properties": {
+      "StandbyWorkspacesList": "array",
+      "StandbyWorkspacesList.StandbyWorkspace": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedCreateStandbyWorkspacesRequestList",
+    "properties": {
+      "FailedCreateStandbyWorkspacesRequestList": "array",
+      "FailedCreateStandbyWorkspacesRequestList.FailedCreateStandbyWorkspacesRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PendingCreateStandbyWorkspacesRequestList",
+    "properties": {
+      "PendingCreateStandbyWorkspacesRequestList": "array",
+      "PendingCreateStandbyWorkspacesRequestList.PendingCreateStandbyWorkspacesRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceBundleName",
+    "properties": { "WorkspaceBundleName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceBundleDescription",
+    "properties": { "WorkspaceBundleDescription": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserStorage",
+    "properties": {
+      "UserStorage": "object",
+      "UserStorage.Capacity.": "allOf",
+      "UserStorage.Capacity..NonEmptyString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RootStorage",
+    "properties": {
+      "RootStorage": "object",
+      "RootStorage.Capacity.": "allOf",
+      "RootStorage.Capacity..NonEmptyString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceId",
+    "properties": { "WorkspaceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperatingSystem",
+    "properties": {
+      "OperatingSystem": "object",
+      "OperatingSystem.Type.": "allOf",
+      "OperatingSystem.Type..OperatingSystemType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageRequiredTenancy",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceRequestList",
+    "properties": {
+      "WorkspaceRequestList": "array",
+      "WorkspaceRequestList.WorkspaceRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedCreateWorkspaceRequests",
+    "properties": {
+      "FailedCreateWorkspaceRequests": "array",
+      "FailedCreateWorkspaceRequests.FailedCreateWorkspaceRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceList",
+    "properties": { "WorkspaceList": "array", "WorkspaceList.Workspace": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DedicatedTenancyCidrRangeList",
+    "properties": {
+      "DedicatedTenancyCidrRangeList": "array",
+      "DedicatedTenancyCidrRangeList.DedicatedTenancyManagementCidrRange": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DedicatedTenancySupportEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoginMessage",
+    "properties": { "LoginMessage": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DefaultClientBrandingAttributes",
+    "properties": {
+      "DefaultClientBrandingAttributes": "object",
+      "DefaultClientBrandingAttributes.LogoUrl.": "allOf",
+      "DefaultClientBrandingAttributes.LogoUrl..ClientUrl": "ref",
+      "DefaultClientBrandingAttributes.SupportEmail.": "allOf",
+      "DefaultClientBrandingAttributes.SupportEmail..ClientEmail": "ref",
+      "DefaultClientBrandingAttributes.SupportLink.": "allOf",
+      "DefaultClientBrandingAttributes.SupportLink..ClientUrl": "ref",
+      "DefaultClientBrandingAttributes.ForgotPasswordLink.": "allOf",
+      "DefaultClientBrandingAttributes.ForgotPasswordLink..ClientUrl": "ref",
+      "DefaultClientBrandingAttributes.LoginMessage.": "allOf",
+      "DefaultClientBrandingAttributes.LoginMessage..LoginMessage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DefaultLogo",
+    "properties": { "DefaultLogo": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DefaultImportClientBrandingAttributes",
+    "properties": {
+      "DefaultImportClientBrandingAttributes": "object",
+      "DefaultImportClientBrandingAttributes.Logo.": "allOf",
+      "DefaultImportClientBrandingAttributes.Logo..DefaultLogo": "ref",
+      "DefaultImportClientBrandingAttributes.SupportEmail.": "allOf",
+      "DefaultImportClientBrandingAttributes.SupportEmail..ClientEmail": "ref",
+      "DefaultImportClientBrandingAttributes.SupportLink.": "allOf",
+      "DefaultImportClientBrandingAttributes.SupportLink..ClientUrl": "ref",
+      "DefaultImportClientBrandingAttributes.ForgotPasswordLink.": "allOf",
+      "DefaultImportClientBrandingAttributes.ForgotPasswordLink..ClientUrl": "ref",
+      "DefaultImportClientBrandingAttributes.LoginMessage.": "allOf",
+      "DefaultImportClientBrandingAttributes.LoginMessage..LoginMessage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DefaultOu",
+    "properties": { "DefaultOu": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SecurityGroupId",
+    "properties": { "SecurityGroupId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DefaultWorkspaceCreationProperties",
+    "properties": {
+      "DefaultWorkspaceCreationProperties": "object",
+      "DefaultWorkspaceCreationProperties.EnableWorkDocs.": "allOf",
+      "DefaultWorkspaceCreationProperties.EnableWorkDocs..BooleanObject": "ref",
+      "DefaultWorkspaceCreationProperties.EnableInternetAccess.": "allOf",
+      "DefaultWorkspaceCreationProperties.EnableInternetAccess..BooleanObject": "ref",
+      "DefaultWorkspaceCreationProperties.DefaultOu.": "allOf",
+      "DefaultWorkspaceCreationProperties.DefaultOu..DefaultOu": "ref",
+      "DefaultWorkspaceCreationProperties.CustomSecurityGroupId.": "allOf",
+      "DefaultWorkspaceCreationProperties.CustomSecurityGroupId..SecurityGroupId": "ref",
+      "DefaultWorkspaceCreationProperties.UserEnabledAsLocalAdministrator.": "allOf",
+      "DefaultWorkspaceCreationProperties.UserEnabledAsLocalAdministrator..BooleanObject": "ref",
+      "DefaultWorkspaceCreationProperties.EnableMaintenanceMode.": "allOf",
+      "DefaultWorkspaceCreationProperties.EnableMaintenanceMode..BooleanObject": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeletableCertificateBasedAuthProperty",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeletableCertificateBasedAuthPropertiesList",
+    "properties": {
+      "DeletableCertificateBasedAuthPropertiesList": "array",
+      "DeletableCertificateBasedAuthPropertiesList.DeletableCertificateBasedAuthProperty": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeletableSamlProperty",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeletableSamlPropertiesList",
+    "properties": {
+      "DeletableSamlPropertiesList": "array",
+      "DeletableSamlPropertiesList.DeletableSamlProperty": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagKeyList",
+    "properties": { "TagKeyList": "array", "TagKeyList.NonEmptyString": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PaginationToken",
+    "properties": { "PaginationToken": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IosClientBrandingAttributes",
+    "properties": {
+      "IosClientBrandingAttributes": "object",
+      "IosClientBrandingAttributes.LogoUrl.": "allOf",
+      "IosClientBrandingAttributes.LogoUrl..ClientUrl": "ref",
+      "IosClientBrandingAttributes.Logo2xUrl.": "allOf",
+      "IosClientBrandingAttributes.Logo2xUrl..ClientUrl": "ref",
+      "IosClientBrandingAttributes.Logo3xUrl.": "allOf",
+      "IosClientBrandingAttributes.Logo3xUrl..ClientUrl": "ref",
+      "IosClientBrandingAttributes.SupportEmail.": "allOf",
+      "IosClientBrandingAttributes.SupportEmail..ClientEmail": "ref",
+      "IosClientBrandingAttributes.SupportLink.": "allOf",
+      "IosClientBrandingAttributes.SupportLink..ClientUrl": "ref",
+      "IosClientBrandingAttributes.ForgotPasswordLink.": "allOf",
+      "IosClientBrandingAttributes.ForgotPasswordLink..ClientUrl": "ref",
+      "IosClientBrandingAttributes.LoginMessage.": "allOf",
+      "IosClientBrandingAttributes.LoginMessage..LoginMessage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceIdList",
+    "properties": {
+      "ResourceIdList": "array",
+      "ResourceIdList.NonEmptyString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Limit",
+    "properties": { "Limit": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspacesIpGroupsList",
+    "properties": {
+      "WorkspacesIpGroupsList": "array",
+      "WorkspacesIpGroupsList.WorkspacesIpGroup": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DirectoryIdList",
+    "properties": {
+      "DirectoryIdList": "array",
+      "DirectoryIdList.DirectoryId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DirectoryList",
+    "properties": {
+      "DirectoryList": "array",
+      "DirectoryList.WorkspaceDirectory": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImagePermissions",
+    "properties": {
+      "ImagePermissions": "array",
+      "ImagePermissions.ImagePermission": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageIdList",
+    "properties": {
+      "WorkspaceImageIdList": "array",
+      "WorkspaceImageIdList.WorkspaceImageId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImageType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageList",
+    "properties": {
+      "WorkspaceImageList": "array",
+      "WorkspaceImageList.WorkspaceImage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SnapshotList",
+    "properties": { "SnapshotList": "array", "SnapshotList.Snapshot": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceIdList",
+    "properties": {
+      "WorkspaceIdList": "array",
+      "WorkspaceIdList.WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceConnectionStatusList",
+    "properties": {
+      "WorkspaceConnectionStatusList": "array",
+      "WorkspaceConnectionStatusList.WorkspaceConnectionStatus": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserName",
+    "properties": { "UserName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceDirectory",
+    "properties": {
+      "WorkspaceDirectory": "object",
+      "WorkspaceDirectory.DirectoryId.": "allOf",
+      "WorkspaceDirectory.DirectoryId..DirectoryId": "ref",
+      "WorkspaceDirectory.Alias.": "allOf",
+      "WorkspaceDirectory.Alias..Alias": "ref",
+      "WorkspaceDirectory.DirectoryName.": "allOf",
+      "WorkspaceDirectory.DirectoryName..DirectoryName": "ref",
+      "WorkspaceDirectory.RegistrationCode.": "allOf",
+      "WorkspaceDirectory.RegistrationCode..RegistrationCode": "ref",
+      "WorkspaceDirectory.SubnetIds.": "allOf",
+      "WorkspaceDirectory.SubnetIds..SubnetIds": "ref",
+      "WorkspaceDirectory.DnsIpAddresses.": "allOf",
+      "WorkspaceDirectory.DnsIpAddresses..DnsIpAddresses": "ref",
+      "WorkspaceDirectory.CustomerUserName.": "allOf",
+      "WorkspaceDirectory.CustomerUserName..UserName": "ref",
+      "WorkspaceDirectory.IamRoleId.": "allOf",
+      "WorkspaceDirectory.IamRoleId..ARN": "ref",
+      "WorkspaceDirectory.DirectoryType.": "allOf",
+      "WorkspaceDirectory.DirectoryType..WorkspaceDirectoryType": "ref",
+      "WorkspaceDirectory.WorkspaceSecurityGroupId.": "allOf",
+      "WorkspaceDirectory.WorkspaceSecurityGroupId..SecurityGroupId": "ref",
+      "WorkspaceDirectory.State.": "allOf",
+      "WorkspaceDirectory.State..WorkspaceDirectoryState": "ref",
+      "WorkspaceDirectory.WorkspaceCreationProperties.": "allOf",
+      "WorkspaceDirectory.WorkspaceCreationProperties..DefaultWorkspaceCreationProperties": "ref",
+      "WorkspaceDirectory.ipGroupIds.": "allOf",
+      "WorkspaceDirectory.ipGroupIds..IpGroupIdList": "ref",
+      "WorkspaceDirectory.WorkspaceAccessProperties.": "allOf",
+      "WorkspaceDirectory.WorkspaceAccessProperties..WorkspaceAccessProperties": "ref",
+      "WorkspaceDirectory.Tenancy.": "allOf",
+      "WorkspaceDirectory.Tenancy..Tenancy": "ref",
+      "WorkspaceDirectory.SelfservicePermissions.": "allOf",
+      "WorkspaceDirectory.SelfservicePermissions..SelfservicePermissions": "ref",
+      "WorkspaceDirectory.SamlProperties.": "allOf",
+      "WorkspaceDirectory.SamlProperties..SamlProperties": "ref",
+      "WorkspaceDirectory.CertificateBasedAuthProperties.": "allOf",
+      "WorkspaceDirectory.CertificateBasedAuthProperties..CertificateBasedAuthProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DirectoryName",
+    "properties": { "DirectoryName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpAddress",
+    "properties": { "IpAddress": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DnsIpAddresses",
+    "properties": {
+      "DnsIpAddresses": "array",
+      "DnsIpAddresses.IpAddress": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Ec2ImageId",
+    "properties": { "Ec2ImageId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorType",
+    "properties": { "ErrorType": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StandbyWorkspace",
+    "properties": {
+      "StandbyWorkspace": "object",
+      "StandbyWorkspace.PrimaryWorkspaceId.": "allOf",
+      "StandbyWorkspace.PrimaryWorkspaceId..WorkspaceId": "ref",
+      "StandbyWorkspace.VolumeEncryptionKey.": "allOf",
+      "StandbyWorkspace.VolumeEncryptionKey..VolumeEncryptionKey": "ref",
+      "StandbyWorkspace.DirectoryId.": "allOf",
+      "StandbyWorkspace.DirectoryId..DirectoryId": "ref",
+      "StandbyWorkspace.Tags.": "allOf",
+      "StandbyWorkspace.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedCreateStandbyWorkspacesRequest",
+    "properties": {
+      "FailedCreateStandbyWorkspacesRequest": "object",
+      "FailedCreateStandbyWorkspacesRequest.StandbyWorkspaceRequest.": "allOf",
+      "FailedCreateStandbyWorkspacesRequest.StandbyWorkspaceRequest..StandbyWorkspace": "ref",
+      "FailedCreateStandbyWorkspacesRequest.ErrorCode.": "allOf",
+      "FailedCreateStandbyWorkspacesRequest.ErrorCode..WorkspaceErrorCode": "ref",
+      "FailedCreateStandbyWorkspacesRequest.ErrorMessage.": "allOf",
+      "FailedCreateStandbyWorkspacesRequest.ErrorMessage..Description": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceRequest",
+    "properties": {
+      "WorkspaceRequest": "object",
+      "WorkspaceRequest.DirectoryId.": "allOf",
+      "WorkspaceRequest.DirectoryId..DirectoryId": "ref",
+      "WorkspaceRequest.UserName.": "allOf",
+      "WorkspaceRequest.UserName..UserName": "ref",
+      "WorkspaceRequest.BundleId.": "allOf",
+      "WorkspaceRequest.BundleId..BundleId": "ref",
+      "WorkspaceRequest.VolumeEncryptionKey.": "allOf",
+      "WorkspaceRequest.VolumeEncryptionKey..VolumeEncryptionKey": "ref",
+      "WorkspaceRequest.UserVolumeEncryptionEnabled.": "allOf",
+      "WorkspaceRequest.UserVolumeEncryptionEnabled..BooleanObject": "ref",
+      "WorkspaceRequest.RootVolumeEncryptionEnabled.": "allOf",
+      "WorkspaceRequest.RootVolumeEncryptionEnabled..BooleanObject": "ref",
+      "WorkspaceRequest.WorkspaceProperties.": "allOf",
+      "WorkspaceRequest.WorkspaceProperties..WorkspaceProperties": "ref",
+      "WorkspaceRequest.Tags.": "allOf",
+      "WorkspaceRequest.Tags..TagList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedCreateWorkspaceRequest",
+    "properties": {
+      "FailedCreateWorkspaceRequest": "object",
+      "FailedCreateWorkspaceRequest.WorkspaceRequest.": "allOf",
+      "FailedCreateWorkspaceRequest.WorkspaceRequest..WorkspaceRequest": "ref",
+      "FailedCreateWorkspaceRequest.ErrorCode.": "allOf",
+      "FailedCreateWorkspaceRequest.ErrorCode..ErrorType": "ref",
+      "FailedCreateWorkspaceRequest.ErrorMessage.": "allOf",
+      "FailedCreateWorkspaceRequest.ErrorMessage..Description": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedWorkspaceChangeRequest",
+    "properties": {
+      "FailedWorkspaceChangeRequest": "object",
+      "FailedWorkspaceChangeRequest.WorkspaceId.": "allOf",
+      "FailedWorkspaceChangeRequest.WorkspaceId..WorkspaceId": "ref",
+      "FailedWorkspaceChangeRequest.ErrorCode.": "allOf",
+      "FailedWorkspaceChangeRequest.ErrorCode..ErrorType": "ref",
+      "FailedWorkspaceChangeRequest.ErrorMessage.": "allOf",
+      "FailedWorkspaceChangeRequest.ErrorMessage..Description": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedRebootWorkspaceRequests",
+    "properties": {
+      "FailedRebootWorkspaceRequests": "array",
+      "FailedRebootWorkspaceRequests.FailedWorkspaceChangeRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedRebuildWorkspaceRequests",
+    "properties": {
+      "FailedRebuildWorkspaceRequests": "array",
+      "FailedRebuildWorkspaceRequests.FailedWorkspaceChangeRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedStartWorkspaceRequests",
+    "properties": {
+      "FailedStartWorkspaceRequests": "array",
+      "FailedStartWorkspaceRequests.FailedWorkspaceChangeRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedStopWorkspaceRequests",
+    "properties": {
+      "FailedStopWorkspaceRequests": "array",
+      "FailedStopWorkspaceRequests.FailedWorkspaceChangeRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedTerminateWorkspaceRequests",
+    "properties": {
+      "FailedTerminateWorkspaceRequests": "array",
+      "FailedTerminateWorkspaceRequests.FailedWorkspaceChangeRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ImagePermission",
+    "properties": {
+      "ImagePermission": "object",
+      "ImagePermission.SharedAccountId.": "allOf",
+      "ImagePermission.SharedAccountId..AwsAccount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/IosImportClientBrandingAttributes",
+    "properties": {
+      "IosImportClientBrandingAttributes": "object",
+      "IosImportClientBrandingAttributes.Logo.": "allOf",
+      "IosImportClientBrandingAttributes.Logo..IosLogo": "ref",
+      "IosImportClientBrandingAttributes.Logo2x.": "allOf",
+      "IosImportClientBrandingAttributes.Logo2x..Ios2XLogo": "ref",
+      "IosImportClientBrandingAttributes.Logo3x.": "allOf",
+      "IosImportClientBrandingAttributes.Logo3x..Ios3XLogo": "ref",
+      "IosImportClientBrandingAttributes.SupportEmail.": "allOf",
+      "IosImportClientBrandingAttributes.SupportEmail..ClientEmail": "ref",
+      "IosImportClientBrandingAttributes.SupportLink.": "allOf",
+      "IosImportClientBrandingAttributes.SupportLink..ClientUrl": "ref",
+      "IosImportClientBrandingAttributes.ForgotPasswordLink.": "allOf",
+      "IosImportClientBrandingAttributes.ForgotPasswordLink..ClientUrl": "ref",
+      "IosImportClientBrandingAttributes.LoginMessage.": "allOf",
+      "IosImportClientBrandingAttributes.LoginMessage..LoginMessage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageIngestionProcess",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Ios2XLogo",
+    "properties": { "Ios2XLogo": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Ios3XLogo",
+    "properties": { "Ios3XLogo": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IosLogo",
+    "properties": { "IosLogo": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpRule",
+    "properties": { "IpRule": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpRevokedRuleList",
+    "properties": {
+      "IpRevokedRuleList": "array",
+      "IpRevokedRuleList.IpRule": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpRuleDesc",
+    "properties": { "IpRuleDesc": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/IpRuleItem",
+    "properties": {
+      "IpRuleItem": "object",
+      "IpRuleItem.ipRule.": "allOf",
+      "IpRuleItem.ipRule..IpRule": "ref",
+      "IpRuleItem.ruleDesc.": "allOf",
+      "IpRuleItem.ruleDesc..IpRuleDesc": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ManagementCidrRangeConstraint",
+    "properties": { "ManagementCidrRangeConstraint": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ManagementCidrRangeMaxResults",
+    "properties": { "ManagementCidrRangeMaxResults": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModificationResourceEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModificationStateEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModificationState",
+    "properties": {
+      "ModificationState": "object",
+      "ModificationState.Resource.": "allOf",
+      "ModificationState.Resource..ModificationResourceEnum": "ref",
+      "ModificationState.State.": "allOf",
+      "ModificationState.State..ModificationStateEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ModificationStateList",
+    "properties": {
+      "ModificationStateList": "array",
+      "ModificationStateList.ModificationState": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlProperties",
+    "properties": {
+      "SamlProperties": "object",
+      "SamlProperties.Status.": "allOf",
+      "SamlProperties.Status..SamlStatusEnum": "ref",
+      "SamlProperties.UserAccessUrl.": "allOf",
+      "SamlProperties.UserAccessUrl..SamlUserAccessUrl": "ref",
+      "SamlProperties.RelayStateParameterName.": "allOf",
+      "SamlProperties.RelayStateParameterName..NonEmptyString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SelfservicePermissions",
+    "properties": {
+      "SelfservicePermissions": "object",
+      "SelfservicePermissions.RestartWorkspace.": "allOf",
+      "SelfservicePermissions.RestartWorkspace..ReconnectEnum": "ref",
+      "SelfservicePermissions.IncreaseVolumeSize.": "allOf",
+      "SelfservicePermissions.IncreaseVolumeSize..ReconnectEnum": "ref",
+      "SelfservicePermissions.ChangeComputeType.": "allOf",
+      "SelfservicePermissions.ChangeComputeType..ReconnectEnum": "ref",
+      "SelfservicePermissions.SwitchRunningMode.": "allOf",
+      "SelfservicePermissions.SwitchRunningMode..ReconnectEnum": "ref",
+      "SelfservicePermissions.RebuildWorkspace.": "allOf",
+      "SelfservicePermissions.RebuildWorkspace..ReconnectEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceAccessProperties",
+    "properties": {
+      "WorkspaceAccessProperties": "object",
+      "WorkspaceAccessProperties.DeviceTypeWindows.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeWindows..AccessPropertyValue": "ref",
+      "WorkspaceAccessProperties.DeviceTypeOsx.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeOsx..AccessPropertyValue": "ref",
+      "WorkspaceAccessProperties.DeviceTypeWeb.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeWeb..AccessPropertyValue": "ref",
+      "WorkspaceAccessProperties.DeviceTypeIos.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeIos..AccessPropertyValue": "ref",
+      "WorkspaceAccessProperties.DeviceTypeAndroid.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeAndroid..AccessPropertyValue": "ref",
+      "WorkspaceAccessProperties.DeviceTypeChromeOs.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeChromeOs..AccessPropertyValue": "ref",
+      "WorkspaceAccessProperties.DeviceTypeZeroClient.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeZeroClient..AccessPropertyValue": "ref",
+      "WorkspaceAccessProperties.DeviceTypeLinux.": "allOf",
+      "WorkspaceAccessProperties.DeviceTypeLinux..AccessPropertyValue": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceCreationProperties",
+    "properties": {
+      "WorkspaceCreationProperties": "object",
+      "WorkspaceCreationProperties.EnableWorkDocs.": "allOf",
+      "WorkspaceCreationProperties.EnableWorkDocs..BooleanObject": "ref",
+      "WorkspaceCreationProperties.EnableInternetAccess.": "allOf",
+      "WorkspaceCreationProperties.EnableInternetAccess..BooleanObject": "ref",
+      "WorkspaceCreationProperties.DefaultOu.": "allOf",
+      "WorkspaceCreationProperties.DefaultOu..DefaultOu": "ref",
+      "WorkspaceCreationProperties.CustomSecurityGroupId.": "allOf",
+      "WorkspaceCreationProperties.CustomSecurityGroupId..SecurityGroupId": "ref",
+      "WorkspaceCreationProperties.UserEnabledAsLocalAdministrator.": "allOf",
+      "WorkspaceCreationProperties.UserEnabledAsLocalAdministrator..BooleanObject": "ref",
+      "WorkspaceCreationProperties.EnableMaintenanceMode.": "allOf",
+      "WorkspaceCreationProperties.EnableMaintenanceMode..BooleanObject": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceProperties",
+    "properties": {
+      "WorkspaceProperties": "object",
+      "WorkspaceProperties.RunningMode.": "allOf",
+      "WorkspaceProperties.RunningMode..RunningMode": "ref",
+      "WorkspaceProperties.RunningModeAutoStopTimeoutInMinutes.": "allOf",
+      "WorkspaceProperties.RunningModeAutoStopTimeoutInMinutes..RunningModeAutoStopTimeoutInMinutes": "ref",
+      "WorkspaceProperties.RootVolumeSizeGib.": "allOf",
+      "WorkspaceProperties.RootVolumeSizeGib..RootVolumeSizeGib": "ref",
+      "WorkspaceProperties.UserVolumeSizeGib.": "allOf",
+      "WorkspaceProperties.UserVolumeSizeGib..UserVolumeSizeGib": "ref",
+      "WorkspaceProperties.ComputeTypeName.": "allOf",
+      "WorkspaceProperties.ComputeTypeName..Compute": "ref",
+      "WorkspaceProperties.Protocols.": "allOf",
+      "WorkspaceProperties.Protocols..ProtocolList": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TargetWorkspaceState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OperatingSystemType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PendingCreateStandbyWorkspacesRequest",
+    "properties": {
+      "PendingCreateStandbyWorkspacesRequest": "object",
+      "PendingCreateStandbyWorkspacesRequest.UserName.": "allOf",
+      "PendingCreateStandbyWorkspacesRequest.UserName..UserName": "ref",
+      "PendingCreateStandbyWorkspacesRequest.DirectoryId.": "allOf",
+      "PendingCreateStandbyWorkspacesRequest.DirectoryId..DirectoryId": "ref",
+      "PendingCreateStandbyWorkspacesRequest.State.": "allOf",
+      "PendingCreateStandbyWorkspacesRequest.State..WorkspaceState": "ref",
+      "PendingCreateStandbyWorkspacesRequest.WorkspaceId.": "allOf",
+      "PendingCreateStandbyWorkspacesRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Protocol",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ProtocolList",
+    "properties": { "ProtocolList": "array", "ProtocolList.Protocol": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebootRequest",
+    "properties": {
+      "RebootRequest": "object",
+      "RebootRequest.WorkspaceId.": "allOf",
+      "RebootRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebootWorkspaceRequests",
+    "properties": {
+      "RebootWorkspaceRequests": "array",
+      "RebootWorkspaceRequests.RebootRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebuildRequest",
+    "properties": {
+      "RebuildRequest": "object",
+      "RebuildRequest.WorkspaceId.": "allOf",
+      "RebuildRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RebuildWorkspaceRequests",
+    "properties": {
+      "RebuildWorkspaceRequests": "array",
+      "RebuildWorkspaceRequests.RebuildRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SubnetIds",
+    "properties": { "SubnetIds": "array", "SubnetIds.SubnetId": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tenancy",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RegistrationCode",
+    "properties": { "RegistrationCode": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StandbyWorkspaceRelationshipType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RelatedWorkspaceProperties",
+    "properties": {
+      "RelatedWorkspaceProperties": "object",
+      "RelatedWorkspaceProperties.WorkspaceId.": "allOf",
+      "RelatedWorkspaceProperties.WorkspaceId..WorkspaceId": "ref",
+      "RelatedWorkspaceProperties.Region.": "allOf",
+      "RelatedWorkspaceProperties.Region..Region": "ref",
+      "RelatedWorkspaceProperties.State.": "allOf",
+      "RelatedWorkspaceProperties.State..WorkspaceState": "ref",
+      "RelatedWorkspaceProperties.Type.": "allOf",
+      "RelatedWorkspaceProperties.Type..StandbyWorkspaceRelationshipType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RelatedWorkspaces",
+    "properties": {
+      "RelatedWorkspaces": "array",
+      "RelatedWorkspaces.RelatedWorkspaceProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RootVolumeSizeGib",
+    "properties": { "RootVolumeSizeGib": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RunningMode",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RunningModeAutoStopTimeoutInMinutes",
+    "properties": { "RunningModeAutoStopTimeoutInMinutes": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlStatusEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlUserAccessUrl",
+    "properties": { "SamlUserAccessUrl": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Snapshot",
+    "properties": {
+      "Snapshot": "object",
+      "Snapshot.SnapshotTime.": "allOf",
+      "Snapshot.SnapshotTime..Timestamp": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VolumeEncryptionKey",
+    "properties": { "VolumeEncryptionKey": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StartRequest",
+    "properties": {
+      "StartRequest": "object",
+      "StartRequest.WorkspaceId.": "allOf",
+      "StartRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StartWorkspaceRequests",
+    "properties": {
+      "StartWorkspaceRequests": "array",
+      "StartWorkspaceRequests.StartRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StopRequest",
+    "properties": {
+      "StopRequest": "object",
+      "StopRequest.WorkspaceId.": "allOf",
+      "StopRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StopWorkspaceRequests",
+    "properties": {
+      "StopWorkspaceRequests": "array",
+      "StopWorkspaceRequests.StopRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SubnetId",
+    "properties": { "SubnetId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagKey",
+    "properties": { "TagKey": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagValue",
+    "properties": { "TagValue": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tag",
+    "properties": {
+      "Tag": "object",
+      "Tag.Key.": "allOf",
+      "Tag.Key..TagKey": "ref",
+      "Tag.Value.": "allOf",
+      "Tag.Value..TagValue": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TerminateRequest",
+    "properties": {
+      "TerminateRequest": "object",
+      "TerminateRequest.WorkspaceId.": "allOf",
+      "TerminateRequest.WorkspaceId..WorkspaceId": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TerminateWorkspaceRequests",
+    "properties": {
+      "TerminateWorkspaceRequests": "array",
+      "TerminateWorkspaceRequests.TerminateRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateDescription",
+    "properties": { "UpdateDescription": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateResult",
+    "properties": {
+      "UpdateResult": "object",
+      "UpdateResult.UpdateAvailable.": "allOf",
+      "UpdateResult.UpdateAvailable..BooleanObject": "ref",
+      "UpdateResult.Description.": "allOf",
+      "UpdateResult.Description..UpdateDescription": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserVolumeSizeGib",
+    "properties": { "UserVolumeSizeGib": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Workspace",
+    "properties": {
+      "Workspace": "object",
+      "Workspace.WorkspaceId.": "allOf",
+      "Workspace.WorkspaceId..WorkspaceId": "ref",
+      "Workspace.DirectoryId.": "allOf",
+      "Workspace.DirectoryId..DirectoryId": "ref",
+      "Workspace.UserName.": "allOf",
+      "Workspace.UserName..UserName": "ref",
+      "Workspace.IpAddress.": "allOf",
+      "Workspace.IpAddress..IpAddress": "ref",
+      "Workspace.State.": "allOf",
+      "Workspace.State..WorkspaceState": "ref",
+      "Workspace.BundleId.": "allOf",
+      "Workspace.BundleId..BundleId": "ref",
+      "Workspace.SubnetId.": "allOf",
+      "Workspace.SubnetId..SubnetId": "ref",
+      "Workspace.ErrorMessage.": "allOf",
+      "Workspace.ErrorMessage..Description": "ref",
+      "Workspace.ErrorCode.": "allOf",
+      "Workspace.ErrorCode..WorkspaceErrorCode": "ref",
+      "Workspace.ComputerName.": "allOf",
+      "Workspace.ComputerName..ComputerName": "ref",
+      "Workspace.VolumeEncryptionKey.": "allOf",
+      "Workspace.VolumeEncryptionKey..VolumeEncryptionKey": "ref",
+      "Workspace.UserVolumeEncryptionEnabled.": "allOf",
+      "Workspace.UserVolumeEncryptionEnabled..BooleanObject": "ref",
+      "Workspace.RootVolumeEncryptionEnabled.": "allOf",
+      "Workspace.RootVolumeEncryptionEnabled..BooleanObject": "ref",
+      "Workspace.WorkspaceProperties.": "allOf",
+      "Workspace.WorkspaceProperties..WorkspaceProperties": "ref",
+      "Workspace.ModificationStates.": "allOf",
+      "Workspace.ModificationStates..ModificationStateList": "ref",
+      "Workspace.RelatedWorkspaces.": "allOf",
+      "Workspace.RelatedWorkspaces..RelatedWorkspaces": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceBundleState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceConnectionStatus",
+    "properties": {
+      "WorkspaceConnectionStatus": "object",
+      "WorkspaceConnectionStatus.WorkspaceId.": "allOf",
+      "WorkspaceConnectionStatus.WorkspaceId..WorkspaceId": "ref",
+      "WorkspaceConnectionStatus.ConnectionState.": "allOf",
+      "WorkspaceConnectionStatus.ConnectionState..ConnectionState": "ref",
+      "WorkspaceConnectionStatus.ConnectionStateCheckTimestamp.": "allOf",
+      "WorkspaceConnectionStatus.ConnectionStateCheckTimestamp..Timestamp": "ref",
+      "WorkspaceConnectionStatus.LastKnownUserConnectionTimestamp.": "allOf",
+      "WorkspaceConnectionStatus.LastKnownUserConnectionTimestamp..Timestamp": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceDirectoryType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceDirectoryState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImageErrorCode",
+    "properties": { "WorkspaceImageErrorCode": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspaceImage",
+    "properties": {
+      "WorkspaceImage": "object",
+      "WorkspaceImage.ImageId.": "allOf",
+      "WorkspaceImage.ImageId..WorkspaceImageId": "ref",
+      "WorkspaceImage.Name.": "allOf",
+      "WorkspaceImage.Name..WorkspaceImageName": "ref",
+      "WorkspaceImage.Description.": "allOf",
+      "WorkspaceImage.Description..WorkspaceImageDescription": "ref",
+      "WorkspaceImage.OperatingSystem.": "allOf",
+      "WorkspaceImage.OperatingSystem..OperatingSystem": "ref",
+      "WorkspaceImage.State.": "allOf",
+      "WorkspaceImage.State..WorkspaceImageState": "ref",
+      "WorkspaceImage.RequiredTenancy.": "allOf",
+      "WorkspaceImage.RequiredTenancy..WorkspaceImageRequiredTenancy": "ref",
+      "WorkspaceImage.ErrorCode.": "allOf",
+      "WorkspaceImage.ErrorCode..WorkspaceImageErrorCode": "ref",
+      "WorkspaceImage.ErrorMessage.": "allOf",
+      "WorkspaceImage.ErrorMessage..Description": "ref",
+      "WorkspaceImage.Created.": "allOf",
+      "WorkspaceImage.Created..Timestamp": "ref",
+      "WorkspaceImage.OwnerAccountId.": "allOf",
+      "WorkspaceImage.OwnerAccountId..AwsAccount": "ref",
+      "WorkspaceImage.Updates.": "allOf",
+      "WorkspaceImage.Updates..UpdateResult": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WorkspacesIpGroup",
+    "properties": {
+      "WorkspacesIpGroup": "object",
+      "WorkspacesIpGroup.groupId.": "allOf",
+      "WorkspacesIpGroup.groupId..IpGroupId": "ref",
+      "WorkspacesIpGroup.groupName.": "allOf",
+      "WorkspacesIpGroup.groupName..IpGroupName": "ref",
+      "WorkspacesIpGroup.groupDesc.": "allOf",
+      "WorkspacesIpGroup.groupDesc..IpGroupDesc": "ref",
+      "WorkspacesIpGroup.userRules.": "allOf",
+      "WorkspacesIpGroup.userRules..IpRuleList": "ref"
+    }
+  }
+]

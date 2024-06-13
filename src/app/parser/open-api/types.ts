@@ -1,5 +1,3 @@
-import * as logger from "../../../util/logger";
-
 const AMBIGUOUS_PRIMITVE_TYPES = ["any", "object", "void", "object"];
 
 export type Schema = {
@@ -30,6 +28,7 @@ export type SchemaProperty =
 export type $ParsedSchema = {
   type: string | undefined;
   content: string | undefined;
+  $schemaPath: string[] | undefined;
 };
 
 enum ObjectTypeEnum {
@@ -147,12 +146,11 @@ export type SchemaTypeRawArg = {
   name: string;
   required: boolean | undefined;
   nullable: boolean | undefined;
+  $parsed: $ParsedSchema | undefined;
   schema: SchemaProperty;
 };
 
-export function getSchemaPropertyFromSchema(
-  schema: Schema,
-): SchemaProperty | undefined {
+export function getSchemaPropertyFromSchema(schema: Schema): SchemaProperty {
   if (schema.rawTypeData && canResolveSchema(schema.rawTypeData)) {
     return schema.rawTypeData;
   }
@@ -160,10 +158,9 @@ export function getSchemaPropertyFromSchema(
     return schema.typeData;
   }
 
-  logger.error(
+  throw new Error(
     `Cannot resolve schema types for ${schema.$ref}.\nSchema: ${JSON.stringify(schema)}`,
   );
-  return undefined;
 }
 
 export function schemaPropertyIsTypeScaler(
@@ -393,4 +390,21 @@ export function schemaPropertyIsRelaxedType(schemaProperty: SchemaProperty) {
     return primitiveSchemaPropertiveHasAmbigousType(schemaProperty);
   }
   return false;
+}
+
+/**
+ * prevent parsing schemas that meet certain criteria, like '#/components/examples/'
+ * @param schema the schema to parse
+ * @returns whether the schema should be parsed
+ */
+export function shouldParseSchema(schema: Schema): boolean {
+  /**
+   * We don't want to parse #/components/examples/ because
+   * 1. they are not used in code
+   * 2. too many examples can slow down the parsing
+   */
+  if (schema.$ref.startsWith("#/components/examples/")) {
+    return false;
+  }
+  return true;
 }

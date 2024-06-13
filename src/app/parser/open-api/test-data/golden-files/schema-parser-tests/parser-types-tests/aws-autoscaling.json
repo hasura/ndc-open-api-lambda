@@ -1,0 +1,3301 @@
+[
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Content-Sha256",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Date",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Algorithm",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Credential",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Security-Token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-Signature",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/X-Amz-SignedHeaders",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/hmac",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen19",
+    "properties": { "XmlStringMaxLen19": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceContentionFault",
+    "properties": { "ResourceContentionFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceLinkedRoleFailure",
+    "properties": { "ServiceLinkedRoleFailure": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttachLoadBalancerTargetGroupsResultType",
+    "properties": { "AttachLoadBalancerTargetGroupsResultType": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen511",
+    "properties": { "XmlStringMaxLen511": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttachLoadBalancersResultType",
+    "properties": { "AttachLoadBalancersResultType": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen255",
+    "properties": { "XmlStringMaxLen255": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttachTrafficSourcesResultType",
+    "properties": { "AttachTrafficSourcesResultType": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TrafficSourceIdentifier",
+    "properties": {
+      "TrafficSourceIdentifier": "object",
+      "TrafficSourceIdentifier.Identifier.": "allOf",
+      "TrafficSourceIdentifier.Identifier..XmlStringMaxLen511": "ref",
+      "TrafficSourceIdentifier.Type.": "allOf",
+      "TrafficSourceIdentifier.Type..XmlStringMaxLen511": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BatchDeleteScheduledActionAnswer",
+    "properties": {
+      "BatchDeleteScheduledActionAnswer": "object",
+      "BatchDeleteScheduledActionAnswer.FailedScheduledActions.": "allOf",
+      "BatchDeleteScheduledActionAnswer.FailedScheduledActions..FailedScheduledUpdateGroupActionRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BatchPutScheduledUpdateGroupActionAnswer",
+    "properties": {
+      "BatchPutScheduledUpdateGroupActionAnswer": "object",
+      "BatchPutScheduledUpdateGroupActionAnswer.FailedScheduledUpdateGroupActions.": "allOf",
+      "BatchPutScheduledUpdateGroupActionAnswer.FailedScheduledUpdateGroupActions..FailedScheduledUpdateGroupActionRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScheduledUpdateGroupActionRequest",
+    "properties": {
+      "ScheduledUpdateGroupActionRequest": "object",
+      "ScheduledUpdateGroupActionRequest.ScheduledActionName.": "allOf",
+      "ScheduledUpdateGroupActionRequest.ScheduledActionName..XmlStringMaxLen255": "ref",
+      "ScheduledUpdateGroupActionRequest.StartTime.": "allOf",
+      "ScheduledUpdateGroupActionRequest.StartTime..TimestampType": "ref",
+      "ScheduledUpdateGroupActionRequest.EndTime.": "allOf",
+      "ScheduledUpdateGroupActionRequest.EndTime..TimestampType": "ref",
+      "ScheduledUpdateGroupActionRequest.Recurrence.": "allOf",
+      "ScheduledUpdateGroupActionRequest.Recurrence..XmlStringMaxLen255": "ref",
+      "ScheduledUpdateGroupActionRequest.MinSize.": "allOf",
+      "ScheduledUpdateGroupActionRequest.MinSize..AutoScalingGroupMinSize": "ref",
+      "ScheduledUpdateGroupActionRequest.MaxSize.": "allOf",
+      "ScheduledUpdateGroupActionRequest.MaxSize..AutoScalingGroupMaxSize": "ref",
+      "ScheduledUpdateGroupActionRequest.DesiredCapacity.": "allOf",
+      "ScheduledUpdateGroupActionRequest.DesiredCapacity..AutoScalingGroupDesiredCapacity": "ref",
+      "ScheduledUpdateGroupActionRequest.TimeZone.": "allOf",
+      "ScheduledUpdateGroupActionRequest.TimeZone..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AlreadyExistsFault",
+    "properties": { "AlreadyExistsFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LimitExceededFault",
+    "properties": { "LimitExceededFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CancelInstanceRefreshAnswer",
+    "properties": {
+      "CancelInstanceRefreshAnswer": "object",
+      "CancelInstanceRefreshAnswer.InstanceRefreshId.": "allOf",
+      "CancelInstanceRefreshAnswer.InstanceRefreshId..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActiveInstanceRefreshNotFoundFault",
+    "properties": { "ActiveInstanceRefreshNotFoundFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CompleteLifecycleActionAnswer",
+    "properties": { "CompleteLifecycleActionAnswer": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchTemplateName",
+    "properties": { "LaunchTemplateName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchTemplate",
+    "properties": {
+      "LaunchTemplate": "object",
+      "LaunchTemplate.LaunchTemplateSpecification.": "allOf",
+      "LaunchTemplate.LaunchTemplateSpecification..LaunchTemplateSpecification": "ref",
+      "LaunchTemplate.Overrides.": "allOf",
+      "LaunchTemplate.Overrides..Overrides": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstancesDistribution",
+    "properties": {
+      "InstancesDistribution": "object",
+      "InstancesDistribution.OnDemandAllocationStrategy.": "allOf",
+      "InstancesDistribution.OnDemandAllocationStrategy..XmlString": "ref",
+      "InstancesDistribution.OnDemandBaseCapacity.": "allOf",
+      "InstancesDistribution.OnDemandBaseCapacity..OnDemandBaseCapacity": "ref",
+      "InstancesDistribution.OnDemandPercentageAboveBaseCapacity.": "allOf",
+      "InstancesDistribution.OnDemandPercentageAboveBaseCapacity..OnDemandPercentageAboveBaseCapacity": "ref",
+      "InstancesDistribution.SpotAllocationStrategy.": "allOf",
+      "InstancesDistribution.SpotAllocationStrategy..XmlString": "ref",
+      "InstancesDistribution.SpotInstancePools.": "allOf",
+      "InstancesDistribution.SpotInstancePools..SpotInstancePools": "ref",
+      "InstancesDistribution.SpotMaxPrice.": "allOf",
+      "InstancesDistribution.SpotMaxPrice..MixedInstanceSpotPrice": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen1600",
+    "properties": { "XmlStringMaxLen1600": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleHookSpecification",
+    "properties": {
+      "LifecycleHookSpecification": "object",
+      "LifecycleHookSpecification.LifecycleHookName.": "allOf",
+      "LifecycleHookSpecification.LifecycleHookName..AsciiStringMaxLen255": "ref",
+      "LifecycleHookSpecification.LifecycleTransition.": "allOf",
+      "LifecycleHookSpecification.LifecycleTransition..LifecycleTransition": "ref",
+      "LifecycleHookSpecification.NotificationMetadata.": "allOf",
+      "LifecycleHookSpecification.NotificationMetadata..XmlStringMaxLen1023": "ref",
+      "LifecycleHookSpecification.HeartbeatTimeout.": "allOf",
+      "LifecycleHookSpecification.HeartbeatTimeout..HeartbeatTimeout": "ref",
+      "LifecycleHookSpecification.DefaultResult.": "allOf",
+      "LifecycleHookSpecification.DefaultResult..LifecycleActionResult": "ref",
+      "LifecycleHookSpecification.NotificationTargetARN.": "allOf",
+      "LifecycleHookSpecification.NotificationTargetARN..NotificationTargetResourceName": "ref",
+      "LifecycleHookSpecification.RoleARN.": "allOf",
+      "LifecycleHookSpecification.RoleARN..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tag",
+    "properties": {
+      "Tag": "object",
+      "Tag.ResourceId.": "allOf",
+      "Tag.ResourceId..XmlString": "ref",
+      "Tag.ResourceType.": "allOf",
+      "Tag.ResourceType..XmlString": "ref",
+      "Tag.Key.": "allOf",
+      "Tag.Key..TagKey": "ref",
+      "Tag.Value.": "allOf",
+      "Tag.Value..TagValue": "ref",
+      "Tag.PropagateAtLaunch.": "allOf",
+      "Tag.PropagateAtLaunch..PropagateAtLaunch": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlString",
+    "properties": { "XmlString": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceMapping",
+    "properties": {
+      "BlockDeviceMapping": "object",
+      "BlockDeviceMapping.VirtualName.": "allOf",
+      "BlockDeviceMapping.VirtualName..XmlStringMaxLen255": "ref",
+      "BlockDeviceMapping.DeviceName.": "allOf",
+      "BlockDeviceMapping.DeviceName..XmlStringMaxLen255": "ref",
+      "BlockDeviceMapping.Ebs.": "allOf",
+      "BlockDeviceMapping.Ebs..Ebs": "ref",
+      "BlockDeviceMapping.NoDevice.": "allOf",
+      "BlockDeviceMapping.NoDevice..NoDevice": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MonitoringEnabled",
+    "properties": { "MonitoringEnabled": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceMetadataHttpTokensState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceMetadataHttpPutResponseHopLimit",
+    "properties": { "InstanceMetadataHttpPutResponseHopLimit": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceMetadataEndpointState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceInUseFault",
+    "properties": { "ResourceInUseFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScalingActivityInProgressFault",
+    "properties": { "ScalingActivityInProgressFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteLifecycleHookAnswer",
+    "properties": { "DeleteLifecycleHookAnswer": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteWarmPoolAnswer",
+    "properties": { "DeleteWarmPoolAnswer": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAccountLimitsAnswer",
+    "properties": {
+      "DescribeAccountLimitsAnswer": "object",
+      "DescribeAccountLimitsAnswer.MaxNumberOfAutoScalingGroups.": "allOf",
+      "DescribeAccountLimitsAnswer.MaxNumberOfAutoScalingGroups..MaxNumberOfAutoScalingGroups": "ref",
+      "DescribeAccountLimitsAnswer.MaxNumberOfLaunchConfigurations.": "allOf",
+      "DescribeAccountLimitsAnswer.MaxNumberOfLaunchConfigurations..MaxNumberOfLaunchConfigurations": "ref",
+      "DescribeAccountLimitsAnswer.NumberOfAutoScalingGroups.": "allOf",
+      "DescribeAccountLimitsAnswer.NumberOfAutoScalingGroups..NumberOfAutoScalingGroups": "ref",
+      "DescribeAccountLimitsAnswer.NumberOfLaunchConfigurations.": "allOf",
+      "DescribeAccountLimitsAnswer.NumberOfLaunchConfigurations..NumberOfLaunchConfigurations": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAdjustmentTypesAnswer",
+    "properties": {
+      "DescribeAdjustmentTypesAnswer": "object",
+      "DescribeAdjustmentTypesAnswer.AdjustmentTypes.": "allOf",
+      "DescribeAdjustmentTypesAnswer.AdjustmentTypes..AdjustmentTypes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupsType",
+    "properties": {
+      "AutoScalingGroupsType": "object",
+      "AutoScalingGroupsType.AutoScalingGroups.": "allOf",
+      "AutoScalingGroupsType.AutoScalingGroups..AutoScalingGroups": "ref",
+      "AutoScalingGroupsType.NextToken.": "allOf",
+      "AutoScalingGroupsType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Filter",
+    "properties": {
+      "Filter": "object",
+      "Filter.Name.": "allOf",
+      "Filter.Name..XmlString": "ref",
+      "Filter.Values.": "allOf",
+      "Filter.Values..Values": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InvalidNextToken",
+    "properties": { "InvalidNextToken": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingInstancesType",
+    "properties": {
+      "AutoScalingInstancesType": "object",
+      "AutoScalingInstancesType.AutoScalingInstances.": "allOf",
+      "AutoScalingInstancesType.AutoScalingInstances..AutoScalingInstances": "ref",
+      "AutoScalingInstancesType.NextToken.": "allOf",
+      "AutoScalingInstancesType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAutoScalingNotificationTypesAnswer",
+    "properties": {
+      "DescribeAutoScalingNotificationTypesAnswer": "object",
+      "DescribeAutoScalingNotificationTypesAnswer.AutoScalingNotificationTypes.": "allOf",
+      "DescribeAutoScalingNotificationTypesAnswer.AutoScalingNotificationTypes..AutoScalingNotificationTypes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeInstanceRefreshesAnswer",
+    "properties": {
+      "DescribeInstanceRefreshesAnswer": "object",
+      "DescribeInstanceRefreshesAnswer.InstanceRefreshes.": "allOf",
+      "DescribeInstanceRefreshesAnswer.InstanceRefreshes..InstanceRefreshes": "ref",
+      "DescribeInstanceRefreshesAnswer.NextToken.": "allOf",
+      "DescribeInstanceRefreshesAnswer.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchConfigurationsType",
+    "properties": {
+      "LaunchConfigurationsType": "object",
+      "LaunchConfigurationsType.LaunchConfigurations.": "allOf",
+      "LaunchConfigurationsType.LaunchConfigurations..LaunchConfigurations": "ref",
+      "LaunchConfigurationsType.NextToken.": "allOf",
+      "LaunchConfigurationsType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeLifecycleHookTypesAnswer",
+    "properties": {
+      "DescribeLifecycleHookTypesAnswer": "object",
+      "DescribeLifecycleHookTypesAnswer.LifecycleHookTypes.": "allOf",
+      "DescribeLifecycleHookTypesAnswer.LifecycleHookTypes..AutoScalingNotificationTypes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeLifecycleHooksAnswer",
+    "properties": {
+      "DescribeLifecycleHooksAnswer": "object",
+      "DescribeLifecycleHooksAnswer.LifecycleHooks.": "allOf",
+      "DescribeLifecycleHooksAnswer.LifecycleHooks..LifecycleHooks": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AsciiStringMaxLen255",
+    "properties": { "AsciiStringMaxLen255": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeLoadBalancerTargetGroupsResponse",
+    "properties": {
+      "DescribeLoadBalancerTargetGroupsResponse": "object",
+      "DescribeLoadBalancerTargetGroupsResponse.LoadBalancerTargetGroups.": "allOf",
+      "DescribeLoadBalancerTargetGroupsResponse.LoadBalancerTargetGroups..LoadBalancerTargetGroupStates": "ref",
+      "DescribeLoadBalancerTargetGroupsResponse.NextToken.": "allOf",
+      "DescribeLoadBalancerTargetGroupsResponse.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeLoadBalancersResponse",
+    "properties": {
+      "DescribeLoadBalancersResponse": "object",
+      "DescribeLoadBalancersResponse.LoadBalancers.": "allOf",
+      "DescribeLoadBalancersResponse.LoadBalancers..LoadBalancerStates": "ref",
+      "DescribeLoadBalancersResponse.NextToken.": "allOf",
+      "DescribeLoadBalancersResponse.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeMetricCollectionTypesAnswer",
+    "properties": {
+      "DescribeMetricCollectionTypesAnswer": "object",
+      "DescribeMetricCollectionTypesAnswer.Metrics.": "allOf",
+      "DescribeMetricCollectionTypesAnswer.Metrics..MetricCollectionTypes": "ref",
+      "DescribeMetricCollectionTypesAnswer.Granularities.": "allOf",
+      "DescribeMetricCollectionTypesAnswer.Granularities..MetricGranularityTypes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeNotificationConfigurationsAnswer",
+    "properties": {
+      "DescribeNotificationConfigurationsAnswer": "object",
+      "DescribeNotificationConfigurationsAnswer.NotificationConfigurations.": "allOf",
+      "DescribeNotificationConfigurationsAnswer.NotificationConfigurations..NotificationConfigurations": "ref",
+      "DescribeNotificationConfigurationsAnswer.NextToken.": "allOf",
+      "DescribeNotificationConfigurationsAnswer.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PoliciesType",
+    "properties": {
+      "PoliciesType": "object",
+      "PoliciesType.ScalingPolicies.": "allOf",
+      "PoliciesType.ScalingPolicies..ScalingPolicies": "ref",
+      "PoliciesType.NextToken.": "allOf",
+      "PoliciesType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ResourceName",
+    "properties": { "ResourceName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen64",
+    "properties": { "XmlStringMaxLen64": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivitiesType",
+    "properties": {
+      "ActivitiesType": "object",
+      "ActivitiesType.Activities.": "allOf",
+      "ActivitiesType.Activities..Activities": "ref",
+      "ActivitiesType.NextToken.": "allOf",
+      "ActivitiesType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ProcessesType",
+    "properties": {
+      "ProcessesType": "object",
+      "ProcessesType.Processes.": "allOf",
+      "ProcessesType.Processes..Processes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScheduledActionsType",
+    "properties": {
+      "ScheduledActionsType": "object",
+      "ScheduledActionsType.ScheduledUpdateGroupActions.": "allOf",
+      "ScheduledActionsType.ScheduledUpdateGroupActions..ScheduledUpdateGroupActions": "ref",
+      "ScheduledActionsType.NextToken.": "allOf",
+      "ScheduledActionsType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagsType",
+    "properties": {
+      "TagsType": "object",
+      "TagsType.Tags.": "allOf",
+      "TagsType.Tags..TagDescriptionList": "ref",
+      "TagsType.NextToken.": "allOf",
+      "TagsType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeTerminationPolicyTypesAnswer",
+    "properties": {
+      "DescribeTerminationPolicyTypesAnswer": "object",
+      "DescribeTerminationPolicyTypesAnswer.TerminationPolicyTypes.": "allOf",
+      "DescribeTerminationPolicyTypesAnswer.TerminationPolicyTypes..TerminationPolicies": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeTrafficSourcesResponse",
+    "properties": {
+      "DescribeTrafficSourcesResponse": "object",
+      "DescribeTrafficSourcesResponse.TrafficSources.": "allOf",
+      "DescribeTrafficSourcesResponse.TrafficSources..TrafficSourceStates": "ref",
+      "DescribeTrafficSourcesResponse.NextToken.": "allOf",
+      "DescribeTrafficSourcesResponse.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWarmPoolAnswer",
+    "properties": {
+      "DescribeWarmPoolAnswer": "object",
+      "DescribeWarmPoolAnswer.WarmPoolConfiguration.": "allOf",
+      "DescribeWarmPoolAnswer.WarmPoolConfiguration..WarmPoolConfiguration": "ref",
+      "DescribeWarmPoolAnswer.Instances.": "allOf",
+      "DescribeWarmPoolAnswer.Instances..Instances": "ref",
+      "DescribeWarmPoolAnswer.NextToken.": "allOf",
+      "DescribeWarmPoolAnswer.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachInstancesAnswer",
+    "properties": {
+      "DetachInstancesAnswer": "object",
+      "DetachInstancesAnswer.Activities.": "allOf",
+      "DetachInstancesAnswer.Activities..Activities": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachLoadBalancerTargetGroupsResultType",
+    "properties": { "DetachLoadBalancerTargetGroupsResultType": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachLoadBalancersResultType",
+    "properties": { "DetachLoadBalancersResultType": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachTrafficSourcesResultType",
+    "properties": { "DetachTrafficSourcesResultType": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/EnterStandbyAnswer",
+    "properties": {
+      "EnterStandbyAnswer": "object",
+      "EnterStandbyAnswer.Activities.": "allOf",
+      "EnterStandbyAnswer.Activities..Activities": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExitStandbyAnswer",
+    "properties": {
+      "ExitStandbyAnswer": "object",
+      "ExitStandbyAnswer.Activities.": "allOf",
+      "ExitStandbyAnswer.Activities..Activities": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetPredictiveScalingForecastAnswer",
+    "properties": {
+      "GetPredictiveScalingForecastAnswer": "object",
+      "GetPredictiveScalingForecastAnswer.LoadForecast.": "allOf",
+      "GetPredictiveScalingForecastAnswer.LoadForecast..LoadForecasts": "ref",
+      "GetPredictiveScalingForecastAnswer.CapacityForecast.": "allOf",
+      "GetPredictiveScalingForecastAnswer.CapacityForecast..CapacityForecast": "ref",
+      "GetPredictiveScalingForecastAnswer.UpdateTime.": "allOf",
+      "GetPredictiveScalingForecastAnswer.UpdateTime..TimestampType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PutLifecycleHookAnswer",
+    "properties": { "PutLifecycleHookAnswer": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PolicyARNType",
+    "properties": {
+      "PolicyARNType": "object",
+      "PolicyARNType.PolicyARN.": "allOf",
+      "PolicyARNType.PolicyARN..ResourceName": "ref",
+      "PolicyARNType.Alarms.": "allOf",
+      "PolicyARNType.Alarms..Alarms": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StepAdjustment",
+    "properties": {
+      "StepAdjustment": "object",
+      "StepAdjustment.MetricIntervalLowerBound.": "allOf",
+      "StepAdjustment.MetricIntervalLowerBound..MetricScale": "ref",
+      "StepAdjustment.MetricIntervalUpperBound.": "allOf",
+      "StepAdjustment.MetricIntervalUpperBound..MetricScale": "ref",
+      "StepAdjustment.ScalingAdjustment.": "allOf",
+      "StepAdjustment.ScalingAdjustment..PolicyIncrement": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredefinedMetricSpecification",
+    "properties": {
+      "PredefinedMetricSpecification": "object",
+      "PredefinedMetricSpecification.PredefinedMetricType.": "allOf",
+      "PredefinedMetricSpecification.PredefinedMetricType..MetricType": "ref",
+      "PredefinedMetricSpecification.ResourceLabel.": "allOf",
+      "PredefinedMetricSpecification.ResourceLabel..XmlStringMaxLen1023": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomizedMetricSpecification",
+    "properties": {
+      "CustomizedMetricSpecification": "object",
+      "CustomizedMetricSpecification.MetricName.": "allOf",
+      "CustomizedMetricSpecification.MetricName..MetricName": "ref",
+      "CustomizedMetricSpecification.Namespace.": "allOf",
+      "CustomizedMetricSpecification.Namespace..MetricNamespace": "ref",
+      "CustomizedMetricSpecification.Dimensions.": "allOf",
+      "CustomizedMetricSpecification.Dimensions..MetricDimensions": "ref",
+      "CustomizedMetricSpecification.Statistic.": "allOf",
+      "CustomizedMetricSpecification.Statistic..MetricStatistic": "ref",
+      "CustomizedMetricSpecification.Unit.": "allOf",
+      "CustomizedMetricSpecification.Unit..MetricUnit": "ref",
+      "CustomizedMetricSpecification.Metrics.": "allOf",
+      "CustomizedMetricSpecification.Metrics..TargetTrackingMetricDataQueries": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricScale",
+    "properties": { "MetricScale": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DisableScaleIn",
+    "properties": { "DisableScaleIn": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingMetricSpecifications",
+    "properties": {
+      "PredictiveScalingMetricSpecifications": "array",
+      "PredictiveScalingMetricSpecifications.PredictiveScalingMetricSpecification": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingMode",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingSchedulingBufferTime",
+    "properties": { "PredictiveScalingSchedulingBufferTime": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingMaxCapacityBreachBehavior",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingMaxCapacityBuffer",
+    "properties": { "PredictiveScalingMaxCapacityBuffer": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PutWarmPoolAnswer",
+    "properties": { "PutWarmPoolAnswer": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ReuseOnScaleIn",
+    "properties": { "ReuseOnScaleIn": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RecordLifecycleActionHeartbeatAnswer",
+    "properties": { "RecordLifecycleActionHeartbeatAnswer": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RollbackInstanceRefreshAnswer",
+    "properties": {
+      "RollbackInstanceRefreshAnswer": "object",
+      "RollbackInstanceRefreshAnswer.InstanceRefreshId.": "allOf",
+      "RollbackInstanceRefreshAnswer.InstanceRefreshId..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/IrreversibleInstanceRefreshFault",
+    "properties": { "IrreversibleInstanceRefreshFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SetInstanceProtectionAnswer",
+    "properties": { "SetInstanceProtectionAnswer": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StartInstanceRefreshAnswer",
+    "properties": {
+      "StartInstanceRefreshAnswer": "object",
+      "StartInstanceRefreshAnswer.InstanceRefreshId.": "allOf",
+      "StartInstanceRefreshAnswer.InstanceRefreshId..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchTemplateSpecification",
+    "properties": {
+      "LaunchTemplateSpecification": "object",
+      "LaunchTemplateSpecification.LaunchTemplateId.": "allOf",
+      "LaunchTemplateSpecification.LaunchTemplateId..XmlStringMaxLen255": "ref",
+      "LaunchTemplateSpecification.LaunchTemplateName.": "allOf",
+      "LaunchTemplateSpecification.LaunchTemplateName..LaunchTemplateName": "ref",
+      "LaunchTemplateSpecification.Version.": "allOf",
+      "LaunchTemplateSpecification.Version..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MixedInstancesPolicy",
+    "properties": {
+      "MixedInstancesPolicy": "object",
+      "MixedInstancesPolicy.LaunchTemplate.": "allOf",
+      "MixedInstancesPolicy.LaunchTemplate..LaunchTemplate": "ref",
+      "MixedInstancesPolicy.InstancesDistribution.": "allOf",
+      "MixedInstancesPolicy.InstancesDistribution..InstancesDistribution": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/IntPercent",
+    "properties": { "IntPercent": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RefreshInstanceWarmup",
+    "properties": { "RefreshInstanceWarmup": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CheckpointPercentages",
+    "properties": {
+      "CheckpointPercentages": "array",
+      "CheckpointPercentages.NonZeroIntPercent": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CheckpointDelay",
+    "properties": { "CheckpointDelay": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SkipMatching",
+    "properties": { "SkipMatching": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoRollback",
+    "properties": { "AutoRollback": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScaleInProtectedInstances",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StandbyInstances",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefreshInProgressFault",
+    "properties": { "InstanceRefreshInProgressFault": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityType",
+    "properties": {
+      "ActivityType": "object",
+      "ActivityType.Activity.": "allOf",
+      "ActivityType.Activity..Activity": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NullablePositiveInteger",
+    "properties": { "NullablePositiveInteger": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorCountRequest",
+    "properties": {
+      "AcceleratorCountRequest": "object",
+      "AcceleratorCountRequest.Min.": "allOf",
+      "AcceleratorCountRequest.Min..NullablePositiveInteger": "ref",
+      "AcceleratorCountRequest.Max.": "allOf",
+      "AcceleratorCountRequest.Max..NullablePositiveInteger": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorManufacturer",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorManufacturers",
+    "properties": {
+      "AcceleratorManufacturers": "array",
+      "AcceleratorManufacturers.AcceleratorManufacturer": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorName",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorNames",
+    "properties": {
+      "AcceleratorNames": "array",
+      "AcceleratorNames.AcceleratorName": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorTotalMemoryMiBRequest",
+    "properties": {
+      "AcceleratorTotalMemoryMiBRequest": "object",
+      "AcceleratorTotalMemoryMiBRequest.Min.": "allOf",
+      "AcceleratorTotalMemoryMiBRequest.Min..NullablePositiveInteger": "ref",
+      "AcceleratorTotalMemoryMiBRequest.Max.": "allOf",
+      "AcceleratorTotalMemoryMiBRequest.Max..NullablePositiveInteger": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AcceleratorTypes",
+    "properties": {
+      "AcceleratorTypes": "array",
+      "AcceleratorTypes.AcceleratorType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Activity",
+    "properties": {
+      "Activity": "object",
+      "Activity.ActivityId.": "allOf",
+      "Activity.ActivityId..XmlString": "ref",
+      "Activity.AutoScalingGroupName.": "allOf",
+      "Activity.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "Activity.Description.": "allOf",
+      "Activity.Description..XmlString": "ref",
+      "Activity.Cause.": "allOf",
+      "Activity.Cause..XmlStringMaxLen1023": "ref",
+      "Activity.StartTime.": "allOf",
+      "Activity.StartTime..TimestampType": "ref",
+      "Activity.EndTime.": "allOf",
+      "Activity.EndTime..TimestampType": "ref",
+      "Activity.StatusCode.": "allOf",
+      "Activity.StatusCode..ScalingActivityStatusCode": "ref",
+      "Activity.StatusMessage.": "allOf",
+      "Activity.StatusMessage..XmlStringMaxLen255": "ref",
+      "Activity.Progress.": "allOf",
+      "Activity.Progress..Progress": "ref",
+      "Activity.Details.": "allOf",
+      "Activity.Details..XmlString": "ref",
+      "Activity.AutoScalingGroupState.": "allOf",
+      "Activity.AutoScalingGroupState..AutoScalingGroupState": "ref",
+      "Activity.AutoScalingGroupARN.": "allOf",
+      "Activity.AutoScalingGroupARN..ResourceName": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Activities",
+    "properties": { "Activities": "array", "Activities.Activity": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen1023",
+    "properties": { "XmlStringMaxLen1023": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TimestampType",
+    "properties": { "TimestampType": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScalingActivityStatusCode",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Progress",
+    "properties": { "Progress": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupState",
+    "properties": { "AutoScalingGroupState": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActivityIds",
+    "properties": { "ActivityIds": "array", "ActivityIds.XmlString": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdjustmentType",
+    "properties": {
+      "AdjustmentType": "object",
+      "AdjustmentType.AdjustmentType.": "allOf",
+      "AdjustmentType.AdjustmentType..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdjustmentTypes",
+    "properties": {
+      "AdjustmentTypes": "array",
+      "AdjustmentTypes.AdjustmentType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Alarm",
+    "properties": {
+      "Alarm": "object",
+      "Alarm.AlarmName.": "allOf",
+      "Alarm.AlarmName..XmlStringMaxLen255": "ref",
+      "Alarm.AlarmARN.": "allOf",
+      "Alarm.AlarmARN..ResourceName": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Alarms",
+    "properties": { "Alarms": "array", "Alarms.Alarm": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AllowedInstanceType",
+    "properties": { "AllowedInstanceType": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AllowedInstanceTypes",
+    "properties": {
+      "AllowedInstanceTypes": "array",
+      "AllowedInstanceTypes.AllowedInstanceType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AssociatePublicIpAddress",
+    "properties": { "AssociatePublicIpAddress": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceIds",
+    "properties": {
+      "InstanceIds": "array",
+      "InstanceIds.XmlStringMaxLen19": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttachInstancesQuery",
+    "properties": {
+      "AttachInstancesQuery": "object",
+      "AttachInstancesQuery.InstanceIds.": "allOf",
+      "AttachInstancesQuery.InstanceIds..InstanceIds": "ref",
+      "AttachInstancesQuery.AutoScalingGroupName.": "allOf",
+      "AttachInstancesQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TargetGroupARNs",
+    "properties": {
+      "TargetGroupARNs": "array",
+      "TargetGroupARNs.XmlStringMaxLen511": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttachLoadBalancerTargetGroupsType",
+    "properties": {
+      "AttachLoadBalancerTargetGroupsType": "object",
+      "AttachLoadBalancerTargetGroupsType.AutoScalingGroupName.": "allOf",
+      "AttachLoadBalancerTargetGroupsType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "AttachLoadBalancerTargetGroupsType.TargetGroupARNs.": "allOf",
+      "AttachLoadBalancerTargetGroupsType.TargetGroupARNs..TargetGroupARNs": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadBalancerNames",
+    "properties": {
+      "LoadBalancerNames": "array",
+      "LoadBalancerNames.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttachLoadBalancersType",
+    "properties": {
+      "AttachLoadBalancersType": "object",
+      "AttachLoadBalancersType.AutoScalingGroupName.": "allOf",
+      "AttachLoadBalancersType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "AttachLoadBalancersType.LoadBalancerNames.": "allOf",
+      "AttachLoadBalancersType.LoadBalancerNames..LoadBalancerNames": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TrafficSources",
+    "properties": {
+      "TrafficSources": "array",
+      "TrafficSources.TrafficSourceIdentifier": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AttachTrafficSourcesType",
+    "properties": {
+      "AttachTrafficSourcesType": "object",
+      "AttachTrafficSourcesType.AutoScalingGroupName.": "allOf",
+      "AttachTrafficSourcesType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "AttachTrafficSourcesType.TrafficSources.": "allOf",
+      "AttachTrafficSourcesType.TrafficSources..TrafficSources": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupMinSize",
+    "properties": { "AutoScalingGroupMinSize": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupMaxSize",
+    "properties": { "AutoScalingGroupMaxSize": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupDesiredCapacity",
+    "properties": { "AutoScalingGroupDesiredCapacity": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupPredictedCapacity",
+    "properties": { "AutoScalingGroupPredictedCapacity": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Cooldown",
+    "properties": { "Cooldown": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AvailabilityZones",
+    "properties": {
+      "AvailabilityZones": "array",
+      "AvailabilityZones.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen32",
+    "properties": { "XmlStringMaxLen32": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HealthCheckGracePeriod",
+    "properties": { "HealthCheckGracePeriod": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Instances",
+    "properties": { "Instances": "array", "Instances.Instance": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SuspendedProcesses",
+    "properties": {
+      "SuspendedProcesses": "array",
+      "SuspendedProcesses.SuspendedProcess": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMaxLen2047",
+    "properties": { "XmlStringMaxLen2047": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/EnabledMetrics",
+    "properties": {
+      "EnabledMetrics": "array",
+      "EnabledMetrics.EnabledMetric": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagDescriptionList",
+    "properties": {
+      "TagDescriptionList": "array",
+      "TagDescriptionList.TagDescription": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TerminationPolicies",
+    "properties": {
+      "TerminationPolicies": "array",
+      "TerminationPolicies.XmlStringMaxLen1600": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceProtected",
+    "properties": { "InstanceProtected": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MaxInstanceLifetime",
+    "properties": { "MaxInstanceLifetime": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CapacityRebalanceEnabled",
+    "properties": { "CapacityRebalanceEnabled": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WarmPoolConfiguration",
+    "properties": {
+      "WarmPoolConfiguration": "object",
+      "WarmPoolConfiguration.MaxGroupPreparedCapacity.": "allOf",
+      "WarmPoolConfiguration.MaxGroupPreparedCapacity..MaxGroupPreparedCapacity": "ref",
+      "WarmPoolConfiguration.MinSize.": "allOf",
+      "WarmPoolConfiguration.MinSize..WarmPoolMinSize": "ref",
+      "WarmPoolConfiguration.PoolState.": "allOf",
+      "WarmPoolConfiguration.PoolState..WarmPoolState": "ref",
+      "WarmPoolConfiguration.Status.": "allOf",
+      "WarmPoolConfiguration.Status..WarmPoolStatus": "ref",
+      "WarmPoolConfiguration.InstanceReusePolicy.": "allOf",
+      "WarmPoolConfiguration.InstanceReusePolicy..InstanceReusePolicy": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WarmPoolSize",
+    "properties": { "WarmPoolSize": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Context",
+    "properties": { "Context": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DefaultInstanceWarmup",
+    "properties": { "DefaultInstanceWarmup": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroup",
+    "properties": {
+      "AutoScalingGroup": "object",
+      "AutoScalingGroup.AutoScalingGroupName.": "allOf",
+      "AutoScalingGroup.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "AutoScalingGroup.AutoScalingGroupARN.": "allOf",
+      "AutoScalingGroup.AutoScalingGroupARN..ResourceName": "ref",
+      "AutoScalingGroup.LaunchConfigurationName.": "allOf",
+      "AutoScalingGroup.LaunchConfigurationName..XmlStringMaxLen255": "ref",
+      "AutoScalingGroup.LaunchTemplate.": "allOf",
+      "AutoScalingGroup.LaunchTemplate..LaunchTemplateSpecification": "ref",
+      "AutoScalingGroup.MixedInstancesPolicy.": "allOf",
+      "AutoScalingGroup.MixedInstancesPolicy..MixedInstancesPolicy": "ref",
+      "AutoScalingGroup.MinSize.": "allOf",
+      "AutoScalingGroup.MinSize..AutoScalingGroupMinSize": "ref",
+      "AutoScalingGroup.MaxSize.": "allOf",
+      "AutoScalingGroup.MaxSize..AutoScalingGroupMaxSize": "ref",
+      "AutoScalingGroup.DesiredCapacity.": "allOf",
+      "AutoScalingGroup.DesiredCapacity..AutoScalingGroupDesiredCapacity": "ref",
+      "AutoScalingGroup.PredictedCapacity.": "allOf",
+      "AutoScalingGroup.PredictedCapacity..AutoScalingGroupPredictedCapacity": "ref",
+      "AutoScalingGroup.DefaultCooldown.": "allOf",
+      "AutoScalingGroup.DefaultCooldown..Cooldown": "ref",
+      "AutoScalingGroup.AvailabilityZones.": "allOf",
+      "AutoScalingGroup.AvailabilityZones..AvailabilityZones": "ref",
+      "AutoScalingGroup.LoadBalancerNames.": "allOf",
+      "AutoScalingGroup.LoadBalancerNames..LoadBalancerNames": "ref",
+      "AutoScalingGroup.TargetGroupARNs.": "allOf",
+      "AutoScalingGroup.TargetGroupARNs..TargetGroupARNs": "ref",
+      "AutoScalingGroup.HealthCheckType.": "allOf",
+      "AutoScalingGroup.HealthCheckType..XmlStringMaxLen32": "ref",
+      "AutoScalingGroup.HealthCheckGracePeriod.": "allOf",
+      "AutoScalingGroup.HealthCheckGracePeriod..HealthCheckGracePeriod": "ref",
+      "AutoScalingGroup.Instances.": "allOf",
+      "AutoScalingGroup.Instances..Instances": "ref",
+      "AutoScalingGroup.CreatedTime.": "allOf",
+      "AutoScalingGroup.CreatedTime..TimestampType": "ref",
+      "AutoScalingGroup.SuspendedProcesses.": "allOf",
+      "AutoScalingGroup.SuspendedProcesses..SuspendedProcesses": "ref",
+      "AutoScalingGroup.PlacementGroup.": "allOf",
+      "AutoScalingGroup.PlacementGroup..XmlStringMaxLen255": "ref",
+      "AutoScalingGroup.VPCZoneIdentifier.": "allOf",
+      "AutoScalingGroup.VPCZoneIdentifier..XmlStringMaxLen2047": "ref",
+      "AutoScalingGroup.EnabledMetrics.": "allOf",
+      "AutoScalingGroup.EnabledMetrics..EnabledMetrics": "ref",
+      "AutoScalingGroup.Status.": "allOf",
+      "AutoScalingGroup.Status..XmlStringMaxLen255": "ref",
+      "AutoScalingGroup.Tags.": "allOf",
+      "AutoScalingGroup.Tags..TagDescriptionList": "ref",
+      "AutoScalingGroup.TerminationPolicies.": "allOf",
+      "AutoScalingGroup.TerminationPolicies..TerminationPolicies": "ref",
+      "AutoScalingGroup.NewInstancesProtectedFromScaleIn.": "allOf",
+      "AutoScalingGroup.NewInstancesProtectedFromScaleIn..InstanceProtected": "ref",
+      "AutoScalingGroup.ServiceLinkedRoleARN.": "allOf",
+      "AutoScalingGroup.ServiceLinkedRoleARN..ResourceName": "ref",
+      "AutoScalingGroup.MaxInstanceLifetime.": "allOf",
+      "AutoScalingGroup.MaxInstanceLifetime..MaxInstanceLifetime": "ref",
+      "AutoScalingGroup.CapacityRebalance.": "allOf",
+      "AutoScalingGroup.CapacityRebalance..CapacityRebalanceEnabled": "ref",
+      "AutoScalingGroup.WarmPoolConfiguration.": "allOf",
+      "AutoScalingGroup.WarmPoolConfiguration..WarmPoolConfiguration": "ref",
+      "AutoScalingGroup.WarmPoolSize.": "allOf",
+      "AutoScalingGroup.WarmPoolSize..WarmPoolSize": "ref",
+      "AutoScalingGroup.Context.": "allOf",
+      "AutoScalingGroup.Context..Context": "ref",
+      "AutoScalingGroup.DesiredCapacityType.": "allOf",
+      "AutoScalingGroup.DesiredCapacityType..XmlStringMaxLen255": "ref",
+      "AutoScalingGroup.DefaultInstanceWarmup.": "allOf",
+      "AutoScalingGroup.DefaultInstanceWarmup..DefaultInstanceWarmup": "ref",
+      "AutoScalingGroup.TrafficSources.": "allOf",
+      "AutoScalingGroup.TrafficSources..TrafficSources": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupNames",
+    "properties": {
+      "AutoScalingGroupNames": "array",
+      "AutoScalingGroupNames.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MaxRecords",
+    "properties": { "MaxRecords": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Filters",
+    "properties": { "Filters": "array", "Filters.Filter": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroupNamesType",
+    "properties": {
+      "AutoScalingGroupNamesType": "object",
+      "AutoScalingGroupNamesType.AutoScalingGroupNames.": "allOf",
+      "AutoScalingGroupNamesType.AutoScalingGroupNames..AutoScalingGroupNames": "ref",
+      "AutoScalingGroupNamesType.NextToken.": "allOf",
+      "AutoScalingGroupNamesType.NextToken..XmlString": "ref",
+      "AutoScalingGroupNamesType.MaxRecords.": "allOf",
+      "AutoScalingGroupNamesType.MaxRecords..MaxRecords": "ref",
+      "AutoScalingGroupNamesType.Filters.": "allOf",
+      "AutoScalingGroupNamesType.Filters..Filters": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingGroups",
+    "properties": {
+      "AutoScalingGroups": "array",
+      "AutoScalingGroups.AutoScalingGroup": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingInstanceDetails",
+    "properties": {
+      "AutoScalingInstanceDetails": "object",
+      "AutoScalingInstanceDetails.InstanceId.": "allOf",
+      "AutoScalingInstanceDetails.InstanceId..XmlStringMaxLen19": "ref",
+      "AutoScalingInstanceDetails.InstanceType.": "allOf",
+      "AutoScalingInstanceDetails.InstanceType..XmlStringMaxLen255": "ref",
+      "AutoScalingInstanceDetails.AutoScalingGroupName.": "allOf",
+      "AutoScalingInstanceDetails.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "AutoScalingInstanceDetails.AvailabilityZone.": "allOf",
+      "AutoScalingInstanceDetails.AvailabilityZone..XmlStringMaxLen255": "ref",
+      "AutoScalingInstanceDetails.LifecycleState.": "allOf",
+      "AutoScalingInstanceDetails.LifecycleState..XmlStringMaxLen32": "ref",
+      "AutoScalingInstanceDetails.HealthStatus.": "allOf",
+      "AutoScalingInstanceDetails.HealthStatus..XmlStringMaxLen32": "ref",
+      "AutoScalingInstanceDetails.LaunchConfigurationName.": "allOf",
+      "AutoScalingInstanceDetails.LaunchConfigurationName..XmlStringMaxLen255": "ref",
+      "AutoScalingInstanceDetails.LaunchTemplate.": "allOf",
+      "AutoScalingInstanceDetails.LaunchTemplate..LaunchTemplateSpecification": "ref",
+      "AutoScalingInstanceDetails.ProtectedFromScaleIn.": "allOf",
+      "AutoScalingInstanceDetails.ProtectedFromScaleIn..InstanceProtected": "ref",
+      "AutoScalingInstanceDetails.WeightedCapacity.": "allOf",
+      "AutoScalingInstanceDetails.WeightedCapacity..XmlStringMaxLen32": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingInstances",
+    "properties": {
+      "AutoScalingInstances": "array",
+      "AutoScalingInstances.AutoScalingInstanceDetails": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AutoScalingNotificationTypes",
+    "properties": {
+      "AutoScalingNotificationTypes": "array",
+      "AutoScalingNotificationTypes.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BareMetal",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BaselineEbsBandwidthMbpsRequest",
+    "properties": {
+      "BaselineEbsBandwidthMbpsRequest": "object",
+      "BaselineEbsBandwidthMbpsRequest.Min.": "allOf",
+      "BaselineEbsBandwidthMbpsRequest.Min..NullablePositiveInteger": "ref",
+      "BaselineEbsBandwidthMbpsRequest.Max.": "allOf",
+      "BaselineEbsBandwidthMbpsRequest.Max..NullablePositiveInteger": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedScheduledUpdateGroupActionRequests",
+    "properties": {
+      "FailedScheduledUpdateGroupActionRequests": "array",
+      "FailedScheduledUpdateGroupActionRequests.FailedScheduledUpdateGroupActionRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScheduledActionNames",
+    "properties": {
+      "ScheduledActionNames": "array",
+      "ScheduledActionNames.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BatchDeleteScheduledActionType",
+    "properties": {
+      "BatchDeleteScheduledActionType": "object",
+      "BatchDeleteScheduledActionType.AutoScalingGroupName.": "allOf",
+      "BatchDeleteScheduledActionType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "BatchDeleteScheduledActionType.ScheduledActionNames.": "allOf",
+      "BatchDeleteScheduledActionType.ScheduledActionNames..ScheduledActionNames": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScheduledUpdateGroupActionRequests",
+    "properties": {
+      "ScheduledUpdateGroupActionRequests": "array",
+      "ScheduledUpdateGroupActionRequests.ScheduledUpdateGroupActionRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BatchPutScheduledUpdateGroupActionType",
+    "properties": {
+      "BatchPutScheduledUpdateGroupActionType": "object",
+      "BatchPutScheduledUpdateGroupActionType.AutoScalingGroupName.": "allOf",
+      "BatchPutScheduledUpdateGroupActionType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "BatchPutScheduledUpdateGroupActionType.ScheduledUpdateGroupActions.": "allOf",
+      "BatchPutScheduledUpdateGroupActionType.ScheduledUpdateGroupActions..ScheduledUpdateGroupActionRequests": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceEbsDeleteOnTermination",
+    "properties": { "BlockDeviceEbsDeleteOnTermination": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceEbsEncrypted",
+    "properties": { "BlockDeviceEbsEncrypted": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceEbsIops",
+    "properties": { "BlockDeviceEbsIops": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceEbsThroughput",
+    "properties": { "BlockDeviceEbsThroughput": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceEbsVolumeSize",
+    "properties": { "BlockDeviceEbsVolumeSize": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceEbsVolumeType",
+    "properties": { "BlockDeviceEbsVolumeType": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Ebs",
+    "properties": {
+      "Ebs": "object",
+      "Ebs.SnapshotId.": "allOf",
+      "Ebs.SnapshotId..XmlStringMaxLen255": "ref",
+      "Ebs.VolumeSize.": "allOf",
+      "Ebs.VolumeSize..BlockDeviceEbsVolumeSize": "ref",
+      "Ebs.VolumeType.": "allOf",
+      "Ebs.VolumeType..BlockDeviceEbsVolumeType": "ref",
+      "Ebs.DeleteOnTermination.": "allOf",
+      "Ebs.DeleteOnTermination..BlockDeviceEbsDeleteOnTermination": "ref",
+      "Ebs.Iops.": "allOf",
+      "Ebs.Iops..BlockDeviceEbsIops": "ref",
+      "Ebs.Encrypted.": "allOf",
+      "Ebs.Encrypted..BlockDeviceEbsEncrypted": "ref",
+      "Ebs.Throughput.": "allOf",
+      "Ebs.Throughput..BlockDeviceEbsThroughput": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NoDevice",
+    "properties": { "NoDevice": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BlockDeviceMappings",
+    "properties": {
+      "BlockDeviceMappings": "array",
+      "BlockDeviceMappings.BlockDeviceMapping": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BurstablePerformance",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CancelInstanceRefreshType",
+    "properties": {
+      "CancelInstanceRefreshType": "object",
+      "CancelInstanceRefreshType.AutoScalingGroupName.": "allOf",
+      "CancelInstanceRefreshType.AutoScalingGroupName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingForecastTimestamps",
+    "properties": {
+      "PredictiveScalingForecastTimestamps": "array",
+      "PredictiveScalingForecastTimestamps.TimestampType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingForecastValues",
+    "properties": {
+      "PredictiveScalingForecastValues": "array",
+      "PredictiveScalingForecastValues.MetricScale": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CapacityForecast",
+    "properties": {
+      "CapacityForecast": "object",
+      "CapacityForecast.Timestamps.": "allOf",
+      "CapacityForecast.Timestamps..PredictiveScalingForecastTimestamps": "ref",
+      "CapacityForecast.Values.": "allOf",
+      "CapacityForecast.Values..PredictiveScalingForecastValues": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NonZeroIntPercent",
+    "properties": { "NonZeroIntPercent": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ClassicLinkVPCSecurityGroups",
+    "properties": {
+      "ClassicLinkVPCSecurityGroups": "array",
+      "ClassicLinkVPCSecurityGroups.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleActionToken",
+    "properties": { "LifecycleActionToken": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleActionResult",
+    "properties": { "LifecycleActionResult": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CompleteLifecycleActionType",
+    "properties": {
+      "CompleteLifecycleActionType": "object",
+      "CompleteLifecycleActionType.LifecycleHookName.": "allOf",
+      "CompleteLifecycleActionType.LifecycleHookName..AsciiStringMaxLen255": "ref",
+      "CompleteLifecycleActionType.AutoScalingGroupName.": "allOf",
+      "CompleteLifecycleActionType.AutoScalingGroupName..ResourceName": "ref",
+      "CompleteLifecycleActionType.LifecycleActionToken.": "allOf",
+      "CompleteLifecycleActionType.LifecycleActionToken..LifecycleActionToken": "ref",
+      "CompleteLifecycleActionType.LifecycleActionResult.": "allOf",
+      "CompleteLifecycleActionType.LifecycleActionResult..LifecycleActionResult": "ref",
+      "CompleteLifecycleActionType.InstanceId.": "allOf",
+      "CompleteLifecycleActionType.InstanceId..XmlStringMaxLen19": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CpuManufacturer",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CpuManufacturers",
+    "properties": {
+      "CpuManufacturers": "array",
+      "CpuManufacturers.CpuManufacturer": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleHookSpecifications",
+    "properties": {
+      "LifecycleHookSpecifications": "array",
+      "LifecycleHookSpecifications.LifecycleHookSpecification": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tags",
+    "properties": { "Tags": "array", "Tags.Tag": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateAutoScalingGroupType",
+    "properties": {
+      "CreateAutoScalingGroupType": "object",
+      "CreateAutoScalingGroupType.AutoScalingGroupName.": "allOf",
+      "CreateAutoScalingGroupType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "CreateAutoScalingGroupType.LaunchConfigurationName.": "allOf",
+      "CreateAutoScalingGroupType.LaunchConfigurationName..XmlStringMaxLen255": "ref",
+      "CreateAutoScalingGroupType.LaunchTemplate.": "allOf",
+      "CreateAutoScalingGroupType.LaunchTemplate..LaunchTemplateSpecification": "ref",
+      "CreateAutoScalingGroupType.MixedInstancesPolicy.": "allOf",
+      "CreateAutoScalingGroupType.MixedInstancesPolicy..MixedInstancesPolicy": "ref",
+      "CreateAutoScalingGroupType.InstanceId.": "allOf",
+      "CreateAutoScalingGroupType.InstanceId..XmlStringMaxLen19": "ref",
+      "CreateAutoScalingGroupType.MinSize.": "allOf",
+      "CreateAutoScalingGroupType.MinSize..AutoScalingGroupMinSize": "ref",
+      "CreateAutoScalingGroupType.MaxSize.": "allOf",
+      "CreateAutoScalingGroupType.MaxSize..AutoScalingGroupMaxSize": "ref",
+      "CreateAutoScalingGroupType.DesiredCapacity.": "allOf",
+      "CreateAutoScalingGroupType.DesiredCapacity..AutoScalingGroupDesiredCapacity": "ref",
+      "CreateAutoScalingGroupType.DefaultCooldown.": "allOf",
+      "CreateAutoScalingGroupType.DefaultCooldown..Cooldown": "ref",
+      "CreateAutoScalingGroupType.AvailabilityZones.": "allOf",
+      "CreateAutoScalingGroupType.AvailabilityZones..AvailabilityZones": "ref",
+      "CreateAutoScalingGroupType.LoadBalancerNames.": "allOf",
+      "CreateAutoScalingGroupType.LoadBalancerNames..LoadBalancerNames": "ref",
+      "CreateAutoScalingGroupType.TargetGroupARNs.": "allOf",
+      "CreateAutoScalingGroupType.TargetGroupARNs..TargetGroupARNs": "ref",
+      "CreateAutoScalingGroupType.HealthCheckType.": "allOf",
+      "CreateAutoScalingGroupType.HealthCheckType..XmlStringMaxLen32": "ref",
+      "CreateAutoScalingGroupType.HealthCheckGracePeriod.": "allOf",
+      "CreateAutoScalingGroupType.HealthCheckGracePeriod..HealthCheckGracePeriod": "ref",
+      "CreateAutoScalingGroupType.PlacementGroup.": "allOf",
+      "CreateAutoScalingGroupType.PlacementGroup..XmlStringMaxLen255": "ref",
+      "CreateAutoScalingGroupType.VPCZoneIdentifier.": "allOf",
+      "CreateAutoScalingGroupType.VPCZoneIdentifier..XmlStringMaxLen2047": "ref",
+      "CreateAutoScalingGroupType.TerminationPolicies.": "allOf",
+      "CreateAutoScalingGroupType.TerminationPolicies..TerminationPolicies": "ref",
+      "CreateAutoScalingGroupType.NewInstancesProtectedFromScaleIn.": "allOf",
+      "CreateAutoScalingGroupType.NewInstancesProtectedFromScaleIn..InstanceProtected": "ref",
+      "CreateAutoScalingGroupType.CapacityRebalance.": "allOf",
+      "CreateAutoScalingGroupType.CapacityRebalance..CapacityRebalanceEnabled": "ref",
+      "CreateAutoScalingGroupType.LifecycleHookSpecificationList.": "allOf",
+      "CreateAutoScalingGroupType.LifecycleHookSpecificationList..LifecycleHookSpecifications": "ref",
+      "CreateAutoScalingGroupType.Tags.": "allOf",
+      "CreateAutoScalingGroupType.Tags..Tags": "ref",
+      "CreateAutoScalingGroupType.ServiceLinkedRoleARN.": "allOf",
+      "CreateAutoScalingGroupType.ServiceLinkedRoleARN..ResourceName": "ref",
+      "CreateAutoScalingGroupType.MaxInstanceLifetime.": "allOf",
+      "CreateAutoScalingGroupType.MaxInstanceLifetime..MaxInstanceLifetime": "ref",
+      "CreateAutoScalingGroupType.Context.": "allOf",
+      "CreateAutoScalingGroupType.Context..Context": "ref",
+      "CreateAutoScalingGroupType.DesiredCapacityType.": "allOf",
+      "CreateAutoScalingGroupType.DesiredCapacityType..XmlStringMaxLen255": "ref",
+      "CreateAutoScalingGroupType.DefaultInstanceWarmup.": "allOf",
+      "CreateAutoScalingGroupType.DefaultInstanceWarmup..DefaultInstanceWarmup": "ref",
+      "CreateAutoScalingGroupType.TrafficSources.": "allOf",
+      "CreateAutoScalingGroupType.TrafficSources..TrafficSources": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SecurityGroups",
+    "properties": {
+      "SecurityGroups": "array",
+      "SecurityGroups.XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringUserData",
+    "properties": { "XmlStringUserData": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceMonitoring",
+    "properties": {
+      "InstanceMonitoring": "object",
+      "InstanceMonitoring.Enabled.": "allOf",
+      "InstanceMonitoring.Enabled..MonitoringEnabled": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SpotPrice",
+    "properties": { "SpotPrice": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/EbsOptimized",
+    "properties": { "EbsOptimized": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceMetadataOptions",
+    "properties": {
+      "InstanceMetadataOptions": "object",
+      "InstanceMetadataOptions.HttpTokens.": "allOf",
+      "InstanceMetadataOptions.HttpTokens..InstanceMetadataHttpTokensState": "ref",
+      "InstanceMetadataOptions.HttpPutResponseHopLimit.": "allOf",
+      "InstanceMetadataOptions.HttpPutResponseHopLimit..InstanceMetadataHttpPutResponseHopLimit": "ref",
+      "InstanceMetadataOptions.HttpEndpoint.": "allOf",
+      "InstanceMetadataOptions.HttpEndpoint..InstanceMetadataEndpointState": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateLaunchConfigurationType",
+    "properties": {
+      "CreateLaunchConfigurationType": "object",
+      "CreateLaunchConfigurationType.LaunchConfigurationName.": "allOf",
+      "CreateLaunchConfigurationType.LaunchConfigurationName..XmlStringMaxLen255": "ref",
+      "CreateLaunchConfigurationType.ImageId.": "allOf",
+      "CreateLaunchConfigurationType.ImageId..XmlStringMaxLen255": "ref",
+      "CreateLaunchConfigurationType.KeyName.": "allOf",
+      "CreateLaunchConfigurationType.KeyName..XmlStringMaxLen255": "ref",
+      "CreateLaunchConfigurationType.SecurityGroups.": "allOf",
+      "CreateLaunchConfigurationType.SecurityGroups..SecurityGroups": "ref",
+      "CreateLaunchConfigurationType.ClassicLinkVPCId.": "allOf",
+      "CreateLaunchConfigurationType.ClassicLinkVPCId..XmlStringMaxLen255": "ref",
+      "CreateLaunchConfigurationType.ClassicLinkVPCSecurityGroups.": "allOf",
+      "CreateLaunchConfigurationType.ClassicLinkVPCSecurityGroups..ClassicLinkVPCSecurityGroups": "ref",
+      "CreateLaunchConfigurationType.UserData.": "allOf",
+      "CreateLaunchConfigurationType.UserData..XmlStringUserData": "ref",
+      "CreateLaunchConfigurationType.InstanceId.": "allOf",
+      "CreateLaunchConfigurationType.InstanceId..XmlStringMaxLen19": "ref",
+      "CreateLaunchConfigurationType.InstanceType.": "allOf",
+      "CreateLaunchConfigurationType.InstanceType..XmlStringMaxLen255": "ref",
+      "CreateLaunchConfigurationType.KernelId.": "allOf",
+      "CreateLaunchConfigurationType.KernelId..XmlStringMaxLen255": "ref",
+      "CreateLaunchConfigurationType.RamdiskId.": "allOf",
+      "CreateLaunchConfigurationType.RamdiskId..XmlStringMaxLen255": "ref",
+      "CreateLaunchConfigurationType.BlockDeviceMappings.": "allOf",
+      "CreateLaunchConfigurationType.BlockDeviceMappings..BlockDeviceMappings": "ref",
+      "CreateLaunchConfigurationType.InstanceMonitoring.": "allOf",
+      "CreateLaunchConfigurationType.InstanceMonitoring..InstanceMonitoring": "ref",
+      "CreateLaunchConfigurationType.SpotPrice.": "allOf",
+      "CreateLaunchConfigurationType.SpotPrice..SpotPrice": "ref",
+      "CreateLaunchConfigurationType.IamInstanceProfile.": "allOf",
+      "CreateLaunchConfigurationType.IamInstanceProfile..XmlStringMaxLen1600": "ref",
+      "CreateLaunchConfigurationType.EbsOptimized.": "allOf",
+      "CreateLaunchConfigurationType.EbsOptimized..EbsOptimized": "ref",
+      "CreateLaunchConfigurationType.AssociatePublicIpAddress.": "allOf",
+      "CreateLaunchConfigurationType.AssociatePublicIpAddress..AssociatePublicIpAddress": "ref",
+      "CreateLaunchConfigurationType.PlacementTenancy.": "allOf",
+      "CreateLaunchConfigurationType.PlacementTenancy..XmlStringMaxLen64": "ref",
+      "CreateLaunchConfigurationType.MetadataOptions.": "allOf",
+      "CreateLaunchConfigurationType.MetadataOptions..InstanceMetadataOptions": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CreateOrUpdateTagsType",
+    "properties": {
+      "CreateOrUpdateTagsType": "object",
+      "CreateOrUpdateTagsType.Tags.": "allOf",
+      "CreateOrUpdateTagsType.Tags..Tags": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricName",
+    "properties": { "MetricName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricNamespace",
+    "properties": { "MetricNamespace": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricDimensions",
+    "properties": {
+      "MetricDimensions": "array",
+      "MetricDimensions.MetricDimension": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricStatistic",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricUnit",
+    "properties": { "MetricUnit": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TargetTrackingMetricDataQueries",
+    "properties": {
+      "TargetTrackingMetricDataQueries": "array",
+      "TargetTrackingMetricDataQueries.TargetTrackingMetricDataQuery": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ForceDelete",
+    "properties": { "ForceDelete": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteAutoScalingGroupType",
+    "properties": {
+      "DeleteAutoScalingGroupType": "object",
+      "DeleteAutoScalingGroupType.AutoScalingGroupName.": "allOf",
+      "DeleteAutoScalingGroupType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DeleteAutoScalingGroupType.ForceDelete.": "allOf",
+      "DeleteAutoScalingGroupType.ForceDelete..ForceDelete": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteLifecycleHookType",
+    "properties": {
+      "DeleteLifecycleHookType": "object",
+      "DeleteLifecycleHookType.LifecycleHookName.": "allOf",
+      "DeleteLifecycleHookType.LifecycleHookName..AsciiStringMaxLen255": "ref",
+      "DeleteLifecycleHookType.AutoScalingGroupName.": "allOf",
+      "DeleteLifecycleHookType.AutoScalingGroupName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteNotificationConfigurationType",
+    "properties": {
+      "DeleteNotificationConfigurationType": "object",
+      "DeleteNotificationConfigurationType.AutoScalingGroupName.": "allOf",
+      "DeleteNotificationConfigurationType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DeleteNotificationConfigurationType.TopicARN.": "allOf",
+      "DeleteNotificationConfigurationType.TopicARN..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeletePolicyType",
+    "properties": {
+      "DeletePolicyType": "object",
+      "DeletePolicyType.AutoScalingGroupName.": "allOf",
+      "DeletePolicyType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DeletePolicyType.PolicyName.": "allOf",
+      "DeletePolicyType.PolicyName..ResourceName": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteScheduledActionType",
+    "properties": {
+      "DeleteScheduledActionType": "object",
+      "DeleteScheduledActionType.AutoScalingGroupName.": "allOf",
+      "DeleteScheduledActionType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DeleteScheduledActionType.ScheduledActionName.": "allOf",
+      "DeleteScheduledActionType.ScheduledActionName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteTagsType",
+    "properties": {
+      "DeleteTagsType": "object",
+      "DeleteTagsType.Tags.": "allOf",
+      "DeleteTagsType.Tags..Tags": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteWarmPoolType",
+    "properties": {
+      "DeleteWarmPoolType": "object",
+      "DeleteWarmPoolType.AutoScalingGroupName.": "allOf",
+      "DeleteWarmPoolType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DeleteWarmPoolType.ForceDelete.": "allOf",
+      "DeleteWarmPoolType.ForceDelete..ForceDelete": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MaxNumberOfAutoScalingGroups",
+    "properties": { "MaxNumberOfAutoScalingGroups": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MaxNumberOfLaunchConfigurations",
+    "properties": { "MaxNumberOfLaunchConfigurations": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NumberOfAutoScalingGroups",
+    "properties": { "NumberOfAutoScalingGroups": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NumberOfLaunchConfigurations",
+    "properties": { "NumberOfLaunchConfigurations": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeAutoScalingInstancesType",
+    "properties": {
+      "DescribeAutoScalingInstancesType": "object",
+      "DescribeAutoScalingInstancesType.InstanceIds.": "allOf",
+      "DescribeAutoScalingInstancesType.InstanceIds..InstanceIds": "ref",
+      "DescribeAutoScalingInstancesType.MaxRecords.": "allOf",
+      "DescribeAutoScalingInstancesType.MaxRecords..MaxRecords": "ref",
+      "DescribeAutoScalingInstancesType.NextToken.": "allOf",
+      "DescribeAutoScalingInstancesType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefreshes",
+    "properties": {
+      "InstanceRefreshes": "array",
+      "InstanceRefreshes.InstanceRefresh": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefreshIds",
+    "properties": {
+      "InstanceRefreshIds": "array",
+      "InstanceRefreshIds.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeInstanceRefreshesType",
+    "properties": {
+      "DescribeInstanceRefreshesType": "object",
+      "DescribeInstanceRefreshesType.AutoScalingGroupName.": "allOf",
+      "DescribeInstanceRefreshesType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeInstanceRefreshesType.InstanceRefreshIds.": "allOf",
+      "DescribeInstanceRefreshesType.InstanceRefreshIds..InstanceRefreshIds": "ref",
+      "DescribeInstanceRefreshesType.NextToken.": "allOf",
+      "DescribeInstanceRefreshesType.NextToken..XmlString": "ref",
+      "DescribeInstanceRefreshesType.MaxRecords.": "allOf",
+      "DescribeInstanceRefreshesType.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleHooks",
+    "properties": {
+      "LifecycleHooks": "array",
+      "LifecycleHooks.LifecycleHook": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleHookNames",
+    "properties": {
+      "LifecycleHookNames": "array",
+      "LifecycleHookNames.AsciiStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeLifecycleHooksType",
+    "properties": {
+      "DescribeLifecycleHooksType": "object",
+      "DescribeLifecycleHooksType.AutoScalingGroupName.": "allOf",
+      "DescribeLifecycleHooksType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeLifecycleHooksType.LifecycleHookNames.": "allOf",
+      "DescribeLifecycleHooksType.LifecycleHookNames..LifecycleHookNames": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeLoadBalancerTargetGroupsRequest",
+    "properties": {
+      "DescribeLoadBalancerTargetGroupsRequest": "object",
+      "DescribeLoadBalancerTargetGroupsRequest.AutoScalingGroupName.": "allOf",
+      "DescribeLoadBalancerTargetGroupsRequest.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeLoadBalancerTargetGroupsRequest.NextToken.": "allOf",
+      "DescribeLoadBalancerTargetGroupsRequest.NextToken..XmlString": "ref",
+      "DescribeLoadBalancerTargetGroupsRequest.MaxRecords.": "allOf",
+      "DescribeLoadBalancerTargetGroupsRequest.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadBalancerTargetGroupStates",
+    "properties": {
+      "LoadBalancerTargetGroupStates": "array",
+      "LoadBalancerTargetGroupStates.LoadBalancerTargetGroupState": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeLoadBalancersRequest",
+    "properties": {
+      "DescribeLoadBalancersRequest": "object",
+      "DescribeLoadBalancersRequest.AutoScalingGroupName.": "allOf",
+      "DescribeLoadBalancersRequest.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeLoadBalancersRequest.NextToken.": "allOf",
+      "DescribeLoadBalancersRequest.NextToken..XmlString": "ref",
+      "DescribeLoadBalancersRequest.MaxRecords.": "allOf",
+      "DescribeLoadBalancersRequest.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadBalancerStates",
+    "properties": {
+      "LoadBalancerStates": "array",
+      "LoadBalancerStates.LoadBalancerState": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricCollectionTypes",
+    "properties": {
+      "MetricCollectionTypes": "array",
+      "MetricCollectionTypes.MetricCollectionType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricGranularityTypes",
+    "properties": {
+      "MetricGranularityTypes": "array",
+      "MetricGranularityTypes.MetricGranularityType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NotificationConfigurations",
+    "properties": {
+      "NotificationConfigurations": "array",
+      "NotificationConfigurations.NotificationConfiguration": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeNotificationConfigurationsType",
+    "properties": {
+      "DescribeNotificationConfigurationsType": "object",
+      "DescribeNotificationConfigurationsType.AutoScalingGroupNames.": "allOf",
+      "DescribeNotificationConfigurationsType.AutoScalingGroupNames..AutoScalingGroupNames": "ref",
+      "DescribeNotificationConfigurationsType.NextToken.": "allOf",
+      "DescribeNotificationConfigurationsType.NextToken..XmlString": "ref",
+      "DescribeNotificationConfigurationsType.MaxRecords.": "allOf",
+      "DescribeNotificationConfigurationsType.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PolicyNames",
+    "properties": { "PolicyNames": "array", "PolicyNames.ResourceName": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PolicyTypes",
+    "properties": {
+      "PolicyTypes": "array",
+      "PolicyTypes.XmlStringMaxLen64": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribePoliciesType",
+    "properties": {
+      "DescribePoliciesType": "object",
+      "DescribePoliciesType.AutoScalingGroupName.": "allOf",
+      "DescribePoliciesType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribePoliciesType.PolicyNames.": "allOf",
+      "DescribePoliciesType.PolicyNames..PolicyNames": "ref",
+      "DescribePoliciesType.PolicyTypes.": "allOf",
+      "DescribePoliciesType.PolicyTypes..PolicyTypes": "ref",
+      "DescribePoliciesType.NextToken.": "allOf",
+      "DescribePoliciesType.NextToken..XmlString": "ref",
+      "DescribePoliciesType.MaxRecords.": "allOf",
+      "DescribePoliciesType.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/IncludeDeletedGroups",
+    "properties": { "IncludeDeletedGroups": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeScalingActivitiesType",
+    "properties": {
+      "DescribeScalingActivitiesType": "object",
+      "DescribeScalingActivitiesType.ActivityIds.": "allOf",
+      "DescribeScalingActivitiesType.ActivityIds..ActivityIds": "ref",
+      "DescribeScalingActivitiesType.AutoScalingGroupName.": "allOf",
+      "DescribeScalingActivitiesType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeScalingActivitiesType.IncludeDeletedGroups.": "allOf",
+      "DescribeScalingActivitiesType.IncludeDeletedGroups..IncludeDeletedGroups": "ref",
+      "DescribeScalingActivitiesType.MaxRecords.": "allOf",
+      "DescribeScalingActivitiesType.MaxRecords..MaxRecords": "ref",
+      "DescribeScalingActivitiesType.NextToken.": "allOf",
+      "DescribeScalingActivitiesType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeScheduledActionsType",
+    "properties": {
+      "DescribeScheduledActionsType": "object",
+      "DescribeScheduledActionsType.AutoScalingGroupName.": "allOf",
+      "DescribeScheduledActionsType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeScheduledActionsType.ScheduledActionNames.": "allOf",
+      "DescribeScheduledActionsType.ScheduledActionNames..ScheduledActionNames": "ref",
+      "DescribeScheduledActionsType.StartTime.": "allOf",
+      "DescribeScheduledActionsType.StartTime..TimestampType": "ref",
+      "DescribeScheduledActionsType.EndTime.": "allOf",
+      "DescribeScheduledActionsType.EndTime..TimestampType": "ref",
+      "DescribeScheduledActionsType.NextToken.": "allOf",
+      "DescribeScheduledActionsType.NextToken..XmlString": "ref",
+      "DescribeScheduledActionsType.MaxRecords.": "allOf",
+      "DescribeScheduledActionsType.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeTagsType",
+    "properties": {
+      "DescribeTagsType": "object",
+      "DescribeTagsType.Filters.": "allOf",
+      "DescribeTagsType.Filters..Filters": "ref",
+      "DescribeTagsType.NextToken.": "allOf",
+      "DescribeTagsType.NextToken..XmlString": "ref",
+      "DescribeTagsType.MaxRecords.": "allOf",
+      "DescribeTagsType.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeTrafficSourcesRequest",
+    "properties": {
+      "DescribeTrafficSourcesRequest": "object",
+      "DescribeTrafficSourcesRequest.AutoScalingGroupName.": "allOf",
+      "DescribeTrafficSourcesRequest.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeTrafficSourcesRequest.TrafficSourceType.": "allOf",
+      "DescribeTrafficSourcesRequest.TrafficSourceType..XmlStringMaxLen255": "ref",
+      "DescribeTrafficSourcesRequest.NextToken.": "allOf",
+      "DescribeTrafficSourcesRequest.NextToken..XmlString": "ref",
+      "DescribeTrafficSourcesRequest.MaxRecords.": "allOf",
+      "DescribeTrafficSourcesRequest.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TrafficSourceStates",
+    "properties": {
+      "TrafficSourceStates": "array",
+      "TrafficSourceStates.TrafficSourceState": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DescribeWarmPoolType",
+    "properties": {
+      "DescribeWarmPoolType": "object",
+      "DescribeWarmPoolType.AutoScalingGroupName.": "allOf",
+      "DescribeWarmPoolType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DescribeWarmPoolType.MaxRecords.": "allOf",
+      "DescribeWarmPoolType.MaxRecords..MaxRecords": "ref",
+      "DescribeWarmPoolType.NextToken.": "allOf",
+      "DescribeWarmPoolType.NextToken..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DesiredConfiguration",
+    "properties": {
+      "DesiredConfiguration": "object",
+      "DesiredConfiguration.LaunchTemplate.": "allOf",
+      "DesiredConfiguration.LaunchTemplate..LaunchTemplateSpecification": "ref",
+      "DesiredConfiguration.MixedInstancesPolicy.": "allOf",
+      "DesiredConfiguration.MixedInstancesPolicy..MixedInstancesPolicy": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ShouldDecrementDesiredCapacity",
+    "properties": { "ShouldDecrementDesiredCapacity": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachInstancesQuery",
+    "properties": {
+      "DetachInstancesQuery": "object",
+      "DetachInstancesQuery.InstanceIds.": "allOf",
+      "DetachInstancesQuery.InstanceIds..InstanceIds": "ref",
+      "DetachInstancesQuery.AutoScalingGroupName.": "allOf",
+      "DetachInstancesQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DetachInstancesQuery.ShouldDecrementDesiredCapacity.": "allOf",
+      "DetachInstancesQuery.ShouldDecrementDesiredCapacity..ShouldDecrementDesiredCapacity": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachLoadBalancerTargetGroupsType",
+    "properties": {
+      "DetachLoadBalancerTargetGroupsType": "object",
+      "DetachLoadBalancerTargetGroupsType.AutoScalingGroupName.": "allOf",
+      "DetachLoadBalancerTargetGroupsType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DetachLoadBalancerTargetGroupsType.TargetGroupARNs.": "allOf",
+      "DetachLoadBalancerTargetGroupsType.TargetGroupARNs..TargetGroupARNs": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachLoadBalancersType",
+    "properties": {
+      "DetachLoadBalancersType": "object",
+      "DetachLoadBalancersType.AutoScalingGroupName.": "allOf",
+      "DetachLoadBalancersType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DetachLoadBalancersType.LoadBalancerNames.": "allOf",
+      "DetachLoadBalancersType.LoadBalancerNames..LoadBalancerNames": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DetachTrafficSourcesType",
+    "properties": {
+      "DetachTrafficSourcesType": "object",
+      "DetachTrafficSourcesType.AutoScalingGroupName.": "allOf",
+      "DetachTrafficSourcesType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DetachTrafficSourcesType.TrafficSources.": "allOf",
+      "DetachTrafficSourcesType.TrafficSources..TrafficSources": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Metrics",
+    "properties": { "Metrics": "array", "Metrics.XmlStringMaxLen255": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DisableMetricsCollectionQuery",
+    "properties": {
+      "DisableMetricsCollectionQuery": "object",
+      "DisableMetricsCollectionQuery.AutoScalingGroupName.": "allOf",
+      "DisableMetricsCollectionQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "DisableMetricsCollectionQuery.Metrics.": "allOf",
+      "DisableMetricsCollectionQuery.Metrics..Metrics": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EnableMetricsCollectionQuery",
+    "properties": {
+      "EnableMetricsCollectionQuery": "object",
+      "EnableMetricsCollectionQuery.AutoScalingGroupName.": "allOf",
+      "EnableMetricsCollectionQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "EnableMetricsCollectionQuery.Metrics.": "allOf",
+      "EnableMetricsCollectionQuery.Metrics..Metrics": "ref",
+      "EnableMetricsCollectionQuery.Granularity.": "allOf",
+      "EnableMetricsCollectionQuery.Granularity..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EnabledMetric",
+    "properties": {
+      "EnabledMetric": "object",
+      "EnabledMetric.Metric.": "allOf",
+      "EnabledMetric.Metric..XmlStringMaxLen255": "ref",
+      "EnabledMetric.Granularity.": "allOf",
+      "EnabledMetric.Granularity..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EnterStandbyQuery",
+    "properties": {
+      "EnterStandbyQuery": "object",
+      "EnterStandbyQuery.InstanceIds.": "allOf",
+      "EnterStandbyQuery.InstanceIds..InstanceIds": "ref",
+      "EnterStandbyQuery.AutoScalingGroupName.": "allOf",
+      "EnterStandbyQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "EnterStandbyQuery.ShouldDecrementDesiredCapacity.": "allOf",
+      "EnterStandbyQuery.ShouldDecrementDesiredCapacity..ShouldDecrementDesiredCapacity": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/EstimatedInstanceWarmup",
+    "properties": { "EstimatedInstanceWarmup": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExcludedInstance",
+    "properties": { "ExcludedInstance": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExcludedInstanceTypes",
+    "properties": {
+      "ExcludedInstanceTypes": "array",
+      "ExcludedInstanceTypes.ExcludedInstance": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HonorCooldown",
+    "properties": { "HonorCooldown": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExecutePolicyType",
+    "properties": {
+      "ExecutePolicyType": "object",
+      "ExecutePolicyType.AutoScalingGroupName.": "allOf",
+      "ExecutePolicyType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "ExecutePolicyType.PolicyName.": "allOf",
+      "ExecutePolicyType.PolicyName..ResourceName": "ref",
+      "ExecutePolicyType.HonorCooldown.": "allOf",
+      "ExecutePolicyType.HonorCooldown..HonorCooldown": "ref",
+      "ExecutePolicyType.MetricValue.": "allOf",
+      "ExecutePolicyType.MetricValue..MetricScale": "ref",
+      "ExecutePolicyType.BreachThreshold.": "allOf",
+      "ExecutePolicyType.BreachThreshold..MetricScale": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExitStandbyQuery",
+    "properties": {
+      "ExitStandbyQuery": "object",
+      "ExitStandbyQuery.InstanceIds.": "allOf",
+      "ExitStandbyQuery.InstanceIds..InstanceIds": "ref",
+      "ExitStandbyQuery.AutoScalingGroupName.": "allOf",
+      "ExitStandbyQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FailedScheduledUpdateGroupActionRequest",
+    "properties": {
+      "FailedScheduledUpdateGroupActionRequest": "object",
+      "FailedScheduledUpdateGroupActionRequest.ScheduledActionName.": "allOf",
+      "FailedScheduledUpdateGroupActionRequest.ScheduledActionName..XmlStringMaxLen255": "ref",
+      "FailedScheduledUpdateGroupActionRequest.ErrorCode.": "allOf",
+      "FailedScheduledUpdateGroupActionRequest.ErrorCode..XmlStringMaxLen64": "ref",
+      "FailedScheduledUpdateGroupActionRequest.ErrorMessage.": "allOf",
+      "FailedScheduledUpdateGroupActionRequest.ErrorMessage..XmlString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Values",
+    "properties": { "Values": "array", "Values.XmlString": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadForecasts",
+    "properties": {
+      "LoadForecasts": "array",
+      "LoadForecasts.LoadForecast": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GetPredictiveScalingForecastType",
+    "properties": {
+      "GetPredictiveScalingForecastType": "object",
+      "GetPredictiveScalingForecastType.AutoScalingGroupName.": "allOf",
+      "GetPredictiveScalingForecastType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "GetPredictiveScalingForecastType.PolicyName.": "allOf",
+      "GetPredictiveScalingForecastType.PolicyName..XmlStringMaxLen255": "ref",
+      "GetPredictiveScalingForecastType.StartTime.": "allOf",
+      "GetPredictiveScalingForecastType.StartTime..TimestampType": "ref",
+      "GetPredictiveScalingForecastType.EndTime.": "allOf",
+      "GetPredictiveScalingForecastType.EndTime..TimestampType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/GlobalTimeout",
+    "properties": { "GlobalTimeout": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/HeartbeatTimeout",
+    "properties": { "HeartbeatTimeout": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Instance",
+    "properties": {
+      "Instance": "object",
+      "Instance.InstanceId.": "allOf",
+      "Instance.InstanceId..XmlStringMaxLen19": "ref",
+      "Instance.InstanceType.": "allOf",
+      "Instance.InstanceType..XmlStringMaxLen255": "ref",
+      "Instance.AvailabilityZone.": "allOf",
+      "Instance.AvailabilityZone..XmlStringMaxLen255": "ref",
+      "Instance.LifecycleState.": "allOf",
+      "Instance.LifecycleState..LifecycleState": "ref",
+      "Instance.HealthStatus.": "allOf",
+      "Instance.HealthStatus..XmlStringMaxLen32": "ref",
+      "Instance.LaunchConfigurationName.": "allOf",
+      "Instance.LaunchConfigurationName..XmlStringMaxLen255": "ref",
+      "Instance.LaunchTemplate.": "allOf",
+      "Instance.LaunchTemplate..LaunchTemplateSpecification": "ref",
+      "Instance.ProtectedFromScaleIn.": "allOf",
+      "Instance.ProtectedFromScaleIn..InstanceProtected": "ref",
+      "Instance.WeightedCapacity.": "allOf",
+      "Instance.WeightedCapacity..XmlStringMaxLen32": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceGeneration",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceGenerations",
+    "properties": {
+      "InstanceGenerations": "array",
+      "InstanceGenerations.InstanceGeneration": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefreshStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstancesToUpdate",
+    "properties": { "InstancesToUpdate": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefreshProgressDetails",
+    "properties": {
+      "InstanceRefreshProgressDetails": "object",
+      "InstanceRefreshProgressDetails.LivePoolProgress.": "allOf",
+      "InstanceRefreshProgressDetails.LivePoolProgress..InstanceRefreshLivePoolProgress": "ref",
+      "InstanceRefreshProgressDetails.WarmPoolProgress.": "allOf",
+      "InstanceRefreshProgressDetails.WarmPoolProgress..InstanceRefreshWarmPoolProgress": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RefreshPreferences",
+    "properties": {
+      "RefreshPreferences": "object",
+      "RefreshPreferences.MinHealthyPercentage.": "allOf",
+      "RefreshPreferences.MinHealthyPercentage..IntPercent": "ref",
+      "RefreshPreferences.InstanceWarmup.": "allOf",
+      "RefreshPreferences.InstanceWarmup..RefreshInstanceWarmup": "ref",
+      "RefreshPreferences.CheckpointPercentages.": "allOf",
+      "RefreshPreferences.CheckpointPercentages..CheckpointPercentages": "ref",
+      "RefreshPreferences.CheckpointDelay.": "allOf",
+      "RefreshPreferences.CheckpointDelay..CheckpointDelay": "ref",
+      "RefreshPreferences.SkipMatching.": "allOf",
+      "RefreshPreferences.SkipMatching..SkipMatching": "ref",
+      "RefreshPreferences.AutoRollback.": "allOf",
+      "RefreshPreferences.AutoRollback..AutoRollback": "ref",
+      "RefreshPreferences.ScaleInProtectedInstances.": "allOf",
+      "RefreshPreferences.ScaleInProtectedInstances..ScaleInProtectedInstances": "ref",
+      "RefreshPreferences.StandbyInstances.": "allOf",
+      "RefreshPreferences.StandbyInstances..StandbyInstances": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RollbackDetails",
+    "properties": {
+      "RollbackDetails": "object",
+      "RollbackDetails.RollbackReason.": "allOf",
+      "RollbackDetails.RollbackReason..XmlStringMaxLen1023": "ref",
+      "RollbackDetails.RollbackStartTime.": "allOf",
+      "RollbackDetails.RollbackStartTime..TimestampType": "ref",
+      "RollbackDetails.PercentageCompleteOnRollback.": "allOf",
+      "RollbackDetails.PercentageCompleteOnRollback..IntPercent": "ref",
+      "RollbackDetails.InstancesToUpdateOnRollback.": "allOf",
+      "RollbackDetails.InstancesToUpdateOnRollback..InstancesToUpdate": "ref",
+      "RollbackDetails.ProgressDetailsOnRollback.": "allOf",
+      "RollbackDetails.ProgressDetailsOnRollback..InstanceRefreshProgressDetails": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefresh",
+    "properties": {
+      "InstanceRefresh": "object",
+      "InstanceRefresh.InstanceRefreshId.": "allOf",
+      "InstanceRefresh.InstanceRefreshId..XmlStringMaxLen255": "ref",
+      "InstanceRefresh.AutoScalingGroupName.": "allOf",
+      "InstanceRefresh.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "InstanceRefresh.Status.": "allOf",
+      "InstanceRefresh.Status..InstanceRefreshStatus": "ref",
+      "InstanceRefresh.StatusReason.": "allOf",
+      "InstanceRefresh.StatusReason..XmlStringMaxLen1023": "ref",
+      "InstanceRefresh.StartTime.": "allOf",
+      "InstanceRefresh.StartTime..TimestampType": "ref",
+      "InstanceRefresh.EndTime.": "allOf",
+      "InstanceRefresh.EndTime..TimestampType": "ref",
+      "InstanceRefresh.PercentageComplete.": "allOf",
+      "InstanceRefresh.PercentageComplete..IntPercent": "ref",
+      "InstanceRefresh.InstancesToUpdate.": "allOf",
+      "InstanceRefresh.InstancesToUpdate..InstancesToUpdate": "ref",
+      "InstanceRefresh.ProgressDetails.": "allOf",
+      "InstanceRefresh.ProgressDetails..InstanceRefreshProgressDetails": "ref",
+      "InstanceRefresh.Preferences.": "allOf",
+      "InstanceRefresh.Preferences..RefreshPreferences": "ref",
+      "InstanceRefresh.DesiredConfiguration.": "allOf",
+      "InstanceRefresh.DesiredConfiguration..DesiredConfiguration": "ref",
+      "InstanceRefresh.RollbackDetails.": "allOf",
+      "InstanceRefresh.RollbackDetails..RollbackDetails": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefreshLivePoolProgress",
+    "properties": {
+      "InstanceRefreshLivePoolProgress": "object",
+      "InstanceRefreshLivePoolProgress.PercentageComplete.": "allOf",
+      "InstanceRefreshLivePoolProgress.PercentageComplete..IntPercent": "ref",
+      "InstanceRefreshLivePoolProgress.InstancesToUpdate.": "allOf",
+      "InstanceRefreshLivePoolProgress.InstancesToUpdate..InstancesToUpdate": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRefreshWarmPoolProgress",
+    "properties": {
+      "InstanceRefreshWarmPoolProgress": "object",
+      "InstanceRefreshWarmPoolProgress.PercentageComplete.": "allOf",
+      "InstanceRefreshWarmPoolProgress.PercentageComplete..IntPercent": "ref",
+      "InstanceRefreshWarmPoolProgress.InstancesToUpdate.": "allOf",
+      "InstanceRefreshWarmPoolProgress.InstancesToUpdate..InstancesToUpdate": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VCpuCountRequest",
+    "properties": {
+      "VCpuCountRequest": "object",
+      "VCpuCountRequest.Min.": "allOf",
+      "VCpuCountRequest.Min..NullablePositiveInteger": "ref",
+      "VCpuCountRequest.Max.": "allOf",
+      "VCpuCountRequest.Max..NullablePositiveInteger": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MemoryMiBRequest",
+    "properties": {
+      "MemoryMiBRequest": "object",
+      "MemoryMiBRequest.Min.": "allOf",
+      "MemoryMiBRequest.Min..NullablePositiveInteger": "ref",
+      "MemoryMiBRequest.Max.": "allOf",
+      "MemoryMiBRequest.Max..NullablePositiveInteger": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MemoryGiBPerVCpuRequest",
+    "properties": {
+      "MemoryGiBPerVCpuRequest": "object",
+      "MemoryGiBPerVCpuRequest.Min.": "allOf",
+      "MemoryGiBPerVCpuRequest.Min..NullablePositiveDouble": "ref",
+      "MemoryGiBPerVCpuRequest.Max.": "allOf",
+      "MemoryGiBPerVCpuRequest.Max..NullablePositiveDouble": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NullableBoolean",
+    "properties": { "NullableBoolean": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NetworkInterfaceCountRequest",
+    "properties": {
+      "NetworkInterfaceCountRequest": "object",
+      "NetworkInterfaceCountRequest.Min.": "allOf",
+      "NetworkInterfaceCountRequest.Min..NullablePositiveInteger": "ref",
+      "NetworkInterfaceCountRequest.Max.": "allOf",
+      "NetworkInterfaceCountRequest.Max..NullablePositiveInteger": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LocalStorage",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LocalStorageTypes",
+    "properties": {
+      "LocalStorageTypes": "array",
+      "LocalStorageTypes.LocalStorageType": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TotalLocalStorageGBRequest",
+    "properties": {
+      "TotalLocalStorageGBRequest": "object",
+      "TotalLocalStorageGBRequest.Min.": "allOf",
+      "TotalLocalStorageGBRequest.Min..NullablePositiveDouble": "ref",
+      "TotalLocalStorageGBRequest.Max.": "allOf",
+      "TotalLocalStorageGBRequest.Max..NullablePositiveDouble": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NetworkBandwidthGbpsRequest",
+    "properties": {
+      "NetworkBandwidthGbpsRequest": "object",
+      "NetworkBandwidthGbpsRequest.Min.": "allOf",
+      "NetworkBandwidthGbpsRequest.Min..NullablePositiveDouble": "ref",
+      "NetworkBandwidthGbpsRequest.Max.": "allOf",
+      "NetworkBandwidthGbpsRequest.Max..NullablePositiveDouble": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceRequirements",
+    "properties": {
+      "InstanceRequirements": "object",
+      "InstanceRequirements.VCpuCount.": "allOf",
+      "InstanceRequirements.VCpuCount..VCpuCountRequest": "ref",
+      "InstanceRequirements.MemoryMiB.": "allOf",
+      "InstanceRequirements.MemoryMiB..MemoryMiBRequest": "ref",
+      "InstanceRequirements.CpuManufacturers.": "allOf",
+      "InstanceRequirements.CpuManufacturers..CpuManufacturers": "ref",
+      "InstanceRequirements.MemoryGiBPerVCpu.": "allOf",
+      "InstanceRequirements.MemoryGiBPerVCpu..MemoryGiBPerVCpuRequest": "ref",
+      "InstanceRequirements.ExcludedInstanceTypes.": "allOf",
+      "InstanceRequirements.ExcludedInstanceTypes..ExcludedInstanceTypes": "ref",
+      "InstanceRequirements.InstanceGenerations.": "allOf",
+      "InstanceRequirements.InstanceGenerations..InstanceGenerations": "ref",
+      "InstanceRequirements.SpotMaxPricePercentageOverLowestPrice.": "allOf",
+      "InstanceRequirements.SpotMaxPricePercentageOverLowestPrice..NullablePositiveInteger": "ref",
+      "InstanceRequirements.OnDemandMaxPricePercentageOverLowestPrice.": "allOf",
+      "InstanceRequirements.OnDemandMaxPricePercentageOverLowestPrice..NullablePositiveInteger": "ref",
+      "InstanceRequirements.BareMetal.": "allOf",
+      "InstanceRequirements.BareMetal..BareMetal": "ref",
+      "InstanceRequirements.BurstablePerformance.": "allOf",
+      "InstanceRequirements.BurstablePerformance..BurstablePerformance": "ref",
+      "InstanceRequirements.RequireHibernateSupport.": "allOf",
+      "InstanceRequirements.RequireHibernateSupport..NullableBoolean": "ref",
+      "InstanceRequirements.NetworkInterfaceCount.": "allOf",
+      "InstanceRequirements.NetworkInterfaceCount..NetworkInterfaceCountRequest": "ref",
+      "InstanceRequirements.LocalStorage.": "allOf",
+      "InstanceRequirements.LocalStorage..LocalStorage": "ref",
+      "InstanceRequirements.LocalStorageTypes.": "allOf",
+      "InstanceRequirements.LocalStorageTypes..LocalStorageTypes": "ref",
+      "InstanceRequirements.TotalLocalStorageGB.": "allOf",
+      "InstanceRequirements.TotalLocalStorageGB..TotalLocalStorageGBRequest": "ref",
+      "InstanceRequirements.BaselineEbsBandwidthMbps.": "allOf",
+      "InstanceRequirements.BaselineEbsBandwidthMbps..BaselineEbsBandwidthMbpsRequest": "ref",
+      "InstanceRequirements.AcceleratorTypes.": "allOf",
+      "InstanceRequirements.AcceleratorTypes..AcceleratorTypes": "ref",
+      "InstanceRequirements.AcceleratorCount.": "allOf",
+      "InstanceRequirements.AcceleratorCount..AcceleratorCountRequest": "ref",
+      "InstanceRequirements.AcceleratorManufacturers.": "allOf",
+      "InstanceRequirements.AcceleratorManufacturers..AcceleratorManufacturers": "ref",
+      "InstanceRequirements.AcceleratorNames.": "allOf",
+      "InstanceRequirements.AcceleratorNames..AcceleratorNames": "ref",
+      "InstanceRequirements.AcceleratorTotalMemoryMiB.": "allOf",
+      "InstanceRequirements.AcceleratorTotalMemoryMiB..AcceleratorTotalMemoryMiBRequest": "ref",
+      "InstanceRequirements.NetworkBandwidthGbps.": "allOf",
+      "InstanceRequirements.NetworkBandwidthGbps..NetworkBandwidthGbpsRequest": "ref",
+      "InstanceRequirements.AllowedInstanceTypes.": "allOf",
+      "InstanceRequirements.AllowedInstanceTypes..AllowedInstanceTypes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstanceReusePolicy",
+    "properties": {
+      "InstanceReusePolicy": "object",
+      "InstanceReusePolicy.ReuseOnScaleIn.": "allOf",
+      "InstanceReusePolicy.ReuseOnScaleIn..ReuseOnScaleIn": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/OnDemandBaseCapacity",
+    "properties": { "OnDemandBaseCapacity": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/OnDemandPercentageAboveBaseCapacity",
+    "properties": { "OnDemandPercentageAboveBaseCapacity": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SpotInstancePools",
+    "properties": { "SpotInstancePools": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MixedInstanceSpotPrice",
+    "properties": { "MixedInstanceSpotPrice": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchConfiguration",
+    "properties": {
+      "LaunchConfiguration": "object",
+      "LaunchConfiguration.LaunchConfigurationName.": "allOf",
+      "LaunchConfiguration.LaunchConfigurationName..XmlStringMaxLen255": "ref",
+      "LaunchConfiguration.LaunchConfigurationARN.": "allOf",
+      "LaunchConfiguration.LaunchConfigurationARN..ResourceName": "ref",
+      "LaunchConfiguration.ImageId.": "allOf",
+      "LaunchConfiguration.ImageId..XmlStringMaxLen255": "ref",
+      "LaunchConfiguration.KeyName.": "allOf",
+      "LaunchConfiguration.KeyName..XmlStringMaxLen255": "ref",
+      "LaunchConfiguration.SecurityGroups.": "allOf",
+      "LaunchConfiguration.SecurityGroups..SecurityGroups": "ref",
+      "LaunchConfiguration.ClassicLinkVPCId.": "allOf",
+      "LaunchConfiguration.ClassicLinkVPCId..XmlStringMaxLen255": "ref",
+      "LaunchConfiguration.ClassicLinkVPCSecurityGroups.": "allOf",
+      "LaunchConfiguration.ClassicLinkVPCSecurityGroups..ClassicLinkVPCSecurityGroups": "ref",
+      "LaunchConfiguration.UserData.": "allOf",
+      "LaunchConfiguration.UserData..XmlStringUserData": "ref",
+      "LaunchConfiguration.InstanceType.": "allOf",
+      "LaunchConfiguration.InstanceType..XmlStringMaxLen255": "ref",
+      "LaunchConfiguration.KernelId.": "allOf",
+      "LaunchConfiguration.KernelId..XmlStringMaxLen255": "ref",
+      "LaunchConfiguration.RamdiskId.": "allOf",
+      "LaunchConfiguration.RamdiskId..XmlStringMaxLen255": "ref",
+      "LaunchConfiguration.BlockDeviceMappings.": "allOf",
+      "LaunchConfiguration.BlockDeviceMappings..BlockDeviceMappings": "ref",
+      "LaunchConfiguration.InstanceMonitoring.": "allOf",
+      "LaunchConfiguration.InstanceMonitoring..InstanceMonitoring": "ref",
+      "LaunchConfiguration.SpotPrice.": "allOf",
+      "LaunchConfiguration.SpotPrice..SpotPrice": "ref",
+      "LaunchConfiguration.IamInstanceProfile.": "allOf",
+      "LaunchConfiguration.IamInstanceProfile..XmlStringMaxLen1600": "ref",
+      "LaunchConfiguration.CreatedTime.": "allOf",
+      "LaunchConfiguration.CreatedTime..TimestampType": "ref",
+      "LaunchConfiguration.EbsOptimized.": "allOf",
+      "LaunchConfiguration.EbsOptimized..EbsOptimized": "ref",
+      "LaunchConfiguration.AssociatePublicIpAddress.": "allOf",
+      "LaunchConfiguration.AssociatePublicIpAddress..AssociatePublicIpAddress": "ref",
+      "LaunchConfiguration.PlacementTenancy.": "allOf",
+      "LaunchConfiguration.PlacementTenancy..XmlStringMaxLen64": "ref",
+      "LaunchConfiguration.MetadataOptions.": "allOf",
+      "LaunchConfiguration.MetadataOptions..InstanceMetadataOptions": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchConfigurationNameType",
+    "properties": {
+      "LaunchConfigurationNameType": "object",
+      "LaunchConfigurationNameType.LaunchConfigurationName.": "allOf",
+      "LaunchConfigurationNameType.LaunchConfigurationName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchConfigurationNames",
+    "properties": {
+      "LaunchConfigurationNames": "array",
+      "LaunchConfigurationNames.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchConfigurationNamesType",
+    "properties": {
+      "LaunchConfigurationNamesType": "object",
+      "LaunchConfigurationNamesType.LaunchConfigurationNames.": "allOf",
+      "LaunchConfigurationNamesType.LaunchConfigurationNames..LaunchConfigurationNames": "ref",
+      "LaunchConfigurationNamesType.NextToken.": "allOf",
+      "LaunchConfigurationNamesType.NextToken..XmlString": "ref",
+      "LaunchConfigurationNamesType.MaxRecords.": "allOf",
+      "LaunchConfigurationNamesType.MaxRecords..MaxRecords": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchConfigurations",
+    "properties": {
+      "LaunchConfigurations": "array",
+      "LaunchConfigurations.LaunchConfiguration": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Overrides",
+    "properties": {
+      "Overrides": "array",
+      "Overrides.LaunchTemplateOverrides": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LaunchTemplateOverrides",
+    "properties": {
+      "LaunchTemplateOverrides": "object",
+      "LaunchTemplateOverrides.InstanceType.": "allOf",
+      "LaunchTemplateOverrides.InstanceType..XmlStringMaxLen255": "ref",
+      "LaunchTemplateOverrides.WeightedCapacity.": "allOf",
+      "LaunchTemplateOverrides.WeightedCapacity..XmlStringMaxLen32": "ref",
+      "LaunchTemplateOverrides.LaunchTemplateSpecification.": "allOf",
+      "LaunchTemplateOverrides.LaunchTemplateSpecification..LaunchTemplateSpecification": "ref",
+      "LaunchTemplateOverrides.InstanceRequirements.": "allOf",
+      "LaunchTemplateOverrides.InstanceRequirements..InstanceRequirements": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleTransition",
+    "properties": { "LifecycleTransition": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NotificationTargetResourceName",
+    "properties": { "NotificationTargetResourceName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/LifecycleHook",
+    "properties": {
+      "LifecycleHook": "object",
+      "LifecycleHook.LifecycleHookName.": "allOf",
+      "LifecycleHook.LifecycleHookName..AsciiStringMaxLen255": "ref",
+      "LifecycleHook.AutoScalingGroupName.": "allOf",
+      "LifecycleHook.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "LifecycleHook.LifecycleTransition.": "allOf",
+      "LifecycleHook.LifecycleTransition..LifecycleTransition": "ref",
+      "LifecycleHook.NotificationTargetARN.": "allOf",
+      "LifecycleHook.NotificationTargetARN..NotificationTargetResourceName": "ref",
+      "LifecycleHook.RoleARN.": "allOf",
+      "LifecycleHook.RoleARN..XmlStringMaxLen255": "ref",
+      "LifecycleHook.NotificationMetadata.": "allOf",
+      "LifecycleHook.NotificationMetadata..XmlStringMaxLen1023": "ref",
+      "LifecycleHook.HeartbeatTimeout.": "allOf",
+      "LifecycleHook.HeartbeatTimeout..HeartbeatTimeout": "ref",
+      "LifecycleHook.GlobalTimeout.": "allOf",
+      "LifecycleHook.GlobalTimeout..GlobalTimeout": "ref",
+      "LifecycleHook.DefaultResult.": "allOf",
+      "LifecycleHook.DefaultResult..LifecycleActionResult": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadBalancerState",
+    "properties": {
+      "LoadBalancerState": "object",
+      "LoadBalancerState.LoadBalancerName.": "allOf",
+      "LoadBalancerState.LoadBalancerName..XmlStringMaxLen255": "ref",
+      "LoadBalancerState.State.": "allOf",
+      "LoadBalancerState.State..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadBalancerTargetGroupState",
+    "properties": {
+      "LoadBalancerTargetGroupState": "object",
+      "LoadBalancerTargetGroupState.LoadBalancerTargetGroupARN.": "allOf",
+      "LoadBalancerTargetGroupState.LoadBalancerTargetGroupARN..XmlStringMaxLen511": "ref",
+      "LoadBalancerTargetGroupState.State.": "allOf",
+      "LoadBalancerTargetGroupState.State..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingMetricSpecification",
+    "properties": {
+      "PredictiveScalingMetricSpecification": "object",
+      "PredictiveScalingMetricSpecification.TargetValue.": "allOf",
+      "PredictiveScalingMetricSpecification.TargetValue..MetricScale": "ref",
+      "PredictiveScalingMetricSpecification.PredefinedMetricPairSpecification.": "allOf",
+      "PredictiveScalingMetricSpecification.PredefinedMetricPairSpecification..PredictiveScalingPredefinedMetricPair": "ref",
+      "PredictiveScalingMetricSpecification.PredefinedScalingMetricSpecification.": "allOf",
+      "PredictiveScalingMetricSpecification.PredefinedScalingMetricSpecification..PredictiveScalingPredefinedScalingMetric": "ref",
+      "PredictiveScalingMetricSpecification.PredefinedLoadMetricSpecification.": "allOf",
+      "PredictiveScalingMetricSpecification.PredefinedLoadMetricSpecification..PredictiveScalingPredefinedLoadMetric": "ref",
+      "PredictiveScalingMetricSpecification.CustomizedScalingMetricSpecification.": "allOf",
+      "PredictiveScalingMetricSpecification.CustomizedScalingMetricSpecification..PredictiveScalingCustomizedScalingMetric": "ref",
+      "PredictiveScalingMetricSpecification.CustomizedLoadMetricSpecification.": "allOf",
+      "PredictiveScalingMetricSpecification.CustomizedLoadMetricSpecification..PredictiveScalingCustomizedLoadMetric": "ref",
+      "PredictiveScalingMetricSpecification.CustomizedCapacityMetricSpecification.": "allOf",
+      "PredictiveScalingMetricSpecification.CustomizedCapacityMetricSpecification..PredictiveScalingCustomizedCapacityMetric": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LoadForecast",
+    "properties": {
+      "LoadForecast": "object",
+      "LoadForecast.Timestamps.": "allOf",
+      "LoadForecast.Timestamps..PredictiveScalingForecastTimestamps": "ref",
+      "LoadForecast.Values.": "allOf",
+      "LoadForecast.Values..PredictiveScalingForecastValues": "ref",
+      "LoadForecast.MetricSpecification.": "allOf",
+      "LoadForecast.MetricSpecification..PredictiveScalingMetricSpecification": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LocalStorageType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MaxGroupPreparedCapacity",
+    "properties": { "MaxGroupPreparedCapacity": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NullablePositiveDouble",
+    "properties": { "NullablePositiveDouble": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Metric",
+    "properties": {
+      "Metric": "object",
+      "Metric.Namespace.": "allOf",
+      "Metric.Namespace..MetricNamespace": "ref",
+      "Metric.MetricName.": "allOf",
+      "Metric.MetricName..MetricName": "ref",
+      "Metric.Dimensions.": "allOf",
+      "Metric.Dimensions..MetricDimensions": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricCollectionType",
+    "properties": {
+      "MetricCollectionType": "object",
+      "MetricCollectionType.Metric.": "allOf",
+      "MetricCollectionType.Metric..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricDataQuery",
+    "properties": {
+      "MetricDataQuery": "object",
+      "MetricDataQuery.Id.": "allOf",
+      "MetricDataQuery.Id..XmlStringMaxLen255": "ref",
+      "MetricDataQuery.Expression.": "allOf",
+      "MetricDataQuery.Expression..XmlStringMaxLen1023": "ref",
+      "MetricDataQuery.MetricStat.": "allOf",
+      "MetricDataQuery.MetricStat..MetricStat": "ref",
+      "MetricDataQuery.Label.": "allOf",
+      "MetricDataQuery.Label..XmlStringMetricLabel": "ref",
+      "MetricDataQuery.ReturnData.": "allOf",
+      "MetricDataQuery.ReturnData..ReturnData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricDataQueries",
+    "properties": {
+      "MetricDataQueries": "array",
+      "MetricDataQueries.MetricDataQuery": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricStat",
+    "properties": {
+      "MetricStat": "object",
+      "MetricStat.Metric.": "allOf",
+      "MetricStat.Metric..Metric": "ref",
+      "MetricStat.Stat.": "allOf",
+      "MetricStat.Stat..XmlStringMetricStat": "ref",
+      "MetricStat.Unit.": "allOf",
+      "MetricStat.Unit..MetricUnit": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMetricLabel",
+    "properties": { "XmlStringMetricLabel": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ReturnData",
+    "properties": { "ReturnData": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricDimensionName",
+    "properties": { "MetricDimensionName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricDimensionValue",
+    "properties": { "MetricDimensionValue": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricDimension",
+    "properties": {
+      "MetricDimension": "object",
+      "MetricDimension.Name.": "allOf",
+      "MetricDimension.Name..MetricDimensionName": "ref",
+      "MetricDimension.Value.": "allOf",
+      "MetricDimension.Value..MetricDimensionValue": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricGranularityType",
+    "properties": {
+      "MetricGranularityType": "object",
+      "MetricGranularityType.Granularity.": "allOf",
+      "MetricGranularityType.Granularity..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/XmlStringMetricStat",
+    "properties": { "XmlStringMetricStat": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MetricType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MinAdjustmentMagnitude",
+    "properties": { "MinAdjustmentMagnitude": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/MinAdjustmentStep",
+    "properties": { "MinAdjustmentStep": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NotificationConfiguration",
+    "properties": {
+      "NotificationConfiguration": "object",
+      "NotificationConfiguration.AutoScalingGroupName.": "allOf",
+      "NotificationConfiguration.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "NotificationConfiguration.TopicARN.": "allOf",
+      "NotificationConfiguration.TopicARN..XmlStringMaxLen255": "ref",
+      "NotificationConfiguration.NotificationType.": "allOf",
+      "NotificationConfiguration.NotificationType..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScalingPolicies",
+    "properties": {
+      "ScalingPolicies": "array",
+      "ScalingPolicies.ScalingPolicy": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PolicyIncrement",
+    "properties": { "PolicyIncrement": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredefinedLoadMetricType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredefinedMetricPairType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredefinedScalingMetricType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingConfiguration",
+    "properties": {
+      "PredictiveScalingConfiguration": "object",
+      "PredictiveScalingConfiguration.MetricSpecifications.": "allOf",
+      "PredictiveScalingConfiguration.MetricSpecifications..PredictiveScalingMetricSpecifications": "ref",
+      "PredictiveScalingConfiguration.Mode.": "allOf",
+      "PredictiveScalingConfiguration.Mode..PredictiveScalingMode": "ref",
+      "PredictiveScalingConfiguration.SchedulingBufferTime.": "allOf",
+      "PredictiveScalingConfiguration.SchedulingBufferTime..PredictiveScalingSchedulingBufferTime": "ref",
+      "PredictiveScalingConfiguration.MaxCapacityBreachBehavior.": "allOf",
+      "PredictiveScalingConfiguration.MaxCapacityBreachBehavior..PredictiveScalingMaxCapacityBreachBehavior": "ref",
+      "PredictiveScalingConfiguration.MaxCapacityBuffer.": "allOf",
+      "PredictiveScalingConfiguration.MaxCapacityBuffer..PredictiveScalingMaxCapacityBuffer": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingCustomizedCapacityMetric",
+    "properties": {
+      "PredictiveScalingCustomizedCapacityMetric": "object",
+      "PredictiveScalingCustomizedCapacityMetric.MetricDataQueries.": "allOf",
+      "PredictiveScalingCustomizedCapacityMetric.MetricDataQueries..MetricDataQueries": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingCustomizedLoadMetric",
+    "properties": {
+      "PredictiveScalingCustomizedLoadMetric": "object",
+      "PredictiveScalingCustomizedLoadMetric.MetricDataQueries.": "allOf",
+      "PredictiveScalingCustomizedLoadMetric.MetricDataQueries..MetricDataQueries": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingCustomizedScalingMetric",
+    "properties": {
+      "PredictiveScalingCustomizedScalingMetric": "object",
+      "PredictiveScalingCustomizedScalingMetric.MetricDataQueries.": "allOf",
+      "PredictiveScalingCustomizedScalingMetric.MetricDataQueries..MetricDataQueries": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingPredefinedMetricPair",
+    "properties": {
+      "PredictiveScalingPredefinedMetricPair": "object",
+      "PredictiveScalingPredefinedMetricPair.PredefinedMetricType.": "allOf",
+      "PredictiveScalingPredefinedMetricPair.PredefinedMetricType..PredefinedMetricPairType": "ref",
+      "PredictiveScalingPredefinedMetricPair.ResourceLabel.": "allOf",
+      "PredictiveScalingPredefinedMetricPair.ResourceLabel..XmlStringMaxLen1023": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingPredefinedScalingMetric",
+    "properties": {
+      "PredictiveScalingPredefinedScalingMetric": "object",
+      "PredictiveScalingPredefinedScalingMetric.PredefinedMetricType.": "allOf",
+      "PredictiveScalingPredefinedScalingMetric.PredefinedMetricType..PredefinedScalingMetricType": "ref",
+      "PredictiveScalingPredefinedScalingMetric.ResourceLabel.": "allOf",
+      "PredictiveScalingPredefinedScalingMetric.ResourceLabel..XmlStringMaxLen1023": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PredictiveScalingPredefinedLoadMetric",
+    "properties": {
+      "PredictiveScalingPredefinedLoadMetric": "object",
+      "PredictiveScalingPredefinedLoadMetric.PredefinedMetricType.": "allOf",
+      "PredictiveScalingPredefinedLoadMetric.PredefinedMetricType..PredefinedLoadMetricType": "ref",
+      "PredictiveScalingPredefinedLoadMetric.ResourceLabel.": "allOf",
+      "PredictiveScalingPredefinedLoadMetric.ResourceLabel..XmlStringMaxLen1023": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ProcessNames",
+    "properties": {
+      "ProcessNames": "array",
+      "ProcessNames.XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ProcessType",
+    "properties": {
+      "ProcessType": "object",
+      "ProcessType.ProcessName.": "allOf",
+      "ProcessType.ProcessName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Processes",
+    "properties": { "Processes": "array", "Processes.ProcessType": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PropagateAtLaunch",
+    "properties": { "PropagateAtLaunch": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ProtectedFromScaleIn",
+    "properties": { "ProtectedFromScaleIn": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PutLifecycleHookType",
+    "properties": {
+      "PutLifecycleHookType": "object",
+      "PutLifecycleHookType.LifecycleHookName.": "allOf",
+      "PutLifecycleHookType.LifecycleHookName..AsciiStringMaxLen255": "ref",
+      "PutLifecycleHookType.AutoScalingGroupName.": "allOf",
+      "PutLifecycleHookType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "PutLifecycleHookType.LifecycleTransition.": "allOf",
+      "PutLifecycleHookType.LifecycleTransition..LifecycleTransition": "ref",
+      "PutLifecycleHookType.RoleARN.": "allOf",
+      "PutLifecycleHookType.RoleARN..XmlStringMaxLen255": "ref",
+      "PutLifecycleHookType.NotificationTargetARN.": "allOf",
+      "PutLifecycleHookType.NotificationTargetARN..NotificationTargetResourceName": "ref",
+      "PutLifecycleHookType.NotificationMetadata.": "allOf",
+      "PutLifecycleHookType.NotificationMetadata..XmlStringMaxLen1023": "ref",
+      "PutLifecycleHookType.HeartbeatTimeout.": "allOf",
+      "PutLifecycleHookType.HeartbeatTimeout..HeartbeatTimeout": "ref",
+      "PutLifecycleHookType.DefaultResult.": "allOf",
+      "PutLifecycleHookType.DefaultResult..LifecycleActionResult": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PutNotificationConfigurationType",
+    "properties": {
+      "PutNotificationConfigurationType": "object",
+      "PutNotificationConfigurationType.AutoScalingGroupName.": "allOf",
+      "PutNotificationConfigurationType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "PutNotificationConfigurationType.TopicARN.": "allOf",
+      "PutNotificationConfigurationType.TopicARN..XmlStringMaxLen255": "ref",
+      "PutNotificationConfigurationType.NotificationTypes.": "allOf",
+      "PutNotificationConfigurationType.NotificationTypes..AutoScalingNotificationTypes": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StepAdjustments",
+    "properties": {
+      "StepAdjustments": "array",
+      "StepAdjustments.StepAdjustment": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TargetTrackingConfiguration",
+    "properties": {
+      "TargetTrackingConfiguration": "object",
+      "TargetTrackingConfiguration.PredefinedMetricSpecification.": "allOf",
+      "TargetTrackingConfiguration.PredefinedMetricSpecification..PredefinedMetricSpecification": "ref",
+      "TargetTrackingConfiguration.CustomizedMetricSpecification.": "allOf",
+      "TargetTrackingConfiguration.CustomizedMetricSpecification..CustomizedMetricSpecification": "ref",
+      "TargetTrackingConfiguration.TargetValue.": "allOf",
+      "TargetTrackingConfiguration.TargetValue..MetricScale": "ref",
+      "TargetTrackingConfiguration.DisableScaleIn.": "allOf",
+      "TargetTrackingConfiguration.DisableScaleIn..DisableScaleIn": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScalingPolicyEnabled",
+    "properties": { "ScalingPolicyEnabled": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PutScalingPolicyType",
+    "properties": {
+      "PutScalingPolicyType": "object",
+      "PutScalingPolicyType.AutoScalingGroupName.": "allOf",
+      "PutScalingPolicyType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "PutScalingPolicyType.PolicyName.": "allOf",
+      "PutScalingPolicyType.PolicyName..XmlStringMaxLen255": "ref",
+      "PutScalingPolicyType.PolicyType.": "allOf",
+      "PutScalingPolicyType.PolicyType..XmlStringMaxLen64": "ref",
+      "PutScalingPolicyType.AdjustmentType.": "allOf",
+      "PutScalingPolicyType.AdjustmentType..XmlStringMaxLen255": "ref",
+      "PutScalingPolicyType.MinAdjustmentStep.": "allOf",
+      "PutScalingPolicyType.MinAdjustmentStep..MinAdjustmentStep": "ref",
+      "PutScalingPolicyType.MinAdjustmentMagnitude.": "allOf",
+      "PutScalingPolicyType.MinAdjustmentMagnitude..MinAdjustmentMagnitude": "ref",
+      "PutScalingPolicyType.ScalingAdjustment.": "allOf",
+      "PutScalingPolicyType.ScalingAdjustment..PolicyIncrement": "ref",
+      "PutScalingPolicyType.Cooldown.": "allOf",
+      "PutScalingPolicyType.Cooldown..Cooldown": "ref",
+      "PutScalingPolicyType.MetricAggregationType.": "allOf",
+      "PutScalingPolicyType.MetricAggregationType..XmlStringMaxLen32": "ref",
+      "PutScalingPolicyType.StepAdjustments.": "allOf",
+      "PutScalingPolicyType.StepAdjustments..StepAdjustments": "ref",
+      "PutScalingPolicyType.EstimatedInstanceWarmup.": "allOf",
+      "PutScalingPolicyType.EstimatedInstanceWarmup..EstimatedInstanceWarmup": "ref",
+      "PutScalingPolicyType.TargetTrackingConfiguration.": "allOf",
+      "PutScalingPolicyType.TargetTrackingConfiguration..TargetTrackingConfiguration": "ref",
+      "PutScalingPolicyType.Enabled.": "allOf",
+      "PutScalingPolicyType.Enabled..ScalingPolicyEnabled": "ref",
+      "PutScalingPolicyType.PredictiveScalingConfiguration.": "allOf",
+      "PutScalingPolicyType.PredictiveScalingConfiguration..PredictiveScalingConfiguration": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PutScheduledUpdateGroupActionType",
+    "properties": {
+      "PutScheduledUpdateGroupActionType": "object",
+      "PutScheduledUpdateGroupActionType.AutoScalingGroupName.": "allOf",
+      "PutScheduledUpdateGroupActionType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "PutScheduledUpdateGroupActionType.ScheduledActionName.": "allOf",
+      "PutScheduledUpdateGroupActionType.ScheduledActionName..XmlStringMaxLen255": "ref",
+      "PutScheduledUpdateGroupActionType.Time.": "allOf",
+      "PutScheduledUpdateGroupActionType.Time..TimestampType": "ref",
+      "PutScheduledUpdateGroupActionType.StartTime.": "allOf",
+      "PutScheduledUpdateGroupActionType.StartTime..TimestampType": "ref",
+      "PutScheduledUpdateGroupActionType.EndTime.": "allOf",
+      "PutScheduledUpdateGroupActionType.EndTime..TimestampType": "ref",
+      "PutScheduledUpdateGroupActionType.Recurrence.": "allOf",
+      "PutScheduledUpdateGroupActionType.Recurrence..XmlStringMaxLen255": "ref",
+      "PutScheduledUpdateGroupActionType.MinSize.": "allOf",
+      "PutScheduledUpdateGroupActionType.MinSize..AutoScalingGroupMinSize": "ref",
+      "PutScheduledUpdateGroupActionType.MaxSize.": "allOf",
+      "PutScheduledUpdateGroupActionType.MaxSize..AutoScalingGroupMaxSize": "ref",
+      "PutScheduledUpdateGroupActionType.DesiredCapacity.": "allOf",
+      "PutScheduledUpdateGroupActionType.DesiredCapacity..AutoScalingGroupDesiredCapacity": "ref",
+      "PutScheduledUpdateGroupActionType.TimeZone.": "allOf",
+      "PutScheduledUpdateGroupActionType.TimeZone..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WarmPoolMinSize",
+    "properties": { "WarmPoolMinSize": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/WarmPoolState",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PutWarmPoolType",
+    "properties": {
+      "PutWarmPoolType": "object",
+      "PutWarmPoolType.AutoScalingGroupName.": "allOf",
+      "PutWarmPoolType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "PutWarmPoolType.MaxGroupPreparedCapacity.": "allOf",
+      "PutWarmPoolType.MaxGroupPreparedCapacity..MaxGroupPreparedCapacity": "ref",
+      "PutWarmPoolType.MinSize.": "allOf",
+      "PutWarmPoolType.MinSize..WarmPoolMinSize": "ref",
+      "PutWarmPoolType.PoolState.": "allOf",
+      "PutWarmPoolType.PoolState..WarmPoolState": "ref",
+      "PutWarmPoolType.InstanceReusePolicy.": "allOf",
+      "PutWarmPoolType.InstanceReusePolicy..InstanceReusePolicy": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RecordLifecycleActionHeartbeatType",
+    "properties": {
+      "RecordLifecycleActionHeartbeatType": "object",
+      "RecordLifecycleActionHeartbeatType.LifecycleHookName.": "allOf",
+      "RecordLifecycleActionHeartbeatType.LifecycleHookName..AsciiStringMaxLen255": "ref",
+      "RecordLifecycleActionHeartbeatType.AutoScalingGroupName.": "allOf",
+      "RecordLifecycleActionHeartbeatType.AutoScalingGroupName..ResourceName": "ref",
+      "RecordLifecycleActionHeartbeatType.LifecycleActionToken.": "allOf",
+      "RecordLifecycleActionHeartbeatType.LifecycleActionToken..LifecycleActionToken": "ref",
+      "RecordLifecycleActionHeartbeatType.InstanceId.": "allOf",
+      "RecordLifecycleActionHeartbeatType.InstanceId..XmlStringMaxLen19": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RefreshStrategy",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RollbackInstanceRefreshType",
+    "properties": {
+      "RollbackInstanceRefreshType": "object",
+      "RollbackInstanceRefreshType.AutoScalingGroupName.": "allOf",
+      "RollbackInstanceRefreshType.AutoScalingGroupName..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScalingPolicy",
+    "properties": {
+      "ScalingPolicy": "object",
+      "ScalingPolicy.AutoScalingGroupName.": "allOf",
+      "ScalingPolicy.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "ScalingPolicy.PolicyName.": "allOf",
+      "ScalingPolicy.PolicyName..XmlStringMaxLen255": "ref",
+      "ScalingPolicy.PolicyARN.": "allOf",
+      "ScalingPolicy.PolicyARN..ResourceName": "ref",
+      "ScalingPolicy.PolicyType.": "allOf",
+      "ScalingPolicy.PolicyType..XmlStringMaxLen64": "ref",
+      "ScalingPolicy.AdjustmentType.": "allOf",
+      "ScalingPolicy.AdjustmentType..XmlStringMaxLen255": "ref",
+      "ScalingPolicy.MinAdjustmentStep.": "allOf",
+      "ScalingPolicy.MinAdjustmentStep..MinAdjustmentStep": "ref",
+      "ScalingPolicy.MinAdjustmentMagnitude.": "allOf",
+      "ScalingPolicy.MinAdjustmentMagnitude..MinAdjustmentMagnitude": "ref",
+      "ScalingPolicy.ScalingAdjustment.": "allOf",
+      "ScalingPolicy.ScalingAdjustment..PolicyIncrement": "ref",
+      "ScalingPolicy.Cooldown.": "allOf",
+      "ScalingPolicy.Cooldown..Cooldown": "ref",
+      "ScalingPolicy.StepAdjustments.": "allOf",
+      "ScalingPolicy.StepAdjustments..StepAdjustments": "ref",
+      "ScalingPolicy.MetricAggregationType.": "allOf",
+      "ScalingPolicy.MetricAggregationType..XmlStringMaxLen32": "ref",
+      "ScalingPolicy.EstimatedInstanceWarmup.": "allOf",
+      "ScalingPolicy.EstimatedInstanceWarmup..EstimatedInstanceWarmup": "ref",
+      "ScalingPolicy.Alarms.": "allOf",
+      "ScalingPolicy.Alarms..Alarms": "ref",
+      "ScalingPolicy.TargetTrackingConfiguration.": "allOf",
+      "ScalingPolicy.TargetTrackingConfiguration..TargetTrackingConfiguration": "ref",
+      "ScalingPolicy.Enabled.": "allOf",
+      "ScalingPolicy.Enabled..ScalingPolicyEnabled": "ref",
+      "ScalingPolicy.PredictiveScalingConfiguration.": "allOf",
+      "ScalingPolicy.PredictiveScalingConfiguration..PredictiveScalingConfiguration": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScalingProcessQuery",
+    "properties": {
+      "ScalingProcessQuery": "object",
+      "ScalingProcessQuery.AutoScalingGroupName.": "allOf",
+      "ScalingProcessQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "ScalingProcessQuery.ScalingProcesses.": "allOf",
+      "ScalingProcessQuery.ScalingProcesses..ProcessNames": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScheduledUpdateGroupActions",
+    "properties": {
+      "ScheduledUpdateGroupActions": "array",
+      "ScheduledUpdateGroupActions.ScheduledUpdateGroupAction": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ScheduledUpdateGroupAction",
+    "properties": {
+      "ScheduledUpdateGroupAction": "object",
+      "ScheduledUpdateGroupAction.AutoScalingGroupName.": "allOf",
+      "ScheduledUpdateGroupAction.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "ScheduledUpdateGroupAction.ScheduledActionName.": "allOf",
+      "ScheduledUpdateGroupAction.ScheduledActionName..XmlStringMaxLen255": "ref",
+      "ScheduledUpdateGroupAction.ScheduledActionARN.": "allOf",
+      "ScheduledUpdateGroupAction.ScheduledActionARN..ResourceName": "ref",
+      "ScheduledUpdateGroupAction.Time.": "allOf",
+      "ScheduledUpdateGroupAction.Time..TimestampType": "ref",
+      "ScheduledUpdateGroupAction.StartTime.": "allOf",
+      "ScheduledUpdateGroupAction.StartTime..TimestampType": "ref",
+      "ScheduledUpdateGroupAction.EndTime.": "allOf",
+      "ScheduledUpdateGroupAction.EndTime..TimestampType": "ref",
+      "ScheduledUpdateGroupAction.Recurrence.": "allOf",
+      "ScheduledUpdateGroupAction.Recurrence..XmlStringMaxLen255": "ref",
+      "ScheduledUpdateGroupAction.MinSize.": "allOf",
+      "ScheduledUpdateGroupAction.MinSize..AutoScalingGroupMinSize": "ref",
+      "ScheduledUpdateGroupAction.MaxSize.": "allOf",
+      "ScheduledUpdateGroupAction.MaxSize..AutoScalingGroupMaxSize": "ref",
+      "ScheduledUpdateGroupAction.DesiredCapacity.": "allOf",
+      "ScheduledUpdateGroupAction.DesiredCapacity..AutoScalingGroupDesiredCapacity": "ref",
+      "ScheduledUpdateGroupAction.TimeZone.": "allOf",
+      "ScheduledUpdateGroupAction.TimeZone..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SetDesiredCapacityType",
+    "properties": {
+      "SetDesiredCapacityType": "object",
+      "SetDesiredCapacityType.AutoScalingGroupName.": "allOf",
+      "SetDesiredCapacityType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "SetDesiredCapacityType.DesiredCapacity.": "allOf",
+      "SetDesiredCapacityType.DesiredCapacity..AutoScalingGroupDesiredCapacity": "ref",
+      "SetDesiredCapacityType.HonorCooldown.": "allOf",
+      "SetDesiredCapacityType.HonorCooldown..HonorCooldown": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ShouldRespectGracePeriod",
+    "properties": { "ShouldRespectGracePeriod": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SetInstanceHealthQuery",
+    "properties": {
+      "SetInstanceHealthQuery": "object",
+      "SetInstanceHealthQuery.InstanceId.": "allOf",
+      "SetInstanceHealthQuery.InstanceId..XmlStringMaxLen19": "ref",
+      "SetInstanceHealthQuery.HealthStatus.": "allOf",
+      "SetInstanceHealthQuery.HealthStatus..XmlStringMaxLen32": "ref",
+      "SetInstanceHealthQuery.ShouldRespectGracePeriod.": "allOf",
+      "SetInstanceHealthQuery.ShouldRespectGracePeriod..ShouldRespectGracePeriod": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SetInstanceProtectionQuery",
+    "properties": {
+      "SetInstanceProtectionQuery": "object",
+      "SetInstanceProtectionQuery.InstanceIds.": "allOf",
+      "SetInstanceProtectionQuery.InstanceIds..InstanceIds": "ref",
+      "SetInstanceProtectionQuery.AutoScalingGroupName.": "allOf",
+      "SetInstanceProtectionQuery.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "SetInstanceProtectionQuery.ProtectedFromScaleIn.": "allOf",
+      "SetInstanceProtectionQuery.ProtectedFromScaleIn..ProtectedFromScaleIn": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/StartInstanceRefreshType",
+    "properties": {
+      "StartInstanceRefreshType": "object",
+      "StartInstanceRefreshType.AutoScalingGroupName.": "allOf",
+      "StartInstanceRefreshType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "StartInstanceRefreshType.Strategy.": "allOf",
+      "StartInstanceRefreshType.Strategy..RefreshStrategy": "ref",
+      "StartInstanceRefreshType.DesiredConfiguration.": "allOf",
+      "StartInstanceRefreshType.DesiredConfiguration..DesiredConfiguration": "ref",
+      "StartInstanceRefreshType.Preferences.": "allOf",
+      "StartInstanceRefreshType.Preferences..RefreshPreferences": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SuspendedProcess",
+    "properties": {
+      "SuspendedProcess": "object",
+      "SuspendedProcess.ProcessName.": "allOf",
+      "SuspendedProcess.ProcessName..XmlStringMaxLen255": "ref",
+      "SuspendedProcess.SuspensionReason.": "allOf",
+      "SuspendedProcess.SuspensionReason..XmlStringMaxLen255": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagKey",
+    "properties": { "TagKey": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagValue",
+    "properties": { "TagValue": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/TagDescription",
+    "properties": {
+      "TagDescription": "object",
+      "TagDescription.ResourceId.": "allOf",
+      "TagDescription.ResourceId..XmlString": "ref",
+      "TagDescription.ResourceType.": "allOf",
+      "TagDescription.ResourceType..XmlString": "ref",
+      "TagDescription.Key.": "allOf",
+      "TagDescription.Key..TagKey": "ref",
+      "TagDescription.Value.": "allOf",
+      "TagDescription.Value..TagValue": "ref",
+      "TagDescription.PropagateAtLaunch.": "allOf",
+      "TagDescription.PropagateAtLaunch..PropagateAtLaunch": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TargetTrackingMetricDataQuery",
+    "properties": {
+      "TargetTrackingMetricDataQuery": "object",
+      "TargetTrackingMetricDataQuery.Id.": "allOf",
+      "TargetTrackingMetricDataQuery.Id..XmlStringMaxLen255": "ref",
+      "TargetTrackingMetricDataQuery.Expression.": "allOf",
+      "TargetTrackingMetricDataQuery.Expression..XmlStringMaxLen2047": "ref",
+      "TargetTrackingMetricDataQuery.MetricStat.": "allOf",
+      "TargetTrackingMetricDataQuery.MetricStat..TargetTrackingMetricStat": "ref",
+      "TargetTrackingMetricDataQuery.Label.": "allOf",
+      "TargetTrackingMetricDataQuery.Label..XmlStringMetricLabel": "ref",
+      "TargetTrackingMetricDataQuery.ReturnData.": "allOf",
+      "TargetTrackingMetricDataQuery.ReturnData..ReturnData": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TargetTrackingMetricStat",
+    "properties": {
+      "TargetTrackingMetricStat": "object",
+      "TargetTrackingMetricStat.Metric.": "allOf",
+      "TargetTrackingMetricStat.Metric..Metric": "ref",
+      "TargetTrackingMetricStat.Stat.": "allOf",
+      "TargetTrackingMetricStat.Stat..XmlStringMetricStat": "ref",
+      "TargetTrackingMetricStat.Unit.": "allOf",
+      "TargetTrackingMetricStat.Unit..MetricUnit": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TerminateInstanceInAutoScalingGroupType",
+    "properties": {
+      "TerminateInstanceInAutoScalingGroupType": "object",
+      "TerminateInstanceInAutoScalingGroupType.InstanceId.": "allOf",
+      "TerminateInstanceInAutoScalingGroupType.InstanceId..XmlStringMaxLen19": "ref",
+      "TerminateInstanceInAutoScalingGroupType.ShouldDecrementDesiredCapacity.": "allOf",
+      "TerminateInstanceInAutoScalingGroupType.ShouldDecrementDesiredCapacity..ShouldDecrementDesiredCapacity": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TrafficSourceState",
+    "properties": {
+      "TrafficSourceState": "object",
+      "TrafficSourceState.TrafficSource.": "allOf",
+      "TrafficSourceState.TrafficSource..XmlStringMaxLen511": "ref",
+      "TrafficSourceState.State.": "allOf",
+      "TrafficSourceState.State..XmlStringMaxLen255": "ref",
+      "TrafficSourceState.Identifier.": "allOf",
+      "TrafficSourceState.Identifier..XmlStringMaxLen511": "ref",
+      "TrafficSourceState.Type.": "allOf",
+      "TrafficSourceState.Type..XmlStringMaxLen511": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UpdateAutoScalingGroupType",
+    "properties": {
+      "UpdateAutoScalingGroupType": "object",
+      "UpdateAutoScalingGroupType.AutoScalingGroupName.": "allOf",
+      "UpdateAutoScalingGroupType.AutoScalingGroupName..XmlStringMaxLen255": "ref",
+      "UpdateAutoScalingGroupType.LaunchConfigurationName.": "allOf",
+      "UpdateAutoScalingGroupType.LaunchConfigurationName..XmlStringMaxLen255": "ref",
+      "UpdateAutoScalingGroupType.LaunchTemplate.": "allOf",
+      "UpdateAutoScalingGroupType.LaunchTemplate..LaunchTemplateSpecification": "ref",
+      "UpdateAutoScalingGroupType.MixedInstancesPolicy.": "allOf",
+      "UpdateAutoScalingGroupType.MixedInstancesPolicy..MixedInstancesPolicy": "ref",
+      "UpdateAutoScalingGroupType.MinSize.": "allOf",
+      "UpdateAutoScalingGroupType.MinSize..AutoScalingGroupMinSize": "ref",
+      "UpdateAutoScalingGroupType.MaxSize.": "allOf",
+      "UpdateAutoScalingGroupType.MaxSize..AutoScalingGroupMaxSize": "ref",
+      "UpdateAutoScalingGroupType.DesiredCapacity.": "allOf",
+      "UpdateAutoScalingGroupType.DesiredCapacity..AutoScalingGroupDesiredCapacity": "ref",
+      "UpdateAutoScalingGroupType.DefaultCooldown.": "allOf",
+      "UpdateAutoScalingGroupType.DefaultCooldown..Cooldown": "ref",
+      "UpdateAutoScalingGroupType.AvailabilityZones.": "allOf",
+      "UpdateAutoScalingGroupType.AvailabilityZones..AvailabilityZones": "ref",
+      "UpdateAutoScalingGroupType.HealthCheckType.": "allOf",
+      "UpdateAutoScalingGroupType.HealthCheckType..XmlStringMaxLen32": "ref",
+      "UpdateAutoScalingGroupType.HealthCheckGracePeriod.": "allOf",
+      "UpdateAutoScalingGroupType.HealthCheckGracePeriod..HealthCheckGracePeriod": "ref",
+      "UpdateAutoScalingGroupType.PlacementGroup.": "allOf",
+      "UpdateAutoScalingGroupType.PlacementGroup..XmlStringMaxLen255": "ref",
+      "UpdateAutoScalingGroupType.VPCZoneIdentifier.": "allOf",
+      "UpdateAutoScalingGroupType.VPCZoneIdentifier..XmlStringMaxLen2047": "ref",
+      "UpdateAutoScalingGroupType.TerminationPolicies.": "allOf",
+      "UpdateAutoScalingGroupType.TerminationPolicies..TerminationPolicies": "ref",
+      "UpdateAutoScalingGroupType.NewInstancesProtectedFromScaleIn.": "allOf",
+      "UpdateAutoScalingGroupType.NewInstancesProtectedFromScaleIn..InstanceProtected": "ref",
+      "UpdateAutoScalingGroupType.ServiceLinkedRoleARN.": "allOf",
+      "UpdateAutoScalingGroupType.ServiceLinkedRoleARN..ResourceName": "ref",
+      "UpdateAutoScalingGroupType.MaxInstanceLifetime.": "allOf",
+      "UpdateAutoScalingGroupType.MaxInstanceLifetime..MaxInstanceLifetime": "ref",
+      "UpdateAutoScalingGroupType.CapacityRebalance.": "allOf",
+      "UpdateAutoScalingGroupType.CapacityRebalance..CapacityRebalanceEnabled": "ref",
+      "UpdateAutoScalingGroupType.Context.": "allOf",
+      "UpdateAutoScalingGroupType.Context..Context": "ref",
+      "UpdateAutoScalingGroupType.DesiredCapacityType.": "allOf",
+      "UpdateAutoScalingGroupType.DesiredCapacityType..XmlStringMaxLen255": "ref",
+      "UpdateAutoScalingGroupType.DefaultInstanceWarmup.": "allOf",
+      "UpdateAutoScalingGroupType.DefaultInstanceWarmup..DefaultInstanceWarmup": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/WarmPoolStatus",
+    "properties": { "__undefined_0": "scaler" }
+  }
+]

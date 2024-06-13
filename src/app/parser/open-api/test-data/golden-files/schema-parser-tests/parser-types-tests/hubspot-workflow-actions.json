@@ -1,0 +1,273 @@
+[
+  {
+    "schemaRef": "#/components/responses/Error",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActionFunction",
+    "properties": {
+      "ActionFunction": "object",
+      "ActionFunction.functionSource.": "scaler",
+      "__undefined_0": "scaler",
+      "ActionFunction.id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActionFunctionIdentifier",
+    "properties": {
+      "ActionFunctionIdentifier": "object",
+      "__undefined_0": "scaler",
+      "ActionFunctionIdentifier.id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActionLabels",
+    "properties": {
+      "ActionLabels": "object",
+      "ActionLabels.actionCardContent.": "scaler",
+      "ActionLabels.actionDescription.": "scaler",
+      "ActionLabels.actionName.": "scaler",
+      "ActionLabels.appDisplayName.": "scaler",
+      "ActionLabels.inputFieldDescriptions.": "primitive",
+      "ActionLabels.inputFieldLabels.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActionRevision",
+    "properties": {
+      "ActionRevision": "object",
+      "ActionRevision.createdAt.": "scaler",
+      "ActionRevision.definition.ExtensionActionDefinition": "ref",
+      "ActionRevision.id.": "scaler",
+      "ActionRevision.revisionId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BatchInputCallbackCompletionBatchRequest",
+    "properties": {
+      "BatchInputCallbackCompletionBatchRequest": "object",
+      "BatchInputCallbackCompletionBatchRequest.inputs.": "array",
+      "BatchInputCallbackCompletionBatchRequest.inputs..CallbackCompletionBatchRequest": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CallbackCompletionBatchRequest",
+    "properties": {
+      "CallbackCompletionBatchRequest": "object",
+      "CallbackCompletionBatchRequest.callbackId.": "scaler",
+      "CallbackCompletionBatchRequest.outputFields.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CallbackCompletionRequest",
+    "properties": {
+      "CallbackCompletionRequest": "object",
+      "CallbackCompletionRequest.outputFields.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CollectionResponseActionFunctionIdentifierNoPaging",
+    "properties": {
+      "CollectionResponseActionFunctionIdentifierNoPaging": "object",
+      "CollectionResponseActionFunctionIdentifierNoPaging.results.": "array",
+      "CollectionResponseActionFunctionIdentifierNoPaging.results..ActionFunctionIdentifier": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CollectionResponseActionRevisionForwardPaging",
+    "properties": {
+      "CollectionResponseActionRevisionForwardPaging": "object",
+      "CollectionResponseActionRevisionForwardPaging.paging.ForwardPaging": "ref",
+      "CollectionResponseActionRevisionForwardPaging.results.": "array",
+      "CollectionResponseActionRevisionForwardPaging.results..ActionRevision": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CollectionResponseExtensionActionDefinitionForwardPaging",
+    "properties": {
+      "CollectionResponseExtensionActionDefinitionForwardPaging": "object",
+      "CollectionResponseExtensionActionDefinitionForwardPaging.paging.ForwardPaging": "ref",
+      "CollectionResponseExtensionActionDefinitionForwardPaging.results.": "array",
+      "CollectionResponseExtensionActionDefinitionForwardPaging.results..ExtensionActionDefinition": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ConditionalSingleFieldDependency",
+    "properties": {
+      "ConditionalSingleFieldDependency": "object",
+      "ConditionalSingleFieldDependency.controllingFieldName.": "scaler",
+      "ConditionalSingleFieldDependency.controllingFieldValue.": "scaler",
+      "__undefined_0": "scaler",
+      "ConditionalSingleFieldDependency.dependentFieldNames.": "array",
+      "ConditionalSingleFieldDependency.dependentFieldNames..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Error",
+    "properties": {
+      "Error": "object",
+      "Error.category.": "scaler",
+      "Error.context.": "primitive",
+      "Error.correlationId.": "scaler",
+      "Error.errors.": "array",
+      "Error.errors..ErrorDetail": "ref",
+      "Error.links.": "primitive",
+      "Error.message.": "scaler",
+      "Error.subCategory.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorDetail",
+    "properties": {
+      "ErrorDetail": "object",
+      "ErrorDetail.code.": "scaler",
+      "ErrorDetail.context.": "primitive",
+      "ErrorDetail.in.": "scaler",
+      "ErrorDetail.message.": "scaler",
+      "ErrorDetail.subCategory.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExtensionActionDefinition",
+    "properties": {
+      "ExtensionActionDefinition": "object",
+      "ExtensionActionDefinition.actionUrl.": "scaler",
+      "ExtensionActionDefinition.archivedAt.": "scaler",
+      "ExtensionActionDefinition.functions.": "array",
+      "ExtensionActionDefinition.functions..ActionFunctionIdentifier": "ref",
+      "ExtensionActionDefinition.id.": "scaler",
+      "ExtensionActionDefinition.inputFieldDependencies.": "array",
+      "ExtensionActionDefinition.inputFieldDependencies..": "primitive",
+      "ExtensionActionDefinition.inputFields.": "array",
+      "ExtensionActionDefinition.inputFields..InputFieldDefinition": "ref",
+      "ExtensionActionDefinition.labels.": "primitive",
+      "ExtensionActionDefinition.objectRequestOptions.ObjectRequestOptions": "ref",
+      "ExtensionActionDefinition.objectTypes.": "array",
+      "ExtensionActionDefinition.objectTypes..": "scaler",
+      "ExtensionActionDefinition.published.": "scaler",
+      "ExtensionActionDefinition.revisionId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExtensionActionDefinitionInput",
+    "properties": {
+      "ExtensionActionDefinitionInput": "object",
+      "ExtensionActionDefinitionInput.actionUrl.": "scaler",
+      "ExtensionActionDefinitionInput.archivedAt.": "scaler",
+      "ExtensionActionDefinitionInput.functions.": "array",
+      "ExtensionActionDefinitionInput.functions..ActionFunction": "ref",
+      "ExtensionActionDefinitionInput.inputFieldDependencies.": "array",
+      "ExtensionActionDefinitionInput.inputFieldDependencies..": "primitive",
+      "ExtensionActionDefinitionInput.inputFields.": "array",
+      "ExtensionActionDefinitionInput.inputFields..InputFieldDefinition": "ref",
+      "ExtensionActionDefinitionInput.labels.": "primitive",
+      "ExtensionActionDefinitionInput.objectRequestOptions.ObjectRequestOptions": "ref",
+      "ExtensionActionDefinitionInput.objectTypes.": "array",
+      "ExtensionActionDefinitionInput.objectTypes..": "scaler",
+      "ExtensionActionDefinitionInput.published.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ExtensionActionDefinitionPatch",
+    "properties": {
+      "ExtensionActionDefinitionPatch": "object",
+      "ExtensionActionDefinitionPatch.actionUrl.": "scaler",
+      "ExtensionActionDefinitionPatch.inputFieldDependencies.": "array",
+      "ExtensionActionDefinitionPatch.inputFieldDependencies..": "primitive",
+      "ExtensionActionDefinitionPatch.inputFields.": "array",
+      "ExtensionActionDefinitionPatch.inputFields..InputFieldDefinition": "ref",
+      "ExtensionActionDefinitionPatch.labels.": "primitive",
+      "ExtensionActionDefinitionPatch.objectRequestOptions.ObjectRequestOptions": "ref",
+      "ExtensionActionDefinitionPatch.objectTypes.": "array",
+      "ExtensionActionDefinitionPatch.objectTypes..": "scaler",
+      "ExtensionActionDefinitionPatch.published.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/FieldTypeDefinition",
+    "properties": {
+      "FieldTypeDefinition": "object",
+      "__undefined_0": "scaler",
+      "FieldTypeDefinition.name.": "scaler",
+      "FieldTypeDefinition.options.": "array",
+      "FieldTypeDefinition.options..Option": "ref",
+      "FieldTypeDefinition.optionsUrl.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ForwardPaging",
+    "properties": {
+      "ForwardPaging": "object",
+      "ForwardPaging.next.NextPage": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InputFieldDefinition",
+    "properties": {
+      "InputFieldDefinition": "object",
+      "InputFieldDefinition.isRequired.": "scaler",
+      "InputFieldDefinition.supportedValueTypes.": "array",
+      "__undefined_0": "scaler",
+      "InputFieldDefinition.typeDefinition.FieldTypeDefinition": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NextPage",
+    "properties": {
+      "NextPage": "object",
+      "NextPage.after.": "scaler",
+      "NextPage.link.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ObjectRequestOptions",
+    "properties": {
+      "ObjectRequestOptions": "object",
+      "ObjectRequestOptions.properties.": "array",
+      "ObjectRequestOptions.properties..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Option",
+    "properties": {
+      "Option": "object",
+      "Option.description.": "scaler",
+      "Option.displayOrder.": "scaler",
+      "Option.doubleData.": "scaler",
+      "Option.hidden.": "scaler",
+      "Option.label.": "scaler",
+      "Option.readOnly.": "scaler",
+      "Option.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SingleFieldDependency",
+    "properties": {
+      "SingleFieldDependency": "object",
+      "SingleFieldDependency.controllingFieldName.": "scaler",
+      "__undefined_0": "scaler",
+      "SingleFieldDependency.dependentFieldNames.": "array",
+      "SingleFieldDependency.dependentFieldNames..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/developer_hapikey",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/hapikey",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/oauth2_legacy",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/private_apps_legacy",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

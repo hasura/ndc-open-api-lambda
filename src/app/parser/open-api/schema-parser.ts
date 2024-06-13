@@ -1,4 +1,3 @@
-import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as parserTypes from "./types";
 import * as generatorTypes from "../../generator/types";
 import * as logger from "../../../util/logger";
@@ -20,15 +19,9 @@ export function getParsedSchemaStore(
   }
 
   for (const component of schemaComponents) {
-    /**
-     * Need to use @ts-ignore in the following lines because the typescript
-     * compiler does not think that component can be correctly cast to parserTypes.Schema
-     */
-    // @ts-ignore
-    if (!shouldParseScehma(component)) {
+    if (!parserTypes.shouldParseSchema(component)) {
       continue;
     }
-    // @ts-ignore
     createSchemaMapping(mappings, component);
   }
 
@@ -116,18 +109,6 @@ function createSchemaMapping(mappings: Mappings, schema: parserTypes.Schema) {
   }
 }
 
-function shouldParseScehma(component: parserTypes.Schema) {
-  /**
-   * We don't want to parse #/components/examples/ because
-   * 1. they are not used in code
-   * 2. too many examples can slow down the parsing
-   */
-  if (component.$ref.startsWith("#/components/examples/")) {
-    return false;
-  }
-  return true;
-}
-
 function parseSchema(
   schema: parserTypes.Schema,
   visitedRefs: Set<string>,
@@ -141,13 +122,15 @@ function parseSchema(
     return true;
   }
   schema._requiresRelaxedTypeJsDocTag = false;
-  if (parserTypes.getSchemaPropertyFromSchema(schema)) {
+  try {
     parseSchemaProperty(
       parserTypes.getSchemaPropertyFromSchema(schema)!,
       schema,
       visitedRefs,
       schemaStore,
     );
+  } catch (e) {
+    logger.error(`Error while parsing schema '${schema.$ref}':\n${e}`);
   }
   /**
    * Need to use `@ts-ignore` before the following if statement because the typescript
@@ -175,6 +158,9 @@ function parseSchemaProperty(
     } else if (parserTypes.schemaPropertyIsTypeRef(schemaProperty)) {
       const newSchema = schemaStore.getSchemaByRef(schemaProperty.$ref);
       if (!newSchema) {
+        logger.error(
+          `Error while parsing Schema ${schema.$ref}\nError: Referenced Schema '${schemaProperty.$ref}' not found\nSchema: ${JSON.stringify(schema)}`,
+        );
         return;
       }
       const requiresRelaxedTypeJsDocTag = parseSchema(
@@ -193,11 +179,6 @@ function parseSchemaProperty(
       });
     }
   } catch (e) {
-    if (e instanceof Error) {
-      logger.error(
-        `Error while parsing schema '${schema.$ref}':\n${e.message}`,
-      );
-    }
     logger.error(`Error while parsing schema '${schema.$ref}':\n${e}`);
   }
 }

@@ -1,0 +1,137 @@
+[
+  {
+    "schemaRef": "#/components/parameters/AlertRuleNameParameter",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "SmartDetectorAlertRulesDeleteParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/ApiVersionParameter",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/ExpandDetectorParameter",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/ResourceGroupNameParameter",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "SmartDetectorAlertRulesListByResourceGroupParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/SubscriptionIdParameter",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "SmartDetectorAlertRulesListParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/azure_auth",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ActionGroupsInformation",
+    "properties": {
+      "ActionGroupsInformation": "object",
+      "ActionGroupsInformation.customEmailSubject.": "scaler",
+      "ActionGroupsInformation.customWebhookPayload.": "scaler",
+      "ActionGroupsInformation.groupIds.": "array",
+      "ActionGroupsInformation.groupIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertRule",
+    "properties": {
+      "AlertRule": "object",
+      "AlertRule..properties.AlertRuleProperties": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertRulePatchObject",
+    "properties": {
+      "AlertRulePatchObject": "object",
+      "AlertRulePatchObject.id.": "scaler",
+      "AlertRulePatchObject.name.": "scaler",
+      "AlertRulePatchObject.properties.AlertRulePatchProperties": "ref",
+      "AlertRulePatchObject.tags.": "primitive",
+      "AlertRulePatchObject.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertRulePatchProperties",
+    "properties": {
+      "AlertRulePatchProperties": "object",
+      "AlertRulePatchProperties.actionGroups.ActionGroupsInformation": "ref",
+      "AlertRulePatchProperties.description.": "scaler",
+      "AlertRulePatchProperties.frequency.": "scaler",
+      "__undefined_0": "scaler",
+      "AlertRulePatchProperties.throttling.ThrottlingInformation": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertRuleProperties",
+    "properties": {
+      "AlertRuleProperties": "object",
+      "AlertRuleProperties.actionGroups.ActionGroupsInformation": "ref",
+      "AlertRuleProperties.description.": "scaler",
+      "AlertRuleProperties.detector.Detector": "ref",
+      "AlertRuleProperties.frequency.": "scaler",
+      "AlertRuleProperties.scope.": "array",
+      "AlertRuleProperties.scope..": "scaler",
+      "__undefined_0": "scaler",
+      "AlertRuleProperties.throttling.ThrottlingInformation": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AlertRulesList",
+    "properties": {
+      "AlertRulesList": "object",
+      "AlertRulesList.nextLink.": "scaler",
+      "AlertRulesList.value.": "array",
+      "AlertRulesList.value..AlertRule": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AzureResource",
+    "properties": {
+      "AzureResource": "object",
+      "AzureResource.id.": "scaler",
+      "AzureResource.location.": "scaler",
+      "AzureResource.name.": "scaler",
+      "AzureResource.tags.": "primitive",
+      "AzureResource.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Detector",
+    "properties": {
+      "Detector": "object",
+      "Detector.description.": "scaler",
+      "Detector.id.": "scaler",
+      "Detector.imagePaths.": "array",
+      "Detector.imagePaths..": "scaler",
+      "Detector.name.": "scaler",
+      "Detector.parameters.": "primitive",
+      "Detector.supportedResourceTypes.": "array",
+      "Detector.supportedResourceTypes..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorResponse",
+    "properties": {
+      "ErrorResponse": "object",
+      "ErrorResponse.code.": "scaler",
+      "ErrorResponse.message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ThrottlingInformation",
+    "properties": {
+      "ThrottlingInformation": "object",
+      "ThrottlingInformation.duration.": "scaler"
+    }
+  }
+]
