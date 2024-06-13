@@ -1,0 +1,192 @@
+[
+  {
+    "schemaRef": "#/components/parameters/_.xgafv",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/access_token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/alt",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/callback",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/fields",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/key",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/oauth_token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/prettyPrint",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/quotaUser",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/uploadType",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/upload_protocol",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/DeleteEventsResponse",
+    "properties": { "DeleteEventsResponse": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorContext",
+    "properties": {
+      "ErrorContext": "object",
+      "ErrorContext.httpRequest.HttpRequestContext": "ref",
+      "ErrorContext.reportLocation.SourceLocation": "ref",
+      "ErrorContext.sourceReferences.": "array",
+      "ErrorContext.sourceReferences..SourceReference": "ref",
+      "ErrorContext.user.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorEvent",
+    "properties": {
+      "ErrorEvent": "object",
+      "ErrorEvent.context.ErrorContext": "ref",
+      "ErrorEvent.eventTime.": "scaler",
+      "ErrorEvent.message.": "scaler",
+      "ErrorEvent.serviceContext.ServiceContext": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorGroup",
+    "properties": {
+      "ErrorGroup": "object",
+      "ErrorGroup.groupId.": "scaler",
+      "ErrorGroup.name.": "scaler",
+      "__undefined_0": "scaler",
+      "ErrorGroup.trackingIssues.": "array",
+      "ErrorGroup.trackingIssues..TrackingIssue": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorGroupStats",
+    "properties": {
+      "ErrorGroupStats": "object",
+      "ErrorGroupStats.affectedServices.": "array",
+      "ErrorGroupStats.affectedServices..ServiceContext": "ref",
+      "ErrorGroupStats.affectedUsersCount.": "scaler",
+      "ErrorGroupStats.count.": "scaler",
+      "ErrorGroupStats.firstSeenTime.": "scaler",
+      "ErrorGroupStats.group.ErrorGroup": "ref",
+      "ErrorGroupStats.lastSeenTime.": "scaler",
+      "ErrorGroupStats.numAffectedServices.": "scaler",
+      "ErrorGroupStats.representative.ErrorEvent": "ref",
+      "ErrorGroupStats.timedCounts.": "array",
+      "ErrorGroupStats.timedCounts..TimedCount": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/HttpRequestContext",
+    "properties": {
+      "HttpRequestContext": "object",
+      "HttpRequestContext.method.": "scaler",
+      "HttpRequestContext.referrer.": "scaler",
+      "HttpRequestContext.remoteIp.": "scaler",
+      "HttpRequestContext.responseStatusCode.": "scaler",
+      "HttpRequestContext.url.": "scaler",
+      "HttpRequestContext.userAgent.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListEventsResponse",
+    "properties": {
+      "ListEventsResponse": "object",
+      "ListEventsResponse.errorEvents.": "array",
+      "ListEventsResponse.errorEvents..ErrorEvent": "ref",
+      "ListEventsResponse.nextPageToken.": "scaler",
+      "ListEventsResponse.timeRangeBegin.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ListGroupStatsResponse",
+    "properties": {
+      "ListGroupStatsResponse": "object",
+      "ListGroupStatsResponse.errorGroupStats.": "array",
+      "ListGroupStatsResponse.errorGroupStats..ErrorGroupStats": "ref",
+      "ListGroupStatsResponse.nextPageToken.": "scaler",
+      "ListGroupStatsResponse.timeRangeBegin.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ReportErrorEventResponse",
+    "properties": { "ReportErrorEventResponse": "object" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ReportedErrorEvent",
+    "properties": {
+      "ReportedErrorEvent": "object",
+      "ReportedErrorEvent.context.ErrorContext": "ref",
+      "ReportedErrorEvent.eventTime.": "scaler",
+      "ReportedErrorEvent.message.": "scaler",
+      "ReportedErrorEvent.serviceContext.ServiceContext": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ServiceContext",
+    "properties": {
+      "ServiceContext": "object",
+      "ServiceContext.resourceType.": "scaler",
+      "ServiceContext.service.": "scaler",
+      "ServiceContext.version.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SourceLocation",
+    "properties": {
+      "SourceLocation": "object",
+      "SourceLocation.filePath.": "scaler",
+      "SourceLocation.functionName.": "scaler",
+      "SourceLocation.lineNumber.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SourceReference",
+    "properties": {
+      "SourceReference": "object",
+      "SourceReference.repository.": "scaler",
+      "SourceReference.revisionId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TimedCount",
+    "properties": {
+      "TimedCount": "object",
+      "TimedCount.count.": "scaler",
+      "TimedCount.endTime.": "scaler",
+      "TimedCount.startTime.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TrackingIssue",
+    "properties": { "TrackingIssue": "object", "TrackingIssue.url.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2c",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

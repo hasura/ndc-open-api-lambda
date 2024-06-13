@@ -1,0 +1,443 @@
+[
+  {
+    "schemaRef": "#/components/parameters/LatParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/LngParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/OptionalDestLatParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/OptionalDestLngParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/OptionalEndTime",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/OptionalLimit",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/OptionalRideType",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/RideStatusParam",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/StartTime",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Client_Authentication",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/User_Authentication",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ApiError",
+    "properties": {
+      "ApiError": "object",
+      "ApiError.error.": "scaler",
+      "ApiError.error_description.": "scaler",
+      "ApiError.error_detail.": "array",
+      "ApiError.error_detail..ErrorDetail": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CancellationCost",
+    "properties": {
+      "CancellationCost": "allOf",
+      "CancellationCost.Cost": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CancellationCostError",
+    "properties": {
+      "CancellationCostError": "allOf",
+      "CancellationCostError.CancellationCost": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CancellationRequest",
+    "properties": {
+      "CancellationRequest": "object",
+      "CancellationRequest.cancel_confirmation_token.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Charge",
+    "properties": {
+      "Charge": "object",
+      "Charge.amount.": "scaler",
+      "Charge.currency.": "scaler",
+      "Charge.payment_method.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Cost",
+    "properties": {
+      "Cost": "object",
+      "Cost.amount.": "scaler",
+      "Cost.currency.": "scaler",
+      "Cost.description.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CostEstimate",
+    "properties": {
+      "CostEstimate": "object",
+      "CostEstimate.cost_token.": "scaler",
+      "CostEstimate.currency.": "scaler",
+      "CostEstimate.display_name.": "scaler",
+      "CostEstimate.estimated_cost_cents_max.": "scaler",
+      "CostEstimate.estimated_cost_cents_min.": "scaler",
+      "CostEstimate.estimated_distance_miles.": "scaler",
+      "CostEstimate.estimated_duration_seconds.": "scaler",
+      "CostEstimate.is_valid_estimate.": "scaler",
+      "CostEstimate.primetime_confirmation_token.": "scaler",
+      "CostEstimate.primetime_percentage.": "scaler",
+      "CostEstimate.ride_type.RideTypeEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CurrentRideLocation",
+    "properties": {
+      "CurrentRideLocation": "allOf",
+      "CurrentRideLocation.LatLng": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/DriverDetail",
+    "properties": {
+      "DriverDetail": "object",
+      "DriverDetail.first_name.": "scaler",
+      "DriverDetail.image_url.": "scaler",
+      "DriverDetail.phone_number.": "scaler",
+      "DriverDetail.rating.": "scaler",
+      "DriverDetail.user_id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ErrorDetail",
+    "properties": {
+      "ErrorDetail": "object",
+      "ErrorDetail.field_name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Eta",
+    "properties": {
+      "Eta": "object",
+      "Eta.display_name.": "scaler",
+      "Eta.eta_seconds.": "scaler",
+      "Eta.eta_seconds_max.": "scaler",
+      "Eta.is_valid_estimate.": "scaler",
+      "Eta.ride_type.RideTypeEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LatLng",
+    "properties": {
+      "LatLng": "object",
+      "LatLng.lat.": "scaler",
+      "LatLng.lng.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/LineItem",
+    "properties": {
+      "LineItem": "object",
+      "LineItem.amount.": "scaler",
+      "LineItem.currency.": "scaler",
+      "LineItem.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Location",
+    "properties": { "Location": "allOf", "Location.LatLng": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/NearbyDriver",
+    "properties": {
+      "NearbyDriver": "object",
+      "NearbyDriver.locations.": "array",
+      "NearbyDriver.locations..LatLng": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/NearbyDriversByRideType",
+    "properties": {
+      "NearbyDriversByRideType": "object",
+      "NearbyDriversByRideType.drivers.": "array",
+      "NearbyDriversByRideType.drivers..NearbyDriver": "ref",
+      "NearbyDriversByRideType.ride_type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PassengerDetail",
+    "properties": {
+      "PassengerDetail": "allOf",
+      "PassengerDetail.UserDetail": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PickupDropoffLocation",
+    "properties": {
+      "PickupDropoffLocation": "allOf",
+      "PickupDropoffLocation.Location": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/PricingDetails",
+    "properties": {
+      "PricingDetails": "object",
+      "PricingDetails.base_charge.": "scaler",
+      "PricingDetails.cancel_penalty_amount.": "scaler",
+      "PricingDetails.cost_minimum.": "scaler",
+      "PricingDetails.cost_per_mile.": "scaler",
+      "PricingDetails.cost_per_minute.": "scaler",
+      "PricingDetails.currency.": "scaler",
+      "PricingDetails.trust_and_service.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Profile",
+    "properties": {
+      "Profile": "object",
+      "Profile.first_name.": "scaler",
+      "Profile.has_taken_a_ride.": "scaler",
+      "Profile.id.": "scaler",
+      "Profile.last_name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RatingRequest",
+    "properties": {
+      "RatingRequest": "object",
+      "RatingRequest.feedback.": "scaler",
+      "RatingRequest.rating.": "scaler",
+      "RatingRequest.tip.": "allOf",
+      "RatingRequest.tip..TipParams": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Ride",
+    "properties": {
+      "Ride": "object",
+      "Ride.cost_token.": "scaler",
+      "Ride.destination.": "allOf",
+      "Ride.destination..Location": "ref",
+      "Ride.origin.": "allOf",
+      "Ride.origin..Location": "ref",
+      "Ride.primetime_confirmation_token.": "scaler",
+      "Ride.ride_type.RideTypeEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideDetail",
+    "properties": {
+      "RideDetail": "object",
+      "RideDetail.beacon_color.": "scaler",
+      "RideDetail.can_cancel.": "array",
+      "__undefined_0": "scaler",
+      "RideDetail.canceled_by.": "scaler",
+      "RideDetail.cancellation_price.": "allOf",
+      "RideDetail.cancellation_price..CancellationCost": "ref",
+      "RideDetail.destination.": "allOf",
+      "RideDetail.destination..RideLocation": "ref",
+      "RideDetail.distance_miles.": "scaler",
+      "RideDetail.driver.DriverDetail": "ref",
+      "RideDetail.dropoff.": "allOf",
+      "RideDetail.dropoff..PickupDropoffLocation": "ref",
+      "RideDetail.duration_seconds.": "scaler",
+      "RideDetail.feedback.": "scaler",
+      "RideDetail.generated_at.": "scaler",
+      "RideDetail.line_items.": "array",
+      "RideDetail.line_items..LineItem": "ref",
+      "RideDetail.location.": "allOf",
+      "RideDetail.location..CurrentRideLocation": "ref",
+      "RideDetail.origin.": "allOf",
+      "RideDetail.origin..RideLocation": "ref",
+      "RideDetail.passenger.PassengerDetail": "ref",
+      "RideDetail.pickup.": "allOf",
+      "RideDetail.pickup..PickupDropoffLocation": "ref",
+      "RideDetail.price.": "allOf",
+      "RideDetail.price..Cost": "ref",
+      "RideDetail.pricing_details_url.": "scaler",
+      "RideDetail.primetime_percentage.": "scaler",
+      "RideDetail.rating.": "scaler",
+      "RideDetail.requested_at.": "scaler",
+      "RideDetail.ride_id.": "scaler",
+      "RideDetail.ride_profile.": "allOf",
+      "RideDetail.ride_profile..RideProfileEnum": "ref",
+      "RideDetail.ride_type.RideTypeEnumWithOther": "ref",
+      "RideDetail.route_url.": "scaler",
+      "RideDetail.status.RideStatusEnum": "ref",
+      "RideDetail.vehicle.VehicleDetail": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideLocation",
+    "properties": { "RideLocation": "allOf", "RideLocation.Location": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideProfileEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideReceipt",
+    "properties": {
+      "RideReceipt": "object",
+      "RideReceipt.charges.": "array",
+      "RideReceipt.charges..Charge": "ref",
+      "RideReceipt.line_items.": "array",
+      "RideReceipt.line_items..LineItem": "ref",
+      "RideReceipt.price.": "allOf",
+      "RideReceipt.price..Cost": "ref",
+      "RideReceipt.requested_at.": "scaler",
+      "RideReceipt.ride_id.": "scaler",
+      "RideReceipt.ride_profile.": "allOf",
+      "RideReceipt.ride_profile..RideProfileEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideRequest",
+    "properties": {
+      "RideRequest": "object",
+      "RideRequest.destination.": "allOf",
+      "RideRequest.destination..Location": "ref",
+      "RideRequest.origin.": "allOf",
+      "RideRequest.origin..Location": "ref",
+      "RideRequest.passenger.PassengerDetail": "ref",
+      "RideRequest.ride_id.": "scaler",
+      "RideRequest.status.RideStatusEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideRequestError",
+    "properties": {
+      "RideRequestError": "object",
+      "RideRequestError.cost_token.": "scaler",
+      "RideRequestError.error.": "scaler",
+      "RideRequestError.error_description.": "scaler",
+      "RideRequestError.error_detail.": "array",
+      "RideRequestError.error_detail..ErrorDetail": "ref",
+      "RideRequestError.error_uri.": "scaler",
+      "RideRequestError.primetime_confirmation_token.": "scaler",
+      "RideRequestError.primetime_multiplier.": "scaler",
+      "RideRequestError.primetime_percentage.": "scaler",
+      "RideRequestError.token_duration.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideStatusEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideType",
+    "properties": {
+      "RideType": "object",
+      "RideType.display_name.": "scaler",
+      "RideType.image_url.": "scaler",
+      "RideType.pricing_details.PricingDetails": "ref",
+      "RideType.ride_type.RideTypeEnum": "ref",
+      "RideType.scheduled_pricing_details.PricingDetails": "ref",
+      "RideType.seats.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideTypeEnum",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/RideTypeEnumWithOther",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/SandboxDriverAvailability",
+    "properties": {
+      "SandboxDriverAvailability": "object",
+      "SandboxDriverAvailability.driver_availability.": "scaler",
+      "SandboxDriverAvailability.lat.": "scaler",
+      "SandboxDriverAvailability.lng.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SandboxPrimetime",
+    "properties": {
+      "SandboxPrimetime": "object",
+      "SandboxPrimetime.lat.": "scaler",
+      "SandboxPrimetime.lng.": "scaler",
+      "SandboxPrimetime.primetime_percentage.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SandboxRideStatus",
+    "properties": {
+      "SandboxRideStatus": "object",
+      "SandboxRideStatus.status.RideStatusEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SandboxRideType",
+    "properties": {
+      "SandboxRideType": "object",
+      "SandboxRideType.lat.": "scaler",
+      "SandboxRideType.lng.": "scaler",
+      "SandboxRideType.ride_types.": "array",
+      "SandboxRideType.ride_types..RideTypeEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SandboxRideUpdate",
+    "properties": {
+      "SandboxRideUpdate": "object",
+      "SandboxRideUpdate.ride_id.": "scaler",
+      "SandboxRideUpdate.status.RideStatusEnum": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tip",
+    "properties": {
+      "Tip": "object",
+      "Tip.amount.": "scaler",
+      "Tip.currency.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TipParams",
+    "properties": { "TipParams": "allOf", "TipParams.Tip": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/UserDetail",
+    "properties": {
+      "UserDetail": "object",
+      "UserDetail.first_name.": "scaler",
+      "UserDetail.image_url.": "scaler",
+      "UserDetail.rating.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/VehicleDetail",
+    "properties": {
+      "VehicleDetail": "object",
+      "VehicleDetail.color.": "scaler",
+      "VehicleDetail.image_url.": "scaler",
+      "VehicleDetail.license_plate.": "scaler",
+      "VehicleDetail.license_plate_state.": "scaler",
+      "VehicleDetail.make.": "scaler",
+      "VehicleDetail.model.": "scaler",
+      "VehicleDetail.year.": "scaler"
+    }
+  }
+]

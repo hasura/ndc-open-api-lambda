@@ -1,0 +1,365 @@
+[
+  {
+    "schemaRef": "#/components/parameters/branch",
+    "properties": { "__undefined_0": "rawArg", "TreeCreateParams.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/build_num",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "ProjectDetail2Params.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/envvar_name",
+    "properties": { "__undefined_0": "rawArg", "EnvvarDeleteParams.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/filter",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/fingerprint",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "CheckoutKeyDeleteParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/limit",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/offset",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/project",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "ProjectDetailParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/parameters/username",
+    "properties": {
+      "__undefined_0": "rawArg",
+      "ProjectDetailParams.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/envvar",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/envvars",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/responses/key",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Artifact",
+    "properties": {
+      "Artifact": "object",
+      "Artifact.node_index.": "scaler",
+      "Artifact.path.": "scaler",
+      "Artifact.pretty_path.": "scaler",
+      "Artifact.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Artifacts",
+    "properties": { "Artifacts": "array", "Artifacts.Artifact": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Aws",
+    "properties": { "Aws": "object", "Aws.keypair.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Build",
+    "properties": {
+      "Build": "object",
+      "Build.body.": "scaler",
+      "Build.branch.": "scaler",
+      "Build.build_time_millis.": "scaler",
+      "Build.build_url.": "scaler",
+      "Build.committer_email.": "scaler",
+      "Build.committer_name.": "scaler",
+      "Build.dont_build.": "scaler",
+      "Build.lifecycle.Lifecycle": "ref",
+      "Build.previous.PreviousBuild": "ref",
+      "Build.queued_at.": "scaler",
+      "Build.reponame.": "scaler",
+      "Build.retry_of.": "scaler",
+      "Build.start_time.": "scaler",
+      "Build.stop_time.": "scaler",
+      "Build.subject.": "scaler",
+      "Build.username.": "scaler",
+      "Build.vcs_url.": "scaler",
+      "Build.why.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BuildDetail",
+    "properties": {
+      "BuildDetail": "object",
+      "BuildDetail.all_commit_details.CommitDetails": "ref",
+      "BuildDetail.compare.": "scaler",
+      "BuildDetail.job_name.": "scaler",
+      "BuildDetail.node.": "primitive",
+      "BuildDetail.previous_successful_build.PreviousBuild": "ref",
+      "BuildDetail.retries.": "scaler",
+      "BuildDetail.ssh_enabled.": "scaler",
+      "BuildDetail.timedout.": "scaler",
+      "BuildDetail.usage_queued_at.": "scaler",
+      "BuildDetail.user.User": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BuildParameters",
+    "properties": { "BuildParameters": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/BuildSummary",
+    "properties": {
+      "BuildSummary": "object",
+      "BuildSummary.added_at.": "scaler",
+      "BuildSummary.build_num.": "scaler",
+      "BuildSummary.outcome.Outcome": "ref",
+      "BuildSummary.pushed_at.": "scaler",
+      "BuildSummary.status.Status": "ref",
+      "BuildSummary.vcs_revision.Sha1": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Builds",
+    "properties": { "Builds": "array", "Builds.Build": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/CommitDetail",
+    "properties": {
+      "CommitDetail": "object",
+      "CommitDetail.author_date.": "scaler",
+      "CommitDetail.author_email.": "scaler",
+      "CommitDetail.author_login.": "scaler",
+      "CommitDetail.author_name.": "scaler",
+      "CommitDetail.body.": "scaler",
+      "CommitDetail.commit.Sha1": "ref",
+      "CommitDetail.commit_url.": "scaler",
+      "CommitDetail.committer_date.": "scaler",
+      "CommitDetail.committer_email.": "scaler",
+      "CommitDetail.committer_login.": "scaler",
+      "CommitDetail.committer_name.": "scaler",
+      "CommitDetail.subject.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CommitDetails",
+    "properties": {
+      "CommitDetails": "array",
+      "CommitDetails.CommitDetail": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Envvar",
+    "properties": {
+      "Envvar": "object",
+      "Envvar.name.": "scaler",
+      "Envvar.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Envvars",
+    "properties": { "Envvars": "array", "Envvars.Envvar": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Key",
+    "properties": {
+      "Key": "object",
+      "Key.fingerprint.": "scaler",
+      "Key.preferred.": "scaler",
+      "Key.public_key.": "scaler",
+      "Key.time.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Keys",
+    "properties": { "Keys": "array", "Keys.Key": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Lifecycle",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Outcome",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Parallel",
+    "properties": { "Parallel": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/PreviousBuild",
+    "properties": {
+      "PreviousBuild": "object",
+      "PreviousBuild.build_num.": "scaler",
+      "PreviousBuild.build_time_millis.": "scaler",
+      "PreviousBuild.status.Status": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Project",
+    "properties": {
+      "Project": "object",
+      "Project.aws.Aws": "ref",
+      "Project.branches.": "primitive",
+      "Project.campfire_notify_prefs.StringOrNull": "ref",
+      "Project.campfire_room.StringOrNull": "ref",
+      "Project.campfire_subdomain.StringOrNull": "ref",
+      "Project.campfire_token.StringOrNull": "ref",
+      "Project.compile.": "scaler",
+      "Project.default_branch.": "scaler",
+      "Project.dependencies.": "scaler",
+      "Project.extra.": "scaler",
+      "Project.feature_flags.": "object",
+      "Project.feature_flags..build-fork-prs.": "scaler",
+      "Project.feature_flags..fleet.": "scaler",
+      "Project.feature_flags..junit.": "scaler",
+      "Project.feature_flags..oss.": "scaler",
+      "Project.feature_flags..osx.": "scaler",
+      "Project.feature_flags..set-github-status.": "scaler",
+      "Project.feature_flags..trusty-beta.": "scaler",
+      "Project.flowdock_api_token.StringOrNull": "ref",
+      "Project.followed.": "scaler",
+      "Project.has_usable_key.": "scaler",
+      "Project.heroku_deploy_user.StringOrNull": "ref",
+      "Project.hipchat_api_token.StringOrNull": "ref",
+      "Project.hipchat_notify.StringOrNull": "ref",
+      "Project.hipchat_notify_prefs.": "scaler",
+      "Project.hipchat_room.StringOrNull": "ref",
+      "Project.irc_channel.StringOrNull": "ref",
+      "Project.irc_keyword.StringOrNull": "ref",
+      "Project.irc_notify_prefs.StringOrNull": "ref",
+      "Project.irc_password.StringOrNull": "ref",
+      "Project.irc_server.StringOrNull": "ref",
+      "Project.irc_username.StringOrNull": "ref",
+      "Project.language.": "scaler",
+      "Project.oss.": "scaler",
+      "Project.parallel.": "scaler",
+      "Project.reponame.": "scaler",
+      "Project.scopes.": "array",
+      "Project.scopes..Scope": "ref",
+      "Project.setup.": "scaler",
+      "Project.slack_api_token.StringOrNull": "ref",
+      "Project.slack_channel.StringOrNull": "ref",
+      "Project.slack_channel_override.StringOrNull": "ref",
+      "Project.slack_notify_prefs.StringOrNull": "ref",
+      "Project.slack_subdomain.StringOrNull": "ref",
+      "Project.slack_webhook_url.": "scaler",
+      "Project.ssh_keys.": "array",
+      "Project.ssh_keys..": "scaler",
+      "Project.test.": "scaler",
+      "Project.username.": "scaler",
+      "Project.vcs_type.": "scaler",
+      "Project.vcs_url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Projects",
+    "properties": { "Projects": "array", "Projects.Project": "ref" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Revision",
+    "properties": { "Revision": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Scope",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Sha1",
+    "properties": { "Sha1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Status",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/StringOrNull",
+    "properties": { "StringOrNull": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tag",
+    "properties": { "Tag": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tests",
+    "properties": {
+      "Tests": "object",
+      "Tests.tests.": "array",
+      "Tests.tests..": "object",
+      "Tests.tests...classname.": "scaler",
+      "Tests.tests...file.": "scaler",
+      "Tests.tests...message.": "scaler",
+      "Tests.tests...name.": "scaler",
+      "Tests.tests...result.Status": "ref",
+      "Tests.tests...run_time.": "scaler",
+      "Tests.tests...source.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/User",
+    "properties": {
+      "User": "object",
+      "User.admin.": "scaler",
+      "User.all_emails.": "array",
+      "User.all_emails..": "scaler",
+      "User.analytics_id.": "scaler",
+      "User.avatar_url.": "scaler",
+      "User.basic_email_prefs.": "scaler",
+      "User.bitbucket.": "scaler",
+      "User.bitbucket_authorized.": "scaler",
+      "User.containers.": "scaler",
+      "User.created_at.": "scaler",
+      "User.days_left_in_trial.": "scaler",
+      "User.dev_admin.": "scaler",
+      "User.enrolled_betas.": "array",
+      "User.enrolled_betas..": "scaler",
+      "User.github_id.": "scaler",
+      "User.github_oauth_scopes.": "array",
+      "User.github_oauth_scopes..": "scaler",
+      "User.gravatar_id.": "scaler",
+      "User.heroku_api_key.": "scaler",
+      "User.in_beta_program.": "scaler",
+      "User.login.": "scaler",
+      "User.name.": "scaler",
+      "User.organization_prefs.": "primitive",
+      "User.parallelism.": "scaler",
+      "User.plan.": "scaler",
+      "User.projects.": "primitive",
+      "User.pusher_id.": "scaler",
+      "User.selected_email.": "scaler",
+      "User.sign_in_count.": "scaler",
+      "User.trial_end.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/apikey",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

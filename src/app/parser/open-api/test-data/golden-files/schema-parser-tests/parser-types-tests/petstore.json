@@ -1,0 +1,112 @@
+[
+  {
+    "schemaRef": "#/components/schemas/Order",
+    "properties": {
+      "Order": "object",
+      "Order.id.": "scaler",
+      "Order.petId.": "scaler",
+      "Order.quantity.": "scaler",
+      "Order.shipDate.": "scaler",
+      "__undefined_0": "scaler",
+      "Order.complete.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Customer",
+    "properties": {
+      "Customer": "object",
+      "Customer.id.": "scaler",
+      "Customer.username.": "scaler",
+      "Customer.address.": "array",
+      "Customer.address..Address": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Address",
+    "properties": {
+      "Address": "object",
+      "Address.street.": "scaler",
+      "Address.city.": "scaler",
+      "Address.state.": "scaler",
+      "Address.zip.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Category",
+    "properties": {
+      "Category": "object",
+      "Category.id.": "scaler",
+      "Category.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/User",
+    "properties": {
+      "User": "object",
+      "User.id.": "scaler",
+      "User.username.": "scaler",
+      "User.firstName.": "scaler",
+      "User.lastName.": "scaler",
+      "User.email.": "scaler",
+      "User.password.": "scaler",
+      "User.phone.": "scaler",
+      "User.userStatus.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Tag",
+    "properties": {
+      "Tag": "object",
+      "Tag.id.": "scaler",
+      "Tag.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Pet",
+    "properties": {
+      "Pet": "object",
+      "Pet.id.": "scaler",
+      "Pet.name.": "scaler",
+      "Pet.category.Category": "ref",
+      "Pet.photoUrls.": "array",
+      "Pet.photoUrls..": "scaler",
+      "Pet.tags.": "array",
+      "Pet.tags..Tag": "ref",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ApiResponse",
+    "properties": {
+      "ApiResponse": "object",
+      "ApiResponse.code.": "scaler",
+      "ApiResponse.type.": "scaler",
+      "ApiResponse.message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/Pet",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/UserArray",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "array",
+      "__undefined_3": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/petstore_auth",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/api_key",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

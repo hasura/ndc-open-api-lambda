@@ -1,0 +1,1671 @@
+[
+  {
+    "schemaRef": "#/components/requestBodies/tag_key",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/ips_pool-key",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/domain",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/id",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/name",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/api_key",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/notify_email",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/ip",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/ip_domain",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/metadata_template",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/sender_address",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/subaccount_info",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/url_key",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/template",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/webhook_key",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/requestBodies/email",
+    "properties": {
+      "__undefined_0": "content",
+      "__undefined_1": "schema",
+      "__undefined_2": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/api_key",
+    "properties": { "api_key": "object", "api_key.key.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/domain",
+    "properties": {
+      "domain": "object",
+      "domain.domain.": "scaler",
+      "domain.key.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/email",
+    "properties": {
+      "email": "object",
+      "email.email.": "scaler",
+      "email.key.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/exports_activity",
+    "properties": {
+      "exports_activity": "object",
+      "exports_activity.api_keys.": "array",
+      "exports_activity.api_keys..": "scaler",
+      "exports_activity.date_from.": "scaler",
+      "exports_activity.date_to.": "scaler",
+      "exports_activity.key.": "scaler",
+      "exports_activity.notify_email.": "scaler",
+      "exports_activity.senders.": "array",
+      "exports_activity.senders..": "scaler",
+      "exports_activity.states.": "array",
+      "exports_activity.states..": "scaler",
+      "exports_activity.tags.": "array",
+      "exports_activity.tags..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/exports_info-response",
+    "properties": {
+      "exports_info-response": "object",
+      "exports_info-response.created_at.": "scaler",
+      "exports_info-response.finished_at.": "scaler",
+      "exports_info-response.id.": "scaler",
+      "exports_info-response.result_url.": "scaler",
+      "exports_info-response.state.": "scaler",
+      "exports_info-response.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/exports_list-response",
+    "properties": {
+      "exports_list-response": "array",
+      "exports_list-response.": "object",
+      "exports_list-response..created_at.": "scaler",
+      "exports_list-response..finished_at.": "scaler",
+      "exports_list-response..id.": "scaler",
+      "exports_list-response..result_url.": "scaler",
+      "exports_list-response..state.": "scaler",
+      "exports_list-response..type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/exports_satus",
+    "properties": {
+      "exports_satus": "object",
+      "exports_satus.created_at.": "scaler",
+      "exports_satus.finished_at.": "primitive",
+      "exports_satus.id.": "scaler",
+      "exports_satus.result_url.": "primitive",
+      "exports_satus.state.": "scaler",
+      "exports_satus.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/id",
+    "properties": { "id": "object", "id.id.": "scaler", "id.key.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/inbound_add-route",
+    "properties": {
+      "inbound_add-route": "object",
+      "inbound_add-route.domain.": "scaler",
+      "inbound_add-route.key.": "scaler",
+      "inbound_add-route.pattern.": "scaler",
+      "inbound_add-route.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/inbound_domains-response",
+    "properties": {
+      "inbound_domains-response": "array",
+      "inbound_domains-response.": "object",
+      "inbound_domains-response..created_at.": "scaler",
+      "inbound_domains-response..domain.": "scaler",
+      "inbound_domains-response..valid_mx.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/inbound_info",
+    "properties": {
+      "inbound_info": "object",
+      "inbound_info.created_at.": "scaler",
+      "inbound_info.domain.": "scaler",
+      "inbound_info.valid_mx.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/inbound_routes-response",
+    "properties": {
+      "inbound_routes-response": "array",
+      "inbound_routes-response.": "object",
+      "inbound_routes-response..id.": "scaler",
+      "inbound_routes-response..pattern.": "scaler",
+      "inbound_routes-response..url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/inbound_send-raw",
+    "properties": {
+      "inbound_send-raw": "object",
+      "inbound_send-raw.client_address.": "scaler",
+      "inbound_send-raw.helo.": "scaler",
+      "inbound_send-raw.key.": "scaler",
+      "inbound_send-raw.mail_from.": "scaler",
+      "inbound_send-raw.raw_message.": "scaler",
+      "inbound_send-raw.to.": "array",
+      "inbound_send-raw.to..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/inbound_send-raw-response",
+    "properties": {
+      "inbound_send-raw-response": "array",
+      "inbound_send-raw-response.": "object",
+      "inbound_send-raw-response..email.": "scaler",
+      "inbound_send-raw-response..pattern.": "scaler",
+      "inbound_send-raw-response..url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/inbound_update-route",
+    "properties": {
+      "inbound_update-route": "object",
+      "inbound_update-route.id.": "scaler",
+      "inbound_update-route.key.": "scaler",
+      "inbound_update-route.pattern.": "scaler",
+      "inbound_update-route.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ip",
+    "properties": { "ip": "object", "ip.ip.": "scaler", "ip.key.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ip_domain",
+    "properties": {
+      "ip_domain": "object",
+      "ip_domain.domain.": "scaler",
+      "ip_domain.ip.": "scaler",
+      "ip_domain.key.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ip_info",
+    "properties": {
+      "ip_info": "object",
+      "ip_info.created_at.": "scaler",
+      "ip_info.custom_dns.": "object",
+      "ip_info.custom_dns..enabled.": "scaler",
+      "ip_info.custom_dns..error.": "scaler",
+      "ip_info.custom_dns..valid.": "scaler",
+      "ip_info.domain.": "scaler",
+      "ip_info.ip.": "scaler",
+      "ip_info.pool.": "scaler",
+      "ip_info.warmup.": "object",
+      "ip_info.warmup..end_at.": "scaler",
+      "ip_info.warmup..start_at.": "scaler",
+      "ip_info.warmup..warming_up.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_check-custom-dns-response",
+    "properties": {
+      "ips_check-custom-dns-response": "object",
+      "ips_check-custom-dns-response.error.": "scaler",
+      "ips_check-custom-dns-response.valid.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_delete-pool-response",
+    "properties": {
+      "ips_delete-pool-response": "object",
+      "ips_delete-pool-response.deleted.": "scaler",
+      "ips_delete-pool-response.pool.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_delete-response",
+    "properties": {
+      "ips_delete-response": "object",
+      "ips_delete-response.deleted.": "scaler",
+      "ips_delete-response.ip.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_list-pools-response",
+    "properties": {
+      "ips_list-pools-response": "array",
+      "ips_list-pools-response.": "object",
+      "ips_list-pools-response..created_at.": "scaler",
+      "ips_list-pools-response..ips.": "array",
+      "ips_list-pools-response..ips..": "object",
+      "ips_list-pools-response..ips...created_at.": "scaler",
+      "ips_list-pools-response..ips...custom_dns.": "object",
+      "ips_list-pools-response..ips...custom_dns..enabled.": "scaler",
+      "ips_list-pools-response..ips...custom_dns..error.": "scaler",
+      "ips_list-pools-response..ips...custom_dns..valid.": "scaler",
+      "ips_list-pools-response..ips...domain.": "scaler",
+      "ips_list-pools-response..ips...ip.": "scaler",
+      "ips_list-pools-response..ips...pool.": "scaler",
+      "ips_list-pools-response..ips...warmup.": "object",
+      "ips_list-pools-response..ips...warmup..end_at.": "scaler",
+      "ips_list-pools-response..ips...warmup..start_at.": "scaler",
+      "ips_list-pools-response..ips...warmup..warming_up.": "scaler",
+      "ips_list-pools-response..name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_list-response",
+    "properties": {
+      "ips_list-response": "array",
+      "ips_list-response.": "object",
+      "ips_list-response..created_at.": "scaler",
+      "ips_list-response..custom_dns.": "object",
+      "ips_list-response..custom_dns..enabled.": "scaler",
+      "ips_list-response..custom_dns..error.": "scaler",
+      "ips_list-response..custom_dns..valid.": "scaler",
+      "ips_list-response..domain.": "scaler",
+      "ips_list-response..ip.": "scaler",
+      "ips_list-response..pool.": "scaler",
+      "ips_list-response..warmup.": "object",
+      "ips_list-response..warmup..end_at.": "scaler",
+      "ips_list-response..warmup..start_at.": "scaler",
+      "ips_list-response..warmup..warming_up.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_pool",
+    "properties": {
+      "ips_pool": "object",
+      "ips_pool.created_at.": "scaler",
+      "ips_pool.ips.": "array",
+      "ips_pool.ips..": "object",
+      "ips_pool.ips...created_at.": "scaler",
+      "ips_pool.ips...custom_dns.": "object",
+      "ips_pool.ips...custom_dns..enabled.": "scaler",
+      "ips_pool.ips...custom_dns..error.": "scaler",
+      "ips_pool.ips...custom_dns..valid.": "scaler",
+      "ips_pool.ips...domain.": "scaler",
+      "ips_pool.ips...ip.": "scaler",
+      "ips_pool.ips...pool.": "scaler",
+      "ips_pool.ips...warmup.": "object",
+      "ips_pool.ips...warmup..end_at.": "scaler",
+      "ips_pool.ips...warmup..start_at.": "scaler",
+      "ips_pool.ips...warmup..warming_up.": "scaler",
+      "ips_pool.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_pool-key",
+    "properties": {
+      "ips_pool-key": "object",
+      "ips_pool-key.key.": "scaler",
+      "ips_pool-key.pool.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_provision",
+    "properties": {
+      "ips_provision": "object",
+      "ips_provision.key.": "scaler",
+      "ips_provision.pool.": "scaler",
+      "ips_provision.warmup.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_provision-response",
+    "properties": {
+      "ips_provision-response": "object",
+      "ips_provision-response.requested_at.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ips_set-pool",
+    "properties": {
+      "ips_set-pool": "object",
+      "ips_set-pool.create_pool.": "scaler",
+      "ips_set-pool.ip.": "scaler",
+      "ips_set-pool.key.": "scaler",
+      "ips_set-pool.pool.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/message_send-status",
+    "properties": {
+      "message_send-status": "array",
+      "message_send-status.": "object",
+      "message_send-status.._id.": "scaler",
+      "message_send-status..email.": "scaler",
+      "message_send-status..reject_reason.": "scaler",
+      "message_send-status..status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_cancel-scheduled",
+    "properties": {
+      "messages_cancel-scheduled": "object",
+      "messages_cancel-scheduled.id.": "primitive",
+      "messages_cancel-scheduled.key.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_content-response",
+    "properties": {
+      "messages_content-response": "object",
+      "messages_content-response._id.": "scaler",
+      "messages_content-response.attachments.": "array",
+      "messages_content-response.attachments..": "object",
+      "messages_content-response.attachments...content.": "scaler",
+      "messages_content-response.attachments...name.": "scaler",
+      "messages_content-response.attachments...type.": "scaler",
+      "messages_content-response.from_email.": "scaler",
+      "messages_content-response.from_name.": "scaler",
+      "messages_content-response.headers.": "object",
+      "messages_content-response.headers..Reply-To.": "scaler",
+      "messages_content-response.html.": "scaler",
+      "messages_content-response.subject.": "scaler",
+      "messages_content-response.tags.": "array",
+      "messages_content-response.tags..": "scaler",
+      "messages_content-response.text.": "scaler",
+      "messages_content-response.to.": "object",
+      "messages_content-response.to..email.": "scaler",
+      "messages_content-response.to..name.": "scaler",
+      "messages_content-response.ts.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_info-response",
+    "properties": {
+      "messages_info-response": "object",
+      "messages_info-response._id.": "scaler",
+      "messages_info-response.clicks.": "scaler",
+      "messages_info-response.clicks_detail.": "array",
+      "messages_info-response.clicks_detail..": "object",
+      "messages_info-response.clicks_detail...ip.": "scaler",
+      "messages_info-response.clicks_detail...location.": "scaler",
+      "messages_info-response.clicks_detail...ts.": "scaler",
+      "messages_info-response.clicks_detail...ua.": "scaler",
+      "messages_info-response.clicks_detail...url.": "scaler",
+      "messages_info-response.email.": "scaler",
+      "messages_info-response.metadata.": "object",
+      "messages_info-response.metadata..user_id.": "scaler",
+      "messages_info-response.metadata..website.": "scaler",
+      "messages_info-response.opens.": "scaler",
+      "messages_info-response.opens_detail.": "array",
+      "messages_info-response.opens_detail..": "object",
+      "messages_info-response.opens_detail...ip.": "scaler",
+      "messages_info-response.opens_detail...location.": "scaler",
+      "messages_info-response.opens_detail...ts.": "scaler",
+      "messages_info-response.opens_detail...ua.": "scaler",
+      "messages_info-response.sender.": "scaler",
+      "messages_info-response.smtp_events.": "array",
+      "messages_info-response.smtp_events..": "object",
+      "messages_info-response.smtp_events...diag.": "scaler",
+      "messages_info-response.smtp_events...ts.": "scaler",
+      "messages_info-response.smtp_events...type.": "scaler",
+      "messages_info-response.state.": "scaler",
+      "messages_info-response.subject.": "scaler",
+      "messages_info-response.tags.": "array",
+      "messages_info-response.tags..": "scaler",
+      "messages_info-response.template.": "scaler",
+      "messages_info-response.ts.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_list-scheduled",
+    "properties": {
+      "messages_list-scheduled": "object",
+      "messages_list-scheduled.key.": "scaler",
+      "messages_list-scheduled.to.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_list-scheduled-response",
+    "properties": {
+      "messages_list-scheduled-response": "array",
+      "messages_list-scheduled-response.": "object",
+      "messages_list-scheduled-response.._id.": "scaler",
+      "messages_list-scheduled-response..created_at.": "scaler",
+      "messages_list-scheduled-response..from_email.": "scaler",
+      "messages_list-scheduled-response..send_at.": "scaler",
+      "messages_list-scheduled-response..subject.": "scaler",
+      "messages_list-scheduled-response..to.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_parse",
+    "properties": {
+      "messages_parse": "object",
+      "messages_parse.key.": "scaler",
+      "messages_parse.raw_message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_parse-response",
+    "properties": {
+      "messages_parse-response": "object",
+      "messages_parse-response.attachments.": "array",
+      "messages_parse-response.attachments..": "object",
+      "messages_parse-response.attachments...binary.": "scaler",
+      "messages_parse-response.attachments...content.": "scaler",
+      "messages_parse-response.attachments...name.": "scaler",
+      "messages_parse-response.attachments...type.": "scaler",
+      "messages_parse-response.from_email.": "scaler",
+      "messages_parse-response.from_name.": "scaler",
+      "messages_parse-response.headers.": "object",
+      "messages_parse-response.headers..Reply-To.": "scaler",
+      "messages_parse-response.html.": "scaler",
+      "messages_parse-response.images.": "array",
+      "messages_parse-response.images..": "object",
+      "messages_parse-response.images...content.": "scaler",
+      "messages_parse-response.images...name.": "scaler",
+      "messages_parse-response.images...type.": "scaler",
+      "messages_parse-response.subject.": "scaler",
+      "messages_parse-response.text.": "scaler",
+      "messages_parse-response.to.": "array",
+      "messages_parse-response.to..": "object",
+      "messages_parse-response.to...email.": "scaler",
+      "messages_parse-response.to...name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_reschedule",
+    "properties": {
+      "messages_reschedule": "object",
+      "messages_reschedule.id.": "scaler",
+      "messages_reschedule.key.": "scaler",
+      "messages_reschedule.send_at.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_search",
+    "properties": {
+      "messages_search": "object",
+      "messages_search.api_keys.": "array",
+      "messages_search.api_keys..": "scaler",
+      "messages_search.date_from.": "scaler",
+      "messages_search.date_to.": "scaler",
+      "messages_search.key.": "scaler",
+      "messages_search.limit.": "scaler",
+      "messages_search.query.": "scaler",
+      "messages_search.senders.": "array",
+      "messages_search.senders..": "scaler",
+      "messages_search.tags.": "array",
+      "messages_search.tags..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_search-response",
+    "properties": {
+      "messages_search-response": "array",
+      "messages_search-response.": "object",
+      "messages_search-response.._id.": "scaler",
+      "messages_search-response..clicks.": "scaler",
+      "messages_search-response..clicks_detail.": "array",
+      "messages_search-response..clicks_detail..": "object",
+      "messages_search-response..clicks_detail...ip.": "scaler",
+      "messages_search-response..clicks_detail...location.": "scaler",
+      "messages_search-response..clicks_detail...ts.": "scaler",
+      "messages_search-response..clicks_detail...ua.": "scaler",
+      "messages_search-response..clicks_detail...url.": "scaler",
+      "messages_search-response..email.": "scaler",
+      "messages_search-response..metadata.": "object",
+      "messages_search-response..metadata..user_id.": "scaler",
+      "messages_search-response..metadata..website.": "scaler",
+      "messages_search-response..opens.": "scaler",
+      "messages_search-response..opens_detail.": "array",
+      "messages_search-response..opens_detail..": "object",
+      "messages_search-response..opens_detail...ip.": "scaler",
+      "messages_search-response..opens_detail...location.": "scaler",
+      "messages_search-response..opens_detail...ts.": "scaler",
+      "messages_search-response..opens_detail...ua.": "scaler",
+      "messages_search-response..sender.": "scaler",
+      "messages_search-response..state.": "scaler",
+      "messages_search-response..subject.": "scaler",
+      "messages_search-response..tags.": "array",
+      "messages_search-response..tags..": "scaler",
+      "messages_search-response..template.": "scaler",
+      "messages_search-response..ts.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_search-time-series",
+    "properties": {
+      "messages_search-time-series": "object",
+      "messages_search-time-series.date_from.": "scaler",
+      "messages_search-time-series.date_to.": "scaler",
+      "messages_search-time-series.key.": "scaler",
+      "messages_search-time-series.query.": "scaler",
+      "messages_search-time-series.senders.": "array",
+      "messages_search-time-series.senders..": "scaler",
+      "messages_search-time-series.tags.": "array",
+      "messages_search-time-series.tags..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_send",
+    "properties": {
+      "messages_send": "object",
+      "messages_send.async.": "scaler",
+      "messages_send.ip_pool.": "scaler",
+      "messages_send.key.": "scaler",
+      "messages_send.message.": "object",
+      "messages_send.message..attachments.": "array",
+      "messages_send.message..attachments..": "object",
+      "messages_send.message..attachments...content.": "scaler",
+      "messages_send.message..attachments...name.": "scaler",
+      "messages_send.message..attachments...type.": "scaler",
+      "messages_send.message..auto_html.": "primitive",
+      "messages_send.message..auto_text.": "primitive",
+      "messages_send.message..bcc_address.": "scaler",
+      "messages_send.message..from_email.": "scaler",
+      "messages_send.message..from_name.": "scaler",
+      "messages_send.message..global_merge_vars.": "array",
+      "messages_send.message..global_merge_vars..": "object",
+      "messages_send.message..global_merge_vars...content.": "scaler",
+      "messages_send.message..global_merge_vars...name.": "scaler",
+      "messages_send.message..google_analytics_campaign.": "scaler",
+      "messages_send.message..google_analytics_domains.": "array",
+      "messages_send.message..google_analytics_domains..": "scaler",
+      "messages_send.message..headers.": "object",
+      "messages_send.message..headers..Reply-To.": "scaler",
+      "messages_send.message..html.": "scaler",
+      "messages_send.message..images.": "array",
+      "messages_send.message..images..": "object",
+      "messages_send.message..images...content.": "scaler",
+      "messages_send.message..images...name.": "scaler",
+      "messages_send.message..images...type.": "scaler",
+      "messages_send.message..important.": "scaler",
+      "messages_send.message..inline_css.": "primitive",
+      "messages_send.message..merge.": "scaler",
+      "messages_send.message..merge_vars.": "array",
+      "messages_send.message..merge_vars..": "object",
+      "messages_send.message..merge_vars...rcpt.": "scaler",
+      "messages_send.message..merge_vars...vars.": "array",
+      "messages_send.message..merge_vars...vars..": "object",
+      "messages_send.message..merge_vars...vars...content.": "scaler",
+      "messages_send.message..merge_vars...vars...name.": "scaler",
+      "messages_send.message..metadata.": "object",
+      "messages_send.message..metadata..website.": "scaler",
+      "messages_send.message..preserve_recipients.": "primitive",
+      "messages_send.message..recipient_metadata.": "array",
+      "messages_send.message..recipient_metadata..": "object",
+      "messages_send.message..recipient_metadata...rcpt.": "scaler",
+      "messages_send.message..recipient_metadata...values.": "object",
+      "messages_send.message..recipient_metadata...values..user_id.": "scaler",
+      "messages_send.message..return_path_domain.": "primitive",
+      "messages_send.message..signing_domain.": "primitive",
+      "messages_send.message..subaccount.": "scaler",
+      "messages_send.message..subject.": "scaler",
+      "messages_send.message..tags.": "array",
+      "messages_send.message..tags..": "scaler",
+      "messages_send.message..text.": "scaler",
+      "messages_send.message..to.": "array",
+      "messages_send.message..to..": "object",
+      "messages_send.message..to...email.": "scaler",
+      "messages_send.message..to...name.": "scaler",
+      "messages_send.message..to...type.": "scaler",
+      "messages_send.message..track_clicks.": "primitive",
+      "messages_send.message..track_opens.": "primitive",
+      "messages_send.message..tracking_domain.": "primitive",
+      "messages_send.message..url_strip_qs.": "primitive",
+      "messages_send.message..view_content_link.": "primitive",
+      "messages_send.send_at.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_send-raw",
+    "properties": {
+      "messages_send-raw": "object",
+      "messages_send-raw.async.": "scaler",
+      "messages_send-raw.from_email.": "scaler",
+      "messages_send-raw.from_name.": "scaler",
+      "messages_send-raw.ip_pool.": "scaler",
+      "messages_send-raw.key.": "scaler",
+      "messages_send-raw.raw_message.": "scaler",
+      "messages_send-raw.return_path_domain.": "primitive",
+      "messages_send-raw.send_at.": "scaler",
+      "messages_send-raw.to.": "array",
+      "messages_send-raw.to..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/messages_send-template",
+    "properties": {
+      "messages_send-template": "object",
+      "messages_send-template.async.": "scaler",
+      "messages_send-template.ip_pool.": "scaler",
+      "messages_send-template.key.": "scaler",
+      "messages_send-template.message.": "object",
+      "messages_send-template.message..attachments.": "array",
+      "messages_send-template.message..attachments..": "object",
+      "messages_send-template.message..attachments...content.": "scaler",
+      "messages_send-template.message..attachments...name.": "scaler",
+      "messages_send-template.message..attachments...type.": "scaler",
+      "messages_send-template.message..auto_html.": "primitive",
+      "messages_send-template.message..auto_text.": "primitive",
+      "messages_send-template.message..bcc_address.": "scaler",
+      "messages_send-template.message..from_email.": "scaler",
+      "messages_send-template.message..from_name.": "scaler",
+      "messages_send-template.message..global_merge_vars.": "array",
+      "messages_send-template.message..global_merge_vars..": "object",
+      "messages_send-template.message..global_merge_vars...content.": "scaler",
+      "messages_send-template.message..global_merge_vars...name.": "scaler",
+      "messages_send-template.message..google_analytics_campaign.": "scaler",
+      "messages_send-template.message..google_analytics_domains.": "array",
+      "messages_send-template.message..google_analytics_domains..": "scaler",
+      "messages_send-template.message..headers.": "object",
+      "messages_send-template.message..headers..Reply-To.": "scaler",
+      "messages_send-template.message..html.": "scaler",
+      "messages_send-template.message..images.": "array",
+      "messages_send-template.message..images..": "object",
+      "messages_send-template.message..images...content.": "scaler",
+      "messages_send-template.message..images...name.": "scaler",
+      "messages_send-template.message..images...type.": "scaler",
+      "messages_send-template.message..important.": "scaler",
+      "messages_send-template.message..inline_css.": "primitive",
+      "messages_send-template.message..merge.": "scaler",
+      "messages_send-template.message..merge_vars.": "array",
+      "messages_send-template.message..merge_vars..": "object",
+      "messages_send-template.message..merge_vars...rcpt.": "scaler",
+      "messages_send-template.message..merge_vars...vars.": "array",
+      "messages_send-template.message..merge_vars...vars..": "object",
+      "messages_send-template.message..merge_vars...vars...content.": "scaler",
+      "messages_send-template.message..merge_vars...vars...name.": "scaler",
+      "messages_send-template.message..metadata.": "object",
+      "messages_send-template.message..metadata..website.": "scaler",
+      "messages_send-template.message..preserve_recipients.": "primitive",
+      "messages_send-template.message..recipient_metadata.": "array",
+      "messages_send-template.message..recipient_metadata..": "object",
+      "messages_send-template.message..recipient_metadata...rcpt.": "scaler",
+      "messages_send-template.message..recipient_metadata...values.": "object",
+      "messages_send-template.message..recipient_metadata...values..user_id.": "scaler",
+      "messages_send-template.message..return_path_domain.": "primitive",
+      "messages_send-template.message..signing_domain.": "primitive",
+      "messages_send-template.message..subaccount.": "scaler",
+      "messages_send-template.message..subject.": "scaler",
+      "messages_send-template.message..tags.": "array",
+      "messages_send-template.message..tags..": "scaler",
+      "messages_send-template.message..text.": "scaler",
+      "messages_send-template.message..to.": "array",
+      "messages_send-template.message..to..": "object",
+      "messages_send-template.message..to...email.": "scaler",
+      "messages_send-template.message..to...name.": "scaler",
+      "messages_send-template.message..to...type.": "scaler",
+      "messages_send-template.message..track_clicks.": "primitive",
+      "messages_send-template.message..track_opens.": "primitive",
+      "messages_send-template.message..tracking_domain.": "primitive",
+      "messages_send-template.message..url_strip_qs.": "primitive",
+      "messages_send-template.message..view_content_link.": "primitive",
+      "messages_send-template.send_at.": "scaler",
+      "messages_send-template.template_content.": "array",
+      "messages_send-template.template_content..": "object",
+      "messages_send-template.template_content...content.": "scaler",
+      "messages_send-template.template_content...name.": "scaler",
+      "messages_send-template.template_name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/metadata_info",
+    "properties": {
+      "metadata_info": "object",
+      "metadata_info.name.": "scaler",
+      "metadata_info.state.": "scaler",
+      "metadata_info.view_template.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/metadata_list-response",
+    "properties": {
+      "metadata_list-response": "array",
+      "metadata_list-response.": "object",
+      "metadata_list-response..name.": "scaler",
+      "metadata_list-response..state.": "scaler",
+      "metadata_list-response..view_template.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/metadata_template",
+    "properties": {
+      "metadata_template": "object",
+      "metadata_template.key.": "scaler",
+      "metadata_template.name.": "scaler",
+      "metadata_template.view_template.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/name",
+    "properties": {
+      "name": "object",
+      "name.key.": "scaler",
+      "name.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/notify_email",
+    "properties": {
+      "notify_email": "object",
+      "notify_email.key.": "scaler",
+      "notify_email.notify_email.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rejects_add",
+    "properties": {
+      "rejects_add": "object",
+      "rejects_add.comment.": "scaler",
+      "rejects_add.email.": "scaler",
+      "rejects_add.key.": "scaler",
+      "rejects_add.subaccount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rejects_add-response",
+    "properties": {
+      "rejects_add-response": "object",
+      "rejects_add-response.added.": "scaler",
+      "rejects_add-response.email.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rejects_delete",
+    "properties": {
+      "rejects_delete": "object",
+      "rejects_delete.email.": "scaler",
+      "rejects_delete.key.": "scaler",
+      "rejects_delete.subaccount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rejects_delete-response",
+    "properties": {
+      "rejects_delete-response": "object",
+      "rejects_delete-response.deleted.": "scaler",
+      "rejects_delete-response.email.": "scaler",
+      "rejects_delete-response.subaccount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rejects_list",
+    "properties": {
+      "rejects_list": "object",
+      "rejects_list.email.": "scaler",
+      "rejects_list.include_expired.": "scaler",
+      "rejects_list.key.": "scaler",
+      "rejects_list.subaccount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rejects_list-response",
+    "properties": {
+      "rejects_list-response": "array",
+      "rejects_list-response.": "object",
+      "rejects_list-response..created_at.": "scaler",
+      "rejects_list-response..detail.": "scaler",
+      "rejects_list-response..email.": "scaler",
+      "rejects_list-response..expired.": "scaler",
+      "rejects_list-response..expires_at.": "scaler",
+      "rejects_list-response..last_event_at.": "scaler",
+      "rejects_list-response..reason.": "scaler",
+      "rejects_list-response..sender.": "object",
+      "rejects_list-response..sender..address.": "scaler",
+      "rejects_list-response..sender..clicks.": "scaler",
+      "rejects_list-response..sender..complaints.": "scaler",
+      "rejects_list-response..sender..created_at.": "scaler",
+      "rejects_list-response..sender..hard_bounces.": "scaler",
+      "rejects_list-response..sender..opens.": "scaler",
+      "rejects_list-response..sender..rejects.": "scaler",
+      "rejects_list-response..sender..sent.": "scaler",
+      "rejects_list-response..sender..soft_bounces.": "scaler",
+      "rejects_list-response..sender..unique_clicks.": "scaler",
+      "rejects_list-response..sender..unique_opens.": "scaler",
+      "rejects_list-response..sender..unsubs.": "scaler",
+      "rejects_list-response..subaccount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/route",
+    "properties": {
+      "route": "object",
+      "route.id.": "scaler",
+      "route.pattern.": "scaler",
+      "route.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/schedulingchange_info",
+    "properties": {
+      "schedulingchange_info": "object",
+      "schedulingchange_info._id.": "scaler",
+      "schedulingchange_info.created_at.": "scaler",
+      "schedulingchange_info.from_email.": "scaler",
+      "schedulingchange_info.send_at.": "scaler",
+      "schedulingchange_info.subject.": "scaler",
+      "schedulingchange_info.to.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/sender_address",
+    "properties": {
+      "sender_address": "object",
+      "sender_address.address.": "scaler",
+      "sender_address.key.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/sender_domain_info",
+    "properties": {
+      "sender_domain_info": "object",
+      "sender_domain_info.created_at.": "scaler",
+      "sender_domain_info.dkim.": "object",
+      "sender_domain_info.dkim..error.": "scaler",
+      "sender_domain_info.dkim..valid.": "scaler",
+      "sender_domain_info.dkim..valid_after.": "scaler",
+      "sender_domain_info.domain.": "scaler",
+      "sender_domain_info.last_tested_at.": "scaler",
+      "sender_domain_info.spf.": "object",
+      "sender_domain_info.spf..error.": "scaler",
+      "sender_domain_info.spf..valid.": "scaler",
+      "sender_domain_info.spf..valid_after.": "scaler",
+      "sender_domain_info.valid_signing.": "scaler",
+      "sender_domain_info.verified_at.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/senders",
+    "properties": {
+      "senders": "array",
+      "senders.": "object",
+      "senders..address.": "scaler",
+      "senders..clicks.": "scaler",
+      "senders..complaints.": "scaler",
+      "senders..created_at.": "scaler",
+      "senders..hard_bounces.": "scaler",
+      "senders..opens.": "scaler",
+      "senders..rejects.": "scaler",
+      "senders..sent.": "scaler",
+      "senders..soft_bounces.": "scaler",
+      "senders..unique_clicks.": "scaler",
+      "senders..unique_opens.": "scaler",
+      "senders..unsubs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/senders_domains-response",
+    "properties": {
+      "senders_domains-response": "array",
+      "senders_domains-response.": "object",
+      "senders_domains-response..created_at.": "scaler",
+      "senders_domains-response..dkim.": "object",
+      "senders_domains-response..dkim..error.": "scaler",
+      "senders_domains-response..dkim..valid.": "scaler",
+      "senders_domains-response..dkim..valid_after.": "scaler",
+      "senders_domains-response..domain.": "scaler",
+      "senders_domains-response..last_tested_at.": "scaler",
+      "senders_domains-response..spf.": "object",
+      "senders_domains-response..spf..error.": "scaler",
+      "senders_domains-response..spf..valid.": "scaler",
+      "senders_domains-response..spf..valid_after.": "scaler",
+      "senders_domains-response..valid_signing.": "scaler",
+      "senders_domains-response..verified_at.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/senders_info-response",
+    "properties": {
+      "senders_info-response": "object",
+      "senders_info-response.address.": "scaler",
+      "senders_info-response.clicks.": "scaler",
+      "senders_info-response.complaints.": "scaler",
+      "senders_info-response.created_at.": "scaler",
+      "senders_info-response.hard_bounces.": "scaler",
+      "senders_info-response.opens.": "scaler",
+      "senders_info-response.rejects.": "scaler",
+      "senders_info-response.sent.": "scaler",
+      "senders_info-response.soft_bounces.": "scaler",
+      "senders_info-response.stats.": "object",
+      "senders_info-response.stats..last_30_days.": "object",
+      "senders_info-response.stats..last_30_days..clicks.": "scaler",
+      "senders_info-response.stats..last_30_days..complaints.": "scaler",
+      "senders_info-response.stats..last_30_days..hard_bounces.": "scaler",
+      "senders_info-response.stats..last_30_days..opens.": "scaler",
+      "senders_info-response.stats..last_30_days..rejects.": "scaler",
+      "senders_info-response.stats..last_30_days..sent.": "scaler",
+      "senders_info-response.stats..last_30_days..soft_bounces.": "scaler",
+      "senders_info-response.stats..last_30_days..unique_clicks.": "scaler",
+      "senders_info-response.stats..last_30_days..unique_opens.": "scaler",
+      "senders_info-response.stats..last_30_days..unsubs.": "scaler",
+      "senders_info-response.stats..last_60_days.": "object",
+      "senders_info-response.stats..last_60_days..clicks.": "scaler",
+      "senders_info-response.stats..last_60_days..complaints.": "scaler",
+      "senders_info-response.stats..last_60_days..hard_bounces.": "scaler",
+      "senders_info-response.stats..last_60_days..opens.": "scaler",
+      "senders_info-response.stats..last_60_days..rejects.": "scaler",
+      "senders_info-response.stats..last_60_days..sent.": "scaler",
+      "senders_info-response.stats..last_60_days..soft_bounces.": "scaler",
+      "senders_info-response.stats..last_60_days..unique_clicks.": "scaler",
+      "senders_info-response.stats..last_60_days..unique_opens.": "scaler",
+      "senders_info-response.stats..last_60_days..unsubs.": "scaler",
+      "senders_info-response.stats..last_7_days.": "object",
+      "senders_info-response.stats..last_7_days..clicks.": "scaler",
+      "senders_info-response.stats..last_7_days..complaints.": "scaler",
+      "senders_info-response.stats..last_7_days..hard_bounces.": "scaler",
+      "senders_info-response.stats..last_7_days..opens.": "scaler",
+      "senders_info-response.stats..last_7_days..rejects.": "scaler",
+      "senders_info-response.stats..last_7_days..sent.": "scaler",
+      "senders_info-response.stats..last_7_days..soft_bounces.": "scaler",
+      "senders_info-response.stats..last_7_days..unique_clicks.": "scaler",
+      "senders_info-response.stats..last_7_days..unique_opens.": "scaler",
+      "senders_info-response.stats..last_7_days..unsubs.": "scaler",
+      "senders_info-response.stats..last_90_days.": "object",
+      "senders_info-response.stats..last_90_days..clicks.": "scaler",
+      "senders_info-response.stats..last_90_days..complaints.": "scaler",
+      "senders_info-response.stats..last_90_days..hard_bounces.": "scaler",
+      "senders_info-response.stats..last_90_days..opens.": "scaler",
+      "senders_info-response.stats..last_90_days..rejects.": "scaler",
+      "senders_info-response.stats..last_90_days..sent.": "scaler",
+      "senders_info-response.stats..last_90_days..soft_bounces.": "scaler",
+      "senders_info-response.stats..last_90_days..unique_clicks.": "scaler",
+      "senders_info-response.stats..last_90_days..unique_opens.": "scaler",
+      "senders_info-response.stats..last_90_days..unsubs.": "scaler",
+      "senders_info-response.stats..today.": "object",
+      "senders_info-response.stats..today..clicks.": "scaler",
+      "senders_info-response.stats..today..complaints.": "scaler",
+      "senders_info-response.stats..today..hard_bounces.": "scaler",
+      "senders_info-response.stats..today..opens.": "scaler",
+      "senders_info-response.stats..today..rejects.": "scaler",
+      "senders_info-response.stats..today..sent.": "scaler",
+      "senders_info-response.stats..today..soft_bounces.": "scaler",
+      "senders_info-response.stats..today..unique_clicks.": "scaler",
+      "senders_info-response.stats..today..unique_opens.": "scaler",
+      "senders_info-response.stats..today..unsubs.": "scaler",
+      "senders_info-response.unsubs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/senders_verify-domain",
+    "properties": {
+      "senders_verify-domain": "object",
+      "senders_verify-domain.domain.": "scaler",
+      "senders_verify-domain.key.": "scaler",
+      "senders_verify-domain.mailbox.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/senders_verify-domain-response",
+    "properties": {
+      "senders_verify-domain-response": "object",
+      "senders_verify-domain-response.domain.": "scaler",
+      "senders_verify-domain-response.email.": "scaler",
+      "senders_verify-domain-response.status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/subaccount_info",
+    "properties": {
+      "subaccount_info": "object",
+      "subaccount_info.custom_quota.": "scaler",
+      "subaccount_info.id.": "scaler",
+      "subaccount_info.key.": "scaler",
+      "subaccount_info.name.": "scaler",
+      "subaccount_info.notes.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/subaccount_info2",
+    "properties": {
+      "subaccount_info2": "object",
+      "subaccount_info2.created_at.": "scaler",
+      "subaccount_info2.custom_quota.": "scaler",
+      "subaccount_info2.first_sent_at.": "scaler",
+      "subaccount_info2.id.": "scaler",
+      "subaccount_info2.name.": "scaler",
+      "subaccount_info2.reputation.": "scaler",
+      "subaccount_info2.sent_monthly.": "scaler",
+      "subaccount_info2.sent_total.": "scaler",
+      "subaccount_info2.sent_weekly.": "scaler",
+      "subaccount_info2.status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/subaccounts_info-response",
+    "properties": {
+      "subaccounts_info-response": "object",
+      "subaccounts_info-response.created_at.": "scaler",
+      "subaccounts_info-response.custom_quota.": "scaler",
+      "subaccounts_info-response.first_sent_at.": "scaler",
+      "subaccounts_info-response.hourly_quota.": "scaler",
+      "subaccounts_info-response.id.": "scaler",
+      "subaccounts_info-response.last_30_days.": "object",
+      "subaccounts_info-response.last_30_days..clicks.": "scaler",
+      "subaccounts_info-response.last_30_days..complaints.": "scaler",
+      "subaccounts_info-response.last_30_days..hard_bounces.": "scaler",
+      "subaccounts_info-response.last_30_days..opens.": "scaler",
+      "subaccounts_info-response.last_30_days..rejects.": "scaler",
+      "subaccounts_info-response.last_30_days..sent.": "scaler",
+      "subaccounts_info-response.last_30_days..soft_bounces.": "scaler",
+      "subaccounts_info-response.last_30_days..unique_clicks.": "scaler",
+      "subaccounts_info-response.last_30_days..unique_opens.": "scaler",
+      "subaccounts_info-response.last_30_days..unsubs.": "scaler",
+      "subaccounts_info-response.name.": "scaler",
+      "subaccounts_info-response.notes.": "scaler",
+      "subaccounts_info-response.reputation.": "scaler",
+      "subaccounts_info-response.sent_hourly.": "scaler",
+      "subaccounts_info-response.sent_monthly.": "scaler",
+      "subaccounts_info-response.sent_total.": "scaler",
+      "subaccounts_info-response.sent_weekly.": "scaler",
+      "subaccounts_info-response.status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/subaccounts_list-response",
+    "properties": {
+      "subaccounts_list-response": "array",
+      "subaccounts_list-response.": "object",
+      "subaccounts_list-response..created_at.": "scaler",
+      "subaccounts_list-response..custom_quota.": "scaler",
+      "subaccounts_list-response..first_sent_at.": "scaler",
+      "subaccounts_list-response..id.": "scaler",
+      "subaccounts_list-response..name.": "scaler",
+      "subaccounts_list-response..reputation.": "scaler",
+      "subaccounts_list-response..sent_monthly.": "scaler",
+      "subaccounts_list-response..sent_total.": "scaler",
+      "subaccounts_list-response..sent_weekly.": "scaler",
+      "subaccounts_list-response..status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/tag_key",
+    "properties": {
+      "tag_key": "object",
+      "tag_key.key.": "scaler",
+      "tag_key.tag.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/tags_delete-response",
+    "properties": {
+      "tags_delete-response": "object",
+      "tags_delete-response.clicks.": "scaler",
+      "tags_delete-response.complaints.": "scaler",
+      "tags_delete-response.hard_bounces.": "scaler",
+      "tags_delete-response.opens.": "scaler",
+      "tags_delete-response.rejects.": "scaler",
+      "tags_delete-response.reputation.": "scaler",
+      "tags_delete-response.sent.": "scaler",
+      "tags_delete-response.soft_bounces.": "scaler",
+      "tags_delete-response.tag.": "scaler",
+      "tags_delete-response.unique_clicks.": "scaler",
+      "tags_delete-response.unique_opens.": "scaler",
+      "tags_delete-response.unsubs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/tags_info-response",
+    "properties": {
+      "tags_info-response": "object",
+      "tags_info-response.clicks.": "scaler",
+      "tags_info-response.complaints.": "scaler",
+      "tags_info-response.hard_bounces.": "scaler",
+      "tags_info-response.opens.": "scaler",
+      "tags_info-response.rejects.": "scaler",
+      "tags_info-response.sent.": "scaler",
+      "tags_info-response.soft_bounces.": "scaler",
+      "tags_info-response.stats.": "object",
+      "tags_info-response.stats..last_30_days.": "object",
+      "tags_info-response.stats..last_30_days..clicks.": "scaler",
+      "tags_info-response.stats..last_30_days..complaints.": "scaler",
+      "tags_info-response.stats..last_30_days..hard_bounces.": "scaler",
+      "tags_info-response.stats..last_30_days..opens.": "scaler",
+      "tags_info-response.stats..last_30_days..rejects.": "scaler",
+      "tags_info-response.stats..last_30_days..sent.": "scaler",
+      "tags_info-response.stats..last_30_days..soft_bounces.": "scaler",
+      "tags_info-response.stats..last_30_days..unique_clicks.": "scaler",
+      "tags_info-response.stats..last_30_days..unique_opens.": "scaler",
+      "tags_info-response.stats..last_30_days..unsubs.": "scaler",
+      "tags_info-response.stats..last_60_days.": "object",
+      "tags_info-response.stats..last_60_days..clicks.": "scaler",
+      "tags_info-response.stats..last_60_days..complaints.": "scaler",
+      "tags_info-response.stats..last_60_days..hard_bounces.": "scaler",
+      "tags_info-response.stats..last_60_days..opens.": "scaler",
+      "tags_info-response.stats..last_60_days..rejects.": "scaler",
+      "tags_info-response.stats..last_60_days..sent.": "scaler",
+      "tags_info-response.stats..last_60_days..soft_bounces.": "scaler",
+      "tags_info-response.stats..last_60_days..unique_clicks.": "scaler",
+      "tags_info-response.stats..last_60_days..unique_opens.": "scaler",
+      "tags_info-response.stats..last_60_days..unsubs.": "scaler",
+      "tags_info-response.stats..last_7_days.": "object",
+      "tags_info-response.stats..last_7_days..clicks.": "scaler",
+      "tags_info-response.stats..last_7_days..complaints.": "scaler",
+      "tags_info-response.stats..last_7_days..hard_bounces.": "scaler",
+      "tags_info-response.stats..last_7_days..opens.": "scaler",
+      "tags_info-response.stats..last_7_days..rejects.": "scaler",
+      "tags_info-response.stats..last_7_days..sent.": "scaler",
+      "tags_info-response.stats..last_7_days..soft_bounces.": "scaler",
+      "tags_info-response.stats..last_7_days..unique_clicks.": "scaler",
+      "tags_info-response.stats..last_7_days..unique_opens.": "scaler",
+      "tags_info-response.stats..last_7_days..unsubs.": "scaler",
+      "tags_info-response.stats..last_90_days.": "object",
+      "tags_info-response.stats..last_90_days..clicks.": "scaler",
+      "tags_info-response.stats..last_90_days..complaints.": "scaler",
+      "tags_info-response.stats..last_90_days..hard_bounces.": "scaler",
+      "tags_info-response.stats..last_90_days..opens.": "scaler",
+      "tags_info-response.stats..last_90_days..rejects.": "scaler",
+      "tags_info-response.stats..last_90_days..sent.": "scaler",
+      "tags_info-response.stats..last_90_days..soft_bounces.": "scaler",
+      "tags_info-response.stats..last_90_days..unique_clicks.": "scaler",
+      "tags_info-response.stats..last_90_days..unique_opens.": "scaler",
+      "tags_info-response.stats..last_90_days..unsubs.": "scaler",
+      "tags_info-response.stats..today.": "object",
+      "tags_info-response.stats..today..clicks.": "scaler",
+      "tags_info-response.stats..today..complaints.": "scaler",
+      "tags_info-response.stats..today..hard_bounces.": "scaler",
+      "tags_info-response.stats..today..opens.": "scaler",
+      "tags_info-response.stats..today..rejects.": "scaler",
+      "tags_info-response.stats..today..sent.": "scaler",
+      "tags_info-response.stats..today..soft_bounces.": "scaler",
+      "tags_info-response.stats..today..unique_clicks.": "scaler",
+      "tags_info-response.stats..today..unique_opens.": "scaler",
+      "tags_info-response.stats..today..unsubs.": "scaler",
+      "tags_info-response.tag.": "scaler",
+      "tags_info-response.unsubs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/tags_list-response",
+    "properties": {
+      "tags_list-response": "array",
+      "tags_list-response.": "object",
+      "tags_list-response..clicks.": "scaler",
+      "tags_list-response..complaints.": "scaler",
+      "tags_list-response..hard_bounces.": "scaler",
+      "tags_list-response..opens.": "scaler",
+      "tags_list-response..rejects.": "scaler",
+      "tags_list-response..reputation.": "scaler",
+      "tags_list-response..sent.": "scaler",
+      "tags_list-response..soft_bounces.": "scaler",
+      "tags_list-response..tag.": "scaler",
+      "tags_list-response..unique_clicks.": "scaler",
+      "tags_list-response..unique_opens.": "scaler",
+      "tags_list-response..unsubs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/template",
+    "properties": {
+      "template": "object",
+      "template.code.": "scaler",
+      "template.from_email.": "scaler",
+      "template.from_name.": "scaler",
+      "template.key.": "scaler",
+      "template.labels.": "array",
+      "template.labels..": "scaler",
+      "template.name.": "scaler",
+      "template.publish.": "scaler",
+      "template.subject.": "scaler",
+      "template.text.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/template_detailed",
+    "properties": {
+      "template_detailed": "object",
+      "template_detailed.code.": "scaler",
+      "template_detailed.created_at.": "scaler",
+      "template_detailed.from_email.": "scaler",
+      "template_detailed.from_name.": "scaler",
+      "template_detailed.labels.": "array",
+      "template_detailed.labels..": "scaler",
+      "template_detailed.name.": "scaler",
+      "template_detailed.publish_code.": "scaler",
+      "template_detailed.publish_from_email.": "scaler",
+      "template_detailed.publish_from_name.": "scaler",
+      "template_detailed.publish_name.": "scaler",
+      "template_detailed.publish_subject.": "scaler",
+      "template_detailed.publish_text.": "scaler",
+      "template_detailed.published_at.": "scaler",
+      "template_detailed.slug.": "scaler",
+      "template_detailed.subject.": "scaler",
+      "template_detailed.text.": "scaler",
+      "template_detailed.updated_at.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/templates_list",
+    "properties": {
+      "templates_list": "object",
+      "templates_list.key.": "scaler",
+      "templates_list.label.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/templates_list-response",
+    "properties": {
+      "templates_list-response": "array",
+      "templates_list-response.": "object",
+      "templates_list-response..code.": "scaler",
+      "templates_list-response..created_at.": "scaler",
+      "templates_list-response..from_email.": "scaler",
+      "templates_list-response..from_name.": "scaler",
+      "templates_list-response..labels.": "array",
+      "templates_list-response..labels..": "scaler",
+      "templates_list-response..name.": "scaler",
+      "templates_list-response..publish_code.": "scaler",
+      "templates_list-response..publish_from_email.": "scaler",
+      "templates_list-response..publish_from_name.": "scaler",
+      "templates_list-response..publish_name.": "scaler",
+      "templates_list-response..publish_subject.": "scaler",
+      "templates_list-response..publish_text.": "scaler",
+      "templates_list-response..published_at.": "scaler",
+      "templates_list-response..slug.": "scaler",
+      "templates_list-response..subject.": "scaler",
+      "templates_list-response..text.": "scaler",
+      "templates_list-response..updated_at.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/templates_render",
+    "properties": {
+      "templates_render": "object",
+      "templates_render.key.": "scaler",
+      "templates_render.merge_vars.": "array",
+      "templates_render.merge_vars..": "object",
+      "templates_render.merge_vars...content.": "scaler",
+      "templates_render.merge_vars...name.": "scaler",
+      "templates_render.template_content.": "array",
+      "templates_render.template_content..": "object",
+      "templates_render.template_content...content.": "scaler",
+      "templates_render.template_content...name.": "scaler",
+      "templates_render.template_name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/templates_render-response",
+    "properties": {
+      "templates_render-response": "object",
+      "templates_render-response.html.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/time-series",
+    "properties": {
+      "time-series": "array",
+      "time-series.": "object",
+      "time-series..clicks.": "scaler",
+      "time-series..complaints.": "scaler",
+      "time-series..hard_bounces.": "scaler",
+      "time-series..opens.": "scaler",
+      "time-series..rejects.": "scaler",
+      "time-series..sent.": "scaler",
+      "time-series..soft_bounces.": "scaler",
+      "time-series..time.": "scaler",
+      "time-series..unique_clicks.": "scaler",
+      "time-series..unique_opens.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/timeseries",
+    "properties": {
+      "timeseries": "array",
+      "timeseries.": "object",
+      "timeseries..clicks.": "scaler",
+      "timeseries..complaints.": "scaler",
+      "timeseries..hard_bounces.": "scaler",
+      "timeseries..opens.": "scaler",
+      "timeseries..rejects.": "scaler",
+      "timeseries..sent.": "scaler",
+      "timeseries..soft_bounces.": "scaler",
+      "timeseries..time.": "scaler",
+      "timeseries..unique_clicks.": "scaler",
+      "timeseries..unique_opens.": "scaler",
+      "timeseries..unsubs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/tracking-domain-status",
+    "properties": {
+      "tracking-domain-status": "object",
+      "tracking-domain-status.cname.": "object",
+      "tracking-domain-status.cname..error.": "scaler",
+      "tracking-domain-status.cname..valid.": "scaler",
+      "tracking-domain-status.cname..valid_after.": "scaler",
+      "tracking-domain-status.created_at.": "scaler",
+      "tracking-domain-status.domain.": "scaler",
+      "tracking-domain-status.last_tested_at.": "scaler",
+      "tracking-domain-status.valid_tracking.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/url_infos",
+    "properties": {
+      "url_infos": "array",
+      "url_infos.": "object",
+      "url_infos..clicks.": "scaler",
+      "url_infos..sent.": "scaler",
+      "url_infos..unique_clicks.": "scaler",
+      "url_infos..url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/url_key",
+    "properties": {
+      "url_key": "object",
+      "url_key.key.": "scaler",
+      "url_key.q.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/urls_time-series",
+    "properties": {
+      "urls_time-series": "object",
+      "urls_time-series.key.": "scaler",
+      "urls_time-series.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/urls_time-series-response",
+    "properties": {
+      "urls_time-series-response": "array",
+      "urls_time-series-response.": "object",
+      "urls_time-series-response..clicks.": "scaler",
+      "urls_time-series-response..sent.": "scaler",
+      "urls_time-series-response..time.": "scaler",
+      "urls_time-series-response..unique_clicks.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/urls_tracking-domains-response",
+    "properties": {
+      "urls_tracking-domains-response": "array",
+      "urls_tracking-domains-response.": "object",
+      "urls_tracking-domains-response..cname.": "object",
+      "urls_tracking-domains-response..cname..error.": "scaler",
+      "urls_tracking-domains-response..cname..valid.": "scaler",
+      "urls_tracking-domains-response..cname..valid_after.": "scaler",
+      "urls_tracking-domains-response..created_at.": "scaler",
+      "urls_tracking-domains-response..domain.": "scaler",
+      "urls_tracking-domains-response..last_tested_at.": "scaler",
+      "urls_tracking-domains-response..valid_tracking.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/users_info-response",
+    "properties": {
+      "users_info-response": "object",
+      "users_info-response.backlog.": "scaler",
+      "users_info-response.created_at.": "scaler",
+      "users_info-response.hourly_quota.": "scaler",
+      "users_info-response.public_id.": "scaler",
+      "users_info-response.reputation.": "scaler",
+      "users_info-response.stats.": "object",
+      "users_info-response.stats..all_time.": "object",
+      "users_info-response.stats..all_time..clicks.": "scaler",
+      "users_info-response.stats..all_time..complaints.": "scaler",
+      "users_info-response.stats..all_time..hard_bounces.": "scaler",
+      "users_info-response.stats..all_time..opens.": "scaler",
+      "users_info-response.stats..all_time..rejects.": "scaler",
+      "users_info-response.stats..all_time..sent.": "scaler",
+      "users_info-response.stats..all_time..soft_bounces.": "scaler",
+      "users_info-response.stats..all_time..unique_clicks.": "scaler",
+      "users_info-response.stats..all_time..unique_opens.": "scaler",
+      "users_info-response.stats..all_time..unsubs.": "scaler",
+      "users_info-response.stats..last_30_days.": "object",
+      "users_info-response.stats..last_30_days..clicks.": "scaler",
+      "users_info-response.stats..last_30_days..complaints.": "scaler",
+      "users_info-response.stats..last_30_days..hard_bounces.": "scaler",
+      "users_info-response.stats..last_30_days..opens.": "scaler",
+      "users_info-response.stats..last_30_days..rejects.": "scaler",
+      "users_info-response.stats..last_30_days..sent.": "scaler",
+      "users_info-response.stats..last_30_days..soft_bounces.": "scaler",
+      "users_info-response.stats..last_30_days..unique_clicks.": "scaler",
+      "users_info-response.stats..last_30_days..unique_opens.": "scaler",
+      "users_info-response.stats..last_30_days..unsubs.": "scaler",
+      "users_info-response.stats..last_60_days.": "object",
+      "users_info-response.stats..last_60_days..clicks.": "scaler",
+      "users_info-response.stats..last_60_days..complaints.": "scaler",
+      "users_info-response.stats..last_60_days..hard_bounces.": "scaler",
+      "users_info-response.stats..last_60_days..opens.": "scaler",
+      "users_info-response.stats..last_60_days..rejects.": "scaler",
+      "users_info-response.stats..last_60_days..sent.": "scaler",
+      "users_info-response.stats..last_60_days..soft_bounces.": "scaler",
+      "users_info-response.stats..last_60_days..unique_clicks.": "scaler",
+      "users_info-response.stats..last_60_days..unique_opens.": "scaler",
+      "users_info-response.stats..last_60_days..unsubs.": "scaler",
+      "users_info-response.stats..last_7_days.": "object",
+      "users_info-response.stats..last_7_days..clicks.": "scaler",
+      "users_info-response.stats..last_7_days..complaints.": "scaler",
+      "users_info-response.stats..last_7_days..hard_bounces.": "scaler",
+      "users_info-response.stats..last_7_days..opens.": "scaler",
+      "users_info-response.stats..last_7_days..rejects.": "scaler",
+      "users_info-response.stats..last_7_days..sent.": "scaler",
+      "users_info-response.stats..last_7_days..soft_bounces.": "scaler",
+      "users_info-response.stats..last_7_days..unique_clicks.": "scaler",
+      "users_info-response.stats..last_7_days..unique_opens.": "scaler",
+      "users_info-response.stats..last_7_days..unsubs.": "scaler",
+      "users_info-response.stats..last_90_days.": "object",
+      "users_info-response.stats..last_90_days..clicks.": "scaler",
+      "users_info-response.stats..last_90_days..complaints.": "scaler",
+      "users_info-response.stats..last_90_days..hard_bounces.": "scaler",
+      "users_info-response.stats..last_90_days..opens.": "scaler",
+      "users_info-response.stats..last_90_days..rejects.": "scaler",
+      "users_info-response.stats..last_90_days..sent.": "scaler",
+      "users_info-response.stats..last_90_days..soft_bounces.": "scaler",
+      "users_info-response.stats..last_90_days..unique_clicks.": "scaler",
+      "users_info-response.stats..last_90_days..unique_opens.": "scaler",
+      "users_info-response.stats..last_90_days..unsubs.": "scaler",
+      "users_info-response.stats..today.": "object",
+      "users_info-response.stats..today..clicks.": "scaler",
+      "users_info-response.stats..today..complaints.": "scaler",
+      "users_info-response.stats..today..hard_bounces.": "scaler",
+      "users_info-response.stats..today..opens.": "scaler",
+      "users_info-response.stats..today..rejects.": "scaler",
+      "users_info-response.stats..today..sent.": "scaler",
+      "users_info-response.stats..today..soft_bounces.": "scaler",
+      "users_info-response.stats..today..unique_clicks.": "scaler",
+      "users_info-response.stats..today..unique_opens.": "scaler",
+      "users_info-response.stats..today..unsubs.": "scaler",
+      "users_info-response.username.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/users_ping2-response",
+    "properties": {
+      "users_ping2-response": "object",
+      "users_ping2-response.PING.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/webhook",
+    "properties": {
+      "webhook": "object",
+      "webhook.auth_key.": "scaler",
+      "webhook.batches_sent.": "scaler",
+      "webhook.created_at.": "scaler",
+      "webhook.description.": "scaler",
+      "webhook.events.": "array",
+      "webhook.events..": "scaler",
+      "webhook.events_sent.": "scaler",
+      "webhook.id.": "scaler",
+      "webhook.last_error.": "scaler",
+      "webhook.last_sent_at.": "scaler",
+      "webhook.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/webhook_key",
+    "properties": {
+      "webhook_key": "object",
+      "webhook_key.id.": "scaler",
+      "webhook_key.key.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/webhooks_add",
+    "properties": {
+      "webhooks_add": "object",
+      "webhooks_add.description.": "scaler",
+      "webhooks_add.events.": "array",
+      "webhooks_add.events..": "scaler",
+      "webhooks_add.key.": "scaler",
+      "webhooks_add.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/webhooks_list-response",
+    "properties": {
+      "webhooks_list-response": "array",
+      "webhooks_list-response.": "object",
+      "webhooks_list-response..auth_key.": "scaler",
+      "webhooks_list-response..batches_sent.": "scaler",
+      "webhooks_list-response..created_at.": "scaler",
+      "webhooks_list-response..description.": "scaler",
+      "webhooks_list-response..events.": "array",
+      "webhooks_list-response..events..": "scaler",
+      "webhooks_list-response..events_sent.": "scaler",
+      "webhooks_list-response..id.": "scaler",
+      "webhooks_list-response..last_error.": "scaler",
+      "webhooks_list-response..last_sent_at.": "scaler",
+      "webhooks_list-response..url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/webhooks_update",
+    "properties": {
+      "webhooks_update": "object",
+      "webhooks_update.description.": "scaler",
+      "webhooks_update.events.": "array",
+      "webhooks_update.events..": "scaler",
+      "webhooks_update.id.": "scaler",
+      "webhooks_update.key.": "scaler",
+      "webhooks_update.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/whitelists_add-response",
+    "properties": {
+      "whitelists_add-response": "object",
+      "whitelists_add-response.email.": "scaler",
+      "whitelists_add-response.whether.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/whitelists_delete-response",
+    "properties": {
+      "whitelists_delete-response": "object",
+      "whitelists_delete-response.deleted.": "scaler",
+      "whitelists_delete-response.email.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/whitelists_list-response",
+    "properties": {
+      "whitelists_list-response": "array",
+      "whitelists_list-response.": "object",
+      "whitelists_list-response..created_at.": "scaler",
+      "whitelists_list-response..detail.": "scaler",
+      "whitelists_list-response..email.": "scaler"
+    }
+  }
+]

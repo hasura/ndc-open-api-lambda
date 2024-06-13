@@ -1,0 +1,332 @@
+[
+  {
+    "schemaRef": "#/components/parameters/alt",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/fields",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/key",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/oauth_token",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/prettyPrint",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/quotaUser",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/parameters/userIp",
+    "properties": { "__undefined_0": "rawArg", "__undefined_1": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/Account",
+    "properties": {
+      "Account": "object",
+      "Account.creation_time.": "scaler",
+      "Account.id.": "scaler",
+      "Account.kind.": "scaler",
+      "Account.name.": "scaler",
+      "Account.premium.": "scaler",
+      "Account.subAccounts.": "array",
+      "Account.subAccounts..Account": "ref",
+      "Account.timezone.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Accounts",
+    "properties": {
+      "Accounts": "object",
+      "Accounts.etag.": "scaler",
+      "Accounts.items.": "array",
+      "Accounts.items..Account": "ref",
+      "Accounts.kind.": "scaler",
+      "Accounts.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdClient",
+    "properties": {
+      "AdClient": "object",
+      "AdClient.arcOptIn.": "scaler",
+      "AdClient.id.": "scaler",
+      "AdClient.kind.": "scaler",
+      "AdClient.productCode.": "scaler",
+      "AdClient.supportsReporting.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdClients",
+    "properties": {
+      "AdClients": "object",
+      "AdClients.etag.": "scaler",
+      "AdClients.items.": "array",
+      "AdClients.items..AdClient": "ref",
+      "AdClients.kind.": "scaler",
+      "AdClients.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdCode",
+    "properties": {
+      "AdCode": "object",
+      "AdCode.adCode.": "scaler",
+      "AdCode.ampBody.": "scaler",
+      "AdCode.ampHead.": "scaler",
+      "AdCode.kind.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdStyle",
+    "properties": {
+      "AdStyle": "object",
+      "AdStyle.colors.": "object",
+      "AdStyle.colors..background.": "scaler",
+      "AdStyle.colors..border.": "scaler",
+      "AdStyle.colors..text.": "scaler",
+      "AdStyle.colors..title.": "scaler",
+      "AdStyle.colors..url.": "scaler",
+      "AdStyle.corners.": "scaler",
+      "AdStyle.font.": "object",
+      "AdStyle.font..family.": "scaler",
+      "AdStyle.font..size.": "scaler",
+      "AdStyle.kind.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdUnit",
+    "properties": {
+      "AdUnit": "object",
+      "AdUnit.code.": "scaler",
+      "AdUnit.contentAdsSettings.": "object",
+      "AdUnit.contentAdsSettings..backupOption.": "object",
+      "AdUnit.contentAdsSettings..backupOption..color.": "scaler",
+      "AdUnit.contentAdsSettings..backupOption..type.": "scaler",
+      "AdUnit.contentAdsSettings..backupOption..url.": "scaler",
+      "AdUnit.contentAdsSettings..size.": "scaler",
+      "AdUnit.contentAdsSettings..type.": "scaler",
+      "AdUnit.customStyle.AdStyle": "ref",
+      "AdUnit.feedAdsSettings.": "object",
+      "AdUnit.feedAdsSettings..adPosition.": "scaler",
+      "AdUnit.feedAdsSettings..frequency.": "scaler",
+      "AdUnit.feedAdsSettings..minimumWordCount.": "scaler",
+      "AdUnit.feedAdsSettings..type.": "scaler",
+      "AdUnit.id.": "scaler",
+      "AdUnit.kind.": "scaler",
+      "AdUnit.mobileContentAdsSettings.": "object",
+      "AdUnit.mobileContentAdsSettings..markupLanguage.": "scaler",
+      "AdUnit.mobileContentAdsSettings..scriptingLanguage.": "scaler",
+      "AdUnit.mobileContentAdsSettings..size.": "scaler",
+      "AdUnit.mobileContentAdsSettings..type.": "scaler",
+      "AdUnit.name.": "scaler",
+      "AdUnit.savedStyleId.": "scaler",
+      "AdUnit.status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdUnits",
+    "properties": {
+      "AdUnits": "object",
+      "AdUnits.etag.": "scaler",
+      "AdUnits.items.": "array",
+      "AdUnits.items..AdUnit": "ref",
+      "AdUnits.kind.": "scaler",
+      "AdUnits.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/AdsenseReportsGenerateResponse",
+    "properties": {
+      "AdsenseReportsGenerateResponse": "object",
+      "AdsenseReportsGenerateResponse.averages.": "array",
+      "AdsenseReportsGenerateResponse.averages..": "scaler",
+      "AdsenseReportsGenerateResponse.endDate.": "scaler",
+      "AdsenseReportsGenerateResponse.headers.": "array",
+      "AdsenseReportsGenerateResponse.headers..": "object",
+      "AdsenseReportsGenerateResponse.headers...currency.": "scaler",
+      "AdsenseReportsGenerateResponse.headers...name.": "scaler",
+      "AdsenseReportsGenerateResponse.headers...type.": "scaler",
+      "AdsenseReportsGenerateResponse.kind.": "scaler",
+      "AdsenseReportsGenerateResponse.rows.": "array",
+      "AdsenseReportsGenerateResponse.rows..": "array",
+      "AdsenseReportsGenerateResponse.rows...": "scaler",
+      "AdsenseReportsGenerateResponse.startDate.": "scaler",
+      "AdsenseReportsGenerateResponse.totalMatchedRows.": "scaler",
+      "AdsenseReportsGenerateResponse.totals.": "array",
+      "AdsenseReportsGenerateResponse.totals..": "scaler",
+      "AdsenseReportsGenerateResponse.warnings.": "array",
+      "AdsenseReportsGenerateResponse.warnings..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Alert",
+    "properties": {
+      "Alert": "object",
+      "Alert.id.": "scaler",
+      "Alert.isDismissible.": "scaler",
+      "Alert.kind.": "scaler",
+      "Alert.message.": "scaler",
+      "Alert.severity.": "scaler",
+      "Alert.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Alerts",
+    "properties": {
+      "Alerts": "object",
+      "Alerts.items.": "array",
+      "Alerts.items..Alert": "ref",
+      "Alerts.kind.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomChannel",
+    "properties": {
+      "CustomChannel": "object",
+      "CustomChannel.code.": "scaler",
+      "CustomChannel.id.": "scaler",
+      "CustomChannel.kind.": "scaler",
+      "CustomChannel.name.": "scaler",
+      "CustomChannel.targetingInfo.": "object",
+      "CustomChannel.targetingInfo..adsAppearOn.": "scaler",
+      "CustomChannel.targetingInfo..description.": "scaler",
+      "CustomChannel.targetingInfo..location.": "scaler",
+      "CustomChannel.targetingInfo..siteLanguage.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/CustomChannels",
+    "properties": {
+      "CustomChannels": "object",
+      "CustomChannels.etag.": "scaler",
+      "CustomChannels.items.": "array",
+      "CustomChannels.items..CustomChannel": "ref",
+      "CustomChannels.kind.": "scaler",
+      "CustomChannels.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Metadata",
+    "properties": {
+      "Metadata": "object",
+      "Metadata.items.": "array",
+      "Metadata.items..ReportingMetadataEntry": "ref",
+      "Metadata.kind.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Payment",
+    "properties": {
+      "Payment": "object",
+      "Payment.id.": "scaler",
+      "Payment.kind.": "scaler",
+      "Payment.paymentAmount.": "scaler",
+      "Payment.paymentAmountCurrencyCode.": "scaler",
+      "Payment.paymentDate.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/Payments",
+    "properties": {
+      "Payments": "object",
+      "Payments.items.": "array",
+      "Payments.items..Payment": "ref",
+      "Payments.kind.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ReportingMetadataEntry",
+    "properties": {
+      "ReportingMetadataEntry": "object",
+      "ReportingMetadataEntry.compatibleDimensions.": "array",
+      "ReportingMetadataEntry.compatibleDimensions..": "scaler",
+      "ReportingMetadataEntry.compatibleMetrics.": "array",
+      "ReportingMetadataEntry.compatibleMetrics..": "scaler",
+      "ReportingMetadataEntry.id.": "scaler",
+      "ReportingMetadataEntry.kind.": "scaler",
+      "ReportingMetadataEntry.requiredDimensions.": "array",
+      "ReportingMetadataEntry.requiredDimensions..": "scaler",
+      "ReportingMetadataEntry.requiredMetrics.": "array",
+      "ReportingMetadataEntry.requiredMetrics..": "scaler",
+      "ReportingMetadataEntry.supportedProducts.": "array",
+      "ReportingMetadataEntry.supportedProducts..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SavedAdStyle",
+    "properties": {
+      "SavedAdStyle": "object",
+      "SavedAdStyle.adStyle.AdStyle": "ref",
+      "SavedAdStyle.id.": "scaler",
+      "SavedAdStyle.kind.": "scaler",
+      "SavedAdStyle.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SavedAdStyles",
+    "properties": {
+      "SavedAdStyles": "object",
+      "SavedAdStyles.etag.": "scaler",
+      "SavedAdStyles.items.": "array",
+      "SavedAdStyles.items..SavedAdStyle": "ref",
+      "SavedAdStyles.kind.": "scaler",
+      "SavedAdStyles.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SavedReport",
+    "properties": {
+      "SavedReport": "object",
+      "SavedReport.id.": "scaler",
+      "SavedReport.kind.": "scaler",
+      "SavedReport.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SavedReports",
+    "properties": {
+      "SavedReports": "object",
+      "SavedReports.etag.": "scaler",
+      "SavedReports.items.": "array",
+      "SavedReports.items..SavedReport": "ref",
+      "SavedReports.kind.": "scaler",
+      "SavedReports.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UrlChannel",
+    "properties": {
+      "UrlChannel": "object",
+      "UrlChannel.id.": "scaler",
+      "UrlChannel.kind.": "scaler",
+      "UrlChannel.urlPattern.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/UrlChannels",
+    "properties": {
+      "UrlChannels": "object",
+      "UrlChannels.etag.": "scaler",
+      "UrlChannels.items.": "array",
+      "UrlChannels.items..UrlChannel": "ref",
+      "UrlChannels.kind.": "scaler",
+      "UrlChannels.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Oauth2c",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

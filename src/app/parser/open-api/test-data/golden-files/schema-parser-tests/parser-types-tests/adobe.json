@@ -1,0 +1,195 @@
+[
+  {
+    "schemaRef": "#/components/schemas/BundleData",
+    "properties": {
+      "BundleData": "object",
+      "BundleData.category.": "scaler",
+      "BundleData.fragment.": "scaler",
+      "BundleData.id.": "scaler",
+      "BundleData.name.": "scaler",
+      "BundleData.props.": "array",
+      "BundleData.props..BundleDataProp": "ref",
+      "BundleData.state.": "scaler",
+      "BundleData.stateRaw.": "scaler",
+      "BundleData.symbolicName.": "scaler",
+      "BundleData.version.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BundleDataProp",
+    "properties": {
+      "BundleDataProp": "object",
+      "BundleDataProp.key.": "scaler",
+      "BundleDataProp.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/BundleInfo",
+    "properties": {
+      "BundleInfo": "object",
+      "BundleInfo.data.": "array",
+      "BundleInfo.data..BundleData": "ref",
+      "BundleInfo.s.": "array",
+      "BundleInfo.s..": "scaler",
+      "BundleInfo.status.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/InstallStatus",
+    "properties": {
+      "InstallStatus": "object",
+      "InstallStatus.status.": "object",
+      "InstallStatus.status..finished.": "scaler",
+      "InstallStatus.status..itemCount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/KeystoreChainItems",
+    "properties": {
+      "KeystoreChainItems": "object",
+      "KeystoreChainItems.issuer.": "scaler",
+      "KeystoreChainItems.notAfter.": "scaler",
+      "KeystoreChainItems.notBefore.": "scaler",
+      "KeystoreChainItems.serialNumber.": "scaler",
+      "KeystoreChainItems.subject.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/KeystoreInfo",
+    "properties": {
+      "KeystoreInfo": "object",
+      "KeystoreInfo.aliases.": "array",
+      "KeystoreInfo.aliases..KeystoreItems": "ref",
+      "KeystoreInfo.exists.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/KeystoreItems",
+    "properties": {
+      "KeystoreItems": "object",
+      "KeystoreItems.algorithm.": "scaler",
+      "KeystoreItems.alias.": "scaler",
+      "KeystoreItems.chain.": "array",
+      "KeystoreItems.chain..KeystoreChainItems": "ref",
+      "KeystoreItems.entryType.": "scaler",
+      "KeystoreItems.format.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlConfigurationInfo",
+    "properties": {
+      "SamlConfigurationInfo": "object",
+      "SamlConfigurationInfo.bundle_location.": "scaler",
+      "SamlConfigurationInfo.description.": "scaler",
+      "SamlConfigurationInfo.pid.": "scaler",
+      "SamlConfigurationInfo.properties.SamlConfigurationProperties": "ref",
+      "SamlConfigurationInfo.service_location.": "scaler",
+      "SamlConfigurationInfo.title.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlConfigurationProperties",
+    "properties": {
+      "SamlConfigurationProperties": "object",
+      "SamlConfigurationProperties.addGroupMemberships.SamlConfigurationPropertyItemsBoolean": "ref",
+      "SamlConfigurationProperties.assertionConsumerServiceURL.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.clockTolerance.SamlConfigurationPropertyItemsLong": "ref",
+      "SamlConfigurationProperties.createUser.SamlConfigurationPropertyItemsBoolean": "ref",
+      "SamlConfigurationProperties.defaultGroups.SamlConfigurationPropertyItemsArray": "ref",
+      "SamlConfigurationProperties.defaultRedirectUrl.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.digestMethod.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.groupMembershipAttribute.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.handleLogout.SamlConfigurationPropertyItemsBoolean": "ref",
+      "SamlConfigurationProperties.idpCertAlias.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.idpHttpRedirect.SamlConfigurationPropertyItemsBoolean": "ref",
+      "SamlConfigurationProperties.idpUrl.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.keyStorePassword.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.logoutUrl.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.nameIdFormat.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.path.SamlConfigurationPropertyItemsArray": "ref",
+      "SamlConfigurationProperties.service.ranking.SamlConfigurationPropertyItemsLong": "ref",
+      "SamlConfigurationProperties.serviceProviderEntityId.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.signatureMethod.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.spPrivateKeyAlias.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.synchronizeAttributes.SamlConfigurationPropertyItemsArray": "ref",
+      "SamlConfigurationProperties.useEncryption.SamlConfigurationPropertyItemsBoolean": "ref",
+      "SamlConfigurationProperties.userIDAttribute.SamlConfigurationPropertyItemsString": "ref",
+      "SamlConfigurationProperties.userIntermediatePath.SamlConfigurationPropertyItemsString": "ref"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlConfigurationPropertyItemsArray",
+    "properties": {
+      "SamlConfigurationPropertyItemsArray": "object",
+      "SamlConfigurationPropertyItemsArray.description.": "scaler",
+      "SamlConfigurationPropertyItemsArray.is_set.": "scaler",
+      "SamlConfigurationPropertyItemsArray.name.": "scaler",
+      "SamlConfigurationPropertyItemsArray.optional.": "scaler",
+      "SamlConfigurationPropertyItemsArray.type.": "scaler",
+      "SamlConfigurationPropertyItemsArray.values.": "array",
+      "SamlConfigurationPropertyItemsArray.values..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlConfigurationPropertyItemsBoolean",
+    "properties": {
+      "SamlConfigurationPropertyItemsBoolean": "object",
+      "SamlConfigurationPropertyItemsBoolean.description.": "scaler",
+      "SamlConfigurationPropertyItemsBoolean.is_set.": "scaler",
+      "SamlConfigurationPropertyItemsBoolean.name.": "scaler",
+      "SamlConfigurationPropertyItemsBoolean.optional.": "scaler",
+      "SamlConfigurationPropertyItemsBoolean.type.": "scaler",
+      "SamlConfigurationPropertyItemsBoolean.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlConfigurationPropertyItemsLong",
+    "properties": {
+      "SamlConfigurationPropertyItemsLong": "object",
+      "SamlConfigurationPropertyItemsLong.description.": "scaler",
+      "SamlConfigurationPropertyItemsLong.is_set.": "scaler",
+      "SamlConfigurationPropertyItemsLong.name.": "scaler",
+      "SamlConfigurationPropertyItemsLong.optional.": "scaler",
+      "SamlConfigurationPropertyItemsLong.type.": "scaler",
+      "SamlConfigurationPropertyItemsLong.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/SamlConfigurationPropertyItemsString",
+    "properties": {
+      "SamlConfigurationPropertyItemsString": "object",
+      "SamlConfigurationPropertyItemsString.description.": "scaler",
+      "SamlConfigurationPropertyItemsString.is_set.": "scaler",
+      "SamlConfigurationPropertyItemsString.name.": "scaler",
+      "SamlConfigurationPropertyItemsString.optional.": "scaler",
+      "SamlConfigurationPropertyItemsString.type.": "scaler",
+      "SamlConfigurationPropertyItemsString.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TruststoreInfo",
+    "properties": {
+      "TruststoreInfo": "object",
+      "TruststoreInfo.aliases.": "array",
+      "TruststoreInfo.aliases..TruststoreItems": "ref",
+      "TruststoreInfo.exists.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/TruststoreItems",
+    "properties": {
+      "TruststoreItems": "object",
+      "TruststoreItems.alias.": "scaler",
+      "TruststoreItems.entryType.": "scaler",
+      "TruststoreItems.issuer.": "scaler",
+      "TruststoreItems.notAfter.": "scaler",
+      "TruststoreItems.notBefore.": "scaler",
+      "TruststoreItems.serialNumber.": "scaler",
+      "TruststoreItems.subject.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/aemAuth",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

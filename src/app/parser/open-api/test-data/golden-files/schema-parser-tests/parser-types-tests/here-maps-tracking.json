@@ -1,0 +1,3170 @@
+[
+  {
+    "schemaRef": "#/components/schemas/abortFlag",
+    "properties": { "abortFlag": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/addConnectorExternalDevices",
+    "properties": {
+      "addConnectorExternalDevices": "array",
+      "addConnectorExternalDevices.": "object",
+      "addConnectorExternalDevices..enabled.": "scaler",
+      "addConnectorExternalDevices..externalDeviceId.": "scaler",
+      "addConnectorExternalDevices..externalDeviceInfo.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/addDevicesRequestBody",
+    "properties": {
+      "addDevicesRequestBody": "array",
+      "addDevicesRequestBody.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/addDevicesRequestBodyExternalCloudVariant",
+    "properties": {
+      "addDevicesRequestBodyExternalCloudVariant": "object",
+      "addDevicesRequestBodyExternalCloudVariant.areaBased.": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.connectorId.": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.distanceM.": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.externalDeviceId.": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.geofences.": "array",
+      "addDevicesRequestBodyExternalCloudVariant.geofences..": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.name.": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.rules.": "array",
+      "addDevicesRequestBodyExternalCloudVariant.rules..": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.sampleMs.": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.sendMs.": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.tags.": "array",
+      "addDevicesRequestBodyExternalCloudVariant.tags..": "scaler",
+      "addDevicesRequestBodyExternalCloudVariant.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/addDevicesRequestBodyExternalDeviceVariant",
+    "properties": {
+      "addDevicesRequestBodyExternalDeviceVariant": "object",
+      "addDevicesRequestBodyExternalDeviceVariant.areaBased.": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.distanceM.": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.externalId.": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.geofences.": "array",
+      "addDevicesRequestBodyExternalDeviceVariant.geofences..": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.name.": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.rules.": "array",
+      "addDevicesRequestBodyExternalDeviceVariant.rules..": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.sampleMs.": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.sendMs.": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.tags.": "array",
+      "addDevicesRequestBodyExternalDeviceVariant.tags..": "scaler",
+      "addDevicesRequestBodyExternalDeviceVariant.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/addDevicesRequestBodyProvisionedVariant",
+    "properties": {
+      "addDevicesRequestBodyProvisionedVariant": "object",
+      "addDevicesRequestBodyProvisionedVariant.areaBased.": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.deviceId.": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.distanceM.": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.geofences.": "array",
+      "addDevicesRequestBodyProvisionedVariant.geofences..": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.name.": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.rules.": "array",
+      "addDevicesRequestBodyProvisionedVariant.rules..": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.sampleMs.": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.sendMs.": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.tags.": "array",
+      "addDevicesRequestBodyProvisionedVariant.tags..": "scaler",
+      "addDevicesRequestBodyProvisionedVariant.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/addDevicesRequestBodyUnprovisionedVariant",
+    "properties": {
+      "addDevicesRequestBodyUnprovisionedVariant": "object",
+      "addDevicesRequestBodyUnprovisionedVariant.areaBased.": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.distanceM.": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.geofences.": "array",
+      "addDevicesRequestBodyUnprovisionedVariant.geofences..": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.name.": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.rules.": "array",
+      "addDevicesRequestBodyUnprovisionedVariant.rules..": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.sampleMs.": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.sendMs.": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.tags.": "array",
+      "addDevicesRequestBodyUnprovisionedVariant.tags..": "scaler",
+      "addDevicesRequestBodyUnprovisionedVariant.type.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/address",
+    "properties": {
+      "address": "object",
+      "address.city.": "scaler",
+      "address.country.": "scaler",
+      "address.postalCode.": "scaler",
+      "address.state.": "scaler",
+      "address.street.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/areaBased",
+    "properties": { "areaBased": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/associationConfig",
+    "properties": {
+      "associationConfig": "object",
+      "associationConfig.geofenceIds.": "array",
+      "associationConfig.geofenceIds..": "scaler",
+      "associationConfig.ruleIds.": "array",
+      "associationConfig.ruleIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/autoStart",
+    "properties": { "autoStart": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/availableDriversInfo",
+    "properties": {
+      "availableDriversInfo": "object",
+      "availableDriversInfo.count.": "scaler",
+      "availableDriversInfo.items.": "array",
+      "availableDriversInfo.items..": "object",
+      "availableDriversInfo.items...autoProvisionCallbackDevices.": "scaler",
+      "availableDriversInfo.items...driverId.": "scaler",
+      "__undefined_0": "scaler",
+      "availableDriversInfo.items...externalCloudInfoSchema.": "array",
+      "availableDriversInfo.items...externalCloudInfoSchema..": "object",
+      "availableDriversInfo.items...externalCloudInfoSchema...hidden.": "scaler",
+      "availableDriversInfo.items...externalCloudInfoSchema...key.": "scaler",
+      "availableDriversInfo.items...externalCloudInfoSchema...label.": "scaler",
+      "availableDriversInfo.items...provider.": "scaler",
+      "availableDriversInfo.items...strategy.": "object",
+      "availableDriversInfo.items...strategy..managerId.": "scaler",
+      "availableDriversInfo.items...strategy..name.": "scaler",
+      "availableDriversInfo.items...version.": "scaler",
+      "availableDriversInfo.limit.": "scaler",
+      "availableDriversInfo.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/batchCreateBody",
+    "properties": {
+      "batchCreateBody": "object",
+      "batchCreateBody.geofenceIds.": "array",
+      "batchCreateBody.geofenceIds..": "scaler",
+      "batchCreateBody.ruleIds.": "array",
+      "batchCreateBody.ruleIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/batchDeleteBody",
+    "properties": {
+      "batchDeleteBody": "object",
+      "batchDeleteBody.geofenceIds.": "array",
+      "batchDeleteBody.geofenceIds..": "scaler",
+      "batchDeleteBody.ruleIds.": "array",
+      "batchDeleteBody.ruleIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/batchProvisionedAndClaimedDevice",
+    "properties": {
+      "batchProvisionedAndClaimedDevice": "object",
+      "batchProvisionedAndClaimedDevice.deviceId.": "scaler",
+      "batchProvisionedAndClaimedDevice.deviceSecret.": "scaler",
+      "batchProvisionedAndClaimedDevice.externalId.": "scaler",
+      "batchProvisionedAndClaimedDevice.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/batchUpdateDeviceAssociationsBody",
+    "properties": {
+      "batchUpdateDeviceAssociationsBody": "object",
+      "batchUpdateDeviceAssociationsBody.newRules.": "object",
+      "batchUpdateDeviceAssociationsBody.newRules..geofenceIds.": "array",
+      "batchUpdateDeviceAssociationsBody.newRules..geofenceIds..": "scaler",
+      "batchUpdateDeviceAssociationsBody.newRules..ruleIds.": "array",
+      "batchUpdateDeviceAssociationsBody.newRules..ruleIds..": "scaler",
+      "batchUpdateDeviceAssociationsBody.oldRules.": "object",
+      "batchUpdateDeviceAssociationsBody.oldRules..geofenceIds.": "array",
+      "batchUpdateDeviceAssociationsBody.oldRules..geofenceIds..": "scaler",
+      "batchUpdateDeviceAssociationsBody.oldRules..ruleIds.": "array",
+      "batchUpdateDeviceAssociationsBody.oldRules..ruleIds..": "scaler",
+      "batchUpdateDeviceAssociationsBody.trackingIds.": "array",
+      "batchUpdateDeviceAssociationsBody.trackingIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/batchUpdateShipmentAssociationsBody",
+    "properties": {
+      "batchUpdateShipmentAssociationsBody": "object",
+      "batchUpdateShipmentAssociationsBody.newRules.": "object",
+      "batchUpdateShipmentAssociationsBody.newRules..geofenceIds.": "array",
+      "batchUpdateShipmentAssociationsBody.newRules..geofenceIds..": "scaler",
+      "batchUpdateShipmentAssociationsBody.newRules..ruleIds.": "array",
+      "batchUpdateShipmentAssociationsBody.newRules..ruleIds..": "scaler",
+      "batchUpdateShipmentAssociationsBody.oldRules.": "object",
+      "batchUpdateShipmentAssociationsBody.oldRules..geofenceIds.": "array",
+      "batchUpdateShipmentAssociationsBody.oldRules..geofenceIds..": "scaler",
+      "batchUpdateShipmentAssociationsBody.oldRules..ruleIds.": "array",
+      "batchUpdateShipmentAssociationsBody.oldRules..ruleIds..": "scaler",
+      "batchUpdateShipmentAssociationsBody.shipmentIds.": "array",
+      "batchUpdateShipmentAssociationsBody.shipmentIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/booleanCount",
+    "properties": {
+      "booleanCount": "allOf",
+      "__undefined_0": "object",
+      "booleanCount..FALSE_TO_TRUE.": "scaler",
+      "booleanCount..TRUE_TO_FALSE.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/channelType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/circle",
+    "properties": {
+      "circle": "object",
+      "circle.center.": "object",
+      "circle.center..lat.": "scaler",
+      "circle.center..lng.": "scaler",
+      "circle.floor.": "object",
+      "circle.floor..id.": "scaler",
+      "circle.floor..level.": "scaler",
+      "circle.floor..name.": "scaler",
+      "circle.radius.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/claimedDevice",
+    "properties": {
+      "claimedDevice": "object",
+      "claimedDevice.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/commonDeviceCounts",
+    "properties": {
+      "commonDeviceCounts": "object",
+      "commonDeviceCounts.ruleId.": "scaler",
+      "commonDeviceCounts.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/completeConnectorInfo",
+    "properties": {
+      "completeConnectorInfo": "allOf",
+      "completeConnectorInfo.": "object",
+      "completeConnectorInfo..connectorId.": "scaler",
+      "completeConnectorInfo..projectId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/connectorExecStats",
+    "properties": {
+      "connectorExecStats": "object",
+      "connectorExecStats.isRunning.": "scaler",
+      "connectorExecStats.lastExecTs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/connectorExternalDevices",
+    "properties": {
+      "connectorExternalDevices": "array",
+      "connectorExternalDevices.": "object",
+      "connectorExternalDevices..enabled.": "scaler",
+      "connectorExternalDevices..externalDeviceId.": "scaler",
+      "connectorExternalDevices..externalDeviceInfo.": "primitive",
+      "connectorExternalDevices..info.": "primitive",
+      "connectorExternalDevices..localDeviceId.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/connectorId",
+    "properties": { "connectorId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/connectorInfo",
+    "properties": {
+      "connectorInfo": "object",
+      "connectorInfo.description.": "scaler",
+      "connectorInfo.driverId.": "scaler",
+      "connectorInfo.enabled.": "scaler",
+      "connectorInfo.externalCloudInfo.": "primitive",
+      "connectorInfo.name.": "scaler",
+      "connectorInfo.refreshIntervalS.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/connectorLastExecTs",
+    "properties": {
+      "connectorLastExecTs": "object",
+      "connectorLastExecTs.lastExecTs.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/country",
+    "properties": { "country": "object", "country.mcc.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/createLocationBody",
+    "properties": {
+      "createLocationBody": "object",
+      "createLocationBody..address.": "object",
+      "createLocationBody..address..city.": "scaler",
+      "createLocationBody..address..country.": "scaler",
+      "createLocationBody..address..postalCode.": "scaler",
+      "createLocationBody..address..state.": "scaler",
+      "createLocationBody..address..street.": "scaler",
+      "createLocationBody..description.": "scaler",
+      "createLocationBody..externalLocationId.": "scaler",
+      "createLocationBody..geofenceId.": "scaler",
+      "createLocationBody..location.": "object",
+      "createLocationBody..location..lat.": "scaler",
+      "createLocationBody..location..lng.": "scaler",
+      "createLocationBody..name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/createResponse",
+    "properties": {
+      "createResponse": "object",
+      "createResponse.jobId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/createSegmentBody",
+    "properties": {
+      "createSegmentBody": "object",
+      "createSegmentBody.description.": "scaler",
+      "createSegmentBody.destination.": "scaler",
+      "createSegmentBody.name.": "scaler",
+      "createSegmentBody.origin.": "scaler",
+      "createSegmentBody.providedEta.": "scaler",
+      "createSegmentBody.providedEtd.": "scaler",
+      "createSegmentBody.trackingId.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/createSegmentPlanBody",
+    "properties": {
+      "createSegmentPlanBody": "object",
+      "createSegmentPlanBody.description.": "scaler",
+      "createSegmentPlanBody.destination.": "scaler",
+      "createSegmentPlanBody.durationS.": "scaler",
+      "createSegmentPlanBody.name.": "scaler",
+      "createSegmentPlanBody.origin.": "scaler",
+      "createSegmentPlanBody.trackingId.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/createShipmentBody",
+    "properties": { "createShipmentBody": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/createShipmentPlanBody",
+    "properties": { "createShipmentPlanBody": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/createShipmentReportBody",
+    "properties": {
+      "createShipmentReportBody": "object",
+      "createShipmentReportBody.endedAfter.": "scaler",
+      "createShipmentReportBody.endedBefore.": "scaler",
+      "createShipmentReportBody.shipmentPlanIds.": "array",
+      "createShipmentReportBody.shipmentPlanIds..": "scaler",
+      "createShipmentReportBody.startedAfter.": "scaler",
+      "createShipmentReportBody.startedBefore.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/createShipmentReportResponse",
+    "properties": {
+      "createShipmentReportResponse": "object",
+      "createShipmentReportResponse.shipmentReportId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/createUploadRequest",
+    "properties": {
+      "createUploadRequest": "object",
+      "createUploadRequest.description.": "scaler",
+      "createUploadRequest.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/createUploadResponse",
+    "properties": {
+      "createUploadResponse": "object",
+      "createUploadResponse.dataId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/data",
+    "properties": { "data": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dataCount",
+    "properties": { "dataCount": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dataDescription",
+    "properties": { "dataDescription": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dataId",
+    "properties": { "dataId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dataName",
+    "properties": { "dataName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dataOffset",
+    "properties": { "dataOffset": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dataSize",
+    "properties": { "dataSize": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dataUploadStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dateV4",
+    "properties": { "dateV4": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/deleteDevicesRequestBody",
+    "properties": {
+      "deleteDevicesRequestBody": "array",
+      "deleteDevicesRequestBody.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/deleteDevicesRequestBodyConnectorIdVariant",
+    "properties": {
+      "deleteDevicesRequestBodyConnectorIdVariant": "object",
+      "deleteDevicesRequestBodyConnectorIdVariant.connectorId.": "scaler",
+      "deleteDevicesRequestBodyConnectorIdVariant.externalDeviceId.": "scaler",
+      "deleteDevicesRequestBodyConnectorIdVariant.removeFromConnectorOnly.": "scaler",
+      "deleteDevicesRequestBodyConnectorIdVariant.unclaimOnly.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/deleteDevicesRequestBodyExternalIdVariant",
+    "properties": {
+      "deleteDevicesRequestBodyExternalIdVariant": "object",
+      "deleteDevicesRequestBodyExternalIdVariant.externalId.": "scaler",
+      "deleteDevicesRequestBodyExternalIdVariant.unclaimOnly.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/deleteDevicesRequestBodyTrackingIdVariant",
+    "properties": {
+      "deleteDevicesRequestBodyTrackingIdVariant": "object",
+      "deleteDevicesRequestBodyTrackingIdVariant.trackingId.": "scaler",
+      "deleteDevicesRequestBodyTrackingIdVariant.unclaimOnly.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/description",
+    "properties": { "description": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/destination",
+    "properties": { "destination": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/detentionCount",
+    "properties": {
+      "detentionCount": "allOf",
+      "__undefined_0": "object",
+      "detentionCount..DETENTION_ENDED.": "scaler",
+      "detentionCount..DETENTION_STARTED.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/device",
+    "properties": {
+      "device": "object",
+      "device.appId.": "scaler",
+      "device.externalId.": "scaler",
+      "device.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/deviceCountsResponseJson",
+    "properties": {
+      "deviceCountsResponseJson": "allOf",
+      "deviceCountsResponseJson.": "object",
+      "deviceCountsResponseJson..count.": "scaler",
+      "deviceCountsResponseJson..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/deviceEnabled",
+    "properties": { "deviceEnabled": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/deviceId",
+    "properties": { "deviceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/deviceName",
+    "properties": { "deviceName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/deviceSecret",
+    "properties": { "deviceSecret": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/distanceM",
+    "properties": { "distanceM": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/driverId",
+    "properties": { "driverId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/driverInfo",
+    "properties": {
+      "driverInfo": "object",
+      "driverInfo.autoProvisionCallbackDevices.": "scaler",
+      "driverInfo.driverId.": "scaler",
+      "__undefined_0": "scaler",
+      "driverInfo.externalCloudInfoSchema.": "array",
+      "driverInfo.externalCloudInfoSchema..": "object",
+      "driverInfo.externalCloudInfoSchema...hidden.": "scaler",
+      "driverInfo.externalCloudInfoSchema...key.": "scaler",
+      "driverInfo.externalCloudInfoSchema...label.": "scaler",
+      "driverInfo.provider.": "scaler",
+      "driverInfo.strategy.": "object",
+      "driverInfo.strategy..managerId.": "scaler",
+      "driverInfo.strategy..name.": "scaler",
+      "driverInfo.version.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/durationS",
+    "properties": { "durationS": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/dwellingCount",
+    "properties": {
+      "dwellingCount": "allOf",
+      "__undefined_0": "object",
+      "dwellingCount..DWELLING_ENDED.": "scaler",
+      "dwellingCount..DWELLING_STARTED.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/emailBounce",
+    "properties": { "emailBounce": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/endIndex",
+    "properties": { "endIndex": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/endedAfter",
+    "properties": { "endedAfter": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/endedBefore",
+    "properties": { "endedBefore": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/epoSlice",
+    "properties": { "epoSlice": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/epoTypeEpo",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/epoTypeQepo",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/eventSourceWithoutStock",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/eventTypeDeviceCount",
+    "properties": { "eventTypeDeviceCount": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalCloudInfo",
+    "properties": { "externalCloudInfo": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalCloudInfoSchema",
+    "properties": {
+      "externalCloudInfoSchema": "array",
+      "externalCloudInfoSchema.": "object",
+      "externalCloudInfoSchema..hidden.": "scaler",
+      "externalCloudInfoSchema..key.": "scaler",
+      "externalCloudInfoSchema..label.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalCloudInfoSchemaItem",
+    "properties": {
+      "externalCloudInfoSchemaItem": "object",
+      "externalCloudInfoSchemaItem.hidden.": "scaler",
+      "externalCloudInfoSchemaItem.key.": "scaler",
+      "externalCloudInfoSchemaItem.label.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalDevice",
+    "properties": {
+      "externalDevice": "object",
+      "externalDevice.enabled.": "scaler",
+      "externalDevice.externalDeviceId.": "scaler",
+      "externalDevice.externalDeviceInfo.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalDeviceDetails",
+    "properties": {
+      "externalDeviceDetails": "object",
+      "externalDeviceDetails.enabled.": "scaler",
+      "externalDeviceDetails.externalDeviceId.": "scaler",
+      "externalDeviceDetails.externalDeviceInfo.": "primitive",
+      "externalDeviceDetails.info.": "primitive",
+      "externalDeviceDetails.localDeviceId.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalDeviceId",
+    "properties": { "externalDeviceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalDeviceInfo",
+    "properties": { "externalDeviceInfo": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalId",
+    "properties": { "externalId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/externalLocationId",
+    "properties": { "externalLocationId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/failed",
+    "properties": { "failed": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/fileName",
+    "properties": { "fileName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/geofenceCount",
+    "properties": {
+      "geofenceCount": "allOf",
+      "__undefined_0": "object",
+      "geofenceCount..INSIDE_GEOFENCE.": "scaler",
+      "geofenceCount..OUTSIDE_GEOFENCE.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/geofenceId",
+    "properties": { "geofenceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/geofenceIdValue",
+    "properties": {
+      "geofenceIdValue": "object",
+      "geofenceIdValue.geofenceId.": "scaler",
+      "geofenceIdValue.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/geofences",
+    "properties": { "geofences": "array", "geofences.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/getConnectorExternalDevicesResponse",
+    "properties": {
+      "getConnectorExternalDevicesResponse": "object",
+      "getConnectorExternalDevicesResponse.count.": "scaler",
+      "getConnectorExternalDevicesResponse.items.": "array",
+      "getConnectorExternalDevicesResponse.items..": "object",
+      "getConnectorExternalDevicesResponse.items...enabled.": "scaler",
+      "getConnectorExternalDevicesResponse.items...externalDeviceId.": "scaler",
+      "getConnectorExternalDevicesResponse.items...externalDeviceInfo.": "primitive",
+      "getConnectorExternalDevicesResponse.items...info.": "primitive",
+      "getConnectorExternalDevicesResponse.items...localDeviceId.": "scaler",
+      "__undefined_0": "scaler",
+      "getConnectorExternalDevicesResponse.limit.": "scaler",
+      "getConnectorExternalDevicesResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/getConnectorForExternalDeviceResponse",
+    "properties": {
+      "getConnectorForExternalDeviceResponse": "object",
+      "getConnectorForExternalDeviceResponse.items.": "array",
+      "getConnectorForExternalDeviceResponse.items..": "object",
+      "getConnectorForExternalDeviceResponse.items...connectorId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/getMetadataResponse",
+    "properties": {
+      "getMetadataResponse": "object",
+      "getMetadataResponse.completedAt.": "scaler",
+      "getMetadataResponse.createdAt.": "scaler",
+      "getMetadataResponse.dataId.": "scaler",
+      "getMetadataResponse.description.": "scaler",
+      "getMetadataResponse.name.": "scaler",
+      "getMetadataResponse.numberOfParts.": "scaler",
+      "getMetadataResponse.size.": "scaler",
+      "__undefined_0": "scaler",
+      "getMetadataResponse.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/getResultsResponse",
+    "properties": {
+      "getResultsResponse": "object",
+      "getResultsResponse.count.": "scaler",
+      "getResultsResponse.items.": "array",
+      "getResultsResponse.items..": "object",
+      "getResultsResponse.items...connectorId.": "scaler",
+      "getResultsResponse.items...deviceId.": "scaler",
+      "getResultsResponse.items...deviceSecret.": "scaler",
+      "getResultsResponse.items...errors.": "array",
+      "getResultsResponse.items...errors..": "object",
+      "getResultsResponse.items...errors...code.": "scaler",
+      "getResultsResponse.items...errors...details.": "scaler",
+      "getResultsResponse.items...errors...message.": "scaler",
+      "getResultsResponse.items...externalDeviceId.": "scaler",
+      "getResultsResponse.items...externalId.": "scaler",
+      "getResultsResponse.items...name.": "scaler",
+      "getResultsResponse.items...trackingId.": "scaler",
+      "getResultsResponse.limit.": "scaler",
+      "getResultsResponse.nextPageToken.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/getShipmentReportResultForMetricResponse",
+    "properties": {
+      "getShipmentReportResultForMetricResponse": "object",
+      "getShipmentReportResultForMetricResponse.count.": "scaler",
+      "getShipmentReportResultForMetricResponse.items.": "array",
+      "getShipmentReportResultForMetricResponse.items..": "object",
+      "getShipmentReportResultForMetricResponse.items...ids.": "object",
+      "getShipmentReportResultForMetricResponse.items...ids..locationId.": "scaler",
+      "getShipmentReportResultForMetricResponse.items...ids..segmentId.": "scaler",
+      "getShipmentReportResultForMetricResponse.items...ids..segmentPlanId.": "scaler",
+      "getShipmentReportResultForMetricResponse.items...ids..shipmentId.": "scaler",
+      "getShipmentReportResultForMetricResponse.items...ids..shipmentPlanId.": "scaler",
+      "getShipmentReportResultForMetricResponse.items...statistics.": "object",
+      "getShipmentReportResultForMetricResponse.items...statistics..avg.": "scaler",
+      "getShipmentReportResultForMetricResponse.items...statistics..val.": "scaler",
+      "getShipmentReportResultForMetricResponse.items...statisticsCount.": "scaler",
+      "getShipmentReportResultForMetricResponse.limit.": "scaler",
+      "getShipmentReportResultForMetricResponse.nextPageToken.": "scaler",
+      "getShipmentReportResultForMetricResponse.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/getShipmentReportStatusResponse",
+    "properties": {
+      "getShipmentReportStatusResponse": "object",
+      "getShipmentReportStatusResponse.error.": "object",
+      "getShipmentReportStatusResponse.error..code.": "scaler",
+      "getShipmentReportStatusResponse.error..details.": "primitive",
+      "getShipmentReportStatusResponse.error..error.": "scaler",
+      "getShipmentReportStatusResponse.error..id.": "scaler",
+      "getShipmentReportStatusResponse.error..message.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/getShipmentReportSummaryResponse",
+    "properties": {
+      "getShipmentReportSummaryResponse": "object",
+      "getShipmentReportSummaryResponse.completedAt.": "scaler",
+      "getShipmentReportSummaryResponse.createdAt.": "scaler",
+      "getShipmentReportSummaryResponse.totalLocationCount.": "scaler",
+      "getShipmentReportSummaryResponse.totalSegmentPlanCount.": "scaler",
+      "getShipmentReportSummaryResponse.totalSegmentsCount.": "scaler",
+      "getShipmentReportSummaryResponse.totalShipmentPlanCount.": "scaler",
+      "getShipmentReportSummaryResponse.totalShipmentsCount.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/getStatusResponse",
+    "properties": {
+      "getStatusResponse": "object",
+      "getStatusResponse.failed.": "scaler",
+      "getStatusResponse.fileName.": "scaler",
+      "getStatusResponse.partiallySucceeded.": "scaler",
+      "getStatusResponse.pending.": "scaler",
+      "getStatusResponse.progress.": "scaler",
+      "__undefined_0": "scaler",
+      "getStatusResponse.succeeded.": "scaler",
+      "getStatusResponse.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/gnssType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ids",
+    "properties": {
+      "ids": "object",
+      "ids.locationId.": "scaler",
+      "ids.segmentId.": "scaler",
+      "ids.segmentPlanId.": "scaler",
+      "ids.shipmentId.": "scaler",
+      "ids.shipmentPlanId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ingestSegmentBody",
+    "properties": {
+      "ingestSegmentBody": "object",
+      "ingestSegmentBody.calculatedEta.": "scaler",
+      "ingestSegmentBody.calculatedEtd.": "scaler",
+      "ingestSegmentBody.description.": "scaler",
+      "ingestSegmentBody.destination.": "scaler",
+      "ingestSegmentBody.endedAt.": "scaler",
+      "ingestSegmentBody.name.": "scaler",
+      "ingestSegmentBody.origin.": "scaler",
+      "ingestSegmentBody.providedEta.": "scaler",
+      "ingestSegmentBody.providedEtd.": "scaler",
+      "ingestSegmentBody.startedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "ingestSegmentBody.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/ingestShipmentBody",
+    "properties": {
+      "ingestShipmentBody": "object",
+      "ingestShipmentBody.segments.": "array",
+      "ingestShipmentBody.segments..": "object",
+      "ingestShipmentBody.segments...calculatedEta.": "scaler",
+      "ingestShipmentBody.segments...calculatedEtd.": "scaler",
+      "ingestShipmentBody.segments...description.": "scaler",
+      "ingestShipmentBody.segments...destination.": "scaler",
+      "ingestShipmentBody.segments...endedAt.": "scaler",
+      "ingestShipmentBody.segments...name.": "scaler",
+      "ingestShipmentBody.segments...origin.": "scaler",
+      "ingestShipmentBody.segments...providedEta.": "scaler",
+      "ingestShipmentBody.segments...providedEtd.": "scaler",
+      "ingestShipmentBody.segments...startedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "ingestShipmentBody.segments...trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/jobId",
+    "properties": { "jobId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/licenseInfoResult",
+    "properties": {
+      "licenseInfoResult": "object",
+      "licenseInfoResult.end.": "scaler",
+      "licenseInfoResult.licenses.": "array",
+      "licenseInfoResult.licenses..": "object",
+      "licenseInfoResult.licenses...appId.": "scaler",
+      "licenseInfoResult.licenses...expired.": "scaler",
+      "licenseInfoResult.licenses...expiryDate.": "scaler",
+      "licenseInfoResult.licenses...features.": "array",
+      "licenseInfoResult.licenses...features..": "scaler",
+      "licenseInfoResult.licenses...projectDescription.": "scaler",
+      "licenseInfoResult.licenses...projectHrn.": "scaler",
+      "licenseInfoResult.licenses...projectId.": "scaler",
+      "licenseInfoResult.licenses...projectName.": "scaler",
+      "licenseInfoResult.licenses...quota.": "object",
+      "licenseInfoResult.licenses...quota..provisioning.": "scaler",
+      "licenseInfoResult.licenses...realm.": "scaler",
+      "__undefined_0": "scaler",
+      "licenseInfoResult.start.": "scaler",
+      "licenseInfoResult.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/listMetadatasResponse",
+    "properties": {
+      "listMetadatasResponse": "object",
+      "listMetadatasResponse.count.": "scaler",
+      "listMetadatasResponse.items.": "array",
+      "listMetadatasResponse.items..": "object",
+      "listMetadatasResponse.items...completedAt.": "scaler",
+      "listMetadatasResponse.items...createdAt.": "scaler",
+      "listMetadatasResponse.items...dataId.": "scaler",
+      "listMetadatasResponse.items...description.": "scaler",
+      "listMetadatasResponse.items...name.": "scaler",
+      "listMetadatasResponse.items...numberOfParts.": "scaler",
+      "listMetadatasResponse.items...size.": "scaler",
+      "__undefined_0": "scaler",
+      "listMetadatasResponse.items...trackingId.": "scaler",
+      "listMetadatasResponse.limit.": "scaler",
+      "listMetadatasResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/listOfPeriods",
+    "properties": {
+      "listOfPeriods": "object",
+      "listOfPeriods.timestamp.": "scaler",
+      "listOfPeriods.trackingId.": "scaler",
+      "listOfPeriods.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/listPartsResponse",
+    "properties": {
+      "listPartsResponse": "object",
+      "listPartsResponse.count.": "scaler",
+      "listPartsResponse.items.": "array",
+      "listPartsResponse.items..": "object",
+      "listPartsResponse.items...md5.": "scaler",
+      "listPartsResponse.items...partNumber.": "scaler",
+      "listPartsResponse.items...size.": "scaler",
+      "__undefined_0": "scaler",
+      "listPartsResponse.limit.": "scaler",
+      "listPartsResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/listProjectsJobsResponse",
+    "properties": {
+      "listProjectsJobsResponse": "object",
+      "listProjectsJobsResponse.count.": "scaler",
+      "listProjectsJobsResponse.items.": "array",
+      "listProjectsJobsResponse.items..": "object",
+      "listProjectsJobsResponse.items...jobId.": "scaler",
+      "__undefined_0": "scaler",
+      "listProjectsJobsResponse.limit.": "scaler",
+      "listProjectsJobsResponse.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/localDeviceId",
+    "properties": { "localDeviceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/managerId",
+    "properties": { "managerId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/md5Digest",
+    "properties": { "md5Digest": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/mediatekEpoConfig",
+    "properties": {
+      "mediatekEpoConfig": "object",
+      "mediatekEpoConfig.epoSlice.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/mediatekQepoConfig",
+    "properties": { "mediatekQepoConfig": "object", "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/metadataItem",
+    "properties": {
+      "metadataItem": "object",
+      "metadataItem.completedAt.": "scaler",
+      "metadataItem.createdAt.": "scaler",
+      "metadataItem.dataId.": "scaler",
+      "metadataItem.description.": "scaler",
+      "metadataItem.name.": "scaler",
+      "metadataItem.numberOfParts.": "scaler",
+      "metadataItem.size.": "scaler",
+      "__undefined_0": "scaler",
+      "metadataItem.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/metric",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/metricStatistics",
+    "properties": {
+      "metricStatistics": "object",
+      "metricStatistics.avg.": "scaler",
+      "metricStatistics.val.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/name",
+    "properties": { "name": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/numberOfParts",
+    "properties": { "numberOfParts": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/origin",
+    "properties": { "origin": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/paginated1000ResponseCount",
+    "properties": { "paginated1000ResponseCount": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/paginated1000ResponseLimit",
+    "properties": { "paginated1000ResponseLimit": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/paginatedResponseTotal",
+    "properties": { "paginatedResponseTotal": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/partItem",
+    "properties": {
+      "partItem": "object",
+      "partItem.md5.": "scaler",
+      "partItem.partNumber.": "scaler",
+      "partItem.size.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/partNumber",
+    "properties": { "partNumber": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/partSize",
+    "properties": { "partSize": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/partStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/partiallySucceeded",
+    "properties": { "partiallySucceeded": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/pending",
+    "properties": { "pending": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/planFromBody",
+    "properties": {
+      "planFromBody": "object",
+      "planFromBody.autoStart.": "scaler",
+      "planFromBody.description.": "scaler",
+      "planFromBody.name.": "scaler",
+      "planFromBody.ruleIds.": "array",
+      "planFromBody.ruleIds..": "scaler",
+      "planFromBody.segments.": "array",
+      "planFromBody.segments..": "object",
+      "planFromBody.segments...description.": "scaler",
+      "planFromBody.segments...destination.": "scaler",
+      "planFromBody.segments...durationS.": "scaler",
+      "planFromBody.segments...name.": "scaler",
+      "planFromBody.segments...origin.": "scaler",
+      "planFromBody.segments...trackingId.": "scaler",
+      "__undefined_0": "scaler",
+      "planFromBody.subShipment.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/planFromShipmentId",
+    "properties": {
+      "planFromShipmentId": "object",
+      "planFromShipmentId.options.": "object",
+      "__undefined_0": "scaler",
+      "planFromShipmentId.options..copyTrackingIds.": "scaler",
+      "planFromShipmentId.shipmentId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/polygon",
+    "properties": {
+      "polygon": "object",
+      "polygon.floor.": "object",
+      "polygon.floor..id.": "scaler",
+      "polygon.floor..level.": "scaler",
+      "polygon.floor..name.": "scaler",
+      "polygon.points.": "array",
+      "polygon.points..": "object",
+      "polygon.points...lat.": "scaler",
+      "polygon.points...lng.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/postRequestBody",
+    "properties": {
+      "postRequestBody": "object",
+      "postRequestBody.end.": "scaler",
+      "postRequestBody.ruleId.": "scaler",
+      "postRequestBody.start.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/postResponseBody",
+    "properties": {
+      "postResponseBody": "object",
+      "postResponseBody.reportId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/progress",
+    "properties": { "progress": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/projectIds",
+    "properties": { "projectIds": "array", "projectIds.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/projectType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/projectTypes",
+    "properties": { "projectTypes": "array", "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/providerMediatek",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/provisionedAndClaimedDevice",
+    "properties": {
+      "provisionedAndClaimedDevice": "object",
+      "provisionedAndClaimedDevice.deviceId.": "scaler",
+      "provisionedAndClaimedDevice.deviceSecret.": "scaler",
+      "provisionedAndClaimedDevice.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/provisionedDevice",
+    "properties": {
+      "provisionedDevice": "object",
+      "provisionedDevice.deviceId.": "scaler",
+      "provisionedDevice.deviceSecret.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/provisionedDevicesResults",
+    "properties": {
+      "provisionedDevicesResults": "allOf",
+      "provisionedDevicesResults.": "object",
+      "provisionedDevicesResults..count.": "scaler",
+      "provisionedDevicesResults..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rangeCount",
+    "properties": {
+      "rangeCount": "allOf",
+      "__undefined_0": "object",
+      "rangeCount..ABOVE_RANGE.": "scaler",
+      "rangeCount..BELOW_RANGE.": "scaler",
+      "rangeCount..IN_RANGE.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/registerRequestBodyV3",
+    "properties": {
+      "registerRequestBodyV3": "object",
+      "__undefined_0": "scaler",
+      "registerRequestBodyV3.initialState.": "scaler",
+      "registerRequestBodyV3.ruleId.": "scaler",
+      "registerRequestBodyV3.url.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/registerResponseBodyV3",
+    "properties": {
+      "registerResponseBodyV3": "object",
+      "registerResponseBodyV3.registration.": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/registrationInfo",
+    "properties": { "registrationInfo": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/removeExternalDeviceBatch",
+    "properties": {
+      "removeExternalDeviceBatch": "object",
+      "removeExternalDeviceBatch.externalDeviceIds.": "array",
+      "removeExternalDeviceBatch.externalDeviceIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/removeFromConnectorOnly",
+    "properties": { "removeFromConnectorOnly": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/reportId",
+    "properties": { "reportId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/reportItems",
+    "properties": { "reportItems": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/requestBodyProjectFeatures",
+    "properties": { "requestBodyProjectFeatures": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/requestBodyResources",
+    "properties": {
+      "requestBodyResources": "object",
+      "requestBodyResources.filters.": "array",
+      "requestBodyResources.filters..": "primitive"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/requestLogin",
+    "properties": {
+      "requestLogin": "object",
+      "requestLogin.email.": "scaler",
+      "requestLogin.password.": "scaler",
+      "requestLogin.realm.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/requestRefresh",
+    "properties": {
+      "requestRefresh": "object",
+      "requestRefresh.accessToken.": "scaler",
+      "requestRefresh.refreshToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/requestRetrieveBatch",
+    "properties": {
+      "requestRetrieveBatch": "array",
+      "requestRetrieveBatch.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/requestTokenExchange",
+    "properties": {
+      "requestTokenExchange": "object",
+      "requestTokenExchange.accessToken.": "scaler",
+      "requestTokenExchange.scope.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/resourceId",
+    "properties": { "resourceId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/resourceType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseAliases",
+    "properties": {
+      "responseAliases": "allOf",
+      "responseAliases.": "object",
+      "responseAliases..count.": "scaler",
+      "responseAliases..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseAllAliases",
+    "properties": {
+      "responseAllAliases": "allOf",
+      "responseAllAliases.": "object",
+      "responseAllAliases..count.": "scaler",
+      "responseAllAliases..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseAllLocations",
+    "properties": {
+      "responseAllLocations": "object",
+      "responseAllLocations.count.": "scaler",
+      "responseAllLocations.items.": "array",
+      "responseAllLocations.items..": "object",
+      "responseAllLocations.items...address.": "object",
+      "responseAllLocations.items...address..city.": "scaler",
+      "responseAllLocations.items...address..country.": "scaler",
+      "responseAllLocations.items...address..postalCode.": "scaler",
+      "responseAllLocations.items...address..state.": "scaler",
+      "responseAllLocations.items...address..street.": "scaler",
+      "responseAllLocations.items...description.": "scaler",
+      "responseAllLocations.items...externalLocationId.": "scaler",
+      "responseAllLocations.items...geofenceId.": "scaler",
+      "responseAllLocations.items...location.": "object",
+      "responseAllLocations.items...location..lat.": "scaler",
+      "responseAllLocations.items...location..lng.": "scaler",
+      "responseAllLocations.items...locationId.": "scaler",
+      "responseAllLocations.items...name.": "scaler",
+      "responseAllLocations.limit.": "scaler",
+      "responseAllLocations.nextPageToken.": "scaler",
+      "responseAllLocations.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseAllShadowsV4",
+    "properties": {
+      "responseAllShadowsV4": "object",
+      "responseAllShadowsV4.count.": "scaler",
+      "responseAllShadowsV4.items.": "array",
+      "responseAllShadowsV4.items..": "object",
+      "responseAllShadowsV4.items...appId.": "scaler",
+      "responseAllShadowsV4.items...externalId.": "scaler",
+      "responseAllShadowsV4.items...shadow.": "object",
+      "responseAllShadowsV4.items...shadow..desired.": "object",
+      "responseAllShadowsV4.items...shadow..desired..payload.": "primitive",
+      "responseAllShadowsV4.items...shadow..desired..system.": "object",
+      "responseAllShadowsV4.items...shadow..desired..system..detectOutliers.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..disableTracking.": "object",
+      "responseAllShadowsV4.items...shadow..desired..system..disableTracking..periods.": "array",
+      "responseAllShadowsV4.items...shadow..desired..system..disableTracking..periods..": "object",
+      "responseAllShadowsV4.items...shadow..desired..system..disableTracking..periods...begin.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..disableTracking..periods...end.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..disableTracking..position.": "primitive",
+      "responseAllShadowsV4.items...shadow..desired..system..disableTracking..sensors.": "primitive",
+      "responseAllShadowsV4.items...shadow..desired..system..lastModifiedGeofenceTimestamp.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..rate.": "object",
+      "responseAllShadowsV4.items...shadow..desired..system..rate..distanceM.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..rate..sampleMs.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..rate..sendMs.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig.": "object",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertAccelerationGMax.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertAccelerationGMin.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertBatteryLevelPMax.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertBatteryLevelPMin.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertPressureHpaMax.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertPressureHpaMin.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertRelativeHumidityMax.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertRelativeHumidityMin.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertTemperatureCMax.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertTemperatureCMin.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertTiltDegreeMax.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..alertTiltDegreeMin.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..isAttachAlertEnabled.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorAlarmConfig..isTamperAlertEnabled.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorLoggingConfigurations.": "array",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorLoggingConfigurations..": "object",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorLoggingConfigurations...samplingFrequency.": "scaler",
+      "__undefined_0": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..sensorLoggingEnabled.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..stateVersion.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..syncGeofences.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..wlanConfigurations.": "array",
+      "responseAllShadowsV4.items...shadow..desired..system..wlanConfigurations..": "object",
+      "responseAllShadowsV4.items...shadow..desired..system..wlanConfigurations...password.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..wlanConfigurations...ssid.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..wlanConfigurations...ssidIsHidden.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..system..wlanConnectivityEnabled.": "scaler",
+      "responseAllShadowsV4.items...shadow..desired..timestamp.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported.": "object",
+      "responseAllShadowsV4.items...shadow..reported..payload.": "primitive",
+      "responseAllShadowsV4.items...shadow..reported..position.": "object",
+      "responseAllShadowsV4.items...shadow..reported..position..accuracy.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..alt.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..altaccuracy.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..confidence.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..floor.": "object",
+      "responseAllShadowsV4.items...shadow..reported..position..floor..id.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..floor..level.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..floor..name.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..heading.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..lat.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..lng.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..satellitecount.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..speed.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..timestamp.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..type.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..position..wlancount.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system.": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..client.": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..client..accelerometerSensorRange.": "array",
+      "responseAllShadowsV4.items...shadow..reported..system..client..accelerometerSensorRange..": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..diagnosticscode.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..diskquota.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..firmware.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..hasAccelerometerSensor.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..hasAttachSensor.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..hasHumiditySensor.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..hasNoBattery.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..hasPressureSensor.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..hasTamperSensor.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..hasTemperatureSensor.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..homenetwork.": "array",
+      "responseAllShadowsV4.items...shadow..reported..system..client..homenetwork..": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..client..homenetwork...mcc.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..homenetwork...mnc.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..homenetwork...nid.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..homenetwork...sid.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..manufacturer.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..model.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..modules.": "array",
+      "responseAllShadowsV4.items...shadow..reported..system..client..modules..": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..client..modules...firmwareVersion.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..modules...manufacturer.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..modules...model.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..name.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..platform.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..client..version.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed.": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..lastMovedTimestamp.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..moving.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..online.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..outlier.": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..outlier..correctedPosition.": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..outlier..correctedPosition..accuracy.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..outlier..correctedPosition..lat.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..outlier..correctedPosition..lng.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..outlier..correctedPosition..timestamp.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..computed..outlier..reason.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..iccid.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..imsi.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..phoneNumber.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData.": "object",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..accelerationG.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..batteryIsCharging.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..batteryLevel.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..deviceIsAttached.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..deviceIsStationary.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..deviceIsTampered.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..pressureHpa.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..relativeHumidity.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..temperatureC.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..reportedSensorData..tiltDegree.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..system..stateVersion.": "scaler",
+      "responseAllShadowsV4.items...shadow..reported..timestamp.": "scaler",
+      "responseAllShadowsV4.items...trackingId.": "scaler",
+      "responseAllShadowsV4.limit.": "scaler",
+      "responseAllShadowsV4.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseAllShipmentPlans",
+    "properties": {
+      "responseAllShipmentPlans": "object",
+      "responseAllShipmentPlans.count.": "scaler",
+      "responseAllShipmentPlans.items.": "array",
+      "responseAllShipmentPlans.items..": "object",
+      "responseAllShipmentPlans.items...autoStart.": "scaler",
+      "responseAllShipmentPlans.items...createdAt.": "scaler",
+      "responseAllShipmentPlans.items...description.": "scaler",
+      "responseAllShipmentPlans.items...name.": "scaler",
+      "responseAllShipmentPlans.items...ruleIds.": "array",
+      "responseAllShipmentPlans.items...ruleIds..": "scaler",
+      "responseAllShipmentPlans.items...segments.": "array",
+      "responseAllShipmentPlans.items...segments..": "object",
+      "responseAllShipmentPlans.items...segments...description.": "scaler",
+      "responseAllShipmentPlans.items...segments...destination.": "scaler",
+      "responseAllShipmentPlans.items...segments...durationS.": "scaler",
+      "responseAllShipmentPlans.items...segments...name.": "scaler",
+      "responseAllShipmentPlans.items...segments...origin.": "scaler",
+      "responseAllShipmentPlans.items...segments...segmentPlanId.": "scaler",
+      "responseAllShipmentPlans.items...segments...trackingId.": "scaler",
+      "__undefined_0": "scaler",
+      "responseAllShipmentPlans.items...shipmentPlanId.": "scaler",
+      "responseAllShipmentPlans.items...subShipment.": "scaler",
+      "responseAllShipmentPlans.limit.": "scaler",
+      "responseAllShipmentPlans.nextPageToken.": "scaler",
+      "responseAllShipmentPlans.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseAllShipments",
+    "properties": {
+      "responseAllShipments": "object",
+      "responseAllShipments.count.": "scaler",
+      "responseAllShipments.items.": "array",
+      "responseAllShipments.items..": "object",
+      "responseAllShipments.items...autoStart.": "scaler",
+      "responseAllShipments.items...calculatedEta.": "scaler",
+      "responseAllShipments.items...calculatedEtd.": "scaler",
+      "responseAllShipments.items...createdAt.": "scaler",
+      "responseAllShipments.items...description.": "scaler",
+      "responseAllShipments.items...endedAt.": "scaler",
+      "responseAllShipments.items...name.": "scaler",
+      "responseAllShipments.items...providedEta.": "scaler",
+      "responseAllShipments.items...providedEtd.": "scaler",
+      "responseAllShipments.items...ruleIds.": "array",
+      "responseAllShipments.items...ruleIds..": "scaler",
+      "responseAllShipments.items...segments.": "array",
+      "responseAllShipments.items...segments..": "object",
+      "responseAllShipments.items...segments...calculatedEta.": "scaler",
+      "responseAllShipments.items...segments...calculatedEtd.": "scaler",
+      "responseAllShipments.items...segments...createdAt.": "scaler",
+      "responseAllShipments.items...segments...description.": "scaler",
+      "responseAllShipments.items...segments...destination.": "scaler",
+      "responseAllShipments.items...segments...endedAt.": "scaler",
+      "responseAllShipments.items...segments...name.": "scaler",
+      "responseAllShipments.items...segments...origin.": "scaler",
+      "responseAllShipments.items...segments...providedEta.": "scaler",
+      "responseAllShipments.items...segments...providedEtd.": "scaler",
+      "responseAllShipments.items...segments...segmentId.": "scaler",
+      "responseAllShipments.items...segments...startedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "responseAllShipments.items...segments...trackingId.": "scaler",
+      "responseAllShipments.items...shipmentId.": "scaler",
+      "responseAllShipments.items...shipmentPlanId.": "scaler",
+      "responseAllShipments.items...startedAt.": "scaler",
+      "responseAllShipments.items...subShipment.": "scaler",
+      "responseAllShipments.limit.": "scaler",
+      "responseAllShipments.nextPageToken.": "scaler",
+      "responseAllShipments.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseAssociationRule",
+    "properties": {
+      "responseAssociationRule": "object",
+      "responseAssociationRule.rule.": "primitive",
+      "responseAssociationRule.ruleId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseCount",
+    "properties": {
+      "responseCount": "object",
+      "responseCount.count.": "scaler",
+      "responseCount.updatedAt.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseCreateDeviceLicenses",
+    "properties": {
+      "responseCreateDeviceLicenses": "object",
+      "responseCreateDeviceLicenses.jobId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseCreateGeofence",
+    "properties": {
+      "responseCreateGeofence": "object",
+      "responseCreateGeofence.id.": "scaler",
+      "responseCreateGeofence.message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseCreateLocation",
+    "properties": {
+      "responseCreateLocation": "object",
+      "responseCreateLocation.locationId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseCreateRule",
+    "properties": {
+      "responseCreateRule": "object",
+      "responseCreateRule.id.": "scaler",
+      "responseCreateRule.message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseCreateShipment",
+    "properties": {
+      "responseCreateShipment": "object",
+      "responseCreateShipment.shipmentId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseCreateShipmentPlan",
+    "properties": {
+      "responseCreateShipmentPlan": "object",
+      "responseCreateShipmentPlan.shipmentPlanId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseDevicesAssociatedWithRule",
+    "properties": {
+      "responseDevicesAssociatedWithRule": "allOf",
+      "responseDevicesAssociatedWithRule.": "object",
+      "responseDevicesAssociatedWithRule..count.": "scaler",
+      "responseDevicesAssociatedWithRule..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetMetadataBatchDevices",
+    "properties": {
+      "responseGetMetadataBatchDevices": "allOf",
+      "responseGetMetadataBatchDevices.": "object",
+      "responseGetMetadataBatchDevices..count.": "scaler",
+      "responseGetMetadataBatchDevices..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetMetadataBatchGeofences",
+    "properties": {
+      "responseGetMetadataBatchGeofences": "allOf",
+      "responseGetMetadataBatchGeofences.": "object",
+      "responseGetMetadataBatchGeofences..count.": "scaler",
+      "responseGetMetadataBatchGeofences..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetMetadataBatchSensorRules",
+    "properties": {
+      "responseGetMetadataBatchSensorRules": "allOf",
+      "responseGetMetadataBatchSensorRules.": "object",
+      "responseGetMetadataBatchSensorRules..count.": "scaler",
+      "responseGetMetadataBatchSensorRules..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetMetadataDevices",
+    "properties": {
+      "responseGetMetadataDevices": "object",
+      "responseGetMetadataDevices.data.": "primitive",
+      "responseGetMetadataDevices.id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetMetadataGeofences",
+    "properties": {
+      "responseGetMetadataGeofences": "object",
+      "responseGetMetadataGeofences.data.": "primitive",
+      "responseGetMetadataGeofences.id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetMetadataSensorRules",
+    "properties": {
+      "responseGetMetadataSensorRules": "object",
+      "responseGetMetadataSensorRules.data.": "primitive",
+      "responseGetMetadataSensorRules.id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetMetadataUser",
+    "properties": {
+      "responseGetMetadataUser": "object",
+      "responseGetMetadataUser.data.": "primitive",
+      "responseGetMetadataUser.id.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseGetconnectors",
+    "properties": {
+      "responseGetconnectors": "object",
+      "responseGetconnectors.count.": "scaler",
+      "responseGetconnectors.items.": "array",
+      "responseGetconnectors.items..": "allOf",
+      "responseGetconnectors.items...": "object",
+      "responseGetconnectors.items....connectorId.": "scaler",
+      "responseGetconnectors.items....projectId.": "scaler",
+      "responseGetconnectors.limit.": "scaler",
+      "responseGetconnectors.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseJobResults",
+    "properties": {
+      "responseJobResults": "allOf",
+      "responseJobResults.": "object",
+      "responseJobResults..count.": "scaler",
+      "responseJobResults..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseJobStatus",
+    "properties": {
+      "responseJobStatus": "object",
+      "responseJobStatus.percent.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseLabelByJson",
+    "properties": {
+      "responseLabelByJson": "object",
+      "responseLabelByJson.labels.": "primitive",
+      "responseLabelByJson.resourceId.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseLabelsByJson",
+    "properties": {
+      "responseLabelsByJson": "object",
+      "responseLabelsByJson.count.": "scaler",
+      "responseLabelsByJson.items.": "array",
+      "responseLabelsByJson.items..": "object",
+      "responseLabelsByJson.items...labels.": "primitive",
+      "responseLabelsByJson.items...resourceId.": "scaler",
+      "__undefined_0": "scaler",
+      "responseLabelsByJson.limit.": "scaler",
+      "responseLabelsByJson.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseListDevices",
+    "properties": {
+      "responseListDevices": "allOf",
+      "responseListDevices.": "object",
+      "responseListDevices..count.": "scaler",
+      "responseListDevices..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseLocationBody",
+    "properties": {
+      "responseLocationBody": "object",
+      "responseLocationBody.address.": "object",
+      "responseLocationBody.address..city.": "scaler",
+      "responseLocationBody.address..country.": "scaler",
+      "responseLocationBody.address..postalCode.": "scaler",
+      "responseLocationBody.address..state.": "scaler",
+      "responseLocationBody.address..street.": "scaler",
+      "responseLocationBody.description.": "scaler",
+      "responseLocationBody.externalLocationId.": "scaler",
+      "responseLocationBody.geofenceId.": "scaler",
+      "responseLocationBody.location.": "object",
+      "responseLocationBody.location..lat.": "scaler",
+      "responseLocationBody.location..lng.": "scaler",
+      "responseLocationBody.locationId.": "scaler",
+      "responseLocationBody.name.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseLogin",
+    "properties": {
+      "responseLogin": "object",
+      "responseLogin.accessToken.": "scaler",
+      "responseLogin.expiresIn.": "scaler",
+      "responseLogin.realm.": "scaler",
+      "responseLogin.refreshToken.": "scaler",
+      "responseLogin.tokenType.": "scaler",
+      "responseLogin.userId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseProjectFeatures",
+    "properties": {
+      "responseProjectFeatures": "object",
+      "responseProjectFeatures.data.": "primitive",
+      "responseProjectFeatures.indoorPositioning.": "scaler",
+      "responseProjectFeatures.licenseStatus.": "object",
+      "responseProjectFeatures.licenseStatus..expired.": "scaler",
+      "responseProjectFeatures.licenseStatus..expiryDate.": "scaler",
+      "responseProjectFeatures.licenseType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseRegistrations",
+    "properties": {
+      "responseRegistrations": "object",
+      "responseRegistrations.count.": "scaler",
+      "responseRegistrations.data.": "array",
+      "responseRegistrations.data..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseRegistrationsV3",
+    "properties": {
+      "responseRegistrationsV3": "allOf",
+      "responseRegistrationsV3.": "object",
+      "responseRegistrationsV3..count.": "scaler",
+      "responseRegistrationsV3..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseRelevantShipments",
+    "properties": {
+      "responseRelevantShipments": "object",
+      "responseRelevantShipments.items.": "array",
+      "responseRelevantShipments.items..": "object",
+      "responseRelevantShipments.items...currentSegmentCalculatedEta.": "scaler",
+      "responseRelevantShipments.items...currentSegmentCalculatedEtd.": "scaler",
+      "responseRelevantShipments.items...currentSegmentId.": "scaler",
+      "responseRelevantShipments.items...currentSegmentProvidedEta.": "scaler",
+      "responseRelevantShipments.items...currentSegmentProvidedEtd.": "scaler",
+      "responseRelevantShipments.items...currentSegmentStartedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "responseRelevantShipments.items...shipmentId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseReportsByJson",
+    "properties": {
+      "responseReportsByJson": "object",
+      "responseReportsByJson.count.": "scaler",
+      "responseReportsByJson.items.": "array",
+      "responseReportsByJson.items..": "primitive",
+      "responseReportsByJson.limit.": "scaler",
+      "responseReportsByJson.nextPageToken.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseResources",
+    "properties": {
+      "responseResources": "object",
+      "responseResources.count.": "scaler",
+      "responseResources.items.": "array",
+      "responseResources.items..": "object",
+      "responseResources.items...resourceId.": "scaler",
+      "responseResources.limit.": "scaler",
+      "responseResources.nextPageToken.": "scaler",
+      "responseResources.total.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseRetrieveBatch",
+    "properties": {
+      "responseRetrieveBatch": "array",
+      "responseRetrieveBatch.": "object",
+      "responseRetrieveBatch..appId.": "scaler",
+      "responseRetrieveBatch..body.": "object",
+      "responseRetrieveBatch..body..desired.": "object",
+      "responseRetrieveBatch..body..desired..payload.": "primitive",
+      "responseRetrieveBatch..body..desired..system.": "object",
+      "responseRetrieveBatch..body..desired..system..detectOutliers.": "scaler",
+      "responseRetrieveBatch..body..desired..system..disableTracking.": "object",
+      "responseRetrieveBatch..body..desired..system..disableTracking..periods.": "array",
+      "responseRetrieveBatch..body..desired..system..disableTracking..periods..": "object",
+      "responseRetrieveBatch..body..desired..system..disableTracking..periods...begin.": "scaler",
+      "responseRetrieveBatch..body..desired..system..disableTracking..periods...end.": "scaler",
+      "responseRetrieveBatch..body..desired..system..disableTracking..position.": "primitive",
+      "responseRetrieveBatch..body..desired..system..disableTracking..sensors.": "primitive",
+      "responseRetrieveBatch..body..desired..system..lastModifiedGeofenceTimestamp.": "scaler",
+      "responseRetrieveBatch..body..desired..system..rate.": "object",
+      "responseRetrieveBatch..body..desired..system..rate..distanceM.": "scaler",
+      "responseRetrieveBatch..body..desired..system..rate..sampleMs.": "scaler",
+      "responseRetrieveBatch..body..desired..system..rate..sendMs.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig.": "object",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertAccelerationGMax.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertAccelerationGMin.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertBatteryLevelPMax.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertBatteryLevelPMin.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertPressureHpaMax.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertPressureHpaMin.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertRelativeHumidityMax.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertRelativeHumidityMin.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertTemperatureCMax.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertTemperatureCMin.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertTiltDegreeMax.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..alertTiltDegreeMin.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..isAttachAlertEnabled.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorAlarmConfig..isTamperAlertEnabled.": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorLoggingConfigurations.": "array",
+      "responseRetrieveBatch..body..desired..system..sensorLoggingConfigurations..": "object",
+      "responseRetrieveBatch..body..desired..system..sensorLoggingConfigurations...samplingFrequency.": "scaler",
+      "__undefined_0": "scaler",
+      "responseRetrieveBatch..body..desired..system..sensorLoggingEnabled.": "scaler",
+      "responseRetrieveBatch..body..desired..system..stateVersion.": "scaler",
+      "responseRetrieveBatch..body..desired..system..syncGeofences.": "scaler",
+      "responseRetrieveBatch..body..desired..system..wlanConfigurations.": "array",
+      "responseRetrieveBatch..body..desired..system..wlanConfigurations..": "object",
+      "responseRetrieveBatch..body..desired..system..wlanConfigurations...password.": "scaler",
+      "responseRetrieveBatch..body..desired..system..wlanConfigurations...ssid.": "scaler",
+      "responseRetrieveBatch..body..desired..system..wlanConfigurations...ssidIsHidden.": "scaler",
+      "responseRetrieveBatch..body..desired..system..wlanConnectivityEnabled.": "scaler",
+      "responseRetrieveBatch..body..desired..timestamp.": "scaler",
+      "responseRetrieveBatch..body..reported.": "object",
+      "responseRetrieveBatch..body..reported..payload.": "primitive",
+      "responseRetrieveBatch..body..reported..position.": "object",
+      "responseRetrieveBatch..body..reported..position..accuracy.": "scaler",
+      "responseRetrieveBatch..body..reported..position..alt.": "scaler",
+      "responseRetrieveBatch..body..reported..position..altaccuracy.": "scaler",
+      "responseRetrieveBatch..body..reported..position..confidence.": "scaler",
+      "responseRetrieveBatch..body..reported..position..floor.": "object",
+      "responseRetrieveBatch..body..reported..position..floor..id.": "scaler",
+      "responseRetrieveBatch..body..reported..position..floor..level.": "scaler",
+      "responseRetrieveBatch..body..reported..position..floor..name.": "scaler",
+      "responseRetrieveBatch..body..reported..position..heading.": "scaler",
+      "responseRetrieveBatch..body..reported..position..lat.": "scaler",
+      "responseRetrieveBatch..body..reported..position..lng.": "scaler",
+      "responseRetrieveBatch..body..reported..position..satellitecount.": "scaler",
+      "responseRetrieveBatch..body..reported..position..speed.": "scaler",
+      "responseRetrieveBatch..body..reported..position..timestamp.": "scaler",
+      "responseRetrieveBatch..body..reported..position..type.": "scaler",
+      "responseRetrieveBatch..body..reported..position..wlancount.": "scaler",
+      "responseRetrieveBatch..body..reported..system.": "object",
+      "responseRetrieveBatch..body..reported..system..client.": "object",
+      "responseRetrieveBatch..body..reported..system..client..accelerometerSensorRange.": "array",
+      "responseRetrieveBatch..body..reported..system..client..accelerometerSensorRange..": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..diagnosticscode.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..diskquota.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..firmware.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..hasAccelerometerSensor.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..hasAttachSensor.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..hasHumiditySensor.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..hasNoBattery.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..hasPressureSensor.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..hasTamperSensor.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..hasTemperatureSensor.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..homenetwork.": "array",
+      "responseRetrieveBatch..body..reported..system..client..homenetwork..": "object",
+      "responseRetrieveBatch..body..reported..system..client..homenetwork...mcc.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..homenetwork...mnc.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..homenetwork...nid.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..homenetwork...sid.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..manufacturer.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..model.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..modules.": "array",
+      "responseRetrieveBatch..body..reported..system..client..modules..": "object",
+      "responseRetrieveBatch..body..reported..system..client..modules...firmwareVersion.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..modules...manufacturer.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..modules...model.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..name.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..platform.": "scaler",
+      "responseRetrieveBatch..body..reported..system..client..version.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed.": "object",
+      "responseRetrieveBatch..body..reported..system..computed..lastMovedTimestamp.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed..moving.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed..online.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed..outlier.": "object",
+      "responseRetrieveBatch..body..reported..system..computed..outlier..correctedPosition.": "object",
+      "responseRetrieveBatch..body..reported..system..computed..outlier..correctedPosition..accuracy.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed..outlier..correctedPosition..lat.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed..outlier..correctedPosition..lng.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed..outlier..correctedPosition..timestamp.": "scaler",
+      "responseRetrieveBatch..body..reported..system..computed..outlier..reason.": "scaler",
+      "responseRetrieveBatch..body..reported..system..iccid.": "scaler",
+      "responseRetrieveBatch..body..reported..system..imsi.": "scaler",
+      "responseRetrieveBatch..body..reported..system..phoneNumber.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData.": "object",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..accelerationG.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..batteryIsCharging.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..batteryLevel.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..deviceIsAttached.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..deviceIsStationary.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..deviceIsTampered.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..pressureHpa.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..relativeHumidity.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..temperatureC.": "scaler",
+      "responseRetrieveBatch..body..reported..system..reportedSensorData..tiltDegree.": "scaler",
+      "responseRetrieveBatch..body..reported..system..stateVersion.": "scaler",
+      "responseRetrieveBatch..body..reported..timestamp.": "scaler",
+      "responseRetrieveBatch..externalId.": "scaler",
+      "responseRetrieveBatch..statusCode.": "scaler",
+      "responseRetrieveBatch..trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseRuleByJson",
+    "properties": {
+      "responseRuleByJson": "object",
+      "responseRuleByJson.rule.": "primitive",
+      "responseRuleByJson.ruleId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseRulesByJson",
+    "properties": {
+      "responseRulesByJson": "object",
+      "responseRulesByJson.count.": "scaler",
+      "responseRulesByJson.items.": "array",
+      "responseRulesByJson.items..": "object",
+      "responseRulesByJson.items...rule.": "primitive",
+      "responseRulesByJson.items...ruleId.": "scaler",
+      "responseRulesByJson.limit.": "scaler",
+      "responseRulesByJson.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseSegmentBody",
+    "properties": {
+      "responseSegmentBody": "object",
+      "responseSegmentBody.calculatedEta.": "scaler",
+      "responseSegmentBody.calculatedEtd.": "scaler",
+      "responseSegmentBody.createdAt.": "scaler",
+      "responseSegmentBody.description.": "scaler",
+      "responseSegmentBody.destination.": "scaler",
+      "responseSegmentBody.endedAt.": "scaler",
+      "responseSegmentBody.name.": "scaler",
+      "responseSegmentBody.origin.": "scaler",
+      "responseSegmentBody.providedEta.": "scaler",
+      "responseSegmentBody.providedEtd.": "scaler",
+      "responseSegmentBody.segmentId.": "scaler",
+      "responseSegmentBody.startedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "responseSegmentBody.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseSegmentPlanBody",
+    "properties": {
+      "responseSegmentPlanBody": "object",
+      "responseSegmentPlanBody.description.": "scaler",
+      "responseSegmentPlanBody.destination.": "scaler",
+      "responseSegmentPlanBody.durationS.": "scaler",
+      "responseSegmentPlanBody.name.": "scaler",
+      "responseSegmentPlanBody.origin.": "scaler",
+      "responseSegmentPlanBody.segmentPlanId.": "scaler",
+      "responseSegmentPlanBody.trackingId.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseSegmentsWithShipmentId",
+    "properties": {
+      "responseSegmentsWithShipmentId": "object",
+      "responseSegmentsWithShipmentId.count.": "scaler",
+      "responseSegmentsWithShipmentId.items.": "array",
+      "responseSegmentsWithShipmentId.items..": "object",
+      "responseSegmentsWithShipmentId.items...calculatedEta.": "scaler",
+      "responseSegmentsWithShipmentId.items...calculatedEtd.": "scaler",
+      "responseSegmentsWithShipmentId.items...createdAt.": "scaler",
+      "responseSegmentsWithShipmentId.items...description.": "scaler",
+      "responseSegmentsWithShipmentId.items...destination.": "scaler",
+      "responseSegmentsWithShipmentId.items...endedAt.": "scaler",
+      "responseSegmentsWithShipmentId.items...name.": "scaler",
+      "responseSegmentsWithShipmentId.items...origin.": "scaler",
+      "responseSegmentsWithShipmentId.items...providedEta.": "scaler",
+      "responseSegmentsWithShipmentId.items...providedEtd.": "scaler",
+      "responseSegmentsWithShipmentId.items...segmentId.": "scaler",
+      "responseSegmentsWithShipmentId.items...shipmentId.": "scaler",
+      "responseSegmentsWithShipmentId.items...startedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "responseSegmentsWithShipmentId.items...trackingId.": "scaler",
+      "responseSegmentsWithShipmentId.limit.": "scaler",
+      "responseSegmentsWithShipmentId.nextPageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseSensorRuleByJson",
+    "properties": {
+      "responseSensorRuleByJson": "object",
+      "responseSensorRuleByJson.description.": "scaler",
+      "responseSensorRuleByJson.id.": "scaler",
+      "responseSensorRuleByJson.name.": "scaler",
+      "responseSensorRuleByJson.range.": "object",
+      "responseSensorRuleByJson.range..begin.": "scaler",
+      "responseSensorRuleByJson.range..end.": "scaler",
+      "responseSensorRuleByJson.threshold.": "object",
+      "responseSensorRuleByJson.threshold..value.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseSensorRulesByJson",
+    "properties": {
+      "responseSensorRulesByJson": "allOf",
+      "responseSensorRulesByJson.": "object",
+      "responseSensorRulesByJson..count.": "scaler",
+      "responseSensorRulesByJson..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseShipmentBody",
+    "properties": {
+      "responseShipmentBody": "object",
+      "responseShipmentBody.autoStart.": "scaler",
+      "responseShipmentBody.calculatedEta.": "scaler",
+      "responseShipmentBody.calculatedEtd.": "scaler",
+      "responseShipmentBody.createdAt.": "scaler",
+      "responseShipmentBody.description.": "scaler",
+      "responseShipmentBody.endedAt.": "scaler",
+      "responseShipmentBody.name.": "scaler",
+      "responseShipmentBody.providedEta.": "scaler",
+      "responseShipmentBody.providedEtd.": "scaler",
+      "responseShipmentBody.ruleIds.": "array",
+      "responseShipmentBody.ruleIds..": "scaler",
+      "responseShipmentBody.segments.": "array",
+      "responseShipmentBody.segments..": "object",
+      "responseShipmentBody.segments...calculatedEta.": "scaler",
+      "responseShipmentBody.segments...calculatedEtd.": "scaler",
+      "responseShipmentBody.segments...createdAt.": "scaler",
+      "responseShipmentBody.segments...description.": "scaler",
+      "responseShipmentBody.segments...destination.": "scaler",
+      "responseShipmentBody.segments...endedAt.": "scaler",
+      "responseShipmentBody.segments...name.": "scaler",
+      "responseShipmentBody.segments...origin.": "scaler",
+      "responseShipmentBody.segments...providedEta.": "scaler",
+      "responseShipmentBody.segments...providedEtd.": "scaler",
+      "responseShipmentBody.segments...segmentId.": "scaler",
+      "responseShipmentBody.segments...startedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "responseShipmentBody.segments...trackingId.": "scaler",
+      "responseShipmentBody.shipmentId.": "scaler",
+      "responseShipmentBody.shipmentPlanId.": "scaler",
+      "responseShipmentBody.startedAt.": "scaler",
+      "responseShipmentBody.subShipment.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseShipmentPlan",
+    "properties": {
+      "responseShipmentPlan": "object",
+      "responseShipmentPlan.autoStart.": "scaler",
+      "responseShipmentPlan.createdAt.": "scaler",
+      "responseShipmentPlan.description.": "scaler",
+      "responseShipmentPlan.name.": "scaler",
+      "responseShipmentPlan.ruleIds.": "array",
+      "responseShipmentPlan.ruleIds..": "scaler",
+      "responseShipmentPlan.segments.": "array",
+      "responseShipmentPlan.segments..": "object",
+      "responseShipmentPlan.segments...description.": "scaler",
+      "responseShipmentPlan.segments...destination.": "scaler",
+      "responseShipmentPlan.segments...durationS.": "scaler",
+      "responseShipmentPlan.segments...name.": "scaler",
+      "responseShipmentPlan.segments...origin.": "scaler",
+      "responseShipmentPlan.segments...segmentPlanId.": "scaler",
+      "responseShipmentPlan.segments...trackingId.": "scaler",
+      "__undefined_0": "scaler",
+      "responseShipmentPlan.shipmentPlanId.": "scaler",
+      "responseShipmentPlan.subShipment.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseShipmentsAssociatedWithRule",
+    "properties": {
+      "responseShipmentsAssociatedWithRule": "allOf",
+      "responseShipmentsAssociatedWithRule.": "object",
+      "responseShipmentsAssociatedWithRule..count.": "scaler",
+      "responseShipmentsAssociatedWithRule..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseTelemetry",
+    "properties": {
+      "responseTelemetry": "object",
+      "responseTelemetry.payload.": "primitive",
+      "responseTelemetry.system.": "object",
+      "responseTelemetry.system..detectOutliers.": "scaler",
+      "responseTelemetry.system..disableTracking.": "object",
+      "responseTelemetry.system..disableTracking..periods.": "array",
+      "responseTelemetry.system..disableTracking..periods..": "object",
+      "responseTelemetry.system..disableTracking..periods...begin.": "scaler",
+      "responseTelemetry.system..disableTracking..periods...end.": "scaler",
+      "responseTelemetry.system..disableTracking..position.": "primitive",
+      "responseTelemetry.system..disableTracking..sensors.": "primitive",
+      "responseTelemetry.system..lastModifiedGeofenceTimestamp.": "scaler",
+      "responseTelemetry.system..rate.": "object",
+      "responseTelemetry.system..rate..distanceM.": "scaler",
+      "responseTelemetry.system..rate..sampleMs.": "scaler",
+      "responseTelemetry.system..rate..sendMs.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig.": "object",
+      "responseTelemetry.system..sensorAlarmConfig..alertAccelerationGMax.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertAccelerationGMin.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertBatteryLevelPMax.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertBatteryLevelPMin.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertPressureHpaMax.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertPressureHpaMin.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertRelativeHumidityMax.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertRelativeHumidityMin.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertTemperatureCMax.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertTemperatureCMin.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertTiltDegreeMax.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..alertTiltDegreeMin.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..isAttachAlertEnabled.": "scaler",
+      "responseTelemetry.system..sensorAlarmConfig..isTamperAlertEnabled.": "scaler",
+      "responseTelemetry.system..sensorLoggingConfigurations.": "array",
+      "responseTelemetry.system..sensorLoggingConfigurations..": "object",
+      "responseTelemetry.system..sensorLoggingConfigurations...samplingFrequency.": "scaler",
+      "__undefined_0": "scaler",
+      "responseTelemetry.system..sensorLoggingEnabled.": "scaler",
+      "responseTelemetry.system..stateVersion.": "scaler",
+      "responseTelemetry.system..syncGeofences.": "scaler",
+      "responseTelemetry.system..wlanConfigurations.": "array",
+      "responseTelemetry.system..wlanConfigurations..": "object",
+      "responseTelemetry.system..wlanConfigurations...password.": "scaler",
+      "responseTelemetry.system..wlanConfigurations...ssid.": "scaler",
+      "responseTelemetry.system..wlanConfigurations...ssidIsHidden.": "scaler",
+      "responseTelemetry.system..wlanConnectivityEnabled.": "scaler",
+      "responseTelemetry.timestamp.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseToken",
+    "properties": {
+      "responseToken": "object",
+      "responseToken.accessToken.": "scaler",
+      "responseToken.expiresIn.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseTokenExchange",
+    "properties": {
+      "responseTokenExchange": "object",
+      "responseTokenExchange.accessToken.": "scaler",
+      "responseTokenExchange.expiresIn.": "scaler",
+      "responseTokenExchange.issuedTokenType.": "scaler",
+      "responseTokenExchange.scope.": "scaler",
+      "responseTokenExchange.tokenType.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseTraces",
+    "properties": {
+      "responseTraces": "allOf",
+      "responseTraces.": "object",
+      "responseTraces..count.": "scaler",
+      "responseTraces..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseTrackingId",
+    "properties": {
+      "responseTrackingId": "object",
+      "responseTrackingId.appId.": "scaler",
+      "responseTrackingId.externalId.": "scaler",
+      "responseTrackingId.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseTransitions",
+    "properties": {
+      "responseTransitions": "allOf",
+      "responseTransitions.": "object",
+      "responseTransitions..count.": "scaler",
+      "responseTransitions..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/responseUpdateRule",
+    "properties": {
+      "responseUpdateRule": "allOf",
+      "responseUpdateRule.": "object",
+      "responseUpdateRule..message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/resultObject",
+    "properties": {
+      "resultObject": "object",
+      "resultObject.connectorId.": "scaler",
+      "resultObject.deviceId.": "scaler",
+      "resultObject.deviceSecret.": "scaler",
+      "resultObject.errors.": "array",
+      "resultObject.errors..": "object",
+      "resultObject.errors...code.": "scaler",
+      "resultObject.errors...details.": "scaler",
+      "resultObject.errors...message.": "scaler",
+      "resultObject.externalDeviceId.": "scaler",
+      "resultObject.externalId.": "scaler",
+      "resultObject.name.": "scaler",
+      "resultObject.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/rule",
+    "properties": { "rule": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ruleId",
+    "properties": { "ruleId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/ruleIds",
+    "properties": { "ruleIds": "array", "ruleIds.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/rules",
+    "properties": { "rules": "array", "rules.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/sampleMs",
+    "properties": { "sampleMs": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/scan",
+    "properties": {
+      "scan": "object",
+      "scan.bt.": "array",
+      "scan.bt..": "object",
+      "scan.bt...eddystoneId.": "scaler",
+      "scan.bt...iBeaconId.": "scaler",
+      "scan.bt...mac.": "scaler",
+      "scan.bt...rss.": "scaler",
+      "scan.bt...timestamp.": "scaler",
+      "scan.cdma.": "array",
+      "scan.cdma..": "object",
+      "scan.cdma...baselat.": "scaler",
+      "scan.cdma...baselng.": "scaler",
+      "scan.cdma...bsid.": "scaler",
+      "scan.cdma...channel.": "scaler",
+      "scan.cdma...nid.": "scaler",
+      "scan.cdma...nmr.": "array",
+      "scan.cdma...nmr..": "object",
+      "scan.cdma...nmr...bsid.": "scaler",
+      "scan.cdma...nmr...channel.": "scaler",
+      "scan.cdma...nmr...frequency.": "scaler",
+      "scan.cdma...nmr...pilotpower.": "scaler",
+      "scan.cdma...nmr...pnoffset.": "scaler",
+      "scan.cdma...pilotpower.": "scaler",
+      "scan.cdma...pnoffset.": "scaler",
+      "scan.cdma...rz.": "scaler",
+      "scan.cdma...sid.": "scaler",
+      "scan.cdma...timestamp.": "scaler",
+      "scan.country.": "object",
+      "scan.country..mcc.": "scaler",
+      "scan.gps.": "object",
+      "scan.gps..accuracy.": "scaler",
+      "scan.gps..alt.": "scaler",
+      "scan.gps..altaccuracy.": "scaler",
+      "scan.gps..heading.": "scaler",
+      "scan.gps..lat.": "scaler",
+      "scan.gps..lng.": "scaler",
+      "scan.gps..satellitecount.": "scaler",
+      "scan.gps..speed.": "scaler",
+      "scan.gps..timestamp.": "scaler",
+      "scan.gsm.": "array",
+      "scan.gsm..": "object",
+      "scan.gsm...bcch.": "scaler",
+      "scan.gsm...bsic.": "scaler",
+      "scan.gsm...cid.": "scaler",
+      "scan.gsm...lac.": "scaler",
+      "scan.gsm...mcc.": "scaler",
+      "scan.gsm...mnc.": "scaler",
+      "scan.gsm...nmr.": "array",
+      "scan.gsm...nmr..": "object",
+      "scan.gsm...nmr...bcch.": "scaler",
+      "scan.gsm...nmr...bsic.": "scaler",
+      "scan.gsm...nmr...cid.": "scaler",
+      "scan.gsm...nmr...lac.": "scaler",
+      "scan.gsm...nmr...rxlevel.": "scaler",
+      "scan.gsm...rxlevel.": "scaler",
+      "scan.gsm...ta.": "scaler",
+      "scan.gsm...timestamp.": "scaler",
+      "scan.lte.": "array",
+      "scan.lte..": "object",
+      "scan.lte...cid.": "scaler",
+      "scan.lte...earfcn.": "scaler",
+      "scan.lte...mcc.": "scaler",
+      "scan.lte...mnc.": "scaler",
+      "scan.lte...nmr.": "array",
+      "scan.lte...nmr..": "object",
+      "scan.lte...nmr...cid.": "scaler",
+      "scan.lte...nmr...earfcn.": "scaler",
+      "scan.lte...nmr...pci.": "scaler",
+      "scan.lte...nmr...rsrp.": "scaler",
+      "scan.lte...nmr...rsrq.": "scaler",
+      "scan.lte...pci.": "scaler",
+      "scan.lte...rsrp.": "scaler",
+      "scan.lte...rsrq.": "scaler",
+      "scan.lte...ta.": "scaler",
+      "scan.lte...tac.": "scaler",
+      "scan.lte...timestamp.": "scaler",
+      "scan.tdscdma.": "array",
+      "scan.tdscdma..": "object",
+      "scan.tdscdma...cellparams.": "scaler",
+      "scan.tdscdma...cid.": "scaler",
+      "scan.tdscdma...lac.": "scaler",
+      "scan.tdscdma...mcc.": "scaler",
+      "scan.tdscdma...mnc.": "scaler",
+      "scan.tdscdma...nmr.": "array",
+      "scan.tdscdma...nmr..": "object",
+      "scan.tdscdma...nmr...cellparams.": "scaler",
+      "scan.tdscdma...nmr...cid.": "scaler",
+      "scan.tdscdma...nmr...pathloss.": "scaler",
+      "scan.tdscdma...nmr...rscp.": "scaler",
+      "scan.tdscdma...nmr...uarfcn.": "scaler",
+      "scan.tdscdma...pathloss.": "scaler",
+      "scan.tdscdma...rscp.": "scaler",
+      "scan.tdscdma...ta.": "scaler",
+      "scan.tdscdma...timestamp.": "scaler",
+      "scan.tdscdma...uarfcn.": "scaler",
+      "scan.wcdma.": "array",
+      "scan.wcdma..": "object",
+      "scan.wcdma...cid.": "scaler",
+      "scan.wcdma...lac.": "scaler",
+      "scan.wcdma...mcc.": "scaler",
+      "scan.wcdma...mnc.": "scaler",
+      "scan.wcdma...nmr.": "array",
+      "scan.wcdma...nmr..": "object",
+      "scan.wcdma...nmr...cid.": "scaler",
+      "scan.wcdma...nmr...pathloss.": "scaler",
+      "scan.wcdma...nmr...psc.": "scaler",
+      "scan.wcdma...nmr...rscp.": "scaler",
+      "scan.wcdma...nmr...uarfcndl.": "scaler",
+      "scan.wcdma...pathloss.": "scaler",
+      "scan.wcdma...psc.": "scaler",
+      "scan.wcdma...rscp.": "scaler",
+      "scan.wcdma...timestamp.": "scaler",
+      "scan.wcdma...uarfcndl.": "scaler",
+      "scan.wlan.": "array",
+      "scan.wlan..": "object",
+      "__undefined_0": "scaler",
+      "scan.wlan...mac.": "scaler",
+      "scan.wlan...powrx.": "scaler",
+      "scan.wlan...timestamp.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/segmentDescription",
+    "properties": { "segmentDescription": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/segmentName",
+    "properties": { "segmentName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/segmentStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/segmentsWithShipmentId",
+    "properties": {
+      "segmentsWithShipmentId": "object",
+      "segmentsWithShipmentId.calculatedEta.": "scaler",
+      "segmentsWithShipmentId.calculatedEtd.": "scaler",
+      "segmentsWithShipmentId.createdAt.": "scaler",
+      "segmentsWithShipmentId.description.": "scaler",
+      "segmentsWithShipmentId.destination.": "scaler",
+      "segmentsWithShipmentId.endedAt.": "scaler",
+      "segmentsWithShipmentId.name.": "scaler",
+      "segmentsWithShipmentId.origin.": "scaler",
+      "segmentsWithShipmentId.providedEta.": "scaler",
+      "segmentsWithShipmentId.providedEtd.": "scaler",
+      "segmentsWithShipmentId.segmentId.": "scaler",
+      "segmentsWithShipmentId.shipmentId.": "scaler",
+      "segmentsWithShipmentId.startedAt.": "scaler",
+      "__undefined_0": "scaler",
+      "segmentsWithShipmentId.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/sendMs",
+    "properties": { "sendMs": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/sensorRule",
+    "properties": { "sensorRule": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/sensorRuleId",
+    "properties": { "sensorRuleId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/sensorThresholdRange",
+    "properties": {
+      "sensorThresholdRange": "object",
+      "sensorThresholdRange.begin.": "scaler",
+      "sensorThresholdRange.end.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/sensorThresholdValue",
+    "properties": {
+      "sensorThresholdValue": "object",
+      "sensorThresholdValue.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/sensorType",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shadowStateResponse",
+    "properties": { "shadowStateResponse": "primitive" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shadowV4",
+    "properties": {
+      "shadowV4": "object",
+      "shadowV4.appId.": "scaler",
+      "shadowV4.externalId.": "scaler",
+      "shadowV4.shadow.": "object",
+      "shadowV4.shadow..desired.": "object",
+      "shadowV4.shadow..desired..payload.": "primitive",
+      "shadowV4.shadow..desired..system.": "object",
+      "shadowV4.shadow..desired..system..detectOutliers.": "scaler",
+      "shadowV4.shadow..desired..system..disableTracking.": "object",
+      "shadowV4.shadow..desired..system..disableTracking..periods.": "array",
+      "shadowV4.shadow..desired..system..disableTracking..periods..": "object",
+      "shadowV4.shadow..desired..system..disableTracking..periods...begin.": "scaler",
+      "shadowV4.shadow..desired..system..disableTracking..periods...end.": "scaler",
+      "shadowV4.shadow..desired..system..disableTracking..position.": "primitive",
+      "shadowV4.shadow..desired..system..disableTracking..sensors.": "primitive",
+      "shadowV4.shadow..desired..system..lastModifiedGeofenceTimestamp.": "scaler",
+      "shadowV4.shadow..desired..system..rate.": "object",
+      "shadowV4.shadow..desired..system..rate..distanceM.": "scaler",
+      "shadowV4.shadow..desired..system..rate..sampleMs.": "scaler",
+      "shadowV4.shadow..desired..system..rate..sendMs.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig.": "object",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertAccelerationGMax.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertAccelerationGMin.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertBatteryLevelPMax.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertBatteryLevelPMin.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertPressureHpaMax.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertPressureHpaMin.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertRelativeHumidityMax.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertRelativeHumidityMin.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertTemperatureCMax.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertTemperatureCMin.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertTiltDegreeMax.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..alertTiltDegreeMin.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..isAttachAlertEnabled.": "scaler",
+      "shadowV4.shadow..desired..system..sensorAlarmConfig..isTamperAlertEnabled.": "scaler",
+      "shadowV4.shadow..desired..system..sensorLoggingConfigurations.": "array",
+      "shadowV4.shadow..desired..system..sensorLoggingConfigurations..": "object",
+      "shadowV4.shadow..desired..system..sensorLoggingConfigurations...samplingFrequency.": "scaler",
+      "__undefined_0": "scaler",
+      "shadowV4.shadow..desired..system..sensorLoggingEnabled.": "scaler",
+      "shadowV4.shadow..desired..system..stateVersion.": "scaler",
+      "shadowV4.shadow..desired..system..syncGeofences.": "scaler",
+      "shadowV4.shadow..desired..system..wlanConfigurations.": "array",
+      "shadowV4.shadow..desired..system..wlanConfigurations..": "object",
+      "shadowV4.shadow..desired..system..wlanConfigurations...password.": "scaler",
+      "shadowV4.shadow..desired..system..wlanConfigurations...ssid.": "scaler",
+      "shadowV4.shadow..desired..system..wlanConfigurations...ssidIsHidden.": "scaler",
+      "shadowV4.shadow..desired..system..wlanConnectivityEnabled.": "scaler",
+      "shadowV4.shadow..desired..timestamp.": "scaler",
+      "shadowV4.shadow..reported.": "object",
+      "shadowV4.shadow..reported..payload.": "primitive",
+      "shadowV4.shadow..reported..position.": "object",
+      "shadowV4.shadow..reported..position..accuracy.": "scaler",
+      "shadowV4.shadow..reported..position..alt.": "scaler",
+      "shadowV4.shadow..reported..position..altaccuracy.": "scaler",
+      "shadowV4.shadow..reported..position..confidence.": "scaler",
+      "shadowV4.shadow..reported..position..floor.": "object",
+      "shadowV4.shadow..reported..position..floor..id.": "scaler",
+      "shadowV4.shadow..reported..position..floor..level.": "scaler",
+      "shadowV4.shadow..reported..position..floor..name.": "scaler",
+      "shadowV4.shadow..reported..position..heading.": "scaler",
+      "shadowV4.shadow..reported..position..lat.": "scaler",
+      "shadowV4.shadow..reported..position..lng.": "scaler",
+      "shadowV4.shadow..reported..position..satellitecount.": "scaler",
+      "shadowV4.shadow..reported..position..speed.": "scaler",
+      "shadowV4.shadow..reported..position..timestamp.": "scaler",
+      "shadowV4.shadow..reported..position..type.": "scaler",
+      "shadowV4.shadow..reported..position..wlancount.": "scaler",
+      "shadowV4.shadow..reported..system.": "object",
+      "shadowV4.shadow..reported..system..client.": "object",
+      "shadowV4.shadow..reported..system..client..accelerometerSensorRange.": "array",
+      "shadowV4.shadow..reported..system..client..accelerometerSensorRange..": "scaler",
+      "shadowV4.shadow..reported..system..client..diagnosticscode.": "scaler",
+      "shadowV4.shadow..reported..system..client..diskquota.": "scaler",
+      "shadowV4.shadow..reported..system..client..firmware.": "scaler",
+      "shadowV4.shadow..reported..system..client..hasAccelerometerSensor.": "scaler",
+      "shadowV4.shadow..reported..system..client..hasAttachSensor.": "scaler",
+      "shadowV4.shadow..reported..system..client..hasHumiditySensor.": "scaler",
+      "shadowV4.shadow..reported..system..client..hasNoBattery.": "scaler",
+      "shadowV4.shadow..reported..system..client..hasPressureSensor.": "scaler",
+      "shadowV4.shadow..reported..system..client..hasTamperSensor.": "scaler",
+      "shadowV4.shadow..reported..system..client..hasTemperatureSensor.": "scaler",
+      "shadowV4.shadow..reported..system..client..homenetwork.": "array",
+      "shadowV4.shadow..reported..system..client..homenetwork..": "object",
+      "shadowV4.shadow..reported..system..client..homenetwork...mcc.": "scaler",
+      "shadowV4.shadow..reported..system..client..homenetwork...mnc.": "scaler",
+      "shadowV4.shadow..reported..system..client..homenetwork...nid.": "scaler",
+      "shadowV4.shadow..reported..system..client..homenetwork...sid.": "scaler",
+      "shadowV4.shadow..reported..system..client..manufacturer.": "scaler",
+      "shadowV4.shadow..reported..system..client..model.": "scaler",
+      "shadowV4.shadow..reported..system..client..modules.": "array",
+      "shadowV4.shadow..reported..system..client..modules..": "object",
+      "shadowV4.shadow..reported..system..client..modules...firmwareVersion.": "scaler",
+      "shadowV4.shadow..reported..system..client..modules...manufacturer.": "scaler",
+      "shadowV4.shadow..reported..system..client..modules...model.": "scaler",
+      "shadowV4.shadow..reported..system..client..name.": "scaler",
+      "shadowV4.shadow..reported..system..client..platform.": "scaler",
+      "shadowV4.shadow..reported..system..client..version.": "scaler",
+      "shadowV4.shadow..reported..system..computed.": "object",
+      "shadowV4.shadow..reported..system..computed..lastMovedTimestamp.": "scaler",
+      "shadowV4.shadow..reported..system..computed..moving.": "scaler",
+      "shadowV4.shadow..reported..system..computed..online.": "scaler",
+      "shadowV4.shadow..reported..system..computed..outlier.": "object",
+      "shadowV4.shadow..reported..system..computed..outlier..correctedPosition.": "object",
+      "shadowV4.shadow..reported..system..computed..outlier..correctedPosition..accuracy.": "scaler",
+      "shadowV4.shadow..reported..system..computed..outlier..correctedPosition..lat.": "scaler",
+      "shadowV4.shadow..reported..system..computed..outlier..correctedPosition..lng.": "scaler",
+      "shadowV4.shadow..reported..system..computed..outlier..correctedPosition..timestamp.": "scaler",
+      "shadowV4.shadow..reported..system..computed..outlier..reason.": "scaler",
+      "shadowV4.shadow..reported..system..iccid.": "scaler",
+      "shadowV4.shadow..reported..system..imsi.": "scaler",
+      "shadowV4.shadow..reported..system..phoneNumber.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData.": "object",
+      "shadowV4.shadow..reported..system..reportedSensorData..accelerationG.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..batteryIsCharging.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..batteryLevel.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..deviceIsAttached.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..deviceIsStationary.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..deviceIsTampered.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..pressureHpa.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..relativeHumidity.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..temperatureC.": "scaler",
+      "shadowV4.shadow..reported..system..reportedSensorData..tiltDegree.": "scaler",
+      "shadowV4.shadow..reported..system..stateVersion.": "scaler",
+      "shadowV4.shadow..reported..timestamp.": "scaler",
+      "shadowV4.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/shadowsUpdateBody",
+    "properties": {
+      "shadowsUpdateBody": "object",
+      "shadowsUpdateBody.desired.": "object",
+      "shadowsUpdateBody.desired..payload.": "primitive",
+      "shadowsUpdateBody.desired..system.": "object",
+      "shadowsUpdateBody.desired..system..detectOutliers.": "scaler",
+      "shadowsUpdateBody.desired..system..disableTracking.": "object",
+      "shadowsUpdateBody.desired..system..disableTracking..periods.": "array",
+      "shadowsUpdateBody.desired..system..disableTracking..periods..": "object",
+      "shadowsUpdateBody.desired..system..disableTracking..periods...begin.": "scaler",
+      "shadowsUpdateBody.desired..system..disableTracking..periods...end.": "scaler",
+      "shadowsUpdateBody.desired..system..disableTracking..position.": "primitive",
+      "shadowsUpdateBody.desired..system..disableTracking..sensors.": "primitive",
+      "shadowsUpdateBody.desired..system..rate.": "object",
+      "shadowsUpdateBody.desired..system..rate..distanceM.": "scaler",
+      "shadowsUpdateBody.desired..system..rate..sampleMs.": "scaler",
+      "shadowsUpdateBody.desired..system..rate..sendMs.": "scaler",
+      "shadowsUpdateBody.desired..system..sensorLoggingConfigurations.": "array",
+      "shadowsUpdateBody.desired..system..sensorLoggingConfigurations..": "object",
+      "shadowsUpdateBody.desired..system..sensorLoggingConfigurations...samplingFrequency.": "scaler",
+      "__undefined_0": "scaler",
+      "shadowsUpdateBody.desired..system..sensorLoggingEnabled.": "scaler",
+      "shadowsUpdateBody.desired..system..syncGeofences.": "scaler",
+      "shadowsUpdateBody.desired..system..wlanConfigurations.": "array",
+      "shadowsUpdateBody.desired..system..wlanConfigurations..": "object",
+      "shadowsUpdateBody.desired..system..wlanConfigurations...password.": "scaler",
+      "shadowsUpdateBody.desired..system..wlanConfigurations...ssid.": "scaler",
+      "shadowsUpdateBody.desired..system..wlanConfigurations...ssidIsHidden.": "scaler",
+      "shadowsUpdateBody.desired..system..wlanConnectivityEnabled.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipment",
+    "properties": { "shipment": "object", "shipment.shipmentId.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentDescription",
+    "properties": { "shipmentDescription": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentFromBody",
+    "properties": {
+      "shipmentFromBody": "object",
+      "shipmentFromBody.autoStart.": "scaler",
+      "shipmentFromBody.description.": "scaler",
+      "shipmentFromBody.name.": "scaler",
+      "shipmentFromBody.providedEta.": "scaler",
+      "shipmentFromBody.providedEtd.": "scaler",
+      "shipmentFromBody.ruleIds.": "array",
+      "shipmentFromBody.ruleIds..": "scaler",
+      "shipmentFromBody.segments.": "array",
+      "shipmentFromBody.segments..": "object",
+      "shipmentFromBody.segments...description.": "scaler",
+      "shipmentFromBody.segments...destination.": "scaler",
+      "shipmentFromBody.segments...name.": "scaler",
+      "shipmentFromBody.segments...origin.": "scaler",
+      "shipmentFromBody.segments...providedEta.": "scaler",
+      "shipmentFromBody.segments...providedEtd.": "scaler",
+      "shipmentFromBody.segments...trackingId.": "scaler",
+      "__undefined_0": "scaler",
+      "shipmentFromBody.subShipment.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentFromPlan",
+    "properties": {
+      "shipmentFromPlan": "object",
+      "shipmentFromPlan.shipmentDeparture.": "scaler",
+      "shipmentFromPlan.shipmentPlanId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentId",
+    "properties": { "shipmentId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentIds",
+    "properties": { "shipmentIds": "array", "shipmentIds.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentName",
+    "properties": { "shipmentName": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentPlanIds",
+    "properties": { "shipmentPlanIds": "array", "shipmentPlanIds.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentReportError",
+    "properties": {
+      "shipmentReportError": "object",
+      "shipmentReportError.code.": "scaler",
+      "shipmentReportError.details.": "primitive",
+      "shipmentReportError.error.": "scaler",
+      "shipmentReportError.id.": "scaler",
+      "shipmentReportError.message.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentReportId",
+    "properties": { "shipmentReportId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentReportStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentRulesBody",
+    "properties": {
+      "shipmentRulesBody": "object",
+      "shipmentRulesBody.geofenceIds.": "array",
+      "shipmentRulesBody.geofenceIds..": "scaler",
+      "shipmentRulesBody.ruleIds.": "array",
+      "shipmentRulesBody.ruleIds..": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentScheduleCount",
+    "properties": {
+      "shipmentScheduleCount": "allOf",
+      "__undefined_0": "object",
+      "shipmentScheduleCount..SHIPMENT_DELAYED.": "scaler",
+      "shipmentScheduleCount..SHIPMENT_EARLY.": "scaler",
+      "shipmentScheduleCount..SHIPMENT_ON_TIME.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/shipmentStatus",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/startIndex",
+    "properties": { "startIndex": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/startedAfter",
+    "properties": { "startedAfter": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/startedBefore",
+    "properties": { "startedBefore": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/status",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/statusResponseJson",
+    "properties": {
+      "statusResponseJson": "allOf",
+      "statusResponseJson.": "object",
+      "statusResponseJson..count.": "scaler",
+      "statusResponseJson..pageToken.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/storage",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/subShipment",
+    "properties": { "subShipment": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/succeeded",
+    "properties": { "succeeded": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/tagLabels",
+    "properties": { "tagLabels": "array", "tagLabels.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/telemetry",
+    "properties": {
+      "telemetry": "object",
+      "telemetry.payload.": "primitive",
+      "telemetry.position.": "object",
+      "telemetry.position..accuracy.": "scaler",
+      "telemetry.position..alt.": "scaler",
+      "telemetry.position..altaccuracy.": "scaler",
+      "telemetry.position..confidence.": "scaler",
+      "telemetry.position..floor.": "object",
+      "telemetry.position..floor..id.": "scaler",
+      "telemetry.position..floor..level.": "scaler",
+      "telemetry.position..floor..name.": "scaler",
+      "telemetry.position..heading.": "scaler",
+      "telemetry.position..lat.": "scaler",
+      "telemetry.position..lng.": "scaler",
+      "telemetry.position..satellitecount.": "scaler",
+      "telemetry.position..speed.": "scaler",
+      "telemetry.position..timestamp.": "scaler",
+      "telemetry.position..type.": "scaler",
+      "telemetry.position..wlancount.": "scaler",
+      "telemetry.scan.": "object",
+      "telemetry.scan..bt.": "array",
+      "telemetry.scan..bt..": "object",
+      "telemetry.scan..bt...eddystoneId.": "scaler",
+      "telemetry.scan..bt...iBeaconId.": "scaler",
+      "telemetry.scan..bt...mac.": "scaler",
+      "telemetry.scan..bt...rss.": "scaler",
+      "telemetry.scan..bt...timestamp.": "scaler",
+      "telemetry.scan..cdma.": "array",
+      "telemetry.scan..cdma..": "object",
+      "telemetry.scan..cdma...baselat.": "scaler",
+      "telemetry.scan..cdma...baselng.": "scaler",
+      "telemetry.scan..cdma...bsid.": "scaler",
+      "telemetry.scan..cdma...channel.": "scaler",
+      "telemetry.scan..cdma...nid.": "scaler",
+      "telemetry.scan..cdma...nmr.": "array",
+      "telemetry.scan..cdma...nmr..": "object",
+      "telemetry.scan..cdma...nmr...bsid.": "scaler",
+      "telemetry.scan..cdma...nmr...channel.": "scaler",
+      "telemetry.scan..cdma...nmr...frequency.": "scaler",
+      "telemetry.scan..cdma...nmr...pilotpower.": "scaler",
+      "telemetry.scan..cdma...nmr...pnoffset.": "scaler",
+      "telemetry.scan..cdma...pilotpower.": "scaler",
+      "telemetry.scan..cdma...pnoffset.": "scaler",
+      "telemetry.scan..cdma...rz.": "scaler",
+      "telemetry.scan..cdma...sid.": "scaler",
+      "telemetry.scan..cdma...timestamp.": "scaler",
+      "telemetry.scan..country.": "object",
+      "telemetry.scan..country..mcc.": "scaler",
+      "telemetry.scan..gps.": "object",
+      "telemetry.scan..gps..accuracy.": "scaler",
+      "telemetry.scan..gps..alt.": "scaler",
+      "telemetry.scan..gps..altaccuracy.": "scaler",
+      "telemetry.scan..gps..heading.": "scaler",
+      "telemetry.scan..gps..lat.": "scaler",
+      "telemetry.scan..gps..lng.": "scaler",
+      "telemetry.scan..gps..satellitecount.": "scaler",
+      "telemetry.scan..gps..speed.": "scaler",
+      "telemetry.scan..gps..timestamp.": "scaler",
+      "telemetry.scan..gsm.": "array",
+      "telemetry.scan..gsm..": "object",
+      "telemetry.scan..gsm...bcch.": "scaler",
+      "telemetry.scan..gsm...bsic.": "scaler",
+      "telemetry.scan..gsm...cid.": "scaler",
+      "telemetry.scan..gsm...lac.": "scaler",
+      "telemetry.scan..gsm...mcc.": "scaler",
+      "telemetry.scan..gsm...mnc.": "scaler",
+      "telemetry.scan..gsm...nmr.": "array",
+      "telemetry.scan..gsm...nmr..": "object",
+      "telemetry.scan..gsm...nmr...bcch.": "scaler",
+      "telemetry.scan..gsm...nmr...bsic.": "scaler",
+      "telemetry.scan..gsm...nmr...cid.": "scaler",
+      "telemetry.scan..gsm...nmr...lac.": "scaler",
+      "telemetry.scan..gsm...nmr...rxlevel.": "scaler",
+      "telemetry.scan..gsm...rxlevel.": "scaler",
+      "telemetry.scan..gsm...ta.": "scaler",
+      "telemetry.scan..gsm...timestamp.": "scaler",
+      "telemetry.scan..lte.": "array",
+      "telemetry.scan..lte..": "object",
+      "telemetry.scan..lte...cid.": "scaler",
+      "telemetry.scan..lte...earfcn.": "scaler",
+      "telemetry.scan..lte...mcc.": "scaler",
+      "telemetry.scan..lte...mnc.": "scaler",
+      "telemetry.scan..lte...nmr.": "array",
+      "telemetry.scan..lte...nmr..": "object",
+      "telemetry.scan..lte...nmr...cid.": "scaler",
+      "telemetry.scan..lte...nmr...earfcn.": "scaler",
+      "telemetry.scan..lte...nmr...pci.": "scaler",
+      "telemetry.scan..lte...nmr...rsrp.": "scaler",
+      "telemetry.scan..lte...nmr...rsrq.": "scaler",
+      "telemetry.scan..lte...pci.": "scaler",
+      "telemetry.scan..lte...rsrp.": "scaler",
+      "telemetry.scan..lte...rsrq.": "scaler",
+      "telemetry.scan..lte...ta.": "scaler",
+      "telemetry.scan..lte...tac.": "scaler",
+      "telemetry.scan..lte...timestamp.": "scaler",
+      "telemetry.scan..tdscdma.": "array",
+      "telemetry.scan..tdscdma..": "object",
+      "telemetry.scan..tdscdma...cellparams.": "scaler",
+      "telemetry.scan..tdscdma...cid.": "scaler",
+      "telemetry.scan..tdscdma...lac.": "scaler",
+      "telemetry.scan..tdscdma...mcc.": "scaler",
+      "telemetry.scan..tdscdma...mnc.": "scaler",
+      "telemetry.scan..tdscdma...nmr.": "array",
+      "telemetry.scan..tdscdma...nmr..": "object",
+      "telemetry.scan..tdscdma...nmr...cellparams.": "scaler",
+      "telemetry.scan..tdscdma...nmr...cid.": "scaler",
+      "telemetry.scan..tdscdma...nmr...pathloss.": "scaler",
+      "telemetry.scan..tdscdma...nmr...rscp.": "scaler",
+      "telemetry.scan..tdscdma...nmr...uarfcn.": "scaler",
+      "telemetry.scan..tdscdma...pathloss.": "scaler",
+      "telemetry.scan..tdscdma...rscp.": "scaler",
+      "telemetry.scan..tdscdma...ta.": "scaler",
+      "telemetry.scan..tdscdma...timestamp.": "scaler",
+      "telemetry.scan..tdscdma...uarfcn.": "scaler",
+      "telemetry.scan..wcdma.": "array",
+      "telemetry.scan..wcdma..": "object",
+      "telemetry.scan..wcdma...cid.": "scaler",
+      "telemetry.scan..wcdma...lac.": "scaler",
+      "telemetry.scan..wcdma...mcc.": "scaler",
+      "telemetry.scan..wcdma...mnc.": "scaler",
+      "telemetry.scan..wcdma...nmr.": "array",
+      "telemetry.scan..wcdma...nmr..": "object",
+      "telemetry.scan..wcdma...nmr...cid.": "scaler",
+      "telemetry.scan..wcdma...nmr...pathloss.": "scaler",
+      "telemetry.scan..wcdma...nmr...psc.": "scaler",
+      "telemetry.scan..wcdma...nmr...rscp.": "scaler",
+      "telemetry.scan..wcdma...nmr...uarfcndl.": "scaler",
+      "telemetry.scan..wcdma...pathloss.": "scaler",
+      "telemetry.scan..wcdma...psc.": "scaler",
+      "telemetry.scan..wcdma...rscp.": "scaler",
+      "telemetry.scan..wcdma...timestamp.": "scaler",
+      "telemetry.scan..wcdma...uarfcndl.": "scaler",
+      "telemetry.scan..wlan.": "array",
+      "telemetry.scan..wlan..": "object",
+      "__undefined_0": "scaler",
+      "telemetry.scan..wlan...mac.": "scaler",
+      "telemetry.scan..wlan...powrx.": "scaler",
+      "telemetry.scan..wlan...timestamp.": "scaler",
+      "telemetry.system.": "object",
+      "telemetry.system..client.": "object",
+      "telemetry.system..client..accelerometerSensorRange.": "array",
+      "telemetry.system..client..accelerometerSensorRange..": "scaler",
+      "telemetry.system..client..diagnosticscode.": "scaler",
+      "telemetry.system..client..diskquota.": "scaler",
+      "telemetry.system..client..firmware.": "scaler",
+      "telemetry.system..client..hasAccelerometerSensor.": "scaler",
+      "telemetry.system..client..hasAttachSensor.": "scaler",
+      "telemetry.system..client..hasHumiditySensor.": "scaler",
+      "telemetry.system..client..hasNoBattery.": "scaler",
+      "telemetry.system..client..hasPressureSensor.": "scaler",
+      "telemetry.system..client..hasTamperSensor.": "scaler",
+      "telemetry.system..client..hasTemperatureSensor.": "scaler",
+      "telemetry.system..client..homenetwork.": "array",
+      "telemetry.system..client..homenetwork..": "object",
+      "telemetry.system..client..homenetwork...mcc.": "scaler",
+      "telemetry.system..client..homenetwork...mnc.": "scaler",
+      "telemetry.system..client..homenetwork...nid.": "scaler",
+      "telemetry.system..client..homenetwork...sid.": "scaler",
+      "telemetry.system..client..manufacturer.": "scaler",
+      "telemetry.system..client..model.": "scaler",
+      "telemetry.system..client..modules.": "array",
+      "telemetry.system..client..modules..": "object",
+      "telemetry.system..client..modules...firmwareVersion.": "scaler",
+      "telemetry.system..client..modules...manufacturer.": "scaler",
+      "telemetry.system..client..modules...model.": "scaler",
+      "telemetry.system..client..name.": "scaler",
+      "telemetry.system..client..platform.": "scaler",
+      "telemetry.system..client..version.": "scaler",
+      "telemetry.system..iccid.": "scaler",
+      "telemetry.system..imsi.": "scaler",
+      "telemetry.system..phoneNumber.": "scaler",
+      "telemetry.system..reportedSensorData.": "object",
+      "telemetry.system..reportedSensorData..accelerationG.": "scaler",
+      "telemetry.system..reportedSensorData..batteryIsCharging.": "scaler",
+      "telemetry.system..reportedSensorData..batteryLevel.": "scaler",
+      "telemetry.system..reportedSensorData..deviceIsAttached.": "scaler",
+      "telemetry.system..reportedSensorData..deviceIsStationary.": "scaler",
+      "telemetry.system..reportedSensorData..deviceIsTampered.": "scaler",
+      "telemetry.system..reportedSensorData..pressureHpa.": "scaler",
+      "telemetry.system..reportedSensorData..relativeHumidity.": "scaler",
+      "telemetry.system..reportedSensorData..temperatureC.": "scaler",
+      "telemetry.system..reportedSensorData..tiltDegree.": "scaler",
+      "telemetry.system..stateVersion.": "scaler",
+      "telemetry.timestamp.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/timestampValue",
+    "properties": {
+      "timestampValue": "object",
+      "timestampValue.timestamp.": "scaler",
+      "timestampValue.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/total",
+    "properties": { "total": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/totalAddedDevices",
+    "properties": {
+      "totalAddedDevices": "object",
+      "totalAddedDevices.totalAddedDevices.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/totalDevices",
+    "properties": { "totalDevices": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/trackingId",
+    "properties": { "trackingId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/trackingIdOrShipmentId",
+    "properties": { "trackingIdOrShipmentId": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/trackingIdValue",
+    "properties": {
+      "trackingIdValue": "object",
+      "trackingIdValue.trackingId.": "scaler",
+      "trackingIdValue.value.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/trackingIds",
+    "properties": { "trackingIds": "array", "trackingIds.": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/trainingResponse",
+    "properties": {
+      "trainingResponse": "object",
+      "trainingResponse.trainingStatus.": "object",
+      "trainingResponse.trainingStatus..metadata.": "object",
+      "trainingResponse.trainingStatus..metadata..coordinate.": "object",
+      "trainingResponse.trainingStatus..metadata..coordinate..lat.": "scaler",
+      "trainingResponse.trainingStatus..metadata..coordinate..lng.": "scaler",
+      "trainingResponse.trainingStatus..metadata..timestamp.": "scaler",
+      "trainingResponse.trainingStatus..metadata..trackingId.": "scaler",
+      "trainingResponse.trainingStatus..metadata..usedWlanApCount.": "scaler",
+      "trainingResponse.trainingStatus..trained.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/trainingTestResponse",
+    "properties": {
+      "trainingTestResponse": "object",
+      "trainingTestResponse.metadata.": "object",
+      "trainingTestResponse.metadata..coordinate.": "object",
+      "trainingTestResponse.metadata..coordinate..lat.": "scaler",
+      "trainingTestResponse.metadata..coordinate..lng.": "scaler",
+      "trainingTestResponse.metadata..timestamp.": "scaler",
+      "trainingTestResponse.metadata..trackingId.": "scaler",
+      "trainingTestResponse.metadata..usedWlanApCount.": "scaler",
+      "trainingTestResponse.reason.": "scaler",
+      "trainingTestResponse.success.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/transition",
+    "properties": {
+      "transition": "object",
+      "transition.geofence.": "primitive",
+      "transition.geofenceId.": "scaler",
+      "__undefined_0": "scaler",
+      "transition.timestamp.": "scaler",
+      "transition.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/transportMode",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/type",
+    "properties": { "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/typeLabel",
+    "properties": { "typeLabel": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/unclaimOnly",
+    "properties": { "unclaimOnly": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/updateResponse",
+    "properties": { "updateResponse": "object", "__undefined_0": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/updateSegmentBody",
+    "properties": {
+      "updateSegmentBody": "object",
+      "updateSegmentBody.description.": "scaler",
+      "updateSegmentBody.name.": "scaler",
+      "updateSegmentBody.providedEta.": "scaler",
+      "updateSegmentBody.providedEtd.": "scaler",
+      "__undefined_0": "scaler",
+      "updateSegmentBody.trackingId.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/updateSegmentPlanBody",
+    "properties": {
+      "updateSegmentPlanBody": "object",
+      "updateSegmentPlanBody.description.": "scaler",
+      "updateSegmentPlanBody.durationS.": "scaler",
+      "updateSegmentPlanBody.name.": "scaler",
+      "updateSegmentPlanBody.trackingId.": "scaler",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/updateShipmentBody",
+    "properties": {
+      "updateShipmentBody": "object",
+      "updateShipmentBody.autoStart.": "scaler",
+      "updateShipmentBody.description.": "scaler",
+      "updateShipmentBody.name.": "scaler",
+      "updateShipmentBody.providedEta.": "scaler",
+      "updateShipmentBody.providedEtd.": "scaler",
+      "updateShipmentBody.ruleIds.": "array",
+      "updateShipmentBody.ruleIds..": "scaler",
+      "updateShipmentBody.segments.": "array",
+      "updateShipmentBody.segments..": "object",
+      "updateShipmentBody.segments...description.": "scaler",
+      "updateShipmentBody.segments...destination.": "scaler",
+      "updateShipmentBody.segments...name.": "scaler",
+      "updateShipmentBody.segments...origin.": "scaler",
+      "updateShipmentBody.segments...providedEta.": "scaler",
+      "updateShipmentBody.segments...providedEtd.": "scaler",
+      "updateShipmentBody.segments...trackingId.": "scaler",
+      "__undefined_0": "scaler",
+      "updateShipmentBody.subShipment.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/updateShipmentPlanBody",
+    "properties": {
+      "updateShipmentPlanBody": "object",
+      "updateShipmentPlanBody.autoStart.": "scaler",
+      "updateShipmentPlanBody.description.": "scaler",
+      "updateShipmentPlanBody.name.": "scaler",
+      "updateShipmentPlanBody.ruleIds.": "array",
+      "updateShipmentPlanBody.ruleIds..": "scaler",
+      "updateShipmentPlanBody.subShipment.": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/updateStatusRequestBody",
+    "properties": {
+      "updateStatusRequestBody": "object",
+      "__undefined_0": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/utilizationCount",
+    "properties": {
+      "utilizationCount": "allOf",
+      "__undefined_0": "object",
+      "utilizationCount..UNUTILIZED.": "scaler",
+      "utilizationCount..UTILIZED.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/schemas/value",
+    "properties": { "value": "scaler" }
+  },
+  {
+    "schemaRef": "#/components/schemas/valueCount",
+    "properties": {
+      "valueCount": "allOf",
+      "__undefined_0": "object",
+      "valueCount..EVENT.": "scaler",
+      "__undefined_1": "scaler"
+    }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/Bearer",
+    "properties": { "__undefined_0": "securitySchema" }
+  },
+  {
+    "schemaRef": "#/components/securitySchemes/signedRequest",
+    "properties": { "__undefined_0": "securitySchema" }
+  }
+]

@@ -141,13 +141,15 @@ function parseSchema(
     return true;
   }
   schema._requiresRelaxedTypeJsDocTag = false;
-  if (parserTypes.getSchemaPropertyFromSchema(schema)) {
+  try {
     parseSchemaProperty(
       parserTypes.getSchemaPropertyFromSchema(schema)!,
       schema,
       visitedRefs,
       schemaStore,
     );
+  } catch (e) {
+    logger.error(`Error while parsing schema '${schema.$ref}':\n${e}`);
   }
   /**
    * Need to use `@ts-ignore` before the following if statement because the typescript
@@ -193,11 +195,6 @@ function parseSchemaProperty(
       });
     }
   } catch (e) {
-    if (e instanceof Error) {
-      logger.error(
-        `Error while parsing schema '${schema.$ref}':\n${e.message}`,
-      );
-    }
     logger.error(`Error while parsing schema '${schema.$ref}':\n${e}`);
   }
 }
