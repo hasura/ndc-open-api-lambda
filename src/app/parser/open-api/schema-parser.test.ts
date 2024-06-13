@@ -6,7 +6,6 @@ import * as schemaParser from "./schema-parser";
 import * as parserTypes from "./types";
 import * as fs from "fs";
 import * as generatorTypes from "../../generator/types";
-import { ParsedTypes } from "./types-parser";
 import * as logger from "../../../util/logger";
 
 const cj = require("circular-json");

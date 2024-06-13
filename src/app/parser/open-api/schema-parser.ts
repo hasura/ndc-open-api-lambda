@@ -1,4 +1,3 @@
-import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as parserTypes from "./types";
 import * as generatorTypes from "../../generator/types";
 import * as logger from "../../../util/logger";
