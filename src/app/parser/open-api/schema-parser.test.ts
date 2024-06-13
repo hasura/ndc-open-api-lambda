@@ -302,8 +302,7 @@ describe("schema-parser", async () => {
 
       const got: ParserCheck[] = [];
       testCase.generatedApiTsCode!.schemaComponents.forEach((schema) => {
-        if (schema.$ref.startsWith("#/components/examples/")) {
-          // we don't want to parse examples
+        if (!parserTypes.shouldParseSchema(schema)) {
           return;
         }
         got.push(parseSchema(schema));

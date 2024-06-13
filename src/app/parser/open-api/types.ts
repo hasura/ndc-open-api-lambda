@@ -391,3 +391,20 @@ export function schemaPropertyIsRelaxedType(schemaProperty: SchemaProperty) {
   }
   return false;
 }
+
+/**
+ * prevent parsing schemas that meet certain criteria, like '#/components/examples/'
+ * @param schema the schema to parse
+ * @returns whether the schema should be parsed
+ */
+export function shouldParseSchema(schema: Schema): boolean {
+  /**
+   * We don't want to parse #/components/examples/ because
+   * 1. they are not used in code
+   * 2. too many examples can slow down the parsing
+   */
+  if (schema.$ref.startsWith("#/components/examples/")) {
+    return false;
+  }
+  return true;
+}

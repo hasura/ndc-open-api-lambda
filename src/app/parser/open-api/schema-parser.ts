@@ -20,15 +20,9 @@ export function getParsedSchemaStore(
   }
 
   for (const component of schemaComponents) {
-    /**
-     * Need to use @ts-ignore in the following lines because the typescript
-     * compiler does not think that component can be correctly cast to parserTypes.Schema
-     */
-    // @ts-ignore
-    if (!shouldParseScehma(component)) {
+    if (!parserTypes.shouldParseSchema(component)) {
       continue;
     }
-    // @ts-ignore
     createSchemaMapping(mappings, component);
   }
 
@@ -116,18 +110,6 @@ function createSchemaMapping(mappings: Mappings, schema: parserTypes.Schema) {
   }
 }
 
-function shouldParseScehma(component: parserTypes.Schema) {
-  /**
-   * We don't want to parse #/components/examples/ because
-   * 1. they are not used in code
-   * 2. too many examples can slow down the parsing
-   */
-  if (component.$ref.startsWith("#/components/examples/")) {
-    return false;
-  }
-  return true;
-}
-
 function parseSchema(
   schema: parserTypes.Schema,
   visitedRefs: Set<string>,
@@ -177,6 +159,9 @@ function parseSchemaProperty(
     } else if (parserTypes.schemaPropertyIsTypeRef(schemaProperty)) {
       const newSchema = schemaStore.getSchemaByRef(schemaProperty.$ref);
       if (!newSchema) {
+        logger.error(
+          `Error while parsing Schema ${schema.$ref}\nError: Referenced Schema '${schemaProperty.$ref}' not found\nSchema: ${JSON.stringify(schema)}`,
+        );
         return;
       }
       const requiresRelaxedTypeJsDocTag = parseSchema(
