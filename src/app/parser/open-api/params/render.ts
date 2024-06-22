@@ -32,9 +32,9 @@ export function renderSchema(
   }
 
   if (isRequired) {
-    return `${getSchemaDescriptionAsJsDoc(schema)} ${parameterName}: ${paramType}`;
+    return `${getSchemaDescriptionAsJsDoc(schema)} ${parameterName}: ${paramType},`;
   }
-  return `${getSchemaDescriptionAsJsDoc(schema)} ${parameterName}?: ${paramType}`;
+  return `${getSchemaDescriptionAsJsDoc(schema)} ${parameterName}?: ${paramType},`;
 }
 
 export function renderScalarTypeSchema(
