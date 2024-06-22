@@ -1,0 +1,86 @@
+{
+  "post__/author": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "delete__/author/{authorId}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/authors": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "put__/blog/": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/blog/": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "patch__/blog/dislike": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** blog to dislike */\n blogId: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.blogId": {
+        "rendered": "\n/** blog to dislike */\n blogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/blog/like": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** blog to like */\n blogId: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.blogId": {
+        "rendered": "\n/** blog to like */\n blogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/blog/{blogId}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/blog/{blogId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** title to update */\n title?: string, \n/** text to update */\n text?: string, \n/** summary to update */\n summary?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.title": {
+        "rendered": "\n/** title to update */\n title?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.text": {
+        "rendered": "\n/** text to update */\n text?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.summary": {
+        "rendered": "\n/** summary to update */\n summary?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/blogs/": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** id of the author */\n authorId: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.authorId": {
+        "rendered": "\n/** id of the author */\n authorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

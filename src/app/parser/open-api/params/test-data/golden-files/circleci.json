@@ -1,0 +1,154 @@
+{
+  "get__/me": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/project/{username}/{project}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of builds to return. Maximum 100, defaults to 30.\n */\n limit?: number, \n/** The API returns builds starting from this offset, defaults to 0.\n */\n offset?: number, \n/** Restricts which builds are returned.\nSet to \"completed\", \"successful\", \"failed\", \"running\", or defaults to no filter.\n */\n filter?: \"completed\" | \"successful\" | \"failed\" | \"running\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** The number of builds to return. Maximum 100, defaults to 30.\n */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.offset": {
+        "rendered": "\n/** The API returns builds starting from this offset, defaults to 0.\n */\n offset?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** Restricts which builds are returned.\nSet to \"completed\", \"successful\", \"failed\", \"running\", or defaults to no filter.\n */\n filter?: \"completed\" | \"successful\" | \"failed\" | \"running\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/project/{username}/{project}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/project/{username}/{project}/build-cache": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/project/{username}/{project}/checkout-key": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/project/{username}/{project}/checkout-key": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/project/{username}/{project}/checkout-key/{fingerprint}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/project/{username}/{project}/checkout-key/{fingerprint}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/project/{username}/{project}/envvar": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/project/{username}/{project}/envvar": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/project/{username}/{project}/envvar/{name}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/project/{username}/{project}/envvar/{name}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/project/{username}/{project}/ssh-key": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/project/{username}/{project}/tree/{branch}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/project/{username}/{project}/{build_num}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/project/{username}/{project}/{build_num}/artifacts": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/project/{username}/{project}/{build_num}/cancel": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/project/{username}/{project}/{build_num}/retry": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/project/{username}/{project}/{build_num}/tests": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/projects": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/recent-builds": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of builds to return. Maximum 100, defaults to 30.\n */\n limit?: number, \n/** The API returns builds starting from this offset, defaults to 0.\n */\n offset?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** The number of builds to return. Maximum 100, defaults to 30.\n */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.offset": {
+        "rendered": "\n/** The API returns builds starting from this offset, defaults to 0.\n */\n offset?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/user/heroku-key": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "get__/events/v3/events": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The starting time as an ISO 8601 timestamp. */\n occurredAfter?: string, \n/** The ending time as an ISO 8601 timestamp. */\n occurredBefore?: string, \n/** The type of object being selected. Valid values are hubspot named object types (e.g. `contact`). */\n objectType?: string, \n/** The id of the selected object. If not present, then the `objectProperty` parameter is required. */\n objectId?: number, \n/** Limits the response to the specified event type.  For example `&eventType=e_visited_page` returns only `e_visited_page` events.  If not present all event types are returned. */\n eventType?: string, \n/** An additional parameter that may be used to get the next `limit` set of results. */\n after?: string,  before?: string, \n/** The maximum number of events to return, defaults to 20. */\n limit?: number, \n/** Selects the sort field and order. Defaults to ascending, prefix with `-` for descending order. `occurredAt` is the only field supported for sorting. */\n sort?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.occurredAfter": {
+        "rendered": "\n/** The starting time as an ISO 8601 timestamp. */\n occurredAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.occurredBefore": {
+        "rendered": "\n/** The ending time as an ISO 8601 timestamp. */\n occurredBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.objectType": {
+        "rendered": "\n/** The type of object being selected. Valid values are hubspot named object types (e.g. `contact`). */\n objectType?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.objectId": {
+        "rendered": "\n/** The id of the selected object. If not present, then the `objectProperty` parameter is required. */\n objectId?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.eventType": {
+        "rendered": "\n/** Limits the response to the specified event type.  For example `&eventType=e_visited_page` returns only `e_visited_page` events.  If not present all event types are returned. */\n eventType?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.after": {
+        "rendered": "\n/** An additional parameter that may be used to get the next `limit` set of results. */\n after?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.before": {
+        "rendered": " before?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** The maximum number of events to return, defaults to 20. */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Selects the sort field and order. Defaults to ascending, prefix with `-` for descending order. `occurredAt` is the only field supported for sorting. */\n sort?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "get__/": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/article/{article_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/article/{article_id}/content": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/article/{article_id}/fans": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/article/{article_id}/markdown": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/article/{article_id}/related": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/article/{article_id}/responses": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/latestposts/{topic_slug}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/list/{list_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/list/{list_id}/articles": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/list/{list_id}/responses": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/publication/id_for/{publication_slug}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/publication/{publication_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/publication/{publication_id}/articles": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** To get the articles before specified date and time. */\n from?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** To get the articles before specified date and time. */\n from?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/publication/{publication_id}/newsletter": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/related_tags/{tag}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/search/articles?query={query}": {
+    "query": {
+      ".queryParams": {
+        "rendered": " queryParams?: { \n/** Search query */\n query: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.query": {
+        "rendered": "\n/** Search query */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/search/lists?query={query}": {
+    "query": {
+      ".queryParams": {
+        "rendered": " queryParams?: { \n/** Search query */\n query: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.query": {
+        "rendered": "\n/** Search query */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/search/publications?query={query}": {
+    "query": {
+      ".queryParams": {
+        "rendered": " queryParams?: { \n/** Search query */\n query: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.query": {
+        "rendered": "\n/** Search query */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/search/tags?query={query}": {
+    "query": {
+      ".queryParams": {
+        "rendered": " queryParams?: { \n/** Search query */\n query: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.query": {
+        "rendered": "\n/** Search query */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/search/users?query={query}": {
+    "query": {
+      ".queryParams": {
+        "rendered": " queryParams?: { \n/** Search query */\n query: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.query": {
+        "rendered": "\n/** Search query */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/top_writer/{topic_slug}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Limits the number of `article_ids` in the result. */\n count?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** Limits the number of `article_ids` in the result. */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/topfeeds/{tag}/{mode}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** To get the subsequent top feeds. (`after` &lt; 250) */\n after?: number, \n/** To limit the number of top feeds. (`count` &lt; 25) */\n count?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.after": {
+        "rendered": "\n/** To get the subsequent top feeds. (`after` &lt; 250) */\n after?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** To limit the number of top feeds. (`count` &lt; 25) */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/id_for/{username}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}/articles": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}/followers": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** To limit the number of results. (count &lt; 1500) */\n count?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** To limit the number of results. (count &lt; 1500) */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}/following": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** To limit the number of results. (count &lt; 1500) */\n count?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** To limit the number of results. (count &lt; 1500) */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}/interests": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}/lists": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}/publications": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/{user_id}/top_articles": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

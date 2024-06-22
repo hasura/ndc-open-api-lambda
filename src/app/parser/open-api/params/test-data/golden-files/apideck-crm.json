@@ -1,0 +1,802 @@
+{
+  "get__/crm/activities": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** Apply filters */\n filter?: ActivitiesFilter, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** Apply filters */\n filter?: ActivitiesFilter,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter.__no_name": {
+        "rendered": "ActivitiesFilter",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/activities": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/activities/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/activities/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/activities/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/companies": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** Apply filters */\n filter?: CompaniesFilter, \n/** Apply sorting */\n sort?: CompaniesSort, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** Apply filters */\n filter?: CompaniesFilter,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter.__no_name": {
+        "rendered": "CompaniesFilter",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Apply sorting */\n sort?: CompaniesSort,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort.__no_name": {
+        "rendered": "CompaniesSort",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/companies": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/companies/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/companies/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/companies/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/contacts": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** Apply filters */\n filter?: ContactsFilter, \n/** Apply sorting */\n sort?: ContactsSort, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** Apply filters */\n filter?: ContactsFilter,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter.__no_name": {
+        "rendered": "ContactsFilter",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Apply sorting */\n sort?: ContactsSort,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort.__no_name": {
+        "rendered": "ContactsSort",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/contacts": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/contacts/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/contacts/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/contacts/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/leads": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** Apply filters */\n filter?: LeadsFilter, \n/** Apply sorting */\n sort?: LeadsSort, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** Apply filters */\n filter?: LeadsFilter,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter.__no_name": {
+        "rendered": "LeadsFilter",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Apply sorting */\n sort?: LeadsSort,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort.__no_name": {
+        "rendered": "LeadsSort",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/leads": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/leads/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/leads/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/leads/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/notes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/notes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/notes/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/notes/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/notes/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/opportunities": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** Apply filters */\n filter?: OpportunitiesFilter, \n/** Apply sorting */\n sort?: OpportunitiesSort, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** Apply filters */\n filter?: OpportunitiesFilter,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter.__no_name": {
+        "rendered": "OpportunitiesFilter",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Apply sorting */\n sort?: OpportunitiesSort,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort.__no_name": {
+        "rendered": "OpportunitiesSort",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/opportunities": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/opportunities/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/opportunities/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/opportunities/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/pipelines": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/pipelines": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/pipelines/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/pipelines/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/pipelines/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string, \n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.cursor": {
+        "rendered": "\n/** Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response. */\n cursor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Number of results to return. Minimum 1, Maximum 200, Default 20 */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/crm/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/crm/users/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/crm/users/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, \n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. <br /><br />Example: `fields=name,email,addresses.city`<br /><br />In the example above, the response will only include the fields \"name\", \"email\" and \"addresses.city\". If any other fields are available, they will be excluded. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/crm/users/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.raw": {
+        "rendered": "\n/** Include raw response. Mostly used for debugging purposes */\n raw?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

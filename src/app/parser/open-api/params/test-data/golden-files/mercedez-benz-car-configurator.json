@@ -1,0 +1,421 @@
+{
+  "get__/markets": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** This is a ISO language string e.g. 'de' and is spoken in Austria 'AT', Germany 'DE' and Swiss 'CH'. */\n language?: string, \n/** This is a ISO country string e.g. Germany 'DE' or Swiss 'CH'. */\n country?: string, \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.language": {
+        "rendered": "\n/** This is a ISO language string e.g. 'de' and is spoken in Austria 'AT', Germany 'DE' and Swiss 'CH'. */\n language?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.country": {
+        "rendered": "\n/** This is a ISO country string e.g. Germany 'DE' or Swiss 'CH'. */\n country?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/bodies": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** This is a class id e.g. '176' for 'A-Class' in Germany. */\n classId?: string, \n/** This is a body id e.g. '1' for 'Limousine' in Germany. */\n bodyId?: string, \n/** Specifies to which product groups the vehicles belong which should be returned. The product groups are separated from each other by a comma and are case sensitive. Allowed values are:\n  * PKW\n  * VAN\n  * SMART */\n productGroups?: (\"PKW\" | \"VAN\" | \"SMART\")[], \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.classId": {
+        "rendered": "\n/** This is a class id e.g. '176' for 'A-Class' in Germany. */\n classId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bodyId": {
+        "rendered": "\n/** This is a body id e.g. '1' for 'Limousine' in Germany. */\n bodyId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.productGroups": {
+        "rendered": "\n/** Specifies to which product groups the vehicles belong which should be returned. The product groups are separated from each other by a comma and are case sensitive. Allowed values are:\n  * PKW\n  * VAN\n  * SMART */\n productGroups?: (\"PKW\" | \"VAN\" | \"SMART\")[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.productGroups.__no_name": {
+        "rendered": "\"PKW\" | \"VAN\" | \"SMART\"",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/bodies/{bodyId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/classes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** This is a class id e.g. '176' for 'A-Class' in Germany. */\n classId?: string, \n/** This is a body id e.g. '1' for 'Limousine' in Germany. */\n bodyId?: string, \n/** Specifies to which product groups the vehicles belong which should be returned. The product groups are separated from each other by a comma and are case sensitive. Allowed values are:\n  * PKW\n  * VAN\n  * SMART */\n productGroups?: (\"\"PKW\"\" | \"\"VAN\"\" | \"\"SMART\"\")[], \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.classId": {
+        "rendered": "\n/** This is a class id e.g. '176' for 'A-Class' in Germany. */\n classId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bodyId": {
+        "rendered": "\n/** This is a body id e.g. '1' for 'Limousine' in Germany. */\n bodyId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.productGroups": {
+        "rendered": "\n/** Specifies to which product groups the vehicles belong which should be returned. The product groups are separated from each other by a comma and are case sensitive. Allowed values are:\n  * PKW\n  * VAN\n  * SMART */\n productGroups?: (\"\"PKW\"\" | \"\"VAN\"\" | \"\"SMART\"\")[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.productGroups.__no_name": {
+        "rendered": "\"\"PKW\"\" | \"\"VAN\"\" | \"\"SMART\"\"",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/classes/{classId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** This is a class id e.g. '176' for 'A-Class' in Germany. */\n classId?: string, \n/** This is a body id e.g. '1' for 'Limousine' in Germany. */\n bodyId?: string, \n/** The first four digits of a baumuster are called baumuster4prefix e.g. '1760' for 'Berline' in France. */\n baumuster4prefix?: string, \n/** This is a baumuster e.g. '176042' for 'A 180 Limousine' in Germany. */\n baumuster?: string, \n/** This is the national sales type (NST) of a distinct baumuster. There is no predefined pattern for the NST, each market defines its NST. e.g. 'E07' in France, 0001 in Germany and ZA1 in South Africa Using the NST markets can define market specific conditions. e.g. different initial configuration, etc. */\n nationalSalesType?: string, \n/** Specifies to which product groups the vehicles belong which should be returned. The product groups are separated from each other by a comma and are case sensitive. Allowed values are:\n  * PKW\n  * VAN\n  * SMART */\n productGroups?: (\"\"\"PKW\"\"\" | \"\"\"VAN\"\"\" | \"\"\"SMART\"\"\")[], \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.classId": {
+        "rendered": "\n/** This is a class id e.g. '176' for 'A-Class' in Germany. */\n classId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bodyId": {
+        "rendered": "\n/** This is a body id e.g. '1' for 'Limousine' in Germany. */\n bodyId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.baumuster4prefix": {
+        "rendered": "\n/** The first four digits of a baumuster are called baumuster4prefix e.g. '1760' for 'Berline' in France. */\n baumuster4prefix?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.baumuster": {
+        "rendered": "\n/** This is a baumuster e.g. '176042' for 'A 180 Limousine' in Germany. */\n baumuster?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.nationalSalesType": {
+        "rendered": "\n/** This is the national sales type (NST) of a distinct baumuster. There is no predefined pattern for the NST, each market defines its NST. e.g. 'E07' in France, 0001 in Germany and ZA1 in South Africa Using the NST markets can define market specific conditions. e.g. different initial configuration, etc. */\n nationalSalesType?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.productGroups": {
+        "rendered": "\n/** Specifies to which product groups the vehicles belong which should be returned. The product groups are separated from each other by a comma and are case sensitive. Allowed values are:\n  * PKW\n  * VAN\n  * SMART */\n productGroups?: (\"\"\"PKW\"\"\" | \"\"\"VAN\"\"\" | \"\"\"SMART\"\"\")[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.productGroups.__no_name": {
+        "rendered": "\"\"\"PKW\"\"\" | \"\"\"VAN\"\"\" | \"\"\"SMART\"\"\"",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/initial": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/alternatives/{componentList}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/engine": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/equipments": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/equipments/{componentCode}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/paint": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/rim": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/trim": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/components/upholstery": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/images/vehicle": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** One or more perspectives as a comma separated String list e.g. 'EXT000,EXT010,INT1'.  The following perspectives are available:\n  * EXT000-EXT350: EXT000 defines the front view, EXT010 defines a rotation of 10 degress and so forth.\n  * INT1-INT4: These are the 4 available interior perspectives.\n\nThe default value is EXT020,INT1 if no value is provided. */\n perspectives?: string, \n/** Set 'true', if you are looking for images with the roof open. This option is only valid for cabrios. Default is 'false'. */\n roofOpen?: boolean, \n/** Set 'true', if you are looking for images with a darker background and the vehicle's headlights turned on. Default is 'false'. */\n night?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perspectives": {
+        "rendered": "\n/** One or more perspectives as a comma separated String list e.g. 'EXT000,EXT010,INT1'.  The following perspectives are available:\n  * EXT000-EXT350: EXT000 defines the front view, EXT010 defines a rotation of 10 degress and so forth.\n  * INT1-INT4: These are the 4 available interior perspectives.\n\nThe default value is EXT020,INT1 if no value is provided. */\n perspectives?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.roofOpen": {
+        "rendered": "\n/** Set 'true', if you are looking for images with the roof open. This option is only valid for cabrios. Default is 'false'. */\n roofOpen?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.night": {
+        "rendered": "\n/** Set 'true', if you are looking for images with a darker background and the vehicle's headlights turned on. Default is 'false'. */\n night?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/models/{modelId}/configurations/{configurationId}/selectables": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** A list of component types separated by a comma case insensitive. If nothing is defined all component types are returned. Allowed values are:\n  - WHEELS\n  - PAINTS\n  - UPHOLSTERIES\n  - TRIMS\n  - PACKAGES\n  - LINES\n  - SPECIAL_EDITION\n  - SPECIAL_EQUIPMENT */\n componentTypes?: (\"WHEELS\" | \"PAINTS\" | \"UPHOLSTERIES\" | \"TRIMS\" | \"PACKAGES\" | \"LINES\" | \"SPECIAL_EDITION\" | \"SPECIAL_EQUIPMENT\")[], \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.componentTypes": {
+        "rendered": "\n/** A list of component types separated by a comma case insensitive. If nothing is defined all component types are returned. Allowed values are:\n  - WHEELS\n  - PAINTS\n  - UPHOLSTERIES\n  - TRIMS\n  - PACKAGES\n  - LINES\n  - SPECIAL_EDITION\n  - SPECIAL_EQUIPMENT */\n componentTypes?: (\"WHEELS\" | \"PAINTS\" | \"UPHOLSTERIES\" | \"TRIMS\" | \"PACKAGES\" | \"LINES\" | \"SPECIAL_EDITION\" | \"SPECIAL_EQUIPMENT\")[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.componentTypes.__no_name": {
+        "rendered": "\"WHEELS\" | \"PAINTS\" | \"UPHOLSTERIES\" | \"TRIMS\" | \"PACKAGES\" | \"LINES\" | \"SPECIAL_EDITION\" | \"SPECIAL_EQUIPMENT\"",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/markets/{marketId}/onlinecode": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/onlinecode/{onlineCode}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/markets/{marketId}/productgroups": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter": {
+        "rendered": "\n/** Specifies which fields should be included in the result. If this filter is not used, per default all fields are returned. */\n fieldsFilter?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fieldsFilter.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

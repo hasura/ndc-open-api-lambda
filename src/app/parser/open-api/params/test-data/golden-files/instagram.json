@@ -1,0 +1,364 @@
+{
+  "get__/geographies/{geo-id}/media/recent": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Max number of media to return. */\n count?: number, \n/** Return media before this `min_id`. */\n min_id?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** Max number of media to return. */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_id": {
+        "rendered": "\n/** Return media before this `min_id`. */\n min_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/locations/search": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Default is 1000m (distance=1000), max distance is 5000. */\n distance?: number, \n/** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */\n facebook_places_id?: string, \n/** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use\n`lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.\n */\n foursquare_id?: string, \n/** Latitude of the center search coordinate. If used, `lng` is required. */\n lat?: number, \n/** Longitude of the center search coordinate. If used, `lat` is required. */\n lng?: number, \n/** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use\n`lat` and `lng`.\n */\n foursquare_v2_id?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.distance": {
+        "rendered": "\n/** Default is 1000m (distance=1000), max distance is 5000. */\n distance?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.facebook_places_id": {
+        "rendered": "\n/** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */\n facebook_places_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.foursquare_id": {
+        "rendered": "\n/** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use\n`lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.\n */\n foursquare_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.lat": {
+        "rendered": "\n/** Latitude of the center search coordinate. If used, `lng` is required. */\n lat?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.lng": {
+        "rendered": "\n/** Longitude of the center search coordinate. If used, `lat` is required. */\n lng?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.foursquare_v2_id": {
+        "rendered": "\n/** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use\n`lat` and `lng`.\n */\n foursquare_v2_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/locations/{location-id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/locations/{location-id}/media/recent": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return media after this UNIX timestamp. */\n min_timestamp?: number, \n/** Return media before this UNIX timestamp. */\n max_timestamp?: number, \n/** Return media before this `min_id`. */\n min_id?: string, \n/** Return media after this `max_id`. */\n max_id?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_timestamp": {
+        "rendered": "\n/** Return media after this UNIX timestamp. */\n min_timestamp?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_timestamp": {
+        "rendered": "\n/** Return media before this UNIX timestamp. */\n max_timestamp?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_id": {
+        "rendered": "\n/** Return media before this `min_id`. */\n min_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_id": {
+        "rendered": "\n/** Return media after this `max_id`. */\n max_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/media/popular": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/media/search": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Latitude of the center search coordinate. If used, `lng` is required. */\n lat: number, \n/** Longitude of the center search coordinate. If used, `lat` is required. */\n lng: number, \n/** A unix timestamp. All media returned will be taken later than this timestamp. */\n min_timestamp?: number, \n/** A unix timestamp. All media returned will be taken earlier than this timestamp. */\n max_timestamp?: number, \n/** Default is 1km (distance=1000), max distance is 5km. */\n distance?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.lat": {
+        "rendered": "\n/** Latitude of the center search coordinate. If used, `lng` is required. */\n lat: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.lng": {
+        "rendered": "\n/** Longitude of the center search coordinate. If used, `lat` is required. */\n lng: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_timestamp": {
+        "rendered": "\n/** A unix timestamp. All media returned will be taken later than this timestamp. */\n min_timestamp?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_timestamp": {
+        "rendered": "\n/** A unix timestamp. All media returned will be taken earlier than this timestamp. */\n max_timestamp?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.distance": {
+        "rendered": "\n/** Default is 1km (distance=1000), max distance is 5km. */\n distance?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/media/shortcode/{shortcode}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/media/{media-id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/media/{media-id}/comments": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/media/{media-id}/comments": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Text to post as a comment on the media object as specified in `media-id`. */\n text: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.text": {
+        "rendered": "\n/** Text to post as a comment on the media object as specified in `media-id`. */\n text: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/media/{media-id}/comments/{comment-id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/media/{media-id}/likes": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/media/{media-id}/likes": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/media/{media-id}/likes": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/tags/search": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** A valid tag name without a leading \\#. (eg. snowy, nofilter) */\n q: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.q": {
+        "rendered": "\n/** A valid tag name without a leading \\#. (eg. snowy, nofilter) */\n q: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/tags/{tag-name}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/tags/{tag-name}/media/recent": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Count of tagged media to return. */\n count?: number, \n/** Return media before this `min_tag_id`. */\n min_tag_id?: string, \n/** Return media after this `max_tag_id`. */\n max_tag_id?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** Count of tagged media to return. */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_tag_id": {
+        "rendered": "\n/** Return media before this `min_tag_id`. */\n min_tag_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_tag_id": {
+        "rendered": "\n/** Return media after this `max_tag_id`. */\n max_tag_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/search": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** A query string. */\n q: string, \n/** Number of users to return. */\n count?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.q": {
+        "rendered": "\n/** A query string. */\n q: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** Number of users to return. */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/self/feed": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Count of media to return. */\n count?: number, \n/** Return media later than this `min_id`. */\n min_id?: string, \n/** Return media earlier than this `max_id`. */\n max_id?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** Count of media to return. */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_id": {
+        "rendered": "\n/** Return media later than this `min_id`. */\n min_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_id": {
+        "rendered": "\n/** Return media earlier than this `max_id`. */\n max_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/self/media/liked": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Count of media to return. */\n count?: number, \n/** Return media liked before this id. */\n max_like_id?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** Count of media to return. */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_like_id": {
+        "rendered": "\n/** Return media liked before this id. */\n max_like_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/self/requested-by": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user-id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user-id}/followed-by": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user-id}/follows": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user-id}/media/recent": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Count of media to return. */\n count?: number, \n/** Return media before this UNIX timestamp. */\n max_timestamp?: number, \n/** Return media after this UNIX timestamp. */\n min_timestamp?: number, \n/** Return media later than this `min_id`. */\n min_id?: string, \n/** Return media earlier than this `max_id`. */\n max_id?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": "\n/** Count of media to return. */\n count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_timestamp": {
+        "rendered": "\n/** Return media before this UNIX timestamp. */\n max_timestamp?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_timestamp": {
+        "rendered": "\n/** Return media after this UNIX timestamp. */\n min_timestamp?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.min_id": {
+        "rendered": "\n/** Return media later than this `min_id`. */\n min_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.max_id": {
+        "rendered": "\n/** Return media earlier than this `max_id`. */\n max_id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user-id}/relationship": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user-id}/relationship": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Type of action to apply for relationship with the user. */\n action: \"follow\" | \"unfollow\" | \"block\" | \"unblock\" | \"approve\" | \"ignore\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.action": {
+        "rendered": "\n/** Type of action to apply for relationship with the user. */\n action: \"follow\" | \"unfollow\" | \"block\" | \"unblock\" | \"approve\" | \"ignore\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}
