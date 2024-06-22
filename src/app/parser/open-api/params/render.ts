@@ -92,7 +92,7 @@ export function renderObjectTypeSchema(schema: types.SchemaTypeObject): string {
   for (const property of types.getSchemaTypeObjectChildren(schema)) {
     renderedProperties.push(renderParams(property)._$rendered!);
   }
-  const paramType = `{ ${renderedProperties.join("; ")} }`;
+  const paramType = `{ ${renderedProperties.join(" ")} }`;
   return renderSchema(paramType, schema);
 }
 
