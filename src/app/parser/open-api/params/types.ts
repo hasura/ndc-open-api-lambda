@@ -2,8 +2,12 @@ export type Schema =
   | SchemaTypeRef
   | SchemaTypeObject
   | SchemaTypeScalar
+  | SchemaTypeCustomType
   | SchemaTypeArray;
 
+/**
+ * common properties shared across all types of Schema
+ */
 export type BaseSchema = {
   paramName: string | undefined; // some objects have the variable name as `paramName`
   name: string | undefined; // some objects have the variable name as `name`
@@ -61,12 +65,6 @@ export type SchemaTypeArray = BaseSchema & {
   items: Schema;
 };
 
-export type ParsedSchema = {
-  rendered: string;
-
-  schema: Schema;
-};
-
 /**
  * CustomType refers to types declared in the type/data contract of the API
  * For example, in petstore, `Pet` is a custom type that has all the fields
@@ -75,6 +73,12 @@ export type ParsedSchema = {
 export type SchemaTypeCustomType = BaseSchema & {
   type: string; // can be any valid type. Eg: Pet (in petstore API)
   schema: SchemaTypeRef | SchemaTypeArray;
+};
+
+export type ParsedSchema = {
+  rendered: string;
+
+  schema: Schema;
 };
 
 export function schemaIsTypeRef(schema: any): schema is SchemaTypeRef {
