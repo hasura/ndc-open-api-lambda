@@ -13,6 +13,9 @@ export type BaseSchema = {
   name: string | undefined; // some objects have the variable name as `name`
   required: boolean | undefined;
   description: string | undefined;
+
+  // Typescript representation of this schema
+  _$rendered: string | undefined;
 };
 
 enum ObjectTypeEnum {
@@ -75,12 +78,6 @@ export type SchemaTypeCustomType = BaseSchema & {
   schema: SchemaTypeRef | SchemaTypeArray;
 };
 
-export type ParsedSchema = {
-  rendered: string;
-
-  schema: Schema;
-};
-
 export function schemaIsTypeRef(schema: any): schema is SchemaTypeRef {
   return schema.$ref ?? false;
 }
@@ -139,4 +136,18 @@ export function getParameterName(schema: BaseSchema): string | undefined {
 
 export function isSchemaRequired(schema: BaseSchema): boolean {
   return schema.required ?? false;
+}
+
+export function getSchemaTypeObjectChildren(
+  schema: SchemaTypeObject,
+): Schema[] {
+  return Array.from(Object.values(schema.properties));
+}
+
+export function getSchemaTypeArrayChild(schema: SchemaTypeArray): Schema {
+  return schema.items;
+}
+
+export function getSchemaTypeCustomChild(schema: SchemaTypeCustomType): Schema {
+  return schema.schema;
 }
