@@ -13,6 +13,8 @@ export function renderParams(schema: types.Schema): types.Schema {
     rendered = renderCustomTypeSchema(schema);
   } else if (types.schemaIsTypeRef(schema)) {
     rendered = renderRefTypeSchema(schema);
+  } else if (types.schemaIsTypeOneOf(schema)) {
+    rendered = renderOneOfTypeSchema(schema);
   } else {
     const error = new Error(`Cannot resolve parameter schema: ${JSON.stringify(schema)}`);
     logger.error(error);
@@ -118,6 +120,15 @@ export function renderRefTypeSchema(schema: types.SchemaTypeRef): string {
   // TODO: add schema store reference
   const splitRef = schema.$ref.split("/");
   const paramType = splitRef[splitRef.length - 1]!;
+  return renderSchema(paramType, schema);
+}
+
+export function renderOneOfTypeSchema(schema: types.SchemaTypeOneOf): string {
+  const renderedProperties: string[] = [];
+  for (const property of types.getSchemaTypeOneOfChildren(schema)) {
+    renderedProperties.push(renderParams(property)._$rendered!);
+  }
+  const paramType = renderedProperties.join(" | ");
   return renderSchema(paramType, schema);
 }
 

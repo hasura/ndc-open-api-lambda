@@ -478,7 +478,7 @@
   "get__/bulkjobs/v4/deviceUploads": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Type of bulk job (either `create` or `delete`) */\n type?: \"create\" | \"delete\",  },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Type of bulk job (either `create` or `delete`) */\n type?: \"create\" | \"delete\",  status?: \"pending\" | \"ongoing\" | \"completed\" | \"failed\" | \"cancelled\" | \"acknowledged\" | (\"pending\" | \"ongoing\" | \"completed\" | \"failed\" | \"cancelled\" | \"acknowledged\")[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -498,7 +498,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.status": {
-        "rendered": "",
+        "rendered": " status?: \"pending\" | \"ongoing\" | \"completed\" | \"failed\" | \"cancelled\" | \"acknowledged\" | (\"pending\" | \"ongoing\" | \"completed\" | \"failed\" | \"cancelled\" | \"acknowledged\")[],",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -797,7 +797,7 @@
   "get__/events/v3": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 1 to the current time.\n */\n before?: number, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 0 to the current time.\n */\n after?: number,    \n/** Events with the `initialState` property set as `true` are generated when the rule is \nevaluated for the first time. It indicates the fact that this is the initial evaluation \nstate, which would serve as a starting point for the subsequent rule evaluations.\nThe rest of the rule events would represent a transition of a device or a shipment or \na geofence from one state to another and their `initialState` property will be set to `false`.\n */\n initialState?: boolean, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 1 to the current time.\n */\n before?: number, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 0 to the current time.\n */\n after?: number,  eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],  eventType?: \"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\" | (\"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\")[],  ruleId?: string | (string)[], \n/** Events with the `initialState` property set as `true` are generated when the rule is \nevaluated for the first time. It indicates the fact that this is the initial evaluation \nstate, which would serve as a starting point for the subsequent rule evaluations.\nThe rest of the rule events would represent a transition of a device or a shipment or \na geofence from one state to another and their `initialState` property will be set to `false`.\n */\n initialState?: boolean, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -813,15 +813,15 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.eventSource": {
-        "rendered": "",
+        "rendered": " eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.eventType": {
-        "rendered": "",
+        "rendered": " eventType?: \"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\" | (\"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\")[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ruleId": {
-        "rendered": "",
+        "rendered": " ruleId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.initialState": {
@@ -854,7 +854,7 @@
   "get__/events/v3/statuses": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string,      \n/** If `true`, the results will be limited to shipment event statuses only.\nIf `false`, the results will be limited to device event statuses only.\nIf not specified, the results will include both device and shipments event statuses.\n */\n shipments?: boolean, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 1 to the current time.\n */\n before?: number, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 0 to the current time.\n */\n after?: number, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string,  eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],  eventType?: \"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\" | (\"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\")[],  trackingId?: string | (string)[],  ruleId?: string | (string)[],  geofenceId?: string | (string)[], \n/** If `true`, the results will be limited to shipment event statuses only.\nIf `false`, the results will be limited to device event statuses only.\nIf not specified, the results will include both device and shipments event statuses.\n */\n shipments?: boolean, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 1 to the current time.\n */\n before?: number, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 0 to the current time.\n */\n after?: number, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -862,23 +862,23 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.eventSource": {
-        "rendered": "",
+        "rendered": " eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.eventType": {
-        "rendered": "",
+        "rendered": " eventType?: \"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\" | (\"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\")[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.trackingId": {
-        "rendered": "",
+        "rendered": " trackingId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ruleId": {
-        "rendered": "",
+        "rendered": " ruleId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.geofenceId": {
-        "rendered": "",
+        "rendered": " geofenceId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.shipments": {
@@ -913,7 +913,7 @@
   "get__/events/v3/statuses/deviceCounts": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** Define whether the number of devices and shipments in each event state is calculated per rule ID or per rule type.\n */\n groupBy?: \"ruleId\" | \"eventSource\",     \n/** If `true`, the results will be limited to shipment event statuses only.\nIf `false`, the results will be limited to device event statuses only.\nIf not specified, the results will include both device and shipments event statuses.\n */\n shipments?: boolean, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** Define whether the number of devices and shipments in each event state is calculated per rule ID or per rule type.\n */\n groupBy?: \"ruleId\" | \"eventSource\",  eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],  trackingId?: string | (string)[],  ruleId?: string | (string)[],  geofenceId?: string | (string)[], \n/** If `true`, the results will be limited to shipment event statuses only.\nIf `false`, the results will be limited to device event statuses only.\nIf not specified, the results will include both device and shipments event statuses.\n */\n shipments?: boolean, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -925,19 +925,19 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.eventSource": {
-        "rendered": "",
+        "rendered": " eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.trackingId": {
-        "rendered": "",
+        "rendered": " trackingId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ruleId": {
-        "rendered": "",
+        "rendered": " ruleId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.geofenceId": {
-        "rendered": "",
+        "rendered": " geofenceId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.shipments": {
@@ -970,7 +970,7 @@
   "get__/events/v3/{trackingId}": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 1 to the current time.\n */\n before?: number, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 0 to the current time.\n */\n after?: number,    \n/** Events with the `initialState` property set as `true` are generated when the rule is \nevaluated for the first time. It indicates the fact that this is the initial evaluation \nstate, which would serve as a starting point for the subsequent rule evaluations.\nThe rest of the rule events would represent a transition of a device or a shipment or \na geofence from one state to another and their `initialState` property will be set to `false`.\n */\n initialState?: boolean, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
+        "rendered": " query: { \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 1 to the current time.\n */\n before?: number, \n/** Milliseconds elapsed since 1 January 1970 00:00:00 UTC.\nThe accepted range is from 0 to the current time.\n */\n after?: number,  eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],  eventType?: \"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\" | (\"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\")[],  ruleId?: string | (string)[], \n/** Events with the `initialState` property set as `true` are generated when the rule is \nevaluated for the first time. It indicates the fact that this is the initial evaluation \nstate, which would serve as a starting point for the subsequent rule evaluations.\nThe rest of the rule events would represent a transition of a device or a shipment or \na geofence from one state to another and their `initialState` property will be set to `false`.\n */\n initialState?: boolean, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** Application identifier. Used together with an external ID to identify a virtual device. */\n appId?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.before": {
@@ -982,15 +982,15 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.eventSource": {
-        "rendered": "",
+        "rendered": " eventSource?: \"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\" | (\"attach\" | \"battery\" | \"geofence\" | \"humidity\" | \"pressure\" | \"tamper\" | \"temperature\" | \"acceleration\" | \"dwelling\" | \"stock\" | \"detention\" | \"utilization\" | \"online\" | \"shipmentSchedule\")[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.eventType": {
-        "rendered": "",
+        "rendered": " eventType?: \"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\" | (\"BELOW_RANGE\" | \"IN_RANGE\" | \"ABOVE_RANGE\" | \"FALSE_TO_TRUE\" | \"TRUE_TO_FALSE\" | \"EVENT\" | \"INSIDE_GEOFENCE\" | \"OUTSIDE_GEOFENCE\" | \"OVERSTOCK\" | \"NORMAL_VOLUME\" | \"UNDERSTOCK\" | \"DWELLING_STARTED\" | \"DWELLING_ENDED\" | \"DETENTION_STARTED\" | \"DETENTION_ENDED\" | \"UTILIZED\" | \"UNUTILIZED\" | \"SHIPMENT_EARLY\" | \"SHIPMENT_ON_TIME\" | \"SHIPMENT_DELAYED\")[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ruleId": {
-        "rendered": "",
+        "rendered": " ruleId?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.initialState": {
@@ -1521,7 +1521,7 @@
   "get__/locations/v4": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** The number of items to return per page */\n limit?: number, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** Geofence ID */\n geofenceId?: string, \n/** Filter locations by name. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n name?: string, \n/** Filter locations by street address. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n street?: string, \n/** Filter locations by city. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n city?: string, \n/** Filter locations by postal code. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n postalCode?: string, \n/** Filter locations by state. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n state?: string, \n/** Filter locations by country. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n country?: string, \n/** Filter locations by locationId wildcard.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n locationId?: string,  \n/** External location id in external cloud */\n externalLocationId?: string, },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** The number of items to return per page */\n limit?: number, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** Geofence ID */\n geofenceId?: string, \n/** Filter locations by name. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n name?: string, \n/** Filter locations by street address. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n street?: string, \n/** Filter locations by city. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n city?: string, \n/** Filter locations by postal code. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n postalCode?: string, \n/** Filter locations by state. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n state?: string, \n/** Filter locations by country. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n country?: string, \n/** Filter locations by locationId wildcard.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n locationId?: string, \n/** A paramater to specify field to sort by and order.\nThe following format can be used:\n'name:asc' sort by name in ascending order,\n'steet:desc' sort by street in descending order.\nAllowed fields to sort by:\nlocationId, name, street, city, postalCode, state, country.\n */\n sort?: string | (string)[], \n/** External location id in external cloud */\n externalLocationId?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -1568,7 +1568,10 @@
         "rendered": "\n/** Filter locations by locationId wildcard.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n locationId?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.sort": { "rendered": "", "requiresRelaxedTypeAnnotation": false },
+      ".query.sort": {
+        "rendered": "\n/** A paramater to specify field to sort by and order.\nThe following format can be used:\n'name:asc' sort by name in ascending order,\n'steet:desc' sort by street in descending order.\nAllowed fields to sort by:\nlocationId, name, street, city, postalCode, state, country.\n */\n sort?: string | (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".query.externalLocationId": {
         "rendered": "\n/** External location id in external cloud */\n externalLocationId?: string,",
         "requiresRelaxedTypeAnnotation": false
@@ -1934,7 +1937,7 @@
   "get__/registry/v2/licenses": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Start of returned block from a list. Default 0. */\n startIndex?: number, \n/** End of returned block from a list. Default 100. */\n endIndex?: number,   },",
+        "rendered": " query: { \n/** Start of returned block from a list. Default 0. */\n startIndex?: number, \n/** End of returned block from a list. Default 100. */\n endIndex?: number,  projectIds?: string | (string)[],  projectTypes?: \"indoor\" | \"tracking\" | \"trackingAzure\" | \"lastmile\" | (\"indoor\" | \"tracking\" | \"trackingAzure\" | \"lastmile\")[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.startIndex": {
@@ -1946,11 +1949,11 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectIds": {
-        "rendered": "",
+        "rendered": " projectIds?: string | (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectTypes": {
-        "rendered": "",
+        "rendered": " projectTypes?: \"indoor\" | \"tracking\" | \"trackingAzure\" | \"lastmile\" | (\"indoor\" | \"tracking\" | \"trackingAzure\" | \"lastmile\")[],",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -2574,7 +2577,7 @@
   "get__/shipments/v4": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Filter the results by shipment status */\n status?: \"pending\" | \"ongoing\" | \"completed\" | \"cancelled\", \n/** Return only shipments that started before the specified timestamp */\n startedBefore?: string, \n/** Return only shipments that started after the specified timestamp */\n startedAfter?: string, \n/** Return only shipments that ended before the specified timestamp */\n endedBefore?: string, \n/** Return only shipments that ended after the specified timestamp */\n endedAfter?: string, \n/** Filter shipments by name. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n name?: string, \n/** Shipment plan ID */\n shipmentPlanId?: string, \n/** Filter shipments by `shipmentId`\nMatching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n shipmentId?: string, \n/** Returns only shipments marked as subShipments */\n isSubShipment?: boolean, \n/** Return only shipments that have been created before specified timestamp */\n createdBefore?: string, \n/** Return only shipments that have been created after specified timestamp */\n createdAfter?: string,  },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Filter the results by shipment status */\n status?: \"pending\" | \"ongoing\" | \"completed\" | \"cancelled\", \n/** Return only shipments that started before the specified timestamp */\n startedBefore?: string, \n/** Return only shipments that started after the specified timestamp */\n startedAfter?: string, \n/** Return only shipments that ended before the specified timestamp */\n endedBefore?: string, \n/** Return only shipments that ended after the specified timestamp */\n endedAfter?: string, \n/** Filter shipments by name. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n name?: string, \n/** Shipment plan ID */\n shipmentPlanId?: string, \n/** Filter shipments by `shipmentId`\nMatching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n shipmentId?: string, \n/** Returns only shipments marked as subShipments */\n isSubShipment?: boolean, \n/** Return only shipments that have been created before specified timestamp */\n createdBefore?: string, \n/** Return only shipments that have been created after specified timestamp */\n createdAfter?: string, \n/** A paramater to specify field to sort by and order.\nThe following format can be used:\n'name:asc' sort by name in ascending order,\n'shipmentId:desc' sort by shipmentId in descending order.\nAllowed fields to sort by:\nshipmentId, name, status, startedAt, createdAt, endedAt, providedEtd,\nprovidedEta, calculatedEtd.\n */\n sort?: string | (string)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -2633,7 +2636,10 @@
         "rendered": "\n/** Return only shipments that have been created after specified timestamp */\n createdAfter?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.sort": { "rendered": "", "requiresRelaxedTypeAnnotation": false }
+      ".query.sort": {
+        "rendered": "\n/** A paramater to specify field to sort by and order.\nThe following format can be used:\n'name:asc' sort by name in ascending order,\n'shipmentId:desc' sort by shipmentId in descending order.\nAllowed fields to sort by:\nshipmentId, name, status, startedAt, createdAt, endedAt, providedEtd,\nprovidedEta, calculatedEtd.\n */\n sort?: string | (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      }
     },
     "body": {},
     "path": {},
@@ -2678,7 +2684,7 @@
   "get__/shipments/v4/plans": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Filter shipments by name. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n name?: string, \n/** Return only shipment plans that have been instantiated from the specified `shipmentPlanId`\nMatching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n shipmentPlanId?: string, \n/** Return only shipments that have been instantiated from the specified `locationId`\n */\n locationId?: string, \n/** Return only shipments that have been created before specified timestamp */\n createdBefore?: string, \n/** Return only shipments that have been created after specified timestamp */\n createdAfter?: string, \n/** Returns only shipments marked as subShipments */\n isSubShipment?: boolean,  },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Filter shipments by name. Matching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n name?: string, \n/** Return only shipment plans that have been instantiated from the specified `shipmentPlanId`\nMatching is case-insensitive.\nThe following wildcards can be used:\n'*' matches any number of any characters,\n'?' matches any single character.\n */\n shipmentPlanId?: string, \n/** Return only shipments that have been instantiated from the specified `locationId`\n */\n locationId?: string, \n/** Return only shipments that have been created before specified timestamp */\n createdBefore?: string, \n/** Return only shipments that have been created after specified timestamp */\n createdAfter?: string, \n/** Returns only shipments marked as subShipments */\n isSubShipment?: boolean, \n/** A paramater to specify field to sort by and order.\nAllowed fields to sort by: shipmentPlanId, name, createdAt\n */\n sort?: string | (string)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -2717,7 +2723,10 @@
         "rendered": "\n/** Returns only shipments marked as subShipments */\n isSubShipment?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.sort": { "rendered": "", "requiresRelaxedTypeAnnotation": false }
+      ".query.sort": {
+        "rendered": "\n/** A paramater to specify field to sort by and order.\nAllowed fields to sort by: shipmentPlanId, name, createdAt\n */\n sort?: string | (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      }
     },
     "body": {},
     "path": {},
@@ -3008,10 +3017,30 @@
     "path": {},
     "response": {}
   },
-  "get__/v2/health": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "get__/v2/timestamp": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "post__/v2/token": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "get__/v2/version": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v2/health": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/timestamp": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v2/token": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/version": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
   "post__/v3/": {
     "query": {
       ".query": {
@@ -3027,7 +3056,22 @@
     "path": {},
     "response": {}
   },
-  "post__/v3/batch": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "get__/v3/health": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "get__/v3/version": { "query": {}, "body": {}, "path": {}, "response": {} }
+  "post__/v3/batch": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/health": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/version": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  }
 }

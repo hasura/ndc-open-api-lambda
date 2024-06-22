@@ -3,6 +3,7 @@ export type Schema =
   | SchemaTypeObject
   | SchemaTypeScalar
   | SchemaTypeCustomType
+  | SchemaTypeOneOf
   | SchemaTypeArray;
 
 /**
@@ -78,6 +79,10 @@ export type SchemaTypeCustomType = BaseSchema & {
   schema: SchemaTypeRef | SchemaTypeArray;
 };
 
+export type SchemaTypeOneOf = BaseSchema & {
+  oneOf: Schema[];
+};
+
 export function schemaIsTypeRef(schema: any): schema is SchemaTypeRef {
   return schema.$ref ?? false;
 }
@@ -124,6 +129,13 @@ export function scalarSchemaIsBoolean(schema: SchemaTypeScalar): boolean {
   return Object.values(BooleanScalarTypeEnum).includes(schema.type);
 }
 
+export function schemaIsTypeOneOf(schema: any): schema is SchemaTypeOneOf {
+  return (
+    schema.oneOf &&
+    schema.oneOf.length > 0
+  );
+}
+
 export function getParameterName(schema: BaseSchema): string | undefined {
   if (schema.name) {
     return schema.name;
@@ -150,4 +162,8 @@ export function getSchemaTypeArrayChild(schema: SchemaTypeArray): Schema {
 
 export function getSchemaTypeCustomChild(schema: SchemaTypeCustomType): Schema {
   return schema.schema;
+}
+
+export function getSchemaTypeOneOfChildren(schema: SchemaTypeOneOf): Schema[] {
+  return schema.oneOf;
 }
