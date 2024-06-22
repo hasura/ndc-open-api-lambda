@@ -15,6 +15,10 @@ export function renderParams(schema: types.Schema): types.Schema {
     rendered = renderRefTypeSchema(schema);
   } else if (types.schemaIsTypeOneOf(schema)) {
     rendered = renderOneOfTypeSchema(schema);
+  } else if (types.schemaIsTypeAnyOf(schema)) {
+    rendered = renderAnyOfTypeSchema(schema);
+  } else if (types.schemaIsTypeAllOf(schema)) {
+    rendered = renderAllOfTypeSchema(schema);
   } else {
     const error = new Error(
       `Cannot resolve parameter schema: ${JSON.stringify(schema)}`,
@@ -103,7 +107,10 @@ export function renderScalarTypeObjectSchema(
 
 export function renderObjectTypeSchema(schema: types.SchemaTypeObject): string {
   const renderedProperties: string[] = [];
-  for (const property of types.getSchemaTypeObjectChildren(schema)) {
+  const children = types.getScehmaTypeObjectChildrenMap(schema);
+  for (const propertyName in children) {
+    const property = children[propertyName]!;
+    property!.name = propertyName; // ensure that the name property is present
     renderedProperties.push(renderParams(property)._$rendered!);
   }
   const paramType = `{ ${renderedProperties.join(" ")} }`;
@@ -140,6 +147,24 @@ export function renderOneOfTypeSchema(schema: types.SchemaTypeOneOf): string {
     renderedProperties.push(renderParams(property)._$rendered!);
   }
   const paramType = renderedProperties.join(" | ");
+  return renderSchema(paramType, schema);
+}
+
+export function renderAnyOfTypeSchema(schema: types.SchemaTypeAnyOf): string {
+  const renderedProperties: string[] = [];
+  for (const property of types.getSchemaTypeAnyOfChildren(schema)) {
+    renderedProperties.push(renderParams(property)._$rendered!);
+  }
+  const paramType = `| ${renderedProperties.join(" | ")}`;
+  return renderSchema(paramType, schema);
+}
+
+export function renderAllOfTypeSchema(schema: types.SchemaTypeAllOf): string {
+  const renderedProperties: string[] = [];
+  for (const property of types.getSchemaTypeAllOfChildren(schema)) {
+    renderedProperties.push(renderParams(property)._$rendered!);
+  }
+  const paramType = renderedProperties.join(" & ");
   return renderSchema(paramType, schema);
 }
 

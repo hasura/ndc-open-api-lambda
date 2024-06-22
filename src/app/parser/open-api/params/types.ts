@@ -4,6 +4,8 @@ export type Schema =
   | SchemaTypeScalar
   | SchemaTypeCustomType
   | SchemaTypeOneOf
+  | SchemaTypeAnyOf
+  | SchemaTypeAllOf
   | SchemaTypeArray;
 
 /**
@@ -89,6 +91,14 @@ export type SchemaTypeOneOf = BaseSchema & {
   oneOf: Schema[];
 };
 
+export type SchemaTypeAnyOf = BaseSchema & {
+  anyOf: Schema[];
+};
+
+export type SchemaTypeAllOf = BaseSchema & {
+  allOf: Schema[];
+};
+
 export function schemaIsTypeRef(schema: any): schema is SchemaTypeRef {
   return schema.$ref ?? false;
 }
@@ -147,6 +157,14 @@ export function schemaIsTypeOneOf(schema: any): schema is SchemaTypeOneOf {
   return schema.oneOf && schema.oneOf.length > 0;
 }
 
+export function schemaIsTypeAnyOf(schema: any): schema is SchemaTypeAnyOf {
+  return schema.anyOf && schema.anyOf.length > 0;
+}
+
+export function schemaIsTypeAllOf(schema: any): schema is SchemaTypeAllOf {
+  return schema.allOf && schema.allOf.length > 0;
+}
+
 export function getParameterName(schema: BaseSchema): string | undefined {
   if (schema.name) {
     return schema.name;
@@ -167,6 +185,12 @@ export function getSchemaTypeObjectChildren(
   return Array.from(Object.values(schema.properties));
 }
 
+export function getScehmaTypeObjectChildrenMap(
+  schema: SchemaTypeObject,
+): Record<string, Schema> {
+  return schema.properties;
+}
+
 export function getSchemaTypeArrayChild(schema: SchemaTypeArray): Schema {
   return schema.items;
 }
@@ -177,4 +201,12 @@ export function getSchemaTypeCustomChild(schema: SchemaTypeCustomType): Schema {
 
 export function getSchemaTypeOneOfChildren(schema: SchemaTypeOneOf): Schema[] {
   return schema.oneOf;
+}
+
+export function getSchemaTypeAnyOfChildren(schema: SchemaTypeAnyOf): Schema[] {
+  return schema.anyOf;
+}
+
+export function getSchemaTypeAllOfChildren(schema: SchemaTypeAllOf): Schema[] {
+  return schema.allOf;
 }

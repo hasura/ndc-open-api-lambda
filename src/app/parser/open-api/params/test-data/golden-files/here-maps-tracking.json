@@ -1093,7 +1093,7 @@
   "get__/geofences/v2": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number,  \n/** Type of a geofence */\n type?: (\"circle\" | \"polygon\" | \"poi\")[], \n/** Limit search to geofences intersecting the given bounding box. */\n bbox?: (number)[], \n/** Field names to filter a result object.\n */\n fields?: (string)[], },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page. */\n count?: number, \n/** The floor of the indoor geofence */\n floor?: | { \n/** ID of the venue, which is associated with the geofence */\n id?: string, } | \"null\", \n/** Type of a geofence */\n type?: (\"circle\" | \"polygon\" | \"poi\")[], \n/** Limit search to geofences intersecting the given bounding box. */\n bbox?: (number)[], \n/** Field names to filter a result object.\n */\n fields?: (string)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -1109,7 +1109,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.floor": {
-        "rendered": "",
+        "rendered": "\n/** The floor of the indoor geofence */\n floor?: | { \n/** ID of the venue, which is associated with the geofence */\n id?: string, } | \"null\",",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.type": {
