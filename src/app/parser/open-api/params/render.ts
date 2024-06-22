@@ -16,7 +16,9 @@ export function renderParams(schema: types.Schema): types.Schema {
   } else if (types.schemaIsTypeOneOf(schema)) {
     rendered = renderOneOfTypeSchema(schema);
   } else {
-    const error = new Error(`Cannot resolve parameter schema: ${JSON.stringify(schema)}`);
+    const error = new Error(
+      `Cannot resolve parameter schema: ${JSON.stringify(schema)}`,
+    );
     logger.error(error);
   }
   schema._$rendered = rendered ?? "";
@@ -49,6 +51,8 @@ export function renderScalarTypeSchema(
     return renderScalarTypeStringSchema(schema);
   } else if (types.scalarSchemaIsBoolean(schema)) {
     return renderScalarTypeBooleanSchema(schema);
+  } else if (types.scalarSchemaIsObject(schema)) {
+    return renderScalarTypeObjectSchema(schema);
   }
   return undefined;
 }
@@ -87,6 +91,13 @@ export function renderScalarTypeBooleanSchema(
   } else {
     paramType = "boolean";
   }
+  return renderSchema(paramType, schema);
+}
+
+export function renderScalarTypeObjectSchema(
+  schema: types.SchemaTypeScalar,
+): string {
+  let paramType = "object";
   return renderSchema(paramType, schema);
 }
 

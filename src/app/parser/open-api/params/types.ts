@@ -36,15 +36,21 @@ enum BooleanScalarTypeEnum {
   boolean = "boolean",
 }
 
+enum ObjectScalarTypeEnum {
+  object = "object",
+}
+
 const ScalarTypeEnum = {
   ...NumberScalarTypeEnum,
   ...StringScalarTypeEnum,
   ...BooleanScalarTypeEnum,
+  ...ObjectScalarTypeEnum,
 };
 
 type ScalarTypeEnumType = NumberScalarTypeEnum &
   StringScalarTypeEnum &
-  BooleanScalarTypeEnum;
+  BooleanScalarTypeEnum &
+  ObjectScalarTypeEnum;
 
 enum ArrayTypeEnum {
   "array",
@@ -97,7 +103,11 @@ export function schemaIsTypeObject(schema: any): schema is SchemaTypeObject {
 }
 
 export function schemaIsTypeScalar(schema: any): schema is SchemaTypeScalar {
-  return schema.type && Object.values(ScalarTypeEnum).includes(schema.type);
+  return (
+    schema.type &&
+    Object.values(ScalarTypeEnum).includes(schema.type) &&
+    schema.properties === undefined
+  );
 }
 
 export function schemaIsTypeCustomType(
@@ -129,11 +139,12 @@ export function scalarSchemaIsBoolean(schema: SchemaTypeScalar): boolean {
   return Object.values(BooleanScalarTypeEnum).includes(schema.type);
 }
 
+export function scalarSchemaIsObject(schema: SchemaTypeScalar): boolean {
+  return Object.values(ObjectScalarTypeEnum).includes(schema.type);
+}
+
 export function schemaIsTypeOneOf(schema: any): schema is SchemaTypeOneOf {
-  return (
-    schema.oneOf &&
-    schema.oneOf.length > 0
-  );
+  return schema.oneOf && schema.oneOf.length > 0;
 }
 
 export function getParameterName(schema: BaseSchema): string | undefined {
