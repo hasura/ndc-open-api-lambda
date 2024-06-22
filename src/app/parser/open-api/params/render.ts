@@ -14,7 +14,8 @@ export function renderParams(schema: types.Schema): types.Schema {
   } else if (types.schemaIsTypeRef(schema)) {
     rendered = renderRefTypeSchema(schema);
   } else {
-    logger.error("Unable to resolve type: ", JSON.stringify(schema));
+    const error = new Error(`Cannot resolve parameter schema: ${JSON.stringify(schema)}`);
+    logger.error(error);
   }
   schema._$rendered = rendered ?? "";
   return schema;
