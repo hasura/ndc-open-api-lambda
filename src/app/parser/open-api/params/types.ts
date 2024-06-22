@@ -46,7 +46,7 @@ enum ArrayTypeEnum {
   "array",
 }
 
-export type SchemaTypeRef = {
+export type SchemaTypeRef = BaseSchema & {
   $ref: string;
 };
 
