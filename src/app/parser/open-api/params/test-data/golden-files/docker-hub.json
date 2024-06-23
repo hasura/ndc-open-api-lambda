@@ -27,19 +27,34 @@
   "delete__/v2/access-tokens/{uuid}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".uuid": {
+        "rendered": " uuid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/access-tokens/{uuid}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".uuid": {
+        "rendered": " uuid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/v2/access-tokens/{uuid}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".uuid": {
+        "rendered": " uuid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/auditlogs/{account}": {
@@ -78,19 +93,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": "\n/** Namespace to query audit logs for. */\n account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/auditlogs/{account}/actions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": "\n/** Namespace to query audit log actions for. */\n account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v2/namespaces/{namespace}/delete-images": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace of the repository. */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/images": {
@@ -125,7 +155,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace of the repository. */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".repository": {
+        "rendered": "\n/** Name of the repository. */\n repository: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/images-summary": {
@@ -140,7 +179,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace of the repository. */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".repository": {
+        "rendered": "\n/** Name of the repository. */\n repository: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/images/{digest}/tags": {
@@ -159,7 +207,20 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace of the repository. */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".repository": {
+        "rendered": "\n/** Name of the repository. */\n repository: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".digest": {
+        "rendered": "\n/** Digest of the image. */\n digest: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/tags": {
@@ -178,37 +239,91 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": " namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".repository": {
+        "rendered": " repository: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "head__/v2/namespaces/{namespace}/repositories/{repository}/tags": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": " namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".repository": {
+        "rendered": " repository: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": " namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".repository": {
+        "rendered": " repository: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tag": {
+        "rendered": " tag: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "head__/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": " namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".repository": {
+        "rendered": " repository: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tag": {
+        "rendered": " tag: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/orgs/{name}/settings": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** Name of the organization. */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v2/orgs/{name}/settings": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/scim/2.0/ResourceTypes": {
@@ -220,7 +335,12 @@
   "get__/v2/scim/2.0/ResourceTypes/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/scim/2.0/Schemas": {
@@ -232,7 +352,12 @@
   "get__/v2/scim/2.0/Schemas/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v2/scim/2.0/ServiceProviderConfig": {
@@ -285,13 +410,23 @@
   "get__/v2/scim/2.0/Users/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The user ID. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v2/scim/2.0/Users/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v2/users/2fa-login": {

@@ -59,16 +59,16 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/accounts": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/accounts": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/v1/accounts/{account}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}": {
@@ -87,25 +87,49 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/bank_accounts": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/accounts/{account}/bank_accounts/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/bank_accounts/{id}": {
@@ -124,13 +148,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/bank_accounts/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/capabilities": {
@@ -149,7 +191,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/capabilities/{capability}": {
@@ -168,13 +215,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".capability": {
+        "rendered": " capability: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/capabilities/{capability}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".capability": {
+        "rendered": " capability: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/external_accounts": {
@@ -205,19 +270,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/external_accounts": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/accounts/{account}/external_accounts/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/external_accounts/{id}": {
@@ -236,19 +320,42 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/external_accounts/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/login_links": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/people": {
@@ -299,19 +406,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/people": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/accounts/{account}/people/{person}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".person": {
+        "rendered": " person: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/people/{person}": {
@@ -330,13 +456,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".person": {
+        "rendered": " person: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/people/{person}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".person": {
+        "rendered": " person: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/persons": {
@@ -387,19 +531,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/persons": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/accounts/{account}/persons/{person}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".person": {
+        "rendered": " person: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/accounts/{account}/persons/{person}": {
@@ -418,19 +581,42 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".person": {
+        "rendered": " person: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/persons/{person}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".person": {
+        "rendered": " person: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/accounts/{account}/reject": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/apple_pay/domains": {
@@ -477,7 +663,12 @@
   "delete__/v1/apple_pay/domains/{domain}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".domain": {
+        "rendered": " domain: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/apple_pay/domains/{domain}": {
@@ -496,7 +687,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".domain": {
+        "rendered": " domain: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/application_fees": {
@@ -554,13 +750,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fee": {
+        "rendered": " fee: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/application_fees/{fee}/refunds/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fee": {
+        "rendered": " fee: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/application_fees/{id}": {
@@ -579,13 +793,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/application_fees/{id}/refund": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/application_fees/{id}/refunds": {
@@ -616,13 +840,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/application_fees/{id}/refunds": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/apps/secrets": {
@@ -801,7 +1035,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/balance_transactions": {
@@ -871,7 +1110,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/billing_portal/configurations": {
@@ -935,13 +1179,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".configuration": {
+        "rendered": " configuration: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/billing_portal/configurations/{configuration}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".configuration": {
+        "rendered": " configuration: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/billing_portal/sessions": {
@@ -997,12 +1251,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/charges": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/charges": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/charges/search": {
     "query": {
       ".query": {
@@ -1050,19 +1299,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/charges/{charge}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/charges/{charge}/capture": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/charges/{charge}/dispute": {
@@ -1081,25 +1345,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/charges/{charge}/dispute": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/charges/{charge}/dispute/close": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/charges/{charge}/refund": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/charges/{charge}/refunds": {
@@ -1130,13 +1414,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/charges/{charge}/refunds": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/charges/{charge}/refunds/{refund}": {
@@ -1155,13 +1449,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".refund": {
+        "rendered": " refund: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/charges/{charge}/refunds/{refund}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".charge": {
+        "rendered": " charge: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".refund": {
+        "rendered": " refund: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/checkout/sessions": {
@@ -1241,13 +1553,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/checkout/sessions/{session}/expire": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/checkout/sessions/{session}/line_items": {
@@ -1278,7 +1600,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/country_specs": {
@@ -1328,7 +1655,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".country": {
+        "rendered": " country: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/coupons": {
@@ -1366,16 +1698,16 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/coupons": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/coupons": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/v1/coupons/{coupon}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".coupon": {
+        "rendered": " coupon: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/coupons/{coupon}": {
@@ -1394,13 +1726,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".coupon": {
+        "rendered": " coupon: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/coupons/{coupon}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".coupon": {
+        "rendered": " coupon: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/credit_notes": {
@@ -1694,7 +2036,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".creditNote": {
+        "rendered": " creditNote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/credit_notes/{id}": {
@@ -1713,19 +2060,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/credit_notes/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/credit_notes/{id}/void": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers": {
@@ -1811,7 +2173,12 @@
   "delete__/v1/customers/{customer}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}": {
@@ -1830,13 +2197,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/balance_transactions": {
@@ -1867,13 +2244,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/balance_transactions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/balance_transactions/{transaction}": {
@@ -1892,13 +2279,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".transaction": {
+        "rendered": " transaction: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/balance_transactions/{transaction}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".transaction": {
+        "rendered": " transaction: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/bank_accounts": {
@@ -1929,19 +2334,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/bank_accounts": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/customers/{customer}/bank_accounts/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/bank_accounts/{id}": {
@@ -1960,19 +2384,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/bank_accounts/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/bank_accounts/{id}/verify": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/cards": {
@@ -2003,19 +2454,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/cards": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/customers/{customer}/cards/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/cards/{id}": {
@@ -2034,13 +2504,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/cards/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/cash_balance": {
@@ -2059,13 +2547,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/cash_balance": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/cash_balance_transactions": {
@@ -2096,7 +2594,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/cash_balance_transactions/{transaction}": {
@@ -2115,13 +2618,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".transaction": {
+        "rendered": " transaction: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/customers/{customer}/discount": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/discount": {
@@ -2140,13 +2657,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/funding_instructions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/payment_methods": {
@@ -2181,7 +2708,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/payment_methods/{payment_method}": {
@@ -2200,7 +2732,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".paymentMethod": {
+        "rendered": " paymentMethod: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/sources": {
@@ -2235,19 +2776,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/sources": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/customers/{customer}/sources/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/sources/{id}": {
@@ -2266,19 +2826,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/sources/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/sources/{id}/verify": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/subscriptions": {
@@ -2309,19 +2896,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/subscriptions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/customers/{customer}/subscriptions/{subscription_exposed_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/subscriptions/{subscription_exposed_id}": {
@@ -2340,19 +2946,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/subscriptions/{subscription_exposed_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/customers/{customer}/subscriptions/{subscription_exposed_id}/discount": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/subscriptions/{subscription_exposed_id}/discount": {
@@ -2371,7 +3004,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/tax_ids": {
@@ -2402,19 +3044,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/customers/{customer}/tax_ids": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/customers/{customer}/tax_ids/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/customers/{customer}/tax_ids/{id}": {
@@ -2433,7 +3094,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/disputes": {
@@ -2495,19 +3165,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".dispute": {
+        "rendered": " dispute: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/disputes/{dispute}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dispute": {
+        "rendered": " dispute: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/disputes/{dispute}/close": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dispute": {
+        "rendered": " dispute: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/ephemeral_keys": {
@@ -2519,7 +3204,12 @@
   "delete__/v1/ephemeral_keys/{key}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".key": {
+        "rendered": " key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/events": {
@@ -2589,7 +3279,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/exchange_rates": {
@@ -2639,7 +3334,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".rateId": {
+        "rendered": " rateId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/file_links": {
@@ -2707,13 +3407,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".link": {
+        "rendered": " link: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/file_links/{link}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".link": {
+        "rendered": " link: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/files": {
@@ -2755,12 +3465,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/files": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/files": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/files/{file}": {
     "query": {
       ".query": {
@@ -2777,7 +3482,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".file": {
+        "rendered": " file: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/financial_connections/accounts": {
@@ -2843,13 +3553,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/financial_connections/accounts/{account}/disconnect": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/financial_connections/accounts/{account}/owners": {
@@ -2884,13 +3604,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/financial_connections/accounts/{account}/refresh": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/financial_connections/sessions": {
@@ -2915,7 +3645,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/identity/verification_reports": {
@@ -2977,7 +3712,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".report": {
+        "rendered": " report: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/identity/verification_sessions": {
@@ -3041,25 +3781,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/identity/verification_sessions/{session}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/identity/verification_sessions/{session}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/identity/verification_sessions/{session}/redact": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/invoiceitems": {
@@ -3118,7 +3878,12 @@
   "delete__/v1/invoiceitems/{invoiceitem}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoiceitem": {
+        "rendered": " invoiceitem: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/invoiceitems/{invoiceitem}": {
@@ -3137,13 +3902,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".invoiceitem": {
+        "rendered": " invoiceitem: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/invoiceitems/{invoiceitem}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoiceitem": {
+        "rendered": " invoiceitem: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/invoices": {
@@ -3201,12 +3976,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/invoices": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/invoices": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/invoices/search": {
     "query": {
       ".query": {
@@ -3875,7 +4645,12 @@
   "delete__/v1/invoices/{invoice}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/invoices/{invoice}": {
@@ -3894,19 +4669,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/invoices/{invoice}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/invoices/{invoice}/finalize": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/invoices/{invoice}/lines": {
@@ -3937,31 +4727,56 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/invoices/{invoice}/mark_uncollectible": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/invoices/{invoice}/pay": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/invoices/{invoice}/send": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/invoices/{invoice}/void": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".invoice": {
+        "rendered": " invoice: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/issuing/authorizations": {
@@ -4027,25 +4842,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".authorization": {
+        "rendered": " authorization: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/authorizations/{authorization}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".authorization": {
+        "rendered": " authorization: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/authorizations/{authorization}/approve": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".authorization": {
+        "rendered": " authorization: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/authorizations/{authorization}/decline": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".authorization": {
+        "rendered": " authorization: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/issuing/cardholders": {
@@ -4121,13 +4956,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".cardholder": {
+        "rendered": " cardholder: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/cardholders/{cardholder}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".cardholder": {
+        "rendered": " cardholder: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/issuing/cards": {
@@ -4211,13 +5056,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".card": {
+        "rendered": " card: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/cards/{card}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".card": {
+        "rendered": " card: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/issuing/disputes": {
@@ -4285,19 +5140,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".dispute": {
+        "rendered": " dispute: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/disputes/{dispute}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dispute": {
+        "rendered": " dispute: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/disputes/{dispute}/submit": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dispute": {
+        "rendered": " dispute: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/issuing/settlements": {
@@ -4351,13 +5221,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".settlement": {
+        "rendered": " settlement: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/settlements/{settlement}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".settlement": {
+        "rendered": " settlement: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/issuing/transactions": {
@@ -4423,13 +5303,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".transaction": {
+        "rendered": " transaction: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/issuing/transactions/{transaction}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".transaction": {
+        "rendered": " transaction: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/link_account_sessions": {
@@ -4454,7 +5344,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".session": {
+        "rendered": " session: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/linked_accounts": {
@@ -4520,13 +5415,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/linked_accounts/{account}/disconnect": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/linked_accounts/{account}/owners": {
@@ -4561,13 +5466,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/linked_accounts/{account}/refresh": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".account": {
+        "rendered": " account: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/mandates/{mandate}": {
@@ -4586,7 +5501,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".mandate": {
+        "rendered": " mandate: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/payment_intents": {
@@ -4685,49 +5605,89 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_intents/{intent}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_intents/{intent}/apply_customer_balance": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_intents/{intent}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_intents/{intent}/capture": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_intents/{intent}/confirm": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_intents/{intent}/increment_authorization": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_intents/{intent}/verify_microdeposits": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/payment_links": {
@@ -4787,13 +5747,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".paymentLink": {
+        "rendered": " paymentLink: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_links/{payment_link}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".paymentLink": {
+        "rendered": " paymentLink: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/payment_links/{payment_link}/line_items": {
@@ -4824,7 +5794,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".paymentLink": {
+        "rendered": " paymentLink: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/payment_methods": {
@@ -4888,25 +5863,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".paymentMethod": {
+        "rendered": " paymentMethod: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_methods/{payment_method}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".paymentMethod": {
+        "rendered": " paymentMethod: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_methods/{payment_method}/attach": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".paymentMethod": {
+        "rendered": " paymentMethod: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payment_methods/{payment_method}/detach": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".paymentMethod": {
+        "rendered": " paymentMethod: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/payouts": {
@@ -4956,12 +5951,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/payouts": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/payouts": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/payouts/{payout}": {
     "query": {
       ".query": {
@@ -4978,25 +5968,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".payout": {
+        "rendered": " payout: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payouts/{payout}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".payout": {
+        "rendered": " payout: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payouts/{payout}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".payout": {
+        "rendered": " payout: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/payouts/{payout}/reverse": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".payout": {
+        "rendered": " payout: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/plans": {
@@ -5042,16 +6052,16 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/plans": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/plans": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/v1/plans/{plan}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".plan": {
+        "rendered": " plan: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/plans/{plan}": {
@@ -5070,13 +6080,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".plan": {
+        "rendered": " plan: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/plans/{plan}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".plan": {
+        "rendered": " plan: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/prices": {
@@ -5150,12 +6170,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/prices": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/prices": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/prices/search": {
     "query": {
       ".query": {
@@ -5203,13 +6218,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".price": {
+        "rendered": " price: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/prices/{price}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".price": {
+        "rendered": " price: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/products": {
@@ -5267,12 +6292,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/products": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/products": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/products/search": {
     "query": {
       ".query": {
@@ -5307,7 +6327,12 @@
   "delete__/v1/products/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/products/{id}": {
@@ -5326,13 +6351,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/products/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/promotion_codes": {
@@ -5408,13 +6443,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".promotionCode": {
+        "rendered": " promotionCode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/promotion_codes/{promotion_code}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".promotionCode": {
+        "rendered": " promotionCode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/quotes": {
@@ -5460,12 +6505,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/quotes": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/quotes": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/quotes/{quote}": {
     "query": {
       ".query": {
@@ -5482,25 +6522,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/quotes/{quote}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/quotes/{quote}/accept": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/quotes/{quote}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/quotes/{quote}/computed_upfront_line_items": {
@@ -5531,13 +6591,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/quotes/{quote}/finalize": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/quotes/{quote}/line_items": {
@@ -5568,7 +6638,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/quotes/{quote}/pdf": {
@@ -5587,7 +6662,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".quote": {
+        "rendered": " quote: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/radar/early_fraud_warnings": {
@@ -5645,7 +6725,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".earlyFraudWarning": {
+        "rendered": " earlyFraudWarning: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/radar/value_list_items": {
@@ -5700,7 +6785,12 @@
   "delete__/v1/radar/value_list_items/{item}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".item": {
+        "rendered": " item: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/radar/value_list_items/{item}": {
@@ -5719,7 +6809,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".item": {
+        "rendered": " item: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/radar/value_lists": {
@@ -5774,7 +6869,12 @@
   "delete__/v1/radar/value_lists/{value_list}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".valueList": {
+        "rendered": " valueList: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/radar/value_lists/{value_list}": {
@@ -5793,13 +6893,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".valueList": {
+        "rendered": " valueList: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/radar/value_lists/{value_list}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".valueList": {
+        "rendered": " valueList: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/refunds": {
@@ -5845,12 +6955,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/refunds": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/refunds": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/refunds/{refund}": {
     "query": {
       ".query": {
@@ -5867,19 +6972,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".refund": {
+        "rendered": " refund: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/refunds/{refund}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".refund": {
+        "rendered": " refund: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/refunds/{refund}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".refund": {
+        "rendered": " refund: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/reporting/report_runs": {
@@ -5939,7 +7059,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".reportRun": {
+        "rendered": " reportRun: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/reporting/report_types": {
@@ -5977,7 +7102,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".reportType": {
+        "rendered": " reportType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/reviews": {
@@ -6031,13 +7161,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".review": {
+        "rendered": " review: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/reviews/{review}/approve": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".review": {
+        "rendered": " review: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/setup_attempts": {
@@ -6152,31 +7292,56 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/setup_intents/{intent}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/setup_intents/{intent}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/setup_intents/{intent}/confirm": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/setup_intents/{intent}/verify_microdeposits": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intent": {
+        "rendered": " intent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/shipping_rates": {
@@ -6244,13 +7409,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".shippingRateToken": {
+        "rendered": " shippingRateToken: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/shipping_rates/{shipping_rate_token}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shippingRateToken": {
+        "rendered": " shippingRateToken: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/sigma/scheduled_query_runs": {
@@ -6300,15 +7475,15 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".scheduledQueryRun": {
+        "rendered": " scheduledQueryRun: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
-  "post__/v1/sources": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/sources": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/sources/{source}": {
     "query": {
       ".query": {
@@ -6329,13 +7504,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".source": {
+        "rendered": " source: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/sources/{source}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".source": {
+        "rendered": " source: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/sources/{source}/mandate_notifications/{mandate_notification}": {
@@ -6354,7 +7539,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".mandateNotification": {
+        "rendered": " mandateNotification: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".source": {
+        "rendered": " source: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/sources/{source}/source_transactions": {
@@ -6385,7 +7579,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".source": {
+        "rendered": " source: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/sources/{source}/source_transactions/{source_transaction}": {
@@ -6404,13 +7603,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".source": {
+        "rendered": " source: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sourceTransaction": {
+        "rendered": " sourceTransaction: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/sources/{source}/verify": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".source": {
+        "rendered": " source: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/subscription_items": {
@@ -6457,7 +7670,12 @@
   "delete__/v1/subscription_items/{item}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".item": {
+        "rendered": " item: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/subscription_items/{item}": {
@@ -6476,13 +7694,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".item": {
+        "rendered": " item: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/subscription_items/{item}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".item": {
+        "rendered": " item: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/subscription_items/{subscription_item}/usage_record_summaries": {
@@ -6513,13 +7741,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".subscriptionItem": {
+        "rendered": " subscriptionItem: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/subscription_items/{subscription_item}/usage_records": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".subscriptionItem": {
+        "rendered": " subscriptionItem: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/subscription_schedules": {
@@ -6599,25 +7837,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".schedule": {
+        "rendered": " schedule: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/subscription_schedules/{schedule}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".schedule": {
+        "rendered": " schedule: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/subscription_schedules/{schedule}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".schedule": {
+        "rendered": " schedule: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/subscription_schedules/{schedule}/release": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".schedule": {
+        "rendered": " schedule: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/subscriptions": {
@@ -6723,7 +7981,12 @@
   "delete__/v1/subscriptions/{subscription_exposed_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/subscriptions/{subscription_exposed_id}": {
@@ -6742,25 +8005,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/subscriptions/{subscription_exposed_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/subscriptions/{subscription_exposed_id}/discount": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".subscriptionExposedId": {
+        "rendered": " subscriptionExposedId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/subscriptions/{subscription}/resume": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".subscription": {
+        "rendered": " subscription: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/tax_codes": {
@@ -6810,7 +8093,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/tax_rates": {
@@ -6878,13 +8166,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".taxRate": {
+        "rendered": " taxRate: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/tax_rates/{tax_rate}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".taxRate": {
+        "rendered": " taxRate: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/terminal/configurations": {
@@ -6931,7 +8229,12 @@
   "delete__/v1/terminal/configurations/{configuration}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".configuration": {
+        "rendered": " configuration: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/terminal/configurations/{configuration}": {
@@ -6950,13 +8253,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".configuration": {
+        "rendered": " configuration: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/configurations/{configuration}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".configuration": {
+        "rendered": " configuration: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/connection_tokens": {
@@ -7005,7 +8318,12 @@
   "delete__/v1/terminal/locations/{location}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".location": {
+        "rendered": " location: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/terminal/locations/{location}": {
@@ -7024,13 +8342,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".location": {
+        "rendered": " location: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/locations/{location}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".location": {
+        "rendered": " location: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/terminal/readers": {
@@ -7085,7 +8413,12 @@
   "delete__/v1/terminal/readers/{reader}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/terminal/readers/{reader}": {
@@ -7104,85 +8437,155 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/readers/{reader}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/readers/{reader}/cancel_action": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/readers/{reader}/process_payment_intent": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/readers/{reader}/process_setup_intent": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/readers/{reader}/refund_payment": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/terminal/readers/{reader}/set_reader_display": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/customers/{customer}/fund_cash_balance": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".customer": {
+        "rendered": " customer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/issuing/cards/{card}/shipping/deliver": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".card": {
+        "rendered": " card: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/issuing/cards/{card}/shipping/fail": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".card": {
+        "rendered": " card: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/issuing/cards/{card}/shipping/return": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".card": {
+        "rendered": " card: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/issuing/cards/{card}/shipping/ship": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".card": {
+        "rendered": " card: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/refunds/{refund}/expire": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".refund": {
+        "rendered": " refund: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/terminal/readers/{reader}/present_payment_method": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".reader": {
+        "rendered": " reader: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/test_helpers/test_clocks": {
@@ -7225,7 +8628,12 @@
   "delete__/v1/test_helpers/test_clocks/{test_clock}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".testClock": {
+        "rendered": " testClock: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/test_helpers/test_clocks/{test_clock}": {
@@ -7244,67 +8652,122 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".testClock": {
+        "rendered": " testClock: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/test_clocks/{test_clock}/advance": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".testClock": {
+        "rendered": " testClock: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/inbound_transfers/{id}/fail": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/inbound_transfers/{id}/return": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/inbound_transfers/{id}/succeed": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/outbound_payments/{id}/fail": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/outbound_payments/{id}/post": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/outbound_payments/{id}/return": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/outbound_transfers/{outbound_transfer}/fail": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".outboundTransfer": {
+        "rendered": " outboundTransfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/outbound_transfers/{outbound_transfer}/post": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".outboundTransfer": {
+        "rendered": " outboundTransfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/outbound_transfers/{outbound_transfer}/return": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".outboundTransfer": {
+        "rendered": " outboundTransfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/test_helpers/treasury/received_credits": {
@@ -7319,12 +8782,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/tokens": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/tokens": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/tokens/{token}": {
     "query": {
       ".query": {
@@ -7341,7 +8799,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".token": {
+        "rendered": " token: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/topups": {
@@ -7387,12 +8850,7 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/topups": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/topups": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/topups/{topup}": {
     "query": {
       ".query": {
@@ -7409,19 +8867,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".topup": {
+        "rendered": " topup: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/topups/{topup}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".topup": {
+        "rendered": " topup: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/topups/{topup}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".topup": {
+        "rendered": " topup: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/transfers": {
@@ -7501,13 +8974,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/transfers/{id}/reversals": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/transfers/{transfer}": {
@@ -7526,13 +9009,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".transfer": {
+        "rendered": " transfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/transfers/{transfer}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".transfer": {
+        "rendered": " transfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/transfers/{transfer}/reversals/{id}": {
@@ -7551,13 +9044,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".transfer": {
+        "rendered": " transfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/transfers/{transfer}/reversals/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".transfer": {
+        "rendered": " transfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/credit_reversals": {
@@ -7625,7 +9136,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".creditReversal": {
+        "rendered": " creditReversal: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/debit_reversals": {
@@ -7697,7 +9213,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".debitReversal": {
+        "rendered": " debitReversal: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/financial_accounts": {
@@ -7757,13 +9278,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".financialAccount": {
+        "rendered": " financialAccount: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/treasury/financial_accounts/{financial_account}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".financialAccount": {
+        "rendered": " financialAccount: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/financial_accounts/{financial_account}/features": {
@@ -7782,13 +9313,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".financialAccount": {
+        "rendered": " financialAccount: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/treasury/financial_accounts/{financial_account}/features": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".financialAccount": {
+        "rendered": " financialAccount: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/inbound_transfers": {
@@ -7852,13 +9393,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/treasury/inbound_transfers/{inbound_transfer}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".inboundTransfer": {
+        "rendered": " inboundTransfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/outbound_payments": {
@@ -7926,13 +9477,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/treasury/outbound_payments/{id}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/outbound_transfers": {
@@ -7996,13 +9557,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".outboundTransfer": {
+        "rendered": " outboundTransfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/treasury/outbound_transfers/{outbound_transfer}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".outboundTransfer": {
+        "rendered": " outboundTransfer: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/received_credits": {
@@ -8068,7 +9639,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/received_debits": {
@@ -8126,7 +9702,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/transaction_entries": {
@@ -8196,7 +9777,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/treasury/transactions": {
@@ -8270,7 +9856,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/webhook_endpoints": {
@@ -8313,7 +9904,12 @@
   "delete__/v1/webhook_endpoints/{webhook_endpoint}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".webhookEndpoint": {
+        "rendered": " webhookEndpoint: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/webhook_endpoints/{webhook_endpoint}": {
@@ -8332,13 +9928,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".webhookEndpoint": {
+        "rendered": " webhookEndpoint: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/webhook_endpoints/{webhook_endpoint}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".webhookEndpoint": {
+        "rendered": " webhookEndpoint: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

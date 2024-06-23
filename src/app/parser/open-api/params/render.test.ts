@@ -307,10 +307,19 @@ describe("param-render", async () => {
           traverseSchema("", renderedQueryParams, queryParams);
         }
 
+        const pathParams = routeTypes.getPathParams(route);
+        const renderedPathParams: Record<string, RenderedParam> = {};
+        if (pathParams) {
+          for (const param of pathParams) {
+            render.renderParams(param);
+            traverseSchema("", renderedPathParams, param);
+          }
+        }
+
         got[routeKey] = {
           query: renderedQueryParams,
           body: {},
-          path: {},
+          path: renderedPathParams,
           response: {},
         };
       }

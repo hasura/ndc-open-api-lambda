@@ -51,7 +51,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".groupName": {
+        "rendered": "\n/** Required. The group resource name. Written as `projects/{projectID}/groups/{group_name}`. Call groupStats.list to return a list of groups belonging to this project. Example: `projects/my-project-123/groups/my-group` */\n groupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v1beta1/{name}": {
@@ -106,7 +111,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1beta1/{projectName}/events": {
@@ -161,7 +171,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectName": {
+        "rendered": "\n/** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`. */\n projectName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1beta1/{projectName}/events": {
@@ -244,7 +259,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectName": {
+        "rendered": "\n/** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`. */\n projectName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1beta1/{projectName}/events:report": {
@@ -299,7 +319,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectName": {
+        "rendered": "\n/** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectId}`, where `{projectId}` is the [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example: // `projects/my-project-123`. */\n projectName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".report": {
+        "rendered": " report: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1beta1/{projectName}/groupStats": {
@@ -402,7 +431,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectName": {
+        "rendered": "\n/** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in the [Google Cloud console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-project-123`, `projects/5551234`. */\n projectName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

@@ -47,7 +47,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/lists/best-sellers/history.json": {
@@ -101,7 +106,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/lists/overview.{format}": {
@@ -120,7 +130,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/lists/{date}/{list}.json": {
@@ -167,7 +182,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".date": {
+        "rendered": " date: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".list": {
+        "rendered": "\n/** Name of the Best Sellers List. You can get the full list from /lists/names.json */\n list: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/reviews.{format}": {
@@ -194,7 +218,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

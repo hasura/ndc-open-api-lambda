@@ -1,38 +1,110 @@
 {
-  "get__/": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "get__/": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/namespaces/{namespace}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace to fetch data for */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/namespaces/{namespace}/pulls/exports/years": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace to fetch data for */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace to fetch data for */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".year": {
+        "rendered": "\n/** Year to fetch data for */\n year: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespantype": {
+        "rendered": "\n/** Type of timespan to fetch data for */\n timespantype: TimespanType,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespantype.__no_name": {
+        "rendered": "TimespanType",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace to fetch data for */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".year": {
+        "rendered": "\n/** Year to fetch data for */\n year: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespantype": {
+        "rendered": "\n/** Type of timespan to fetch data for */\n timespantype: TimespanType,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespantype.__no_name": {
+        "rendered": "TimespanType",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespan": {
+        "rendered": "\n/** Timespan to fetch data for */\n timespan: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}/{dataview}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".namespace": {
+        "rendered": "\n/** Namespace to fetch data for */\n namespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".year": {
+        "rendered": "\n/** Year to fetch data for */\n year: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespantype": {
+        "rendered": "\n/** Type of timespan to fetch data for */\n timespantype: TimespanType,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespantype.__no_name": {
+        "rendered": "TimespanType",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".timespan": {
+        "rendered": "\n/** Timespan to fetch data for */\n timespan: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".dataview": {
+        "rendered": "\n/** Type of data to fetch */\n dataview: DataviewType,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".dataview.__no_name": {
+        "rendered": "DataviewType",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v2/users/2fa-login": {

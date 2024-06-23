@@ -3,7 +3,12 @@
   "delete__/author/{authorId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".authorId": {
+        "rendered": "\n/** delete author */\n authorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/authors": { "query": {}, "body": {}, "path": {}, "response": {} },
@@ -42,7 +47,12 @@
   "delete__/blog/{blogId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".blogId": {
+        "rendered": "\n/** blog to delete */\n blogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/blog/{blogId}": {
@@ -65,7 +75,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".blogId": {
+        "rendered": "\n/** blog to update */\n blogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/blogs/": {

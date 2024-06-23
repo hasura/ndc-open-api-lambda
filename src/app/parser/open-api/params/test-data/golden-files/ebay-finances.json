@@ -29,7 +29,12 @@
   "get__/payout/{payout_Id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".payoutId": {
+        "rendered": "\n/** The unique identfier of the payout is passed in as a path parameter at the end of the call URI. <br><br>The <b>getPayouts</b> method can be used to retrieve the unique identifier of a payout, or the user can check Seller Hub to get the payout ID. */\n payoutId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/payout_summary": {
@@ -98,7 +103,12 @@
   "get__/transfer/{transfer_Id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".transferId": {
+        "rendered": "\n/** The unique identifier of the <code>TRANSFER</code> transaction type you wish to retrieve. */\n transferId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

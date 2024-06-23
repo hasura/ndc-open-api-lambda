@@ -70,13 +70,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldIdOrKey": {
+        "rendered": "\n/** The ID or key of the custom field, for example `customfield_10000`. */\n fieldIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/app/field/{fieldIdOrKey}/context/configuration": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldIdOrKey": {
+        "rendered": "\n/** The ID or key of the custom field, for example `customfield_10000`. */\n fieldIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/app/field/{fieldIdOrKey}/value": {
@@ -91,7 +101,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldIdOrKey": {
+        "rendered": "\n/** The ID or key of the custom field. For example, `customfield_10010`. */\n fieldIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/application-properties": {
@@ -126,7 +141,12 @@
   "put__/rest/api/3/application-properties/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The key of the application property to update. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/applicationrole": {
@@ -138,7 +158,12 @@
   "get__/rest/api/3/applicationrole/{key}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".key": {
+        "rendered": "\n/** The key of the application role. Use the [Get all application roles](#api-rest-api-3-applicationrole-get) operation to get the key for each application role. */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/attachment/content/{id}": {
@@ -153,7 +178,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the attachment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/attachment/meta": {
@@ -186,31 +216,56 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the attachment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/attachment/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the attachment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/attachment/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the attachment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/attachment/{id}/expand/human": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the attachment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/attachment/{id}/expand/raw": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the attachment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/auditing/record": {
@@ -247,7 +302,12 @@
   "get__/rest/api/3/avatar/{type}/system": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** The avatar type. */\n type: \"issuetype\" | \"project\" | \"user\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/comment/list": {
@@ -268,25 +328,57 @@
   "get__/rest/api/3/comment/{commentId}/properties": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/comment/{commentId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/comment/{commentId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/comment/{commentId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. The maximum length is 255 characters. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/component": {
@@ -307,25 +399,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the component. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/component/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the component. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/component/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the component. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/component/{id}/relatedIssueCounts": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the component. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/configuration": {
@@ -367,7 +479,12 @@
   "get__/rest/api/3/customFieldOption/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the custom field option. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/dashboard": {
@@ -492,73 +609,169 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/dashboard/{dashboardId}/gadget": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/dashboard/{dashboardId}/gadget/{gadgetId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".gadgetId": {
+        "rendered": "\n/** The ID of the gadget. */\n gadgetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/dashboard/{dashboardId}/gadget/{gadgetId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".gadgetId": {
+        "rendered": "\n/** The ID of the gadget. */\n gadgetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/dashboard/{dashboardId}/items/{itemId}/properties": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".itemId": {
+        "rendered": "\n/** The ID of the dashboard item. */\n itemId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".itemId": {
+        "rendered": "\n/** The ID of the dashboard item. */\n itemId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the dashboard item property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".itemId": {
+        "rendered": "\n/** The ID of the dashboard item. */\n itemId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the dashboard item property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dashboardId": {
+        "rendered": "\n/** The ID of the dashboard. */\n dashboardId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".itemId": {
+        "rendered": "\n/** The ID of the dashboard item. */\n itemId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the dashboard item property. The maximum length is 255 characters. For dashboard items with a spec URI and no complete module key, if the provided propertyKey is equal to \"config\", the request body's JSON must be an object with all keys and values as strings. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/dashboard/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the dashboard. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/dashboard/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the dashboard. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/dashboard/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the dashboard to update. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/dashboard/{id}/copy": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/events": {
@@ -698,7 +911,12 @@
   "put__/rest/api/3/field/{fieldId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldId}/context": {
@@ -733,13 +951,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{fieldId}/context": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldId}/context/defaultValue": {
@@ -766,13 +994,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field, for example `customfield\\_10000`. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/field/{fieldId}/context/defaultValue": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldId}/context/issuetypemapping": {
@@ -799,7 +1037,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{fieldId}/context/mapping": {
@@ -818,7 +1061,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldId}/context/projectmapping": {
@@ -845,31 +1093,72 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field, for example `customfield\\_10000`. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/field/{fieldId}/context/{contextId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/field/{fieldId}/context/{contextId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/field/{fieldId}/context/{contextId}/issuetype": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{fieldId}/context/{contextId}/issuetype/remove": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldId}/context/{contextId}/option": {
@@ -896,43 +1185,110 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{fieldId}/context/{contextId}/option": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/field/{fieldId}/context/{contextId}/option": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/field/{fieldId}/context/{contextId}/option/move": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/field/{fieldId}/context/{contextId}/option/{optionId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context from which an option should be deleted. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".optionId": {
+        "rendered": "\n/** The ID of the option to delete. */\n optionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/field/{fieldId}/context/{contextId}/project": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{fieldId}/context/{contextId}/project/remove": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the custom field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".contextId": {
+        "rendered": "\n/** The ID of the context. */\n contextId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldId}/contexts": {
@@ -951,7 +1307,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the field to return contexts for. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldId}/screens": {
@@ -974,7 +1335,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the field to return screens for. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldKey}/option": {
@@ -993,13 +1359,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{fieldKey}/option": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldKey}/option/suggestions/edit": {
@@ -1022,7 +1398,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldKey}/option/suggestions/search": {
@@ -1045,25 +1426,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/field/{fieldKey}/option/{optionId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".optionId": {
+        "rendered": "\n/** The ID of the option to be deleted. */\n optionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/field/{fieldKey}/option/{optionId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".optionId": {
+        "rendered": "\n/** The ID of the option to be returned. */\n optionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/field/{fieldKey}/option/{optionId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".optionId": {
+        "rendered": "\n/** The ID of the option to be updated. */\n optionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/field/{fieldKey}/option/{optionId}/issue": {
@@ -1090,25 +1503,49 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldKey": {
+        "rendered": "\n/** The field key is specified in the following format: **$(app-key)\\_\\_$(field-key)**. For example, *example-add-on\\_\\_example-issue-field*. To determine the `fieldKey` value, do one of the following:\n\n *  open the app's plugin descriptor, then **app-key** is the key at the top and **field-key** is the key in the `jiraIssueFields` module. **app-key** can also be found in the app listing in the Atlassian Universal Plugin Manager.\n *  run [Get fields](#api-rest-api-3-field-get) and in the field details the value is returned in `key`. For example, `\"key\": \"teams-add-on__team-issue-field\"` */\n fieldKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".optionId": {
+        "rendered": "\n/** The ID of the option to be deselected. */\n optionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/field/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a custom field. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{id}/restore": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a custom field. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/field/{id}/trash": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a custom field. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/fieldconfiguration": {
@@ -1155,13 +1592,23 @@
   "delete__/rest/api/3/fieldconfiguration/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/fieldconfiguration/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/fieldconfiguration/{id}/fields": {
@@ -1180,13 +1627,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/fieldconfiguration/{id}/fields": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/fieldconfigurationscheme": {
@@ -1285,25 +1742,45 @@
   "delete__/rest/api/3/fieldconfigurationscheme/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/fieldconfigurationscheme/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/fieldconfigurationscheme/{id}/mapping": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/fieldconfigurationscheme/{id}/mapping/delete": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the field configuration scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/filter": {
@@ -1452,7 +1929,12 @@
   "delete__/rest/api/3/filter/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter to delete. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/filter/{id}": {
@@ -1471,7 +1953,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter to return. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/filter/{id}": {
@@ -1490,25 +1977,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter to update. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/filter/{id}/columns": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/filter/{id}/columns": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/filter/{id}/columns": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/filter/{id}/favourite": {
@@ -1523,7 +2030,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/filter/{id}/favourite": {
@@ -1538,37 +2050,75 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/filter/{id}/owner": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter to update. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/filter/{id}/permission": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/filter/{id}/permission": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/filter/{id}/permission/{permissionId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".permissionId": {
+        "rendered": "\n/** The ID of the share permission. */\n permissionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/filter/{id}/permission/{permissionId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the filter. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".permissionId": {
+        "rendered": "\n/** The ID of the share permission. */\n permissionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/group": {
@@ -1973,13 +2523,23 @@
   "delete__/rest/api/3/issue/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. The maximum length is 255 characters. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/watching": {
@@ -2000,7 +2560,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}": {
@@ -2039,7 +2604,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/{issueIdOrKey}": {
@@ -2062,19 +2632,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/{issueIdOrKey}/assignee": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue to be assigned. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/attachments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue that attachments are added to. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/changelog": {
@@ -2093,13 +2678,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/changelog/list": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/comment": {
@@ -2126,7 +2721,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/comment": {
@@ -2141,13 +2741,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/comment/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the comment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/comment/{id}": {
@@ -2162,7 +2776,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the comment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/{issueIdOrKey}/comment/{id}": {
@@ -2185,7 +2808,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the comment. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/editmeta": {
@@ -2204,37 +2836,79 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/notify": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** ID or key of the issue that the notification is sent for. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/properties": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The key or ID of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The key or ID of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The key or ID of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/{issueIdOrKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the issue property. The maximum length is 255 characters. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/remotelink": {
@@ -2249,7 +2923,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/remotelink": {
@@ -2264,31 +2943,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/remotelink": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/remotelink/{linkId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".linkId": {
+        "rendered": "\n/** The ID of a remote issue link. */\n linkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/remotelink/{linkId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".linkId": {
+        "rendered": "\n/** The ID of the remote issue link. */\n linkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/{issueIdOrKey}/remotelink/{linkId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".linkId": {
+        "rendered": "\n/** The ID of the remote issue link. */\n linkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/transitions": {
@@ -2319,31 +3035,56 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/transitions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/votes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/votes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/votes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/watchers": {
@@ -2362,19 +3103,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/watchers": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/watchers": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/worklog": {
@@ -2405,7 +3161,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issue/{issueIdOrKey}/worklog": {
@@ -2440,7 +3201,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/worklog/{id}": {
@@ -2471,7 +3237,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the worklog. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/worklog/{id}": {
@@ -2486,7 +3261,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the worklog. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/{issueIdOrKey}/worklog/{id}": {
@@ -2517,31 +3301,88 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the worklog. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".worklogId": {
+        "rendered": "\n/** The ID of the worklog. */\n worklogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".worklogId": {
+        "rendered": "\n/** The ID of the worklog. */\n worklogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".worklogId": {
+        "rendered": "\n/** The ID of the worklog. */\n worklogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueIdOrKey": {
+        "rendered": "\n/** The ID or key of the issue. */\n issueIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".worklogId": {
+        "rendered": "\n/** The ID of the worklog. */\n worklogId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the issue property. The maximum length is 255 characters. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issueLink": {
@@ -2553,13 +3394,23 @@
   "delete__/rest/api/3/issueLink/{linkId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".linkId": {
+        "rendered": "\n/** The ID of the issue link. */\n linkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issueLink/{linkId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".linkId": {
+        "rendered": "\n/** The ID of the issue link. */\n linkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issueLinkType": {
@@ -2577,19 +3428,34 @@
   "delete__/rest/api/3/issueLinkType/{issueLinkTypeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueLinkTypeId": {
+        "rendered": "\n/** The ID of the issue link type. */\n issueLinkTypeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issueLinkType/{issueLinkTypeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueLinkTypeId": {
+        "rendered": "\n/** The ID of the issue link type. */\n issueLinkTypeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issueLinkType/{issueLinkTypeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueLinkTypeId": {
+        "rendered": "\n/** The ID of the issue link type. */\n issueLinkTypeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuesecurityschemes": {
@@ -2601,7 +3467,12 @@
   "get__/rest/api/3/issuesecurityschemes/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue security scheme. Use the [Get issue security schemes](#api-rest-api-3-issuesecurityschemes-get) operation to get a list of issue security scheme IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuesecurityschemes/{issueSecuritySchemeId}/members": {
@@ -2632,7 +3503,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueSecuritySchemeId": {
+        "rendered": "\n/** The ID of the issue security scheme. Use the [Get issue security schemes](#api-rest-api-3-issuesecurityschemes-get) operation to get a list of issue security scheme IDs. */\n issueSecuritySchemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetype": {
@@ -2678,25 +3554,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue type. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetype/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue type. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetype/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue type. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetype/{id}/alternatives": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue type. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issuetype/{id}/avatar2": {
@@ -2719,31 +3615,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue type. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetype/{issueTypeId}/properties": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeId": {
+        "rendered": "\n/** The ID of the issue type. */\n issueTypeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issuetype/{issueTypeId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeId": {
+        "rendered": "\n/** The ID of the issue type. */\n issueTypeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. Use [Get issue type property keys](#api-rest-api-3-issuetype-issueTypeId-properties-get) to get a list of all issue type property keys. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetype/{issueTypeId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeId": {
+        "rendered": "\n/** The ID of the issue type. */\n issueTypeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. Use [Get issue type property keys](#api-rest-api-3-issuetype-issueTypeId-properties-get) to get a list of all issue type property keys. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetype/{issueTypeId}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeId": {
+        "rendered": "\n/** The ID of the issue type. */\n issueTypeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the issue type property. The maximum length is 255 characters. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetypescheme": {
@@ -2854,31 +3787,60 @@
   "delete__/rest/api/3/issuetypescheme/{issueTypeSchemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeSchemeId": {
+        "rendered": "\n/** The ID of the issue type scheme. */\n issueTypeSchemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetypescheme/{issueTypeSchemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeSchemeId": {
+        "rendered": "\n/** The ID of the issue type scheme. */\n issueTypeSchemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetypescheme/{issueTypeSchemeId}/issuetype": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeSchemeId": {
+        "rendered": "\n/** The ID of the issue type scheme. */\n issueTypeSchemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetypescheme/{issueTypeSchemeId}/issuetype/move": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeSchemeId": {
+        "rendered": "\n/** The ID of the issue type scheme. */\n issueTypeSchemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/issuetypescheme/{issueTypeSchemeId}/issuetype/{issueTypeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeSchemeId": {
+        "rendered": "\n/** The ID of the issue type scheme. */\n issueTypeSchemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueTypeId": {
+        "rendered": "\n/** The ID of the issue type. */\n issueTypeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetypescreenscheme": {
@@ -2989,31 +3951,56 @@
   "delete__/rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeScreenSchemeId": {
+        "rendered": "\n/** The ID of the issue type screen scheme. */\n issueTypeScreenSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeScreenSchemeId": {
+        "rendered": "\n/** The ID of the issue type screen scheme. */\n issueTypeScreenSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/mapping": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeScreenSchemeId": {
+        "rendered": "\n/** The ID of the issue type screen scheme. */\n issueTypeScreenSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/mapping/default": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeScreenSchemeId": {
+        "rendered": "\n/** The ID of the issue type screen scheme. */\n issueTypeScreenSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/mapping/remove": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeScreenSchemeId": {
+        "rendered": "\n/** The ID of the issue type screen scheme. */\n issueTypeScreenSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/project": {
@@ -3036,7 +4023,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".issueTypeScreenSchemeId": {
+        "rendered": "\n/** The ID of the issue type screen scheme. */\n issueTypeScreenSchemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/jql/autocompletedata": {
@@ -3180,7 +4172,12 @@
   "get__/rest/api/3/license/approximateLicenseCount/product/{applicationKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".applicationKey": {
+        "rendered": " applicationKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/mypermissions": {
@@ -3400,31 +4397,60 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the notification scheme. Use [Get notification schemes paginated](#api-rest-api-3-notificationscheme-get) to get a list of notification scheme IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/notificationscheme/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the notification scheme. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/notificationscheme/{id}/notification": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the notification scheme. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/notificationscheme/{notificationSchemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".notificationSchemeId": {
+        "rendered": "\n/** The ID of the notification scheme. */\n notificationSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/notificationscheme/{notificationSchemeId}/notification/{notificationId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".notificationSchemeId": {
+        "rendered": "\n/** The ID of the notification scheme. */\n notificationSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".notificationId": {
+        "rendered": "\n/** The ID of the notification. */\n notificationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/permissions": {
@@ -3478,7 +4504,12 @@
   "delete__/rest/api/3/permissionscheme/{schemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".schemeId": {
+        "rendered": "\n/** The ID of the permission scheme being deleted. */\n schemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/permissionscheme/{schemeId}": {
@@ -3493,7 +4524,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".schemeId": {
+        "rendered": "\n/** The ID of the permission scheme to return. */\n schemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/permissionscheme/{schemeId}": {
@@ -3508,7 +4544,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".schemeId": {
+        "rendered": "\n/** The ID of the permission scheme to update. */\n schemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/permissionscheme/{schemeId}/permission": {
@@ -3523,7 +4564,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".schemeId": {
+        "rendered": "\n/** The ID of the permission scheme. */\n schemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/permissionscheme/{schemeId}/permission": {
@@ -3538,13 +4584,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".schemeId": {
+        "rendered": "\n/** The ID of the permission scheme in which to create a new permission grant. */\n schemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/permissionscheme/{schemeId}/permission/{permissionId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".schemeId": {
+        "rendered": "\n/** The ID of the permission scheme to delete the permission grant from. */\n schemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".permissionId": {
+        "rendered": "\n/** The ID of the permission grant to delete. */\n permissionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/permissionscheme/{schemeId}/permission/{permissionId}": {
@@ -3559,7 +4619,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".schemeId": {
+        "rendered": "\n/** The ID of the permission scheme. */\n schemeId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".permissionId": {
+        "rendered": "\n/** The ID of the permission grant. */\n permissionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/priority": {
@@ -3629,19 +4698,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue priority. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/priority/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue priority. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/priority/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue priority. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project": {
@@ -3794,13 +4878,23 @@
   "get__/rest/api/3/project/type/{projectTypeKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectTypeKey": {
+        "rendered": "\n/** The key of the project type. */\n projectTypeKey: \"software\" | \"service_desk\" | \"business\" | \"product_discovery\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/type/{projectTypeKey}/accessible": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectTypeKey": {
+        "rendered": "\n/** The key of the project type. */\n projectTypeKey: \"software\" | \"service_desk\" | \"business\" | \"product_discovery\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/project/{projectIdOrKey}": {
@@ -3815,7 +4909,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}": {
@@ -3838,7 +4937,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectIdOrKey}": {
@@ -3853,25 +4957,49 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/project/{projectIdOrKey}/archive": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectIdOrKey}/avatar": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The ID or (case-sensitive) key of the project. */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/project/{projectIdOrKey}/avatar/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or (case-sensitive) key. */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the avatar. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/project/{projectIdOrKey}/avatar2": {
@@ -3894,13 +5022,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The ID or (case-sensitive) key of the project. */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/avatars": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The ID or (case-sensitive) key of the project. */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/component": {
@@ -3927,67 +5065,138 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/components": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/project/{projectIdOrKey}/delete": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/features": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The ID or (case-sensitive) key of the project. */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectIdOrKey}/features/{featureKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The ID or (case-sensitive) key of the project. */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".featureKey": {
+        "rendered": "\n/** The key of the feature. */\n featureKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/properties": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/project/{projectIdOrKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The project property key. Use [Get project property keys](#api-rest-api-3-project-projectIdOrKey-properties-get) to get a list of all project property keys. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The project property key. Use [Get project property keys](#api-rest-api-3-project-projectIdOrKey-properties-get) to get a list of all project property keys. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectIdOrKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the project property. The maximum length is 255 characters. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/project/{projectIdOrKey}/restore": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/role": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/project/{projectIdOrKey}/role/{id}": {
@@ -4010,7 +5219,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/role/{id}": {
@@ -4025,19 +5243,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/project/{projectIdOrKey}/role/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectIdOrKey}/role/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/roledetails": {
@@ -4056,19 +5301,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/statuses": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectIdOrKey}/type/{newProjectTypeKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".newProjectTypeKey": {
+        "rendered": "\n/** The key of the new project type. */\n newProjectTypeKey: \"software\" | \"service_desk\" | \"business\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/version": {
@@ -4103,7 +5367,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectIdOrKey}/versions": {
@@ -4118,31 +5387,56 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectIdOrKey": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectIdOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectId}/email": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The project ID. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectId}/email": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The project ID. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectId}/hierarchy": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectKeyOrId}/issuesecuritylevelscheme": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectKeyOrId": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectKeyOrId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectKeyOrId}/notificationscheme": {
@@ -4157,7 +5451,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectKeyOrId": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectKeyOrId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectKeyOrId}/permissionscheme": {
@@ -4172,7 +5471,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectKeyOrId": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectKeyOrId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/project/{projectKeyOrId}/permissionscheme": {
@@ -4187,13 +5491,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectKeyOrId": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectKeyOrId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/project/{projectKeyOrId}/securitylevel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectKeyOrId": {
+        "rendered": "\n/** The project ID or project key (case sensitive). */\n projectKeyOrId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/projectCategory": {
@@ -4211,19 +5525,34 @@
   "delete__/rest/api/3/projectCategory/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** ID of the project category to delete. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/projectCategory/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project category. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/projectCategory/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/projectvalidate/key": {
@@ -4338,19 +5667,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue resolution. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/resolution/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue resolution value. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/resolution/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue resolution. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/role": {
@@ -4377,25 +5721,45 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project role to delete. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/role/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/role/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/role/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/role/{id}/actors": {
@@ -4418,19 +5782,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/role/{id}/actors": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/role/{id}/actors": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/screens": {
@@ -4485,25 +5864,45 @@
   "post__/rest/api/3/screens/addToDefault/{fieldId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".fieldId": {
+        "rendered": "\n/** The ID of the field. */\n fieldId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/screens/{screenId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/screens/{screenId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/screens/{screenId}/availableFields": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/screens/{screenId}/tabs": {
@@ -4518,25 +5917,53 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/screens/{screenId}/tabs": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/screens/{screenId}/tabs/{tabId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tabId": {
+        "rendered": "\n/** The ID of the screen tab. */\n tabId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/screens/{screenId}/tabs/{tabId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tabId": {
+        "rendered": "\n/** The ID of the screen tab. */\n tabId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/screens/{screenId}/tabs/{tabId}/fields": {
@@ -4551,31 +5978,88 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tabId": {
+        "rendered": "\n/** The ID of the screen tab. */\n tabId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/screens/{screenId}/tabs/{tabId}/fields": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tabId": {
+        "rendered": "\n/** The ID of the screen tab. */\n tabId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/screens/{screenId}/tabs/{tabId}/fields/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tabId": {
+        "rendered": "\n/** The ID of the screen tab. */\n tabId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the field. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/screens/{screenId}/tabs/{tabId}/fields/{id}/move": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tabId": {
+        "rendered": "\n/** The ID of the screen tab. */\n tabId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the field. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/screens/{screenId}/tabs/{tabId}/move/{pos}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenId": {
+        "rendered": "\n/** The ID of the screen. */\n screenId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tabId": {
+        "rendered": "\n/** The ID of the screen tab. */\n tabId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".pos": {
+        "rendered": "\n/** The position of tab. The base index is 0. */\n pos: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/screenscheme": {
@@ -4626,13 +6110,23 @@
   "delete__/rest/api/3/screenscheme/{screenSchemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenSchemeId": {
+        "rendered": "\n/** The ID of the screen scheme. */\n screenSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/screenscheme/{screenSchemeId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".screenSchemeId": {
+        "rendered": "\n/** The ID of the screen scheme. */\n screenSchemeId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/search": {
@@ -4695,7 +6189,12 @@
   "get__/rest/api/3/securitylevel/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the issue security level. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/serverInfo": {
@@ -4725,7 +6224,12 @@
   "get__/rest/api/3/status/{idOrName}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".idOrName": {
+        "rendered": "\n/** The ID or name of the status. */\n idOrName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/statuscategory": {
@@ -4737,7 +6241,12 @@
   "get__/rest/api/3/statuscategory/{idOrKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".idOrKey": {
+        "rendered": "\n/** The ID or key of the status category. */\n idOrKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/statuses": {
@@ -4832,13 +6341,23 @@
   "get__/rest/api/3/task/{taskId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".taskId": {
+        "rendered": "\n/** The ID of the task. */\n taskId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/task/{taskId}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".taskId": {
+        "rendered": "\n/** The ID of the task. */\n taskId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/uiModifications": {
@@ -4873,19 +6392,38 @@
   "delete__/rest/api/3/uiModifications/{uiModificationId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".uiModificationId": {
+        "rendered": "\n/** The ID of the UI modification. */\n uiModificationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/uiModifications/{uiModificationId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".uiModificationId": {
+        "rendered": "\n/** The ID of the UI modification. */\n uiModificationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/universal_avatar/type/{type}/owner/{entityId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** The avatar type. */\n type: \"project\" | \"issuetype\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".entityId": {
+        "rendered": "\n/** The ID of the item the avatar is associated with. */\n entityId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/universal_avatar/type/{type}/owner/{entityId}": {
@@ -4908,13 +6446,35 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** The avatar type. */\n type: \"project\" | \"issuetype\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".entityId": {
+        "rendered": "\n/** The ID of the item the avatar is associated with. */\n entityId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/universal_avatar/type/{type}/owner/{owningObjectId}/avatar/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** The avatar type. */\n type: \"project\" | \"issuetype\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".owningObjectId": {
+        "rendered": "\n/** The ID of the item the avatar is associated with. */\n owningObjectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the avatar. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/universal_avatar/view/type/{type}": {
@@ -4933,7 +6493,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** The icon type of the avatar. */\n type: \"issuetype\" | \"project\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/universal_avatar/view/type/{type}/avatar/{id}": {
@@ -4952,7 +6517,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** The icon type of the avatar. */\n type: \"issuetype\" | \"project\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": "\n/** The ID of the avatar. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/universal_avatar/view/type/{type}/owner/{entityId}": {
@@ -4971,7 +6545,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** The icon type of the avatar. */\n type: \"issuetype\" | \"project\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".entityId": {
+        "rendered": "\n/** The ID of the project or issue type the avatar belongs to. */\n entityId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/user": {
@@ -5437,7 +7020,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".propertyKey": {
+        "rendered": "\n/** The key of the user's property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/user/properties/{propertyKey}": {
@@ -5460,7 +7048,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".propertyKey": {
+        "rendered": "\n/** The key of the user's property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/user/properties/{propertyKey}": {
@@ -5483,7 +7076,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".propertyKey": {
+        "rendered": "\n/** The key of the user's property. The maximum length is 255 characters. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/user/search": {
@@ -5666,7 +7264,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/version/{id}": {
@@ -5681,43 +7284,82 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/version/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/version/{id}/mergeto/{moveIssuesTo}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version to delete. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".moveIssuesTo": {
+        "rendered": "\n/** The ID of the version to merge into. */\n moveIssuesTo: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/version/{id}/move": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version to be moved. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/version/{id}/relatedIssueCounts": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/version/{id}/removeAndSwap": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/version/{id}/unresolvedIssueCount": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the version. */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/webhook": {
@@ -5931,7 +7573,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".transitionId": {
+        "rendered": "\n/** The ID of the transition. To get the ID, view the workflow in text mode in the Jira admin settings. The ID is shown next to the transition. */\n transitionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflow/transitions/{transitionId}/properties": {
@@ -5958,7 +7605,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".transitionId": {
+        "rendered": "\n/** The ID of the transition. To get the ID, view the workflow in text mode in the Jira administration console. The ID is shown next to the transition. */\n transitionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/workflow/transitions/{transitionId}/properties": {
@@ -5981,7 +7633,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".transitionId": {
+        "rendered": "\n/** The ID of the transition. To get the ID, view the workflow in text mode in the Jira admin settings. The ID is shown next to the transition. */\n transitionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflow/transitions/{transitionId}/properties": {
@@ -6004,13 +7661,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".transitionId": {
+        "rendered": "\n/** The ID of the transition. To get the ID, view the workflow in text mode in the Jira admin settings. The ID is shown next to the transition. */\n transitionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflow/{entityId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".entityId": {
+        "rendered": "\n/** The entity ID of the workflow. */\n entityId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme": {
@@ -6066,7 +7733,12 @@
   "delete__/rest/api/3/workflowscheme/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. Find this ID by editing the desired workflow scheme in Jira. The ID is shown in the URL as `schemeId`. For example, *schemeId=10301*. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}": {
@@ -6081,19 +7753,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. Find this ID by editing the desired workflow scheme in Jira. The ID is shown in the URL as `schemeId`. For example, *schemeId=10301*. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. Find this ID by editing the desired workflow scheme in Jira. The ID is shown in the URL as `schemeId`. For example, *schemeId=10301*. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/workflowscheme/{id}/createdraft": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the active workflow scheme that the draft is created from. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflowscheme/{id}/default": {
@@ -6108,7 +7795,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}/default": {
@@ -6123,67 +7815,134 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}/default": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflowscheme/{id}/draft": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the active workflow scheme that the draft was created from. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}/draft": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the active workflow scheme that the draft was created from. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}/draft": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the active workflow scheme that the draft was created from. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflowscheme/{id}/draft/default": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}/draft/default": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}/draft/default": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflowscheme/{id}/draft/issuetype/{issueType}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueType": {
+        "rendered": "\n/** The ID of the issue type. */\n issueType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}/draft/issuetype/{issueType}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueType": {
+        "rendered": "\n/** The ID of the issue type. */\n issueType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}/draft/issuetype/{issueType}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueType": {
+        "rendered": "\n/** The ID of the issue type. */\n issueType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/api/3/workflowscheme/{id}/draft/publish": {
@@ -6198,7 +7957,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflowscheme/{id}/draft/workflow": {
@@ -6213,7 +7977,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}/draft/workflow": {
@@ -6228,7 +7997,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}/draft/workflow": {
@@ -6243,7 +8017,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme that the draft belongs to. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflowscheme/{id}/issuetype/{issueType}": {
@@ -6258,7 +8037,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueType": {
+        "rendered": "\n/** The ID of the issue type. */\n issueType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}/issuetype/{issueType}": {
@@ -6273,13 +8061,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueType": {
+        "rendered": "\n/** The ID of the issue type. */\n issueType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}/issuetype/{issueType}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueType": {
+        "rendered": "\n/** The ID of the issue type. */\n issueType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/api/3/workflowscheme/{id}/workflow": {
@@ -6298,7 +8104,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/workflowscheme/{id}/workflow": {
@@ -6317,7 +8128,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/api/3/workflowscheme/{id}/workflow": {
@@ -6332,7 +8148,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the workflow scheme. */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/api/3/worklog/deleted": {
@@ -6387,25 +8208,57 @@
   "get__/rest/atlassian-connect/1/addons/{addonKey}/properties": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".addonKey": {
+        "rendered": "\n/** The key of the app, as defined in its descriptor. */\n addonKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/atlassian-connect/1/addons/{addonKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".addonKey": {
+        "rendered": "\n/** The key of the app, as defined in its descriptor. */\n addonKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rest/atlassian-connect/1/addons/{addonKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".addonKey": {
+        "rendered": "\n/** The key of the app, as defined in its descriptor. */\n addonKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rest/atlassian-connect/1/addons/{addonKey}/properties/{propertyKey}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".addonKey": {
+        "rendered": "\n/** The key of the app, as defined in its descriptor. */\n addonKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyKey": {
+        "rendered": "\n/** The key of the property. */\n propertyKey: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rest/atlassian-connect/1/app/module/dynamic": {
@@ -6448,7 +8301,12 @@
   "put__/rest/atlassian-connect/1/migration/properties/{entityType}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".entityType": {
+        "rendered": "\n/** The type indicating the object that contains the entity properties. */\n entityType: \"IssueProperty\" | \"CommentProperty\" | \"DashboardItemProperty\" | \"IssueTypeProperty\" | \"ProjectProperty\" | \"UserProperty\" | \"WorklogProperty\" | \"BoardProperty\" | \"SprintProperty\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/rest/atlassian-connect/1/migration/workflow/rule/search": {

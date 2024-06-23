@@ -2,37 +2,47 @@
   "get__/v1/users/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
-  "get__/v1/users": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
-  "get__/v1/users/me": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "get__/v1/users": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v1/users/me": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/databases/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/v1/databases/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/databases/{id}/query": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/databases/": {
@@ -41,28 +51,42 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/pages/": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/pages/": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/pages/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/v1/pages/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/pages/{page_id}/properties/{property_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".pageId": {
+        "rendered": " pageId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".propertyId": {
+        "rendered": " propertyId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/blocks/{id}/children": {
@@ -77,39 +101,59 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/v1/blocks/{id}/children": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/v1/blocks/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/blocks/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v1/blocks/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
-  "post__/v1/search": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/v1/search": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/v1/comments": {
     "query": {
       ".query": {
@@ -129,10 +173,5 @@
     "path": {},
     "response": {}
   },
-  "post__/v1/comments": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  }
+  "post__/v1/comments": { "query": {}, "body": {}, "path": {}, "response": {} }
 }

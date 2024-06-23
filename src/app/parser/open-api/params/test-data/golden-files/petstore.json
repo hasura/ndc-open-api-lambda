@@ -35,7 +35,17 @@
     "path": {},
     "response": {}
   },
-  "get__/pet/{petId}": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/pet/{petId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** ID of pet to return */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
   "post__/pet/{petId}": {
     "query": {
       ".query": {
@@ -52,13 +62,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** ID of pet that needs to be updated */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/pet/{petId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** Pet id to delete */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/pet/{petId}/uploadImage": {
@@ -73,7 +93,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** ID of pet to update */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/store/inventory": {
@@ -86,13 +111,23 @@
   "get__/store/order/{orderId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".orderId": {
+        "rendered": "\n/** ID of order that needs to be fetched */\n orderId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/store/order/{orderId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".orderId": {
+        "rendered": "\n/** ID of the order that needs to be deleted */\n orderId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/user": { "query": {}, "body": {}, "path": {}, "response": {} },
@@ -125,19 +160,34 @@
   "get__/user/{username}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".username": {
+        "rendered": "\n/** The name that needs to be fetched. Use user1 for testing.  */\n username: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/user/{username}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".username": {
+        "rendered": "\n/** name that needs to be updated */\n username: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/user/{username}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".username": {
+        "rendered": "\n/** The name that needs to be deleted */\n username: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

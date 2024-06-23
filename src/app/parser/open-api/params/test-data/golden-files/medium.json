@@ -3,73 +3,133 @@
   "get__/article/{article_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".articleId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Article. */\n articleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/article/{article_id}/content": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".articleId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Article. */\n articleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/article/{article_id}/fans": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".articleId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Article. */\n articleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/article/{article_id}/markdown": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".articleId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Article. */\n articleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/article/{article_id}/related": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".articleId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Article. */\n articleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/article/{article_id}/responses": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".articleId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Article. */\n articleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/latestposts/{topic_slug}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".topicSlug": {
+        "rendered": "\n/** It's a unique string, usually hyphen-separated, representing a topic/niche, as classified by Medium. */\n topicSlug: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/list/{list_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".listId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium List. */\n listId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/list/{list_id}/articles": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".listId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium List. */\n listId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/list/{list_id}/responses": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".listId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium List. */\n listId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/publication/id_for/{publication_slug}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".publicationSlug": {
+        "rendered": "\n/** It's a lowercased hyphen-separated unique string alloted to each Medium Publication. */\n publicationSlug: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/publication/{publication_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".publicationId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Publication. */\n publicationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/publication/{publication_id}/articles": {
@@ -84,19 +144,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".publicationId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Publication. */\n publicationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/publication/{publication_id}/newsletter": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".publicationId": {
+        "rendered": "\n/** It's a unique hash id assigned to every Medium Publication. */\n publicationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/related_tags/{tag}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".tag": {
+        "rendered": "\n/** It's a unique string, usually hyphen-separated, representing a class of content. */\n tag: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/search/articles?query={query}": {
@@ -111,7 +186,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".query": {
+        "rendered": " query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/search/lists?query={query}": {
@@ -126,7 +206,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".query": {
+        "rendered": " query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/search/publications?query={query}": {
@@ -141,7 +226,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".query": {
+        "rendered": " query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/search/tags?query={query}": {
@@ -156,7 +246,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".query": {
+        "rendered": " query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/search/users?query={query}": {
@@ -171,7 +266,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".query": {
+        "rendered": " query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/top_writer/{topic_slug}": {
@@ -186,7 +286,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".topicSlug": {
+        "rendered": "\n/** It's a unique string, usually hyphen-separated, representing a topic/niche, as classified by Medium. */\n topicSlug: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/topfeeds/{tag}/{mode}": {
@@ -205,25 +310,49 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".tag": {
+        "rendered": "\n/** It's a unique string, usually hyphen-separated, representing a class of content. */\n tag: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mode": {
+        "rendered": "\n/** Mode:\n\n  - `hot` : For getting trending articles\n  - `new` : For getting latest articles\n  - `top_year` : For getting best articles of the year\n  - `top_month` : For getting best articles of the month\n  - `top_week` : For getting best articles of the week\n  - `top_all_time`: For getting best article of all time\n */\n mode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/id_for/{username}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".username": {
+        "rendered": "\n/** It's a unique string chosen by every single Medium user. */\n username: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** It's a unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}/articles": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** Unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}/followers": {
@@ -238,7 +367,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** Unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}/following": {
@@ -253,31 +387,56 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** Unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}/interests": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** Unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}/lists": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** Unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}/publications": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** Unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/user/{user_id}/top_articles": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** Unique hash id assigned to every single Medium user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

@@ -549,7 +549,12 @@
   "post__/apps/system/config/{configNodeName}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".configNodeName": {
+        "rendered": " configNodeName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/bin/querybuilder.json": {
@@ -686,7 +691,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".path": {
+        "rendered": " path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/crx/packmgr/service/script.html": {
@@ -733,37 +743,99 @@
   "get__/crx/server/crx.default/jcr:root/.1.json": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".root": {
+        "rendered": " root: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/etc/packages/{group}/{name}-{version}.zip": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".group": {
+        "rendered": " group: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": " version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".group": {
+        "rendered": " group: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": " version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".content": {
+        "rendered": " content: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".definition": {
+        "rendered": " definition: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/etc/replication/agents.{runmode}.-1.json": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".runmode": {
+        "rendered": " runmode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/etc/replication/agents.{runmode}/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".runmode": {
+        "rendered": " runmode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/etc/replication/agents.{runmode}/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".runmode": {
+        "rendered": " runmode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/etc/replication/agents.{runmode}/{name}": {
@@ -978,7 +1050,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".runmode": {
+        "rendered": " runmode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/etc/truststore": {
@@ -1145,13 +1226,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/system/console/bundles/{name}.json": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/system/console/configMgr": {
@@ -1310,7 +1401,16 @@
   "post__/system/console/jmx/com.adobe.granite:type=Repository/op/{action}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".action": {
+        "rendered": " action: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".type": {
+        "rendered": " type: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/system/console/status-productinfo.json": {
@@ -1382,19 +1482,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".intermediatePath": {
+        "rendered": " intermediatePath: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".authorizableId": {
+        "rendered": " authorizableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/{intermediatePath}/{authorizableId}.ks.json": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intermediatePath": {
+        "rendered": " intermediatePath: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".authorizableId": {
+        "rendered": " authorizableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/{intermediatePath}/{authorizableId}/keystore/store.p12": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".intermediatePath": {
+        "rendered": " intermediatePath: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".authorizableId": {
+        "rendered": " authorizableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/{path}/": {
@@ -1413,19 +1540,42 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".path": {
+        "rendered": " path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/{path}/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".path": {
+        "rendered": " path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/{path}/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".path": {
+        "rendered": " path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/{path}/{name}": {
@@ -1444,7 +1594,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".path": {
+        "rendered": " path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/{path}/{name}.rw.html": {
@@ -1459,7 +1618,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".path": {
+        "rendered": " path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": " name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

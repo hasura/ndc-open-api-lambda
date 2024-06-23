@@ -27,7 +27,12 @@
   "get__/v3/dockerfiles/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/gitignores": {
@@ -39,7 +44,12 @@
   "get__/v3/gitignores/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/gitlab_ci_ymls": {
@@ -51,7 +61,12 @@
   "get__/v3/gitlab_ci_ymls/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups": {
@@ -120,19 +135,34 @@
   "delete__/v3/groups/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/groups/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups/{id}/access_requests": {
@@ -151,25 +181,53 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/groups/{id}/access_requests": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/groups/{id}/access_requests/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/groups/{id}/access_requests/{user_id}/approve": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups/{id}/issues": {
@@ -208,7 +266,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups/{id}/members": {
@@ -231,43 +294,90 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/groups/{id}/members": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/groups/{id}/members/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups/{id}/members/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/groups/{id}/members/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the new member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups/{id}/notification_settings": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/groups/{id}/notification_settings": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/groups/{id}/projects": {
@@ -310,13 +420,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/groups/{id}/projects/{project_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The ID or path of the project */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/hooks": { "query": {}, "body": {}, "path": {}, "response": {} },
@@ -324,13 +448,23 @@
   "delete__/v3/hooks/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the system hook */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/hooks/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the system hook */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/internal/allowed": {
@@ -414,7 +548,17 @@
     "path": {},
     "response": {}
   },
-  "get__/v3/keys/{id}": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/keys/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
   "get__/v3/licenses": {
     "query": {
       ".query": {
@@ -433,7 +577,12 @@
   "get__/v3/licenses/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/namespaces": {
@@ -565,7 +714,12 @@
   "post__/v3/projects/fork/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/owned": {
@@ -639,7 +793,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".query": {
+        "rendered": "\n/** The project name to be searched */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/starred": {
@@ -688,7 +847,12 @@
   "post__/v3/projects/user/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of a user */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/visible": {
@@ -737,25 +901,49 @@
   "delete__/v3/projects/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/(ref/{ref}/)trigger/builds": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ref": {
+        "rendered": "\n/** The commit sha or name of a branch or tag */\n ref: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/access_requests": {
@@ -774,67 +962,162 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/access_requests": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/access_requests/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/access_requests/{user_id}/approve": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/archive": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/boards": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/boards/{board_id}/lists": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/boards/{board_id}/lists": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".listId": {
+        "rendered": "\n/** The ID of a board list */\n listId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".listId": {
+        "rendered": "\n/** The ID of a list */\n listId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".listId": {
+        "rendered": "\n/** The ID of a list */\n listId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/builds": {
@@ -857,7 +1140,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/builds/artifacts/{ref_name}/download": {
@@ -872,91 +1160,218 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".refName": {
+        "rendered": "\n/** The ref from repository */\n refName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/builds/{build_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/builds/{build_id}/artifacts": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/builds/{build_id}/artifacts/keep": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/builds/{build_id}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/builds/{build_id}/erase": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/builds/{build_id}/play": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a Build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/builds/{build_id}/retry": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/builds/{build_id}/trace": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/deploy_keys": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/deploy_keys": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/deploy_keys/{key_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/deploy_keys/{key_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/deploy_keys/{key_id}/disable": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/deploy_keys/{key_id}/enable": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/deployments": {
@@ -975,13 +1390,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/deployments/{deployment_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deploymentId": {
+        "rendered": "\n/** The deployment ID */\n deploymentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/environments": {
@@ -1000,25 +1429,53 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/environments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/environments/{environment_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".environmentId": {
+        "rendered": "\n/** The environment ID */\n environmentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/environments/{environment_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".environmentId": {
+        "rendered": "\n/** The environment ID */\n environmentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/events": {
@@ -1037,19 +1494,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/fork": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/fork/{forked_from_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".forkedFromId": {
+        "rendered": "\n/** The ID of the project it was forked from */\n forkedFromId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/hooks": {
@@ -1068,31 +1544,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/hooks": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/hooks/{hook_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".hookId": {
+        "rendered": "\n/** The ID of the hook to delete */\n hookId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/hooks/{hook_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".hookId": {
+        "rendered": "\n/** The ID of a project hook */\n hookId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/hooks/{hook_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".hookId": {
+        "rendered": "\n/** The ID of the hook to update */\n hookId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues": {
@@ -1135,37 +1648,83 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/issues/{issue_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{issue_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/issues/{issue_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/add_spent_time": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{issue_id}/award_emoji": {
@@ -1184,31 +1743,84 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of an Issue, Merge Request or Snippet */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/award_emoji": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/move": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
@@ -1227,55 +1839,160 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/reset_spent_time": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/reset_time_estimate": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/time_estimate": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{issue_id}/time_stats": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{issue_id}/todo": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of an issuable */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{noteable_id}/notes": {
@@ -1294,79 +2011,200 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{noteable_id}/notes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/issues/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/issues/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/keys": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/keys": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/keys/{key_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/keys/{key_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/keys/{key_id}/disable": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/keys/{key_id}/enable": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/labels": {
@@ -1381,37 +2219,75 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/labels": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/labels": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/labels": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/labels/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/labels/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/members": {
@@ -1434,55 +2310,128 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/members": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/members/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/members/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/members/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the new member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_request/{merge_request_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/merge_request/{merge_request_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_request/{merge_request_id}/cancel_merge_when_build_succeeds": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_request/{merge_request_id}/changes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_request/{merge_request_id}/closes_issues": {
@@ -1501,7 +2450,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
@@ -1520,37 +2478,91 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_request/{merge_request_id}/commits": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/merge_request/{merge_request_id}/merge": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests": {
@@ -1581,37 +2593,83 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/merge_requests/{merge_request_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/merge_requests/{merge_request_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/add_spent_time": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
@@ -1630,37 +2688,99 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of an Issue, Merge Request or Snippet */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/cancel_merge_when_build_succeeds": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/changes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/closes_issues": {
@@ -1679,7 +2799,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
@@ -1698,25 +2827,61 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/commits": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/merge_requests/{merge_request_id}/merge": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
@@ -1735,67 +2900,194 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/reset_spent_time": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/reset_time_estimate": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/time_estimate": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/time_stats": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{merge_request_id}/todo": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of an issuable */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/versions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{merge_request_id}/versions/{version_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".versionId": {
+        "rendered": "\n/** The ID of a merge request diff version */\n versionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
@@ -1814,43 +3106,118 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/milestones": {
@@ -1873,25 +3240,53 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/milestones": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/milestones/{milestone_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".milestoneId": {
+        "rendered": "\n/** The ID of a project milestone */\n milestoneId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/milestones/{milestone_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".milestoneId": {
+        "rendered": "\n/** The ID of a project milestone */\n milestoneId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/milestones/{milestone_id}/issues": {
@@ -1910,25 +3305,49 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".milestoneId": {
+        "rendered": "\n/** The ID of a project milestone */\n milestoneId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/notification_settings": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/notification_settings": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/pipeline": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/pipelines": {
@@ -1951,25 +3370,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/pipelines/{pipeline_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".pipelineId": {
+        "rendered": "\n/** The pipeline ID */\n pipelineId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/pipelines/{pipeline_id}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".pipelineId": {
+        "rendered": "\n/** The pipeline ID */\n pipelineId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/pipelines/{pipeline_id}/retry": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".pipelineId": {
+        "rendered": "\n/** The pipeline ID */\n pipelineId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/archive": {
@@ -1988,7 +3439,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/blobs/{sha}": {
@@ -2003,43 +3459,98 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit, branch name, or tag name */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/branches": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/repository/branches": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/repository/branches/{branch}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/branches/{branch}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/repository/branches/{branch}/protect": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/repository/branches/{branch}/unprotect": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/commits": {
@@ -2074,19 +3585,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/repository/commits": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/commits/{sha}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha, or the name of a branch or tag */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/commits/{sha}/blob": {
@@ -2101,7 +3631,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit, branch name, or tag name */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/commits/{sha}/builds": {
@@ -2124,13 +3663,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The SHA id of a commit */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/repository/commits/{sha}/cherry_pick": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha to be cherry picked */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/commits/{sha}/comments": {
@@ -2149,19 +3706,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha, or the name of a branch or tag */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/repository/commits/{sha}/comments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit's SHA */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/commits/{sha}/diff": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha, or the name of a branch or tag */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/commits/{sha}/statuses": {
@@ -2196,7 +3780,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit hash */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/compare": {
@@ -2215,13 +3808,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/contributors": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/repository/files": {
@@ -2252,7 +3855,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/files": {
@@ -2271,67 +3879,142 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/repository/files": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/repository/files": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/repository/merged_branches": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/raw_blobs/{sha}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit, branch name, or tag name */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/tags": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/repository/tags": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/repository/tags/{tag_name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/tags/{tag_name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/repository/tags/{tag_name}/release": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/repository/tags/{tag_name}/release": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/repository/tree": {
@@ -2354,7 +4037,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/runners": {
@@ -2377,211 +4065,402 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/runners": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/runners/{runner_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".runnerId": {
+        "rendered": "\n/** The ID of the runner */\n runnerId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/asana": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/assembla": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/bamboo": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/bugzilla": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/buildkite": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/builds-email": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/campfire": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/custom-issue-tracker": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/drone-ci": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/emails-on-push": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/external-wiki": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/flowdock": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/gemnasium": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/hipchat": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/irker": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/jira": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/kubernetes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/mattermost": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/mattermost-slash-commands": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/services/mattermost_slash_commands/trigger": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/pipelines-email": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/pivotaltracker": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/pushover": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/redmine": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/slack": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/slack-slash-commands": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/services/slack_slash_commands/trigger": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/services/teamcity": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/services/{service_slug}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".serviceSlug": {
+        "rendered": "\n/** The name of the service */\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/services/{service_slug}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".serviceSlug": {
+        "rendered": "\n/** The name of the service */\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/share": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/share/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".groupId": {
+        "rendered": "\n/** The ID of the group */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets": {
@@ -2600,13 +4479,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/snippets": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{noteable_id}/notes": {
@@ -2625,49 +4514,133 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/snippets/{noteable_id}/notes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/snippets/{snippet_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{snippet_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/snippets/{snippet_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
@@ -2686,25 +4659,69 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of an Issue, Merge Request or Snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
@@ -2723,49 +4740,137 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/snippets/{snippet_id}/raw": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/star": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/star": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/statuses/{sha}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit hash */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/triggers": {
@@ -2784,37 +4889,75 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/triggers": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/triggers/{token}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".token": {
+        "rendered": "\n/** The unique token of trigger */\n token: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/triggers/{token}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".token": {
+        "rendered": "\n/** The unique token of trigger */\n token: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/unarchive": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/uploads": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/users": {
@@ -2837,7 +4980,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/variables": {
@@ -2856,31 +5004,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/projects/{id}/variables": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/projects/{id}/variables/{key}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The key of the variable */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/projects/{id}/variables/{key}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The key of the variable */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/projects/{id}/variables/{key}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The key of the variable */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/runners": {
@@ -2932,19 +5117,34 @@
   "delete__/v3/runners/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the runner */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/runners/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the runner */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/runners/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the runner */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/session": { "query": {}, "body": {}, "path": {}, "response": {} },
@@ -3014,25 +5214,45 @@
   "delete__/v3/snippets/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/snippets/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/snippets/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/snippets/{id}/raw": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/templates/dockerfiles": {
@@ -3044,7 +5264,12 @@
   "get__/v3/templates/dockerfiles/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/templates/gitignores": {
@@ -3056,7 +5281,12 @@
   "get__/v3/templates/gitignores/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/templates/gitlab_ci_ymls": {
@@ -3068,7 +5298,12 @@
   "get__/v3/templates/gitlab_ci_ymls/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/templates/licenses": {
@@ -3089,7 +5324,12 @@
   "get__/v3/templates/licenses/{name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/todos": { "query": {}, "body": {}, "path": {}, "response": {} },
@@ -3115,7 +5355,12 @@
   "delete__/v3/todos/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the todo being marked as done */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/user": { "query": {}, "body": {}, "path": {}, "response": {} },
@@ -3134,13 +5379,23 @@
   "delete__/v3/user/emails/{email_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".emailId": {
+        "rendered": "\n/** The ID of the email */\n emailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/user/emails/{email_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".emailId": {
+        "rendered": "\n/** The ID of the email */\n emailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/user/keys": { "query": {}, "body": {}, "path": {}, "response": {} },
@@ -3153,13 +5408,23 @@
   "delete__/v3/user/keys/{key_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".keyId": {
+        "rendered": "\n/** The ID of the SSH key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/user/keys/{key_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".keyId": {
+        "rendered": "\n/** The ID of the SSH key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/users": {
@@ -3205,43 +5470,82 @@
   "delete__/v3/users/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/users/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/users/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/users/{id}/block": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/users/{id}/emails": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/users/{id}/emails": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/users/{id}/emails/{email_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".emailId": {
+        "rendered": "\n/** The ID of the email */\n emailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/users/{id}/events": {
@@ -3260,31 +5564,60 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/users/{id}/keys": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v3/users/{id}/keys": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/v3/users/{id}/keys/{key_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the SSH key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/v3/users/{id}/unblock": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v3/version": { "query": {}, "body": {}, "path": {}, "response": {} }

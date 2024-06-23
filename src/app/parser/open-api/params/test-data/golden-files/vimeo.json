@@ -44,7 +44,12 @@
   "get__/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/categories/{category}/channels": {
@@ -75,7 +80,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/categories/{category}/groups": {
@@ -106,7 +116,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/categories/{category}/videos": {
@@ -145,13 +160,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/categories/{category}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels": {
@@ -189,58 +218,101 @@
     "path": {},
     "response": {}
   },
-  "post__/channels": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/channels": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/categories": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/categories": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/channels/{channel_id}/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/channels/{channel_id}/moderators": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/moderators": {
@@ -271,37 +343,79 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/channels/{channel_id}/moderators": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/moderators": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/channels/{channel_id}/moderators/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/moderators/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/moderators/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/privacy/users": {
@@ -324,55 +438,120 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/privacy/users": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/channels/{channel_id}/privacy/users/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/privacy/users/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/tags": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/tags": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/channels/{channel_id}/tags/{word}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".word": {
+        "rendered": "\n/** The word to use as the tag. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/tags/{word}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".word": {
+        "rendered": "\n/** The word to use as the tag. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/tags/{word}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".word": {
+        "rendered": "\n/** The word to use as the tag. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/users": {
@@ -407,13 +586,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/channels/{channel_id}/videos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos": {
@@ -456,31 +645,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/videos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/channels/{channel_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos/{video_id}/comments": {
@@ -503,13 +729,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/channels/{channel_id}/videos/{video_id}/comments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos/{video_id}/credits": {
@@ -540,13 +784,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/channels/{channel_id}/videos/{video_id}/credits": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos/{video_id}/likes": {
@@ -573,7 +835,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos/{video_id}/pictures": {
@@ -592,13 +863,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/channels/{channel_id}/videos/{video_id}/pictures": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos/{video_id}/privacy/users": {
@@ -617,25 +906,61 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/channels/{channel_id}/videos/{video_id}/privacy/users": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/channels/{channel_id}/videos/{video_id}/texttracks": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/channels/{channel_id}/videos/{video_id}/texttracks": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/contentratings": {
@@ -685,22 +1010,27 @@
     "path": {},
     "response": {}
   },
-  "post__/groups": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/groups": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/groups/{group_id}/users": {
@@ -735,7 +1065,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/groups/{group_id}/videos": {
@@ -774,25 +1109,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/groups/{group_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/groups/{group_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/groups/{group_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/languages": {
@@ -810,18 +1177,8 @@
     "path": {},
     "response": {}
   },
-  "get__/me": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
-  "patch__/me": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "get__/me": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "patch__/me": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/me/albums": {
     "query": {
       ".query": {
@@ -853,28 +1210,38 @@
     "path": {},
     "response": {}
   },
-  "post__/me/albums": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/me/albums": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/me/albums/{album_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/albums/{album_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/me/albums/{album_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/albums/{album_id}/videos": {
@@ -925,19 +1292,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/albums/{album_id}/videos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/me/albums/{album_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/albums/{album_id}/videos/{video_id}": {
@@ -952,19 +1338,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/albums/{album_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/me/albums/{album_id}/videos/{video_id}/set_album_thumbnail": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/appearances": {
@@ -1036,19 +1449,34 @@
   "delete__/me/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/channels": {
@@ -1089,19 +1517,34 @@
   "delete__/me/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/customlogos": {
@@ -1119,7 +1562,12 @@
   "get__/me/customlogos/{logo_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".logoId": {
+        "rendered": "\n/** The ID of the custom logo. */\n logoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/feed": {
@@ -1224,19 +1672,34 @@
   "delete__/me/following/{follow_user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".followUserId": {
+        "rendered": "\n/** The ID of the following user. */\n followUserId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/following/{follow_user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".followUserId": {
+        "rendered": "\n/** The ID of the following user. */\n followUserId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/following/{follow_user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".followUserId": {
+        "rendered": "\n/** The ID of the following user. */\n followUserId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/groups": {
@@ -1277,19 +1740,34 @@
   "delete__/me/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/likes": {
@@ -1330,19 +1808,34 @@
   "delete__/me/likes/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/likes/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/likes/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/ondemand/pages": {
@@ -1416,7 +1909,12 @@
   "get__/me/ondemand/purchases/{ondemand_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/pictures": {
@@ -1438,28 +1936,38 @@
     "path": {},
     "response": {}
   },
-  "post__/me/pictures": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/me/pictures": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/me/pictures/{portraitset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portraitsetId": {
+        "rendered": "\n/** The ID of the picture. */\n portraitsetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/pictures/{portraitset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portraitsetId": {
+        "rendered": "\n/** The ID of the picture. */\n portraitsetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/me/pictures/{portraitset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portraitsetId": {
+        "rendered": "\n/** The ID of the picture. */\n portraitsetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/portfolios": {
@@ -1496,7 +2004,12 @@
   "get__/me/portfolios/{portfolio_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/portfolios/{portfolio_id}/videos": {
@@ -1531,25 +2044,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/me/portfolios/{portfolio_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/portfolios/{portfolio_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/portfolios/{portfolio_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/presets": {
@@ -1574,13 +2119,23 @@
   "get__/me/presets/{preset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/me/presets/{preset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/presets/{preset_id}/videos": {
@@ -1599,7 +2154,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/projects": {
@@ -1629,12 +2189,7 @@
     "path": {},
     "response": {}
   },
-  "post__/me/projects": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/me/projects": { "query": {}, "body": {}, "path": {}, "response": {} },
   "delete__/me/projects/{project_id}": {
     "query": {
       ".query": {
@@ -1647,19 +2202,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/projects/{project_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/me/projects/{project_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/me/projects/{project_id}/videos": {
@@ -1678,7 +2248,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/projects/{project_id}/videos": {
@@ -1705,7 +2280,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/projects/{project_id}/videos": {
@@ -1720,19 +2300,42 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/me/projects/{project_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/projects/{project_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/videos": {
@@ -1782,16 +2385,16 @@
     "path": {},
     "response": {}
   },
-  "post__/me/videos": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "post__/me/videos": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/me/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/me/watched/videos": {
@@ -1822,7 +2425,12 @@
   "delete__/me/watched/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/watchlater": {
@@ -1867,19 +2475,34 @@
   "delete__/me/watchlater/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/me/watchlater/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/me/watchlater/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/oauth/access_token": {
@@ -1900,12 +2523,7 @@
     "path": {},
     "response": {}
   },
-  "get__/oauth/verify": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "get__/oauth/verify": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/ondemand/genres": {
     "query": {},
     "body": {},
@@ -1915,7 +2533,12 @@
   "get__/ondemand/genres/{genre_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".genreId": {
+        "rendered": "\n/** The ID of the genre. */\n genreId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/genres/{genre_id}/pages": {
@@ -1950,31 +2573,60 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".genreId": {
+        "rendered": "\n/** The ID of the genre. */\n genreId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/genres/{genre_id}/pages/{ondemand_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".genreId": {
+        "rendered": "\n/** The ID of the genre. */\n genreId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/ondemand/pages/{ondemand_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/ondemand/pages/{ondemand_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/backgrounds": {
@@ -1993,55 +2645,124 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/ondemand/pages/{ondemand_id}/backgrounds": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/ondemand/pages/{ondemand_id}/backgrounds/{background_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".backgroundId": {
+        "rendered": "\n/** The ID of the background. */\n backgroundId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/backgrounds/{background_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".backgroundId": {
+        "rendered": "\n/** The ID of the background. */\n backgroundId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/ondemand/pages/{ondemand_id}/backgrounds/{background_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".backgroundId": {
+        "rendered": "\n/** The ID of the background. */\n backgroundId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/genres": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/ondemand/pages/{ondemand_id}/genres/{genre_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".genreId": {
+        "rendered": "\n/** The ID of the genre. */\n genreId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/genres/{genre_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".genreId": {
+        "rendered": "\n/** The ID of the genre. */\n genreId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/ondemand/pages/{ondemand_id}/genres/{genre_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".genreId": {
+        "rendered": "\n/** The ID of the genre. */\n genreId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/likes": {
@@ -2072,7 +2793,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand page. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/pictures": {
@@ -2091,25 +2817,53 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/ondemand/pages/{ondemand_id}/pictures": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/pictures/{poster_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".posterId": {
+        "rendered": "\n/** The ID of the picture. */\n posterId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/ondemand/pages/{ondemand_id}/pictures/{poster_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".posterId": {
+        "rendered": "\n/** The ID of the picture. */\n posterId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/promotions": {
@@ -2132,25 +2886,53 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/ondemand/pages/{ondemand_id}/promotions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/ondemand/pages/{ondemand_id}/promotions/{promotion_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".promotionId": {
+        "rendered": "\n/** The ID of the promotion. */\n promotionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/promotions/{promotion_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".promotionId": {
+        "rendered": "\n/** The ID of the promotion. */\n promotionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes": {
@@ -2169,43 +2951,94 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".promotionId": {
+        "rendered": "\n/** The ID of the promotion. */\n promotionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/ondemand/pages/{ondemand_id}/regions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/regions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/ondemand/pages/{ondemand_id}/regions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/ondemand/pages/{ondemand_id}/regions/{country}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".country": {
+        "rendered": "\n/** The country code. */\n country: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/regions/{country}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".country": {
+        "rendered": "\n/** The country code. */\n country: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/ondemand/pages/{ondemand_id}/regions/{country}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".country": {
+        "rendered": "\n/** The country code. */\n country: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/seasons": {
@@ -2236,13 +3069,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/seasons/{season_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".seasonId": {
+        "rendered": "\n/** The ID of the season. */\n seasonId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos": {
@@ -2269,7 +3116,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".seasonId": {
+        "rendered": "\n/** The ID of the season. */\n seasonId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/videos": {
@@ -2300,25 +3156,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/ondemand/pages/{ondemand_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/pages/{ondemand_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/ondemand/pages/{ondemand_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ondemandId": {
+        "rendered": "\n/** The ID of the On Demand. */\n ondemandId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ondemand/regions": {
@@ -2330,13 +3218,23 @@
   "get__/ondemand/regions/{country}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".country": {
+        "rendered": "\n/** The country code. */\n country: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/tags/{word}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".word": {
+        "rendered": "\n/** The tag to return. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/tags/{word}/videos": {
@@ -2363,15 +3261,15 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".word": {
+        "rendered": "\n/** The tag word. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
-  "delete__/tokens": {
-    "query": {},
-    "body": {},
-    "path": {},
-    "response": {}
-  },
+  "delete__/tokens": { "query": {}, "body": {}, "path": {}, "response": {} },
   "get__/users": {
     "query": {
       ".query": {
@@ -2406,13 +3304,23 @@
   "get__/users/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/users/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums": {
@@ -2443,31 +3351,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/albums": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/albums/{album_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums/{album_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/users/{user_id}/albums/{album_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums/{album_id}/custom_thumbnails": {
@@ -2486,31 +3431,88 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/albums/{album_id}/custom_thumbnails": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".thumbnailId": {
+        "rendered": "\n/** The ID of the custom thumbnail. */\n thumbnailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".thumbnailId": {
+        "rendered": "\n/** The ID of the custom thumbnail. */\n thumbnailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".thumbnailId": {
+        "rendered": "\n/** The ID of the custom thumbnail. */\n thumbnailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums/{album_id}/logos": {
@@ -2529,31 +3531,88 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/albums/{album_id}/logos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/albums/{album_id}/logos/{logo_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".logoId": {
+        "rendered": "\n/** The ID of the custom logo. */\n logoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums/{album_id}/logos/{logo_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".logoId": {
+        "rendered": "\n/** The ID of the custom logo. */\n logoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/users/{user_id}/albums/{album_id}/logos/{logo_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".logoId": {
+        "rendered": "\n/** The ID of the custom logo. */\n logoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums/{album_id}/videos": {
@@ -2604,19 +3663,50 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/albums/{album_id}/videos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/albums/{album_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/albums/{album_id}/videos/{video_id}": {
@@ -2631,19 +3721,58 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/albums/{album_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/albums/{album_id}/videos/{video_id}/set_album_thumbnail": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".albumId": {
+        "rendered": "\n/** The ID of the album. */\n albumId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/appearances": {
@@ -2682,7 +3811,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/categories": {
@@ -2709,25 +3843,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/categories/{category}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".category": {
+        "rendered": "\n/** The name of the category. */\n category: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/channels": {
@@ -2762,43 +3928,94 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/channels/{channel_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** The ID of the channel. */\n channelId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/customlogos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/customlogos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/customlogos/{logo_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".logoId": {
+        "rendered": "\n/** The ID of the custom logo. */\n logoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/feed": {
@@ -2825,7 +4042,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/followers": {
@@ -2856,7 +4078,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/following": {
@@ -2891,31 +4118,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/following": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/following/{follow_user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".followUserId": {
+        "rendered": "\n/** The ID of the following user. */\n followUserId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/following/{follow_user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".followUserId": {
+        "rendered": "\n/** The ID of the following user. */\n followUserId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/following/{follow_user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".followUserId": {
+        "rendered": "\n/** The ID of the following user. */\n followUserId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/groups": {
@@ -2950,25 +4214,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/groups/{group_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The ID of the group. */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/likes": {
@@ -3003,25 +4299,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/likes/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/likes/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/likes/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/ondemand/pages": {
@@ -3052,19 +4380,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/ondemand/pages": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/ondemand/purchases": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/pictures": {
@@ -3083,31 +4426,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/pictures": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/pictures/{portraitset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portraitsetId": {
+        "rendered": "\n/** The ID of the picture. */\n portraitsetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/pictures/{portraitset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portraitsetId": {
+        "rendered": "\n/** The ID of the picture. */\n portraitsetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/users/{user_id}/pictures/{portraitset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portraitsetId": {
+        "rendered": "\n/** The ID of the picture. */\n portraitsetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/portfolios": {
@@ -3138,13 +4518,27 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/portfolios/{portfolio_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/portfolios/{portfolio_id}/videos": {
@@ -3179,25 +4573,73 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".portfolioId": {
+        "rendered": "\n/** The ID of the portfolio. */\n portfolioId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/presets": {
@@ -3216,19 +4658,42 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/presets/{preset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/users/{user_id}/presets/{preset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/presets/{preset_id}/videos": {
@@ -3247,7 +4712,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/projects": {
@@ -3274,13 +4748,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/projects": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/projects/{project_id}": {
@@ -3295,19 +4779,46 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/projects/{project_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/users/{user_id}/projects/{project_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/projects/{project_id}/videos": {
@@ -3326,7 +4837,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/projects/{project_id}/videos": {
@@ -3353,7 +4873,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/projects/{project_id}/videos": {
@@ -3368,19 +4897,54 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/projects/{project_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/projects/{project_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".projectId": {
+        "rendered": "\n/** The ID of the project. */\n projectId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/uploads/{upload}": {
@@ -3399,13 +4963,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".upload": {
+        "rendered": "\n/** The ID of the upload attempt. */\n upload: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/uploads/{upload}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".upload": {
+        "rendered": "\n/** The ID of the upload attempt. */\n upload: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/videos": {
@@ -3452,19 +5034,38 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user_id}/videos": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/watchlater": {
@@ -3503,25 +5104,57 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/users/{user_id}/watchlater/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user_id}/watchlater/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/users/{user_id}/watchlater/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos": {
@@ -3570,37 +5203,67 @@
   "delete__/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/videos/{video_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/available_channels": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/categories": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/videos/{video_id}/categories": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/comments": {
@@ -3623,31 +5286,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/videos/{video_id}/comments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/comments/{comment_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/comments/{comment_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/videos/{video_id}/comments/{comment_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/comments/{comment_id}/replies": {
@@ -3666,13 +5366,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/videos/{video_id}/comments/{comment_id}/replies": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment. */\n commentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/credits": {
@@ -3703,31 +5421,68 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/videos/{video_id}/credits": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/credits/{credit_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".creditId": {
+        "rendered": "\n/** The ID of the credit. */\n creditId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/credits/{credit_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".creditId": {
+        "rendered": "\n/** The ID of the credit. */\n creditId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/videos/{video_id}/credits/{credit_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".creditId": {
+        "rendered": "\n/** The ID of the credit. */\n creditId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/likes": {
@@ -3754,7 +5509,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/pictures": {
@@ -3773,49 +5533,113 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/videos/{video_id}/pictures": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/pictures/{picture_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".pictureId": {
+        "rendered": "\n/** The ID of the picture. */\n pictureId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/pictures/{picture_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".pictureId": {
+        "rendered": "\n/** The ID of the picture. */\n pictureId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/videos/{video_id}/pictures/{picture_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".pictureId": {
+        "rendered": "\n/** The ID of the picture. */\n pictureId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/presets/{preset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/presets/{preset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/videos/{video_id}/presets/{preset_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".presetId": {
+        "rendered": "\n/** The ID of the preset. */\n presetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/privacy/domains": {
@@ -3834,19 +5658,42 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/privacy/domains/{domain}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".domain": {
+        "rendered": "\n/** The domain name. */\n domain: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/videos/{video_id}/privacy/domains/{domain}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".domain": {
+        "rendered": "\n/** The domain name. */\n domain: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/privacy/users": {
@@ -3865,103 +5712,224 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/videos/{video_id}/privacy/users": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/privacy/users/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/videos/{video_id}/privacy/users/{user_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the user. */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/tags": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/videos/{video_id}/tags": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/tags/{word}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".word": {
+        "rendered": "\n/** The tag word. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/tags/{word}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".word": {
+        "rendered": "\n/** The tag word. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/videos/{video_id}/tags/{word}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".word": {
+        "rendered": "\n/** The tag word. */\n word: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/texttracks": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/videos/{video_id}/texttracks": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/videos/{video_id}/texttracks/{texttrack_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".texttrackId": {
+        "rendered": "\n/** The ID of the text track. */\n texttrackId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/texttracks/{texttrack_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".texttrackId": {
+        "rendered": "\n/** The ID of the text track. */\n texttrackId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/videos/{video_id}/texttracks/{texttrack_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".texttrackId": {
+        "rendered": "\n/** The ID of the text track. */\n texttrackId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/videos/{video_id}/timelinethumbnails": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/timelinethumbnails/{thumbnail_id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".thumbnailId": {
+        "rendered": "\n/** The ID of the picture. */\n thumbnailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/videos/{video_id}/versions": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/videos/{video_id}/videos": {
@@ -3984,7 +5952,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".videoId": {
+        "rendered": "\n/** The ID of the video. */\n videoId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

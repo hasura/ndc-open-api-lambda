@@ -68,11 +68,13 @@ export function hasQueryParams(route: ApiRoute): boolean {
   return route.routeParams.query && route.routeParams.query.length > 0;
 }
 
-export function getPathParams(route: ApiRoute): paramTypes.Schema | undefined {
+export function getPathParams(
+  route: ApiRoute,
+): paramTypes.Schema[] | undefined {
   if (!hasPathParams(route)) {
     return undefined;
   }
-  return route.pathObjectSchema;
+  return route.routeParams.path;
 }
 
 export function hasPathParams(route: ApiRoute) {

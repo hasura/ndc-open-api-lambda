@@ -81,7 +81,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/aliases/v2/{trackingId}": {
@@ -108,7 +113,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/aliases/v2/{trackingId}/batch": {
@@ -123,7 +133,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/aliases/v2/{trackingId}/{type}": {
@@ -138,7 +153,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** An alias type */\n type: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/aliases/v2/{trackingId}/{type}": {
@@ -161,7 +185,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": " type: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/aliases/v2/{trackingId}/{type}/{externalId}": {
@@ -176,7 +209,20 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": "\n/** An alias type */\n type: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".externalId": {
+        "rendered": "\n/** An external ID. An `externalId` and a `type` pair uniquely identifies an alias. */\n externalId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/aliases/v2/{trackingId}/{type}/{externalId}": {
@@ -191,7 +237,20 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".type": {
+        "rendered": " type: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".externalId": {
+        "rendered": " externalId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/associations/v3/devices/batchUpdate": {
@@ -221,7 +280,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/associations/v3/devices/{trackingId}/batchDelete": {
@@ -236,7 +300,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/associations/v3/geofences/{geofenceId}": {
@@ -255,7 +324,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": "\n/** ID of the geofence */\n geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/associations/v3/health": {
@@ -280,7 +354,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ruleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n ruleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/associations/v3/sensors/{sensorRuleId}": {
@@ -299,7 +378,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/associations/v3/version": {
@@ -336,7 +420,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/associations/v3/{trackingId}/geofences/{geofenceId}": {
@@ -351,7 +440,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": "\n/** ID of the geofence */\n geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/associations/v3/{trackingId}/geofences/{geofenceId}": {
@@ -366,7 +464,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": " geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/associations/v3/{trackingId}/rules": {
@@ -389,7 +496,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/associations/v3/{trackingId}/rules/{ruleId}": {
@@ -404,7 +516,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ruleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n ruleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/associations/v3/{trackingId}/rules/{ruleId}": {
@@ -419,7 +540,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".ruleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n ruleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/associations/v3/{trackingId}/sensors": {
@@ -442,7 +572,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/associations/v3/{trackingId}/sensors/{sensorRuleId}": {
@@ -457,7 +592,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/associations/v3/{trackingId}/sensors/{sensorRuleId}": {
@@ -472,7 +616,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/bulkjobs/v4/deviceUploads": {
@@ -537,7 +690,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".jobId": {
+        "rendered": "\n/** Bulk upload job ID */\n jobId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/bulkjobs/v4/deviceUploads/{jobId}/results": {
@@ -560,7 +718,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".jobId": {
+        "rendered": "\n/** Bulk upload job ID */\n jobId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/bulkjobs/v4/deviceUploads/{jobId}/status": {
@@ -575,7 +738,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".jobId": {
+        "rendered": "\n/** Bulk upload job ID */\n jobId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/bulkjobs/v4/health": {
@@ -655,7 +823,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".externalDeviceId": {
+        "rendered": "\n/** Identifier of the external device */\n externalDeviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/c2c/v4/connectors/{connectorId}": {
@@ -670,19 +843,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".connectorId": {
+        "rendered": "\n/** Identifier of the connector */\n connectorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/c2c/v4/connectors/{connectorId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".connectorId": {
+        "rendered": "\n/** Identifier of the connector */\n connectorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/c2c/v4/connectors/{connectorId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".connectorId": {
+        "rendered": "\n/** Identifier of the connector */\n connectorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/c2c/v4/connectors/{connectorId}/ext-devices": {
@@ -701,25 +889,49 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".connectorId": {
+        "rendered": "\n/** Identifier of the connector */\n connectorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/c2c/v4/connectors/{connectorId}/ext-devices": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".connectorId": {
+        "rendered": "\n/** Identifier of the connector */\n connectorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/c2c/v4/connectors/{connectorId}/ext-devices-batch": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".connectorId": {
+        "rendered": "\n/** Identifier of the connector */\n connectorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/c2c/v4/connectors/{connectorId}/ext-devices/{externalDeviceId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".connectorId": {
+        "rendered": "\n/** Identifier of the connector */\n connectorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".externalDeviceId": {
+        "rendered": "\n/** Identifier of the external device */\n externalDeviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/c2c/v4/drivers": {
@@ -744,7 +956,12 @@
   "post__/c2c/v4/drivers/{driverId}/verify": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".driverId": {
+        "rendered": "\n/** Identifier of the driver. */\n driverId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/c2c/v4/health": {
@@ -791,7 +1008,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/events/v3": {
@@ -1011,7 +1233,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/geofence-associations/v2/health": {
@@ -1042,7 +1269,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": "\n/** Geofence ID */\n geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/geofence-associations/v2/{geofenceId}/{trackingId}": {
@@ -1057,7 +1289,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": "\n/** Geofence ID */\n geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/geofence-associations/v2/{geofenceId}/{trackingId}": {
@@ -1072,7 +1313,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": " geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/geofences/v2": {
@@ -1177,7 +1427,12 @@
   "delete__/geofences/v2/{geofenceId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": "\n/** ID of the geofence */\n geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/geofences/v2/{geofenceId}": {
@@ -1196,19 +1451,34 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": " geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/geofences/v2/{geofenceId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": " geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/geofences/v2/{geofenceId}/poiTraining": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": "\n/** ID of the geofence */\n geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/labels/v4/health": {
@@ -1255,7 +1525,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/labels/v4/{resourceType}/keys": {
@@ -1270,7 +1545,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/labels/v4/{resourceType}/keys/{key}/values": {
@@ -1285,7 +1565,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The label key. */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/labels/v4/{resourceType}/{resourceId}": {
@@ -1300,7 +1589,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceId": {
+        "rendered": "\n/** The resource ID, for example `trackingId`, `externalId`, `geofenceId`, etc. */\n resourceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/labels/v4/{resourceType}/{resourceId}": {
@@ -1323,7 +1621,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": " resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceId": {
+        "rendered": " resourceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/labels/v4/{resourceType}/{resourceId}/batch": {
@@ -1338,7 +1645,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceId": {
+        "rendered": "\n/** The resource ID, for example `trackingId`, `externalId`, `geofenceId`, etc. */\n resourceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/labels/v4/{resourceType}/{resourceId}/{key}": {
@@ -1353,7 +1669,20 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceId": {
+        "rendered": "\n/** The resource ID, for example `trackingId`, `externalId`, `geofenceId`, etc. */\n resourceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The label key. */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/labels/v4/{resourceType}/{resourceId}/{key}/{value}": {
@@ -1368,7 +1697,24 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceId": {
+        "rendered": "\n/** The resource ID, for example `trackingId`, `externalId`, `geofenceId`, etc. */\n resourceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The label key. */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".value": {
+        "rendered": "\n/** The label value. */\n value: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/labels/v4/{resourceType}/{resourceId}/{key}/{value}": {
@@ -1383,7 +1729,24 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": " resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceId": {
+        "rendered": " resourceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": " key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".value": {
+        "rendered": " value: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/largedata/v4": {
@@ -1408,7 +1771,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/largedata/v4/health": {
@@ -1426,7 +1794,12 @@
   "delete__/largedata/v4/{dataId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dataId": {
+        "rendered": "\n/** Large data object identifier */\n dataId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/largedata/v4/{dataId}": {
@@ -1441,7 +1814,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".dataId": {
+        "rendered": "\n/** Large data object identifier */\n dataId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/largedata/v4/{dataId}/data": {
@@ -1460,13 +1838,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".dataId": {
+        "rendered": "\n/** Large data object identifier */\n dataId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/largedata/v4/{dataId}/metadata": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".dataId": {
+        "rendered": "\n/** Large data object identifier */\n dataId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/largedata/v4/{dataId}/parts": {
@@ -1485,7 +1873,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".dataId": {
+        "rendered": "\n/** Large data object identifier */\n dataId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/largedata/v4/{dataId}/parts/{partNumber}": {
@@ -1500,7 +1893,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".dataId": {
+        "rendered": "\n/** Large data object identifier */\n dataId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".partNumber": {
+        "rendered": "\n/** Part number for a large data object */\n partNumber: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/locations/v4": {
@@ -1611,19 +2013,34 @@
   "delete__/locations/v4/{locationId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".locationId": {
+        "rendered": "\n/** Location ID */\n locationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/locations/v4/{locationId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".locationId": {
+        "rendered": " locationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/locations/v4/{locationId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".locationId": {
+        "rendered": " locationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/metadata/v2/devices/batch": {
@@ -1657,7 +2074,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/metadata/v2/devices/{trackingId}": {
@@ -1672,7 +2094,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/metadata/v2/devices/{trackingId}": {
@@ -1687,7 +2114,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/metadata/v2/geofences/batch": {
@@ -1712,19 +2144,34 @@
   "delete__/metadata/v2/geofences/{geofenceId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": "\n/** Geofence ID */\n geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/metadata/v2/geofences/{geofenceId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": " geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/metadata/v2/geofences/{geofenceId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".geofenceId": {
+        "rendered": " geofenceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/metadata/v2/health": {
@@ -1755,19 +2202,34 @@
   "delete__/metadata/v2/sensorRules/{sensorRuleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/metadata/v2/sensorRules/{sensorRuleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/metadata/v2/sensorRules/{sensorRuleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/metadata/v2/version": {
@@ -1785,19 +2247,34 @@
   "delete__/notifications/v3/registration/{channelId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n channelId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/notifications/v3/registration/{channelId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n channelId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/notifications/v3/registration/{channelId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".channelId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n channelId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/notifications/v3/registrations": {
@@ -1891,7 +2368,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".deviceOrExternalId": {
+        "rendered": "\n/** Device ID of a provisioned device */\n deviceOrExternalId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/registry/v2/devices/{deviceOrExternalId}": {
@@ -1906,7 +2388,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".deviceOrExternalId": {
+        "rendered": "\n/** Device ID of a provisioned device */\n deviceOrExternalId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/registry/v2/devices/{deviceOrExternalId}": {
@@ -1925,7 +2412,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".deviceOrExternalId": {
+        "rendered": "\n/** Device ID of a provisioned device */\n deviceOrExternalId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/registry/v2/health": {
@@ -1983,7 +2475,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".appId": {
+        "rendered": "\n/** Project appId of the user's project */\n appId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/registry/v2/{appId}/devices": {
@@ -1998,13 +2495,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".appId": {
+        "rendered": "\n/** Project appId of the user's project */\n appId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/registry/v2/{appId}/licenseCount": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".appId": {
+        "rendered": "\n/** Project appId of the user's project */\n appId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/registry/v2/{appId}/one-device": {
@@ -2019,7 +2526,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".appId": {
+        "rendered": "\n/** Project appId of the user's project */\n appId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/registry/v2/{jobId}/results": {
@@ -2038,13 +2550,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".jobId": {
+        "rendered": "\n/** An asynchronous job ID. UUID v.4.0. */\n jobId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/registry/v2/{jobId}/status": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".jobId": {
+        "rendered": "\n/** An asynchronous job ID. UUID v.4.0. */\n jobId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/registry/v2/{trackingId}": {
@@ -2059,7 +2581,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/registry/v2/{trackingId}": {
@@ -2074,7 +2601,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/registry/v4/resources/{resourceType}/find": {
@@ -2097,7 +2629,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resourceType": {
+        "rendered": "\n/** The resource type, for example \"device\", \"geofence\". */\n resourceType: \"device\" | \"geofence\" | \"location\" | \"rule\" | \"sensorRule\" | \"shipment\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/reports/v4": {
@@ -2175,7 +2712,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".reportId": {
+        "rendered": "\n/** Report ID */\n reportId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/rules/v4": {
@@ -2246,19 +2788,34 @@
   "delete__/rules/v4/{ruleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ruleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n ruleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rules/v4/{ruleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ruleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n ruleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rules/v4/{ruleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".ruleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n ruleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/sensors/v3": {
@@ -2329,19 +2886,34 @@
   "delete__/sensors/v3/{sensorRuleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/sensors/v3/{sensorRuleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/sensors/v3/{sensorRuleId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".sensorRuleId": {
+        "rendered": "\n/** Must be a valid UUIDv4.\n */\n sensorRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/shadows/v2/batch": {
@@ -2395,7 +2967,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shadows/v2/{trackingId}": {
@@ -2410,7 +2987,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/shadows/v2/{trackingId}": {
@@ -2425,7 +3007,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shadows/v2/{trackingId}/{state}": {
@@ -2440,7 +3027,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".state": {
+        "rendered": "\n/** Desired or reported state object of a device to query. */\n state: \"desired\" | \"reported\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shadows/v2/{trackingId}/{state}/{selector}": {
@@ -2455,7 +3051,20 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".state": {
+        "rendered": "\n/** Desired or reported state object of a device to query. */\n state: \"desired\" | \"reported\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".selector": {
+        "rendered": "\n/** A JSON selector that specifies the property. */\n selector: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shadows/v4": {
@@ -2527,13 +3136,23 @@
   "get__/shipment-reports/v4/{shipmentReportId}/status": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentReportId": {
+        "rendered": "\n/** Shipment report ID */\n shipmentReportId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipment-reports/v4/{shipmentReportId}/summary": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentReportId": {
+        "rendered": "\n/** Shipment report ID */\n shipmentReportId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipment-reports/v4/{shipmentReportId}/{metric}": {
@@ -2556,7 +3175,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".metric": {
+        "rendered": "\n/** Metric for which results to include in the response.\n */\n metric: \"shipmentPlanPunctualityAtOrigin\" | \"shipmentPlanPunctualityAtDestination\" | \"segmentPlanPunctualityAtOrigin\" | \"segmentPlanPunctualityAtDestination\" | \"shipmentPunctualityAtOrigin\" | \"shipmentPunctualityAtDestination\" | \"segmentPunctualityAtOrigin\" | \"segmentPunctualityAtDestination\" | \"locationDwelling\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".shipmentReportId": {
+        "rendered": "\n/** Shipment report ID */\n shipmentReportId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/shipments/v4": {
@@ -2750,31 +3378,64 @@
   "delete__/shipments/v4/plans/{shipmentPlanId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentPlanId": {
+        "rendered": "\n/** Shipment plan ID */\n shipmentPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipments/v4/plans/{shipmentPlanId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentPlanId": {
+        "rendered": "\n/** Shipment plan ID */\n shipmentPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/shipments/v4/plans/{shipmentPlanId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentPlanId": {
+        "rendered": "\n/** Shipment plan ID */\n shipmentPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipments/v4/plans/{shipmentPlanId}/{segmentPlanId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentPlanId": {
+        "rendered": "\n/** Shipment plan ID */\n shipmentPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".segmentPlanId": {
+        "rendered": "\n/** Segment plan ID */\n segmentPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/shipments/v4/plans/{shipmentPlanId}/{segmentPlanId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentPlanId": {
+        "rendered": "\n/** Shipment plan ID */\n shipmentPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".segmentPlanId": {
+        "rendered": "\n/** Segment plan ID */\n segmentPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipments/v4/version": {
@@ -2786,31 +3447,64 @@
   "delete__/shipments/v4/{shipmentId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentId": {
+        "rendered": "\n/** Shipment ID */\n shipmentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipments/v4/{shipmentId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentId": {
+        "rendered": "\n/** Shipment ID */\n shipmentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/shipments/v4/{shipmentId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentId": {
+        "rendered": "\n/** Shipment ID */\n shipmentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipments/v4/{shipmentId}/{segmentId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentId": {
+        "rendered": "\n/** Shipment ID */\n shipmentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".segmentId": {
+        "rendered": "\n/** Segment ID */\n segmentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/shipments/v4/{shipmentId}/{segmentId}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shipmentId": {
+        "rendered": "\n/** Shipment ID */\n shipmentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".segmentId": {
+        "rendered": "\n/** Segment ID */\n segmentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/shipments/v4/{trackingId}/segments": {
@@ -2833,7 +3527,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/traces/v2/health": {
@@ -2860,7 +3559,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/traces/v2/{trackingId}": {
@@ -2903,7 +3607,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. Alternatively, a valid `shipmentId` may be used. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/transitions/v2/devices/{trackingId}": {
@@ -2934,7 +3643,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".trackingId": {
+        "rendered": "\n/** This is a unique ID associated with the device data in HERE Tracking. For physical devices the `trackingId` gets assigned to a device when the device is claimed by a user, and for virtual devices it is an external device ID along with the device project `appId`. */\n trackingId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/transitions/v2/health": {

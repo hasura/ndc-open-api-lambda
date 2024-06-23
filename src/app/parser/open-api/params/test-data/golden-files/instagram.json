@@ -15,7 +15,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".geoId": {
+        "rendered": "\n/** The geography ID. */\n geoId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/locations/search": {
@@ -56,7 +61,12 @@
   "get__/locations/{location-id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".locationId": {
+        "rendered": "\n/** The location ID. */\n locationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/locations/{location-id}/media/recent": {
@@ -83,7 +93,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".locationId": {
+        "rendered": "\n/** The location ID. */\n locationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/media/popular": {
@@ -126,19 +141,34 @@
   "get__/media/shortcode/{shortcode}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".shortcode": {
+        "rendered": "\n/** The short code of the media resource. */\n shortcode: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/media/{media-id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".mediaId": {
+        "rendered": "\n/** The ID of the media resource. */\n mediaId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/media/{media-id}/comments": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".mediaId": {
+        "rendered": "\n/** The ID of the media resource. */\n mediaId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/media/{media-id}/comments": {
@@ -153,31 +183,60 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".mediaId": {
+        "rendered": "\n/** The ID of the media resource. */\n mediaId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/media/{media-id}/comments/{comment-id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".mediaId": {
+        "rendered": "\n/** The ID of the media resource. */\n mediaId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".commentId": {
+        "rendered": "\n/** The ID of the comment entry. */\n commentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "delete__/media/{media-id}/likes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".mediaId": {
+        "rendered": "\n/** The ID of the media resource. */\n mediaId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/media/{media-id}/likes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".mediaId": {
+        "rendered": "\n/** The ID of the media resource. */\n mediaId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/media/{media-id}/likes": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".mediaId": {
+        "rendered": "\n/** The ID of the media resource. */\n mediaId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/tags/search": {
@@ -198,7 +257,12 @@
   "get__/tags/{tag-name}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".tagName": {
+        "rendered": "\n/** The tag name. */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/tags/{tag-name}/media/recent": {
@@ -221,7 +285,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".tagName": {
+        "rendered": "\n/** The tag name. */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/search": {
@@ -294,19 +363,34 @@
   "get__/users/{user-id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of a user to get information about, or **self** to retrieve information about authenticated user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user-id}/followed-by": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of a user, or **self** to retrieve information about authenticated user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user-id}/follows": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of a user, or **self** to retrieve information about authenticated user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user-id}/media/recent": {
@@ -337,13 +421,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of a user to get recent media of, or **self** to retrieve media of authenticated user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/users/{user-id}/relationship": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of a user to get information about. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/users/{user-id}/relationship": {
@@ -358,7 +452,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of the target user. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

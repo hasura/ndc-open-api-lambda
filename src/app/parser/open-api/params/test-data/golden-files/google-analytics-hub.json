@@ -51,7 +51,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** Required. Resource name of the listing to delete. e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`. */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/{name}": {
@@ -106,7 +111,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** Required. The resource name of the listing. e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`. */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "patch__/v1/{name}": {
@@ -165,7 +175,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** Output only. The resource name of the listing. e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456` */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/{name}:subscribe": {
@@ -220,7 +235,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** Required. Resource name of the listing that you want to subscribe to. e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`. */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribe": {
+        "rendered": " subscribe: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/{organization}/dataExchanges": {
@@ -283,7 +307,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".organization": {
+        "rendered": "\n/** Required. The organization resource path of the projects containing DataExchanges. e.g. `organizations/myorg/locations/US`. */\n organization: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/{parent}/dataExchanges": {
@@ -346,7 +375,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".parent": {
+        "rendered": "\n/** Required. The parent resource path of the data exchanges. e.g. `projects/myproject/locations/US`. */\n parent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/{parent}/dataExchanges": {
@@ -405,7 +439,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".parent": {
+        "rendered": "\n/** Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/US`. */\n parent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/v1/{parent}/listings": {
@@ -468,7 +507,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".parent": {
+        "rendered": "\n/** Required. The parent resource path of the listing. e.g. `projects/myproject/locations/US/dataExchanges/123`. */\n parent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/{parent}/listings": {
@@ -527,7 +571,12 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".parent": {
+        "rendered": "\n/** Required. The parent resource path of the listing. e.g. `projects/myproject/locations/US/dataExchanges/123`. */\n parent: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/{resource}:getIamPolicy": {
@@ -582,7 +631,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resource": {
+        "rendered": "\n/** REQUIRED: The resource for which the policy is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field. */\n resource: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".getIamPolicy": {
+        "rendered": " getIamPolicy: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/{resource}:setIamPolicy": {
@@ -637,7 +695,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resource": {
+        "rendered": "\n/** REQUIRED: The resource for which the policy is being specified. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field. */\n resource: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".setIamPolicy": {
+        "rendered": " setIamPolicy: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/v1/{resource}:testIamPermissions": {
@@ -692,7 +759,16 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".resource": {
+        "rendered": "\n/** REQUIRED: The resource for which the policy detail is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field. */\n resource: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".testIamPermissions": {
+        "rendered": " testIamPermissions: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

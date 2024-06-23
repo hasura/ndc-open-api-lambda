@@ -105,29 +105,59 @@
     "response": {}
   },
   "post__/rides": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "get__/rides/{id}": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/rides/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the ride */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
   "post__/rides/{id}/cancel": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the ride */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rides/{id}/destination": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the ride */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/rides/{id}/rating": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the ride */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/rides/{id}/receipt": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the ride */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/ridetypes": {
@@ -162,7 +192,12 @@
   "put__/sandbox/rides/{id}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the ride */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "put__/sandbox/ridetypes": {
@@ -174,7 +209,12 @@
   "put__/sandbox/ridetypes/{ride_type}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".rideType": {
+        "rendered": " rideType: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   }
 }

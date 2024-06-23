@@ -11,13 +11,23 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".path": {
+        "rendered": "\n/** The media `identifier`\n */\n path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/id/{identifier}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".identifier": {
+        "rendered": "\n/** The identifier path of the `subject` you're looking for\n */\n identifier: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/search/{index}/{operation}": {
@@ -32,13 +42,31 @@
       }
     },
     "body": {},
-    "path": {},
+    "path": {
+      ".index": {
+        "rendered": "\n/** search index name\nPossible values:\n* `collectionsonline`\n* `cenotaph`\n */\n index: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".operation": {
+        "rendered": "\n/** One of the supported elasticsearch operations like `_search` or `_suggest` */\n operation: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "post__/search/{index}/{operation}": {
     "query": {},
     "body": {},
-    "path": {},
+    "path": {
+      ".index": {
+        "rendered": "\n/** search index name\nPossible values:\n* `collectionsonline`\n* `cenotaph`\n */\n index: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".operation": {
+        "rendered": "\n/** One of the supported elasticsearch operations like `_search` or `_suggest` */\n operation: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "response": {}
   },
   "get__/sparql": {
