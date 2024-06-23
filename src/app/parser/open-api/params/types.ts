@@ -60,13 +60,12 @@ enum ArrayTypeEnum {
 
 export type SchemaTypeRef = BaseSchema & {
   $ref: string;
-  $parsed:
+  schema:
     | {
-        type: string; // this is *NOT* the actual data type.
-        name: string | undefined; // the actual data type of the object/ref
-        content: string | undefined; // the actual data type of the object/ref
+        $parsed: $Parsed | undefined;
       }
     | undefined;
+  $parsed: $Parsed | undefined;
 };
 
 export type SchemaTypeObject = BaseSchema & {
@@ -104,6 +103,12 @@ export type SchemaTypeAnyOf = BaseSchema & {
 
 export type SchemaTypeAllOf = BaseSchema & {
   allOf: Schema[];
+};
+
+export type $Parsed = {
+  type: string; // this is *NOT* the actual data type.
+  name: string | undefined; // the actual data type of the object/ref
+  content: string | undefined; // the actual data type of the object/ref
 };
 
 export function schemaIsTypeRef(schema: any): schema is SchemaTypeRef {
@@ -217,4 +222,15 @@ export function getSchemaTypeAnyOfChildren(schema: SchemaTypeAnyOf): Schema[] {
 
 export function getSchemaTypeAllOfChildren(schema: SchemaTypeAllOf): Schema[] {
   return schema.allOf;
+}
+
+export function getParsedSchemaForSchemaTypeRef(
+  schema: SchemaTypeRef,
+): $Parsed | undefined {
+  if (schema.$parsed) {
+    return schema.$parsed;
+  } else if (schema.schema?.$parsed) {
+    return schema.schema.$parsed;
+  }
+  return undefined;
 }

@@ -146,13 +146,14 @@ export function renderRefTypeSchema(schema: types.SchemaTypeRef): string {
   // TODO: add schema store reference
   // console.log("\n\nrender ref type schema:", cj.stringify(schema));
   let paramType = "";
+  const parsedSchema = types.getParsedSchemaForSchemaTypeRef(schema);
   if (!schema.$parsed) {
     // console.log('schema.$parsed does not exist: ');
   }
-  if (schema.$parsed && schema.$parsed.name) {
-    paramType = schema.$parsed.name;
-  } else if (schema.$parsed && schema.$parsed.content) {
-    paramType = schema.$parsed.content;
+  if (parsedSchema && parsedSchema.name) {
+    paramType = parsedSchema.name;
+  } else if (parsedSchema && parsedSchema.content) {
+    paramType = parsedSchema.content;
   } else {
     const splitRef = schema.$ref.split("/");
     paramType = splitRef[splitRef.length - 1]!;
