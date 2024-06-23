@@ -20,10 +20,7 @@ export function renderParams(schema: types.Schema): types.Schema {
   } else if (types.schemaIsTypeAllOf(schema)) {
     rendered = renderAllOfTypeSchema(schema);
   } else {
-    const error = new Error(
-      `Cannot resolve parameter schema: ${JSON.stringify(schema)}`,
-    );
-    logger.error(error);
+    logger.error(`Cannot resolve parameter schema: ${JSON.stringify(schema)}`);
   }
   schema._$rendered = rendered ?? "";
   return schema;
@@ -162,7 +159,10 @@ export function renderAnyOfTypeSchema(schema: types.SchemaTypeAnyOf): string {
 export function renderAllOfTypeSchema(schema: types.SchemaTypeAllOf): string {
   const renderedProperties: string[] = [];
   for (const property of types.getSchemaTypeAllOfChildren(schema)) {
-    renderedProperties.push(renderParams(property)._$rendered!);
+    renderParams(property);
+    if (property._$rendered!.length > 0) {
+      renderedProperties.push(property._$rendered!);
+    }
   }
   const paramType = renderedProperties.join(" & ");
   return renderSchema(paramType, schema);
