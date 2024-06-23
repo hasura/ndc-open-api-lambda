@@ -1,0 +1,863 @@
+{
+  "post__/action": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/action/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/action/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/bundle": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/bundle/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/bundle/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/calendar_event": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Patient id to fetch calendar event. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[organization]\"?: string, \n/** Comma-separated list of coach or patient ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[attendees]\"?: string, \n/** Calendar event type */\n \"filter[type]\"?: \"plan-check-in\" | \"reminder\" | \"telephone-call\" | \"office-visit\" | \"video-call\", \n/** If not specified, return all calendar events. If set to `true` return only events marked as completed, if set to `false`, return only events not marked as completed yet. */\n \"filter[completed]\"?: boolean, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events starting in November 2017 (America/New_York): `filter[start_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[start_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events ending in November 2017 (America/New_York): `filter[end_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[end_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events completed in November 2017 (America/New_York): `filter[completed_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[completed_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[cursor]\"?: string, \n/** List of related resources to include in the response */\n include?: \"owner\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient id to fetch calendar event. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[attendees]": {
+        "rendered": "\n/** Comma-separated list of coach or patient ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[attendees]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[type]": {
+        "rendered": "\n/** Calendar event type */\n \"filter[type]\"?: \"plan-check-in\" | \"reminder\" | \"telephone-call\" | \"office-visit\" | \"video-call\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[completed]": {
+        "rendered": "\n/** If not specified, return all calendar events. If set to `true` return only events marked as completed, if set to `false`, return only events not marked as completed yet. */\n \"filter[completed]\"?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[start_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events starting in November 2017 (America/New_York): `filter[start_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[start_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[end_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events ending in November 2017 (America/New_York): `filter[end_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[end_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[completed_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events completed in November 2017 (America/New_York): `filter[completed_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[completed_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[created_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[updated_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[number]": {
+        "rendered": "\n/** Page number */\n \"page[number]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[size]": {
+        "rendered": "\n/** Page size */\n \"page[size]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[limit]": {
+        "rendered": "\n/** Page limit */\n \"page[limit]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[cursor]": {
+        "rendered": "\n/** Page cursor */\n \"page[cursor]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"owner\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/calendar_event": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/calendar_event/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/calendar_event/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/calendar_event/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/calendar_event_response": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/coach": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/coach/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/email_history": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Fitbit Plus user id of email recipient. Required if filter[sender] is not defined. */\n \"filter[receiver]\"?: string, \n/** Fitbit Plus user id of email sender. Required if filter[receiver] is not defined. */\n \"filter[sender]\"?: string, \n/** Type of email */\n \"filter[emailType]\"?: string, \n/** valid sorts:\n  * send_time - ascending by send_time\n  * -send_time - descending by send_time\n */\n sort?: \"send_time\" | \"-send_time\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[receiver]": {
+        "rendered": "\n/** Fitbit Plus user id of email recipient. Required if filter[sender] is not defined. */\n \"filter[receiver]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[sender]": {
+        "rendered": "\n/** Fitbit Plus user id of email sender. Required if filter[receiver] is not defined. */\n \"filter[sender]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[emailType]": {
+        "rendered": "\n/** Type of email */\n \"filter[emailType]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** valid sorts:\n  * send_time - ascending by send_time\n  * -send_time - descending by send_time\n */\n sort?: \"send_time\" | \"-send_time\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/email_history/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/group": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Organization identifier */\n \"filter[organization]\": string, \n/** Group name */\n \"filter[name]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Organization identifier */\n \"filter[organization]\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[name]": {
+        "rendered": "\n/** Group name */\n \"filter[name]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/group": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/group/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_profile": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Patient id to fetch health profile. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[cursor]\"?: string, \n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient id to fetch health profile. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[number]": {
+        "rendered": "\n/** Page number */\n \"page[number]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[size]": {
+        "rendered": "\n/** Page size */\n \"page[size]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[limit]": {
+        "rendered": "\n/** Page limit */\n \"page[limit]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[cursor]": {
+        "rendered": "\n/** Page cursor */\n \"page[cursor]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_profile/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_profile_answer": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Patient id to fetch healt profile answers. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[cursor]\"?: string, \n/** List of related resources to include in the response */\n include?: \"patient\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient id to fetch healt profile answers. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[number]": {
+        "rendered": "\n/** Page number */\n \"page[number]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[size]": {
+        "rendered": "\n/** Page size */\n \"page[size]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[limit]": {
+        "rendered": "\n/** Page limit */\n \"page[limit]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[cursor]": {
+        "rendered": "\n/** Page cursor */\n \"page[cursor]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"patient\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_profile_answer/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"patient\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"patient\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_profile_question": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Patient id to fetch healt profile questions. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient id to fetch healt profile questions. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_profile_question/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_question_definition": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/health_question_definition/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/oauth/token": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"groups\" | \"organization\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"groups\" | \"organization\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/oauth/token/{id}/groups": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/oauth/token/{id}/organization": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/organization/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Comma-separated list of group ids. Note that either `filter[group]` or `filter[organization]` must be specified. */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that either `filter[group]` or `filter[organization]` must be specified. */\n \"filter[organization]\"?: string, \n/** Identifier system (example: \"MyEHR\") - requires a \"filter[identifier][value]\" parameter */\n \"filter[identifier][system]\"?: string, \n/** Identifier value (example: \"12345\") - requires a \"filter[identifier][system]\" parameter */\n \"filter[identifier][value]\"?: string, \n/** If not specified, return all patients. If set to 'true' return only archived patients, if set to 'false', return only patients who are not archived. */\n \"filter[archived]\"?: boolean, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for patients created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for patients updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[cursor]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that either `filter[group]` or `filter[organization]` must be specified. */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that either `filter[group]` or `filter[organization]` must be specified. */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[identifier][system]": {
+        "rendered": "\n/** Identifier system (example: \"MyEHR\") - requires a \"filter[identifier][value]\" parameter */\n \"filter[identifier][system]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[identifier][value]": {
+        "rendered": "\n/** Identifier value (example: \"12345\") - requires a \"filter[identifier][system]\" parameter */\n \"filter[identifier][value]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[archived]": {
+        "rendered": "\n/** If not specified, return all patients. If set to 'true' return only archived patients, if set to 'false', return only patients who are not archived. */\n \"filter[archived]\"?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[created_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for patients created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[updated_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for patients updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[number]": {
+        "rendered": "\n/** Page number */\n \"page[number]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[size]": {
+        "rendered": "\n/** Page size */\n \"page[size]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[limit]": {
+        "rendered": "\n/** Page limit */\n \"page[limit]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[cursor]": {
+        "rendered": "\n/** Page cursor */\n \"page[cursor]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/patient": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/patient": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/patient/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient/{id}/coaches": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient/{id}/groups": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient_health_metric": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Filter the patient health metrics for a specified patient. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[cursor]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Filter the patient health metrics for a specified patient. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[number]": {
+        "rendered": "\n/** Page number */\n \"page[number]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[size]": {
+        "rendered": "\n/** Page size */\n \"page[size]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[limit]": {
+        "rendered": "\n/** Page limit */\n \"page[limit]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[cursor]": {
+        "rendered": "\n/** Page cursor */\n \"page[cursor]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/patient_health_metric": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient_health_metric/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient_plan_summary": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Patient id to fetch plan summary for. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient id to fetch plan summary for. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/patient_plan_summary/{id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.include": {
+        "rendered": "\n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/patient_plan_summary/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/result": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Filter the patient health results for a specified patient */\n \"filter[patient]\": string, \n/** A comma-separated list of action identifiers */\n \"filter[actions]\"?: string, \n/** Filter results that occurred after the passed ISO date and time string */\n \"filter[start_at]\"?: string, \n/** Filter results that occurred before the passed ISO date and time string */\n \"filter[end_at]\"?: string, \n/** A comma-separated list of thread identifiers */\n \"filter[threads]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[after]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Filter the patient health results for a specified patient */\n \"filter[patient]\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[actions]": {
+        "rendered": "\n/** A comma-separated list of action identifiers */\n \"filter[actions]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[start_at]": {
+        "rendered": "\n/** Filter results that occurred after the passed ISO date and time string */\n \"filter[start_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[end_at]": {
+        "rendered": "\n/** Filter results that occurred before the passed ISO date and time string */\n \"filter[end_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[threads]": {
+        "rendered": "\n/** A comma-separated list of thread identifiers */\n \"filter[threads]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[created_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[updated_at]": {
+        "rendered": "\n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[number]": {
+        "rendered": "\n/** Page number */\n \"page[number]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[size]": {
+        "rendered": "\n/** Page size */\n \"page[size]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[limit]": {
+        "rendered": "\n/** Page limit */\n \"page[limit]\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page[after]": {
+        "rendered": "\n/** Page cursor */\n \"page[after]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/result/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Patient identifier. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Reward program activation identifier */\n \"filter[reward_program_activation]\"?: string, \n/** Thread identifier */\n \"filter[thread]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient identifier. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[reward_program_activation]": {
+        "rendered": "\n/** Reward program activation identifier */\n \"filter[reward_program_activation]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[thread]": {
+        "rendered": "\n/** Thread identifier */\n \"filter[thread]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reward": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_earning": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Group identifiers */\n \"filter[groups]\": string, \n/** Patient identifier */\n \"filter[patient]\": string, \n/** If true, only returns those reward earnings for which ready_for_fulfillment is true and fulfilled_at is null. If false, only returns those reward earnings for which ready_for_fulfillment is false and fulfilled_at is null. */\n \"filter[ready_for_fulfillment]\"?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Group identifiers */\n \"filter[groups]\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient identifier */\n \"filter[patient]\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[ready_for_fulfillment]": {
+        "rendered": "\n/** If true, only returns those reward earnings for which ready_for_fulfillment is true and fulfilled_at is null. If false, only returns those reward earnings for which ready_for_fulfillment is false and fulfilled_at is null. */\n \"filter[ready_for_fulfillment]\"?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reward_earning": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_earning/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_earning_fulfillment": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Patient identifier */\n \"filter[patient]\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient identifier */\n \"filter[patient]\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reward_earning_fulfillment": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_earning_fulfillment/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_program": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Comma-separated list of group identifiers. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group identifiers. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reward_program": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_program/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_program/{id}/group": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_program_activation": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Patient identifier. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[patient]": {
+        "rendered": "\n/** Patient identifier. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[groups]": {
+        "rendered": "\n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter[organization]": {
+        "rendered": "\n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reward_program_activation": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/reward_program_activation/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

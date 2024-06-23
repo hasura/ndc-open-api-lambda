@@ -1,0 +1,3990 @@
+{
+  "get__/": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return an OpenAPI specification. */\n openapi?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.openapi": {
+        "rendered": "\n/** Return an OpenAPI specification. */\n openapi?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/categories": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"last_video_featured_time\" | \"name\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"last_video_featured_time\" | \"name\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/categories/{category}/channels": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/categories/{category}/groups": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/categories/{category}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `conditional_featured` - Featured (promoted) videos\n */\n filter?: \"conditional_featured\" | \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"featured\" | \"likes\" | \"plays\" | \"relevant\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `conditional_featured` - Featured (promoted) videos\n */\n filter?: \"conditional_featured\" | \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"featured\" | \"likes\" | \"plays\" | \"relevant\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/categories/{category}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"featured\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"featured\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/channels": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/categories": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/categories": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}/moderators": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/moderators": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/channels/{channel_id}/moderators": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/moderators": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}/moderators/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/moderators/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/moderators/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/privacy/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/privacy/users": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}/privacy/users/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/privacy/users/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/tags": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/tags": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}/tags/{word}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/tags/{word}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/tags/{word}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/users": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter: \"moderators\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter: \"moderators\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}/videos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page that contains the video URI. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.containing_uri": {
+        "rendered": "\n/** The page that contains the video URI. */\n containing_uri?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/videos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/channels/{channel_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos/{video_id}/comments": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/channels/{channel_id}/videos/{video_id}/comments": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos/{video_id}/credits": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/channels/{channel_id}/videos/{video_id}/credits": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos/{video_id}/likes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos/{video_id}/pictures": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/channels/{channel_id}/videos/{video_id}/pictures": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos/{video_id}/privacy/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/channels/{channel_id}/videos/{video_id}/privacy/users": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/channels/{channel_id}/videos/{video_id}/texttracks": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/channels/{channel_id}/videos/{video_id}/texttracks": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/contentratings": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/creativecommons": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/groups": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"featured\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"featured\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/groups": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/groups/{group_id}/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderators\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderators\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/groups/{group_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/groups/{group_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/groups/{group_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/groups/{group_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/languages": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `texttracks` - Only return text track supported languages\n */\n filter?: \"texttracks\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `texttracks` - Only return text track supported languages\n */\n filter?: \"texttracks\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/me": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/albums": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/albums": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/albums/{album_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/albums/{album_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/me/albums/{album_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/albums/{album_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page containing the video URI. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The password of the album. */\n password?: string, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\", \n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.containing_uri": {
+        "rendered": "\n/** The page containing the video URI. */\n containing_uri?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.password": {
+        "rendered": "\n/** The password of the album. */\n password?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.weak_search": {
+        "rendered": "\n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/albums/{album_id}/videos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/albums/{album_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/albums/{album_id}/videos/{video_id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The password of the album. */\n password?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.password": {
+        "rendered": "\n/** The password of the album. */\n password?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/albums/{album_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/albums/{album_id}/videos/{video_id}/set_album_thumbnail": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/appearances": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/categories": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/channels": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/customlogos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/customlogos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/customlogos/{logo_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/feed": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.offset": {
+        "rendered": "\n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.type": {
+        "rendered": "\n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/followers": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/following": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"online\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"online\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/following": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/following/{follow_user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/following/{follow_user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/following/{follow_user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/groups": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/likes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/likes/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/likes/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/likes/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/ondemand/pages": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/ondemand/pages": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/ondemand/purchases": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The type of On Demand videos to show.\n\nOption descriptions:\n * `important` - Will show all pages which are about to expire.\n */\n filter?: \"all\" | \"expiring_soon\" | \"film\" | \"important\" | \"purchased\" | \"rented\" | \"series\" | \"subscription\" | \"unwatched\" | \"watched\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"name\" | \"purchase_time\" | \"rating\" | \"release_date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The type of On Demand videos to show.\n\nOption descriptions:\n * `important` - Will show all pages which are about to expire.\n */\n filter?: \"all\" | \"expiring_soon\" | \"film\" | \"important\" | \"purchased\" | \"rented\" | \"series\" | \"subscription\" | \"unwatched\" | \"watched\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"name\" | \"purchase_time\" | \"rating\" | \"release_date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/ondemand/purchases/{ondemand_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/pictures": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/pictures": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/pictures/{portraitset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/pictures/{portraitset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/me/pictures/{portraitset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/portfolios": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/portfolios/{portfolio_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/portfolios/{portfolio_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page that contains the video URI. */\n containing_uri?: string, \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.containing_uri": {
+        "rendered": "\n/** The page that contains the video URI. */\n containing_uri?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/portfolios/{portfolio_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/portfolios/{portfolio_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/portfolios/{portfolio_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/presets": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/presets/{preset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/me/presets/{preset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/presets/{preset_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/projects": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/projects": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/projects/{project_id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Whether to delete all the videos in the project along with the project itself. */\n should_delete_clips?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.should_delete_clips": {
+        "rendered": "\n/** Whether to delete all the videos in the project along with the project itself. */\n should_delete_clips?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/projects/{project_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/me/projects/{project_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/projects/{project_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean, \n/** A comma-separated list of the video URIs to remove. */\n uris: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.should_delete_clips": {
+        "rendered": "\n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.uris": {
+        "rendered": "\n/** A comma-separated list of the video URIs to remove. */\n uris: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/projects/{project_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/projects/{project_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** A comma-separated list of video URIs to add. */\n uris: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.uris": {
+        "rendered": "\n/** A comma-separated list of video URIs to add. */\n uris: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/projects/{project_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/projects/{project_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** Whether to filter by all playable videos or by all videos that are not  playable. */\n filter_playable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.containing_uri": {
+        "rendered": "\n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_playable": {
+        "rendered": "\n/** Whether to filter by all playable videos or by all videos that are not  playable. */\n filter_playable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/me/videos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/watched/videos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/watched/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/watched/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/watchlater": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/me/watchlater/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/me/watchlater/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/me/watchlater/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/oauth/access_token": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/oauth/authorize/client": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/oauth/authorize/vimeo_oauth1": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/oauth/verify": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/genres": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/genres/{genre_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/genres/{genre_id}/pages": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"country\" | \"my_region\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\" | \"publish.time\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"country\" | \"my_region\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\" | \"publish.time\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/genres/{genre_id}/pages/{ondemand_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/ondemand/pages/{ondemand_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/ondemand/pages/{ondemand_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/backgrounds": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/ondemand/pages/{ondemand_id}/backgrounds": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/ondemand/pages/{ondemand_id}/backgrounds/{background_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/backgrounds/{background_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/ondemand/pages/{ondemand_id}/backgrounds/{background_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/genres": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/ondemand/pages/{ondemand_id}/genres/{genre_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/genres/{genre_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/ondemand/pages/{ondemand_id}/genres/{genre_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/likes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"extra\" | \"main\" | \"trailer\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"extra\" | \"main\" | \"trailer\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/pictures": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/ondemand/pages/{ondemand_id}/pictures": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/pictures/{poster_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/ondemand/pages/{ondemand_id}/pictures/{poster_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/promotions": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The filter to apply to the results. */\n filter: \"batch\" | \"default\" | \"single\" | \"vip\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The filter to apply to the results. */\n filter: \"batch\" | \"default\" | \"single\" | \"vip\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/ondemand/pages/{ondemand_id}/promotions": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/ondemand/pages/{ondemand_id}/promotions/{promotion_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/promotions/{promotion_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/ondemand/pages/{ondemand_id}/regions": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/regions": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/ondemand/pages/{ondemand_id}/regions": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/ondemand/pages/{ondemand_id}/regions/{country}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/regions/{country}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/ondemand/pages/{ondemand_id}/regions/{country}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/seasons": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"viewable\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"manual\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"viewable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"manual\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/seasons/{season_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"viewable\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"viewable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"all\" | \"buy\" | \"expiring_soon\" | \"extra\" | \"main\" | \"main.viewable\" | \"rent\" | \"trailer\" | \"unwatched\" | \"viewable\" | \"watched\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"episode\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"all\" | \"buy\" | \"expiring_soon\" | \"extra\" | \"main\" | \"main.viewable\" | \"rent\" | \"trailer\" | \"unwatched\" | \"viewable\" | \"watched\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"episode\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/ondemand/pages/{ondemand_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/pages/{ondemand_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/ondemand/pages/{ondemand_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/regions": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/ondemand/regions/{country}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/tags/{word}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/tags/{word}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"created_time\" | \"duration\" | \"name\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"created_time\" | \"duration\" | \"name\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/tokens": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/users/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/albums": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/albums/{album_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums/{album_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/users/{user_id}/albums/{album_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums/{album_id}/custom_thumbnails": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/albums/{album_id}/custom_thumbnails": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums/{album_id}/logos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/albums/{album_id}/logos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/albums/{album_id}/logos/{logo_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums/{album_id}/logos/{logo_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/users/{user_id}/albums/{album_id}/logos/{logo_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums/{album_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page containing the video URI. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The password of the album. */\n password?: string, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\", \n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.containing_uri": {
+        "rendered": "\n/** The page containing the video URI. */\n containing_uri?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.password": {
+        "rendered": "\n/** The password of the album. */\n password?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.weak_search": {
+        "rendered": "\n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/albums/{album_id}/videos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/albums/{album_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/albums/{album_id}/videos/{video_id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The password of the album. */\n password?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.password": {
+        "rendered": "\n/** The password of the album. */\n password?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/albums/{album_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/albums/{album_id}/videos/{video_id}/set_album_thumbnail": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/appearances": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/categories": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/categories/{category}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/channels": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/channels/{channel_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/customlogos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/customlogos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/customlogos/{logo_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/feed": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.offset": {
+        "rendered": "\n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.type": {
+        "rendered": "\n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/followers": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/following": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"online\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"online\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/following": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/following/{follow_user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/following/{follow_user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/following/{follow_user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/groups": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/groups/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/likes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/likes/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/likes/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/likes/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/ondemand/pages": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/ondemand/pages": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/ondemand/purchases": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/pictures": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/pictures": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/pictures/{portraitset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/pictures/{portraitset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/users/{user_id}/pictures/{portraitset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/portfolios": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/portfolios/{portfolio_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/portfolios/{portfolio_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page that contains the video URI. */\n containing_uri?: string, \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.containing_uri": {
+        "rendered": "\n/** The page that contains the video URI. */\n containing_uri?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/presets": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/presets/{preset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/users/{user_id}/presets/{preset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/presets/{preset_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/projects": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/projects": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/projects/{project_id}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Whether to delete all the videos in the project along with the project itself. */\n should_delete_clips?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.should_delete_clips": {
+        "rendered": "\n/** Whether to delete all the videos in the project along with the project itself. */\n should_delete_clips?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/projects/{project_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/users/{user_id}/projects/{project_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/projects/{project_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean, \n/** A comma-separated list of the video URIs to remove. */\n uris: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.should_delete_clips": {
+        "rendered": "\n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.uris": {
+        "rendered": "\n/** A comma-separated list of the video URIs to remove. */\n uris: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/projects/{project_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/projects/{project_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** A comma-separated list of video URIs to add. */\n uris: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.uris": {
+        "rendered": "\n/** A comma-separated list of video URIs to add. */\n uris: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/projects/{project_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/projects/{project_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/uploads/{upload}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The crypto signature of the completed upload. */\n signature: string, \n/** The ID of the uploaded file. */\n video_file_id: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.signature": {
+        "rendered": "\n/** The crypto signature of the completed upload. */\n signature: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.video_file_id": {
+        "rendered": "\n/** The ID of the uploaded file. */\n video_file_id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/uploads/{upload}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** Whether to filter by all playable videos or by all videos that are not  playable. */\n filter_playable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.containing_uri": {
+        "rendered": "\n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_playable": {
+        "rendered": "\n/** Whether to filter by all playable videos or by all videos that are not  playable. */\n filter_playable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/users/{user_id}/videos": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/watchlater": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter_embeddable": {
+        "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/users/{user_id}/watchlater/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/users/{user_id}/watchlater/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/users/{user_id}/watchlater/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. `CC` and related filters target videos with the corresponding Creative Commons licenses. For more information, see our [Creative Commons](https://vimeo.com/creativecommons) page. */\n filter?: \"CC\" | \"CC-BY\" | \"CC-BY-NC\" | \"CC-BY-NC-ND\" | \"CC-BY-NC-SA\" | \"CC-BY-ND\" | \"CC-BY-SA\" | \"CC0\" | \"categories\" | \"duration\" | \"in-progress\" | \"minimum_likes\" | \"trending\" | \"upload_date\", \n/** A comma-separated list of video URLs to find. */\n links?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** Search query. */\n query: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\" | \"relevant\", \n/** The comma-separated list of videos to find. */\n uris?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. `CC` and related filters target videos with the corresponding Creative Commons licenses. For more information, see our [Creative Commons](https://vimeo.com/creativecommons) page. */\n filter?: \"CC\" | \"CC-BY\" | \"CC-BY-NC\" | \"CC-BY-NC-ND\" | \"CC-BY-NC-SA\" | \"CC-BY-ND\" | \"CC-BY-SA\" | \"CC0\" | \"categories\" | \"duration\" | \"in-progress\" | \"minimum_likes\" | \"trending\" | \"upload_date\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.links": {
+        "rendered": "\n/** A comma-separated list of video URLs to find. */\n links?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** Search query. */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\" | \"relevant\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.uris": {
+        "rendered": "\n/** The comma-separated list of videos to find. */\n uris?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/videos/{video_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/available_channels": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/categories": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/videos/{video_id}/categories": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/comments": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/videos/{video_id}/comments": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/comments/{comment_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/comments/{comment_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/videos/{video_id}/comments/{comment_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/comments/{comment_id}/replies": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/videos/{video_id}/comments/{comment_id}/replies": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/credits": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** The search query to use to filter the results. */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/videos/{video_id}/credits": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/credits/{credit_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/credits/{credit_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/videos/{video_id}/credits/{credit_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/likes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.direction": {
+        "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/pictures": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/videos/{video_id}/pictures": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/pictures/{picture_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/pictures/{picture_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/videos/{video_id}/pictures/{picture_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/presets/{preset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/presets/{preset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/videos/{video_id}/presets/{preset_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/privacy/domains": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/privacy/domains/{domain}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/videos/{video_id}/privacy/domains/{domain}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/privacy/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/videos/{video_id}/privacy/users": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/privacy/users/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/videos/{video_id}/privacy/users/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/tags": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/videos/{video_id}/tags": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/tags/{word}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/tags/{word}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/videos/{video_id}/tags/{word}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/texttracks": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/videos/{video_id}/texttracks": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/videos/{video_id}/texttracks/{texttrack_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/texttracks/{texttrack_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/videos/{video_id}/texttracks/{texttrack_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/videos/{video_id}/timelinethumbnails": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/timelinethumbnails/{thumbnail_id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/videos/{video_id}/versions": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/videos/{video_id}/videos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"related\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"related\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page number of the results to show. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}

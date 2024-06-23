@@ -214,6 +214,56 @@ const tests: {
     openApiFile: "nyt-books.json",
     goldenFile: "nyt-books.json",
   },
+  {
+    name: "GitHub",
+    openApiFile: "github.json",
+    goldenFile: "github.json",
+  },
+  {
+    name: "DockerHub",
+    openApiFile: "docker-hub.json",
+    goldenFile: "docker-hub.json",
+  },
+  {
+    name: "DockerDvpData",
+    openApiFile: "docker-dvp-data.json",
+    goldenFile: "docker-dvp-data.json",
+  },
+  {
+    name: "Notion",
+    openApiFile: "notion.json",
+    goldenFile: "notion.json",
+  },
+  {
+    name: "SlackWeb",
+    openApiFile: "slack-web.json",
+    goldenFile: "slack-web.json",
+  },
+  {
+    name: "Snyk",
+    openApiFile: "snyk.json",
+    goldenFile: "snyk.json",
+  },
+  {
+    name: "Stripe",
+    openApiFile: "stripe.json",
+    goldenFile: "stripe.json",
+  },
+  {
+    name: "Trello",
+    openApiFile: "trello.json",
+    goldenFile: "trello.json",
+  },
+  {
+    name: "Fitbit",
+    openApiFile: "fitbit.json",
+    goldenFile: "fitbit.json",
+  },
+  {
+    name: "Vimeo",
+    openApiFile: "vimeo.json",
+    goldenFile: "vimeo.json",
+  },
 ];
 
 describe("param-render", async () => {

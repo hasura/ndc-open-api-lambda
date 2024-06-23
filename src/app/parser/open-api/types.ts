@@ -377,7 +377,9 @@ export function primitiveSchemaPropertiveHasAmbigousType(
   if (property.content) {
     return Object.values(AmbiguousPrimitveTypeEnum).includes(property.content);
   } else if (property.$parsed && property.$parsed.content) {
-    return Object.values(AmbiguousPrimitveTypeEnum).includes(property.$parsed.content);
+    return Object.values(AmbiguousPrimitveTypeEnum).includes(
+      property.$parsed.content,
+    );
   }
 }
 

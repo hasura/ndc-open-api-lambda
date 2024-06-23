@@ -1,0 +1,309 @@
+{
+  "get__/v2/access-tokens": {
+    "query": {
+      ".query": {
+        "rendered": " query: {  page?: number,  page_size?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": " page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page_size": {
+        "rendered": " page_size?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v2/access-tokens": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v2/access-tokens/{uuid}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/access-tokens/{uuid}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "patch__/v2/access-tokens/{uuid}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/auditlogs/{account}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** action name one of [\"repo.tag.push\", ...]. Optional parameter to filter specific audit log actions. */\n action?: string, \n/** name. Optional parameter to filter audit log events to a specific name. For repository events, this is the name of the repository. For organization events, this is the name of the organization. For team member events, this is the username of the team member. */\n name?: string, \n/** actor name. Optional parameter to filter audit log events to the specific user who triggered the event. */\n actor?: string, \n/** Start of the time window you wish to query audit events for. */\n from?: string, \n/** End of the time window you wish to query audit events for. */\n to?: string, \n/** page - specify page number. Page number to get. */\n page?: number, \n/** page_size - specify page size. Number of events to return per page. */\n page_size?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.action": {
+        "rendered": "\n/** action name one of [\"repo.tag.push\", ...]. Optional parameter to filter specific audit log actions. */\n action?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.name": {
+        "rendered": "\n/** name. Optional parameter to filter audit log events to a specific name. For repository events, this is the name of the repository. For organization events, this is the name of the organization. For team member events, this is the username of the team member. */\n name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.actor": {
+        "rendered": "\n/** actor name. Optional parameter to filter audit log events to the specific user who triggered the event. */\n actor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** Start of the time window you wish to query audit events for. */\n from?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** End of the time window you wish to query audit events for. */\n to?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** page - specify page number. Page number to get. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page_size": {
+        "rendered": "\n/** page_size - specify page size. Number of events to return per page. */\n page_size?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/auditlogs/{account}/actions": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v2/namespaces/{namespace}/delete-images": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/namespaces/{namespace}/repositories/{repository}/images": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Filters to only show images of this status. */\n status?: \"active\" | \"inactive\", \n/** Filters to only show images with:\n- `true`: at least 1 current tag.\n- `false`: no current tags.\n */\n currently_tagged?: boolean, \n/** Orders the results by this property.\n\nPrefixing with `-` sorts by descending order.\n */\n ordering?: \"last_activity\" | \"-last_activity\" | \"digest\" | \"-digest\", \n/** Sets the time from which an image must have been pushed or pulled to\nbe counted as active.\n\nDefaults to 1 month before the current time.\n */\n active_from?: string, \n/** Page number to get. Defaults to 1. */\n page?: number, \n/** Number of images to get per page. Defaults to 10. Max of 100. */\n page_size?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.status": {
+        "rendered": "\n/** Filters to only show images of this status. */\n status?: \"active\" | \"inactive\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.currently_tagged": {
+        "rendered": "\n/** Filters to only show images with:\n- `true`: at least 1 current tag.\n- `false`: no current tags.\n */\n currently_tagged?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ordering": {
+        "rendered": "\n/** Orders the results by this property.\n\nPrefixing with `-` sorts by descending order.\n */\n ordering?: \"last_activity\" | \"-last_activity\" | \"digest\" | \"-digest\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.active_from": {
+        "rendered": "\n/** Sets the time from which an image must have been pushed or pulled to\nbe counted as active.\n\nDefaults to 1 month before the current time.\n */\n active_from?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Page number to get. Defaults to 1. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page_size": {
+        "rendered": "\n/** Number of images to get per page. Defaults to 10. Max of 100. */\n page_size?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/namespaces/{namespace}/repositories/{repository}/images-summary": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Sets the time from which an image must have been pushed or pulled to\nbe counted as active.\n\nDefaults to 1 month before the current time.\n */\n active_from?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.active_from": {
+        "rendered": "\n/** Sets the time from which an image must have been pushed or pulled to\nbe counted as active.\n\nDefaults to 1 month before the current time.\n */\n active_from?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/namespaces/{namespace}/repositories/{repository}/images/{digest}/tags": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Page number to get. Defaults to 1. */\n page?: number, \n/** Number of images to get per page. Defaults to 10. Max of 100. */\n page_size?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Page number to get. Defaults to 1. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page_size": {
+        "rendered": "\n/** Number of images to get per page. Defaults to 10. Max of 100. */\n page_size?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/namespaces/{namespace}/repositories/{repository}/tags": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Page number to get. Defaults to 1. */\n page?: number, \n/** Number of items to get per page. Defaults to 10. Max of 100. */\n page_size?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Page number to get. Defaults to 1. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page_size": {
+        "rendered": "\n/** Number of items to get per page. Defaults to 10. Max of 100. */\n page_size?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "head__/v2/namespaces/{namespace}/repositories/{repository}/tags": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "head__/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/orgs/{name}/settings": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/v2/orgs/{name}/settings": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/scim/2.0/ResourceTypes": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/scim/2.0/ResourceTypes/{name}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/scim/2.0/Schemas": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/scim/2.0/Schemas/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/scim/2.0/ServiceProviderConfig": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/scim/2.0/Users": {
+    "query": {
+      ".query": {
+        "rendered": " query: {  startIndex?: number,  count?: number,  filter?: string, \n/** Comma delimited list of attributes to limit to in the response. */\n attributes?: string,  sortOrder?: \"ascending\" | \"descending\", \n/** User attribute to sort by. */\n sortBy?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startIndex": {
+        "rendered": " startIndex?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.count": {
+        "rendered": " count?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filter": {
+        "rendered": " filter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.attributes": {
+        "rendered": "\n/** Comma delimited list of attributes to limit to in the response. */\n attributes?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortOrder": {
+        "rendered": " sortOrder?: \"ascending\" | \"descending\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortBy": {
+        "rendered": "\n/** User attribute to sort by. */\n sortBy?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v2/scim/2.0/Users": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v2/scim/2.0/Users/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/v2/scim/2.0/Users/{id}": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v2/users/2fa-login": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v2/users/login": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  }
+}
