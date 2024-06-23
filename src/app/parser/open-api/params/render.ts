@@ -1,23 +1,34 @@
 import * as types from "./types";
 import * as logger from "../../../../util/logger";
 
+const cj = require("circular-json");
+
 export function renderParams(schema: types.Schema): types.Schema {
+  // console.log('\n\n\nrendering schema:', cj.stringify(schema));
   let rendered: string | undefined = "";
   if (types.schemaIsTypeScalar(schema)) {
+    // console.log('schema type is scalar');
     rendered = renderScalarTypeSchema(schema);
   } else if (types.schemaIsTypeObject(schema)) {
+    // console.log('schema type is object');
     rendered = renderObjectTypeSchema(schema);
   } else if (types.schemaIsTypeArray(schema)) {
+    // console.log('schema type is array');
     rendered = renderArrayTypeSchema(schema);
   } else if (types.schemaIsTypeCustomType(schema)) {
+    // console.log('schema type is custom');
     rendered = renderCustomTypeSchema(schema);
   } else if (types.schemaIsTypeRef(schema)) {
+    // console.log('schema type is ref');
     rendered = renderRefTypeSchema(schema);
   } else if (types.schemaIsTypeOneOf(schema)) {
+    // console.log('schema type is oneOf');
     rendered = renderOneOfTypeSchema(schema);
   } else if (types.schemaIsTypeAnyOf(schema)) {
+    // console.log('schema type is anyOf');
     rendered = renderAnyOfTypeSchema(schema);
   } else if (types.schemaIsTypeAllOf(schema)) {
+    // console.log('schema type is allOf');
     rendered = renderAllOfTypeSchema(schema);
   } else {
     logger.error(`Cannot resolve parameter schema: ${JSON.stringify(schema)}`);
@@ -133,8 +144,20 @@ export function renderCustomTypeSchema(
 
 export function renderRefTypeSchema(schema: types.SchemaTypeRef): string {
   // TODO: add schema store reference
-  const splitRef = schema.$ref.split("/");
-  const paramType = splitRef[splitRef.length - 1]!;
+  // console.log("\n\nrender ref type schema:", cj.stringify(schema));
+  let paramType = "";
+  if (!schema.$parsed) {
+    // console.log('schema.$parsed does not exist: ');
+  }
+  if (schema.$parsed && schema.$parsed.name) {
+    paramType = schema.$parsed.name;
+  } else if (schema.$parsed && schema.$parsed.content) {
+    paramType = schema.$parsed.content;
+  } else {
+    const splitRef = schema.$ref.split("/");
+    paramType = splitRef[splitRef.length - 1]!;
+  }
+  // console.log('paramtype: ', paramType);
   return renderSchema(paramType, schema);
 }
 

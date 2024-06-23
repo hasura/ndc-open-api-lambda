@@ -60,6 +60,13 @@ enum ArrayTypeEnum {
 
 export type SchemaTypeRef = BaseSchema & {
   $ref: string;
+  $parsed:
+    | {
+        type: string; // this is *NOT* the actual data type.
+        name: string | undefined; // the actual data type of the object/ref
+        content: string | undefined; // the actual data type of the object/ref
+      }
+    | undefined;
 };
 
 export type SchemaTypeObject = BaseSchema & {
@@ -125,7 +132,8 @@ export function schemaIsTypeCustomType(
 ): schema is SchemaTypeCustomType {
   return (
     schema.schema &&
-    (schemaIsTypeRef(schema.schema) || schemaIsTypeArray(schema.schema))
+    (schemaIsTypeRef(schema.schema) || schemaIsTypeArray(schema.schema)) &&
+    schema.$ref === undefined
   );
 }
 

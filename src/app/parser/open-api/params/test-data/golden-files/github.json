@@ -2000,23 +2000,15 @@
   "get__/orgs/{org}/code-scanning/alerts": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: code-scanning-analysis-tool-name, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: code-scanning-analysis-tool-guid, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor. */\n after?: string, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** If specified, only code scanning alerts with this state will be returned. */\n state?: code-scanning-alert-state, \n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\", \n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: code-scanning-alert-severity, },",
+        "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor. */\n after?: string, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState, \n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\", \n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: CodeScanningAlertSeverity, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.tool_name": {
-        "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: code-scanning-analysis-tool-name,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.tool_name.__no_name": {
-        "rendered": "code-scanning-analysis-tool-name",
+        "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.tool_guid": {
-        "rendered": "\n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: code-scanning-analysis-tool-guid,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.tool_guid.__no_name": {
-        "rendered": "code-scanning-analysis-tool-guid",
+        "rendered": "\n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.before": {
@@ -2040,11 +2032,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.state": {
-        "rendered": "\n/** If specified, only code scanning alerts with this state will be returned. */\n state?: code-scanning-alert-state,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.state.__no_name": {
-        "rendered": "code-scanning-alert-state",
+        "rendered": "\n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.sort": {
@@ -2052,11 +2040,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.severity": {
-        "rendered": "\n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: code-scanning-alert-severity,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.severity.__no_name": {
-        "rendered": "code-scanning-alert-severity",
+        "rendered": "\n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: CodeScanningAlertSeverity,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -5137,7 +5121,7 @@
   "delete__/repos/{owner}/{repo}/actions/caches": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A key for identifying the cache. */\n key: string, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref, },",
+        "rendered": " query?: { \n/** A key for identifying the cache. */\n key: string, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.key": {
@@ -5145,11 +5129,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ref": {
-        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.ref.__no_name": {
-        "rendered": "code-scanning-ref",
+        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -5169,7 +5149,7 @@
   "get__/repos/{owner}/{repo}/actions/caches": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref, \n/** An explicit key or prefix for identifying the cache */\n key?: string, \n/** The property to sort the results by. `created_at` means when the cache was created. `last_accessed_at` means when the cache was last accessed. `size_in_bytes` is the size of the cache in bytes. */\n sort?: \"created_at\" | \"last_accessed_at\" | \"size_in_bytes\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", },",
+        "rendered": " query: { \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, \n/** An explicit key or prefix for identifying the cache */\n key?: string, \n/** The property to sort the results by. `created_at` means when the cache was created. `last_accessed_at` means when the cache was last accessed. `size_in_bytes` is the size of the cache in bytes. */\n sort?: \"created_at\" | \"last_accessed_at\" | \"size_in_bytes\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.per_page": {
@@ -5181,11 +5161,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ref": {
-        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.ref.__no_name": {
-        "rendered": "code-scanning-ref",
+        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.key": {
@@ -7627,23 +7603,15 @@
   "get__/repos/{owner}/{repo}/code-scanning/alerts": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: code-scanning-analysis-tool-name, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: code-scanning-analysis-tool-guid, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\", \n/** If specified, only code scanning alerts with this state will be returned. */\n state?: code-scanning-alert-state, \n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: code-scanning-alert-severity, },",
+        "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\", \n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState, \n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: CodeScanningAlertSeverity, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.tool_name": {
-        "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: code-scanning-analysis-tool-name,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.tool_name.__no_name": {
-        "rendered": "code-scanning-analysis-tool-name",
+        "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.tool_guid": {
-        "rendered": "\n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: code-scanning-analysis-tool-guid,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.tool_guid.__no_name": {
-        "rendered": "code-scanning-analysis-tool-guid",
+        "rendered": "\n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.page": {
@@ -7655,11 +7623,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ref": {
-        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.ref.__no_name": {
-        "rendered": "code-scanning-ref",
+        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.direction": {
@@ -7671,19 +7635,11 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.state": {
-        "rendered": "\n/** If specified, only code scanning alerts with this state will be returned. */\n state?: code-scanning-alert-state,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.state.__no_name": {
-        "rendered": "code-scanning-alert-state",
+        "rendered": "\n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.severity": {
-        "rendered": "\n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: code-scanning-alert-severity,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.severity.__no_name": {
-        "rendered": "code-scanning-alert-severity",
+        "rendered": "\n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: CodeScanningAlertSeverity,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -7715,10 +7671,6 @@
       ".alertNumber": {
         "rendered": "\n/** The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation. */\n alertNumber: alert-number,",
         "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
-        "requiresRelaxedTypeAnnotation": false
       }
     },
     "response": {}
@@ -7736,11 +7688,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".alertNumber": {
-        "rendered": " alertNumber: alert-number,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
+        "rendered": " alertNumber: AlertNumber,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -7749,7 +7697,7 @@
   "get__/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref, },",
+        "rendered": " query: { \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.page": {
@@ -7761,11 +7709,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ref": {
-        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.ref.__no_name": {
-        "rendered": "code-scanning-ref",
+        "rendered": "\n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -7780,11 +7724,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".alertNumber": {
-        "rendered": " alertNumber: alert-number,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
+        "rendered": " alertNumber: AlertNumber,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -7793,23 +7733,15 @@
   "get__/repos/{owner}/{repo}/code-scanning/analyses": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: code-scanning-analysis-tool-name, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: code-scanning-analysis-tool-guid, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref, \n/** Filter analyses belonging to the same SARIF upload. */\n sarif_id?: code-scanning-analysis-sarif-id, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The property by which to sort the results. */\n sort?: \"created\", },",
+        "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, \n/** Filter analyses belonging to the same SARIF upload. */\n sarif_id?: CodeScanningAnalysisSarifId, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The property by which to sort the results. */\n sort?: \"created\", },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.tool_name": {
-        "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: code-scanning-analysis-tool-name,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.tool_name.__no_name": {
-        "rendered": "code-scanning-analysis-tool-name",
+        "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.tool_guid": {
-        "rendered": "\n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: code-scanning-analysis-tool-guid,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.tool_guid.__no_name": {
-        "rendered": "code-scanning-analysis-tool-guid",
+        "rendered": "\n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.page": {
@@ -7821,19 +7753,11 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.ref": {
-        "rendered": "\n/** The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: code-scanning-ref,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.ref.__no_name": {
-        "rendered": "code-scanning-ref",
+        "rendered": "\n/** The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.sarif_id": {
-        "rendered": "\n/** Filter analyses belonging to the same SARIF upload. */\n sarif_id?: code-scanning-analysis-sarif-id,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".query.sarif_id.__no_name": {
-        "rendered": "code-scanning-analysis-sarif-id",
+        "rendered": "\n/** Filter analyses belonging to the same SARIF upload. */\n sarif_id?: CodeScanningAnalysisSarifId,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.direction": {
@@ -9069,10 +8993,6 @@
       ".alertNumber": {
         "rendered": "\n/** The number that identifies a Dependabot alert in its repository.\nYou can find this at the end of the URL for a Dependabot alert within GitHub,\nor in `number` fields in the response from the\n`GET /repos/{owner}/{repo}/dependabot/alerts` operation. */\n alertNumber: alert-number,",
         "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
-        "requiresRelaxedTypeAnnotation": false
       }
     },
     "response": {}
@@ -9090,11 +9010,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".alertNumber": {
-        "rendered": " alertNumber: alert-number,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
+        "rendered": " alertNumber: AlertNumber,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -13127,11 +13043,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".alertNumber": {
-        "rendered": " alertNumber: alert-number,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
+        "rendered": " alertNumber: AlertNumber,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -13150,11 +13062,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".alertNumber": {
-        "rendered": " alertNumber: alert-number,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
+        "rendered": " alertNumber: AlertNumber,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -13186,11 +13094,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".alertNumber": {
-        "rendered": " alertNumber: alert-number,",
-        "requiresRelaxedTypeAnnotation": false
-      },
-      ".alertNumber.__no_name": {
-        "rendered": "alert-number",
+        "rendered": " alertNumber: AlertNumber,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
