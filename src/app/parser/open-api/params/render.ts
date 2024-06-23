@@ -125,9 +125,9 @@ export function renderArrayTypeSchema(schema: types.SchemaTypeArray): string {
 export function renderCustomTypeSchema(
   schema: types.SchemaTypeCustomType,
 ): string {
-  const renderedProperty = renderParams(
-    types.getSchemaTypeCustomChild(schema),
-  )._$rendered!;
+  const renderedProperty =
+    schema.type ??
+    renderParams(types.getSchemaTypeCustomChild(schema))._$rendered!;
   return renderSchema(renderedProperty, schema);
 }
 

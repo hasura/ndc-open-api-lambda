@@ -90,7 +90,7 @@ export type SchemaTypeArray = BaseSchema & {
  */
 export type SchemaTypeCustomType = BaseSchema & {
   type: string; // can be any valid type. Eg: Pet (in petstore API)
-  schema: SchemaTypeRef | SchemaTypeArray;
+  schema: Schema;
 };
 
 export type SchemaTypeOneOf = BaseSchema & {
@@ -137,8 +137,15 @@ export function schemaIsTypeCustomType(
 ): schema is SchemaTypeCustomType {
   return (
     schema.schema &&
-    (schemaIsTypeRef(schema.schema) || schemaIsTypeArray(schema.schema)) &&
-    schema.$ref === undefined
+    schema.type &&
+    !Object.values(ArrayTypeEnum).includes(schema.type) &&
+    !Object.values(ObjectTypeEnum).includes(schema.type) &&
+    !Object.values(ScalarTypeEnum).includes(schema.type) &&
+    schema.$ref === undefined &&
+    schema.items === undefined &&
+    schema.anyOf === undefined &&
+    schema.oneOf === undefined &&
+    schema.allOf === undefined
   );
 }
 
