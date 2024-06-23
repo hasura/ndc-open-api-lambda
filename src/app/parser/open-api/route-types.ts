@@ -12,7 +12,11 @@ export type ApiRoute = swaggerTypescriptApi.ParsedRoute & {
     formData: paramTypes.Schema[];
     cookie: paramTypes.Schema[];
   };
-  requestBodyInfo: paramTypes.Schema[];
+  requestBodyInfo: paramTypes.Schema & {
+    contentTypes: string[] | undefined;
+    schema: paramTypes.Schema | undefined;
+    type: string | undefined;
+  };
   specificArgs: {
     body:
       | {
@@ -77,8 +81,25 @@ export function getPathParams(
   return route.routeParams.path;
 }
 
-export function hasPathParams(route: ApiRoute) {
+export function hasPathParams(route: ApiRoute): boolean {
   return route.routeParams.path && route.routeParams.path.length > 0;
+}
+
+export function hasRequestBody(route: ApiRoute): boolean {
+  return (
+    route.requestBodyInfo !== undefined &&
+    route.requestBodyInfo.type !== undefined &&
+    route.requestBodyInfo.type !== null &&
+    route.requestBodyInfo.schema !== undefined &&
+    route.requestBodyInfo.schema !== null
+  );
+}
+
+export function getRequestBody(route: ApiRoute): paramTypes.Schema | undefined {
+  if (!hasRequestBody(route)) {
+    return undefined;
+  }
+  return route.requestBodyInfo;
 }
 
 export function getQueryParamName(route: ApiRoute): string {
