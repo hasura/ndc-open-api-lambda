@@ -1,5 +1,5 @@
-import * as types from "./types";
-import * as logger from "../../../../util/logger";
+import * as types from "../parser/open-api/param-types";
+import * as logger from "../../util/logger";
 
 export function renderParams(schema: types.Schema): types.Schema {
   let rendered: string | undefined = "";

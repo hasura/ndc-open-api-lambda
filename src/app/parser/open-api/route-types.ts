@@ -1,6 +1,6 @@
 import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as schemaTypes from "./types";
-import * as paramTypes from "./params/types";
+import * as paramTypes from "./param-types";
 
 export type ApiRoute = swaggerTypescriptApi.ParsedRoute & {
   headersObjectSchema: Headers | undefined;

@@ -1,15 +1,15 @@
 import path from "path";
-import * as apiTsGenerator from "../../../generator/api-ts-generator";
-import * as routeTypes from "../route-types";
-import * as types from "./types";
-import * as render from "./render";
+import * as apiTsGenerator from "./api-ts-generator";
+import * as routeTypes from "../parser/open-api/route-types";
+import * as types from "../parser/open-api/param-types";
+import * as render from "./param-generator";
 import * as fs from "fs";
 import * as assert from "assert";
 
 const cj = require("circular-json");
 
-const OPEN_API_FILES_DIR = "../../../../../tests/test-data/open-api-docs";
-const GOLDEN_FILES_DIR = "./test-data/golden-files/";
+const OPEN_API_FILES_DIR = "../../../tests/test-data/open-api-docs";
+const GOLDEN_FILES_DIR = "./test-data/param-generator/golden-files/";
 
 type RenderedParam = {
   rendered: string;
@@ -266,7 +266,7 @@ const tests: {
   },
 ];
 
-describe("param-render", async () => {
+describe("param-generator", async () => {
   for (const testCase of tests) {
     before(async () => {
       testCase.openApiFile = path.resolve(
@@ -289,7 +289,7 @@ describe("param-render", async () => {
       }
     });
 
-    it(`param-render::${testCase.name}`, async () => {
+    it(`param-generator::${testCase.name}`, async () => {
       const generatedApiTsCode = await apiTsGenerator.generateApiTsCode(
         testCase.openApiFile,
       );
