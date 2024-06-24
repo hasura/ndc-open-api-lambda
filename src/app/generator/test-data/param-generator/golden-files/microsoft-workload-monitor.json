@@ -1,0 +1,585 @@
+{
+  "get__/providers/Microsoft.WorkloadMonitor/operations": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skiptoken": {
+        "rendered": "\n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/providers/Microsoft.WorkloadMonitor/componentsSummary": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** Properties to be returned in the response. */\n $select?: string, \n/** Filter to be applied on the operation. */\n $filter?: string, \n/** Apply aggregation. */\n $apply?: string, \n/** Sort the result on one or more properties. */\n $orderby?: string, \n/** Include properties inline in the response. */\n $expand?: string, \n/** Limit the result to the specified number of rows. */\n $top?: string, \n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$select": {
+        "rendered": "\n/** Properties to be returned in the response. */\n $select?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$filter": {
+        "rendered": "\n/** Filter to be applied on the operation. */\n $filter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$apply": {
+        "rendered": "\n/** Apply aggregation. */\n $apply?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$orderby": {
+        "rendered": "\n/** Sort the result on one or more properties. */\n $orderby?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$expand": {
+        "rendered": "\n/** Include properties inline in the response. */\n $expand?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$top": {
+        "rendered": "\n/** Limit the result to the specified number of rows. */\n $top?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skiptoken": {
+        "rendered": "\n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/providers/Microsoft.WorkloadMonitor/monitorInstancesSummary": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** Properties to be returned in the response. */\n $select?: string, \n/** Filter to be applied on the operation. */\n $filter?: string, \n/** Apply aggregation. */\n $apply?: string, \n/** Sort the result on one or more properties. */\n $orderby?: string, \n/** Include properties inline in the response. */\n $expand?: string, \n/** Limit the result to the specified number of rows. */\n $top?: string, \n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$select": {
+        "rendered": "\n/** Properties to be returned in the response. */\n $select?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$filter": {
+        "rendered": "\n/** Filter to be applied on the operation. */\n $filter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$apply": {
+        "rendered": "\n/** Apply aggregation. */\n $apply?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$orderby": {
+        "rendered": "\n/** Sort the result on one or more properties. */\n $orderby?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$expand": {
+        "rendered": "\n/** Include properties inline in the response. */\n $expand?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$top": {
+        "rendered": "\n/** Limit the result to the specified number of rows. */\n $top?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skiptoken": {
+        "rendered": "\n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/components": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** Properties to be returned in the response. */\n $select?: string, \n/** Filter to be applied on the operation. */\n $filter?: string, \n/** Apply aggregation. */\n $apply?: string, \n/** Sort the result on one or more properties. */\n $orderby?: string, \n/** Include properties inline in the response. */\n $expand?: string, \n/** Limit the result to the specified number of rows. */\n $top?: string, \n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$select": {
+        "rendered": "\n/** Properties to be returned in the response. */\n $select?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$filter": {
+        "rendered": "\n/** Filter to be applied on the operation. */\n $filter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$apply": {
+        "rendered": "\n/** Apply aggregation. */\n $apply?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$orderby": {
+        "rendered": "\n/** Sort the result on one or more properties. */\n $orderby?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$expand": {
+        "rendered": "\n/** Include properties inline in the response. */\n $expand?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$top": {
+        "rendered": "\n/** Limit the result to the specified number of rows. */\n $top?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skiptoken": {
+        "rendered": "\n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/components/{componentId}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** Properties to be returned in the response. */\n $select?: string, \n/** Include properties inline in the response. */\n $expand?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$select": {
+        "rendered": "\n/** Properties to be returned in the response. */\n $select?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$expand": {
+        "rendered": "\n/** Include properties inline in the response. */\n $expand?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".componentId": {
+        "rendered": "\n/** Component Id. */\n componentId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitorInstances": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** Properties to be returned in the response. */\n $select?: string, \n/** Filter to be applied on the operation. */\n $filter?: string, \n/** Apply aggregation. */\n $apply?: string, \n/** Sort the result on one or more properties. */\n $orderby?: string, \n/** Include properties inline in the response. */\n $expand?: string, \n/** Limit the result to the specified number of rows. */\n $top?: string, \n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$select": {
+        "rendered": "\n/** Properties to be returned in the response. */\n $select?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$filter": {
+        "rendered": "\n/** Filter to be applied on the operation. */\n $filter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$apply": {
+        "rendered": "\n/** Apply aggregation. */\n $apply?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$orderby": {
+        "rendered": "\n/** Sort the result on one or more properties. */\n $orderby?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$expand": {
+        "rendered": "\n/** Include properties inline in the response. */\n $expand?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$top": {
+        "rendered": "\n/** Limit the result to the specified number of rows. */\n $top?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skiptoken": {
+        "rendered": "\n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitorInstances/{monitorInstanceId}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** Properties to be returned in the response. */\n $select?: string, \n/** Include properties inline in the response. */\n $expand?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$select": {
+        "rendered": "\n/** Properties to be returned in the response. */\n $select?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$expand": {
+        "rendered": "\n/** Include properties inline in the response. */\n $expand?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".monitorInstanceId": {
+        "rendered": "\n/** MonitorInstance Id. */\n monitorInstanceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitors": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** Filter to be applied on the operation. */\n $filter?: string, \n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$filter": {
+        "rendered": "\n/** Filter to be applied on the operation. */\n $filter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skiptoken": {
+        "rendered": "\n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitors/{monitorId}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".monitorId": {
+        "rendered": "\n/** Monitor Id. */\n monitorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "patch__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitors/{monitorId}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".monitorId": {
+        "rendered": "\n/** Monitor Id. */\n monitorId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", \n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skiptoken": {
+        "rendered": "\n/** The page-continuation token to use with a paged version of this API. */\n $skiptoken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings/{notificationSettingName}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".notificationSettingName": {
+        "rendered": "\n/** Default string modeled as parameter for URL to work correctly. */\n notificationSettingName: \"default\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings/{notificationSettingName}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** The API version to use for this operation. */\n \"api-version\": \"2018-08-31-preview\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".subscriptionId": {
+        "rendered": "\n/** The ID of the target subscription. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. The name is case insensitive. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceNamespace": {
+        "rendered": "\n/** The Namespace of the resource. */\n resourceNamespace: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceType": {
+        "rendered": "\n/** The type of the resource. */\n resourceType: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".resourceName": {
+        "rendered": "\n/** Name of the resource. */\n resourceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".notificationSettingName": {
+        "rendered": " notificationSettingName: \"default\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  }
+}

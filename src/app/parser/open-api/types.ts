@@ -1,5 +1,3 @@
-const AMBIGUOUS_PRIMITVE_TYPES = ["any", "object", "void", "object"];
-
 export type Schema = {
   $ref: string;
   typeName: string;
@@ -61,6 +59,12 @@ enum SecuritySchemeTypeEnum {
   "http",
   "mutualTLS",
   "openIdConnect",
+}
+
+enum AmbiguousPrimitveTypeEnum {
+  "any",
+  "object",
+  "void",
 }
 
 export type SchemaTypeObject = {
@@ -371,9 +375,11 @@ export function primitiveSchemaPropertiveHasAmbigousType(
   property: SchemaTypePrimitive,
 ) {
   if (property.content) {
-    return AMBIGUOUS_PRIMITVE_TYPES.indexOf(property.content) > -1;
+    return Object.values(AmbiguousPrimitveTypeEnum).includes(property.content);
   } else if (property.$parsed && property.$parsed.content) {
-    return AMBIGUOUS_PRIMITVE_TYPES.indexOf(property.$parsed.content) > -1;
+    return Object.values(AmbiguousPrimitveTypeEnum).includes(
+      property.$parsed.content,
+    );
   }
 }
 

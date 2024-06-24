@@ -1,0 +1,5624 @@
+{
+  "get__/v3/application/settings": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/v3/application/settings": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/ci/lint": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/deploy_keys": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/dockerfiles": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/dockerfiles/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/gitignores": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/gitignores/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/gitlab_ci_ymls": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/gitlab_ci_ymls/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include project statistics */\n statistics?: boolean, \n/** Show all group that you have access to */\n all_available?: boolean, \n/** Search for a specific group */\n search?: string, \n/** Order by name or path */\n order_by?: \"name\" | \"path\", \n/** Sort by asc (ascending) or desc (descending) */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.statistics": {
+        "rendered": "\n/** Include project statistics */\n statistics?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.all_available": {
+        "rendered": "\n/** Show all group that you have access to */\n all_available?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Search for a specific group */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Order by name or path */\n order_by?: \"name\" | \"path\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Sort by asc (ascending) or desc (descending) */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/groups": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/groups/owned": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Include project statistics */\n statistics?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.statistics": {
+        "rendered": "\n/** Include project statistics */\n statistics?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v3/groups/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/groups/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups/{id}/access_requests": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/groups/{id}/access_requests": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/groups/{id}/access_requests/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/groups/{id}/access_requests/{user_id}/approve": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups/{id}/issues": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\", \n/** Comma-separated list of label names */\n labels?: string, \n/** Return issues for a specific milestone */\n milestone?: string, \n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.state": {
+        "rendered": "\n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.labels": {
+        "rendered": "\n/** Comma-separated list of label names */\n labels?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.milestone": {
+        "rendered": "\n/** Return issues for a specific milestone */\n milestone?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups/{id}/members": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** A query string to search for members */\n query?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** A query string to search for members */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/groups/{id}/members": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/groups/{id}/members/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups/{id}/members/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/groups/{id}/members/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the new member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups/{id}/notification_settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/groups/{id}/notification_settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/groups/{id}/projects": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.visibility": {
+        "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.simple": {
+        "rendered": "\n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/groups/{id}/projects/{project_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a group */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The ID or path of the project */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/hooks": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/v3/hooks": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "delete__/v3/hooks/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the system hook */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/hooks/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the system hook */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/internal/allowed": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/internal/broadcast_message": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/internal/check": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/internal/discover": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/internal/lfs_authenticate": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/internal/merge_request_urls": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/internal/two_factor_recovery_codes": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/issues": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\", \n/** Comma-separated list of label names */\n labels?: string, \n/** Return issues for a specific milestone */\n milestone?: string, \n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.state": {
+        "rendered": "\n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.labels": {
+        "rendered": "\n/** Comma-separated list of label names */\n labels?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.milestone": {
+        "rendered": "\n/** Return issues for a specific milestone */\n milestone?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/keys/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/licenses": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** If passed, returns only popular licenses */\n popular?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.popular": {
+        "rendered": "\n/** If passed, returns only popular licenses */\n popular?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/licenses/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/namespaces": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Search query for namespaces */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Search query for namespaces */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/notification_settings": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "put__/v3/notification_settings": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/projects": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.visibility": {
+        "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.simple": {
+        "rendered": "\n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/projects": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/projects/all": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, \n/** Include project statistics */\n statistics?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.visibility": {
+        "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.simple": {
+        "rendered": "\n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.statistics": {
+        "rendered": "\n/** Include project statistics */\n statistics?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/projects/fork/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/owned": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, \n/** Include project statistics */\n statistics?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.visibility": {
+        "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.simple": {
+        "rendered": "\n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.statistics": {
+        "rendered": "\n/** Include project statistics */\n statistics?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/projects/search/{query}": {
+    "query": {
+      ".queryParams": {
+        "rendered": " queryParams: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.order_by": {
+        "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.sort": {
+        "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".queryParams.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".query": {
+        "rendered": "\n/** The project name to be searched */\n query: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/starred": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.visibility": {
+        "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.simple": {
+        "rendered": "\n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/projects/user/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The ID of a user */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/visible": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.visibility": {
+        "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.simple": {
+        "rendered": "\n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v3/projects/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/(ref/{ref}/)trigger/builds": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".ref": {
+        "rendered": "\n/** The commit sha or name of a branch or tag */\n ref: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/access_requests": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/access_requests": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/access_requests/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/access_requests/{user_id}/approve": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the access requester */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/archive": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/boards": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/boards/{board_id}/lists": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/boards/{board_id}/lists": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".listId": {
+        "rendered": "\n/** The ID of a board list */\n listId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".listId": {
+        "rendered": "\n/** The ID of a list */\n listId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/boards/{board_id}/lists/{list_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".boardId": {
+        "rendered": "\n/** The ID of a board */\n boardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".listId": {
+        "rendered": "\n/** The ID of a list */\n listId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/builds": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/builds/artifacts/{ref_name}/download": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The name for the build */\n job: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.job": {
+        "rendered": "\n/** The name for the build */\n job: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".refName": {
+        "rendered": "\n/** The ref from repository */\n refName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/builds/{build_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/builds/{build_id}/artifacts": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/builds/{build_id}/artifacts/keep": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/builds/{build_id}/cancel": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/builds/{build_id}/erase": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/builds/{build_id}/play": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a Build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/builds/{build_id}/retry": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/builds/{build_id}/trace": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".buildId": {
+        "rendered": "\n/** The ID of a build */\n buildId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/deploy_keys": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/deploy_keys": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/deploy_keys/{key_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/deploy_keys/{key_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/deploy_keys/{key_id}/disable": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/deploy_keys/{key_id}/enable": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/deployments": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/deployments/{deployment_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deploymentId": {
+        "rendered": "\n/** The deployment ID */\n deploymentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/environments": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/environments": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/environments/{environment_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".environmentId": {
+        "rendered": "\n/** The environment ID */\n environmentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/environments/{environment_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".environmentId": {
+        "rendered": "\n/** The environment ID */\n environmentId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/events": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/fork": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/fork/{forked_from_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".forkedFromId": {
+        "rendered": "\n/** The ID of the project it was forked from */\n forkedFromId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/hooks": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/hooks": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/hooks/{hook_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".hookId": {
+        "rendered": "\n/** The ID of the hook to delete */\n hookId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/hooks/{hook_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".hookId": {
+        "rendered": "\n/** The ID of a project hook */\n hookId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/hooks/{hook_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".hookId": {
+        "rendered": "\n/** The ID of the hook to update */\n hookId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\", \n/** Return the issue having the given `iid` */\n iid?: number, \n/** Comma-separated list of label names */\n labels?: string, \n/** Return issues for a specific milestone */\n milestone?: string, \n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.state": {
+        "rendered": "\n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.iid": {
+        "rendered": "\n/** Return the issue having the given `iid` */\n iid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.labels": {
+        "rendered": "\n/** Comma-separated list of label names */\n labels?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.milestone": {
+        "rendered": "\n/** Return issues for a specific milestone */\n milestone?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/issues/{issue_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{issue_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/issues/{issue_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/add_spent_time": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{issue_id}/award_emoji": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of an Issue, Merge Request or Snippet */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/award_emoji": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/move": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{issue_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": " issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/reset_spent_time": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/reset_time_estimate": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/time_estimate": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{issue_id}/time_stats": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of a project issue */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{issue_id}/todo": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The ID of an issuable */\n issueId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{noteable_id}/notes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{noteable_id}/notes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/issues/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/issues/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/issues/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/keys": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/keys": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/keys/{key_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/keys/{key_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/keys/{key_id}/disable": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/keys/{key_id}/enable": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the deploy key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/labels": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The name of the label to be deleted */\n name: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.name": {
+        "rendered": "\n/** The name of the label to be deleted */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/labels": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/labels": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/labels": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/labels/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/labels/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/members": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** A query string to search for members */\n query?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.query": {
+        "rendered": "\n/** A query string to search for members */\n query?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/members": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/members/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/members/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/members/{user_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID of the new member */\n userId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_request/{merge_request_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/merge_request/{merge_request_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_request/{merge_request_id}/cancel_merge_when_build_succeeds": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_request/{merge_request_id}/changes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_request/{merge_request_id}/closes_issues": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_request/{merge_request_id}/comments": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_request/{merge_request_id}/commits": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/merge_request/{merge_request_id}/merge": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_request/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return opened, closed, merged, or all merge requests */\n state?: \"opened\" | \"closed\" | \"merged\" | \"all\", \n/** Return merge requests ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return merge requests sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.state": {
+        "rendered": "\n/** Return opened, closed, merged, or all merge requests */\n state?: \"opened\" | \"closed\" | \"merged\" | \"all\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order_by": {
+        "rendered": "\n/** Return merge requests ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort": {
+        "rendered": "\n/** Return merge requests sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/merge_requests/{merge_request_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/merge_requests/{merge_request_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/add_spent_time": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of an Issue, Merge Request or Snippet */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/cancel_merge_when_build_succeeds": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/changes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/closes_issues": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/comments": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/commits": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/merge_requests/{merge_request_id}/merge": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": " mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/reset_spent_time": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/reset_time_estimate": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/time_estimate": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/time_stats": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a project merge_request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{merge_request_id}/todo": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of an issuable */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/versions": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{merge_request_id}/versions/{version_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".mergeRequestId": {
+        "rendered": "\n/** The ID of a merge request */\n mergeRequestId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".versionId": {
+        "rendered": "\n/** The ID of a merge request diff version */\n versionId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{noteable_id}/notes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/merge_requests/{subscribable_id}/subscription": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscribableId": {
+        "rendered": "\n/** The ID of a resource */\n subscribableId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/milestones": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return \"active\", \"closed\", or \"all\" milestones */\n state?: \"active\" | \"closed\" | \"all\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.state": {
+        "rendered": "\n/** Return \"active\", \"closed\", or \"all\" milestones */\n state?: \"active\" | \"closed\" | \"all\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/milestones": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/milestones/{milestone_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".milestoneId": {
+        "rendered": "\n/** The ID of a project milestone */\n milestoneId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/milestones/{milestone_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".milestoneId": {
+        "rendered": "\n/** The ID of a project milestone */\n milestoneId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/milestones/{milestone_id}/issues": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".milestoneId": {
+        "rendered": "\n/** The ID of a project milestone */\n milestoneId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/notification_settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/notification_settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The group ID or project ID or project NAMESPACE/PROJECT_NAME */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/pipeline": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/pipelines": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Either running, branches, or tags */\n scope?: \"running\" | \"branches\" | \"tags\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** Either running, branches, or tags */\n scope?: \"running\" | \"branches\" | \"tags\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/pipelines/{pipeline_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".pipelineId": {
+        "rendered": "\n/** The pipeline ID */\n pipelineId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/pipelines/{pipeline_id}/cancel": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".pipelineId": {
+        "rendered": "\n/** The pipeline ID */\n pipelineId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/pipelines/{pipeline_id}/retry": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".pipelineId": {
+        "rendered": "\n/** The pipeline ID */\n pipelineId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/archive": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The commit sha of the archive to be downloaded */\n sha?: string, \n/** The archive format */\n format?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sha": {
+        "rendered": "\n/** The commit sha of the archive to be downloaded */\n sha?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.format": {
+        "rendered": "\n/** The archive format */\n format?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/blobs/{sha}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The path to the file to display */\n filepath: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filepath": {
+        "rendered": "\n/** The path to the file to display */\n filepath: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit, branch name, or tag name */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/branches": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/repository/branches": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/repository/branches/{branch}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/branches/{branch}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/repository/branches/{branch}/protect": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/repository/branches/{branch}/unprotect": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".branch": {
+        "rendered": "\n/** The name of the branch */\n branch: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/commits": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The name of a repository branch or tag, if not given the default branch is used */\n ref_name?: string, \n/** Only commits after or in this date will be returned */\n since?: string, \n/** Only commits before or in this date will be returned */\n until?: string, \n/** The page for pagination */\n page?: number, \n/** The number of results per page */\n per_page?: number, \n/** The file path */\n path?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ref_name": {
+        "rendered": "\n/** The name of a repository branch or tag, if not given the default branch is used */\n ref_name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.since": {
+        "rendered": "\n/** Only commits after or in this date will be returned */\n since?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.until": {
+        "rendered": "\n/** Only commits before or in this date will be returned */\n until?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page for pagination */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** The number of results per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.path": {
+        "rendered": "\n/** The file path */\n path?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/repository/commits": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/commits/{sha}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha, or the name of a branch or tag */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/commits/{sha}/blob": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The path to the file to display */\n filepath: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.filepath": {
+        "rendered": "\n/** The path to the file to display */\n filepath: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit, branch name, or tag name */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/commits/{sha}/builds": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The SHA id of a commit */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/repository/commits/{sha}/cherry_pick": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha to be cherry picked */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/commits/{sha}/comments": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha, or the name of a branch or tag */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/repository/commits/{sha}/comments": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit's SHA */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/commits/{sha}/diff": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** A commit sha, or the name of a branch or tag */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/commits/{sha}/statuses": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The ref */\n ref?: string, \n/** The stage */\n stage?: string, \n/** The name */\n name?: string, \n/** Show all statuses, default: false */\n all?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ref": {
+        "rendered": "\n/** The ref */\n ref?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.stage": {
+        "rendered": "\n/** The stage */\n stage?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.name": {
+        "rendered": "\n/** The name */\n name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.all": {
+        "rendered": "\n/** Show all statuses, default: false */\n all?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit hash */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/compare": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The commit, branch name, or tag name to start comparison */\n from: string, \n/** The commit, branch name, or tag name to stop comparison */\n to: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** The commit, branch name, or tag name to start comparison */\n from: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** The commit, branch name, or tag name to stop comparison */\n to: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/contributors": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/repository/files": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The path to new file. Ex. lib/class.rb */\n file_path: string, \n/** The name of branch */\n branch_name: string, \n/** Commit Message */\n commit_message: string, \n/** The email of the author */\n author_email?: string, \n/** The name of the author */\n author_name?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.file_path": {
+        "rendered": "\n/** The path to new file. Ex. lib/class.rb */\n file_path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.branch_name": {
+        "rendered": "\n/** The name of branch */\n branch_name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.commit_message": {
+        "rendered": "\n/** Commit Message */\n commit_message: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.author_email": {
+        "rendered": "\n/** The email of the author */\n author_email?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.author_name": {
+        "rendered": "\n/** The name of the author */\n author_name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/files": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The path to the file. Ex. lib/class.rb */\n file_path: string, \n/** The name of branch, tag, or commit */\n ref: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.file_path": {
+        "rendered": "\n/** The path to the file. Ex. lib/class.rb */\n file_path: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ref": {
+        "rendered": "\n/** The name of branch, tag, or commit */\n ref: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/repository/files": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/repository/files": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The project ID */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/repository/merged_branches": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/raw_blobs/{sha}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit, branch name, or tag name */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/tags": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/repository/tags": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/repository/tags/{tag_name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/tags/{tag_name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/repository/tags/{tag_name}/release": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/repository/tags/{tag_name}/release": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".tagName": {
+        "rendered": "\n/** The name of the tag */\n tagName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/repository/tree": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The name of a repository branch or tag, if not given the default branch is used */\n ref_name?: string, \n/** The path of the tree */\n path?: string, \n/** Used to get a recursive tree */\n recursive?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ref_name": {
+        "rendered": "\n/** The name of a repository branch or tag, if not given the default branch is used */\n ref_name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.path": {
+        "rendered": "\n/** The path of the tree */\n path?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.recursive": {
+        "rendered": "\n/** Used to get a recursive tree */\n recursive?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/runners": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/runners": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/runners/{runner_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".runnerId": {
+        "rendered": "\n/** The ID of the runner */\n runnerId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/asana": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/assembla": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/bamboo": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/bugzilla": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/buildkite": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/builds-email": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/campfire": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/custom-issue-tracker": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/drone-ci": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/emails-on-push": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/external-wiki": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/flowdock": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/gemnasium": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/hipchat": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/irker": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/jira": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/kubernetes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/mattermost": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/mattermost-slash-commands": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/services/mattermost_slash_commands/trigger": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/pipelines-email": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/pivotaltracker": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/pushover": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/redmine": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/slack": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/slack-slash-commands": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/services/slack_slash_commands/trigger": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/services/teamcity": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/services/{service_slug}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serviceSlug": {
+        "rendered": "\n/** The name of the service */\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/services/{service_slug}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serviceSlug": {
+        "rendered": "\n/** The name of the service */\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/share": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/share/{group_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".groupId": {
+        "rendered": "\n/** The ID of the group */\n groupId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/snippets": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{noteable_id}/notes": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/snippets/{noteable_id}/notes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteableId": {
+        "rendered": "\n/** The ID of the noteable */\n noteableId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": "\n/** The ID of a note */\n noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/snippets/{snippet_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{snippet_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/snippets/{snippet_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of an Issue, Merge Request or Snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/snippets/{snippet_id}/award_emoji": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{snippet_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of an award emoji */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{snippet_id}/notes/{note_id}/award_emoji/{award_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".awardId": {
+        "rendered": "\n/** The ID of the award */\n awardId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": " snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".noteId": {
+        "rendered": " noteId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/snippets/{snippet_id}/raw": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snippetId": {
+        "rendered": "\n/** The ID of a project snippet */\n snippetId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/star": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/star": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/statuses/{sha}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".sha": {
+        "rendered": "\n/** The commit hash */\n sha: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/triggers": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/triggers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/triggers/{token}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".token": {
+        "rendered": "\n/** The unique token of trigger */\n token: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/triggers/{token}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".token": {
+        "rendered": "\n/** The unique token of trigger */\n token: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/unarchive": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/uploads": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Return list of users matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Return list of users matching the search criteria */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/variables": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/projects/{id}/variables": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/projects/{id}/variables/{key}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The key of the variable */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/projects/{id}/variables/{key}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The key of the variable */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/projects/{id}/variables/{key}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a project */\n id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".key": {
+        "rendered": "\n/** The key of the variable */\n key: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/runners": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/runners/all": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v3/runners/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the runner */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/runners/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the runner */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/runners/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the runner */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/session": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/sidekiq/compound_metrics": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/sidekiq/job_stats": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/sidekiq/process_metrics": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/sidekiq/queue_metrics": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/snippets": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/snippets": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/snippets/public": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v3/snippets/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/snippets/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/snippets/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/snippets/{id}/raw": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of a snippet */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/templates/dockerfiles": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/templates/dockerfiles/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/templates/gitignores": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/templates/gitignores/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/templates/gitlab_ci_ymls": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/templates/gitlab_ci_ymls/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/templates/licenses": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** If passed, returns only popular licenses */\n popular?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.popular": {
+        "rendered": "\n/** If passed, returns only popular licenses */\n popular?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/v3/templates/licenses/{name}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".name": {
+        "rendered": "\n/** The name of the template */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/todos": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/todos": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v3/todos/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the todo being marked as done */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/user": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/v3/user/emails": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/user/emails": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v3/user/emails/{email_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".emailId": {
+        "rendered": "\n/** The ID of the email */\n emailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/user/emails/{email_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".emailId": {
+        "rendered": "\n/** The ID of the email */\n emailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/user/keys": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/v3/user/keys": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "delete__/v3/user/keys/{key_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".keyId": {
+        "rendered": "\n/** The ID of the SSH key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/user/keys/{key_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".keyId": {
+        "rendered": "\n/** The ID of the SSH key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Get a single user with a specific username */\n username?: string, \n/** Search for a username */\n search?: string, \n/** Filters only active users */\n active?: boolean, \n/** Filters only external users */\n external?: boolean, \n/** Filters only blocked users */\n blocked?: boolean, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.username": {
+        "rendered": "\n/** Get a single user with a specific username */\n username?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.search": {
+        "rendered": "\n/** Search for a username */\n search?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.active": {
+        "rendered": "\n/** Filters only active users */\n active?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.external": {
+        "rendered": "\n/** Filters only external users */\n external?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.blocked": {
+        "rendered": "\n/** Filters only blocked users */\n blocked?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/v3/users": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "delete__/v3/users/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/users/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/users/{id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/users/{id}/block": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/users/{id}/emails": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/users/{id}/emails": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/users/{id}/emails/{email_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".emailId": {
+        "rendered": "\n/** The ID of the email */\n emailId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/users/{id}/events": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** Current page number */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.per_page": {
+        "rendered": "\n/** Number of items per page */\n per_page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/users/{id}/keys": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/v3/users/{id}/keys": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/v3/users/{id}/keys/{key_id}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".keyId": {
+        "rendered": "\n/** The ID of the SSH key */\n keyId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/v3/users/{id}/unblock": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".id": {
+        "rendered": "\n/** The ID of the user */\n id: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/v3/version": { "query": {}, "body": {}, "path": {}, "response": {} }
+}

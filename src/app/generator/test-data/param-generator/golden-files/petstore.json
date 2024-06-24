@@ -1,0 +1,193 @@
+{
+  "post__/pet": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "put__/pet": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/pet/findByStatus": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Status values that need to be considered for filter */\n status?: \"available\" | \"pending\" | \"sold\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.status": {
+        "rendered": "\n/** Status values that need to be considered for filter */\n status?: \"available\" | \"pending\" | \"sold\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/pet/findByTags": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Tags to filter by */\n tags?: (string)[], },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.tags": {
+        "rendered": "\n/** Tags to filter by */\n tags?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.tags.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/pet/{petId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** ID of pet to return */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/pet/{petId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Name of pet that needs to be updated */\n name?: string, \n/** Status of pet that needs to be updated */\n status?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.name": {
+        "rendered": "\n/** Name of pet that needs to be updated */\n name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.status": {
+        "rendered": "\n/** Status of pet that needs to be updated */\n status?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** ID of pet that needs to be updated */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/pet/{petId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** Pet id to delete */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/pet/{petId}/uploadImage": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Additional Metadata */\n additionalMetadata?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.additionalMetadata": {
+        "rendered": "\n/** Additional Metadata */\n additionalMetadata?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".petId": {
+        "rendered": "\n/** ID of pet to update */\n petId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/store/inventory": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/store/order": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/store/order/{orderId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orderId": {
+        "rendered": "\n/** ID of order that needs to be fetched */\n orderId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/store/order/{orderId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orderId": {
+        "rendered": "\n/** ID of the order that needs to be deleted */\n orderId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/user": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/user/createWithList": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/login": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The user name for login */\n username?: string, \n/** The password for login in clear text */\n password?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.username": {
+        "rendered": "\n/** The user name for login */\n username?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.password": {
+        "rendered": "\n/** The password for login in clear text */\n password?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/user/logout": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/user/{username}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".username": {
+        "rendered": "\n/** The name that needs to be fetched. Use user1 for testing.  */\n username: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/user/{username}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".username": {
+        "rendered": "\n/** name that needs to be updated */\n username: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/user/{username}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".username": {
+        "rendered": "\n/** The name that needs to be deleted */\n username: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  }
+}
