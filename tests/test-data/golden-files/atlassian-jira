@@ -627,7 +627,6 @@ export async function getRestGetApplicationRole(
 /**
  * Get attachment content
  * @request GET :/rest/api/3/attachment/content/{id}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAttachmentContent(
@@ -680,7 +679,6 @@ export async function getRestGetAttachmentMeta(
 /**
  * Get attachment thumbnail
  * @request GET :/rest/api/3/attachment/thumbnail/{id}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAttachmentThumbnail(
@@ -725,7 +723,6 @@ export async function getRestGetAttachmentThumbnail(
 /**
  * Delete attachment
  * @request DELETE :/rest/api/3/attachment/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveAttachment(
   /**
@@ -740,7 +737,11 @@ export async function deleteRestRemoveAttachment(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -949,7 +950,6 @@ export async function getRestGetCommentPropertyKeys(
 /**
  * Delete comment property
  * @request DELETE :/rest/api/3/comment/{commentId}/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteCommentProperty(
   /**
@@ -969,7 +969,11 @@ export async function deleteRestDeleteCommentProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -1062,7 +1066,6 @@ export async function postRestCreateComponent(
 /**
  * Delete component
  * @request DELETE :/rest/api/3/component/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteComponent(
   query: {
@@ -1084,7 +1087,11 @@ export async function deleteRestDeleteComponent(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -1668,7 +1675,6 @@ export async function getRestGetDashboardItemPropertyKeys(
 /**
  * Delete dashboard item property
  * @request DELETE :/rest/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteDashboardItemProperty(
   /**
@@ -1693,7 +1699,11 @@ export async function deleteRestDeleteDashboardItemProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -1773,7 +1783,6 @@ export async function putRestSetDashboardItemProperty(
 /**
  * Delete dashboard
  * @request DELETE :/rest/api/3/dashboard/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteDashboard(
   /**
@@ -1788,10 +1797,10 @@ export async function deleteRestDeleteDashboard(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -2706,7 +2715,6 @@ export async function putRestReorderCustomFieldOptions(
 /**
  * Delete custom field options (context)
  * @request DELETE :/rest/api/3/field/{fieldId}/context/{contextId}/option/{optionId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteCustomFieldOption(
   /**
@@ -2731,7 +2739,11 @@ export async function deleteRestDeleteCustomFieldOption(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -4003,7 +4015,6 @@ export async function getRestGetFiltersPaginated(
 /**
  * Delete filter
  * @request DELETE :/rest/api/3/filter/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteFilter(
   /**
@@ -4018,7 +4029,11 @@ export async function deleteRestDeleteFilter(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -4106,7 +4121,6 @@ export async function putRestUpdateFilter(
 /**
  * Reset columns
  * @request DELETE :/rest/api/3/filter/{id}/columns
- * @allowrelaxedtypes
  */
 export async function deleteRestResetColumns(
   /**
@@ -4121,7 +4135,11 @@ export async function deleteRestResetColumns(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -4332,7 +4350,6 @@ export async function postRestAddSharePermission(
 /**
  * Delete share permission
  * @request DELETE :/rest/api/3/filter/{id}/permission/{permissionId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteSharePermission(
   /**
@@ -4352,7 +4369,11 @@ export async function deleteRestDeleteSharePermission(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -4389,7 +4410,6 @@ export async function getRestGetSharePermission(
 /**
  * Remove group
  * @request DELETE :/rest/api/3/group
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveGroup(
   query: {
@@ -4416,7 +4436,11 @@ The group to transfer restrictions to. Only comments and worklogs are transferre
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -4571,7 +4595,6 @@ The name of the group. This parameter cannot be used with the `groupId` paramete
 /**
  * Remove user from group
  * @request DELETE :/rest/api/3/group/user
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveUserFromGroup(
   query: {
@@ -4601,7 +4624,11 @@ The name of the group. This parameter cannot be used with the `groupId` paramete
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -5086,7 +5113,11 @@ export async function deleteRestDeleteIssue(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -5414,7 +5445,6 @@ export async function postRestAddComment(
 /**
  * Delete comment
  * @request DELETE :/rest/api/3/issue/{issueIdOrKey}/comment/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteComment(
   /**
@@ -5434,7 +5464,11 @@ export async function deleteRestDeleteComment(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -5615,7 +5649,6 @@ export async function getRestGetIssuePropertyKeys(
 /**
  * Delete issue property
  * @request DELETE :/rest/api/3/issue/{issueIdOrKey}/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteIssueProperty(
   /**
@@ -5635,7 +5668,11 @@ export async function deleteRestDeleteIssueProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -5705,7 +5742,6 @@ export async function putRestSetIssueProperty(
 /**
  * Delete remote issue link by global ID
  * @request DELETE :/rest/api/3/issue/{issueIdOrKey}/remotelink
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteRemoteIssueLinkByGlobalId(
   query: {
@@ -5727,7 +5763,11 @@ export async function deleteRestDeleteRemoteIssueLinkByGlobalId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -5792,7 +5832,6 @@ export async function postRestCreateOrUpdateRemoteIssueLink(
 /**
  * Delete remote issue link by ID
  * @request DELETE :/rest/api/3/issue/{issueIdOrKey}/remotelink/{linkId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteRemoteIssueLinkById(
   /**
@@ -5812,7 +5851,11 @@ export async function deleteRestDeleteRemoteIssueLinkById(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -5957,7 +6000,6 @@ export async function postRestDoTransition(
 /**
  * Delete vote
  * @request DELETE :/rest/api/3/issue/{issueIdOrKey}/votes
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveVote(
   /**
@@ -5972,7 +6014,11 @@ export async function deleteRestRemoveVote(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -6029,7 +6075,6 @@ export async function postRestAddVote(
 /**
  * Delete watcher
  * @request DELETE :/rest/api/3/issue/{issueIdOrKey}/watchers
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveWatcher(
   query: {
@@ -6055,7 +6100,11 @@ export async function deleteRestRemoveWatcher(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -6271,7 +6320,11 @@ export async function deleteRestDeleteWorklog(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -6407,7 +6460,6 @@ export async function getRestGetWorklogPropertyKeys(
 /**
  * Delete worklog property
  * @request DELETE :/rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteWorklogProperty(
   /**
@@ -6432,7 +6484,11 @@ export async function deleteRestDeleteWorklogProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -6535,7 +6591,6 @@ export async function postRestLinkIssues(
 /**
  * Delete issue link
  * @request DELETE :/rest/api/3/issueLink/{linkId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteIssueLink(
   /**
@@ -6550,7 +6605,11 @@ export async function deleteRestDeleteIssueLink(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -6624,7 +6683,6 @@ export async function postRestCreateIssueLinkType(
 /**
  * Delete issue link type
  * @request DELETE :/rest/api/3/issueLinkType/{issueLinkTypeId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteIssueLinkType(
   /**
@@ -6639,7 +6697,11 @@ export async function deleteRestDeleteIssueLinkType(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -6872,7 +6934,6 @@ export async function getRestGetIssueTypesForProject(
 /**
  * Delete issue type
  * @request DELETE :/rest/api/3/issuetype/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteIssueType(
   query: {
@@ -6894,7 +6955,11 @@ export async function deleteRestDeleteIssueType(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -7047,7 +7112,6 @@ export async function getRestGetIssueTypePropertyKeys(
 /**
  * Delete issue type property
  * @request DELETE :/rest/api/3/issuetype/{issueTypeId}/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteIssueTypeProperty(
   /**
@@ -7067,7 +7131,11 @@ export async function deleteRestDeleteIssueTypeProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -8142,7 +8210,6 @@ export async function getRestGetMyPermissions(
 /**
  * Delete preference
  * @request DELETE :/rest/api/3/mypreferences
- * @allowrelaxedtypes
  */
 export async function deleteRestRemovePreference(
   query: {
@@ -8159,7 +8226,11 @@ export async function deleteRestRemovePreference(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -8719,7 +8790,6 @@ export async function postRestCreatePermissionScheme(
 /**
  * Delete permission scheme
  * @request DELETE :/rest/api/3/permissionscheme/{schemeId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeletePermissionScheme(
   /**
@@ -8734,7 +8804,11 @@ export async function deleteRestDeletePermissionScheme(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -8902,7 +8976,6 @@ export async function postRestCreatePermissionGrant(
 /**
  * Delete permission scheme grant
  * @request DELETE :/rest/api/3/permissionscheme/{schemeId}/permission/{permissionId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeletePermissionSchemeEntity(
   /**
@@ -8922,7 +8995,11 @@ export async function deleteRestDeletePermissionSchemeEntity(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -9521,7 +9598,6 @@ export async function getRestGetAccessibleProjectTypeByKey(
 /**
  * Delete project
  * @request DELETE :/rest/api/3/project/{projectIdOrKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteProject(
   query: {
@@ -9543,7 +9619,11 @@ export async function deleteRestDeleteProject(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -9685,7 +9765,6 @@ export async function putRestUpdateProjectAvatar(
 /**
  * Delete project avatar
  * @request DELETE :/rest/api/3/project/{projectIdOrKey}/avatar/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteProjectAvatar(
   /**
@@ -9705,7 +9784,11 @@ export async function deleteRestDeleteProjectAvatar(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -9975,7 +10058,6 @@ export async function getRestGetProjectPropertyKeys(
 /**
  * Delete project property
  * @request DELETE :/rest/api/3/project/{projectIdOrKey}/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteProjectProperty(
   /**
@@ -9995,7 +10077,11 @@ export async function deleteRestDeleteProjectProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -10090,7 +10176,6 @@ export async function postRestRestore(
 /**
  * Get project roles for project
  * @request GET :/rest/api/3/project/{projectIdOrKey}/role
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectRoles(
@@ -10099,7 +10184,7 @@ export async function getRestGetProjectRoles(
    */
   projectIdOrKey: string,
   headers?: hasuraSdk.JSONValue,
-): Promise<hasuraSdk.JSONValue> {
+): Promise<ConnectModule> {
   const result = await api.rest.getProjectRoles({
     projectIdOrKey: projectIdOrKey,
     params: {
@@ -10107,7 +10192,7 @@ export async function getRestGetProjectRoles(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
@@ -10116,7 +10201,6 @@ export async function getRestGetProjectRoles(
 /**
  * Delete actors from project role
  * @request DELETE :/rest/api/3/project/{projectIdOrKey}/role/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteActor(
   query: {
@@ -10151,7 +10235,11 @@ export async function deleteRestDeleteActor(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -10748,7 +10836,6 @@ export async function postRestCreateProjectCategory(
 /**
  * Delete project category
  * @request DELETE :/rest/api/3/projectCategory/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveProjectCategory(
   /**
@@ -10763,7 +10850,11 @@ export async function deleteRestRemoveProjectCategory(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -11153,7 +11244,6 @@ export async function postRestCreateProjectRole(
 /**
  * Delete project role
  * @request DELETE :/rest/api/3/role/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteProjectRole(
   query: {
@@ -11175,7 +11265,11 @@ export async function deleteRestDeleteProjectRole(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -11450,7 +11544,6 @@ export async function postRestAddFieldToDefaultScreen(
 /**
  * Delete screen
  * @request DELETE :/rest/api/3/screens/{screenId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteScreen(
   /**
@@ -11465,7 +11558,11 @@ export async function deleteRestDeleteScreen(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -11583,7 +11680,6 @@ export async function postRestAddScreenTab(
 /**
  * Delete screen tab
  * @request DELETE :/rest/api/3/screens/{screenId}/tabs/{tabId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteScreenTab(
   /**
@@ -11603,7 +11699,11 @@ export async function deleteRestDeleteScreenTab(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -11710,7 +11810,6 @@ export async function postRestAddScreenTabField(
 /**
  * Remove screen tab field
  * @request DELETE :/rest/api/3/screens/{screenId}/tabs/{tabId}/fields/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveScreenTabField(
   /**
@@ -11735,7 +11834,11 @@ export async function deleteRestRemoveScreenTabField(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -11887,7 +11990,6 @@ export async function postRestCreateScreenScheme(
 /**
  * Delete screen scheme
  * @request DELETE :/rest/api/3/screenscheme/{screenSchemeId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteScreenScheme(
   /**
@@ -11902,7 +12004,11 @@ export async function deleteRestDeleteScreenScheme(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -12657,7 +12763,11 @@ export async function deleteRestDeleteAvatar(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -12784,7 +12894,6 @@ export async function getRestGetAvatarImageByOwner(
 /**
  * Delete user
  * @request DELETE :/rest/api/3/user
- * @allowrelaxedtypes
  */
 export async function deleteRestRemoveUser(
   query: {
@@ -12809,7 +12918,11 @@ export async function deleteRestRemoveUser(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -13073,7 +13186,6 @@ export async function getRestBulkGetUsersMigration(
 /**
  * Reset user default columns
  * @request DELETE :/rest/api/3/user/columns
- * @allowrelaxedtypes
  */
 export async function deleteRestResetUserColumns(
   query: {
@@ -13094,7 +13206,11 @@ export async function deleteRestResetUserColumns(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -13423,7 +13539,6 @@ export async function getRestGetUserPropertyKeys(
 /**
  * Delete user property
  * @request DELETE :/rest/api/3/user/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteUserProperty(
   query: {
@@ -13453,7 +13568,11 @@ export async function deleteRestDeleteUserProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -13797,7 +13916,6 @@ export async function postRestCreateVersion(
 /**
  * Delete version
  * @request DELETE :/rest/api/3/version/{id}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteVersion(
   query: {
@@ -13823,7 +13941,11 @@ export async function deleteRestDeleteVersion(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -14027,7 +14149,6 @@ export async function getRestGetVersionUnresolvedIssues(
 /**
  * Delete webhooks by ID
  * @request DELETE :/rest/api/3/webhook
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteWebhookById(
   /** Request body */
@@ -14040,10 +14161,10 @@ export async function deleteRestDeleteWebhookById(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -14415,7 +14536,11 @@ export async function deleteRestDeleteWorkflowTransitionProperty(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -14552,7 +14677,6 @@ export async function putRestUpdateWorkflowTransitionProperty(
 /**
  * Delete inactive workflow
  * @request DELETE :/rest/api/3/workflow/{entityId}
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteInactiveWorkflow(
   /**
@@ -14567,7 +14691,11 @@ export async function deleteRestDeleteInactiveWorkflow(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -14882,7 +15010,6 @@ export async function putRestUpdateDefaultWorkflow(
 /**
  * Delete draft workflow scheme
  * @request DELETE :/rest/api/3/workflowscheme/{id}/draft
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteWorkflowSchemeDraft(
   /**
@@ -14897,7 +15024,11 @@ export async function deleteRestDeleteWorkflowSchemeDraft(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -15128,7 +15259,6 @@ export async function putRestSetWorkflowSchemeDraftIssueType(
 /**
  * Publish draft workflow scheme
  * @request POST :/rest/api/3/workflowscheme/{id}/draft/publish
- * @allowrelaxedtypes
  */
 export async function postRestPublishDraftWorkflowScheme(
   query: {
@@ -15153,17 +15283,16 @@ export async function postRestPublishDraftWorkflowScheme(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Delete issue types for workflow in draft workflow scheme
  * @request DELETE :/rest/api/3/workflowscheme/{id}/draft/workflow
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteDraftWorkflowMapping(
   query: {
@@ -15185,7 +15314,11 @@ export async function deleteRestDeleteDraftWorkflowMapping(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -15365,7 +15498,6 @@ export async function putRestSetWorkflowSchemeIssueType(
 /**
  * Delete issue types for workflow in workflow scheme
  * @request DELETE :/rest/api/3/workflowscheme/{id}/workflow
- * @allowrelaxedtypes
  */
 export async function deleteRestDeleteWorkflowMapping(
   query: {
@@ -15391,7 +15523,11 @@ export async function deleteRestDeleteWorkflowMapping(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -15583,7 +15719,6 @@ export async function getRestAddonPropertiesResourceGetAddonPropertiesGet(
 /**
  * Delete app property
  * @request DELETE :/rest/atlassian-connect/1/addons/{addonKey}/properties/{propertyKey}
- * @allowrelaxedtypes
  */
 export async function deleteRestAddonPropertiesResourceDeleteAddonPropertyDelete(
   /**
@@ -15604,10 +15739,10 @@ export async function deleteRestAddonPropertiesResourceDeleteAddonPropertyDelete
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -15677,7 +15812,6 @@ export async function putRestAddonPropertiesResourcePutAddonPropertyPut(
 /**
  * Remove modules
  * @request DELETE :/rest/atlassian-connect/1/app/module/dynamic
- * @allowrelaxedtypes
  */
 export async function deleteRestDynamicModulesResourceRemoveModulesDelete(
   query: {
@@ -15696,17 +15830,16 @@ Nonexistent keys are ignored.
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get modules
  * @request GET :/rest/atlassian-connect/1/app/module/dynamic
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestDynamicModulesResourceGetModulesGet(
@@ -15727,7 +15860,6 @@ export async function getRestDynamicModulesResourceGetModulesGet(
 /**
  * Register modules
  * @request POST :/rest/atlassian-connect/1/app/module/dynamic
- * @allowrelaxedtypes
  */
 export async function postRestDynamicModulesResourceRegisterModulesPost(
   /** Request body */
@@ -15740,10 +15872,10 @@ export async function postRestDynamicModulesResourceRegisterModulesPost(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -15803,7 +15935,11 @@ export async function putRestMigrationResourceUpdateEntityPropertiesValuePut(
       },
     },
   );
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**

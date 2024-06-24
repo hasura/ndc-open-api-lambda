@@ -218,7 +218,7 @@ export async function postBluetoothForgetpaireddevice(
   /** Request body */
   data: ForgetpaireddeviceRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.bluetooth.forgetpaireddevice({
     data: data,
     params: {
@@ -240,7 +240,7 @@ export async function postBluetoothPairwithSpeaker(
   /** Request body */
   data: PairwithSpeakerRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.bluetooth.pairwithSpeaker({
     data: data,
     params: {
@@ -262,7 +262,7 @@ export async function postBluetoothChangeDiscoverability(
   /** Request body */
   data: ChangeDiscoverabilityRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.bluetooth.changeDiscoverability({
     data: data,
     params: {
@@ -304,7 +304,7 @@ export async function postBluetoothScanfordevices(
   /** Request body */
   data: ScanfordevicesRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.bluetooth.scanfordevices({
     data: data,
     params: {
@@ -381,7 +381,6 @@ export async function getConfiguredNetworksGetSavedNetworks(
 /**
  * Connect to Wi-Fi Network
  * @request POST :/connect_wifi
- * @allowrelaxedtypes
  */
 export async function postConnectWifiConnecttoWiFiNetwork(
   /** Request body */
@@ -394,17 +393,16 @@ export async function postConnectWifiConnecttoWiFiNetwork(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Eureka Info
  * @request GET :/eureka_info
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getEurekaInfoEurekaInfo(
@@ -432,7 +430,7 @@ export async function postForgetWifiForgetWiFiNetwork(
   /** Request body */
   data: ForgetWiFiNetworkRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.forgetWifi.forgetWiFiNetwork({
     data: data,
     params: {
@@ -471,7 +469,6 @@ export async function postGetAppDeviceIdAppDeviceId(
 /**
  * Chromecast Icon
  * @request GET :/icon.png
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getIconPngChromecastIcon(
@@ -482,10 +479,10 @@ export async function getIconPngChromecastIcon(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -517,7 +514,7 @@ export async function postRebootRebootandFactoryReset(
   /** Request body */
   data: RebootandFactoryResetRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.reboot.rebootandFactoryReset({
     data: data,
     params: {
@@ -557,7 +554,7 @@ export async function getScanResultsGetWiFiScanResults(
  */
 export async function postScanWifiScanforNetworks(
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.scanWifi.scanforNetworks({
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
@@ -578,7 +575,7 @@ export async function postSetEurekaInfoSetEurekaInfo(
   /** Request body */
   data: SetEurekaInfoRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.setEurekaInfo.setEurekaInfo({
     data: data,
     params: {
@@ -662,7 +659,7 @@ export async function postUserEqSetEqualizerValues(
   /** Request body */
   data: SetEqualizerValuesRequest,
   headers?: hasuraSdk.JSONValue,
-): Promise<object> {
+): Promise<hasuraSdk.JSONValue> {
   const result = await api.userEq.setEqualizerValues({
     data: data,
     params: {
