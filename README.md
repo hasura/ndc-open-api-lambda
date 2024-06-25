@@ -20,7 +20,7 @@ This Connector implements the [Data Connector Spec](https://github.com/hasura/nd
 
 | Request Type | Query | Path | Body | Headers |
 | ------------ | ----- | ---- | ---- | ------- |
-| GET          | ✅    | ✅   | NA   | Y       |
+| GET          | ✅    | ✅   | NA   | ✅      |
 | POST         | ✅    | ✅   | ✅   | ✅      |
 | DELETE       | ✅    | ✅   | ✅   | ✅      |
 | PUT          | ✅    | ✅   | ✅   | ✅      |
@@ -48,7 +48,7 @@ This Connector implements the [Data Connector Spec](https://github.com/hasura/nd
 ddn connector init my_openapi --subgraph my_subgraph --hub-connector hasura/openapi
 ```
 
-This will generate the necessary files into the `my_subgraph/connector/my_openapi` directory. Your functions and API calls will be created in this directory.
+This will generate the necessary files into `my_subgraph/connector/my_openapi` directory. Supporting Typescript files for API calls will be created in this directory.
 
 2. Add the correct environment variables to `/my_subgraph/connector/my_openapi/.env.local`. Supported environment variables and their description are listed under [Supported Environment Variables](#supported-environment-variables) section.
 
@@ -60,7 +60,7 @@ This will generate the necessary files into the `my_subgraph/connector/my_openap
 ddn connector introspect --connector my_subgraph/connector/my_openapi/connector.yaml
 ```
 
-This will introspect your OpenAPI document and create an `api.ts` file, `functions.ts` file and other supporting files required to run the Typescript project.
+This will introspect your OpenAPI document and create an `api.ts` file, a `functions.ts` file and other supporting files required to run the Typescript project.
 
 - The `api.ts` file contains the Data Types and API calls from the OpenAPI document
 - The `functions.ts` file contains functions that wrap API calls. You can modify this `functions.ts` file to introduce business logic if you want to. See [Saving User Changes](#saving-user-changes) if you want to preserve your changes in this file when you introspect the OpenAPI document again.
@@ -71,7 +71,7 @@ This will introspect your OpenAPI document and create an `api.ts` file, `functio
 ddn connector-link add my_openapi --subgraph my_subgraph
 ```
 
-This will create a file `my_subgraph/metadata/my_openapi.hml` that links your Open API connector to your Hasura Supergraph.
+This will create a file `my_subgraph/metadata/my_openapi.hml` that links your OpenAPI Connector to your Hasura Supergraph.
 
 6. Update the evironment variables listed in `my_subgraph/metadata/my_openapi.hml` (here, `MY_SUBGRAPH_MY_OPENAPI_READ_URL` and `MY_SUBGRAPH_MY_OPENAPI_WRITE_URL`) in `my_subgraph/.env.my_subgraph`.
 
@@ -108,13 +108,13 @@ You have now added the OpenAPI Connector and imported all of your APIs in your s
 
 ## Documentation
 
-This connector is published as a Docker Image. The image name is `ghcr.io/hasura/ndc-open-api-lambda`. The Docker Image accepts the following environment variables that can be used to alter its functionality. These variables, if present in the `ConnectorManifest` of your DDN Metadata, will be passed by the DDN CLI to the Connector.
+This connector is published as a Docker Image. The image name is `ghcr.io/hasura/ndc-open-api-lambda`. The Docker Image accepts the following environment variables that can be used to alter its functionality.
 
 ### Supported Environment Variables
 
-1. `NDC_OAS_DOCUMENT_URI` (optional): The URI to your Open API Document. If you're using a file instead of a HTTP link, please ensure that it is named `swagger.json` and is present in the root directory of the volume being mounted to `/etc/connector`. This env var is nullable.
-2. `NDC_OAS_BASE_URL` (optional): The base URL of your API. This env var is nullable.
-3. `NDC_OAS_FILE_OVERWRITE` (optional): Boolean flag to allow previously generated files to be over-written. Defaults to `false`. Please note that the codegen will fail with an error if this is set to `false` and the files that the codegen would create already exist.
+1. `NDC_OAS_DOCUMENT_URI` (optional): The URI to your Open API Document. If you're using a file instead of a HTTP link, please ensure that it is named `swagger.json` and is present in the root directory of the volume being mounted to `/etc/connector` (for this tutorial, the `swagger.json` file should be present at `my_subgraph/connector/my_openapi/`).
+2. `NDC_OAS_BASE_URL` (optional): The base URL of your API.
+3. `NDC_OAS_FILE_OVERWRITE` (optional): Boolean flag to allow previously generated files to be over-written. Defaults to `false`.
 4. `HASURA_PLUGIN_LOG_LEVEL` (optional): The log level. Possible values: `trace`, `debug`, `info`, `warn`, `error`, `fatal`, `panic`. Defaults to `info`
 5. `NDC_OAS_LAMBDA_PRETTY_LOGS` (optional): Boolean flag to print human readable logs instead of JSON. Defaults to `false`
 
@@ -123,6 +123,7 @@ This connector is published as a Docker Image. The image name is `ghcr.io/hasura
 When re-introspecting the connector, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a function. This will ensure that that function is not overwritten and the saved function will be added if missing in the newly generated `functions.ts`
 
 Example
+
 ```
 /**
  * Dummy function that mutates an API response
@@ -139,7 +140,8 @@ The Docker Image can be used without the DDN CLI as a codegen tool for the [NDC 
 
 The Docker Container will output the generated files at `/etc/connector`. Please ensure that a volume mount is present at that directory while using the `docker run` command
 
-NOTE: The Docker Container uses the NDC Open API Lambda Connector CLI internally, so `-h` on any command will print the help for that command. Also, env vars can be substituted with CLI flags passed to the `docker run` command
+> [!NOTE]
+> The Docker Container uses the NDC Open API Lambda Connector CLI internally, so `-h` on any command will print the help for that command. Also, env vars can be substituted with CLI flags passed to the `docker run` command
 
 ### Examples
 
