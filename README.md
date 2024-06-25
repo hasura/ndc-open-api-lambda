@@ -134,8 +134,8 @@ Example
  * Dummy function that mutates an API response
  * @save
  */
-function dumDaDumDaDum(response: ApiResponseObject) {
-  response.description = "No description for you, figure this out yourself";
+function mutateResponse(response: ApiResponseObject) {
+  response.description = "This API does some work. I hope that's helpful";
 }
 ```
 
