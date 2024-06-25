@@ -4,9 +4,9 @@
 [![ndc-hub](https://img.shields.io/badge/ndc--hub-postgres-blue.svg?style=flat)](https://hasura.io/connectors)
 [![License](https://img.shields.io/badge/license-Apache--2.0-purple.svg?style=flat)](LICENSE.txt)
 
-The OpenAPI Lambda Connector allows you to import APIs that have an OpenAPI/Swagger Documentation into the Hasura Supergraph. It works by creating the Data Types and API calls required in Typescript and wrapping those API calls in functions. These functions can then be exposed as queries or mutations via the [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda).
+The OpenAPI Lambda Connector allows you to import APIs that are documented in the OpenAPI/Swagger format into the Hasura Supergraph. The connector exposes REST API endpoints as Typescript functions, which can be exposed as GraphQL queries or mutations via the [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda).
 
-Functions that wrap GET requests are marked with `@readonly` annotation, and are exposed as GraphQL Queries by the [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda). All other request types are exposed as GraphQL Mutations.
+Functions that wrap GET requests are marked with a `@readonly` annotation, and are exposed as GraphQL Queries by the [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda). All other request types are exposed as GraphQL Mutations.
 
 This Connector implements the [Data Connector Spec](https://github.com/hasura/ndc-spec)
 
@@ -52,7 +52,14 @@ This will generate the necessary files into `my_subgraph/connector/my_openapi` d
 
 2. Add the correct environment variables to `/my_subgraph/connector/my_openapi/.env.local`. Supported environment variables and their description are listed under [Supported Environment Variables](#supported-environment-variables) section.
 
-3. Modify the Docker container port. (More on this in the [getting started guide](https://hasura.io/docs/3.0/getting-started/connect-to-data/connect-a-source#step-2-modify-the-port))
+3. Modify the Docker container port in `my_subgraph/connector/my_openapi/docker-compose.my_openapi.yaml`. Typically, connectors default to port 8080. Each time you add a connector, please increment the published port by one to avoid port collisions. For example:
+```
+ports:
+  - mode: ingress
+    target: 8080
+    published: '8082'
+    protocol: tcp
+```
 
 4. Introspect the OpenAPI document using the connector
 
@@ -74,8 +81,6 @@ ddn connector-link add my_openapi --subgraph my_subgraph
 This will create a file `my_subgraph/metadata/my_openapi.hml` that links your OpenAPI Connector to your Hasura Supergraph.
 
 6. Update the evironment variables listed in `my_subgraph/metadata/my_openapi.hml` (here, `MY_SUBGRAPH_MY_OPENAPI_READ_URL` and `MY_SUBGRAPH_MY_OPENAPI_WRITE_URL`) in `my_subgraph/.env.my_subgraph`.
-
-(More on steps 5 and 6 in the [getting started guide](https://hasura.io/docs/3.0/getting-started/connect-to-data/create-source-metadata#step-1-create-the-hasura-metadata))
 
 7. Start the connector in a Docker container
 
@@ -99,7 +104,7 @@ This command will modify `my_subgraph/metadata/my_openapi.hml`, and the schema o
 ddn connector-link update my_openapi --subgraph my_subgraph --add-all-resources
 ```
 
-This will create HML files that represent resources in your connector schema at `my_subgraph/metadata`. These HML files specify your GraphQL API. (More about this in the [getting started guide](https://hasura.io/docs/3.0/getting-started/connect-to-data/add-source-entities#add-a-model))
+This will create HML files that represent resources in your connector schema at `my_subgraph/metadata`. These HML files specify your GraphQL API.
 
 You have now added the OpenAPI Connector and imported all of your APIs in your supergraph. You can now:
 
