@@ -53,6 +53,7 @@ This will generate the necessary files into `my_subgraph/connector/my_openapi` d
 2. Add the correct environment variables to `/my_subgraph/connector/my_openapi/.env.local`. Supported environment variables and their description are listed under [Supported Environment Variables](#supported-environment-variables) section.
 
 3. Modify the Docker container port in `my_subgraph/connector/my_openapi/docker-compose.my_openapi.yaml`. Typically, connectors default to port 8080. Each time you add a connector, please increment the published port by one to avoid port collisions. For example:
+
 ```
 ports:
   - mode: ingress
