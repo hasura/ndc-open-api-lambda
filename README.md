@@ -30,7 +30,7 @@ This Connector implements the [Data Connector Spec](https://github.com/hasura/nd
 
 1. Create a [Hasura Cloud account](https://console.hasura.io)
 2. Install the [DDN CLI](https://hasura.io/docs/3.0/cli/installation/)
-3. Please ensure that you have Docker installed and the Docker Daemon is running.
+3. Please ensure that you have Docker installed and the Docker daemon is running.
 4. If you want to make changes to the generated Typescript files, please ensure you have Node.js v20+ installed
 
 ## Quickstart using the DDN CLI
