@@ -29,7 +29,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/group/{groupId}/members": {
     "query": {},
@@ -40,7 +46,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IgnoreRules",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/group/{groupId}/org/{orgId}/members": {
     "query": {},
@@ -55,7 +67,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/group/{groupId}/orgs": {
     "query": {
@@ -83,7 +101,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/group/{groupId}/roles": {
     "query": {},
@@ -94,7 +118,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/group/{groupId}/settings": {
     "query": {},
@@ -105,7 +135,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Can only be updated if `API_KEY` has edit access to request access settings. */\n    requestAccess?: {\n  /** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n    enabled: boolean,\n\n},\n  /** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n    sessionLength?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/group/{groupId}/settings": {
     "query": {},
@@ -116,7 +152,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Can only be updated if `API_KEY` has edit access to request access settings. */\n    requestAccess?: {\n  /** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n    enabled: boolean,\n\n},\n  /** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n    sessionLength?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/group/{groupId}/tags": {
     "query": {
@@ -140,7 +182,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    tags?: (any)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/group/{groupId}/tags/delete": {
     "query": {},
@@ -151,7 +199,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** force delete tag that has entities (default is `false`). */\n    force?: boolean,\n  /** Valid tag key. */\n    key?: string,\n  /** Valid tag value. */\n    value?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/monitor/dep-graph": {
     "query": {
@@ -166,9 +220,26 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "post__/org": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/org": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "delete__/org/{orgId}": {
     "query": {},
     "body": {},
@@ -178,7 +249,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/audit": {
     "query": {
@@ -210,7 +287,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/dependencies": {
     "query": {
@@ -242,7 +325,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of issues */\n    results: ({\n  /** The copyright notices for the package */\n    copyright?: (any)[],\n  /** The identifiers of dependencies with issues that are depended upon as a result of this dependency */\n    dependenciesWithIssues?: (any)[],\n  /** The numbers for those versions that are marked as deprecated */\n    deprecatedVersions?: (any)[],\n  /** The timestamp for when the specified package was first published. */\n    firstPublishedDate?: string,\n  /** The identifier of the package */\n    id: string,\n  /** True if the latest version of the package is marked as deprecated; False otherwise. */\n    isDeprecated?: boolean,\n  /** The number of critical severity issues in this dependency */\n    issuesCritical?: number,\n  /** The number of high severity issues in this dependency */\n    issuesHigh?: number,\n  /** The number of low severity issues in this dependency */\n    issuesLow?: number,\n  /** The number of medium severity issues in this dependency */\n    issuesMedium?: number,\n  /** The latest version available for the specified package */\n    latestVersion?: string,\n  /** The timestamp for when the latest version of the specified package was published. */\n    latestVersionPublishedDate?: string,\n  /** The licenses of the dependency */\n    licenses: ({\n  /** The identifier of the license */\n    id: string,\n  /** The type of the license */\n    license: string,\n  /** The title of the license */\n    title: string,\n\n})[],\n  /** The name of the package */\n    name: string,\n  /** The projects which depend on the dependency */\n    projects: ({\n  /** The identifier of the project */\n    id: string,\n  /** The name of the project */\n    name: string,\n\n})[],\n  /** The package type of the dependency */\n    type: string,\n  /** The version of the package */\n    version: string,\n\n})[],\n  /** The number of results returned */\n    total?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/entitlement/{entitlementKey}": {
     "query": {},
@@ -257,7 +346,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/entitlements": {
     "query": {},
@@ -268,7 +363,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/integrations": {
     "query": {},
@@ -279,7 +380,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IntegrationCredentials",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/integrations": {
     "query": {},
@@ -290,7 +397,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/integrations/{integrationId}": {
     "query": {},
@@ -305,7 +418,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/org/{orgId}/integrations/{integrationId}/authentication": {
     "query": {},
@@ -320,7 +439,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/integrations/{integrationId}/authentication/provision-token": {
     "query": {},
@@ -335,7 +460,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/integrations/{integrationId}/authentication/switch-token": {
     "query": {},
@@ -350,7 +481,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/integrations/{integrationId}/clone": {
     "query": {},
@@ -365,7 +502,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/integrations/{integrationId}/import": {
     "query": {},
@@ -380,7 +523,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/integrations/{integrationId}/import/{jobId}": {
     "query": {},
@@ -399,7 +548,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** the time when an import job was created represented as a [UTC (ISO-8601)](https://tools.ietf.org/html/rfc3339) string */\n    created?: string,\n  /** A uuid representing the job's id */\n    id?: string,\n  /** all organizations imported by the job */\n    logs?: (any)[],\n  /**\n   * a string representing the status of a job.\n   * \n   * One of: pending, failed, aborted or complete.\n   */\n    status?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/integrations/{integrationId}/settings": {
     "query": {},
@@ -414,7 +569,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Defines if the functionality is enabled */\n    autoDepUpgradeEnabled?: boolean,\n  /** A list of strings defining what dependencies should be ignored */\n    autoDepUpgradeIgnoredDependencies?: (any)[],\n  /** A limit on how many automatic dependency upgrade PRs can be opened simultaneously */\n    autoDepUpgradeLimit?: number,\n  /** The age (in days) that an automatic dependency check is valid for */\n    autoDepUpgradeMinAge?: number,\n  /** Defines automatic remediation policies */\n    autoRemediationPrs?: {\n  /** If true, allows automatic remediation of prioritized backlog issues */\n    backlogPrsEnabled?: boolean,\n  /** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n    freshPrsEnabled?: boolean,\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** If true, will automatically detect and scan Dockerfiles in your Git repositories, surface base image vulnerabilities and recommend possible fixes */\n    dockerfileSCMEnabled?: boolean,\n  /** Defines manual remediation policies */\n    manualRemediationPrs?: {\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** assign Snyk pull requests */\n    pullRequestAssignment?: {\n  /** an array of usernames that have contributed to the organization's project(s). */\n    assignees?: (any)[],\n  /** if the organization's project(s) will assign Snyk pull requests. */\n    enabled?: boolean,\n  /** a string representing the type of assignment your projects require. */\n    type?: \"auto\" | \"manual\",\n\n},\n  /** If an opened PR should fail to be validated if any vulnerable dependencies have been detected */\n    pullRequestFailOnAnyVulns?: boolean,\n  /** If an opened PR only should fail its validation if any dependencies are marked as being of high severity */\n    pullRequestFailOnlyForHighSeverity?: boolean,\n  /** If opened PRs should be tested */\n    pullRequestTestEnabled?: boolean,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/integrations/{integrationId}/settings": {
     "query": {},
@@ -429,7 +590,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Defines if the functionality is enabled */\n    autoDepUpgradeEnabled?: boolean,\n  /** A list of strings defining what dependencies should be ignored */\n    autoDepUpgradeIgnoredDependencies?: (any)[],\n  /** A limit on how many automatic dependency upgrade PRs can be opened simultaneously */\n    autoDepUpgradeLimit?: number,\n  /** The age (in days) that an automatic dependency check is valid for */\n    autoDepUpgradeMinAge?: number,\n  /** Defines automatic remediation policies */\n    autoRemediationPrs?: {\n  /** If true, allows automatic remediation of prioritized backlog issues */\n    backlogPrsEnabled?: boolean,\n  /** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n    freshPrsEnabled?: boolean,\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** If true, will automatically detect and scan Dockerfiles in your Git repositories, surface base image vulnerabilities and recommend possible fixes */\n    dockerfileSCMEnabled?: boolean,\n  /** Defines manual remediation policies */\n    manualRemediationPrs?: {\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** assign Snyk pull requests */\n    pullRequestAssignment?: {\n  /** an array of usernames that have contributed to the organization's project(s). */\n    assignees?: (any)[],\n  /** if the organization's project(s) will assign Snyk pull requests. */\n    enabled?: boolean,\n  /** a string representing the type of assignment your projects require. */\n    type?: \"auto\" | \"manual\",\n\n},\n  /** If an opened PR should fail to be validated if any vulnerable dependencies have been detected */\n    pullRequestFailOnAnyVulns?: boolean,\n  /** If an opened PR only should fail its validation if any dependencies are marked as being of high severity */\n    pullRequestFailOnlyForHighSeverity?: boolean,\n  /** If opened PRs should be tested */\n    pullRequestTestEnabled?: boolean,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/integrations/{type}": {
     "query": {},
@@ -444,7 +611,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Alphanumeric UUID including - with a limit of 36 characters */\n    id?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/invite": {
     "query": {},
@@ -455,7 +628,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/licenses": {
     "query": {
@@ -479,7 +658,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of licenses */\n    results: ({\n  /** The dependencies of projects in the organization which have the license */\n    dependencies: ({\n  /** The identifier of the package */\n    id: string,\n  /** The name of the package */\n    name: string,\n  /** The package manager of the dependency */\n    packageManager: string,\n  /** The version of the package */\n    version: string,\n\n})[],\n  /** The identifier of the license */\n    id: string,\n  /** Custom instructions assigned to this license */\n    instructions?: string,\n  /** The projects which contain the license */\n    projects: ({\n  /** The identifier of the project */\n    id: string,\n  /** The name of the project */\n    name: string,\n\n})[],\n  /** The severity assigned to this license */\n    severity?: \"none\" | \"high\" | \"medium\" | \"low\",\n\n})[],\n  /** The number of results returned */\n    total?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/members": {
     "query": {
@@ -499,7 +684,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IgnoreRules",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/members/update/{userId}": {
     "query": {},
@@ -514,7 +705,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/org/{orgId}/members/{userId}": {
     "query": {},
@@ -529,7 +726,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/members/{userId}": {
     "query": {},
@@ -544,7 +747,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/notification-settings": {
     "query": {},
@@ -555,7 +764,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    \"new-issues-remediations\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n  /** The severity levels of issues to send notifications for (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueSeverity: \"all\" | \"high\",\n  /** Filter the types of issue to include in notifications (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueType: \"all\" | \"vuln\" | \"license\" | \"none\",\n\n},\n    \"project-imported\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"test-limit\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"weekly-report\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/notification-settings": {
     "query": {},
@@ -566,7 +781,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    \"new-issues-remediations\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n  /** The severity levels of issues to send notifications for (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueSeverity: \"all\" | \"high\",\n  /** Filter the types of issue to include in notifications (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueType: \"all\" | \"vuln\" | \"license\" | \"none\",\n\n},\n    \"project-imported\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"test-limit\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"weekly-report\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/org/{orgId}/project/{projectId}": {
     "query": {},
@@ -581,7 +802,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}": {
     "query": {},
@@ -596,7 +823,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Applied project attributes */\n    attributes?: {\n    criticality?: (any)[],\n    environment?: (any)[],\n    lifecycle?: (any)[],\n\n},\n  /** The monitored branch (if available) */\n    branch?: string | null,\n  /** URL with project overview */\n    browseUrl?: string,\n  /** The date that the project was created on */\n    created?: string,\n  /** The hostname for a CLI project, null if not set */\n    hostname?: string | null,\n  /** The project identifier */\n    id?: string,\n  /** For docker projects shows the base image */\n    imageBaseImage?: string,\n  /** For Kubernetes projects shows the origin cluster name */\n    imageCluster?: string,\n  /** For docker projects shows the ID of the image */\n    imageId?: string,\n  /** For docker projects shows the platform of the image */\n    imagePlatform?: string,\n  /** For docker projects shows the tag of the image */\n    imageTag?: string,\n  /** The user who imported the project */\n    importingUser?: {\n  /** The email of the user. */\n    email?: string,\n  /** The ID of the user. */\n    id?: string,\n  /** The name of the user. */\n    name?: string,\n  /** The username of the user. */\n    username?: string,\n\n},\n  /** Describes if a project is currently monitored or it is de-activated */\n    isMonitored?: boolean,\n  /** Number of known vulnerabilities in the project, not including ignored issues */\n    issueCountsBySeverity?: {\n  /** Number of critical severity vulnerabilities */\n    critical?: number,\n  /** Number of high severity vulnerabilities */\n    high?: number,\n  /** Number of low severity vulnerabilities */\n    low?: number,\n  /** Number of medium severity vulnerabilities */\n    medium?: number,\n\n},\n  /** The date on which the most recent test was conducted for this project */\n    lastTestedDate?: string,\n    name?: string,\n  /** The origin the project was added from */\n    origin?: string,\n  /**\n   * The user who owns the project, null if not set\n   * \n   * {\n   *     \"id\": \"e713cf94-bb02-4ea0-89d9-613cce0caed2\",\n   *     \"name\": \"example-user@snyk.io\",\n   *     \"username\": \"exampleUser\",\n   *     \"email\": \"example-user@snyk.io\"\n   * }\n   */\n    owner?: hasuraSdk.JSONValue | null,\n  /** Whether the project is read-only */\n    readOnly?: boolean,\n  /** Remediation data (if available) */\n    remediation?: {\n  /**\n   * Recommended patches to apply to the project\n   * \n   * (object)\n   *    paths (array) - List of paths to the vulnerable dependency that can be patched\n   */\n    patch?: hasuraSdk.JSONValue,\n  /**\n   * Recommended pins to apply to the project (Python only)\n   * \n   * (object)\n   *     + upgradeTo (string, required) - `package@version` to upgrade to\n   *     + vulns (array[string], required) - List of vulnerability ids that will be fixed as part of this upgrade\n   *     + isTransitive (boolean) - Describes if the dependency to be pinned is a transitive dependency\n   */\n    pin?: hasuraSdk.JSONValue,\n  /**\n   * Recommended upgrades to apply to the project\n   * \n   * (object)\n   *     + upgradeTo (string, required) - `package@version` to upgrade to\n   *     + upgrades (array[string], required) -  List of `package@version` that will be upgraded as part of this upgrade\n   *     + vulns (array[string], required) - List of vulnerability ids that will be fixed as part of this upgrade\n   */\n    upgrade?: hasuraSdk.JSONValue,\n\n},\n  /** The project remote repository url. Only set for projects imported via the Snyk CLI tool. */\n    remoteRepoUrl?: string,\n  /** List of applied tags */\n    tags?: (any)[],\n  /** The identifier for which revision of the resource is scanned by Snyk. For example this may be a branch for SCM project, or a tag for a container image */\n    targetReference?: string | null,\n  /** The frequency of automated Snyk re-test. Can be 'daily', 'weekly or 'never' */\n    testFrequency?: string,\n  /** Number of dependencies of the project */\n    totalDependencies?: number,\n  /** The package manager of the project */\n    type?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/project/{projectId}": {
     "query": {},
@@ -611,7 +844,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Applied project attributes */\n    attributes?: {\n    criticality?: (any)[],\n    environment?: (any)[],\n    lifecycle?: (any)[],\n\n},\n  /** The monitored branch (if available) */\n    branch?: string | null,\n  /** URL with project overview */\n    browseUrl?: string,\n  /** The date that the project was created on */\n    created?: string,\n  /** The hostname for a CLI project, null if not set */\n    hostname?: string | null,\n  /** The project identifier */\n    id?: string,\n  /** For docker projects shows the base image */\n    imageBaseImage?: string,\n  /** For Kubernetes projects shows the origin cluster name */\n    imageCluster?: string,\n  /** For docker projects shows the ID of the image */\n    imageId?: string,\n  /** For docker projects shows the platform of the image */\n    imagePlatform?: string,\n  /** For docker projects shows the tag of the image */\n    imageTag?: string,\n  /** The user who imported the project */\n    importingUser?: {\n  /** The email of the user. */\n    email?: string,\n  /** The ID of the user. */\n    id?: string,\n  /** The name of the user. */\n    name?: string,\n  /** The username of the user. */\n    username?: string,\n\n},\n  /** Describes if a project is currently monitored or it is de-activated */\n    isMonitored?: boolean,\n  /** Number of known vulnerabilities in the project, not including ignored issues */\n    issueCountsBySeverity?: {\n  /** Number of critical severity vulnerabilities */\n    critical?: number,\n  /** Number of high severity vulnerabilities */\n    high?: number,\n  /** Number of low severity vulnerabilities */\n    low?: number,\n  /** Number of medium severity vulnerabilities */\n    medium?: number,\n\n},\n  /** The date on which the most recent test was conducted for this project */\n    lastTestedDate?: string,\n    name?: string,\n  /** The origin the project was added from */\n    origin?: string,\n  /**\n   * The user who owns the project, null if not set\n   * \n   * {\n   *     \"id\": \"e713cf94-bb02-4ea0-89d9-613cce0caed2\",\n   *     \"name\": \"example-user@snyk.io\",\n   *     \"username\": \"exampleUser\",\n   *     \"email\": \"example-user@snyk.io\"\n   * }\n   */\n    owner?: hasuraSdk.JSONValue | null,\n  /** Whether the project is read-only */\n    readOnly?: boolean,\n  /** Remediation data (if available) */\n    remediation?: {\n  /**\n   * Recommended patches to apply to the project\n   * \n   * (object)\n   *    paths (array) - List of paths to the vulnerable dependency that can be patched\n   */\n    patch?: hasuraSdk.JSONValue,\n  /**\n   * Recommended pins to apply to the project (Python only)\n   * \n   * (object)\n   *     + upgradeTo (string, required) - `package@version` to upgrade to\n   *     + vulns (array[string], required) - List of vulnerability ids that will be fixed as part of this upgrade\n   *     + isTransitive (boolean) - Describes if the dependency to be pinned is a transitive dependency\n   */\n    pin?: hasuraSdk.JSONValue,\n  /**\n   * Recommended upgrades to apply to the project\n   * \n   * (object)\n   *     + upgradeTo (string, required) - `package@version` to upgrade to\n   *     + upgrades (array[string], required) -  List of `package@version` that will be upgraded as part of this upgrade\n   *     + vulns (array[string], required) - List of vulnerability ids that will be fixed as part of this upgrade\n   */\n    upgrade?: hasuraSdk.JSONValue,\n\n},\n  /** The project remote repository url. Only set for projects imported via the Snyk CLI tool. */\n    remoteRepoUrl?: string,\n  /** List of applied tags */\n    tags?: (any)[],\n  /** The identifier for which revision of the resource is scanned by Snyk. For example this may be a branch for SCM project, or a tag for a container image */\n    targetReference?: string | null,\n  /** The frequency of automated Snyk re-test. Can be 'daily', 'weekly or 'never' */\n    testFrequency?: string,\n  /** Number of dependencies of the project */\n    totalDependencies?: number,\n  /** The package manager of the project */\n    type?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/activate": {
     "query": {},
@@ -626,7 +865,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/aggregated-issues": {
     "query": {},
@@ -641,7 +886,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** An array of identified issues */\n    issues?: ({\n  /** Information about fix/upgrade/pinnable options for the issue (Non-IaC projects only) */\n    fixInfo?: {\n  /** The set of versions in which this issue has been fixed. If the issue spanned multiple versions (i.e. `1.x` and `2.x`) then there will be multiple `fixedIn` entries */\n    fixedIn?: (any)[],\n  /** Whether all of the issue's paths are fixable. Paths that are already patched are not considered fixable unless they have an alternative remediation (e.g. pinning or upgrading). An upgrade path where the only changes are in transitive dependencies is only considered fixable if the package manager supports it. */\n    isFixable?: boolean,\n  /** Whether any of the issue's paths can be fixed. Paths that are already patched are not considered fixable unless they have an alternative remediation (e.g. pinning or upgrading).  An upgrade path where the only changes are in transitive dependencies is only considered fixable if the package manager supports it. */\n    isPartiallyFixable?: boolean,\n  /** Whether all the of issue's paths are patchable */\n    isPatchable?: boolean,\n  /** Whether the issue can be fixed by pinning a transitive */\n    isPinnable?: boolean,\n  /** Whether all of the issue's paths are upgradable */\n    isUpgradable?: boolean,\n  /** Nearest version which includes a fix for the issue. This is populated for container projects only. */\n    nearestFixedInVersion?: string,\n\n},\n  /** The identifier of the issue */\n    id: string,\n  /** The list of reasons why the issue was ignored */\n    ignoreReasons?: (any)[],\n  /** The list of what introduced the issue (it is available only for container project with Dockerfile) */\n    introducedThrough?: (any)[],\n  /** Whether the issue has been ignored */\n    isIgnored: boolean,\n  /** Whether the issue has been patched (Non-IaC projects only) */\n    isPatched: boolean,\n  /** The details of the issue */\n    issueData: {\n  /** The CVSS v3 string that signifies how the CVSS score was calculated (Non-IaC projects only) */\n    \"CVSSv3\": string,\n  /** The list of people responsible for first uncovering or reporting the issue (Non-IaC projects only) */\n    credit: (any)[],\n  /** The CVSS score that results from running the CVSSv3 string (Non-IaC projects only) */\n    cvssScore: number,\n    description: string,\n  /** The date that the vulnerability was first disclosed */\n    disclosureTime: string,\n  /** The exploit maturity of the issue */\n    exploitMaturity: string,\n  /** The identifier of the issue */\n    id: string,\n  /** External identifiers assigned to the issue (Non-IaC projects only) */\n    identifiers: {\n  /** Common Vulnerability Enumeration identifiers */\n    CVE?: (any)[],\n  /** Common Weakness Enumeration identifiers */\n    CWE?: (any)[],\n  /** Identifiers assigned by the Open Source Vulnerability Database (OSVDB) */\n    OSVDB?: (any)[],\n\n},\n  /** Whether the issue is intentional, indicating a malicious package */\n    isMaliciousPackage: boolean,\n  /** The language of the issue (Non-IaC projects only) */\n    language: string,\n  /** Nearest version which includes a fix for the issue. This is populated for container projects only. (Non-IaC projects only) */\n    nearestFixedInVersion: string,\n  /** The original severity status of the issue, as retrieved from Snyk Vulnerability database, before policies are applied */\n    originalSeverity: string,\n  /** A list of patches available for the given issue (Non-IaC projects only) */\n    patches: (any)[],\n  /** Path to the resource property violating the policy within the scanned project. (IaC projects only) */\n    path: string,\n  /** The date that the vulnerability was first published by Snyk (Non-IaC projects only) */\n    publicationTime: string,\n  /** The ranges that are vulnerable and unaffected by the issue (Non-IaC projects only) */\n    semver: {\n  /** The ranges that are unaffected by the issue */\n    unaffected?: string,\n  /** The ranges that are vulnerable to the issue. May be an array or a string. */\n    vulnerable?: (any)[],\n\n},\n  /** The severity status of the issue, after policies are applied */\n    severity: string,\n  /** The issue title */\n    title: string,\n  /** URL to a page containing information about the issue */\n    url: string,\n  /** The ID of the violated policy in the issue (IaC projects only) */\n    violatedPolicyPublicId: string,\n\n},\n  /** type of the issue ('vuln', 'license' or 'configuration') */\n    issueType: string,\n  /** Onward links from this record (Non-IaC projects only) */\n    links?: {\n  /** The URL for the dependency paths that introduce this issue */\n    paths?: string,\n\n},\n  /** The package name (Non-IaC projects only) */\n    pkgName: string,\n  /** List of affected package versions (Non-IaC projects only) */\n    pkgVersions: (string)[],\n  /** Information about the priority of the issue (Non-IaC projects only) */\n    priority?: {\n  /** The list of factors that contributed to the priority of the issue */\n    factors?: (any)[],\n  /** The priority score of the issue */\n    score?: number,\n\n},\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/attributes": {
     "query": {},
@@ -656,7 +907,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Attributes now applied to the project */\n    attributes?: {\n    criticality?: (any)[],\n    environment?: (any)[],\n    lifecycle?: (any)[],\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/deactivate": {
     "query": {},
@@ -671,7 +928,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}/dep-graph": {
     "query": {},
@@ -686,7 +949,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** The dependency-graph object */\n    depGraph: {\n  /** A directional graph of the packages in the project */\n    graph: {\n  /** A list of the first-level packages */\n    nodes?: ({\n  /** A list of the direct dependencies of the package */\n    deps: ({\n  /** The id of the node */\n    nodeId: string,\n\n})[],\n  /** The internal id of the node */\n    nodeId: string,\n  /** The id of the package */\n    pkgId: string,\n\n})[],\n  /** The internal id of the root node */\n    rootNodeId: string,\n\n},\n  /** The package manager of the project */\n    pkgManager: {\n  /** The name of the package manager */\n    name: string,\n    repositories?: ({\n    alias: string,\n\n})[],\n  /** The version of the package manager */\n    version?: string,\n\n},\n  /** A list of dependencies in the project */\n    pkgs: ({\n  /** The internal id of the package */\n    id: string,\n    info: {\n  /** The name of the package */\n    name: string,\n  /** The version of the package */\n    version?: string,\n\n},\n\n})[],\n  /** The scheme version of the depGraph object */\n    schemaVersion: string,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/history": {
     "query": {
@@ -714,7 +983,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of the project's snapshots, ordered according to date (latest first). */\n    snapshots?: ({\n  /** The date that the snapshot was taken */\n    created: string,\n  /** The snapshot identifier */\n    id: string,\n    imageBaseImage?: string,\n    imageId?: string,\n    imagePlatform?: string,\n    imageTag?: string,\n  /** Number of known vulnerabilities in the project, not including ignored issues */\n    issueCounts: {\n    license?: {\n  /** Number of critical severity vulnerabilities */\n    critical: number,\n  /** Number of high severity vulnerabilities */\n    high: number,\n  /** Number of low severity vulnerabilities */\n    low: number,\n  /** Number of medium severity vulnerabilities */\n    medium: number,\n\n},\n    sast?: {\n  /** Number of critical severity vulnerabilities */\n    critical: number,\n  /** Number of high severity vulnerabilities */\n    high: number,\n  /** Number of low severity vulnerabilities */\n    low: number,\n  /** Number of medium severity vulnerabilities */\n    medium: number,\n\n},\n    vuln?: {\n  /** Number of critical severity vulnerabilities */\n    critical: number,\n  /** Number of high severity vulnerabilities */\n    high: number,\n  /** Number of low severity vulnerabilities */\n    low: number,\n  /** Number of medium severity vulnerabilities */\n    medium: number,\n\n},\n\n},\n  /** The method by which this snapshot was created. */\n    method?: \"api\" | \"cli\" | \"recurring\" | \"web\" | \"web-test\" | \"wizard\",\n  /** Number of dependencies of the project */\n    totalDependencies: number,\n\n})[],\n  /** The total number of results */\n    total?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/history/{snapshotId}/aggregated-issues": {
     "query": {},
@@ -733,7 +1008,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** An array of identified issues */\n    issues?: ({\n  /** Information about fix/upgrade/pinnable options for the issue (Non-IaC projects only) */\n    fixInfo?: {\n  /** The set of versions in which this issue has been fixed. If the issue spanned multiple versions (i.e. `1.x` and `2.x`) then there will be multiple `fixedIn` entries */\n    fixedIn?: (any)[],\n  /** Whether all of the issue's paths are fixable. Paths that are already patched are not considered fixable unless they have an alternative remediation (e.g. pinning or upgrading). An upgrade path where the only changes are in transitive dependencies is only considered fixable if the package manager supports it. */\n    isFixable?: boolean,\n  /** Whether any of the issue's paths can be fixed. Paths that are already patched are not considered fixable unless they have an alternative remediation (e.g. pinning or upgrading).  An upgrade path where the only changes are in transitive dependencies is only considered fixable if the package manager supports it. */\n    isPartiallyFixable?: boolean,\n  /** Whether all the of issue's paths are patchable */\n    isPatchable?: boolean,\n  /** Whether the issue can be fixed by pinning a transitive */\n    isPinnable?: boolean,\n  /** Whether all of the issue's paths are upgradable */\n    isUpgradable?: boolean,\n  /** Nearest version which includes a fix for the issue. This is populated for container projects only. */\n    nearestFixedInVersion?: string,\n\n},\n  /** The identifier of the issue */\n    id: string,\n  /** The list of reasons why the issue was ignored */\n    ignoreReasons?: (any)[],\n  /** The list of what introduced the issue (it is available only for container project with Dockerfile) */\n    introducedThrough?: (any)[],\n  /** Whether the issue has been ignored */\n    isIgnored: boolean,\n  /** Whether the issue has been patched (Non-IaC projects only) */\n    isPatched: boolean,\n  /** The details of the issue */\n    issueData: {\n  /** The CVSS v3 string that signifies how the CVSS score was calculated (Non-IaC projects only) */\n    \"CVSSv3\": string,\n  /** The list of people responsible for first uncovering or reporting the issue (Non-IaC projects only) */\n    credit: (any)[],\n  /** The CVSS score that results from running the CVSSv3 string (Non-IaC projects only) */\n    cvssScore: number,\n    description: string,\n  /** The date that the vulnerability was first disclosed */\n    disclosureTime: string,\n  /** The exploit maturity of the issue */\n    exploitMaturity: string,\n  /** The identifier of the issue */\n    id: string,\n  /** External identifiers assigned to the issue (Non-IaC projects only) */\n    identifiers: {\n  /** Common Vulnerability Enumeration identifiers */\n    CVE?: (any)[],\n  /** Common Weakness Enumeration identifiers */\n    CWE?: (any)[],\n  /** Identifiers assigned by the Open Source Vulnerability Database (OSVDB) */\n    OSVDB?: (any)[],\n\n},\n  /** Whether the issue is intentional, indicating a malicious package */\n    isMaliciousPackage: boolean,\n  /** The language of the issue (Non-IaC projects only) */\n    language: string,\n  /** Nearest version which includes a fix for the issue. This is populated for container projects only. (Non-IaC projects only) */\n    nearestFixedInVersion: string,\n  /** The original severity status of the issue, as retrieved from Snyk Vulnerability database, before policies are applied */\n    originalSeverity: string,\n  /** A list of patches available for the given issue (Non-IaC projects only) */\n    patches: (any)[],\n  /** Path to the resource property violating the policy within the scanned project. (IaC projects only) */\n    path: string,\n  /** The date that the vulnerability was first published by Snyk (Non-IaC projects only) */\n    publicationTime: string,\n  /** The ranges that are vulnerable and unaffected by the issue (Non-IaC projects only) */\n    semver: {\n  /** The ranges that are unaffected by the issue */\n    unaffected?: string,\n  /** The ranges that are vulnerable to the issue. May be an array or a string. */\n    vulnerable?: (any)[],\n\n},\n  /** The severity status of the issue, after policies are applied */\n    severity: string,\n  /** The issue title */\n    title: string,\n  /** URL to a page containing information about the issue */\n    url: string,\n  /** The ID of the violated policy in the issue (IaC projects only) */\n    violatedPolicyPublicId: string,\n\n},\n  /** type of the issue ('vuln', 'license' or 'configuration') */\n    issueType: string,\n  /** Onward links from this record (Non-IaC projects only) */\n    links?: {\n  /** The URL for the dependency paths that introduce this issue */\n    paths?: string,\n\n},\n  /** The package name (Non-IaC projects only) */\n    pkgName: string,\n  /** List of affected package versions (Non-IaC projects only) */\n    pkgVersions: (string)[],\n  /** Information about the priority of the issue (Non-IaC projects only) */\n    priority?: {\n  /** The list of factors that contributed to the priority of the issue */\n    factors?: (any)[],\n  /** The priority score of the issue */\n    score?: number,\n\n},\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}/history/{snapshotId}/issue/{issueId}/paths": {
     "query": {
@@ -769,7 +1050,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Onward links from this record */\n    links?: {\n  /** The URL of the last page of paths for the issue */\n    last?: string,\n  /** The URL of the next page of paths for the issue, if not on the last page */\n    next?: string,\n  /** The URL of the previous page of paths for the issue, if not on the first page */\n    prev?: string,\n\n},\n  /** A list of the dependency paths that introduce the issue */\n    paths?: (({\n  /** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n    fixVersion?: string,\n  /** The package name */\n    name?: string,\n  /** The package version */\n    version?: string,\n\n})[])[],\n  /** The identifier of the snapshot for which the paths have been found */\n    snapshotId?: string,\n  /** The total number of results */\n    total?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
     "query": {},
@@ -788,7 +1075,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
     "query": {},
@@ -807,7 +1100,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IgnorePath",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
     "query": {},
@@ -826,7 +1125,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IgnorePath",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
     "query": {},
@@ -845,7 +1150,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IgnoreRules",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}/ignores": {
     "query": {},
@@ -860,7 +1171,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IssueId",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/issue/{issueId}/jira-issue": {
     "query": {},
@@ -879,7 +1196,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** The details about the jira issue. */\n    jiraIssue?: {\n  /** The id of the issue in Jira. */\n    id?: string,\n  /** The key of the issue in Jira. */\n    key?: string,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}/issue/{issueId}/paths": {
     "query": {
@@ -915,7 +1238,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Onward links from this record */\n    links?: {\n  /** The URL of the last page of paths for the issue */\n    last?: string,\n  /** The URL of the next page of paths for the issue, if not on the last page */\n    next?: string,\n  /** The URL of the previous page of paths for the issue, if not on the first page */\n    prev?: string,\n\n},\n  /** A list of the dependency paths that introduce the issue */\n    paths?: (({\n  /** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n    fixVersion?: string,\n  /** The package name */\n    name?: string,\n  /** The package version */\n    version?: string,\n\n})[])[],\n  /** The identifier of the snapshot for which the paths have been found */\n    snapshotId?: string,\n  /** The total number of results */\n    total?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}/jira-issues": {
     "query": {},
@@ -930,7 +1259,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IssueId",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/project/{projectId}/move": {
     "query": {},
@@ -945,7 +1280,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/org/{orgId}/project/{projectId}/settings": {
     "query": {},
@@ -960,7 +1301,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/project/{projectId}/settings": {
     "query": {},
@@ -975,7 +1322,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** If set to `true`, Snyk will raise dependency upgrade PRs automatically. */\n    autoDepUpgradeEnabled?: boolean,\n  /** An array of comma-separated strings with names of dependencies you wish Snyk to ignore to upgrade. */\n    autoDepUpgradeIgnoredDependencies?: (any)[],\n  /** The limit on auto dependency upgrade PRs. */\n    autoDepUpgradeLimit?: number,\n  /** The age (in days) that an automatic dependency check is valid for */\n    autoDepUpgradeMinAge?: number,\n  /** Defines automatic remediation policies */\n    autoRemediationPrs?: {\n  /** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n    backlogPrsEnabled?: boolean,\n  /** If true, allows automatic remediation of prioritized backlog issues */\n    freshPrsEnabled?: boolean,\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** assign Snyk pull requests */\n    pullRequestAssignment?: {\n  /** an array of usernames that have contributed to the organization's project(s). */\n    assignees?: (any)[],\n  /** if the organization's project(s) will assign Snyk pull requests. */\n    enabled?: boolean,\n  /** a string representing the type of assignment your projects require. */\n    type?: \"auto\" | \"manual\",\n\n},\n  /** If set to `true`, fail Snyk Test if the repo has any vulnerabilities. Otherwise, fail only when the PR is adding a vulnerable dependency. */\n    pullRequestFailOnAnyVulns?: boolean,\n  /** If set to `true`, fail Snyk Test only for high and critical severity vulnerabilities */\n    pullRequestFailOnlyForHighSeverity?: boolean,\n  /** If set to `true`, Snyk Test checks PRs for vulnerabilities.:cq */\n    pullRequestTestEnabled?: boolean,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/project/{projectId}/settings": {
     "query": {},
@@ -990,7 +1343,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** If set to `true`, Snyk will raise dependency upgrade PRs automatically. */\n    autoDepUpgradeEnabled?: boolean,\n  /** An array of comma-separated strings with names of dependencies you wish Snyk to ignore to upgrade. */\n    autoDepUpgradeIgnoredDependencies?: (any)[],\n  /** The limit on auto dependency upgrade PRs. */\n    autoDepUpgradeLimit?: number,\n  /** The age (in days) that an automatic dependency check is valid for */\n    autoDepUpgradeMinAge?: number,\n  /** Defines automatic remediation policies */\n    autoRemediationPrs?: {\n  /** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n    backlogPrsEnabled?: boolean,\n  /** If true, allows automatic remediation of prioritized backlog issues */\n    freshPrsEnabled?: boolean,\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** assign Snyk pull requests */\n    pullRequestAssignment?: {\n  /** an array of usernames that have contributed to the organization's project(s). */\n    assignees?: (any)[],\n  /** if the organization's project(s) will assign Snyk pull requests. */\n    enabled?: boolean,\n  /** a string representing the type of assignment your projects require. */\n    type?: \"auto\" | \"manual\",\n\n},\n  /** If set to `true`, fail Snyk Test if the repo has any vulnerabilities. Otherwise, fail only when the PR is adding a vulnerable dependency. */\n    pullRequestFailOnAnyVulns?: boolean,\n  /** If set to `true`, fail Snyk Test only for high and critical severity vulnerabilities */\n    pullRequestFailOnlyForHighSeverity?: boolean,\n  /** If set to `true`, Snyk Test checks PRs for vulnerabilities.:cq */\n    pullRequestTestEnabled?: boolean,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/tags": {
     "query": {},
@@ -1005,7 +1364,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Tags now applied to the project */\n    tags?: (any)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/project/{projectId}/tags/remove": {
     "query": {},
@@ -1020,7 +1385,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Tags now applied to the project */\n    tags?: (any)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/projects": {
     "query": {},
@@ -1031,7 +1402,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    org?: {\n  /** The identifier of the org */\n    id?: string,\n    name?: string,\n\n},\n  /** A list of org's projects */\n    projects?: ({\n  /** Applied project attributes */\n    attributes?: {\n    criticality?: (any)[],\n    environment?: (any)[],\n    lifecycle?: (any)[],\n\n},\n  /** The monitored branch (if available) */\n    branch?: string | null,\n  /** URL with project overview */\n    browseUrl?: string,\n  /** The date that the project was created on */\n    created?: string,\n  /** The project identifier */\n    id?: string,\n  /** For docker projects shows the base image */\n    imageBaseImage?: string,\n  /** For Kubernetes projects shows the origin cluster name */\n    imageCluster?: string,\n  /** For docker projects shows the ID of the image */\n    imageId?: string,\n  /** For docker projects shows the platform of the image */\n    imagePlatform?: string,\n  /** For docker projects shows the tag of the image */\n    imageTag?: string,\n  /** The user who imported the project */\n    importingUser?: {\n  /** The email of the user. */\n    email?: string,\n  /** The ID of the user. */\n    id?: string,\n  /** The name of the user. */\n    name?: string,\n  /** The username of the user. */\n    username?: string,\n\n},\n  /** Describes if a project is currently monitored or it is de-activated */\n    isMonitored?: boolean,\n  /** Number of known vulnerabilities in the project, not including ignored issues */\n    issueCountsBySeverity?: {\n  /** Number of critical severity vulnerabilities */\n    critical?: number,\n  /** Number of high severity vulnerabilities */\n    high?: number,\n  /** Number of low severity vulnerabilities */\n    low?: number,\n  /** Number of medium severity vulnerabilities */\n    medium?: number,\n\n},\n  /** The date on which the most recent test was conducted for this project */\n    lastTestedDate?: string,\n    name?: string,\n  /** The origin the project was added from */\n    origin?: string,\n  /**\n   * The user who owns the project, null if not set\n   * \n   * {\n   *     \"id\": \"e713cf94-bb02-4ea0-89d9-613cce0caed2\",\n   *     \"name\": \"example-user@snyk.io\",\n   *     \"username\": \"exampleUser\",\n   *     \"email\": \"example-user@snyk.io\"\n   * }\n   */\n    owner?: hasuraSdk.JSONValue | null,\n  /** Whether the project is read-only */\n    readOnly?: boolean,\n  /** The project remote repository url. Only set for projects imported via the Snyk CLI tool. */\n    remoteRepoUrl?: string,\n  /** List of applied tags */\n    tags?: (any)[],\n  /** The identifier for which revision of the resource is scanned by Snyk. For example this may be a branch for SCM project, or a tag for a container image */\n    targetReference?: string | null,\n  /** The frequency of automated Snyk re-test. Can be 'daily', 'weekly or 'never' */\n    testFrequency?: string,\n  /** Number of dependencies of the project */\n    totalDependencies?: number,\n  /** The package manager of the project */\n    type?: string,\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/org/{orgId}/provision": {
     "query": {},
@@ -1042,7 +1419,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Deletion succeeded. */\n    ok?: boolean,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/provision": {
     "query": {},
@@ -1053,7 +1436,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "IgnoreRules",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/provision": {
     "query": {},
@@ -1064,7 +1453,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Timestamp of when this provision record was created. */\n    created?: string,\n  /** The email of the user. */\n    email?: string,\n  /** Name of the role granted for this user. */\n    role?: string,\n  /** ID of the role to granted for this user. */\n    rolePublicId?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/settings": {
     "query": {},
@@ -1075,7 +1470,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Will only be returned if `API_KEY` has read access to request access settings. */\n    requestAccess?: {\n  /** Whether requesting access to the organization is enabled. */\n    enabled: boolean,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/org/{orgId}/settings": {
     "query": {},
@@ -1086,7 +1487,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Will only be returned if `API_KEY` has read access to request access settings. */\n    requestAccess?: {\n  /** Whether requesting access to the organization is enabled. */\n    enabled: boolean,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/webhooks": {
     "query": {},
@@ -1097,7 +1504,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/webhooks": {
     "query": {},
@@ -1108,7 +1521,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/org/{orgId}/webhooks/{webhookId}": {
     "query": {},
@@ -1123,7 +1542,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/org/{orgId}/webhooks/{webhookId}": {
     "query": {},
@@ -1138,7 +1563,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/org/{orgId}/webhooks/{webhookId}/ping": {
     "query": {},
@@ -1153,9 +1584,26 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "get__/orgs": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/orgs": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "post__/reporting/counts/issues": {
     "query": {
       ".query": {
@@ -1177,7 +1625,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of issue counts by day */\n    results: ({\n  /** The number of issues */\n    count: number,\n  /** The date in the format `YYYY-MM-DD` */\n    day: string,\n    fixable?: {\n  /** The number of non-fixable issues */\n    false?: number,\n  /** The number of fixable issues */\n    true?: number,\n\n},\n    severity?: {\n  /** The number of critical severity issues */\n    critical?: number,\n  /** The number of high severity issues */\n    high?: number,\n  /** The number of low severity issues */\n    low?: number,\n  /** The number of medium severity issues */\n    medium?: number,\n\n},\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/reporting/counts/issues/latest": {
     "query": {
@@ -1192,7 +1646,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of issue counts by day */\n    results: ({\n  /** The number of issues */\n    count: number,\n  /** The date in the format `YYYY-MM-DD` */\n    day: string,\n    fixable?: {\n  /** The number of non-fixable issues */\n    false?: number,\n  /** The number of fixable issues */\n    true?: number,\n\n},\n    severity?: {\n  /** The number of critical severity issues */\n    critical?: number,\n  /** The number of high severity issues */\n    high?: number,\n  /** The number of low severity issues */\n    low?: number,\n  /** The number of medium severity issues */\n    medium?: number,\n\n},\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/reporting/counts/projects": {
     "query": {
@@ -1211,13 +1671,25 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of project counts by day */\n    results: ({\n  /** The number of projects */\n    count: number,\n  /** The date in the format `YYYY-MM-DD` */\n    day: string,\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/reporting/counts/projects/latest": {
     "query": {},
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of project counts by day */\n    results: ({\n  /** The number of projects */\n    count: number,\n  /** The date in the format `YYYY-MM-DD` */\n    day: string,\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/reporting/counts/tests": {
     "query": {
@@ -1240,7 +1712,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of test counts */\n    results: ({\n  /** The number of tests conducted */\n    count: number,\n    isPrivate?: {\n  /** The number of tests conducted against public projects */\n    false?: number,\n  /** The number of tests conducted against private projects */\n    true?: number,\n\n},\n    issuesPrevented?: {\n  /** The number of tests that did not prevent issues from being introduced */\n    false?: number,\n  /** The number of tests that prevented issues from being introduced */\n    true?: number,\n\n},\n\n})[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/reporting/issues/": {
     "query": {
@@ -1279,7 +1757,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of issues */\n    results: (({\n  /** When `groupBy` is used, multiple projects may be returned per issue */\n    projects: (any)[],\n\n} | {\n  /** When no `groupBy` is used, a single project is returned per issue */\n    project: {\n  /** The identifier of the project */\n    id: string,\n  /** The name of the project */\n    name: string,\n  /** The package manager for the project (e.g. npm, rubygems etc) */\n    packageManager: string,\n  /** The source of the project (e.g. github, heroku etc) */\n    source: string,\n  /** The file path to the dependency manifest or lock file (e.g. package.json, Gemfile.lock etc) */\n    targetFile?: string,\n  /** URL to a page containing information about the project */\n    url: string,\n\n},\n\n}) & ({\n  /** The date that the issue was fixed */\n    fixedDate?: string,\n  /** The date that the issue was introduced into the project */\n    introducedDate: string,\n  /** Whether the issue has been fixed */\n    isFixed: boolean,\n    issue: {\n  /** The CVSS v3 string that signifies how the CVSS score was calculated (not applicable to licenses) */\n    \"CVSSv3\"?: string,\n  /** The list of people responsible for first uncovering or reporting the issue (not applicable to licenses) */\n    credit?: (any)[],\n  /** The CVSS score that results from running the CVSSv3 string (not applicable to licenses) */\n    cvssScore?: number,\n  /** The date that the vulnerability was first disclosed (not applicable to licenses) */\n    disclosureTime?: string,\n  /** The exploit maturity of the issue */\n    exploitMaturity: string,\n  /** The identifier of the issue */\n    id: string,\n  /** External identifiers assigned to the issue (not applicable to licenses) */\n    identifiers?: {\n  /** Common Vulnerability Enumeration identifiers */\n    CVE?: (any)[],\n  /** Common Weakness Enumeration identifiers */\n    CWE?: (any)[],\n  /** Identifiers assigned by the Open Source Vulnerability Database (OSVDB) */\n    OSVDB?: (any)[],\n\n},\n  /** The list of ignore rules that were applied to the issue (only present if issue was ignored and no `groupBy` in the API request) */\n    ignored?: (any)[],\n  /** Whether the issue has been ignored (only present if there is no `groupBy` in the API request) */\n    isIgnored?: boolean,\n  /** Whether the issue can be patched */\n    isPatchable?: boolean,\n  /** Whether the issue has been patched (not applicable to licenses and only present if there is no `groupBy` in the API request) */\n    isPatched?: boolean,\n  /** Whether the issue can be pinned */\n    isPinnable?: boolean,\n  /** Whether the issue can be fixed by upgrading to a later version of the dependency */\n    isUpgradable?: boolean,\n  /** The link to the Jira issue attached to the vulnerability */\n    jiraIssueUrl?: string,\n  /** The language of the issue */\n    language?: string,\n  /** The original severity status of the issue, as retrieved from Snyk Vulnerability database, before policies are applied */\n    originalSeverity: string,\n  /** The name of the package that the issue relates to */\n    package: string,\n  /** The package manager of the issue */\n    packageManager?: string,\n  /** A list of patches available for the given issue (not applicable to licenses) */\n    patches?: (any)[],\n  /** The priority score ranging between 0-1000 */\n    priorityScore?: number,\n  /** The date that the vulnerability was first published by Snyk (not applicable to licenses) */\n    publicationTime?: string,\n  /** The ranges that are vulnerable and unaffected by the issue */\n    semver?: {\n  /** The ranges that are unaffected by the issue */\n    unaffected?: string,\n  /** The ranges that are vulnerable to the issue */\n    vulnerable?: (any)[],\n\n},\n  /** The severity status of the issue, after policies are applied */\n    severity: string,\n  /** The issue title */\n    title: string,\n  /** The issue type, can be \"vuln\", \"license\" */\n    type: string,\n  /** A list of all severities in issue per projects */\n    uniqueSeveritiesList?: (any)[],\n  /** URL to a page containing information about the issue */\n    url: string,\n  /** The version of the package that the issue relates to */\n    version: string,\n\n},\n  /** The date that the issue was patched */\n    patchedDate?: string,\n\n}))[],\n  /** The total number of results found */\n    total: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/reporting/issues/latest": {
     "query": {
@@ -1310,13 +1794,25 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** A list of issues */\n    results: (({\n  /** When `groupBy` is used, multiple projects may be returned per issue */\n    projects: (any)[],\n\n} | {\n  /** When no `groupBy` is used, a single project is returned per issue */\n    project: {\n  /** The identifier of the project */\n    id: string,\n  /** The name of the project */\n    name: string,\n  /** The package manager for the project (e.g. npm, rubygems etc) */\n    packageManager: string,\n  /** The source of the project (e.g. github, heroku etc) */\n    source: string,\n  /** The file path to the dependency manifest or lock file (e.g. package.json, Gemfile.lock etc) */\n    targetFile?: string,\n  /** URL to a page containing information about the project */\n    url: string,\n\n},\n\n}) & ({\n  /** The date that the issue was fixed */\n    fixedDate?: string,\n  /** The date that the issue was introduced into the project */\n    introducedDate: string,\n  /** Whether the issue has been fixed */\n    isFixed: boolean,\n    issue: {\n  /** The CVSS v3 string that signifies how the CVSS score was calculated (not applicable to licenses) */\n    \"CVSSv3\"?: string,\n  /** The list of people responsible for first uncovering or reporting the issue (not applicable to licenses) */\n    credit?: (any)[],\n  /** The CVSS score that results from running the CVSSv3 string (not applicable to licenses) */\n    cvssScore?: number,\n  /** The date that the vulnerability was first disclosed (not applicable to licenses) */\n    disclosureTime?: string,\n  /** The exploit maturity of the issue */\n    exploitMaturity: string,\n  /** The identifier of the issue */\n    id: string,\n  /** External identifiers assigned to the issue (not applicable to licenses) */\n    identifiers?: {\n  /** Common Vulnerability Enumeration identifiers */\n    CVE?: (any)[],\n  /** Common Weakness Enumeration identifiers */\n    CWE?: (any)[],\n  /** Identifiers assigned by the Open Source Vulnerability Database (OSVDB) */\n    OSVDB?: (any)[],\n\n},\n  /** The list of ignore rules that were applied to the issue (only present if issue was ignored and no `groupBy` in the API request) */\n    ignored?: (any)[],\n  /** Whether the issue has been ignored (only present if there is no `groupBy` in the API request) */\n    isIgnored?: boolean,\n  /** Whether the issue can be patched */\n    isPatchable?: boolean,\n  /** Whether the issue has been patched (not applicable to licenses and only present if there is no `groupBy` in the API request) */\n    isPatched?: boolean,\n  /** Whether the issue can be pinned */\n    isPinnable?: boolean,\n  /** Whether the issue can be fixed by upgrading to a later version of the dependency */\n    isUpgradable?: boolean,\n  /** The link to the Jira issue attached to the vulnerability */\n    jiraIssueUrl?: string,\n  /** The language of the issue */\n    language?: string,\n  /** The original severity status of the issue, as retrieved from Snyk Vulnerability database, before policies are applied */\n    originalSeverity: string,\n  /** The name of the package that the issue relates to */\n    package: string,\n  /** The package manager of the issue */\n    packageManager?: string,\n  /** A list of patches available for the given issue (not applicable to licenses) */\n    patches?: (any)[],\n  /** The priority score ranging between 0-1000 */\n    priorityScore?: number,\n  /** The date that the vulnerability was first published by Snyk (not applicable to licenses) */\n    publicationTime?: string,\n  /** The ranges that are vulnerable and unaffected by the issue */\n    semver?: {\n  /** The ranges that are unaffected by the issue */\n    unaffected?: string,\n  /** The ranges that are vulnerable to the issue */\n    vulnerable?: (any)[],\n\n},\n  /** The severity status of the issue, after policies are applied */\n    severity: string,\n  /** The issue title */\n    title: string,\n  /** The issue type, can be \"vuln\", \"license\" */\n    type: string,\n  /** A list of all severities in issue per projects */\n    uniqueSeveritiesList?: (any)[],\n  /** URL to a page containing information about the issue */\n    url: string,\n  /** The version of the package that the issue relates to */\n    version: string,\n\n},\n  /** The date that the issue was patched */\n    patchedDate?: string,\n\n}))[],\n  /** The total number of results found */\n    total: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/test/composer": {
     "query": {},
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/test/dep-graph": {
     "query": {
@@ -1331,7 +1827,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/test/golangdep": {
     "query": {
@@ -1346,15 +1848,38 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/test/govendor": {
     "query": {},
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "post__/test/gradle": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/test/gradle": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "get__/test/gradle/{group}/{name}/{version}": {
     "query": {
       ".query": {
@@ -1385,7 +1910,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/test/maven": {
     "query": {
@@ -1404,7 +1935,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/test/maven/{groupId}/{artifactId}/{version}": {
     "query": {
@@ -1436,9 +1973,26 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "post__/test/npm": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/test/npm": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "get__/test/npm/{packageName}/{version}": {
     "query": {
       ".query": {
@@ -1461,9 +2015,26 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "post__/test/pip": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/test/pip": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "get__/test/pip/{packageName}/{version}": {
     "query": {
       ".query": {
@@ -1486,13 +2057,25 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "post__/test/rubygems": {
     "query": {},
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/test/rubygems/{gemName}/{version}": {
     "query": {
@@ -1516,9 +2099,26 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "post__/test/sbt": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/test/sbt": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "get__/test/sbt/{groupId}/{artifactId}/{version}": {
     "query": {
       ".query": {
@@ -1549,10 +2149,38 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "post__/test/yarn": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "get__/user/me": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/test/yarn": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
+  "get__/user/me": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** The email of the user. */\n    email?: string,\n  /** The id of the user. */\n    id?: string,\n  /** The organizations that the user belongs to. */\n    orgs?: any,\n  /** The username of the user. */\n    username?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "get__/user/me/notification-settings/org/{orgId}": {
     "query": {},
     "body": {},
@@ -1562,7 +2190,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    \"new-issues-remediations\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n  /** The severity levels of issues to send notifications for (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueSeverity: \"all\" | \"high\",\n  /** Filter the types of issue to include in notifications (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueType: \"all\" | \"vuln\" | \"license\" | \"none\",\n\n},\n    \"project-imported\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"test-limit\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"weekly-report\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/user/me/notification-settings/org/{orgId}": {
     "query": {},
@@ -1573,7 +2207,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    \"new-issues-remediations\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n  /** The severity levels of issues to send notifications for (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueSeverity: \"all\" | \"high\",\n  /** Filter the types of issue to include in notifications (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueType: \"all\" | \"vuln\" | \"license\" | \"none\",\n\n},\n    \"project-imported\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"test-limit\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"weekly-report\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/user/me/notification-settings/org/{orgId}/project/{projectId}": {
     "query": {},
@@ -1588,7 +2228,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    \"new-issues-remediations\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n  /** The severity levels of issues to send notifications for (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueSeverity: \"all\" | \"high\",\n  /** Filter the types of issue to include in notifications (only applicable for `new-remediations-vulnerabilities` notificationType) */\n    issueType: \"all\" | \"vuln\" | \"license\" | \"none\",\n\n},\n    \"project-imported\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"test-limit\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n    \"weekly-report\"?: {\n  /** Whether notifications should be sent */\n    enabled: boolean,\n  /** Whether the setting was found on the requested context directly or inherited from a parent */\n    inherited?: boolean,\n\n},\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "put__/user/me/notification-settings/org/{orgId}/project/{projectId}": {
     "query": {},
@@ -1603,7 +2249,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/user/{userId}": {
     "query": {},
@@ -1614,6 +2266,12 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** The email of the user. */\n    email?: string,\n  /** The id of the user. */\n    id?: string,\n  /** The name of the user. */\n    name?: string,\n  /** The username of the user. */\n    username?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   }
 }

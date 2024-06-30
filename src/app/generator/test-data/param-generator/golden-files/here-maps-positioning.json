@@ -1,5 +1,16 @@
 {
-  "get__/health": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/health": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "ApiHealthStatus",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "post__/locate": {
     "query": {
       ".query": {
@@ -37,7 +48,24 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** Object containing information on a location where a measurement was taken. */\n    location: PositionLocate,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "get__/version": { "query": {}, "body": {}, "path": {}, "response": {} }
+  "get__/version": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "ApiVersion",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  }
 }
