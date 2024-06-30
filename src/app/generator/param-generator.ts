@@ -20,7 +20,11 @@ export function renderParams(schema: types.Schema): types.Schema {
   } else if (types.schemaIsTypeAllOf(schema)) {
     rendered = renderAllOfTypeSchema(schema);
   } else {
-    logger.error(`Cannot resolve parameter schema: ${JSON.stringify(schema)}`);
+    if (!types.schemaTypeIsEmpty(schema)) {
+      logger.error(
+        `Cannot resolve parameter schema: ${JSON.stringify(schema)}`,
+      );
+    }
   }
   schema._$rendered = rendered ?? "";
   return schema;

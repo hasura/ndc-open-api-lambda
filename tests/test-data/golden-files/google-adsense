@@ -959,10 +959,10 @@ export async function deleteAccountsAdsenseAccountsAlertsDelete(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -2084,10 +2084,10 @@ export async function deleteAlertsAdsenseAlertsDelete(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 

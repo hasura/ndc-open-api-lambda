@@ -1,5 +1,16 @@
 {
-  "post__/author": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/author": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "MainAuthor",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "delete__/author/{authorId}": {
     "query": {},
     "body": {},
@@ -9,11 +20,53 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "MainAuthor",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
-  "get__/authors": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "put__/blog/": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "post__/blog/": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/authors": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "(MainAuthor)[]",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name.__no_name": {
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
+  "put__/blog/": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "MainBlog",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
+  "post__/blog/": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "MainBlog",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
+  },
   "patch__/blog/dislike": {
     "query": {
       ".query": {
@@ -27,7 +80,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "MainBlog",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "patch__/blog/like": {
     "query": {
@@ -42,7 +101,13 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "MainBlog",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "delete__/blog/{blogId}": {
     "query": {},
@@ -53,7 +118,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "MainBlog",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "patch__/blog/{blogId}": {
     "query": {
@@ -81,7 +152,13 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "MainBlog",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+    }
   },
   "get__/blogs/": {
     "query": {
@@ -96,6 +173,15 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "(MainBlog)[]",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name.__no_name": {
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   }
 }

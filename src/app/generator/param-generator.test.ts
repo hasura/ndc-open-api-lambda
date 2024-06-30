@@ -300,6 +300,8 @@ describe("param-generator", async () => {
         const basicChars = routeTypes.getBasicCharacteristics(route);
         const routeKey = `${basicChars.method}__${basicChars.route}`;
 
+        // console.log(`${routeKey}: ${cj.stringify(route)}`)
+
         const queryParams = routeTypes.getQueryParams(route);
         const renderedQueryParams: Record<string, RenderedParam> = {};
         if (queryParams) {
@@ -316,11 +318,18 @@ describe("param-generator", async () => {
           }
         }
 
+        const responseSchema = routeTypes.getResponseSchema(route);
+        const renderedResponseSchema: Record<string, RenderedParam> = {};
+        if (responseSchema) {
+          render.renderParams(responseSchema);
+          traverseSchema("", renderedResponseSchema, responseSchema);
+        }
+
         got[routeKey] = {
           query: renderedQueryParams,
           body: {},
           path: renderedPathParams,
-          response: {},
+          response: renderedResponseSchema,
         };
       }
 

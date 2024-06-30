@@ -1,6 +1,7 @@
 import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as schemaTypes from "./types";
 import * as paramTypes from "./param-types";
+import * as logger from "../../../util/logger";
 
 export type ApiRoute = swaggerTypescriptApi.ParsedRoute & {
   headersObjectSchema: Headers | undefined;
@@ -35,7 +36,20 @@ export type ApiRoute = swaggerTypescriptApi.ParsedRoute & {
   };
   queryObjectSchema: paramTypes.Schema;
   pathObjectSchema: paramTypes.Schema;
-  responseBodySchema: paramTypes.Schema;
+  responseBodySchema: {
+    description: string | undefined;
+    contentKind: string | undefined;
+    type: string;
+    content:
+      | {
+          "application/json":
+            | {
+                schema: paramTypes.Schema | undefined;
+              }
+            | undefined;
+        }
+      | undefined;
+  };
   requestBodySchema: paramTypes.Schema;
 };
 
@@ -55,6 +69,11 @@ export function getBasicCharacteristics(
     method: route.raw.method,
     usage: route.routeName.usage,
   };
+}
+
+export function getFormattedRouteName(route: ApiRoute): string {
+  const basicChars = getBasicCharacteristics(route);
+  return `${basicChars.method.toUpperCase()} :${basicChars.route}`;
 }
 
 export function getQueryParams(route: ApiRoute): paramTypes.Schema | undefined {
@@ -100,6 +119,44 @@ export function getRequestBody(route: ApiRoute): paramTypes.Schema | undefined {
     return undefined;
   }
   return route.requestBodyInfo;
+}
+
+export function hasResponseType(route: ApiRoute): boolean {
+  if (route.responseBodySchema?.type) {
+    return true;
+  }
+  return false;
+}
+
+export function getResponseSchema(route: ApiRoute): paramTypes.Schema {
+  let schemaType = route.responseBodySchema?.type;
+  if (!hasResponseType(route)) {
+    logger.warn(
+      `No response type found for API Route ${getFormattedRouteName(route)}, switching to 'hasuraSdk.JSONValue'`,
+    );
+    logger.debug(
+      `Response Schema for API Route ${getFormattedRouteName(route)}:\n${JSON.stringify(route.responseBodySchema)}`,
+    );
+    schemaType = "hasuraSdk.JSONValue";
+  }
+
+  /**
+   * Since there isn't a proper parser for return types
+   * we'll render whatever is given by the library
+   */
+  const schema: paramTypes.SchemaTypeCustomType = {
+    paramName: undefined,
+    name: undefined,
+    required: true,
+    description: route.responseBodySchema?.description ?? "",
+    type: schemaType,
+    schema:
+      route.responseBodySchema?.content?.["application/json"]?.schema ??
+      paramTypes.getEmptySchema(),
+    _$rendered: schemaType,
+    _$forcedCustom: true,
+  };
+  return schema;
 }
 
 export function getQueryParamName(route: ApiRoute): string {
