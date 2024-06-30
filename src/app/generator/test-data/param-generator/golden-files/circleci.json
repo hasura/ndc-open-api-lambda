@@ -8,7 +8,10 @@
         "rendered": "User",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/project/{username}/{project}": {
@@ -46,12 +49,28 @@
         "rendered": "Builds",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/project/{username}/{project}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: {\n  /** Additional environment variables to inject into the build environment. A map of names to values. */\n    build_parameters?: BuildParameters,\n  /** The number of containers to use to run the build. Default is null and the project default is used. */\n    parallel?: Parallel,\n  /**\n   * The specific revision to build.\n   * Default is null and the head of the branch is used. Cannot be used with tag parameter.\n   */\n    revision?: Revision,\n  /** The tag to build. Default is null. Cannot be used with revision parameter. */\n    tag?: Tag,\n\n},",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".username": {
         "rendered": " username: string,",
@@ -67,7 +86,10 @@
         "rendered": "BuildSummary",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/project/{username}/{project}/build-cache": {
@@ -88,8 +110,12 @@
         "rendered": "{\n    status?: string,\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -112,12 +138,24 @@
         "rendered": "Keys",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/project/{username}/{project}/checkout-key": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: \"deploy-key\" | \"github-user-key\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".username": {
         "rendered": " username: string,",
@@ -133,7 +171,10 @@
         "rendered": "Key",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/project/{username}/{project}/checkout-key/{fingerprint}": {
@@ -158,8 +199,12 @@
         "rendered": "{\n    message?: \"OK\",\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -186,7 +231,10 @@
         "rendered": "Key",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/project/{username}/{project}/envvar": {
@@ -207,7 +255,10 @@
         "rendered": "Envvars",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/project/{username}/{project}/envvar": {
@@ -228,7 +279,10 @@
         "rendered": "Envvar",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/project/{username}/{project}/envvar/{name}": {
@@ -253,8 +307,12 @@
         "rendered": "{\n    message?: \"OK\",\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -281,12 +339,28 @@
         "rendered": "Envvar",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/project/{username}/{project}/ssh-key": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: {\n    hostname?: string,\n    private_key?: string,\n\n},",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".username": {
         "rendered": " username: string,",
@@ -302,12 +376,28 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/project/{username}/{project}/tree/{branch}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: {\n  /** Additional environment variables to inject into the build environment. A map of names to values. */\n    build_parameters?: BuildParameters,\n  /** The number of containers to use to run the build. Default is null and the project default is used. */\n    parallel?: Parallel,\n  /**\n   * The specific revision to build.\n   * Default is null and the head of the branch is used. Cannot be used with tag parameter.\n   */\n    revision?: Revision,\n\n},",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".username": {
         "rendered": " username: string,",
@@ -327,7 +417,10 @@
         "rendered": "Build",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/project/{username}/{project}/{build_num}": {
@@ -352,7 +445,10 @@
         "rendered": "BuildDetail",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/project/{username}/{project}/{build_num}/artifacts": {
@@ -377,7 +473,10 @@
         "rendered": "Artifacts",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/project/{username}/{project}/{build_num}/cancel": {
@@ -402,7 +501,10 @@
         "rendered": "Build",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/project/{username}/{project}/{build_num}/retry": {
@@ -427,7 +529,10 @@
         "rendered": "Build",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/project/{username}/{project}/{build_num}/tests": {
@@ -452,7 +557,10 @@
         "rendered": "Tests",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/projects": {
@@ -464,7 +572,10 @@
         "rendered": "Projects",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/recent-builds": {
@@ -489,7 +600,10 @@
         "rendered": "Builds",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/user/heroku-key": {
@@ -501,7 +615,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   }
 }

@@ -17,6 +17,8 @@ export type ApiRoute = swaggerTypescriptApi.ParsedRoute & {
     contentTypes: string[] | undefined;
     schema: paramTypes.Schema | undefined;
     type: string | undefined;
+    paramName: string;
+    required: boolean | undefined;
   };
   specificArgs: {
     body:
@@ -108,9 +110,7 @@ export function hasRequestBody(route: ApiRoute): boolean {
   return (
     route.requestBodyInfo !== undefined &&
     route.requestBodyInfo.type !== undefined &&
-    route.requestBodyInfo.type !== null &&
-    route.requestBodyInfo.schema !== undefined &&
-    route.requestBodyInfo.schema !== null
+    route.requestBodyInfo.type !== null
   );
 }
 
@@ -118,7 +118,22 @@ export function getRequestBody(route: ApiRoute): paramTypes.Schema | undefined {
   if (!hasRequestBody(route)) {
     return undefined;
   }
-  return route.requestBodyInfo;
+
+  /**
+   * Since there isn't a proper parser for request body
+   * we'll render whatever is given by the library
+   */
+  const schema: paramTypes.SchemaTypeCustomType = {
+    paramName: route.requestBodyInfo.paramName,
+    name: route.requestBodyInfo.paramName,
+    required: route.requestBodyInfo.required ?? false,
+    description: "Request body",
+    type: route.requestBodyInfo.type!,
+    schema: route.requestBodyInfo.schema ?? paramTypes.getEmptySchema(),
+    _$rendered: "",
+    _$forcedCustom: true,
+  };
+  return schema;
 }
 
 export function hasResponseType(route: ApiRoute): boolean {

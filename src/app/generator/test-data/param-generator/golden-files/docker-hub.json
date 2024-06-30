@@ -21,19 +21,34 @@
         "rendered": "GetAccessTokensResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/v2/access-tokens": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateAccessTokenRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "CreateAccessTokensResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/v2/access-tokens/{uuid}": {
@@ -50,7 +65,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/access-tokens/{uuid}": {
@@ -67,12 +85,24 @@
         "rendered": "(AccessToken & {\n  /** @example \"\" */\n    token?: string,\n\n})",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "patch__/v2/access-tokens/{uuid}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: PatchAccessTokenRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".uuid": {
         "rendered": " uuid: string,",
@@ -84,7 +114,10 @@
         "rendered": "PatchAccessTokenResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/auditlogs/{account}": {
@@ -134,7 +167,10 @@
         "rendered": "GetAuditLogsResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/auditlogs/{account}/actions": {
@@ -151,12 +187,24 @@
         "rendered": "GetAuditActionsResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/v2/namespaces/{namespace}/delete-images": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: PostNamespacesDeleteImagesRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".namespace": {
         "rendered": "\n/** Namespace of the repository. */\n namespace: string,",
@@ -168,7 +216,10 @@
         "rendered": "PostNamespacesDeleteImagesResponseSuccess",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/images": {
@@ -218,7 +269,10 @@
         "rendered": "GetNamespaceRepositoryImagesResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/images-summary": {
@@ -248,7 +302,10 @@
         "rendered": "GetNamespaceRepositoryImagesSummaryResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/images/{digest}/tags": {
@@ -286,7 +343,10 @@
         "rendered": "GetNamespaceRepositoryImagesTagsResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/tags": {
@@ -320,7 +380,10 @@
         "rendered": "PaginatedTags",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "head__/v2/namespaces/{namespace}/repositories/{repository}/tags": {
@@ -341,7 +404,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}": {
@@ -366,7 +432,10 @@
         "rendered": "Tag",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "head__/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}": {
@@ -391,7 +460,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/orgs/{name}/settings": {
@@ -408,12 +480,24 @@
         "rendered": "OrgSettings",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/v2/orgs/{name}/settings": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: {\n    restricted_images: (RestrictedImages & hasuraSdk.JSONValue),\n\n},",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".name": {
         "rendered": " name: string,",
@@ -425,7 +509,10 @@
         "rendered": "OrgSettings",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/scim/2.0/ResourceTypes": {
@@ -437,7 +524,10 @@
         "rendered": "{\n    resources?: (ScimResourceType)[],\n  /** @example [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"] */\n    schemas?: (string)[],\n  /** @example 1 */\n    totalResults?: number,\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/scim/2.0/ResourceTypes/{name}": {
@@ -454,7 +544,10 @@
         "rendered": "ScimResourceType",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/scim/2.0/Schemas": {
@@ -466,7 +559,10 @@
         "rendered": "{\n    resources?: (ScimSchema)[],\n  /** @example [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"] */\n    schemas?: (string)[],\n  /** @example 1 */\n    totalResults?: number,\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/scim/2.0/Schemas/{id}": {
@@ -483,7 +579,10 @@
         "rendered": "ScimSchema",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/scim/2.0/ServiceProviderConfig": {
@@ -495,7 +594,10 @@
         "rendered": "ScimServiceProviderConfig",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/scim/2.0/Users": {
@@ -536,19 +638,34 @@
         "rendered": "{\n  /** @example 10 */\n    itemsPerPage?: number,\n    resources?: (ScimUser)[],\n  /** @example [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"] */\n    schemas?: (string)[],\n  /** @example 1 */\n    startIndex?: number,\n  /** @example 1 */\n    totalResults?: number,\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/v2/scim/2.0/Users": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: {\n    name?: ScimUserName,\n    schemas: ScimUserSchemas,\n  /** The user's email address. This must be reachable via email. */\n    userName: ScimUserUsername,\n\n},",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "ScimUser",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/v2/scim/2.0/Users/{id}": {
@@ -565,12 +682,24 @@
         "rendered": "ScimUser",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/v2/scim/2.0/Users/{id}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: {\n  /**\n   * If this is omitted from the request, it will default to false resulting in a deactivated user.\n   * @default false\n   */\n    enabled?: boolean,\n  /** If this is omitted from the request, the update will skip the update on it. We will only ever change the name, but not clear it. */\n    name?: (ScimUserName),\n    schemas: ScimUserSchemas,\n\n},",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": " id: string,",
@@ -582,31 +711,58 @@
         "rendered": "ScimUser",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/v2/users/2fa-login": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: Users2FALoginRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "PostUsersLoginSuccessResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/v2/users/login": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: UsersLoginRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "PostUsersLoginSuccessResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   }
 }

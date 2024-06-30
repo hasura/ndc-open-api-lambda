@@ -325,9 +325,16 @@ describe("param-generator", async () => {
           traverseSchema("", renderedResponseSchema, responseSchema);
         }
 
+        const bodyParam = routeTypes.getRequestBody(route);
+        const renderedBodyParams: Record<string, RenderedParam> = {};
+        if (bodyParam) {
+          render.renderParams(bodyParam);
+          traverseSchema("", renderedBodyParams, bodyParam);
+        }
+
         got[routeKey] = {
           query: renderedQueryParams,
-          body: {},
+          body: renderedBodyParams,
           path: renderedPathParams,
           response: renderedResponseSchema,
         };
@@ -348,7 +355,7 @@ function traverseSchema(
 ) {
   const currentPath = `${path}.${types.getParameterName(schema) ?? "__no_name"}`;
   params[currentPath] = {
-    rendered: schema._$rendered!,
+    rendered: schema._$rendered ?? "__undefined",
     requiresRelaxedTypeAnnotation: false, // TODO: change when supported
   };
   if (types.schemaIsTypeObject(schema)) {
