@@ -178,10 +178,10 @@ export async function getActionAttachInstancesGetAttachInstances(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -203,10 +203,10 @@ export async function postActionAttachInstancesPostAttachInstances(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -803,10 +803,10 @@ export async function getActionCreateAutoScalingGroupGetCreateAutoScalingGroup(
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -829,10 +829,10 @@ export async function postActionCreateAutoScalingGroupPostCreateAutoScalingGroup
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -950,10 +950,10 @@ export async function getActionCreateLaunchConfigurationGetCreateLaunchConfigura
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -976,10 +976,10 @@ export async function postActionCreateLaunchConfigurationPostCreateLaunchConfigu
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1006,10 +1006,10 @@ export async function getActionCreateOrUpdateTagsGetCreateOrUpdateTags(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1031,10 +1031,10 @@ export async function postActionCreateOrUpdateTagsPostCreateOrUpdateTags(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1066,10 +1066,10 @@ export async function getActionDeleteAutoScalingGroupGetDeleteAutoScalingGroup(
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1092,10 +1092,10 @@ export async function postActionDeleteAutoScalingGroupPostDeleteAutoScalingGroup
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1123,10 +1123,10 @@ export async function getActionDeleteLaunchConfigurationGetDeleteLaunchConfigura
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1149,10 +1149,10 @@ export async function postActionDeleteLaunchConfigurationPostDeleteLaunchConfigu
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1245,10 +1245,10 @@ export async function getActionDeleteNotificationConfigurationGetDeleteNotificat
         },
       },
     );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1273,10 +1273,10 @@ export async function postActionDeleteNotificationConfigurationPostDeleteNotific
         },
       },
     );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1307,10 +1307,10 @@ export async function getActionDeletePolicyGetDeletePolicy(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1332,10 +1332,10 @@ export async function postActionDeletePolicyPostDeletePolicy(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1368,10 +1368,10 @@ export async function getActionDeleteScheduledActionGetDeleteScheduledAction(
       },
     },
   );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1394,10 +1394,10 @@ export async function postActionDeleteScheduledActionPostDeleteScheduledAction(
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1424,10 +1424,10 @@ export async function getActionDeleteTagsGetDeleteTags(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1449,10 +1449,10 @@ export async function postActionDeleteTagsPostDeleteTags(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3195,10 +3195,10 @@ export async function getActionDisableMetricsCollectionGetDisableMetricsCollecti
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3221,10 +3221,10 @@ export async function postActionDisableMetricsCollectionPostDisableMetricsCollec
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3260,10 +3260,10 @@ export async function getActionEnableMetricsCollectionGetEnableMetricsCollection
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3286,10 +3286,10 @@ export async function postActionEnableMetricsCollectionPostEnableMetricsCollecti
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3395,10 +3395,10 @@ export async function getActionExecutePolicyGetExecutePolicy(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3420,10 +3420,10 @@ export async function postActionExecutePolicyPostExecutePolicy(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3676,10 +3676,10 @@ export async function getActionPutNotificationConfigurationGetPutNotificationCon
         },
       },
     );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3704,10 +3704,10 @@ export async function postActionPutNotificationConfigurationPostPutNotificationC
         },
       },
     );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3918,10 +3918,10 @@ export async function getActionPutScheduledUpdateGroupActionGetPutScheduledUpdat
         },
       },
     );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3946,10 +3946,10 @@ export async function postActionPutScheduledUpdateGroupActionPostPutScheduledUpd
         },
       },
     );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4129,10 +4129,10 @@ export async function getActionResumeProcessesGetResumeProcesses(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4154,10 +4154,10 @@ export async function postActionResumeProcessesPostResumeProcesses(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4249,10 +4249,10 @@ export async function getActionSetDesiredCapacityGetSetDesiredCapacity(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4274,10 +4274,10 @@ export async function postActionSetDesiredCapacityPostSetDesiredCapacity(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4312,10 +4312,10 @@ export async function getActionSetInstanceHealthGetSetInstanceHealth(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4337,10 +4337,10 @@ export async function postActionSetInstanceHealthPostSetInstanceHealth(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4546,10 +4546,10 @@ export async function getActionSuspendProcessesGetSuspendProcesses(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4571,10 +4571,10 @@ export async function postActionSuspendProcessesPostSuspendProcesses(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4772,10 +4772,10 @@ export async function getActionUpdateAutoScalingGroupGetUpdateAutoScalingGroup(
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4798,9 +4798,9 @@ export async function postActionUpdateAutoScalingGroupPostUpdateAutoScalingGroup
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
