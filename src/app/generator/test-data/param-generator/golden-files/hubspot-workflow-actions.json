@@ -1,0 +1,300 @@
+{
+  "post__/automation/v4/actions/callbacks/complete": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/automation/v4/actions/callbacks/{callbackId}/complete": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".callbackId": {
+        "rendered": "\n/** The ID of the target app. */\n callbackId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/automation/v4/actions/{appId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Maximum number of results per page. */\n limit?: number, \n/** The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results. */\n after?: string, \n/** Whether to include archived custom actions. */\n archived?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Maximum number of results per page. */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.after": {
+        "rendered": "\n/** The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results. */\n after?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Whether to include archived custom actions. */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/automation/v4/actions/{appId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/automation/v4/actions/{appId}/{definitionId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/automation/v4/actions/{appId}/{definitionId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Whether to include archived custom actions. */\n archived?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.archived": {
+        "rendered": "\n/** Whether to include archived custom actions. */\n archived?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "patch__/automation/v4/actions/{appId}/{definitionId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/automation/v4/actions/{appId}/{definitionId}/functions": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionType": {
+        "rendered": "\n/** The type of function. This determines when the function will be called. */\n functionType: \"PRE_ACTION_EXECUTION\" | \"PRE_FETCH_OPTIONS\" | \"POST_FETCH_OPTIONS\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionType": {
+        "rendered": "\n/** The type of function. This determines when the function will be called. */\n functionType: \"PRE_ACTION_EXECUTION\" | \"PRE_FETCH_OPTIONS\" | \"POST_FETCH_OPTIONS\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionType": {
+        "rendered": "\n/** The type of function. This determines when the function will be called. */\n functionType: \"PRE_ACTION_EXECUTION\" | \"PRE_FETCH_OPTIONS\" | \"POST_FETCH_OPTIONS\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionType": {
+        "rendered": "\n/** The type of function. This determines when the function will be called. */\n functionType: \"PRE_ACTION_EXECUTION\" | \"PRE_FETCH_OPTIONS\" | \"POST_FETCH_OPTIONS\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionId": {
+        "rendered": "\n/** The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types. */\n functionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionType": {
+        "rendered": "\n/** The type of function. This determines when the function will be called. */\n functionType: \"PRE_ACTION_EXECUTION\" | \"PRE_FETCH_OPTIONS\" | \"POST_FETCH_OPTIONS\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionId": {
+        "rendered": "\n/** The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types. */\n functionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionType": {
+        "rendered": "\n/** The type of function. This determines when the function will be called. */\n functionType: \"PRE_ACTION_EXECUTION\" | \"PRE_FETCH_OPTIONS\" | \"POST_FETCH_OPTIONS\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".functionId": {
+        "rendered": "\n/** The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types. */\n functionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/automation/v4/actions/{appId}/{definitionId}/revisions": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Maximum number of results per page. */\n limit?: number, \n/** The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results. */\n after?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.limit": {
+        "rendered": "\n/** Maximum number of results per page. */\n limit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.after": {
+        "rendered": "\n/** The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results. */\n after?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/automation/v4/actions/{appId}/{definitionId}/revisions/{revisionId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".definitionId": {
+        "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".revisionId": {
+        "rendered": "\n/** The version of the custom workflow action. */\n revisionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appId": {
+        "rendered": " appId: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  }
+}

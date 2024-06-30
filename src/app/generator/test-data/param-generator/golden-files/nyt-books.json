@@ -1,0 +1,229 @@
+{
+  "get__/lists.{format}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The name of the Times best-seller list. To get valid values, use a list names request.\n\nBe sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.) */\n list?: string, \n/** The number of weeks that the best seller has been on list-name, as of bestsellers-date */\n \"weeks-on-list\"?: number, \n/** YYYY-MM-DD\n\nThe week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29). */\n \"bestsellers-date\"?: string, \n/** YYYY-MM-DD  The date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n date?: string, \n/** International Standard Book Number, 10 or 13 digits */\n isbn?: string, \n/** YYYY-MM-DD\n\nThe date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n \"published-date\"?: string, \n/** The rank of the best seller on list-name as of bestsellers-date */\n rank?: number, \n/** The rank of the best seller on list-name one week prior to bestsellers-date */\n \"rank-last-week\"?: number, \n/** Sets the starting point of the result set */\n offset?: number, \n/** Sets the sort order of the result set */\n \"sort-order\"?: \"ASC\" | \"DESC\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.list": {
+        "rendered": "\n/** The name of the Times best-seller list. To get valid values, use a list names request.\n\nBe sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.) */\n list?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.weeks-on-list": {
+        "rendered": "\n/** The number of weeks that the best seller has been on list-name, as of bestsellers-date */\n \"weeks-on-list\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bestsellers-date": {
+        "rendered": "\n/** YYYY-MM-DD\n\nThe week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29). */\n \"bestsellers-date\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.date": {
+        "rendered": "\n/** YYYY-MM-DD  The date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n date?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.isbn": {
+        "rendered": "\n/** International Standard Book Number, 10 or 13 digits */\n isbn?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.published-date": {
+        "rendered": "\n/** YYYY-MM-DD\n\nThe date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n \"published-date\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.rank": {
+        "rendered": "\n/** The rank of the best seller on list-name as of bestsellers-date */\n rank?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.rank-last-week": {
+        "rendered": "\n/** The rank of the best seller on list-name one week prior to bestsellers-date */\n \"rank-last-week\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.offset": {
+        "rendered": "\n/** Sets the starting point of the result set */\n offset?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort-order": {
+        "rendered": "\n/** Sets the sort order of the result set */\n \"sort-order\"?: \"ASC\" | \"DESC\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/lists/best-sellers/history.json": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The target age group for the best seller. */\n \"age-group\"?: string, \n/** The author of the best seller. The author field does not include additional contributors (see Data Structure for more details about the author and contributor fields).\n\nWhen searching the author field, you can specify any combination of first, middle and last names.\n\nWhen sort-by is set to author, the results will be sorted by author's first name.  */\n author?: string, \n/** The author of the best seller, as well as other contributors such as the illustrator (to search or sort by author name only, use author instead).\n\nWhen searching, you can specify any combination of first, middle and last names of any of the contributors.\n\nWhen sort-by is set to contributor, the results will be sorted by the first name of the first contributor listed.  */\n contributor?: string, \n/** International Standard Book Number, 10 or 13 digits\n\nA best seller may have both 10-digit and 13-digit ISBNs, and may have multiple ISBNs of each type. To search on multiple ISBNs, separate the ISBNs with semicolons (example: 9780446579933;0061374229). */\n isbn?: string, \n/** The publisher's list price of the best seller, including decimal point */\n price?: string, \n/** The standardized name of the publisher */\n publisher?: string, \n/** The title of the best seller\n\nWhen searching, you can specify a portion of a title or a full title. */\n title?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.age-group": {
+        "rendered": "\n/** The target age group for the best seller. */\n \"age-group\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.author": {
+        "rendered": "\n/** The author of the best seller. The author field does not include additional contributors (see Data Structure for more details about the author and contributor fields).\n\nWhen searching the author field, you can specify any combination of first, middle and last names.\n\nWhen sort-by is set to author, the results will be sorted by author's first name.  */\n author?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.contributor": {
+        "rendered": "\n/** The author of the best seller, as well as other contributors such as the illustrator (to search or sort by author name only, use author instead).\n\nWhen searching, you can specify any combination of first, middle and last names of any of the contributors.\n\nWhen sort-by is set to contributor, the results will be sorted by the first name of the first contributor listed.  */\n contributor?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.isbn": {
+        "rendered": "\n/** International Standard Book Number, 10 or 13 digits\n\nA best seller may have both 10-digit and 13-digit ISBNs, and may have multiple ISBNs of each type. To search on multiple ISBNs, separate the ISBNs with semicolons (example: 9780446579933;0061374229). */\n isbn?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.price": {
+        "rendered": "\n/** The publisher's list price of the best seller, including decimal point */\n price?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.publisher": {
+        "rendered": "\n/** The standardized name of the publisher */\n publisher?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.title": {
+        "rendered": "\n/** The title of the best seller\n\nWhen searching, you can specify a portion of a title or a full title. */\n title?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/lists/names.{format}": {
+    "query": {
+      ".query": {
+        "rendered": " query: {  \"api-key\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-key": {
+        "rendered": " \"api-key\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/lists/overview.{format}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The best-seller list publication date. YYYY-MM-DD\n\nYou do not have to specify the exact date the list was published. The service will search forward (into the future) for the closest publication date to the date you specify. For example, a request for lists/overview/2013-05-22 will retrieve the list that was published on 05-26.\n\nIf you do not include a published_date, the current week's best-sellers lists will be returned. */\n published_date?: string,  \"api-key\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.published_date": {
+        "rendered": "\n/** The best-seller list publication date. YYYY-MM-DD\n\nYou do not have to specify the exact date the list was published. The service will search forward (into the future) for the closest publication date to the date you specify. For example, a request for lists/overview/2013-05-22 will retrieve the list that was published on 05-26.\n\nIf you do not include a published_date, the current week's best-sellers lists will be returned. */\n published_date?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-key": {
+        "rendered": " \"api-key\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/lists/{date}/{list}.json": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** International Standard Book Number, 10 or 13 digits */\n isbn?: number, \n/** The name of the Times best-seller list. To get valid values, use a list names request.\n\nBe sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.) */\n \"list-name\"?: string, \n/** YYYY-MM-DD\n\nThe date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n \"published-date\"?: string, \n/** YYYY-MM-DD\n\nThe week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29). */\n \"bestsellers-date\"?: string, \n/** The number of weeks that the best seller has been on list-name, as of bestsellers-date */\n \"weeks-on-list\"?: number, \n/** The rank of the best seller on list-name as of bestsellers-date */\n rank?: string, \n/** The rank of the best seller on list-name one week prior to bestsellers-date */\n \"rank-last-week\"?: number, \n/** Sets the starting point of the result set */\n offset?: number, \n/** The default is ASC (ascending). The sort-order parameter is used with the sort-by parameter — for details, see each request type. */\n \"sort-order\"?: \"ASC\" | \"DESC\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.isbn": {
+        "rendered": "\n/** International Standard Book Number, 10 or 13 digits */\n isbn?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.list-name": {
+        "rendered": "\n/** The name of the Times best-seller list. To get valid values, use a list names request.\n\nBe sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.) */\n \"list-name\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.published-date": {
+        "rendered": "\n/** YYYY-MM-DD\n\nThe date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n \"published-date\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bestsellers-date": {
+        "rendered": "\n/** YYYY-MM-DD\n\nThe week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29). */\n \"bestsellers-date\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.weeks-on-list": {
+        "rendered": "\n/** The number of weeks that the best seller has been on list-name, as of bestsellers-date */\n \"weeks-on-list\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.rank": {
+        "rendered": "\n/** The rank of the best seller on list-name as of bestsellers-date */\n rank?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.rank-last-week": {
+        "rendered": "\n/** The rank of the best seller on list-name one week prior to bestsellers-date */\n \"rank-last-week\"?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.offset": {
+        "rendered": "\n/** Sets the starting point of the result set */\n offset?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sort-order": {
+        "rendered": "\n/** The default is ASC (ascending). The sort-order parameter is used with the sort-by parameter — for details, see each request type. */\n \"sort-order\"?: \"ASC\" | \"DESC\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".date": {
+        "rendered": " date: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".list": {
+        "rendered": "\n/** Name of the Best Sellers List. You can get the full list from /lists/names.json */\n list: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/reviews.{format}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Searching by ISBN is the recommended method. You can enter 10- or 13-digit ISBNs. */\n isbn?: number, \n/** You’ll need to enter the full title of the book. Spaces in the title will be converted into the characters %20. */\n title?: string, \n/** You’ll need to enter the author’s first and last name, separated by a space. This space will be converted into the characters %20. */\n author?: string,  \"api-key\"?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.isbn": {
+        "rendered": "\n/** Searching by ISBN is the recommended method. You can enter 10- or 13-digit ISBNs. */\n isbn?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.title": {
+        "rendered": "\n/** You’ll need to enter the full title of the book. Spaces in the title will be converted into the characters %20. */\n title?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.author": {
+        "rendered": "\n/** You’ll need to enter the author’s first and last name, separated by a space. This space will be converted into the characters %20. */\n author?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-key": {
+        "rendered": " \"api-key\"?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".format": {
+        "rendered": " format: \"json\" | \"jsonp\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  }
+}

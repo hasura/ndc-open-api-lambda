@@ -1,0 +1,4513 @@
+{
+  "get__/devices/{serial}/camera/analytics/live": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/camera/analytics/overview": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour. */\n timespan?: number, \n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.objectType": {
+        "rendered": "\n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/camera/analytics/recent": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.objectType": {
+        "rendered": "\n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/camera/analytics/zones": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/camera/analytics/zones/{zoneId}/history": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 14 hours after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour. */\n timespan?: number, \n/** The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60. */\n resolution?: number, \n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 14 hours after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.resolution": {
+        "rendered": "\n/** The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60. */\n resolution?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.objectType": {
+        "rendered": "\n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".zoneId": {
+        "rendered": " zoneId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/camera/qualityAndRetentionSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/devices/{serial}/camera/qualityAndRetentionSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/camera/video/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/devices/{serial}/camera/video/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/cellularGateway/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/devices/{serial}/cellularGateway/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/cellularGateway/settings/portForwardingRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/devices/{serial}/cellularGateway/settings/portForwardingRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/clients": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/devices/{serial}/switch/ports/cycle": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/switchPortStatuses": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/devices/{serial}/switchPortStatuses/packets": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 1 day from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day. */\n timespan?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 1 day from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/devices/{serial}/wireless/bluetooth/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/accessPolicies": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/airMarshal": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. */\n timespan?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/alertSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/alertSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/appliance/firewall/inboundFirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/appliance/firewall/inboundFirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/appliancePorts": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/appliancePorts/{appliancePortId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appliancePortId": {
+        "rendered": " appliancePortId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/appliancePorts/{appliancePortId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".appliancePortId": {
+        "rendered": " appliancePortId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/bind": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/bluetoothClients": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 7 days from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 7 days. The default is 1 day. */\n timespan?: number, \n/** The number of entries per page returned. Acceptable range is 5 - 1000. Default is 10. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, \n/** Include the connectivity history for this client */\n includeConnectivityHistory?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 7 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 7 days. The default is 1 day. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 5 - 1000. Default is 10. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.includeConnectivityHistory": {
+        "rendered": "\n/** Include the connectivity history for this client */\n includeConnectivityHistory?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/bluetoothClients/{bluetoothClientId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include the connectivity history for this client */\n includeConnectivityHistory?: boolean, \n/** The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used. */\n connectivityHistoryTimespan?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.includeConnectivityHistory": {
+        "rendered": "\n/** Include the connectivity history for this client */\n includeConnectivityHistory?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.connectivityHistoryTimespan": {
+        "rendered": "\n/** The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used. */\n connectivityHistoryTimespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".bluetoothClientId": {
+        "rendered": " bluetoothClientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/bluetoothSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/bluetoothSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/camera/qualityRetentionProfiles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/camera/qualityRetentionProfiles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".qualityRetentionProfileId": {
+        "rendered": " qualityRetentionProfileId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".qualityRetentionProfileId": {
+        "rendered": " qualityRetentionProfileId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".qualityRetentionProfileId": {
+        "rendered": " qualityRetentionProfileId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/camera/schedules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/cameras/{serial}/snapshot": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/cameras/{serial}/videoLink": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** [optional] The video link will start at this timestamp. The timestamp is in UNIX Epoch time (milliseconds). If no timestamp is specified, we will assume current time. */\n timestamp?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timestamp": {
+        "rendered": "\n/** [optional] The video link will start at this timestamp. The timestamp is in UNIX Epoch time (milliseconds). If no timestamp is specified, we will assume current time. */\n timestamp?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/cellularFirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/cellularFirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number, \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/connectionStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/latencyStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/clients/provision": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}/connectionStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}/events": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}/latencyHistory": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 791 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 791 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 1 day. */\n timespan?: number, \n/** The time resolution in seconds for returned data. The valid resolutions are: 86400. The default is 86400. */\n resolution?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 791 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 791 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 1 day. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.resolution": {
+        "rendered": "\n/** The time resolution in seconds for returned data. The valid resolutions are: 86400. The default is 86400. */\n resolution?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}/latencyStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}/policy": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/clients/{clientId}/policy": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/clients/{clientId}/usageHistory": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".clientId": {
+        "rendered": " clientId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/connectionStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/contentFiltering": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/contentFiltering": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/contentFiltering/categories": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/devices/claim": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/connectionStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/latencyStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/{serial}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/devices/{serial}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/{serial}/connectionStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/{serial}/latencyStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/{serial}/lossAndLatencyHistory": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 31 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number, \n/** The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60. */\n resolution?: number, \n/** The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\", \n/** The destination IP used to obtain the requested stats. This is required. */\n ip: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 31 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.resolution": {
+        "rendered": "\n/** The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60. */\n resolution?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.uplink": {
+        "rendered": "\n/** The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ip": {
+        "rendered": "\n/** The destination IP used to obtain the requested stats. This is required. */\n ip: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/{serial}/performance": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/devices/{serial}/reboot": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/devices/{serial}/remove": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/{serial}/uplink": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/devices/{serial}/wireless/status": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serial": {
+        "rendered": " serial: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/events": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and environmental */\n productType?: string, \n/** A list of event types. The returned events will be filtered to only include events with these types. */\n includedEventTypes?: (string)[], \n/** A list of event types. The returned events will be filtered to exclude events with these types. */\n excludedEventTypes?: (string)[], \n/** The MAC address of the Meraki device which the list of events will be filtered with */\n deviceMac?: string, \n/** The serial of the Meraki device which the list of events will be filtered with */\n deviceSerial?: string, \n/** The name of the Meraki device which the list of events will be filtered with */\n deviceName?: string, \n/** The IP of the client which the list of events will be filtered with. Only supported for track-by-IP networks. */\n clientIp?: string, \n/** The MAC address of the client which the list of events will be filtered with. Only supported for track-by-MAC networks. */\n clientMac?: string, \n/** The name, or partial name, of the client which the list of events will be filtered with */\n clientName?: string, \n/** The MAC address of the Systems Manager device which the list of events will be filtered with */\n smDeviceMac?: string, \n/** The name of the Systems Manager device which the list of events will be filtered with */\n smDeviceName?: string, \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.productType": {
+        "rendered": "\n/** The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and environmental */\n productType?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.includedEventTypes": {
+        "rendered": "\n/** A list of event types. The returned events will be filtered to only include events with these types. */\n includedEventTypes?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.includedEventTypes.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.excludedEventTypes": {
+        "rendered": "\n/** A list of event types. The returned events will be filtered to exclude events with these types. */\n excludedEventTypes?: (string)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.excludedEventTypes.__no_name": {
+        "rendered": "string",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.deviceMac": {
+        "rendered": "\n/** The MAC address of the Meraki device which the list of events will be filtered with */\n deviceMac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.deviceSerial": {
+        "rendered": "\n/** The serial of the Meraki device which the list of events will be filtered with */\n deviceSerial?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.deviceName": {
+        "rendered": "\n/** The name of the Meraki device which the list of events will be filtered with */\n deviceName?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.clientIp": {
+        "rendered": "\n/** The IP of the client which the list of events will be filtered with. Only supported for track-by-IP networks. */\n clientIp?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.clientMac": {
+        "rendered": "\n/** The MAC address of the client which the list of events will be filtered with. Only supported for track-by-MAC networks. */\n clientMac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.clientName": {
+        "rendered": "\n/** The name, or partial name, of the client which the list of events will be filtered with */\n clientName?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.smDeviceMac": {
+        "rendered": "\n/** The MAC address of the Systems Manager device which the list of events will be filtered with */\n smDeviceMac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.smDeviceName": {
+        "rendered": "\n/** The name of the Systems Manager device which the list of events will be filtered with */\n smDeviceName?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/events/eventTypes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/failedConnections": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Filter by AP */\n serial?: string, \n/** Filter by client MAC */\n clientId?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.serial": {
+        "rendered": "\n/** Filter by AP */\n serial?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.clientId": {
+        "rendered": "\n/** Filter by client MAC */\n clientId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/firewalledServices": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/firewalledServices/{service}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".service": {
+        "rendered": " service: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/firewalledServices/{service}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".service": {
+        "rendered": " service: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/floorPlans": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/floorPlans": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/floorPlans/{floorPlanId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".floorPlanId": {
+        "rendered": " floorPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/floorPlans/{floorPlanId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".floorPlanId": {
+        "rendered": " floorPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/floorPlans/{floorPlanId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".floorPlanId": {
+        "rendered": " floorPlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/l3FirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/l3FirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/l7FirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/l7FirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/l7FirewallRules/applicationCategories": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/latencyStats": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.band": {
+        "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssid": {
+        "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.vlan": {
+        "rendered": "\n/** Filter results by VLAN */\n vlan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.apTag": {
+        "rendered": "\n/** Filter results by AP Tag */\n apTag?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/merakiAuthUsers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".merakiAuthUserId": {
+        "rendered": " merakiAuthUserId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/oneToManyNatRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/oneToManyNatRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/oneToOneNatRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/oneToOneNatRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/pii/piiKeys": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The username of a Systems Manager user */\n username?: string, \n/** The email of a network user account or a Systems Manager device */\n email?: string, \n/** The MAC of a network client device or a Systems Manager device */\n mac?: string, \n/** The serial of a Systems Manager device */\n serial?: string, \n/** The IMEI of a Systems Manager device */\n imei?: string, \n/** The MAC of a Bluetooth client */\n bluetoothMac?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.username": {
+        "rendered": "\n/** The username of a Systems Manager user */\n username?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.email": {
+        "rendered": "\n/** The email of a network user account or a Systems Manager device */\n email?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.mac": {
+        "rendered": "\n/** The MAC of a network client device or a Systems Manager device */\n mac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.serial": {
+        "rendered": "\n/** The serial of a Systems Manager device */\n serial?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.imei": {
+        "rendered": "\n/** The IMEI of a Systems Manager device */\n imei?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bluetoothMac": {
+        "rendered": "\n/** The MAC of a Bluetooth client */\n bluetoothMac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/pii/requests": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/pii/requests": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/pii/requests/{requestId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".requestId": {
+        "rendered": " requestId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/pii/requests/{requestId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".requestId": {
+        "rendered": " requestId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/pii/smDevicesForKey": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The username of a Systems Manager user */\n username?: string, \n/** The email of a network user account or a Systems Manager device */\n email?: string, \n/** The MAC of a network client device or a Systems Manager device */\n mac?: string, \n/** The serial of a Systems Manager device */\n serial?: string, \n/** The IMEI of a Systems Manager device */\n imei?: string, \n/** The MAC of a Bluetooth client */\n bluetoothMac?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.username": {
+        "rendered": "\n/** The username of a Systems Manager user */\n username?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.email": {
+        "rendered": "\n/** The email of a network user account or a Systems Manager device */\n email?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.mac": {
+        "rendered": "\n/** The MAC of a network client device or a Systems Manager device */\n mac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.serial": {
+        "rendered": "\n/** The serial of a Systems Manager device */\n serial?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.imei": {
+        "rendered": "\n/** The IMEI of a Systems Manager device */\n imei?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bluetoothMac": {
+        "rendered": "\n/** The MAC of a Bluetooth client */\n bluetoothMac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/pii/smOwnersForKey": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The username of a Systems Manager user */\n username?: string, \n/** The email of a network user account or a Systems Manager device */\n email?: string, \n/** The MAC of a network client device or a Systems Manager device */\n mac?: string, \n/** The serial of a Systems Manager device */\n serial?: string, \n/** The IMEI of a Systems Manager device */\n imei?: string, \n/** The MAC of a Bluetooth client */\n bluetoothMac?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.username": {
+        "rendered": "\n/** The username of a Systems Manager user */\n username?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.email": {
+        "rendered": "\n/** The email of a network user account or a Systems Manager device */\n email?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.mac": {
+        "rendered": "\n/** The MAC of a network client device or a Systems Manager device */\n mac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.serial": {
+        "rendered": "\n/** The serial of a Systems Manager device */\n serial?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.imei": {
+        "rendered": "\n/** The IMEI of a Systems Manager device */\n imei?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.bluetoothMac": {
+        "rendered": "\n/** The MAC of a Bluetooth client */\n bluetoothMac?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/portForwardingRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/portForwardingRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/security/intrusionSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/security/intrusionSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/security/malwareSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/security/malwareSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/securityEvents": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 365 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days. */\n timespan?: number, \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 365 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/siteToSiteVpn": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/siteToSiteVpn": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/sm/bypassActivationLockAttempts": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".attemptId": {
+        "rendered": " attemptId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/sm/device/fields": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/sm/device/wipe": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/sm/device/{deviceId}/refreshDetails": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/devices": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Additional fields that will be displayed for each device. Multiple fields can be passed in as comma separated values.\n    The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,\n    systemType, availableDeviceCapacity, kioskAppName, biosVersion, lastConnected, missingAppsCount, userSuppliedAddress, location, lastUser,\n    ownerEmail, ownerUsername, publicIp, phoneNumber, diskInfoJson, deviceCapacity, isManaged, hadMdm, isSupervised, meid, imei, iccid,\n    simCarrierNetwork, cellularDataUsed, isHotspotEnabled, createdAt, batteryEstCharge, quarantined, avName, avRunning, asName, fwName,\n    isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,\n    hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityPatchVersion. */\n fields?: string, \n/** Filter devices by wifi mac(s). Multiple wifi macs can be passed in as comma separated values. */\n wifiMacs?: string, \n/** Filter devices by serial(s). Multiple serials can be passed in as comma separated values. */\n serials?: string, \n/** Filter devices by id(s). Multiple ids can be passed in as comma separated values. */\n ids?: string, \n/** Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as comma separated values. */\n scope?: string, \n/** Number of devices to return, 1000 is the default as well as the max. */\n batchSize?: number, \n/** If the network has more devices than the batch size, a batch token will be returned\n    as a part of the device list. To see the remainder of the devices, pass in the batchToken as a parameter in the next request.\n    Requests made with the batchToken do not require additional parameters as the batchToken includes the parameters passed in\n    with the original request. Additional parameters passed in with the batchToken will be ignored. */\n batchToken?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.fields": {
+        "rendered": "\n/** Additional fields that will be displayed for each device. Multiple fields can be passed in as comma separated values.\n    The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,\n    systemType, availableDeviceCapacity, kioskAppName, biosVersion, lastConnected, missingAppsCount, userSuppliedAddress, location, lastUser,\n    ownerEmail, ownerUsername, publicIp, phoneNumber, diskInfoJson, deviceCapacity, isManaged, hadMdm, isSupervised, meid, imei, iccid,\n    simCarrierNetwork, cellularDataUsed, isHotspotEnabled, createdAt, batteryEstCharge, quarantined, avName, avRunning, asName, fwName,\n    isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,\n    hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityPatchVersion. */\n fields?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.wifiMacs": {
+        "rendered": "\n/** Filter devices by wifi mac(s). Multiple wifi macs can be passed in as comma separated values. */\n wifiMacs?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.serials": {
+        "rendered": "\n/** Filter devices by serial(s). Multiple serials can be passed in as comma separated values. */\n serials?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ids": {
+        "rendered": "\n/** Filter devices by id(s). Multiple ids can be passed in as comma separated values. */\n ids?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as comma separated values. */\n scope?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.batchSize": {
+        "rendered": "\n/** Number of devices to return, 1000 is the default as well as the max. */\n batchSize?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.batchToken": {
+        "rendered": "\n/** If the network has more devices than the batch size, a batch token will be returned\n    as a part of the device list. To see the remainder of the devices, pass in the batchToken as a parameter in the next request.\n    Requests made with the batchToken do not require additional parameters as the batchToken includes the parameters passed in\n    with the original request. Additional parameters passed in with the batchToken will be ignored. */\n batchToken?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/sm/devices/checkin": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/sm/devices/tags": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/sm/devices/{deviceId}/unenroll": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/profiles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/targetGroups": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response */\n withDetails?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.withDetails": {
+        "rendered": "\n/** Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response */\n withDetails?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/sm/targetGroups": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/sm/targetGroups/{targetGroupId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".targetGroupId": {
+        "rendered": " targetGroupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/targetGroups/{targetGroupId}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response */\n withDetails?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.withDetails": {
+        "rendered": "\n/** Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response */\n withDetails?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".targetGroupId": {
+        "rendered": " targetGroupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/sm/targetGroups/{targetGroupId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".targetGroupId": {
+        "rendered": " targetGroupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/user/{userId}/deviceProfiles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": " userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/user/{userId}/softwares": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": " userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/users": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Filter users by id(s). Multiple ids can be passed in as comma separated values. */\n ids?: string, \n/** Filter users by username(s). Multiple usernames can be passed in as comma separated values. */\n usernames?: string, \n/** Filter users by email(s). Multiple emails can be passed in as comma separated values. */\n emails?: string, \n/** Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags as comma separated values. */\n scope?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ids": {
+        "rendered": "\n/** Filter users by id(s). Multiple ids can be passed in as comma separated values. */\n ids?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.usernames": {
+        "rendered": "\n/** Filter users by username(s). Multiple usernames can be passed in as comma separated values. */\n usernames?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.emails": {
+        "rendered": "\n/** Filter users by email(s). Multiple emails can be passed in as comma separated values. */\n emails?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.scope": {
+        "rendered": "\n/** Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags as comma separated values. */\n scope?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/cellularUsageHistory": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/certs": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/deviceProfiles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/networkAdapters": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/restrictions": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/securityCenters": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/softwares": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/sm/{deviceId}/wlanLists": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".deviceId": {
+        "rendered": " deviceId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/snmpSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/splashLoginAttempts": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Only return the login attempts for the specified SSID */\n ssidNumber?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14, \n/** The username, email, or phone number used during login */\n loginIdentifier?: string, \n/** The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months */\n timespan?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ssidNumber": {
+        "rendered": "\n/** Only return the login attempts for the specified SSID */\n ssidNumber?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.loginIdentifier": {
+        "rendered": "\n/** The username, email, or phone number used during login */\n loginIdentifier?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/split": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/ssids": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/ssids/{number}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".number": {
+        "rendered": " number: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/ssids/{number}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".number": {
+        "rendered": " number: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/ssids/{number}/l3FirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".number": {
+        "rendered": " number: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/ssids/{number}/l3FirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".number": {
+        "rendered": " number: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/ssids/{number}/splashSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".number": {
+        "rendered": " number: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/ssids/{number}/splashSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".number": {
+        "rendered": " number: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/staticRoutes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/staticRoutes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/staticRoutes/{staticRouteId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".staticRouteId": {
+        "rendered": " staticRouteId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/staticRoutes/{staticRouteId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".staticRouteId": {
+        "rendered": " staticRouteId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/staticRoutes/{staticRouteId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".staticRouteId": {
+        "rendered": " staticRouteId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/swapWarmSpare": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/linkAggregations": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/switch/linkAggregations": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/switch/linkAggregations/{linkAggregationId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".linkAggregationId": {
+        "rendered": " linkAggregationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/linkAggregations/{linkAggregationId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".linkAggregationId": {
+        "rendered": " linkAggregationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/portSchedules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/switch/portSchedules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/switch/portSchedules/{portScheduleId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".portScheduleId": {
+        "rendered": " portScheduleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/portSchedules/{portScheduleId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".portScheduleId": {
+        "rendered": " portScheduleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/settings/mtu": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/settings/mtu": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/settings/multicast": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/settings/multicast": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/settings/qosRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/switch/settings/qosRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/settings/qosRules/order": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/settings/qosRules/order": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/switch/settings/qosRules/{qosRuleId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".qosRuleId": {
+        "rendered": " qosRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/settings/qosRules/{qosRuleId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".qosRuleId": {
+        "rendered": " qosRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/settings/qosRules/{qosRuleId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".qosRuleId": {
+        "rendered": " qosRuleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switch/settings/stormControl": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/switch/settings/stormControl": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switchStacks": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/switchStacks": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/switchStacks/{switchStackId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".switchStackId": {
+        "rendered": " switchStackId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/switchStacks/{switchStackId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".switchStackId": {
+        "rendered": " switchStackId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/switchStacks/{switchStackId}/add": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".switchStackId": {
+        "rendered": " switchStackId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/switchStacks/{switchStackId}/remove": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".switchStackId": {
+        "rendered": " switchStackId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/syslogServers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/syslogServers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/traffic": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 30 days from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days. */\n timespan?: number, \n/** Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage. */\n deviceType?: \"appliance\" | \"combined\" | \"switch\" | \"wireless\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 30 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.deviceType": {
+        "rendered": "\n/** Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage. */\n deviceType?: \"appliance\" | \"combined\" | \"switch\" | \"wireless\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/unbind": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/uplinkSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/uplinkSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/vlans": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/vlans": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/vlans/{vlanId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".vlanId": {
+        "rendered": " vlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/vlans/{vlanId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".vlanId": {
+        "rendered": " vlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/vlans/{vlanId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".vlanId": {
+        "rendered": " vlanId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/vlansEnabledState": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/vlansEnabledState": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/warmSpareSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/warmSpareSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/wireless/rfProfiles": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false. */\n includeTemplateProfiles?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.includeTemplateProfiles": {
+        "rendered": "\n/** If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false. */\n includeTemplateProfiles?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/networks/{networkId}/wireless/rfProfiles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/networks/{networkId}/wireless/rfProfiles/{rfProfileId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".rfProfileId": {
+        "rendered": " rfProfileId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/wireless/rfProfiles/{rfProfileId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".rfProfileId": {
+        "rendered": " rfProfileId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/wireless/rfProfiles/{rfProfileId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".rfProfileId": {
+        "rendered": " rfProfileId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{networkId}/wireless/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{networkId}/wireless/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/networks/{network_id}/sm/devices/lock": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{network_id}/sm/{id}/connectivity": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{network_id}/sm/{id}/desktopLogs": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{network_id}/sm/{id}/deviceCommandLogs": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/networks/{network_id}/sm/{id}/performanceHistory": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".networkId": {
+        "rendered": " networkId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".id": {
+        "rendered": " id: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/organizations/{organizationId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/actionBatches": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Filter batches by status. Valid types are pending, completed, and failed. */\n status?: \"completed\" | \"failed\" | \"pending\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.status": {
+        "rendered": "\n/** Filter batches by status. Valid types are pending, completed, and failed. */\n status?: \"completed\" | \"failed\" | \"pending\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/actionBatches": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/organizations/{organizationId}/actionBatches/{actionBatchId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".actionBatchId": {
+        "rendered": " actionBatchId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/organizations/{organizationId}/actionBatches/{actionBatchId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".actionBatchId": {
+        "rendered": " actionBatchId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/admins": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/admins": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/organizations/{organizationId}/admins/{adminId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".adminId": {
+        "rendered": " adminId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/organizations/{organizationId}/admins/{adminId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".adminId": {
+        "rendered": " adminId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/apiRequests": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 31 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days. */\n timespan?: number, \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, \n/** Filter the results by the ID of the admin who made the API requests */\n adminId?: string, \n/** Filter the results by the path of the API requests */\n path?: string, \n/** Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE') */\n method?: string, \n/** Filter the results by the response code of the API requests */\n responseCode?: number, \n/** Filter the results by the IP address of the originating API request */\n sourceIp?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 31 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.adminId": {
+        "rendered": "\n/** Filter the results by the ID of the admin who made the API requests */\n adminId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.path": {
+        "rendered": "\n/** Filter the results by the path of the API requests */\n path?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.method": {
+        "rendered": "\n/** Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE') */\n method?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.responseCode": {
+        "rendered": "\n/** Filter the results by the response code of the API requests */\n responseCode?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sourceIp": {
+        "rendered": "\n/** Filter the results by the IP address of the originating API request */\n sourceIp?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/apiRequests/overview": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 31 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days. */\n timespan?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 31 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 31 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/claim": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/clone": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/configTemplates": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/organizations/{organizationId}/configTemplates/{configTemplateId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".configTemplateId": {
+        "rendered": " configTemplateId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/configTemplates/{configTemplateId}/switchProfiles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".configTemplateId": {
+        "rendered": " configTemplateId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/configurationChanges": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 365 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 365 days. */\n timespan?: number, \n/** The number of entries per page returned. Acceptable range is 3 - 5000. Default is 5000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, \n/** Filters on the given network */\n networkId?: string, \n/** Filters on the given Admin */\n adminId?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 365 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 365 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 5000. Default is 5000. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.networkId": {
+        "rendered": "\n/** Filters on the given network */\n networkId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.adminId": {
+        "rendered": "\n/** Filters on the given Admin */\n adminId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/deviceStatuses": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/devices": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, \n/** Filter results by whether or not the device's configuration has been updated after the given timestamp */\n configurationUpdatedAfter?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.configurationUpdatedAfter": {
+        "rendered": "\n/** Filter results by whether or not the device's configuration has been updated after the given timestamp */\n configurationUpdatedAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/insight/monitoredMediaServers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/insight/monitoredMediaServers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".monitoredMediaServerId": {
+        "rendered": " monitoredMediaServerId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".monitoredMediaServerId": {
+        "rendered": " monitoredMediaServerId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".monitoredMediaServerId": {
+        "rendered": " monitoredMediaServerId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/inventory": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** When this parameter is true, each entity in the response will include the license expiration date of the device (if any). Only applies to organizations that are on the per-device licensing model. Defaults to false. */\n includeLicenseInfo?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.includeLicenseInfo": {
+        "rendered": "\n/** When this parameter is true, each entity in the response will include the license expiration date of the device (if any). Only applies to organizations that are on the per-device licensing model. Defaults to false. */\n includeLicenseInfo?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/licenseState": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/licenses": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, \n/** Filter the licenses to those assigned to a particular device */\n deviceSerial?: string, \n/** Filter the licenses to those assigned in a particular network */\n networkId?: string, \n/** Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive' */\n state?: \"active\" | \"expired\" | \"expiring\" | \"recentlyQueued\" | \"unused\" | \"unusedActive\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.deviceSerial": {
+        "rendered": "\n/** Filter the licenses to those assigned to a particular device */\n deviceSerial?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.networkId": {
+        "rendered": "\n/** Filter the licenses to those assigned in a particular network */\n networkId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.state": {
+        "rendered": "\n/** Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive' */\n state?: \"active\" | \"expired\" | \"expiring\" | \"recentlyQueued\" | \"unused\" | \"unusedActive\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/licenses/assignSeats": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/licenses/moveSeats": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/licenses/renewSeats": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/licenses/{licenseId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".licenseId": {
+        "rendered": " licenseId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/networks": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** An optional parameter that is the ID of a config template. Will return all networks bound to that template. */\n configTemplateId?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.configTemplateId": {
+        "rendered": "\n/** An optional parameter that is the ID of a config template. Will return all networks bound to that template. */\n configTemplateId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/networks": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/networks/combine": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/openapiSpec": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/samlRoles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/organizations/{organizationId}/samlRoles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/samlRoles/{samlRoleId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".samlRoleId": {
+        "rendered": " samlRoleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/organizations/{organizationId}/samlRoles/{samlRoleId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".samlRoleId": {
+        "rendered": " samlRoleId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/security/intrusionSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/organizations/{organizationId}/security/intrusionSettings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/securityEvents": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 365 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days. */\n timespan?: number, \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. Data is gathered after the specified t0 value. The maximum lookback period is 365 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 365 days after t0. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.startingAfter": {
+        "rendered": "\n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.endingBefore": {
+        "rendered": "\n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/snmp": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/thirdPartyVPNPeers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/organizations/{organizationId}/thirdPartyVPNPeers": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/uplinksLossAndLatency": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes. */\n timespan?: number, \n/** Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\", \n/** Optional filter for a specific destination IP. Default will return all destination IPs. */\n ip?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t0": {
+        "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.t1": {
+        "rendered": "\n/** The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past. */\n t1?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.timespan": {
+        "rendered": "\n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes. */\n timespan?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.uplink": {
+        "rendered": "\n/** Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.ip": {
+        "rendered": "\n/** Optional filter for a specific destination IP. Default will return all destination IPs. */\n ip?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/organizations/{organizationId}/vpnFirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/organizations/{organizationId}/vpnFirewallRules": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".organizationId": {
+        "rendered": " organizationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  }
+}

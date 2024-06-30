@@ -1,0 +1,1619 @@
+{
+  "post__/group/{groupId}/audit": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The date you wish to fetch results from, in the format YYYY-MM-DD. Default is 3 months ago. Please note that logs are only available for past 3 months. */\n from?: string, \n/** The date you wish to fetch results until, in the format YYYY-MM-DD. Default is today. Please note that logs are only available for past 3 months. */\n to?: string, \n/** The page of results to request. Audit logs are returned in page sizes of 100 */\n page?: number, \n/** The sort order of the returned audit logs by date. Values: `ASC`, `DESC`. Default: `DESC`. */\n sortOrder?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** The date you wish to fetch results from, in the format YYYY-MM-DD. Default is 3 months ago. Please note that logs are only available for past 3 months. */\n from?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** The date you wish to fetch results until, in the format YYYY-MM-DD. Default is today. Please note that logs are only available for past 3 months. */\n to?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page of results to request. Audit logs are returned in page sizes of 100 */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortOrder": {
+        "rendered": "\n/** The sort order of the returned audit logs by date. Values: `ASC`, `DESC`. Default: `DESC`. */\n sortOrder?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have access to this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/group/{groupId}/members": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have access admin to this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/group/{groupId}/org/{orgId}/members": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have access admin to this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".orgId": {
+        "rendered": "\n/** The organization ID we want to add the member to. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/group/{groupId}/orgs": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of results to return (maximum is 100). */\n perPage?: number, \n/** For pagination - offset (from which to start returning results). */\n page?: number, \n/** Only organizations that have a name that **starts with** this value (case insensitive) will be returned. */\n name?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to return (maximum is 100). */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** For pagination - offset (from which to start returning results). */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.name": {
+        "rendered": "\n/** Only organizations that have a name that **starts with** this value (case insensitive) will be returned. */\n name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have READ access to this group and LIST organizations access in this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/group/{groupId}/roles": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have READ access to this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/group/{groupId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have admin access to this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/group/{groupId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** Automatically added */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/group/{groupId}/tags": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of results to return (the default is 1000). */\n perPage?: number, \n/** The offset from which to start returning results from. */\n page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to return (the default is 1000). */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The offset from which to start returning results from. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have access admin to this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/group/{groupId}/tags/delete": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The group ID. The `API_KEY` must have access admin to this group. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/monitor/dep-graph": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/org": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "delete__/org/{orgId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have permission to delete the provided organization. Currently this operation is only supported for organizations without any projects. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/audit": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The date you wish to fetch results from, in the format YYYY-MM-DD. Default is 3 months ago. Please note that logs are only available for past 3 months. */\n from?: string, \n/** The date you wish to fetch results until, in the format YYYY-MM-DD. Default is today. Please note that logs are only available for past 3 months. */\n to?: string, \n/** The page of results to request. Audit logs are returned in page sizes of 100. */\n page?: number, \n/** The sort order of the returned audit logs by date. Values: `ASC`, `DESC`. Default: `DESC`. */\n sortOrder?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** The date you wish to fetch results from, in the format YYYY-MM-DD. Default is 3 months ago. Please note that logs are only available for past 3 months. */\n from?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** The date you wish to fetch results until, in the format YYYY-MM-DD. Default is today. Please note that logs are only available for past 3 months. */\n to?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page of results to request. Audit logs are returned in page sizes of 100. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortOrder": {
+        "rendered": "\n/** The sort order of the returned audit logs by date. Values: `ASC`, `DESC`. Default: `DESC`. */\n sortOrder?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/dependencies": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The field to sort results by. */\n sortBy?: \"projects\" | \"dependency\" | \"severity\" | \"dependenciesWithIssues\", \n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\", \n/** The page of results to fetch. */\n page?: number, \n/** The number of results to fetch per page (maximum is 1000). */\n perPage?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortBy": {
+        "rendered": "\n/** The field to sort results by. */\n sortBy?: \"projects\" | \"dependency\" | \"severity\" | \"dependenciesWithIssues\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order": {
+        "rendered": "\n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page of results to fetch. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to fetch per page (maximum is 1000). */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list projects for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/entitlement/{entitlementKey}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to query the entitlement for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".entitlementKey": {
+        "rendered": "\n/** The entitlement to query. */\n entitlementKey: \"licenses\" | \"reports\" | \"fullVulnDB\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/entitlements": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list entitlements for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/integrations": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization public ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/integrations": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/integrations/{integrationId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": "\n/** The unique identifier for the configured integration. This can be found on the [Integration page in the Settings area](https://app.snyk.io/manage/integrations) for all integrations that have been configured. */\n integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/org/{orgId}/integrations/{integrationId}/authentication": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": "\n/** The integration ID. */\n integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/integrations/{integrationId}/authentication/provision-token": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": " integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/integrations/{integrationId}/authentication/switch-token": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": " integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/integrations/{integrationId}/clone": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Source organization public ID to clone integration settings from. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": "\n/** Source integration public ID to clone. */\n integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/integrations/{integrationId}/import": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": "\n/** The unique identifier for the configured integration. This can be found on the [Integration page in the Settings area](https://app.snyk.io/manage/integrations) for all integrations that have been configured. */\n integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/integrations/{integrationId}/import/{jobId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": "\n/** The unique identifier for the configured integration. This can be found on the [Integration page in the Settings area](https://app.snyk.io/manage/integrations) for all integrations that have been configured. */\n integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".jobId": {
+        "rendered": "\n/** The ID of the job. This can be found in the Location response header from the corresponding POST request that triggered the import job. */\n jobId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/integrations/{integrationId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": "\n/** The unique identifier for the configured integration. This can be found on the [Integration page in the Settings area](https://app.snyk.io/manage/integrations) for all integrations that have been configured. */\n integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/integrations/{integrationId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".integrationId": {
+        "rendered": "\n/** The unique identifier for the configured integration. This can be found on the [Integration page in the Settings area](https://app.snyk.io/manage/integrations) for all integrations that have been configured. */\n integrationId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/integrations/{type}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".type": {
+        "rendered": "\n/** Integration type. */\n type: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/invite": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/licenses": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The field to sort results by. */\n sortBy?: \"license\" | \"dependencies\" | \"projects\" | \"severity\", \n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortBy": {
+        "rendered": "\n/** The field to sort results by. */\n sortBy?: \"license\" | \"dependencies\" | \"projects\" | \"severity\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order": {
+        "rendered": "\n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list projects for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/members": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** Include group administrators who also have access to this organization. */\n includeGroupAdmins?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.includeGroupAdmins": {
+        "rendered": "\n/** Include group administrators who also have access to this organization. */\n includeGroupAdmins?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/members/update/{userId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/org/{orgId}/members/{userId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must admin have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID we want to remove. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/members/{userId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".userId": {
+        "rendered": "\n/** The user ID. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/notification-settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/notification-settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/org/{orgId}/project/{projectId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID the project belongs to. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/project/{projectId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/activate": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID the project belongs to. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/aggregated-issues": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to return issues for. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/attributes": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to remove a tag from */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/deactivate": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID the project belongs to. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}/dep-graph": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to return issues for. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/history": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of results to return (the default is 10, the maximum is 100). */\n perPage?: number, \n/** The offset from which to start returning results from. */\n page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to return (the default is 10, the maximum is 100). */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The offset from which to start returning results from. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to return snapshots for. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/history/{snapshotId}/aggregated-issues": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snapshotId": {
+        "rendered": "\n/** The snapshot ID. If set to latest, the most recent snapshot will be used. */\n snapshotId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}/history/{snapshotId}/issue/{issueId}/paths": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The number of results to return per page (1 - 1000, inclusive). */\n perPage?: number, \n/** The page of results to return. */\n page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to return per page (1 - 1000, inclusive). */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page of results to return. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID for which to return issue paths. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".snapshotId": {
+        "rendered": "\n/** The project snapshot ID for which to return issue paths. If set to `latest`, the most recent snapshot will be used. Use the \"List all project snapshots\" endpoint to find suitable values for this. */\n snapshotId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The issue ID for which to return issue paths. */\n issueId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** Automatically added */\n issueId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to modify ignores for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to modify ignores for. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The issue ID to modify ignores for. Can be a vulnerability or a license Issue. */\n issueId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** Automatically added */\n issueId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/project/{projectId}/ignore/{issueId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** Automatically added */\n issueId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}/ignores": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list ignores for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to list ignores for. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/issue/{issueId}/jira-issue": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".issueId": {
+        "rendered": "\n/** The issue ID to create Jira issue for. */\n issueId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}/issue/{issueId}/paths": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The project snapshot ID for which to return issue paths. If set to `latest`, the most recent snapshot will be used. Use the \"List all project snapshots\" endpoint to find suitable values for this. */\n snapshotId?: string, \n/** The number of results to return per page (1 - 1000, inclusive). */\n perPage?: number, \n/** The page of results to return. */\n page?: number, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.snapshotId": {
+        "rendered": "\n/** The project snapshot ID for which to return issue paths. If set to `latest`, the most recent snapshot will be used. Use the \"List all project snapshots\" endpoint to find suitable values for this. */\n snapshotId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to return per page (1 - 1000, inclusive). */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page of results to return. */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID for which to return issue paths. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".issueId": {
+        "rendered": "\n/** The issue ID for which to return issue paths. */\n issueId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}/jira-issues": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list Jira issues for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to list Jira issues for. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/project/{projectId}/move": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to which the project belongs. The API_KEY must have group admin permissions. If the project is moved to a new group, a personal level API key is needed. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/org/{orgId}/project/{projectId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/project/{projectId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to which the project belongs. The API_KEY must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/project/{projectId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/tags": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to apply the tag to */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/project/{projectId}/tags/remove": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to remove a tag from */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/projects": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list projects for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/org/{orgId}/provision": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/provision": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/provision": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must not exceed the permissions being granted to the provisioned user. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/org/{orgId}/settings": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have admin access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/webhooks": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list projects for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/webhooks": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID to list projects for. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/org/{orgId}/webhooks/{webhookId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".webhookId": {
+        "rendered": "\n/** Automatically added */\n webhookId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/org/{orgId}/webhooks/{webhookId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID the project belongs to. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".webhookId": {
+        "rendered": "\n/** The webhook ID. */\n webhookId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/org/{orgId}/webhooks/{webhookId}/ping": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID the project belongs to. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".webhookId": {
+        "rendered": "\n/** The webhook ID. */\n webhookId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/orgs": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/reporting/counts/issues": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string, \n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string, \n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.groupBy": {
+        "rendered": "\n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reporting/counts/issues/latest": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.groupBy": {
+        "rendered": "\n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reporting/counts/projects": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string, \n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reporting/counts/projects/latest": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reporting/counts/tests": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The date you wish to count tests from, in the format `YYYY-MM-DD` */\n from: string, \n/** The date you wish to count tests until, in the format `YYYY-MM-DD` */\n to: string, \n/** The field to group results by */\n groupBy?: \"isPrivate\" | \"issuesPrevented\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** The date you wish to count tests from, in the format `YYYY-MM-DD` */\n from: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** The date you wish to count tests until, in the format `YYYY-MM-DD` */\n to: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.groupBy": {
+        "rendered": "\n/** The field to group results by */\n groupBy?: \"isPrivate\" | \"issuesPrevented\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reporting/issues/": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string, \n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string, \n/** The page of results to request */\n page?: number, \n/** The number of results to return per page (Maximum: 1000) */\n perPage?: number, \n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\", \n/** The direction to sort results. */\n order?: string, \n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.from": {
+        "rendered": "\n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.to": {
+        "rendered": "\n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page of results to request */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to return per page (Maximum: 1000) */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortBy": {
+        "rendered": "\n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order": {
+        "rendered": "\n/** The direction to sort results. */\n order?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.groupBy": {
+        "rendered": "\n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/reporting/issues/latest": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The page of results to request */\n page?: number, \n/** The number of results to return per page (Maximum: 1000) */\n perPage?: number, \n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\", \n/** The direction to sort results. */\n order?: string, \n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\", },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.page": {
+        "rendered": "\n/** The page of results to request */\n page?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.perPage": {
+        "rendered": "\n/** The number of results to return per page (Maximum: 1000) */\n perPage?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.sortBy": {
+        "rendered": "\n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\",",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.order": {
+        "rendered": "\n/** The direction to sort results. */\n order?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.groupBy": {
+        "rendered": "\n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\",",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/test/composer": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/test/dep-graph": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/test/golangdep": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/test/govendor": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "post__/test/gradle": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/test/gradle/{group}/{name}/{version}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, \n/** The repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.repository": {
+        "rendered": "\n/** The repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".group": {
+        "rendered": "\n/** The package's group ID. */\n group: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".name": {
+        "rendered": "\n/** The package's artifact ID. */\n name: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": "\n/** The package version to test. */\n version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/test/maven": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, \n/** The Maven repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.repository": {
+        "rendered": "\n/** The Maven repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/test/maven/{groupId}/{artifactId}/{version}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, \n/** The Maven repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.repository": {
+        "rendered": "\n/** The Maven repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The package's group ID. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".artifactId": {
+        "rendered": "\n/** The package's artifact ID. */\n artifactId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": "\n/** The package version to test. */\n version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/test/npm": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/test/npm/{packageName}/{version}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".packageName": {
+        "rendered": "\n/** The package name. For scoped packages, **must** be url-encoded, so to test \"@angular/core\" version 4.3.2, one should `GET /test/npm/%40angular%2Fcore/4.3.2`. */\n packageName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": "\n/** The Package version to test. */\n version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/test/pip": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/test/pip/{packageName}/{version}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".packageName": {
+        "rendered": "\n/** The package name. */\n packageName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": "\n/** The Package version to test. */\n version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/test/rubygems": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {}
+  },
+  "get__/test/rubygems/{gemName}/{version}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".gemName": {
+        "rendered": "\n/** The gem name. */\n gemName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": "\n/** The gem version to test. */\n version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/test/sbt": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/test/sbt/{groupId}/{artifactId}/{version}": {
+    "query": {
+      ".query": {
+        "rendered": " query: { \n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string, \n/** The repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.org": {
+        "rendered": "\n/** The organization to test the package with. See \"The Snyk organization for a request\" above. */\n org?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.repository": {
+        "rendered": "\n/** The repository hosting this package. The default value is Maven Central. More than one value is supported, in order. */\n repository?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".groupId": {
+        "rendered": "\n/** The package's group ID. */\n groupId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".artifactId": {
+        "rendered": "\n/** The package's artifact ID. */\n artifactId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".version": {
+        "rendered": "\n/** The package version to test. */\n version: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/test/yarn": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/user/me": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/user/me/notification-settings/org/{orgId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/user/me/notification-settings/org/{orgId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/user/me/notification-settings/org/{orgId}/project/{projectId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** The organization ID. The `API_KEY` must have access to this organization. */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** The project ID to return notification settings for. */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/user/me/notification-settings/org/{orgId}/project/{projectId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".orgId": {
+        "rendered": "\n/** Automatically added */\n orgId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".projectId": {
+        "rendered": "\n/** Automatically added */\n projectId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/user/{userId}": {
+    "query": {},
+    "body": {},
+    "path": {
+      ".userId": {
+        "rendered": "\n/** The users ID. The `API_KEY` must have admin access to at least one group or organization where the requested user is a member and must have the `api` entitlement on their preferred organization. */\n userId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  }
+}

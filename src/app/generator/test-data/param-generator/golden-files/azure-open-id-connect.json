@@ -1,0 +1,234 @@
+{
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/openidConnectProviders": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** |   Field     |     Usage     |     Supported operators     |     Supported functions     |</br>|-------------|-------------|-------------|-------------|</br>| name | filter | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith | </br>| displayName | filter | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith | </br> */\n $filter?: string, \n/** Number of records to return. */\n $top?: number, \n/** Number of records to skip. */\n $skip?: number, \n/** Version of the API to be used with the client request. */\n \"api-version\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$filter": {
+        "rendered": "\n/** |   Field     |     Usage     |     Supported operators     |     Supported functions     |</br>|-------------|-------------|-------------|-------------|</br>| name | filter | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith | </br>| displayName | filter | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith | </br> */\n $filter?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$top": {
+        "rendered": "\n/** Number of records to return. */\n $top?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.$skip": {
+        "rendered": "\n/** Number of records to skip. */\n $skip?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** Version of the API to be used with the client request. */\n \"api-version\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serviceName": {
+        "rendered": "\n/** The name of the API Management service. */\n serviceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionId": {
+        "rendered": "\n/** Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "delete__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/openidConnectProviders/{opid}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Version of the API to be used with the client request. */\n \"api-version\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** Version of the API to be used with the client request. */\n \"api-version\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serviceName": {
+        "rendered": "\n/** The name of the API Management service. */\n serviceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".opid": {
+        "rendered": "\n/** Identifier of the OpenID Connect Provider. */\n opid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionId": {
+        "rendered": "\n/** Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "get__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/openidConnectProviders/{opid}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Version of the API to be used with the client request. */\n \"api-version\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** Version of the API to be used with the client request. */\n \"api-version\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serviceName": {
+        "rendered": "\n/** The name of the API Management service. */\n serviceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".opid": {
+        "rendered": "\n/** Identifier of the OpenID Connect Provider. */\n opid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionId": {
+        "rendered": "\n/** Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "head__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/openidConnectProviders/{opid}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Version of the API to be used with the client request. */\n \"api-version\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** Version of the API to be used with the client request. */\n \"api-version\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serviceName": {
+        "rendered": "\n/** The name of the API Management service. */\n serviceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".opid": {
+        "rendered": "\n/** Identifier of the OpenID Connect Provider. */\n opid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionId": {
+        "rendered": "\n/** Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "patch__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/openidConnectProviders/{opid}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Version of the API to be used with the client request. */\n \"api-version\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** Version of the API to be used with the client request. */\n \"api-version\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serviceName": {
+        "rendered": "\n/** The name of the API Management service. */\n serviceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".opid": {
+        "rendered": "\n/** Identifier of the OpenID Connect Provider. */\n opid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionId": {
+        "rendered": "\n/** Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "put__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/openidConnectProviders/{opid}": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Version of the API to be used with the client request. */\n \"api-version\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** Version of the API to be used with the client request. */\n \"api-version\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serviceName": {
+        "rendered": "\n/** The name of the API Management service. */\n serviceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".opid": {
+        "rendered": "\n/** Identifier of the OpenID Connect Provider. */\n opid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionId": {
+        "rendered": "\n/** Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  },
+  "post__/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/openidConnectProviders/{opid}/listSecrets": {
+    "query": {
+      ".query": {
+        "rendered": " query?: { \n/** Version of the API to be used with the client request. */\n \"api-version\": string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".query.api-version": {
+        "rendered": "\n/** Version of the API to be used with the client request. */\n \"api-version\": string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "body": {},
+    "path": {
+      ".resourceGroupName": {
+        "rendered": "\n/** The name of the resource group. */\n resourceGroupName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".serviceName": {
+        "rendered": "\n/** The name of the API Management service. */\n serviceName: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".opid": {
+        "rendered": "\n/** Identifier of the OpenID Connect Provider. */\n opid: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".subscriptionId": {
+        "rendered": "\n/** Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */\n subscriptionId: string,",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "response": {}
+  }
+}
