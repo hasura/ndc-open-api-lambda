@@ -1,19 +1,40 @@
 {
   "post__/automation/v4/actions/callbacks/complete": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: BatchInputCallbackCompletionBatchRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/automation/v4/actions/callbacks/{callbackId}/complete": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CallbackCompletionRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".callbackId": {
         "rendered": "\n/** The ID of the target app. */\n callbackId: string,",
@@ -25,7 +46,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/automation/v4/actions/{appId}": {
@@ -59,12 +83,24 @@
         "rendered": "CollectionResponseExtensionActionDefinitionForwardPaging",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/automation/v4/actions/{appId}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: ExtensionActionDefinitionInput,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".appId": {
         "rendered": " appId: number,",
@@ -76,7 +112,10 @@
         "rendered": "ExtensionActionDefinition",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/automation/v4/actions/{appId}/{definitionId}": {
@@ -97,7 +136,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/automation/v4/actions/{appId}/{definitionId}": {
@@ -127,12 +169,24 @@
         "rendered": "ExtensionActionDefinition",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "patch__/automation/v4/actions/{appId}/{definitionId}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: ExtensionActionDefinitionPatch,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".definitionId": {
         "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
@@ -148,7 +202,10 @@
         "rendered": "ExtensionActionDefinition",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/automation/v4/actions/{appId}/{definitionId}/functions": {
@@ -169,7 +226,10 @@
         "rendered": "CollectionResponseActionFunctionIdentifierNoPaging",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}": {
@@ -194,7 +254,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}": {
@@ -219,12 +282,24 @@
         "rendered": "ActionFunction",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".definitionId": {
         "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
@@ -244,7 +319,10 @@
         "rendered": "ActionFunctionIdentifier",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}": {
@@ -273,7 +351,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}": {
@@ -302,12 +383,24 @@
         "rendered": "ActionFunction",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".definitionId": {
         "rendered": "\n/** The ID of the custom workflow action. */\n definitionId: string,",
@@ -331,7 +424,10 @@
         "rendered": "ActionFunctionIdentifier",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/automation/v4/actions/{appId}/{definitionId}/revisions": {
@@ -365,7 +461,10 @@
         "rendered": "CollectionResponseActionRevisionForwardPaging",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/automation/v4/actions/{appId}/{definitionId}/revisions/{revisionId}": {
@@ -390,7 +489,10 @@
         "rendered": "ActionRevision",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   }
 }

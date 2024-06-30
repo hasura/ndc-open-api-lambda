@@ -1,26 +1,50 @@
 {
   "post__/pet": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: Pet,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "Pet",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/pet": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: Pet,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "Pet",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/pet/findByStatus": {
@@ -41,8 +65,12 @@
         "rendered": "(Pet)[]",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -69,8 +97,12 @@
         "rendered": "(Pet)[]",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -89,7 +121,10 @@
         "rendered": "Pet",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/pet/{petId}": {
@@ -119,7 +154,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/pet/{petId}": {
@@ -136,7 +174,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/pet/{petId}/uploadImage": {
@@ -150,7 +191,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: File,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".petId": {
         "rendered": "\n/** ID of pet to update */\n petId: number,",
@@ -162,7 +212,10 @@
         "rendered": "ApiResponse",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/store/inventory": {
@@ -174,19 +227,34 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/store/order": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: Order,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "Order",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/store/order/{orderId}": {
@@ -203,7 +271,10 @@
         "rendered": "Order",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/store/order/{orderId}": {
@@ -220,31 +291,62 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/user": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: User,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/user/createWithList": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: (User)[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "User",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/user/login": {
@@ -269,7 +371,10 @@
         "rendered": "string",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/user/logout": {
@@ -281,7 +386,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/user/{username}": {
@@ -298,12 +406,24 @@
         "rendered": "User",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/user/{username}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: User,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".username": {
         "rendered": "\n/** name that needs to be updated */\n username: string,",
@@ -315,7 +435,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "delete__/user/{username}": {
@@ -332,7 +455,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   }
 }
