@@ -204,7 +204,7 @@ export function renderAnyOfTypeSchema(
   for (const property of types.getSchemaTypeAnyOfChildren(schema)) {
     renderedProperties.push(renderParams(property, schemaStore)._$rendered!);
   }
-  const paramType = `| ${renderedProperties.join(" | ")}`;
+  const paramType = renderedProperties.join(" | ");
 
   schema._$requiresRelaxedTypeTag =
     types.isRelaxedTypeTagRequiredForAnyOfTypeSchema(schema);
