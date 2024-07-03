@@ -5747,7 +5747,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[], },",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -5759,11 +5759,11 @@
       },
       ".query.exclude": {
         "rendered": "\n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[],",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       },
       ".query.exclude.__no_name": {
         "rendered": "\"repositories\"",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       }
     },
     "body": {},
@@ -5829,15 +5829,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[], },",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       },
       ".query.exclude": {
         "rendered": "\n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[],",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       },
       ".query.exclude.__no_name": {
         "rendered": "\"repositories\"",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       }
     },
     "body": {},
@@ -13510,7 +13510,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The property by which to sort the results. */\n sort?: \"created\",",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       }
     },
     "body": {},
@@ -23647,7 +23647,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** Sorts the results of your query. Can only be `indexed`, which indicates how recently a file has been indexed by the GitHub search infrastructure. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"indexed\",",
-        "requiresRelaxedTypeAnnotation": true
+        "requiresRelaxedTypeAnnotation": false
       },
       ".query.order": {
         "rendered": "\n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\",",

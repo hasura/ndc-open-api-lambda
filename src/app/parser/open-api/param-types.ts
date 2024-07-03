@@ -299,7 +299,7 @@ export function isRelaxedTypeTagRequiredForScalarTypeSchema(
   schema: SchemaTypeScalar,
 ): boolean {
   return (
-    (scalarSchemaIsObject(schema) || (schema.enum && schema.enum.length > 0)) ??
+    (scalarSchemaIsObject(schema) || (schema.enum && schema.enum.length > 1)) ??
     false
   );
 }
@@ -380,8 +380,7 @@ export function isRelaxedTypeTagRequiredForRefTypeSchema(
 export function isRelaxedTypeTagRequiredForOneOfTypeSchema(
   schema: SchemaTypeOneOf,
 ): boolean {
-  // since this is a union type, we simply return true
-  return true;
+  return schema.oneOf.length > 1;
 }
 
 /**
@@ -394,8 +393,7 @@ export function isRelaxedTypeTagRequiredForOneOfTypeSchema(
 export function isRelaxedTypeTagRequiredForAnyOfTypeSchema(
   schema: SchemaTypeAnyOf,
 ): boolean {
-  // since this is a union type, we simply return true
-  return true;
+  return schema.anyOf.length > 1;
 }
 
 /**
