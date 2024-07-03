@@ -647,11 +647,11 @@
       },
       ".query.MixedInstancesPolicy": {
         "rendered": "\n/** <p>Use this structure to launch multiple instance types and On-Demand Instances and Spot Instances within a single Auto Scaling group.</p> <p>A mixed instances policy contains information that Amazon EC2 Auto Scaling can use to launch instances and help optimize your costs. For more information, see <a href=\"https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html\">Auto Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p> */\n MixedInstancesPolicy?: {  LaunchTemplate?: LaunchTemplate,  InstancesDistribution?: InstancesDistribution, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.MixedInstancesPolicy.LaunchTemplate": {
         "rendered": " LaunchTemplate?: LaunchTemplate,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.MixedInstancesPolicy.InstancesDistribution": {
         "rendered": " InstancesDistribution?: InstancesDistribution,",
@@ -932,11 +932,11 @@
       },
       ".query.MetadataOptions": {
         "rendered": "\n/** The metadata options for the instances. For more information, see <a href=\"https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds\">Configuring the Instance Metadata Options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. */\n MetadataOptions?: {  HttpTokens?: InstanceMetadataHttpTokensState,  HttpPutResponseHopLimit?: InstanceMetadataHttpPutResponseHopLimit,  HttpEndpoint?: InstanceMetadataEndpointState, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.MetadataOptions.HttpTokens": {
         "rendered": " HttpTokens?: InstanceMetadataHttpTokensState,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.MetadataOptions.HttpPutResponseHopLimit": {
         "rendered": " HttpPutResponseHopLimit?: InstanceMetadataHttpPutResponseHopLimit,",
@@ -944,7 +944,7 @@
       },
       ".query.MetadataOptions.HttpEndpoint": {
         "rendered": " HttpEndpoint?: InstanceMetadataEndpointState,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.Action": {
         "rendered": " Action: \"CreateLaunchConfiguration\",",
@@ -4312,15 +4312,15 @@
       },
       ".query.TargetTrackingConfiguration": {
         "rendered": "\n/** Represents a target tracking scaling policy configuration to use with Amazon EC2 Auto Scaling. */\n TargetTrackingConfiguration: {  PredefinedMetricSpecification?: PredefinedMetricSpecification,  CustomizedMetricSpecification?: CustomizedMetricSpecification,  TargetValue?: MetricScale,  DisableScaleIn?: DisableScaleIn, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.TargetTrackingConfiguration.PredefinedMetricSpecification": {
         "rendered": " PredefinedMetricSpecification?: PredefinedMetricSpecification,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.TargetTrackingConfiguration.CustomizedMetricSpecification": {
         "rendered": " CustomizedMetricSpecification?: CustomizedMetricSpecification,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.TargetTrackingConfiguration.TargetValue": {
         "rendered": " TargetValue?: MetricScale,",
@@ -4336,15 +4336,15 @@
       },
       ".query.PredictiveScalingConfiguration": {
         "rendered": "\n/** Represents a predictive scaling policy configuration to use with Amazon EC2 Auto Scaling. */\n PredictiveScalingConfiguration: {  MetricSpecifications?: PredictiveScalingMetricSpecifications,  Mode?: PredictiveScalingMode,  SchedulingBufferTime?: PredictiveScalingSchedulingBufferTime,  MaxCapacityBreachBehavior?: PredictiveScalingMaxCapacityBreachBehavior,  MaxCapacityBuffer?: PredictiveScalingMaxCapacityBuffer, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.PredictiveScalingConfiguration.MetricSpecifications": {
         "rendered": " MetricSpecifications?: PredictiveScalingMetricSpecifications,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.PredictiveScalingConfiguration.Mode": {
         "rendered": " Mode?: PredictiveScalingMode,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.PredictiveScalingConfiguration.SchedulingBufferTime": {
         "rendered": " SchedulingBufferTime?: PredictiveScalingSchedulingBufferTime,",
@@ -4352,7 +4352,7 @@
       },
       ".query.PredictiveScalingConfiguration.MaxCapacityBreachBehavior": {
         "rendered": " MaxCapacityBreachBehavior?: PredictiveScalingMaxCapacityBreachBehavior,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.PredictiveScalingConfiguration.MaxCapacityBuffer": {
         "rendered": " MaxCapacityBuffer?: PredictiveScalingMaxCapacityBuffer,",
@@ -5089,7 +5089,7 @@
       },
       ".query.DesiredConfiguration": {
         "rendered": "\n/** <p>Describes the desired configuration for an instance refresh. </p> <p>If you specify a desired configuration, you must specify either a <code>LaunchTemplate</code> or a <code>MixedInstancesPolicy</code>. </p> */\n DesiredConfiguration?: {  LaunchTemplate?: LaunchTemplateSpecification,  MixedInstancesPolicy?: MixedInstancesPolicy, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.DesiredConfiguration.LaunchTemplate": {
         "rendered": " LaunchTemplate?: LaunchTemplateSpecification,",
@@ -5097,11 +5097,11 @@
       },
       ".query.DesiredConfiguration.MixedInstancesPolicy": {
         "rendered": " MixedInstancesPolicy?: MixedInstancesPolicy,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.Preferences": {
         "rendered": "\n/** Describes the preferences for an instance refresh. */\n Preferences?: {  MinHealthyPercentage?: IntPercent,  InstanceWarmup?: RefreshInstanceWarmup,  CheckpointPercentages?: CheckpointPercentages,  CheckpointDelay?: CheckpointDelay,  SkipMatching?: SkipMatching,  AutoRollback?: AutoRollback,  ScaleInProtectedInstances?: ScaleInProtectedInstances,  StandbyInstances?: StandbyInstances, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.Preferences.MinHealthyPercentage": {
         "rendered": " MinHealthyPercentage?: IntPercent,",
@@ -5129,11 +5129,11 @@
       },
       ".query.Preferences.ScaleInProtectedInstances": {
         "rendered": " ScaleInProtectedInstances?: ScaleInProtectedInstances,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.Preferences.StandbyInstances": {
         "rendered": " StandbyInstances?: StandbyInstances,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.Action": {
         "rendered": " Action: \"StartInstanceRefresh\",",
@@ -5376,11 +5376,11 @@
       },
       ".query.MixedInstancesPolicy": {
         "rendered": "\n/** <p>Use this structure to launch multiple instance types and On-Demand Instances and Spot Instances within a single Auto Scaling group.</p> <p>A mixed instances policy contains information that Amazon EC2 Auto Scaling can use to launch instances and help optimize your costs. For more information, see <a href=\"https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html\">Auto Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p> */\n MixedInstancesPolicy?: {  LaunchTemplate?: LaunchTemplate,  InstancesDistribution?: InstancesDistribution, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.MixedInstancesPolicy.LaunchTemplate": {
         "rendered": " LaunchTemplate?: LaunchTemplate,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.MixedInstancesPolicy.InstancesDistribution": {
         "rendered": " InstancesDistribution?: InstancesDistribution,",
