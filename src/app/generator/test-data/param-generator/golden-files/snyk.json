@@ -436,15 +436,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The field to sort results by. */\n sortBy?: \"projects\" | \"dependency\" | \"severity\" | \"dependenciesWithIssues\", \n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\", \n/** The page of results to fetch. */\n page?: number, \n/** The number of results to fetch per page (maximum is 1000). */\n perPage?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sortBy": {
         "rendered": "\n/** The field to sort results by. */\n sortBy?: \"projects\" | \"dependency\" | \"severity\" | \"dependenciesWithIssues\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page of results to fetch. */\n page?: number,",
@@ -504,7 +504,7 @@
       },
       ".entitlementKey": {
         "rendered": "\n/** The entitlement to query. */\n entitlementKey: \"licenses\" | \"reports\" | \"fullVulnDB\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -920,15 +920,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The field to sort results by. */\n sortBy?: \"license\" | \"dependencies\" | \"projects\" | \"severity\", \n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sortBy": {
         "rendered": "\n/** The field to sort results by. */\n sortBy?: \"license\" | \"dependencies\" | \"projects\" | \"severity\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** The direction to sort results by. */\n order?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {
@@ -2295,7 +2295,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string, \n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string, \n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.from": {
         "rendered": "\n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string,",
@@ -2307,7 +2307,7 @@
       },
       ".query.groupBy": {
         "rendered": "\n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {
@@ -2336,11 +2336,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.groupBy": {
         "rendered": "\n/** The field to group results by */\n groupBy?: \"severity\" | \"fixable\" | \"project,[severity|fixable]\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {
@@ -2430,7 +2430,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The date you wish to count tests from, in the format `YYYY-MM-DD` */\n from: string, \n/** The date you wish to count tests until, in the format `YYYY-MM-DD` */\n to: string, \n/** The field to group results by */\n groupBy?: \"isPrivate\" | \"issuesPrevented\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.from": {
         "rendered": "\n/** The date you wish to count tests from, in the format `YYYY-MM-DD` */\n from: string,",
@@ -2442,7 +2442,7 @@
       },
       ".query.groupBy": {
         "rendered": "\n/** The field to group results by */\n groupBy?: \"isPrivate\" | \"issuesPrevented\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {
@@ -2479,7 +2479,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string, \n/** The date you wish to fetch results until, in the format `YYYY-MM-DD` */\n to: string, \n/** The page of results to request */\n page?: number, \n/** The number of results to return per page (Maximum: 1000) */\n perPage?: number, \n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\", \n/** The direction to sort results. */\n order?: string, \n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.from": {
         "rendered": "\n/** The date you wish to fetch results from, in the format `YYYY-MM-DD` */\n from: string,",
@@ -2499,7 +2499,7 @@
       },
       ".query.sortBy": {
         "rendered": "\n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** The direction to sort results. */\n order?: string,",
@@ -2507,7 +2507,7 @@
       },
       ".query.groupBy": {
         "rendered": "\n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {
@@ -2536,7 +2536,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page of results to request */\n page?: number, \n/** The number of results to return per page (Maximum: 1000) */\n perPage?: number, \n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\", \n/** The direction to sort results. */\n order?: string, \n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page of results to request */\n page?: number,",
@@ -2548,7 +2548,7 @@
       },
       ".query.sortBy": {
         "rendered": "\n/** The key to sort results by */\n sortBy?: \"severity\" | \"issueTitle\" | \"projectName\" | \"isFixed\" | \"isPatched\" | \"isIgnored\" | \"introducedDate\" | \"isUpgradable\" | \"isPatchable\" | \"priorityScore\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** The direction to sort results. */\n order?: string,",
@@ -2556,7 +2556,7 @@
       },
       ".query.groupBy": {
         "rendered": "\n/** Set to issue to group the same issue in multiple projects */\n groupBy?: \"issue\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {

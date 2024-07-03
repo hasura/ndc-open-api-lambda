@@ -27,11 +27,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"last_video_featured_time\" | \"name\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -43,7 +43,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"last_video_featured_time\" | \"name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -83,11 +83,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -103,7 +103,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -128,11 +128,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -148,7 +148,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -173,15 +173,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `conditional_featured` - Featured (promoted) videos\n */\n filter?: \"conditional_featured\" | \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"featured\" | \"likes\" | \"plays\" | \"relevant\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `conditional_featured` - Featured (promoted) videos\n */\n filter?: \"conditional_featured\" | \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -201,7 +201,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"featured\" | \"likes\" | \"plays\" | \"relevant\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -250,15 +250,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"featured\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"featured\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -274,7 +274,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -533,11 +533,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -553,7 +553,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -720,11 +720,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -971,15 +971,15 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter: \"moderators\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter: \"moderators\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -995,7 +995,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1053,7 +1053,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page that contains the video URI. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.containing_uri": {
         "rendered": "\n/** The page that contains the video URI. */\n containing_uri?: string,",
@@ -1061,11 +1061,11 @@
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -1085,7 +1085,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1215,11 +1215,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -1293,11 +1293,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -1313,7 +1313,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1379,11 +1379,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -1395,7 +1395,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1650,15 +1650,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"featured\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"featured\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -1674,7 +1674,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `relevant` - Relevant sorting is available only for search queries.\n */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1762,15 +1762,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderators\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderators\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -1786,7 +1786,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1811,15 +1811,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -1839,7 +1839,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1936,11 +1936,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `texttracks` - Only return text track supported languages\n */\n filter?: \"texttracks\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results.\n\nOption descriptions:\n * `texttracks` - Only return text track supported languages\n */\n filter?: \"texttracks\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2011,11 +2011,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -2031,7 +2031,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2156,7 +2156,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page containing the video URI. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The password of the album. */\n password?: string, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\", \n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.containing_uri": {
         "rendered": "\n/** The page containing the video URI. */\n containing_uri?: string,",
@@ -2164,11 +2164,11 @@
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -2192,7 +2192,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.weak_search": {
         "rendered": "\n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean,",
@@ -2372,15 +2372,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -2400,7 +2400,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2420,11 +2420,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -2436,7 +2436,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2516,15 +2516,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -2540,7 +2540,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2670,7 +2670,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.offset": {
         "rendered": "\n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string,",
@@ -2686,7 +2686,7 @@
       },
       ".query.type": {
         "rendered": "\n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2706,11 +2706,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -2726,7 +2726,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2746,15 +2746,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"online\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"online\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -2770,7 +2770,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2882,15 +2882,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -2906,7 +2906,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -2986,11 +2986,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -3010,7 +3010,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -3090,15 +3090,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -3110,7 +3110,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -3170,15 +3170,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The type of On Demand videos to show.\n\nOption descriptions:\n * `important` - Will show all pages which are about to expire.\n */\n filter?: \"all\" | \"expiring_soon\" | \"film\" | \"important\" | \"purchased\" | \"rented\" | \"series\" | \"subscription\" | \"unwatched\" | \"watched\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"name\" | \"purchase_time\" | \"rating\" | \"release_date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The type of On Demand videos to show.\n\nOption descriptions:\n * `important` - Will show all pages which are about to expire.\n */\n filter?: \"all\" | \"expiring_soon\" | \"film\" | \"important\" | \"purchased\" | \"rented\" | \"series\" | \"subscription\" | \"unwatched\" | \"watched\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -3190,7 +3190,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"name\" | \"purchase_time\" | \"rating\" | \"release_date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -3346,11 +3346,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -3366,7 +3366,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -3406,7 +3406,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page that contains the video URI. */\n containing_uri?: string, \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.containing_uri": {
         "rendered": "\n/** The page that contains the video URI. */\n containing_uri?: string,",
@@ -3414,7 +3414,7 @@
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -3430,7 +3430,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -3641,11 +3641,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -3657,7 +3657,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -3824,11 +3824,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -3840,7 +3840,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -3946,7 +3946,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** Whether to filter by all playable videos or by all videos that are not  playable. */\n filter_playable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.containing_uri": {
         "rendered": "\n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string,",
@@ -3954,11 +3954,11 @@
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -3982,7 +3982,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -4125,15 +4125,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -4153,7 +4153,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -4367,15 +4367,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"country\" | \"my_region\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\" | \"publish.time\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"country\" | \"my_region\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -4391,7 +4391,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\" | \"publish.time\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -4747,15 +4747,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"extra\" | \"main\" | \"trailer\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"extra\" | \"main\" | \"trailer\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -4767,7 +4767,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -4906,11 +4906,11 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The filter to apply to the results. */\n filter: \"batch\" | \"default\" | \"single\" | \"vip\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The filter to apply to the results. */\n filter: \"batch\" | \"default\" | \"single\" | \"vip\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -5227,15 +5227,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"viewable\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"manual\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"viewable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -5247,7 +5247,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"manual\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5296,11 +5296,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"viewable\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"viewable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -5312,7 +5312,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5341,15 +5341,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"all\" | \"buy\" | \"expiring_soon\" | \"extra\" | \"main\" | \"main.viewable\" | \"rent\" | \"trailer\" | \"unwatched\" | \"viewable\" | \"watched\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"episode\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"all\" | \"buy\" | \"expiring_soon\" | \"extra\" | \"main\" | \"main.viewable\" | \"rent\" | \"trailer\" | \"unwatched\" | \"viewable\" | \"watched\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -5361,7 +5361,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"episode\" | \"manual\" | \"name\" | \"purchase_time\" | \"release_date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5534,11 +5534,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"created_time\" | \"duration\" | \"name\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -5550,7 +5550,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"created_time\" | \"duration\" | \"name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5590,11 +5590,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -5610,7 +5610,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"relevant\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5691,11 +5691,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -5711,7 +5711,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"duration\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -6174,7 +6174,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page containing the video URI. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The password of the album. */\n password?: string, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\", \n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.containing_uri": {
         "rendered": "\n/** The page containing the video URI. */\n containing_uri?: string,",
@@ -6182,11 +6182,11 @@
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -6210,7 +6210,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"likes\" | \"manual\" | \"modified_time\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.weak_search": {
         "rendered": "\n/** Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name. */\n weak_search?: boolean,",
@@ -6414,15 +6414,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -6442,7 +6442,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -6467,11 +6467,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -6483,7 +6483,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -6580,15 +6580,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -6604,7 +6604,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"followers\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -6765,7 +6765,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.offset": {
         "rendered": "\n/** Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information. */\n offset?: string,",
@@ -6781,7 +6781,7 @@
       },
       ".query.type": {
         "rendered": "\n/** The feed type. */\n type?: \"appears\" | \"category_featured\" | \"channel\" | \"facebook_feed\" | \"following\" | \"group\" | \"likes\" | \"ondemand_publish\" | \"share\" | \"tagged_with\" | \"twitter_timeline\" | \"uploads\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -6806,11 +6806,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -6826,7 +6826,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -6851,15 +6851,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"online\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"online\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -6875,7 +6875,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7009,15 +7009,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"moderated\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"moderated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -7033,7 +7033,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"members\" | \"videos\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7130,11 +7130,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -7154,7 +7154,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7251,15 +7251,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The type of On Demand pages to return. */\n filter?: \"film\" | \"series\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -7271,7 +7271,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"added\" | \"alphabetical\" | \"date\" | \"modified_time\" | \"name\" | \"publish.time\" | \"rating\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7499,11 +7499,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -7519,7 +7519,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7568,7 +7568,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page that contains the video URI. */\n containing_uri?: string, \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.containing_uri": {
         "rendered": "\n/** The page that contains the video URI. */\n containing_uri?: string,",
@@ -7576,7 +7576,7 @@
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -7592,7 +7592,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results.\n\nOption descriptions:\n * `default` - This will sort to the default sort set on the portfolio.\n */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"likes\" | \"manual\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7836,11 +7836,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -7852,7 +7852,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"date\" | \"default\" | \"modified_time\" | \"name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -8045,11 +8045,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -8061,7 +8061,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -8244,7 +8244,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string, \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** Whether to filter by all playable videos or by all videos that are not  playable. */\n filter_playable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.containing_uri": {
         "rendered": "\n/** The page that contains the video URI. Only available when not paired with `query`. */\n containing_uri?: string,",
@@ -8252,11 +8252,11 @@
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"app_only\" | \"embeddable\" | \"featured\" | \"playable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -8280,7 +8280,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"default\" | \"duration\" | \"last_user_action_event_date\" | \"likes\" | \"modified_time\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -8374,15 +8374,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter?: \"embeddable\", \n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"embeddable\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter_embeddable": {
         "rendered": "\n/** Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`. */\n filter_embeddable?: boolean,",
@@ -8402,7 +8402,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -8499,15 +8499,15 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. `CC` and related filters target videos with the corresponding Creative Commons licenses. For more information, see our [Creative Commons](https://vimeo.com/creativecommons) page. */\n filter?: \"CC\" | \"CC-BY\" | \"CC-BY-NC\" | \"CC-BY-NC-ND\" | \"CC-BY-NC-SA\" | \"CC-BY-ND\" | \"CC-BY-SA\" | \"CC0\" | \"categories\" | \"duration\" | \"in-progress\" | \"minimum_likes\" | \"trending\" | \"upload_date\", \n/** A comma-separated list of video URLs to find. */\n links?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** Search query. */\n query: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\" | \"relevant\", \n/** The comma-separated list of videos to find. */\n uris?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. `CC` and related filters target videos with the corresponding Creative Commons licenses. For more information, see our [Creative Commons](https://vimeo.com/creativecommons) page. */\n filter?: \"CC\" | \"CC-BY\" | \"CC-BY-NC\" | \"CC-BY-NC-ND\" | \"CC-BY-NC-SA\" | \"CC-BY-ND\" | \"CC-BY-SA\" | \"CC0\" | \"categories\" | \"duration\" | \"in-progress\" | \"minimum_likes\" | \"trending\" | \"upload_date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.links": {
         "rendered": "\n/** A comma-separated list of video URLs to find. */\n links?: string,",
@@ -8527,7 +8527,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\" | \"relevant\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.uris": {
         "rendered": "\n/** The comma-separated list of videos to find. */\n uris?: string,",
@@ -8713,11 +8713,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -8942,11 +8942,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -8962,7 +8962,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -9105,11 +9105,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",
@@ -9121,7 +9121,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -9895,11 +9895,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The attribute by which to filter the results. */\n filter?: \"related\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** The attribute by which to filter the results. */\n filter?: \"related\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** The page number of the results to show. */\n page?: number,",

@@ -198,7 +198,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Include project statistics */\n statistics?: boolean, \n/** Show all group that you have access to */\n all_available?: boolean, \n/** Search for a specific group */\n search?: string, \n/** Order by name or path */\n order_by?: \"name\" | \"path\", \n/** Sort by asc (ascending) or desc (descending) */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.statistics": {
         "rendered": "\n/** Include project statistics */\n statistics?: boolean,",
@@ -214,11 +214,11 @@
       },
       ".query.order_by": {
         "rendered": "\n/** Order by name or path */\n order_by?: \"name\" | \"path\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Sort by asc (ascending) or desc (descending) */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -530,11 +530,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\", \n/** Comma-separated list of label names */\n labels?: string, \n/** Return issues for a specific milestone */\n milestone?: string, \n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.labels": {
         "rendered": "\n/** Comma-separated list of label names */\n labels?: string,",
@@ -546,11 +546,11 @@
       },
       ".query.order_by": {
         "rendered": "\n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -851,7 +851,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.archived": {
         "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
@@ -859,7 +859,7 @@
       },
       ".query.visibility": {
         "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.search": {
         "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
@@ -867,11 +867,11 @@
       },
       ".query.order_by": {
         "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.simple": {
         "rendered": "\n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean,",
@@ -1120,11 +1120,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\", \n/** Comma-separated list of label names */\n labels?: string, \n/** Return issues for a specific milestone */\n milestone?: string, \n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.labels": {
         "rendered": "\n/** Comma-separated list of label names */\n labels?: string,",
@@ -1136,11 +1136,11 @@
       },
       ".query.order_by": {
         "rendered": "\n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -1307,15 +1307,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order_by": {
         "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.archived": {
         "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
@@ -1323,7 +1323,7 @@
       },
       ".query.visibility": {
         "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.search": {
         "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
@@ -1387,15 +1387,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, \n/** Include project statistics */\n statistics?: boolean, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order_by": {
         "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.archived": {
         "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
@@ -1403,7 +1403,7 @@
       },
       ".query.visibility": {
         "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.search": {
         "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
@@ -1476,15 +1476,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, \n/** Include project statistics */\n statistics?: boolean, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order_by": {
         "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.archived": {
         "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
@@ -1492,7 +1492,7 @@
       },
       ".query.visibility": {
         "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.search": {
         "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
@@ -1532,15 +1532,15 @@
     "query": {
       ".queryParams": {
         "rendered": " queryParams: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".queryParams.order_by": {
         "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".queryParams.sort": {
         "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".queryParams.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -1573,15 +1573,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order_by": {
         "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.archived": {
         "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
@@ -1589,7 +1589,7 @@
       },
       ".query.visibility": {
         "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.search": {
         "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
@@ -1730,15 +1730,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\", \n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\", \n/** Limit by archived status */\n archived?: boolean, \n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\", \n/** Return list of authorized projects matching the search criteria */\n search?: string, \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Return only the ID, URL, name, and path of each project */\n simple?: boolean, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order_by": {
         "rendered": "\n/** Return projects ordered by field */\n order_by?: \"id\" | \"name\" | \"path\" | \"created_at\" | \"updated_at\" | \"last_activity_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return projects sorted in ascending and descending order */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.archived": {
         "rendered": "\n/** Limit by archived status */\n archived?: boolean,",
@@ -1746,7 +1746,7 @@
       },
       ".query.visibility": {
         "rendered": "\n/** Limit by visibility */\n visibility?: \"public\" | \"internal\" | \"private\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.search": {
         "rendered": "\n/** Return list of authorized projects matching the search criteria */\n search?: string,",
@@ -2272,11 +2272,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.scope": {
         "rendered": "\n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -3195,11 +3195,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\", \n/** Return the issue having the given `iid` */\n iid?: number, \n/** Comma-separated list of label names */\n labels?: string, \n/** Return issues for a specific milestone */\n milestone?: string, \n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Return opened, closed, or all issues */\n state?: \"opened\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.iid": {
         "rendered": "\n/** Return the issue having the given `iid` */\n iid?: number,",
@@ -3215,11 +3215,11 @@
       },
       ".query.order_by": {
         "rendered": "\n/** Return issues ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return issues sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -5024,19 +5024,19 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return opened, closed, merged, or all merge requests */\n state?: \"opened\" | \"closed\" | \"merged\" | \"all\", \n/** Return merge requests ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\", \n/** Return merge requests sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Return opened, closed, merged, or all merge requests */\n state?: \"opened\" | \"closed\" | \"merged\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order_by": {
         "rendered": "\n/** Return merge requests ordered by `created_at` or `updated_at` fields. */\n order_by?: \"created_at\" | \"updated_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** Return merge requests sorted in `asc` or `desc` order. */\n sort?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -6217,11 +6217,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Return \"active\", \"closed\", or \"all\" milestones */\n state?: \"active\" | \"closed\" | \"all\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Return \"active\", \"closed\", or \"all\" milestones */\n state?: \"active\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -6564,7 +6564,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, \n/** Either running, branches, or tags */\n scope?: \"running\" | \"branches\" | \"tags\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -6576,7 +6576,7 @@
       },
       ".query.scope": {
         "rendered": "\n/** Either running, branches, or tags */\n scope?: \"running\" | \"branches\" | \"tags\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7068,11 +7068,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.scope": {
         "rendered": "\n/** The scope of builds to show */\n scope?: \"pending\" | \"running\" | \"failed\" | \"success\" | \"canceled\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -7822,11 +7822,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.scope": {
         "rendered": "\n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -9250,7 +9250,7 @@
     "path": {
       ".serviceSlug": {
         "rendered": "\n/** The name of the service */\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".id": {
         "rendered": " id: number,",
@@ -9274,7 +9274,7 @@
     "path": {
       ".serviceSlug": {
         "rendered": "\n/** The name of the service */\n serviceSlug: \"asana\" | \"assembla\" | \"bamboo\" | \"bugzilla\" | \"buildkite\" | \"builds-email\" | \"campfire\" | \"custom-issue-tracker\" | \"drone-ci\" | \"emails-on-push\" | \"external-wiki\" | \"flowdock\" | \"gemnasium\" | \"hipchat\" | \"irker\" | \"jira\" | \"kubernetes\" | \"mattermost-slash-commands\" | \"slack-slash-commands\" | \"pipelines-email\" | \"pivotaltracker\" | \"pushover\" | \"redmine\" | \"slack\" | \"mattermost\" | \"teamcity\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".id": {
         "rendered": " id: number,",
@@ -10454,11 +10454,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.scope": {
         "rendered": "\n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",
@@ -10486,11 +10486,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\", \n/** Current page number */\n page?: number, \n/** Number of items per page */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.scope": {
         "rendered": "\n/** The scope of specific runners to show */\n scope?: \"active\" | \"paused\" | \"online\" | \"specific\" | \"shared\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Current page number */\n page?: number,",

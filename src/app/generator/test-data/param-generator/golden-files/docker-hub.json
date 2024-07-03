@@ -226,11 +226,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filters to only show images of this status. */\n status?: \"active\" | \"inactive\", \n/** Filters to only show images with:\n- `true`: at least 1 current tag.\n- `false`: no current tags.\n */\n currently_tagged?: boolean, \n/** Orders the results by this property.\n\nPrefixing with `-` sorts by descending order.\n */\n ordering?: \"last_activity\" | \"-last_activity\" | \"digest\" | \"-digest\", \n/** Sets the time from which an image must have been pushed or pulled to\nbe counted as active.\n\nDefaults to 1 month before the current time.\n */\n active_from?: string, \n/** Page number to get. Defaults to 1. */\n page?: number, \n/** Number of images to get per page. Defaults to 10. Max of 100. */\n page_size?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.status": {
         "rendered": "\n/** Filters to only show images of this status. */\n status?: \"active\" | \"inactive\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.currently_tagged": {
         "rendered": "\n/** Filters to only show images with:\n- `true`: at least 1 current tag.\n- `false`: no current tags.\n */\n currently_tagged?: boolean,",
@@ -238,7 +238,7 @@
       },
       ".query.ordering": {
         "rendered": "\n/** Orders the results by this property.\n\nPrefixing with `-` sorts by descending order.\n */\n ordering?: \"last_activity\" | \"-last_activity\" | \"digest\" | \"-digest\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.active_from": {
         "rendered": "\n/** Sets the time from which an image must have been pushed or pulled to\nbe counted as active.\n\nDefaults to 1 month before the current time.\n */\n active_from?: string,",
@@ -604,7 +604,7 @@
     "query": {
       ".query": {
         "rendered": " query: {  startIndex?: number,  count?: number,  filter?: string, \n/** Comma delimited list of attributes to limit to in the response. */\n attributes?: string,  sortOrder?: \"ascending\" | \"descending\", \n/** User attribute to sort by. */\n sortBy?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.startIndex": {
         "rendered": " startIndex?: number,",
@@ -624,7 +624,7 @@
       },
       ".query.sortOrder": {
         "rendered": " sortOrder?: \"ascending\" | \"descending\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sortBy": {
         "rendered": "\n/** User attribute to sort by. */\n sortBy?: string,",

@@ -3,7 +3,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The name of the Times best-seller list. To get valid values, use a list names request.\n\nBe sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.) */\n list?: string, \n/** The number of weeks that the best seller has been on list-name, as of bestsellers-date */\n \"weeks-on-list\"?: number, \n/** YYYY-MM-DD\n\nThe week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29). */\n \"bestsellers-date\"?: string, \n/** YYYY-MM-DD  The date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n date?: string, \n/** International Standard Book Number, 10 or 13 digits */\n isbn?: string, \n/** YYYY-MM-DD\n\nThe date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n \"published-date\"?: string, \n/** The rank of the best seller on list-name as of bestsellers-date */\n rank?: number, \n/** The rank of the best seller on list-name one week prior to bestsellers-date */\n \"rank-last-week\"?: number, \n/** Sets the starting point of the result set */\n offset?: number, \n/** Sets the sort order of the result set */\n \"sort-order\"?: \"ASC\" | \"DESC\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.list": {
         "rendered": "\n/** The name of the Times best-seller list. To get valid values, use a list names request.\n\nBe sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.) */\n list?: string,",
@@ -43,14 +43,14 @@
       },
       ".query.sort-order": {
         "rendered": "\n/** Sets the sort order of the result set */\n \"sort-order\"?: \"ASC\" | \"DESC\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
     "path": {
       ".format": {
         "rendered": " format: \"json\" | \"jsonp\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -167,7 +167,7 @@
     "path": {
       ".format": {
         "rendered": " format: \"json\" | \"jsonp\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -212,7 +212,7 @@
     "path": {
       ".format": {
         "rendered": " format: \"json\" | \"jsonp\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -254,7 +254,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** International Standard Book Number, 10 or 13 digits */\n isbn?: number, \n/** The name of the Times best-seller list. To get valid values, use a list names request.\n\nBe sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.) */\n \"list-name\"?: string, \n/** YYYY-MM-DD\n\nThe date the best-seller list was published on NYTimes.com (compare bestsellers-date) */\n \"published-date\"?: string, \n/** YYYY-MM-DD\n\nThe week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29). */\n \"bestsellers-date\"?: string, \n/** The number of weeks that the best seller has been on list-name, as of bestsellers-date */\n \"weeks-on-list\"?: number, \n/** The rank of the best seller on list-name as of bestsellers-date */\n rank?: string, \n/** The rank of the best seller on list-name one week prior to bestsellers-date */\n \"rank-last-week\"?: number, \n/** Sets the starting point of the result set */\n offset?: number, \n/** The default is ASC (ascending). The sort-order parameter is used with the sort-by parameter — for details, see each request type. */\n \"sort-order\"?: \"ASC\" | \"DESC\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.isbn": {
         "rendered": "\n/** International Standard Book Number, 10 or 13 digits */\n isbn?: number,",
@@ -290,7 +290,7 @@
       },
       ".query.sort-order": {
         "rendered": "\n/** The default is ASC (ascending). The sort-order parameter is used with the sort-by parameter — for details, see each request type. */\n \"sort-order\"?: \"ASC\" | \"DESC\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -366,7 +366,7 @@
     "path": {
       ".format": {
         "rendered": " format: \"json\" | \"jsonp\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {

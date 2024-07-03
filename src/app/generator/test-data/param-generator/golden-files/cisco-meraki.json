@@ -23,7 +23,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour. */\n timespan?: number, \n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string,",
@@ -39,7 +39,7 @@
       },
       ".query.objectType": {
         "rendered": "\n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -68,11 +68,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.objectType": {
         "rendered": "\n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -125,7 +125,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 14 hours after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour. */\n timespan?: number, \n/** The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60. */\n resolution?: number, \n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 365 days from today. */\n t0?: string,",
@@ -145,7 +145,7 @@
       },
       ".query.objectType": {
         "rendered": "\n/** [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle]. */\n objectType?: \"person\" | \"vehicle\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1490,7 +1490,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -1506,7 +1506,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -1547,7 +1547,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -1563,7 +1563,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -1673,7 +1673,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -1689,7 +1689,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -1824,7 +1824,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -1840,7 +1840,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -2043,7 +2043,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -2059,7 +2059,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -2234,7 +2234,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -2250,7 +2250,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -2291,7 +2291,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -2307,7 +2307,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -2413,7 +2413,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -2429,7 +2429,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -2470,7 +2470,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -2486,7 +2486,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -2531,7 +2531,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 31 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. */\n timespan?: number, \n/** The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60. */\n resolution?: number, \n/** The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\", \n/** The destination IP used to obtain the requested stats. This is required. */\n ip: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string,",
@@ -2551,7 +2551,7 @@
       },
       ".query.uplink": {
         "rendered": "\n/** The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ip": {
         "rendered": "\n/** The destination IP used to obtain the requested stats. This is required. */\n ip: string,",
@@ -2825,7 +2825,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Filter by AP */\n serial?: string, \n/** Filter by client MAC */\n clientId?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -2841,7 +2841,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -3267,7 +3267,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 7 days after t0. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. */\n timespan?: number, \n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\", \n/** Filter results by SSID */\n ssid?: number, \n/** Filter results by VLAN */\n vlan?: number, \n/** Filter results by AP Tag */\n apTag?: string, \n/** Partial selection: If present, this call will return only the selected fields of [\"rawDistribution\", \"avg\"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. */\n fields?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 180 days from today. */\n t0?: string,",
@@ -3283,7 +3283,7 @@
       },
       ".query.band": {
         "rendered": "\n/** Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information. */\n band?: \"2.4\" | \"5\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssid": {
         "rendered": "\n/** Filter results by SSID */\n ssid?: number,",
@@ -4890,11 +4890,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Only return the login attempts for the specified SSID */\n ssidNumber?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14, \n/** The username, email, or phone number used during login */\n loginIdentifier?: string, \n/** The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months */\n timespan?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ssidNumber": {
         "rendered": "\n/** Only return the login attempts for the specified SSID */\n ssidNumber?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.loginIdentifier": {
         "rendered": "\n/** The username, email, or phone number used during login */\n loginIdentifier?: string,",
@@ -6319,7 +6319,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 30 days from today. */\n t0?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days. */\n timespan?: number, \n/** Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage. */\n deviceType?: \"appliance\" | \"combined\" | \"switch\" | \"wireless\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 30 days from today. */\n t0?: string,",
@@ -6331,7 +6331,7 @@
       },
       ".query.deviceType": {
         "rendered": "\n/** Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage. */\n deviceType?: \"appliance\" | \"combined\" | \"switch\" | \"wireless\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -7169,11 +7169,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filter batches by status. Valid types are pending, completed, and failed. */\n status?: \"completed\" | \"failed\" | \"pending\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.status": {
         "rendered": "\n/** Filter batches by status. Valid types are pending, completed, and failed. */\n status?: \"completed\" | \"failed\" | \"pending\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -8023,7 +8023,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number, \n/** A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n startingAfter?: string, \n/** A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. */\n endingBefore?: string, \n/** Filter the licenses to those assigned to a particular device */\n deviceSerial?: string, \n/** Filter the licenses to those assigned in a particular network */\n networkId?: string, \n/** Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive' */\n state?: \"active\" | \"expired\" | \"expiring\" | \"recentlyQueued\" | \"unused\" | \"unusedActive\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.perPage": {
         "rendered": "\n/** The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. */\n perPage?: number,",
@@ -8047,7 +8047,7 @@
       },
       ".query.state": {
         "rendered": "\n/** Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive' */\n state?: \"active\" | \"expired\" | \"expiring\" | \"recentlyQueued\" | \"unused\" | \"unusedActive\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -8667,7 +8667,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string, \n/** The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past. */\n t1?: string, \n/** The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes. */\n timespan?: number, \n/** Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\", \n/** Optional filter for a specific destination IP. Default will return all destination IPs. */\n ip?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.t0": {
         "rendered": "\n/** The beginning of the timespan for the data. The maximum lookback period is 60 days from today. */\n t0?: string,",
@@ -8683,7 +8683,7 @@
       },
       ".query.uplink": {
         "rendered": "\n/** Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks. */\n uplink?: \"cellular\" | \"wan1\" | \"wan2\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.ip": {
         "rendered": "\n/** Optional filter for a specific destination IP. Default will return all destination IPs. */\n ip?: string,",

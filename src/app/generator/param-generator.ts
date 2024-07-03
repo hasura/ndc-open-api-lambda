@@ -68,6 +68,7 @@ export function renderScalarTypeNumberSchema(
   let paramType = "";
   if (schema.enum) {
     paramType = schema.enum.join(" | ");
+    schema._$requiresRelaxedTypeTag = true;
   } else {
     paramType = "number";
   }
@@ -81,6 +82,7 @@ export function renderScalarTypeStringSchema(
   if (schema.enum) {
     schema.enum = schema.enum.map((item) => `"${item}"`);
     paramType = schema.enum.join(" | ");
+    schema._$requiresRelaxedTypeTag = true;
   } else {
     paramType = "string";
   }
@@ -93,6 +95,7 @@ export function renderScalarTypeBooleanSchema(
   let paramType = "";
   if (schema.enum) {
     paramType = schema.enum.join(" | ");
+    schema._$requiresRelaxedTypeTag = true;
   } else {
     paramType = "boolean";
   }
@@ -113,16 +116,29 @@ export function renderObjectTypeSchema(schema: types.SchemaTypeObject): string {
     const property = children[propertyName]!;
     property!.name = propertyName; // ensure that the name property is present
     renderedProperties.push(renderParams(property)._$rendered!);
+
+    // if the property requires relaxed type tag,
+    // then the parent will need it too
+    // more: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+    if (property._$requiresRelaxedTypeTag === true) {
+      schema._$requiresRelaxedTypeTag = true;
+    }
   }
   const paramType = `{ ${renderedProperties.join(" ")} }`;
   return renderSchema(paramType, schema);
 }
 
 export function renderArrayTypeSchema(schema: types.SchemaTypeArray): string {
-  const renderedProperty = renderParams(
-    types.getSchemaTypeArrayChild(schema),
-  )._$rendered!;
+  const childSchema = types.getSchemaTypeArrayChild(schema);
+  const renderedProperty = renderParams(childSchema)._$rendered!;
   const paramType = `(${renderedProperty})[]`;
+
+  // if the child requires relaxed type tag,
+  // then the parent will need it too
+  // more: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+  if (childSchema._$requiresRelaxedTypeTag) {
+    schema._$requiresRelaxedTypeTag = true;
+  }
   return renderSchema(paramType, schema);
 }
 
@@ -156,6 +172,10 @@ export function renderOneOfTypeSchema(schema: types.SchemaTypeOneOf): string {
     renderedProperties.push(renderParams(property)._$rendered!);
   }
   const paramType = renderedProperties.join(" | ");
+
+  // union types need to be marked with relaxed type tag
+  // https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+  schema._$requiresRelaxedTypeTag = true;
   return renderSchema(paramType, schema);
 }
 
@@ -165,6 +185,10 @@ export function renderAnyOfTypeSchema(schema: types.SchemaTypeAnyOf): string {
     renderedProperties.push(renderParams(property)._$rendered!);
   }
   const paramType = `| ${renderedProperties.join(" | ")}`;
+
+  // union types need to be marked with relaxed type tag
+  // https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+  schema._$requiresRelaxedTypeTag = true;
   return renderSchema(paramType, schema);
 }
 

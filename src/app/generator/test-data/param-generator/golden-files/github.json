@@ -572,7 +572,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** A comma-separated list of states. If specified, only alerts with these states will be returned.\n\nCan be: `dismissed`, `fixed`, `open` */\n state?: string, \n/** A comma-separated list of severities. If specified, only alerts with these severities will be returned.\n\nCan be: `low`, `medium`, `high`, `critical` */\n severity?: string, \n/** A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.\n\nCan be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust` */\n ecosystem?: string, \n/** A comma-separated list of package names. If specified, only alerts for these packages will be returned. */\n package?: string, \n/** The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned. */\n scope?: \"development\" | \"runtime\", \n/** The property by which to sort the results.\n`created` means when the alert was created.\n`updated` means when the alert's state last changed. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor. */\n after?: string, \n/** **Deprecated**. The number of results per page (max 100), starting from the first matching result.\nThis parameter must not be used in combination with `last`.\nInstead, use `per_page` in combination with `after` to fetch the first page of results. */\n first?: number, \n/** **Deprecated**. The number of results per page (max 100), starting from the last matching result.\nThis parameter must not be used in combination with `first`.\nInstead, use `per_page` in combination with `before` to fetch the last page of results. */\n last?: number, \n/** The number of results per page (max 100). */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** A comma-separated list of states. If specified, only alerts with these states will be returned.\n\nCan be: `dismissed`, `fixed`, `open` */\n state?: string,",
@@ -592,15 +592,15 @@
       },
       ".query.scope": {
         "rendered": "\n/** The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned. */\n scope?: \"development\" | \"runtime\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property by which to sort the results.\n`created` means when the alert was created.\n`updated` means when the alert's state last changed. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.before": {
         "rendered": "\n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string,",
@@ -649,11 +649,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Set to `open` or `resolved` to only list secret scanning alerts in a specific state. */\n state?: \"open\" | \"resolved\", \n/** A comma-separated list of secret types to return. By default all secret types are returned.\nSee \"[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)\"\nfor a complete list of secret types. */\n secret_type?: string, \n/** A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`. */\n resolution?: string, \n/** The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor. */\n after?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Set to `open` or `resolved` to only list secret scanning alerts in a specific state. */\n state?: \"open\" | \"resolved\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.secret_type": {
         "rendered": "\n/** A comma-separated list of secret types to return. By default all secret types are returned.\nSee \"[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)\"\nfor a complete list of secret types. */\n secret_type?: string,",
@@ -665,11 +665,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -1389,15 +1389,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation. */\n filter?: \"assigned\" | \"created\" | \"mentioned\" | \"subscribed\" | \"repos\" | \"all\", \n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\", \n/** A list of comma separated label names. Example: `bug,ui,@high` */\n labels?: string, \n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,  collab?: boolean,  orgs?: boolean,  owned?: boolean,  pulls?: boolean, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation. */\n filter?: \"assigned\" | \"created\" | \"mentioned\" | \"subscribed\" | \"repos\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.labels": {
         "rendered": "\n/** A list of comma separated label names. Example: `bug,ui,@high` */\n labels?: string,",
@@ -1405,11 +1405,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.since": {
         "rendered": "\n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,",
@@ -1621,15 +1621,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\", \n/** To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -1718,15 +1718,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\", \n/** To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -3825,7 +3825,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor. */\n after?: string, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState, \n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\", \n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: CodeScanningAlertSeverity, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.tool_name": {
         "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName,",
@@ -3853,7 +3853,7 @@
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState,",
@@ -3861,7 +3861,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.severity": {
         "rendered": "\n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: CodeScanningAlertSeverity,",
@@ -4338,7 +4338,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** A comma-separated list of states. If specified, only alerts with these states will be returned.\n\nCan be: `dismissed`, `fixed`, `open` */\n state?: string, \n/** A comma-separated list of severities. If specified, only alerts with these severities will be returned.\n\nCan be: `low`, `medium`, `high`, `critical` */\n severity?: string, \n/** A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.\n\nCan be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust` */\n ecosystem?: string, \n/** A comma-separated list of package names. If specified, only alerts for these packages will be returned. */\n package?: string, \n/** The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned. */\n scope?: \"development\" | \"runtime\", \n/** The property by which to sort the results.\n`created` means when the alert was created.\n`updated` means when the alert's state last changed. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor. */\n after?: string, \n/** **Deprecated**. The number of results per page (max 100), starting from the first matching result.\nThis parameter must not be used in combination with `last`.\nInstead, use `per_page` in combination with `after` to fetch the first page of results. */\n first?: number, \n/** **Deprecated**. The number of results per page (max 100), starting from the last matching result.\nThis parameter must not be used in combination with `first`.\nInstead, use `per_page` in combination with `before` to fetch the last page of results. */\n last?: number, \n/** The number of results per page (max 100). */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** A comma-separated list of states. If specified, only alerts with these states will be returned.\n\nCan be: `dismissed`, `fixed`, `open` */\n state?: string,",
@@ -4358,15 +4358,15 @@
       },
       ".query.scope": {
         "rendered": "\n/** The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned. */\n scope?: \"development\" | \"runtime\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property by which to sort the results.\n`created` means when the alert was created.\n`updated` means when the alert's state last changed. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.before": {
         "rendered": "\n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string,",
@@ -5260,7 +5260,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Filter invitations by their member role. */\n role?: \"all\" | \"admin\" | \"direct_member\" | \"billing_manager\" | \"hiring_manager\", \n/** Filter invitations by their invitation source. */\n invitation_source?: \"all\" | \"member\" | \"scim\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -5272,11 +5272,11 @@
       },
       ".query.role": {
         "rendered": "\n/** Filter invitations by their member role. */\n role?: \"all\" | \"admin\" | \"direct_member\" | \"billing_manager\" | \"hiring_manager\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.invitation_source": {
         "rendered": "\n/** Filter invitations by their invitation source. */\n invitation_source?: \"all\" | \"member\" | \"scim\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5407,15 +5407,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation. */\n filter?: \"assigned\" | \"created\" | \"mentioned\" | \"subscribed\" | \"repos\" | \"all\", \n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\", \n/** A list of comma separated label names. Example: `bug,ui,@high` */\n labels?: string, \n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation. */\n filter?: \"assigned\" | \"created\" | \"mentioned\" | \"subscribed\" | \"repos\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.labels": {
         "rendered": "\n/** A list of comma separated label names. Example: `bug,ui,@high` */\n labels?: string,",
@@ -5423,11 +5423,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.since": {
         "rendered": "\n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,",
@@ -5468,15 +5468,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. This options is only available for organization owners. */\n filter?: \"2fa_disabled\" | \"all\", \n/** Filter members returned by their role. */\n role?: \"all\" | \"admin\" | \"member\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. This options is only available for organization owners. */\n filter?: \"2fa_disabled\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.role": {
         "rendered": "\n/** Filter members returned by their role. */\n role?: \"all\" | \"admin\" | \"member\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -5747,7 +5747,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[], },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -5759,11 +5759,11 @@
       },
       ".query.exclude": {
         "rendered": "\n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[],",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.exclude.__no_name": {
         "rendered": "\"repositories\"",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5829,15 +5829,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[], },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.exclude": {
         "rendered": "\n/** Exclude attributes from the API response to improve performance */\n exclude?: (\"repositories\")[],",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.exclude.__no_name": {
         "rendered": "\"repositories\"",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -5983,11 +5983,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filter the list of outside collaborators. `2fa_disabled` means that only outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. */\n filter?: \"2fa_disabled\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Filter the list of outside collaborators. `2fa_disabled` means that only outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. */\n filter?: \"2fa_disabled\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -6085,15 +6085,15 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry. */\n package_type: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\", \n/** The selected visibility of the packages.  This parameter is optional and only filters an existing result set.\n\nThe `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.\nFor the list of GitHub Packages registries that support granular permissions, see \"[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages).\" */\n visibility?: \"public\" | \"private\" | \"internal\", \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.package_type": {
         "rendered": "\n/** The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry. */\n package_type: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.visibility": {
         "rendered": "\n/** The selected visibility of the packages.  This parameter is optional and only filters an existing result set.\n\nThe `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.\nFor the list of GitHub Packages registries that support granular permissions, see \"[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages).\" */\n visibility?: \"public\" | \"private\" | \"internal\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Page number of the results to fetch. */\n page?: number,",
@@ -6132,7 +6132,7 @@
     "path": {
       ".packageType": {
         "rendered": "\n/** The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry. */\n packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": "\n/** The name of the package. */\n packageName: string,",
@@ -6160,7 +6160,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -6197,7 +6197,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -6223,7 +6223,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The state of the package, either active or deleted. */\n state?: \"active\" | \"deleted\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Page number of the results to fetch. */\n page?: number,",
@@ -6235,14 +6235,14 @@
       },
       ".query.state": {
         "rendered": "\n/** The state of the package, either active or deleted. */\n state?: \"active\" | \"deleted\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -6274,7 +6274,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -6306,7 +6306,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -6338,7 +6338,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -6368,11 +6368,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Indicates the state of the projects to return. */\n state?: \"open\" | \"closed\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the projects to return. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -6551,19 +6551,19 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Specifies the types of repositories you want returned. */\n type?: \"all\" | \"public\" | \"private\" | \"forks\" | \"sources\" | \"member\", \n/** The property to sort the results by. */\n sort?: \"created\" | \"updated\" | \"pushed\" | \"full_name\", \n/** The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.type": {
         "rendered": "\n/** Specifies the types of repositories you want returned. */\n type?: \"all\" | \"public\" | \"private\" | \"forks\" | \"sources\" | \"member\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. */\n sort?: \"created\" | \"updated\" | \"pushed\" | \"full_name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -6633,11 +6633,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Set to `open` or `resolved` to only list secret scanning alerts in a specific state. */\n state?: \"open\" | \"resolved\", \n/** A comma-separated list of secret types to return. By default all secret types are returned.\nSee \"[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)\"\nfor a complete list of secret types. */\n secret_type?: string, \n/** A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`. */\n resolution?: string, \n/** The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty \"before\" query string. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty \"after\" query string. */\n after?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Set to `open` or `resolved` to only list secret scanning alerts in a specific state. */\n state?: \"open\" | \"resolved\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.secret_type": {
         "rendered": "\n/** A comma-separated list of secret types to return. By default all secret types are returned.\nSee \"[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)\"\nfor a complete list of secret types. */\n secret_type?: string,",
@@ -6649,11 +6649,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Page number of the results to fetch. */\n page?: number,",
@@ -6989,11 +6989,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Pinned discussions only filter */\n pinned?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -7172,11 +7172,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -7371,11 +7371,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -7505,11 +7505,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -7668,11 +7668,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filters members returned by their role in the team. */\n role?: \"member\" | \"maintainer\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.role": {
         "rendered": "\n/** Filters members returned by their role in the team. */\n role?: \"member\" | \"maintainer\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -8145,11 +8145,11 @@
       },
       ".securityProduct": {
         "rendered": "\n/** The security feature to enable or disable. */\n securityProduct: \"dependency_graph\" | \"dependabot_alerts\" | \"dependabot_security_updates\" | \"advanced_security\" | \"secret_scanning\" | \"secret_scanning_push_protection\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".enablement": {
         "rendered": "\n/** The action to take.\n\n`enable_all` means to enable the specified security feature for all repositories in the organization.\n`disable_all` means to disable the specified security feature for all repositories in the organization. */\n enablement: \"enable_all\" | \"disable_all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -8346,11 +8346,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filters the project cards that are returned by the card's state. */\n archived_state?: \"all\" | \"archived\" | \"not_archived\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.archived_state": {
         "rendered": "\n/** Filters the project cards that are returned by the card's state. */\n archived_state?: \"all\" | \"archived\" | \"not_archived\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -8522,11 +8522,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see. */\n affiliation?: \"outside\" | \"direct\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.affiliation": {
         "rendered": "\n/** Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see. */\n affiliation?: \"outside\" | \"direct\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -9125,7 +9125,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, \n/** An explicit key or prefix for identifying the cache */\n key?: string, \n/** The property to sort the results by. `created_at` means when the cache was created. `last_accessed_at` means when the cache was last accessed. `size_in_bytes` is the size of the cache in bytes. */\n sort?: \"created_at\" | \"last_accessed_at\" | \"size_in_bytes\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -9145,11 +9145,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created_at` means when the cache was created. `last_accessed_at` means when the cache was last accessed. `size_in_bytes` is the size of the cache in bytes. */\n sort?: \"created_at\" | \"last_accessed_at\" | \"size_in_bytes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -9600,7 +9600,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run. */\n actor?: string, \n/** Returns workflow runs associated with a branch. Use the name of the branch of the `push`. */\n branch?: string, \n/** Returns workflow run triggered by the event you specify. For example, `push`, `pull_request` or `issue`. For more information, see \"[Events that trigger workflows](https://docs.github.com/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows).\" */\n event?: string, \n/** Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`. */\n status?: \"completed\" | \"action_required\" | \"cancelled\" | \"failure\" | \"neutral\" | \"skipped\" | \"stale\" | \"success\" | \"timed_out\" | \"in_progress\" | \"queued\" | \"requested\" | \"waiting\" | \"pending\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Returns workflow runs created within the given date-time range. For more information on the syntax, see \"[Understanding the search syntax](https://docs.github.com/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates).\" */\n created?: string, \n/** If `true` pull requests are omitted from the response (empty array). */\n exclude_pull_requests?: boolean, \n/** Returns workflow runs with the `check_suite_id` that you specify. */\n check_suite_id?: number, \n/** Only returns workflow runs that are associated with the specified `head_sha`. */\n head_sha?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.actor": {
         "rendered": "\n/** Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run. */\n actor?: string,",
@@ -9616,7 +9616,7 @@
       },
       ".query.status": {
         "rendered": "\n/** Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`. */\n status?: \"completed\" | \"action_required\" | \"cancelled\" | \"failure\" | \"neutral\" | \"skipped\" | \"stale\" | \"success\" | \"timed_out\" | \"in_progress\" | \"queued\" | \"requested\" | \"waiting\" | \"pending\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -10036,7 +10036,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run. */\n actor?: string, \n/** Returns workflow runs associated with a branch. Use the name of the branch of the `push`. */\n branch?: string, \n/** Returns workflow run triggered by the event you specify. For example, `push`, `pull_request` or `issue`. For more information, see \"[Events that trigger workflows](https://docs.github.com/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows).\" */\n event?: string, \n/** Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`. */\n status?: \"completed\" | \"action_required\" | \"cancelled\" | \"failure\" | \"neutral\" | \"skipped\" | \"stale\" | \"success\" | \"timed_out\" | \"in_progress\" | \"queued\" | \"requested\" | \"waiting\" | \"pending\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Returns workflow runs created within the given date-time range. For more information on the syntax, see \"[Understanding the search syntax](https://docs.github.com/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates).\" */\n created?: string, \n/** If `true` pull requests are omitted from the response (empty array). */\n exclude_pull_requests?: boolean, \n/** Returns workflow runs with the `check_suite_id` that you specify. */\n check_suite_id?: number, \n/** Only returns workflow runs that are associated with the specified `head_sha`. */\n head_sha?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.actor": {
         "rendered": "\n/** Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run. */\n actor?: string,",
@@ -10052,7 +10052,7 @@
       },
       ".query.status": {
         "rendered": "\n/** Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`. */\n status?: \"completed\" | \"action_required\" | \"cancelled\" | \"failure\" | \"neutral\" | \"skipped\" | \"stale\" | \"success\" | \"timed_out\" | \"in_progress\" | \"queued\" | \"requested\" | \"waiting\" | \"pending\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -10441,11 +10441,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filters jobs by their `completed_at` timestamp. `latest` returns jobs from the most recent execution of the workflow run. `all` returns all jobs for a workflow run, including from old executions of the workflow run. */\n filter?: \"latest\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Filters jobs by their `completed_at` timestamp. `latest` returns jobs from the most recent execution of the workflow run. `all` returns all jobs for a workflow run, including from old executions of the workflow run. */\n filter?: \"latest\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -11141,7 +11141,7 @@
       },
       ".workflowId": {
         "rendered": "\n/** The ID of the workflow. You can also pass the workflow file name as a string. */\n workflowId: number | string,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -11169,7 +11169,7 @@
       },
       ".workflowId": {
         "rendered": " workflowId: number | string,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -11210,7 +11210,7 @@
       },
       ".workflowId": {
         "rendered": " workflowId: number | string,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -11238,7 +11238,7 @@
       },
       ".workflowId": {
         "rendered": " workflowId: number | string,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -11256,7 +11256,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run. */\n actor?: string, \n/** Returns workflow runs associated with a branch. Use the name of the branch of the `push`. */\n branch?: string, \n/** Returns workflow run triggered by the event you specify. For example, `push`, `pull_request` or `issue`. For more information, see \"[Events that trigger workflows](https://docs.github.com/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows).\" */\n event?: string, \n/** Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`. */\n status?: \"completed\" | \"action_required\" | \"cancelled\" | \"failure\" | \"neutral\" | \"skipped\" | \"stale\" | \"success\" | \"timed_out\" | \"in_progress\" | \"queued\" | \"requested\" | \"waiting\" | \"pending\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Returns workflow runs created within the given date-time range. For more information on the syntax, see \"[Understanding the search syntax](https://docs.github.com/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates).\" */\n created?: string, \n/** If `true` pull requests are omitted from the response (empty array). */\n exclude_pull_requests?: boolean, \n/** Returns workflow runs with the `check_suite_id` that you specify. */\n check_suite_id?: number, \n/** Only returns workflow runs that are associated with the specified `head_sha`. */\n head_sha?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.actor": {
         "rendered": "\n/** Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run. */\n actor?: string,",
@@ -11272,7 +11272,7 @@
       },
       ".query.status": {
         "rendered": "\n/** Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`. */\n status?: \"completed\" | \"action_required\" | \"cancelled\" | \"failure\" | \"neutral\" | \"skipped\" | \"stale\" | \"success\" | \"timed_out\" | \"in_progress\" | \"queued\" | \"requested\" | \"waiting\" | \"pending\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -11311,7 +11311,7 @@
       },
       ".workflowId": {
         "rendered": " workflowId: number | string,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -11347,7 +11347,7 @@
       },
       ".workflowId": {
         "rendered": " workflowId: number | string,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "response": {
@@ -13202,7 +13202,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns check runs with the specified `name`. */\n check_name?: string, \n/** Returns check runs with the specified `status`. */\n status?: \"queued\" | \"in_progress\" | \"completed\", \n/** Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs. */\n filter?: \"latest\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.check_name": {
         "rendered": "\n/** Returns check runs with the specified `name`. */\n check_name?: string,",
@@ -13210,11 +13210,11 @@
       },
       ".query.status": {
         "rendered": "\n/** Returns check runs with the specified `status`. */\n status?: \"queued\" | \"in_progress\" | \"completed\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs. */\n filter?: \"latest\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -13291,7 +13291,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\", \n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState, \n/** If specified, only code scanning alerts with this severity will be returned. */\n severity?: CodeScanningAlertSeverity, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.tool_name": {
         "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName,",
@@ -13315,11 +13315,11 @@
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property by which to sort the results. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** If specified, only code scanning alerts with this state will be returned. */\n state?: CodeScanningAlertState,",
@@ -13478,7 +13478,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName, \n/** The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both. */\n tool_guid?: CodeScanningAnalysisToolGuid, \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`. */\n ref?: CodeScanningRef, \n/** Filter analyses belonging to the same SARIF upload. */\n sarif_id?: CodeScanningAnalysisSarifId, \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The property by which to sort the results. */\n sort?: \"created\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.tool_name": {
         "rendered": "\n/** The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both. */\n tool_name?: CodeScanningAnalysisToolName,",
@@ -13506,11 +13506,11 @@
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property by which to sort the results. */\n sort?: \"created\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -14149,15 +14149,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filter collaborators returned by their affiliation. `outside` means all outside collaborators of an organization-owned repository. `direct` means all collaborators with permissions to an organization-owned repository, regardless of organization membership status. `all` means all collaborators the authenticated user can see. */\n affiliation?: \"outside\" | \"direct\" | \"all\", \n/** Filter collaborators by the permissions they have on the repository. If not specified, all collaborators will be returned. */\n permission?: \"pull\" | \"triage\" | \"push\" | \"maintain\" | \"admin\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.affiliation": {
         "rendered": "\n/** Filter collaborators returned by their affiliation. `outside` means all outside collaborators of an organization-owned repository. `direct` means all collaborators with permissions to an organization-owned repository, regardless of organization membership status. `all` means all collaborators the authenticated user can see. */\n affiliation?: \"outside\" | \"direct\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.permission": {
         "rendered": "\n/** Filter collaborators by the permissions they have on the repository. If not specified, all collaborators will be returned. */\n permission?: \"pull\" | \"triage\" | \"push\" | \"maintain\" | \"admin\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -14461,11 +14461,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a commit comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a commit comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -14848,7 +14848,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns check runs with the specified `name`. */\n check_name?: string, \n/** Returns check runs with the specified `status`. */\n status?: \"queued\" | \"in_progress\" | \"completed\", \n/** Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs. */\n filter?: \"latest\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number,  app_id?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.check_name": {
         "rendered": "\n/** Returns check runs with the specified `name`. */\n check_name?: string,",
@@ -14856,11 +14856,11 @@
       },
       ".query.status": {
         "rendered": "\n/** Returns check runs with the specified `status`. */\n status?: \"queued\" | \"in_progress\" | \"completed\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs. */\n filter?: \"latest\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -15293,7 +15293,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** A comma-separated list of states. If specified, only alerts with these states will be returned.\n\nCan be: `dismissed`, `fixed`, `open` */\n state?: string, \n/** A comma-separated list of severities. If specified, only alerts with these severities will be returned.\n\nCan be: `low`, `medium`, `high`, `critical` */\n severity?: string, \n/** A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.\n\nCan be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust` */\n ecosystem?: string, \n/** A comma-separated list of package names. If specified, only alerts for these packages will be returned. */\n package?: string, \n/** A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned. */\n manifest?: string, \n/** The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned. */\n scope?: \"development\" | \"runtime\", \n/** The property by which to sort the results.\n`created` means when the alert was created.\n`updated` means when the alert's state last changed. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** **Deprecated**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor. */\n after?: string, \n/** **Deprecated**. The number of results per page (max 100), starting from the first matching result.\nThis parameter must not be used in combination with `last`.\nInstead, use `per_page` in combination with `after` to fetch the first page of results. */\n first?: number, \n/** **Deprecated**. The number of results per page (max 100), starting from the last matching result.\nThis parameter must not be used in combination with `first`.\nInstead, use `per_page` in combination with `before` to fetch the last page of results. */\n last?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** A comma-separated list of states. If specified, only alerts with these states will be returned.\n\nCan be: `dismissed`, `fixed`, `open` */\n state?: string,",
@@ -15317,15 +15317,15 @@
       },
       ".query.scope": {
         "rendered": "\n/** The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned. */\n scope?: \"development\" | \"runtime\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property by which to sort the results.\n`created` means when the alert was created.\n`updated` means when the alert's state last changed. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** **Deprecated**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead. */\n page?: number,",
@@ -16382,11 +16382,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The sort order. `stargazers` will sort by star count. */\n sort?: \"newest\" | \"oldest\" | \"stargazers\" | \"watchers\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The sort order. `stargazers` will sort by star count. */\n sort?: \"newest\" | \"oldest\" | \"stargazers\" | \"watchers\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -17816,7 +17816,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** If an `integer` is passed, it should refer to a milestone by its `number` field. If the string `*` is passed, issues with any milestone are accepted. If the string `none` is passed, issues without milestones are returned. */\n milestone?: string, \n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\", \n/** Can be the name of a user. Pass in `none` for issues with no assigned user, and `*` for issues assigned to any user. */\n assignee?: string, \n/** The user that created the issue. */\n creator?: string, \n/** A user that's mentioned in the issue. */\n mentioned?: string, \n/** A list of comma separated label names. Example: `bug,ui,@high` */\n labels?: string, \n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.milestone": {
         "rendered": "\n/** If an `integer` is passed, it should refer to a milestone by its `number` field. If the string `*` is passed, issues with any milestone are accepted. If the string `none` is passed, issues without milestones are returned. */\n milestone?: string,",
@@ -17824,7 +17824,7 @@
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.assignee": {
         "rendered": "\n/** Can be the name of a user. Pass in `none` for issues with no assigned user, and `*` for issues assigned to any user. */\n assignee?: string,",
@@ -17844,11 +17844,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.since": {
         "rendered": "\n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,",
@@ -17934,15 +17934,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\", \n/** Either `asc` or `desc`. Ignored without the `sort` parameter. */\n direction?: \"asc\" | \"desc\", \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** Either `asc` or `desc`. Ignored without the `sort` parameter. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.since": {
         "rendered": "\n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,",
@@ -18084,11 +18084,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -18865,11 +18865,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -19511,19 +19511,19 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The state of the milestone. Either `open`, `closed`, or `all`. */\n state?: \"open\" | \"closed\" | \"all\", \n/** What to sort results by. Either `due_on` or `completeness`. */\n sort?: \"due_on\" | \"completeness\", \n/** The direction of the sort. Either `asc` or `desc`. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** The state of the milestone. Either `open`, `closed`, or `all`. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** What to sort results by. Either `due_on` or `completeness`. */\n sort?: \"due_on\" | \"completeness\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction of the sort. Either `asc` or `desc`. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -20145,11 +20145,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Indicates the state of the projects to return. */\n state?: \"open\" | \"closed\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the projects to return. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -20227,11 +20227,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Either `open`, `closed`, or `all` to filter by state. */\n state?: \"open\" | \"closed\" | \"all\", \n/** Filter pulls by head user or head organization and branch name in the format of `user:ref-name` or `organization:ref-name`. For example: `github:new-script-format` or `octocat:test-branch`. */\n head?: string, \n/** Filter pulls by base branch name. Example: `gh-pages`. */\n base?: string, \n/** What to sort results by. `popularity` will sort by the number of comments. `long-running` will sort by date created and will limit the results to pull requests that have been open for more than a month and have had activity within the past month. */\n sort?: \"created\" | \"updated\" | \"popularity\" | \"long-running\", \n/** The direction of the sort. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Either `open`, `closed`, or `all` to filter by state. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.head": {
         "rendered": "\n/** Filter pulls by head user or head organization and branch name in the format of `user:ref-name` or `organization:ref-name`. For example: `github:new-script-format` or `octocat:test-branch`. */\n head?: string,",
@@ -20243,11 +20243,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** What to sort results by. `popularity` will sort by the number of comments. `long-running` will sort by date created and will limit the results to pull requests that have been open for more than a month and have had activity within the past month. */\n sort?: \"created\" | \"updated\" | \"popularity\" | \"long-running\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction of the sort. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -20325,15 +20325,15 @@
     "query": {
       ".query": {
         "rendered": " query: {  sort?: \"created\" | \"updated\" | \"created_at\", \n/** The direction to sort results. Ignored without `sort` parameter. */\n direction?: \"asc\" | \"desc\", \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": " sort?: \"created\" | \"updated\" | \"created_at\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort results. Ignored without `sort` parameter. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.since": {
         "rendered": "\n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,",
@@ -20475,11 +20475,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a pull request review comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a pull request review comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -20707,15 +20707,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort results. Ignored without `sort` parameter. */\n direction?: \"asc\" | \"desc\", \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort results. Ignored without `sort` parameter. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.since": {
         "rendered": "\n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,",
@@ -22040,11 +22040,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a release. */\n content?: \"+1\" | \"laugh\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a release. */\n content?: \"+1\" | \"laugh\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -22162,11 +22162,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Set to `open` or `resolved` to only list secret scanning alerts in a specific state. */\n state?: \"open\" | \"resolved\", \n/** A comma-separated list of secret types to return. By default all secret types are returned.\nSee \"[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)\"\nfor a complete list of secret types. */\n secret_type?: string, \n/** A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`. */\n resolution?: string, \n/** The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty \"before\" query string. */\n before?: string, \n/** A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty \"after\" query string. */\n after?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Set to `open` or `resolved` to only list secret scanning alerts in a specific state. */\n state?: \"open\" | \"resolved\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.secret_type": {
         "rendered": "\n/** A comma-separated list of secret types to return. By default all secret types are returned.\nSee \"[Secret scanning patterns](https://docs.github.com/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)\"\nfor a complete list of secret types. */\n secret_type?: string,",
@@ -22178,11 +22178,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Page number of the results to fetch. */\n page?: number,",
@@ -22966,11 +22966,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The time frame to display results for. */\n per?: \"day\" | \"week\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per": {
         "rendered": "\n/** The time frame to display results for. */\n per?: \"day\" | \"week\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -23055,11 +23055,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The time frame to display results for. */\n per?: \"day\" | \"week\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per": {
         "rendered": "\n/** The time frame to display results for. */\n per?: \"day\" | \"week\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -23639,7 +23639,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching code](https://docs.github.com/search-github/searching-on-github/searching-code)\" for a detailed list of qualifiers. */\n q: string, \n/** Sorts the results of your query. Can only be `indexed`, which indicates how recently a file has been indexed by the GitHub search infrastructure. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"indexed\", \n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.q": {
         "rendered": "\n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching code](https://docs.github.com/search-github/searching-on-github/searching-code)\" for a detailed list of qualifiers. */\n q: string,",
@@ -23647,11 +23647,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** Sorts the results of your query. Can only be `indexed`, which indicates how recently a file has been indexed by the GitHub search infrastructure. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"indexed\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -23687,7 +23687,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching commits](https://docs.github.com/search-github/searching-on-github/searching-commits)\" for a detailed list of qualifiers. */\n q: string, \n/** Sorts the results of your query by `author-date` or `committer-date`. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"author-date\" | \"committer-date\", \n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.q": {
         "rendered": "\n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching commits](https://docs.github.com/search-github/searching-on-github/searching-commits)\" for a detailed list of qualifiers. */\n q: string,",
@@ -23695,11 +23695,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** Sorts the results of your query by `author-date` or `committer-date`. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"author-date\" | \"committer-date\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -23735,7 +23735,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching issues and pull requests](https://docs.github.com/search-github/searching-on-github/searching-issues-and-pull-requests)\" for a detailed list of qualifiers. */\n q: string, \n/** Sorts the results of your query by the number of `comments`, `reactions`, `reactions-+1`, `reactions--1`, `reactions-smile`, `reactions-thinking_face`, `reactions-heart`, `reactions-tada`, or `interactions`. You can also sort results by how recently the items were `created` or `updated`, Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"comments\" | \"reactions\" | \"reactions-+1\" | \"reactions--1\" | \"reactions-smile\" | \"reactions-thinking_face\" | \"reactions-heart\" | \"reactions-tada\" | \"interactions\" | \"created\" | \"updated\", \n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.q": {
         "rendered": "\n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching issues and pull requests](https://docs.github.com/search-github/searching-on-github/searching-issues-and-pull-requests)\" for a detailed list of qualifiers. */\n q: string,",
@@ -23743,11 +23743,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** Sorts the results of your query by the number of `comments`, `reactions`, `reactions-+1`, `reactions--1`, `reactions-smile`, `reactions-thinking_face`, `reactions-heart`, `reactions-tada`, or `interactions`. You can also sort results by how recently the items were `created` or `updated`, Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"comments\" | \"reactions\" | \"reactions-+1\" | \"reactions--1\" | \"reactions-smile\" | \"reactions-thinking_face\" | \"reactions-heart\" | \"reactions-tada\" | \"interactions\" | \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -23783,7 +23783,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The id of the repository. */\n repository_id: number, \n/** The search keywords. This endpoint does not accept qualifiers in the query. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). */\n q: string, \n/** Sorts the results of your query by when the label was `created` or `updated`. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"created\" | \"updated\", \n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.repository_id": {
         "rendered": "\n/** The id of the repository. */\n repository_id: number,",
@@ -23795,11 +23795,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** Sorts the results of your query by when the label was `created` or `updated`. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -23835,7 +23835,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching for repositories](https://docs.github.com/articles/searching-for-repositories/)\" for a detailed list of qualifiers. */\n q: string, \n/** Sorts the results of your query by number of `stars`, `forks`, or `help-wanted-issues` or how recently the items were `updated`. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"stars\" | \"forks\" | \"help-wanted-issues\" | \"updated\", \n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.q": {
         "rendered": "\n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching for repositories](https://docs.github.com/articles/searching-for-repositories/)\" for a detailed list of qualifiers. */\n q: string,",
@@ -23843,11 +23843,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** Sorts the results of your query by number of `stars`, `forks`, or `help-wanted-issues` or how recently the items were `updated`. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"stars\" | \"forks\" | \"help-wanted-issues\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -23923,7 +23923,7 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching users](https://docs.github.com/search-github/searching-on-github/searching-users)\" for a detailed list of qualifiers. */\n q: string, \n/** Sorts the results of your query by number of `followers` or `repositories`, or when the person `joined` GitHub. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"followers\" | \"repositories\" | \"joined\", \n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.q": {
         "rendered": "\n/** The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/rest/reference/search#constructing-a-search-query). See \"[Searching users](https://docs.github.com/search-github/searching-on-github/searching-users)\" for a detailed list of qualifiers. */\n q: string,",
@@ -23931,11 +23931,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** Sorts the results of your query by number of `followers` or `repositories`, or when the person `joined` GitHub. Default: [best match](https://docs.github.com/rest/reference/search#ranking-search-results) */\n sort?: \"followers\" | \"repositories\" | \"joined\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.order": {
         "rendered": "\n/** Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`. */\n order?: \"desc\" | \"asc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -24044,11 +24044,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -24203,11 +24203,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -24382,11 +24382,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -24472,11 +24472,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.content": {
         "rendered": "\n/** Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion. */\n content?: \"+1\" | \"-1\" | \"laugh\" | \"confused\" | \"heart\" | \"hooray\" | \"rocket\" | \"eyes\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -24591,11 +24591,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Filters members returned by their role in the team. */\n role?: \"member\" | \"maintainer\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.role": {
         "rendered": "\n/** Filters members returned by their role in the team. */\n role?: \"member\" | \"maintainer\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -26263,15 +26263,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation. */\n filter?: \"assigned\" | \"created\" | \"mentioned\" | \"subscribed\" | \"repos\" | \"all\", \n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\", \n/** A list of comma separated label names. Example: `bug,ui,@high` */\n labels?: string, \n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
         "rendered": "\n/** Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation. */\n filter?: \"assigned\" | \"created\" | \"mentioned\" | \"subscribed\" | \"repos\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the issues to return. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.labels": {
         "rendered": "\n/** A list of comma separated label names. Example: `bug,ui,@high` */\n labels?: string,",
@@ -26279,11 +26279,11 @@
       },
       ".query.sort": {
         "rendered": "\n/** What to sort results by. */\n sort?: \"created\" | \"updated\" | \"comments\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.since": {
         "rendered": "\n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string,",
@@ -26483,11 +26483,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Indicates the state of the memberships to return. If not specified, the API returns both active and pending memberships. */\n state?: \"active\" | \"pending\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the memberships to return. If not specified, the API returns both active and pending memberships. */\n state?: \"active\" | \"pending\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -26802,15 +26802,15 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry. */\n package_type: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\", \n/** The selected visibility of the packages.  This parameter is optional and only filters an existing result set.\n\nThe `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.\nFor the list of GitHub Packages registries that support granular permissions, see \"[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages).\" */\n visibility?: \"public\" | \"private\" | \"internal\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.package_type": {
         "rendered": "\n/** The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry. */\n package_type: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.visibility": {
         "rendered": "\n/** The selected visibility of the packages.  This parameter is optional and only filters an existing result set.\n\nThe `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.\nFor the list of GitHub Packages registries that support granular permissions, see \"[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages).\" */\n visibility?: \"public\" | \"private\" | \"internal\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -26836,7 +26836,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -26860,7 +26860,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -26893,7 +26893,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -26915,7 +26915,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Page number of the results to fetch. */\n page?: number, \n/** The number of results per page (max 100). */\n per_page?: number, \n/** The state of the package, either active or deleted. */\n state?: \"active\" | \"deleted\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.page": {
         "rendered": "\n/** Page number of the results to fetch. */\n page?: number,",
@@ -26927,14 +26927,14 @@
       },
       ".query.state": {
         "rendered": "\n/** The state of the package, either active or deleted. */\n state?: \"active\" | \"deleted\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -26962,7 +26962,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -26990,7 +26990,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -27018,7 +27018,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -27104,11 +27104,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Limit results to repositories with the specified visibility. */\n visibility?: \"all\" | \"public\" | \"private\", \n/** Comma-separated list of values. Can include:  \n * `owner`: Repositories that are owned by the authenticated user.  \n * `collaborator`: Repositories that the user has been added to as a collaborator.  \n * `organization_member`: Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on. */\n affiliation?: string, \n/** Limit results to repositories of the specified type. Will cause a `422` error if used in the same request as **visibility** or **affiliation**. */\n type?: \"all\" | \"owner\" | \"public\" | \"private\" | \"member\", \n/** The property to sort the results by. */\n sort?: \"created\" | \"updated\" | \"pushed\" | \"full_name\", \n/** The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, \n/** Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n since?: string, \n/** Only show notifications updated before the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */\n before?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.visibility": {
         "rendered": "\n/** Limit results to repositories with the specified visibility. */\n visibility?: \"all\" | \"public\" | \"private\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.affiliation": {
         "rendered": "\n/** Comma-separated list of values. Can include:  \n * `owner`: Repositories that are owned by the authenticated user.  \n * `collaborator`: Repositories that the user has been added to as a collaborator.  \n * `organization_member`: Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on. */\n affiliation?: string,",
@@ -27116,15 +27116,15 @@
       },
       ".query.type": {
         "rendered": "\n/** Limit results to repositories of the specified type. Will cause a `422` error if used in the same request as **visibility** or **affiliation**. */\n type?: \"all\" | \"owner\" | \"public\" | \"private\" | \"member\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. */\n sort?: \"created\" | \"updated\" | \"pushed\" | \"full_name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -27364,15 +27364,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -27883,11 +27883,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`. */\n subject_type?: \"organization\" | \"repository\" | \"issue\" | \"pull_request\", \n/** Uses the ID for the `subject_type` you specified. **Required** when using `subject_type`. */\n subject_id?: string, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.subject_type": {
         "rendered": "\n/** Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`. */\n subject_type?: \"organization\" | \"repository\" | \"issue\" | \"pull_request\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.subject_id": {
         "rendered": "\n/** Uses the ID for the `subject_type` you specified. **Required** when using `subject_type`. */\n subject_id?: string,",
@@ -28010,15 +28010,15 @@
     "query": {
       ".query": {
         "rendered": " query?: { \n/** The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry. */\n package_type: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\", \n/** The selected visibility of the packages.  This parameter is optional and only filters an existing result set.\n\nThe `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.\nFor the list of GitHub Packages registries that support granular permissions, see \"[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages).\" */\n visibility?: \"public\" | \"private\" | \"internal\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.package_type": {
         "rendered": "\n/** The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry. */\n package_type: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.visibility": {
         "rendered": "\n/** The selected visibility of the packages.  This parameter is optional and only filters an existing result set.\n\nThe `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.\nFor the list of GitHub Packages registries that support granular permissions, see \"[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages).\" */\n visibility?: \"public\" | \"private\" | \"internal\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -28049,7 +28049,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -28077,7 +28077,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -28114,7 +28114,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -28142,7 +28142,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -28174,7 +28174,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -28206,7 +28206,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -28238,7 +28238,7 @@
     "path": {
       ".packageType": {
         "rendered": " packageType: \"npm\" | \"maven\" | \"rubygems\" | \"docker\" | \"nuget\" | \"container\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".packageName": {
         "rendered": " packageName: string,",
@@ -28268,11 +28268,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Indicates the state of the projects to return. */\n state?: \"open\" | \"closed\" | \"all\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.state": {
         "rendered": "\n/** Indicates the state of the projects to return. */\n state?: \"open\" | \"closed\" | \"all\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -28383,19 +28383,19 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Limit results to repositories of the specified type. */\n type?: \"all\" | \"owner\" | \"member\", \n/** The property to sort the results by. */\n sort?: \"created\" | \"updated\" | \"pushed\" | \"full_name\", \n/** The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.type": {
         "rendered": "\n/** Limit results to repositories of the specified type. */\n type?: \"all\" | \"owner\" | \"member\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. */\n sort?: \"created\" | \"updated\" | \"pushed\" | \"full_name\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",
@@ -28529,15 +28529,15 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\", \n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\", \n/** The number of results per page (max 100). */\n per_page?: number, \n/** Page number of the results to fetch. */\n page?: number, },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.sort": {
         "rendered": "\n/** The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to. */\n sort?: \"created\" | \"updated\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
         "rendered": "\n/** The direction to sort the results by. */\n direction?: \"asc\" | \"desc\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.per_page": {
         "rendered": "\n/** The number of results per page (max 100). */\n per_page?: number,",

@@ -18,7 +18,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** The number of builds to return. Maximum 100, defaults to 30.\n */\n limit?: number, \n/** The API returns builds starting from this offset, defaults to 0.\n */\n offset?: number, \n/** Restricts which builds are returned.\nSet to \"completed\", \"successful\", \"failed\", \"running\", or defaults to no filter.\n */\n filter?: \"completed\" | \"successful\" | \"failed\" | \"running\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.limit": {
         "rendered": "\n/** The number of builds to return. Maximum 100, defaults to 30.\n */\n limit?: number,",
@@ -30,7 +30,7 @@
       },
       ".query.filter": {
         "rendered": "\n/** Restricts which builds are returned.\nSet to \"completed\", \"successful\", \"failed\", \"running\", or defaults to no filter.\n */\n filter?: \"completed\" | \"successful\" | \"failed\" | \"running\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},

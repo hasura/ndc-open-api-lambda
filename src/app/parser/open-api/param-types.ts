@@ -20,6 +20,11 @@ export type BaseSchema = {
 
   // Typescript representation of this schema
   _$rendered: string | undefined;
+
+  // Boolean that denotes whether this variable requires a relaxed type tag
+  // If a property has this set to true, then all ancestors should have have this set to true
+  // More: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+  _$requiresRelaxedTypeTag: boolean | undefined;
 };
 
 enum ObjectTypeEnum {
@@ -207,7 +212,8 @@ export function schemaTypeIsEmpty(schema: any): schema is SchemaTypeEmpty {
     allKeys.includes("name") &&
     allKeys.includes("required") &&
     allKeys.includes("description") &&
-    allKeys.includes("_$rendered")
+    allKeys.includes("_$rendered") &&
+    allKeys.includes("_$requiresRelaxedTypeTag")
   );
 }
 
@@ -275,5 +281,6 @@ export function getEmptySchema(): Schema {
     required: undefined,
     description: undefined,
     _$rendered: undefined,
+    _$requiresRelaxedTypeTag: undefined,
   };
 }
