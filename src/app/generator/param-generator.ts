@@ -54,6 +54,8 @@ export function renderSchema(
 export function renderScalarTypeSchema(
   schema: types.SchemaTypeScalar,
 ): string | undefined {
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForScalarTypeSchema(schema);
   if (types.scalarSchemaIsNumber(schema)) {
     return renderScalarTypeNumberSchema(schema);
   } else if (types.scalarSchemaIsString(schema)) {
@@ -72,7 +74,6 @@ export function renderScalarTypeNumberSchema(
   let paramType = "";
   if (schema.enum) {
     paramType = schema.enum.join(" | ");
-    schema._$requiresRelaxedTypeTag = true;
   } else {
     paramType = "number";
   }
@@ -86,7 +87,6 @@ export function renderScalarTypeStringSchema(
   if (schema.enum) {
     schema.enum = schema.enum.map((item) => `"${item}"`);
     paramType = schema.enum.join(" | ");
-    schema._$requiresRelaxedTypeTag = true;
   } else {
     paramType = "string";
   }
@@ -99,7 +99,6 @@ export function renderScalarTypeBooleanSchema(
   let paramType = "";
   if (schema.enum) {
     paramType = schema.enum.join(" | ");
-    schema._$requiresRelaxedTypeTag = true;
   } else {
     paramType = "boolean";
   }
@@ -123,15 +122,10 @@ export function renderObjectTypeSchema(
     const property = children[propertyName]!;
     property!.name = propertyName; // ensure that the name property is present
     renderedProperties.push(renderParams(property, schemaStore)._$rendered!);
-
-    // if the property requires relaxed type tag,
-    // then the parent will need it too
-    // more: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
-    if (property._$requiresRelaxedTypeTag === true) {
-      schema._$requiresRelaxedTypeTag = true;
-    }
   }
   const paramType = `{ ${renderedProperties.join(" ")} }`;
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForObjectTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
@@ -142,13 +136,8 @@ export function renderArrayTypeSchema(
   const childSchema = types.getSchemaTypeArrayChild(schema);
   const renderedProperty = renderParams(childSchema, schemaStore)._$rendered!;
   const paramType = `(${renderedProperty})[]`;
-
-  // if the child requires relaxed type tag,
-  // then the parent will need it too
-  // more: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
-  if (childSchema._$requiresRelaxedTypeTag) {
-    schema._$requiresRelaxedTypeTag = true;
-  }
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForArrayTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
@@ -161,10 +150,8 @@ export function renderCustomTypeSchema(
     renderParams(types.getSchemaTypeCustomChild(schema), schemaStore)
       ._$rendered!;
 
-  schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForCustomTypeSchema(
-    schema,
-    schemaStore,
-  );
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForCustomTypeSchema(schema, schemaStore);
   return renderSchema(renderedProperty, schema);
 }
 
@@ -183,13 +170,12 @@ export function renderRefTypeSchema(
     paramType = splitRef[splitRef.length - 1]!;
   }
 
-  // we need to check if the schema for this $ref needs relaxed type tag
-  const refSchema = schemaStore.getSchemaByRef(schema.$ref);
-  if (refSchema) {
-    schema._$requiresRelaxedTypeTag = refSchema._requiresRelaxedTypeJsDocTag;
-  } else {
-    const error = new Error(`Unable to find schema for ref: ${schema.$ref}`);
-    logger.error(`Error while rendering Ref Type Schema: ${error}`);
+  try {
+    schema._$requiresRelaxedTypeTag =
+      types.isRelaxedTypeTagRequiredForRefTypeSchema(schema, schemaStore);
+  } catch (e) {
+    logger.error(`Error while rendering Ref Type Schema: ${schema.$ref}`);
+    logger.debug(e);
   }
 
   return renderSchema(paramType, schema);
@@ -205,9 +191,8 @@ export function renderOneOfTypeSchema(
   }
   const paramType = renderedProperties.join(" | ");
 
-  // union types need to be marked with relaxed type tag
-  // https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
-  schema._$requiresRelaxedTypeTag = true;
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForOneOfTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
@@ -221,9 +206,8 @@ export function renderAnyOfTypeSchema(
   }
   const paramType = `| ${renderedProperties.join(" | ")}`;
 
-  // union types need to be marked with relaxed type tag
-  // https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
-  schema._$requiresRelaxedTypeTag = true;
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForAnyOfTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
@@ -236,14 +220,10 @@ export function renderAllOfTypeSchema(
     renderParams(property, schemaStore);
     if (property._$rendered!.length > 0) {
       renderedProperties.push(property._$rendered!);
-
-      // if any child requires relaxed type tag
-      // then the parent would need it too
-      if (property._$requiresRelaxedTypeTag === true) {
-        schema._$requiresRelaxedTypeTag = true;
-      }
     }
   }
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForAllOfTypeSchema(schema);
   const paramType = renderedProperties.join(" & ");
   return renderSchema(paramType, schema);
 }
@@ -275,59 +255,4 @@ function fixVariableName(name?: string): string | undefined {
   } else {
     return name;
   }
-}
-
-/**
- * Since there is not a proper parser for custom type schemas
- * this function is an attempt at trying to figure out whether
- * a custom type schema may require relaxed type annotation using
- * string comparisons
- *
- * ### UNHANDLED CASES
- * - Exploed object types with type(s) that require relaxed type tag
- *     Eg. (petstore schema): ` { name: string, pet: Pet } `
- * - Intersection types with type(s) that require relaxed type tag
- *     Eg. (petstore schema): ` { petWithStatus: Pet & Status } `
- * @param schema
- */
-function isRelaxedTypeTagRequiredForCustomTypeSchema(
-  schema: types.SchemaTypeCustomType,
-  schemaStore: ParsedSchemaStore,
-): boolean {
-  // since the type definition does not exits
-  // there is no prcessing that can be done
-  if (!schema.type) {
-    return false;
-  }
-
-  // this type likely includes an enum
-  if (schema.type.includes(" | ")) {
-    return true;
-  }
-
-  // Extract the type. This needs to be processed further
-  // and then it needs to be cross referenced with the schema store
-  // to check if it requires a relaxed type tag
-  let extractedType = schema.type;
-
-  // Check if this type is an array
-  if (extractedType.endsWith("[]")) {
-    // remove '[]'
-    extractedType = extractedType.substring(0, extractedType.length - 2);
-
-    // if the type is enclosed in `()`, remove them
-    if (extractedType.startsWith("(") && extractedType.endsWith(")")) {
-      extractedType = extractedType.substring(1, extractedType.length - 1);
-    }
-  }
-
-  // Check if the schema store has the schema for custom type
-  // It is not guaranteed that the schema store will contain the schema
-  // because the custom type maybe a complex type. For example, it may be an
-  // exploded object with many fields: ` { a: string, b: int } `
-  const extractedSchema = schemaStore.getSchemaByTypeName(extractedType);
-  if (extractedSchema) {
-    return extractedSchema._requiresRelaxedTypeJsDocTag ?? false;
-  }
-  return false;
 }
