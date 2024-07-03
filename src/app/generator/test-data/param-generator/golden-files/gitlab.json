@@ -19,7 +19,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /**\n   * Determine if developers can push to master\n   * @format int32\n   */\n    default_branch_protection?: 0 | 1 | 2,\n  /**\n   * The default project visibility\n   * @format int32\n   */\n    default_project_visibility?: 0 | 10 | 20,\n  /**\n   * The default snippet visibility\n   * @format int32\n   */\n    default_snippet_visibility?: 0 | 10 | 20,\n  /**\n   * The default group visibility\n   * @format int32\n   */\n    default_group_visibility?: 0 | 10 | 20,\n  /** Selected levels cannot be used by non-admin users for projects or snippets. If the public level is restricted, user profiles are only visible to logged in users. */\n    restricted_visibility_levels?: (string)[],\n  /** Enabled sources for code import during project creation. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com */\n    import_sources?: \"github\" | \"bitbucket\" | \"gitlab\" | \"google_code\" | \"fogbugz\" | \"git\" | \"gitlab_project\",\n  /** Disable certain OAuth sign-in sources */\n    disabled_oauth_sign_in_sources?: (string)[],\n  /** Allow only the selected protocols to be used for Git access. */\n    enabled_git_access_protocol?: \"ssh\" | \"http\" | \"nil\",\n  /** Flag indicating if the Gravatar service is enabled */\n    gravatar_enabled?: boolean,\n  /**\n   * The maximum number of personal projects\n   * @format int32\n   */\n    default_projects_limit?: number,\n  /**\n   * Maximum attachment size in MB\n   * @format int32\n   */\n    max_attachment_size?: number,\n  /**\n   * Session duration in minutes. GitLab restart is required to apply changes.\n   * @format int32\n   */\n    session_expire_delay?: number,\n  /** Allow users to register any application to use GitLab as an OAuth provider */\n    user_oauth_applications?: boolean,\n  /** Newly registered users will by default be external */\n    user_default_external?: boolean,\n  /** Flag indicating if sign up is enabled */\n    signup_enabled?: boolean,\n  /** Send confirmation email on sign-up */\n    send_user_confirmation_email?: boolean,\n  /** ONLY users with e-mail addresses that match these domain(s) will be able to sign-up. Wildcards allowed. Use separate lines for multiple entries. Ex: domain.com, *.domain.com */\n    domain_whitelist?: string,\n  /** Enable domain blacklist for sign ups */\n    domain_blacklist_enabled?: boolean,\n  /** Users with e-mail addresses that match these domain(s) will NOT be able to sign-up. Wildcards allowed. Use separate lines for multiple entries. Ex: domain.com, *.domain.com */\n    domain_blacklist: string,\n  /** Text shown after sign up */\n    after_sign_up_text?: string,\n  /** Flag indicating if sign in is enabled */\n    signin_enabled?: boolean,\n  /** Require all users to setup Two-factor authentication */\n    require_two_factor_authentication?: boolean,\n  /**\n   * Amount of time (in hours) that users are allowed to skip forced configuration of two-factor authentication\n   * @format int32\n   */\n    two_factor_grace_period: number,\n  /** We will redirect non-logged in users to this page */\n    home_page_url?: string,\n  /** We will redirect users to this page after they sign out */\n    after_sign_out_path?: string,\n  /** The sign in text of the GitLab application */\n    sign_in_text?: string,\n  /** Custom text displayed on the help page */\n    help_page_text?: string,\n  /** Enable shared runners for new projects */\n    shared_runners_enabled?: boolean,\n  /** Shared runners text  */\n    shared_runners_text: string,\n  /**\n   * Set the maximum file size each build's artifacts can have\n   * @format int32\n   */\n    max_artifacts_size?: number,\n  /**\n   * Authorization token duration (minutes)\n   * @format int32\n   */\n    container_registry_token_expire_delay?: number,\n  /** Enable the InfluxDB metrics */\n    metrics_enabled?: boolean,\n  /** The InfluxDB host */\n    metrics_host: string,\n  /**\n   * The UDP port to use for connecting to InfluxDB\n   * @format int32\n   */\n    metrics_port: number,\n  /**\n   * The amount of InfluxDB connections to open\n   * @format int32\n   */\n    metrics_pool_size: number,\n  /**\n   * The amount of seconds after which an InfluxDB connection will time out\n   * @format int32\n   */\n    metrics_timeout: number,\n  /**\n   * A method call is only tracked when it takes longer to complete than the given amount of milliseconds.\n   * @format int32\n   */\n    metrics_method_call_threshold: number,\n  /**\n   * The sampling interval in seconds\n   * @format int32\n   */\n    metrics_sample_interval: number,\n  /**\n   * The amount of points to store in a single UDP packet\n   * @format int32\n   */\n    metrics_packet_size: number,\n  /** Enable Sidekiq Job Throttling */\n    sidekiq_throttling_enabled?: boolean,\n  /** Choose which queues you wish to throttle */\n    sidekiq_throttling_queus: (string)[],\n  /**\n   * The factor by which the queues should be throttled. A value between 0.0 and 1.0, exclusive.\n   * @format float\n   */\n    sidekiq_throttling_factor: number,\n  /** Helps prevent bots from creating accounts */\n    recaptcha_enabled?: boolean,\n  /** Generate site key at http://www.google.com/recaptcha */\n    recaptcha_site_key: string,\n  /** Generate private key at http://www.google.com/recaptcha */\n    recaptcha_private_key: string,\n  /** Helps prevent bots from creating issues */\n    akismet_enabled?: boolean,\n  /** Generate API key at http://www.akismet.com */\n    akismet_api_key: string,\n  /** Abuse reports will be sent to this address if it is set. Abuse reports are always available in the admin area. */\n    admin_notification_email?: string,\n  /** Sentry is an error reporting and logging tool which is currently not shipped with GitLab, get it here: https://getsentry.com */\n    sentry_enabled?: boolean,\n  /** Sentry Data Source Name */\n    sentry_dsn: string,\n  /** Storage paths for new projects */\n    repository_storage?: string,\n  /** GitLab will periodically run 'git fsck' in all project and wiki repositories to look for silent disk corruption issues. */\n    repository_checks_enabled?: boolean,\n  /** Enable Koding */\n    koding_enabled?: boolean,\n  /** The Koding team URL */\n    koding_url: string,\n  /** Enable PlantUML */\n    plantuml_enabled?: boolean,\n  /** The PlantUML server URL */\n    plantuml_url: string,\n  /** Let GitLab inform you when an update is available. */\n    version_check_enabled?: boolean,\n  /** Some email servers do not support overriding the email sender name. Enable this option to include the name of the author of the issue, merge request or comment in the email body instead. */\n    email_author_in_body?: boolean,\n  /** By default GitLab sends emails in HTML and plain text formats so mail clients can choose what format to use. Disable this option if you only want to send emails in plain text format. */\n    html_emails_enabled?: boolean,\n  /** Enable automatic repository housekeeping (git repack, git gc) */\n    housekeeping_enabled?: boolean,\n  /** Creating pack file bitmaps makes housekeeping take a little longer but bitmaps should accelerate 'git clone' performance. */\n    housekeeping_bitmaps_enabled: boolean,\n  /**\n   * Number of Git pushes after which an incremental 'git repack' is run.\n   * @format int32\n   */\n    housekeeping_incremental_repack_period: number,\n  /**\n   * Number of Git pushes after which a full 'git repack' is run.\n   * @format int32\n   */\n    housekeeping_full_repack_period: number,\n  /**\n   * Number of Git pushes after which 'git gc' is run.\n   * @format int32\n   */\n    housekeeping_gc_period: number,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -1360,7 +1360,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The name of the project */\n    name: string,\n  /** The path of the repository */\n    path?: string,\n  /** The description of the project */\n    description?: string,\n  /** Flag indication if the issue tracker is enabled */\n    issues_enabled?: boolean,\n  /** Flag indication if merge requests are enabled */\n    merge_requests_enabled?: boolean,\n  /** Flag indication if the wiki is enabled */\n    wiki_enabled?: boolean,\n  /** Flag indication if builds are enabled */\n    builds_enabled?: boolean,\n  /** Flag indication if snippets are enabled */\n    snippets_enabled?: boolean,\n  /** Flag indication if shared runners are enabled for that project */\n    shared_runners_enabled?: boolean,\n  /** Flag indication if the container registry is enabled for that project */\n    container_registry_enabled?: boolean,\n  /** Flag indication if Git LFS is enabled for that project */\n    lfs_enabled?: boolean,\n  /** Create a public project. The same as visibility_level = 20. */\n    public?: boolean,\n  /**\n   * Create a public project. The same as visibility_level = 20.\n   * @format int32\n   */\n    visibility_level?: 0 | 10 | 20,\n  /** Perform public builds */\n    public_builds?: boolean,\n  /** Allow users to request member access */\n    request_access_enabled?: boolean,\n  /** Only allow to merge if builds succeed */\n    only_allow_merge_if_build_succeeds?: boolean,\n  /** Only allow to merge if all discussions are resolved */\n    only_allow_merge_if_all_discussions_are_resolved?: boolean,\n  /**\n   * Namespace ID for the new project. Default to the user namespace.\n   * @format int32\n   */\n    namespace_id?: number,\n  /** URL from which the project is imported */\n    import_url?: string,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -1626,7 +1626,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The name of the project */\n    name: string,\n  /** The default branch of the project */\n    default_branch?: string,\n  /** The description of the project */\n    description?: string,\n  /** Flag indication if the issue tracker is enabled */\n    issues_enabled?: boolean,\n  /** Flag indication if merge requests are enabled */\n    merge_requests_enabled?: boolean,\n  /** Flag indication if the wiki is enabled */\n    wiki_enabled?: boolean,\n  /** Flag indication if builds are enabled */\n    builds_enabled?: boolean,\n  /** Flag indication if snippets are enabled */\n    snippets_enabled?: boolean,\n  /** Flag indication if shared runners are enabled for that project */\n    shared_runners_enabled?: boolean,\n  /** Flag indication if the container registry is enabled for that project */\n    container_registry_enabled?: boolean,\n  /** Flag indication if Git LFS is enabled for that project */\n    lfs_enabled?: boolean,\n  /** Create a public project. The same as visibility_level = 20. */\n    public?: boolean,\n  /**\n   * Create a public project. The same as visibility_level = 20.\n   * @format int32\n   */\n    visibility_level?: 0 | 10 | 20,\n  /** Perform public builds */\n    public_builds?: boolean,\n  /** Allow users to request member access */\n    request_access_enabled?: boolean,\n  /** Only allow to merge if builds succeed */\n    only_allow_merge_if_build_succeeds?: boolean,\n  /** Only allow to merge if all discussions are resolved */\n    only_allow_merge_if_all_discussions_are_resolved?: boolean,\n  /**\n   * Namespace ID for the new project. Default to the user namespace.\n   * @format int32\n   */\n    namespace_id?: number,\n  /** URL from which the project is imported */\n    import_url?: string,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -1823,7 +1823,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The name of the project */\n    name?: string,\n  /** The default branch of the project */\n    default_branch?: string,\n  /** The path of the repository */\n    path?: string,\n  /** The description of the project */\n    description?: string,\n  /** Flag indication if the issue tracker is enabled */\n    issues_enabled?: boolean,\n  /** Flag indication if merge requests are enabled */\n    merge_requests_enabled?: boolean,\n  /** Flag indication if the wiki is enabled */\n    wiki_enabled?: boolean,\n  /** Flag indication if builds are enabled */\n    builds_enabled?: boolean,\n  /** Flag indication if snippets are enabled */\n    snippets_enabled?: boolean,\n  /** Flag indication if shared runners are enabled for that project */\n    shared_runners_enabled?: boolean,\n  /** Flag indication if the container registry is enabled for that project */\n    container_registry_enabled?: boolean,\n  /** Flag indication if Git LFS is enabled for that project */\n    lfs_enabled?: boolean,\n  /** Create a public project. The same as visibility_level = 20. */\n    public?: boolean,\n  /**\n   * Create a public project. The same as visibility_level = 20.\n   * @format int32\n   */\n    visibility_level?: 0 | 10 | 20,\n  /** Perform public builds */\n    public_builds?: boolean,\n  /** Allow users to request member access */\n    request_access_enabled?: boolean,\n  /** Only allow to merge if builds succeed */\n    only_allow_merge_if_build_succeeds?: boolean,\n  /** Only allow to merge if all discussions are resolved */\n    only_allow_merge_if_all_discussions_are_resolved?: boolean,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -3366,7 +3366,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of an issue */\n    title?: string,\n  /**\n   * Date time when the issue was updated. Available only for admins and project owners.\n   * @format date-time\n   */\n    updated_at?: string,\n  /** State of the issue */\n    state_event?: \"reopen\" | \"close\",\n  /** The description of an issue */\n    description?: string,\n  /**\n   * The ID of a user to assign issue\n   * @format int32\n   */\n    assignee_id?: number,\n  /**\n   * The ID of a milestone to assign issue\n   * @format int32\n   */\n    milestone_id?: number,\n  /** Comma-separated list of label names */\n    labels?: string,\n  /** Date time string in the format YEAR-MONTH-DAY */\n    due_date?: string,\n  /** Boolean parameter if the issue should be confidential */\n    confidential?: boolean,\n    created_at?: string,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -4680,7 +4680,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of the merge request */\n    title?: string,\n  /** The target branch */\n    target_branch?: string,\n  /** Status of the merge request */\n    state_event?: \"close\" | \"reopen\" | \"merge\",\n  /** The description of the merge request */\n    description?: string,\n  /**\n   * The ID of a user to assign the merge request\n   * @format int32\n   */\n    assignee_id?: number,\n  /**\n   * The ID of a milestone to assign the merge request\n   * @format int32\n   */\n    milestone_id?: number,\n  /** Comma-separated list of label names */\n    labels?: string,\n  /** Remove source branch when merging */\n    remove_source_branch?: boolean,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -5200,7 +5200,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of the merge request */\n    title?: string,\n  /** The target branch */\n    target_branch?: string,\n  /** Status of the merge request */\n    state_event?: \"close\" | \"reopen\" | \"merge\",\n  /** The description of the merge request */\n    description?: string,\n  /**\n   * The ID of a user to assign the merge request\n   * @format int32\n   */\n    assignee_id?: number,\n  /**\n   * The ID of a milestone to assign the merge request\n   * @format int32\n   */\n    milestone_id?: number,\n  /** Comma-separated list of label names */\n    labels?: string,\n  /** Remove source branch when merging */\n    remove_source_branch?: boolean,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -6341,7 +6341,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of the milestone */\n    title?: string,\n  /** The state event of the milestone  */\n    state_event?: \"close\" | \"activate\",\n  /** The description of the milestone */\n    description?: string,\n  /** The due date of the milestone. The ISO 8601 date format (%Y-%m-%d) */\n    due_date?: string,\n  /** The start date of the milestone. The ISO 8601 date format (%Y-%m-%d) */\n    start_date?: string,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -7184,7 +7184,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The text of the comment */\n    note: string,\n  /** The file path */\n    path?: string,\n  /**\n   * The line number\n   * @format int32\n   */\n    line: number,\n  /**\n   * The type of the line\n   * @default \"new\"\n   */\n    line_type: \"new\" | \"old\",\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -9297,7 +9297,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /**\n   * The ID of a group\n   * @format int32\n   */\n    group_id: number,\n  /**\n   * The group access level\n   * @format int32\n   */\n    group_access: 10 | 20 | 30 | 40,\n  /**\n   * Share expiration date\n   * @format date\n   */\n    expires_at?: string,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -9395,7 +9395,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of the snippet */\n    title: string,\n  /** The file name of the snippet */\n    file_name: string,\n  /** The content of the snippet */\n    code: string,\n  /**\n   * The visibility level of the snippet\n   * @format int32\n   */\n    visibility_level: 0 | 10 | 20,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -9663,7 +9663,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of the snippet */\n    title?: string,\n  /** The file name of the snippet */\n    file_name?: string,\n  /** The content of the snippet */\n    code?: string,\n  /**\n   * The visibility level of the snippet\n   * @format int32\n   */\n    visibility_level?: 0 | 10 | 20,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -10052,7 +10052,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The state of the status */\n    state: \"pending\" | \"running\" | \"success\" | \"failed\" | \"canceled\",\n  /** The ref */\n    ref?: string,\n  /** The target URL to associate with this status */\n    target_url?: string,\n  /** A short description of the status */\n    description?: string,\n  /** A string label to differentiate this status from the status of other systems. Default: \"default\" */\n    name?: string,\n  /** A string label to differentiate this status from the status of other systems. Default: \"default\" */\n    context?: string,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -10728,7 +10728,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of a snippet */\n    title: string,\n  /** The name of a snippet file */\n    file_name: string,\n  /** The content of a snippet */\n    content: string,\n  /**\n   * The visibility level of the snippet\n   * @format int32\n   * @default 10\n   */\n    visibility_level?: 0 | 10 | 20,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -10824,7 +10824,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: {\n  /** The title of a snippet */\n    title?: string,\n  /** The name of a snippet file */\n    file_name?: string,\n  /** The content of a snippet */\n    content?: string,\n  /**\n   * The visibility level of the snippet\n   * @format int32\n   */\n    visibility_level?: 0 | 10 | 20,\n\n},",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",

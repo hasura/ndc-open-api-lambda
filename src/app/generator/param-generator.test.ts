@@ -2,6 +2,7 @@ import path from "path";
 import * as apiTsGenerator from "./api-ts-generator";
 import * as routeTypes from "../parser/open-api/route-types";
 import * as types from "../parser/open-api/param-types";
+import * as schemaStore from "../parser/open-api/schema-parser";
 import * as render from "./param-generator";
 import * as fs from "fs";
 import * as assert from "assert";
@@ -294,6 +295,11 @@ describe("param-generator", async () => {
         testCase.openApiFile,
       );
 
+      generatedApiTsCode.schemaStore = schemaStore.getParsedSchemaStore(
+        generatedApiTsCode.typeNames,
+        generatedApiTsCode.schemaComponents,
+      );
+
       const got: Record<string, RouteParamsRendered> = {};
 
       for (const route of generatedApiTsCode.routes) {
@@ -305,7 +311,7 @@ describe("param-generator", async () => {
         const queryParams = routeTypes.getQueryParams(route);
         const renderedQueryParams: Record<string, RenderedParam> = {};
         if (queryParams) {
-          render.renderParams(queryParams);
+          render.renderParams(queryParams, generatedApiTsCode.schemaStore);
           traverseSchema("", renderedQueryParams, queryParams);
         }
 
@@ -313,7 +319,7 @@ describe("param-generator", async () => {
         const renderedPathParams: Record<string, RenderedParam> = {};
         if (pathParams) {
           for (const param of pathParams) {
-            render.renderParams(param);
+            render.renderParams(param, generatedApiTsCode.schemaStore);
             traverseSchema("", renderedPathParams, param);
           }
         }
@@ -321,14 +327,14 @@ describe("param-generator", async () => {
         const responseSchema = routeTypes.getResponseSchema(route);
         const renderedResponseSchema: Record<string, RenderedParam> = {};
         if (responseSchema) {
-          render.renderParams(responseSchema);
+          render.renderParams(responseSchema, generatedApiTsCode.schemaStore);
           traverseSchema("", renderedResponseSchema, responseSchema);
         }
 
         const bodyParam = routeTypes.getRequestBody(route);
         const renderedBodyParams: Record<string, RenderedParam> = {};
         if (bodyParam) {
-          render.renderParams(bodyParam);
+          render.renderParams(bodyParam, generatedApiTsCode.schemaStore);
           traverseSchema("", renderedBodyParams, bodyParam);
         }
 
