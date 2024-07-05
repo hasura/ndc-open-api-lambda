@@ -185,7 +185,6 @@ export async function postXAmzTargetRoute53AutoNamingV20170314DeleteNamespaceDel
 /**
  * undefined
  * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.DeleteService
- * @allowrelaxedtypes
  */
 export async function postXAmzTargetRoute53AutoNamingV20170314DeleteServiceDeleteService(
   /** Request body */
@@ -584,7 +583,6 @@ export async function postXAmzTargetRoute53AutoNamingV20170314RegisterInstanceRe
 /**
  * undefined
  * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.TagResource
- * @allowrelaxedtypes
  */
 export async function postXAmzTargetRoute53AutoNamingV20170314TagResourceTagResource(
   /** Request body */
@@ -608,7 +606,6 @@ export async function postXAmzTargetRoute53AutoNamingV20170314TagResourceTagReso
 /**
  * undefined
  * @request POST :/#X-Amz-Target=Route53AutoNaming_v20170314.UntagResource
- * @allowrelaxedtypes
  */
 export async function postXAmzTargetRoute53AutoNamingV20170314UntagResourceUntagResource(
   /** Request body */
@@ -673,10 +670,10 @@ export async function postXAmzTargetRoute53AutoNamingV20170314UpdateInstanceCust
         },
       },
     );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 

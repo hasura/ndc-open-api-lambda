@@ -308,7 +308,6 @@ export async function putV3PutV3ApplicationSettings(
 /**
  * Validation of .gitlab-ci.yml content
  * @request POST :/v3/ci/lint
- * @allowrelaxedtypes
  */
 export async function postV3PostV3CiLint(
   /** Request body */
@@ -324,17 +323,16 @@ export async function postV3PostV3CiLint(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request GET :/v3/deploy_keys
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3DeployKeys(
@@ -345,10 +343,10 @@ export async function getV3GetV3DeployKeys(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -621,7 +619,6 @@ export async function getV3GetV3GroupsOwned(
 /**
  * Remove a group.
  * @request DELETE :/v3/groups/{id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3GroupsId(
   /**
@@ -636,10 +633,10 @@ export async function deleteV3DeleteV3GroupsId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -774,7 +771,6 @@ export async function postV3PostV3GroupsIdAccessRequests(
 /**
  * Denies an access request for the given user.
  * @request DELETE :/v3/groups/{id}/access_requests/{user_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3GroupsIdAccessRequestsUserId(
   /**
@@ -794,10 +790,10 @@ export async function deleteV3DeleteV3GroupsIdAccessRequestsUserId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -982,7 +978,6 @@ export async function postV3PostV3GroupsIdMembers(
 /**
  * Removes a user from a group or project.
  * @request DELETE :/v3/groups/{id}/members/{user_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3GroupsIdMembersUserId(
   /**
@@ -1002,10 +997,10 @@ export async function deleteV3DeleteV3GroupsIdMembersUserId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -1362,7 +1357,6 @@ export async function getV3GetV3HooksId(
 /**
  * undefined
  * @request POST :/v3/internal/allowed
- * @allowrelaxedtypes
  */
 export async function postV3PostV3InternalAllowed(
   headers?: hasuraSdk.JSONValue,
@@ -1372,17 +1366,16 @@ export async function postV3PostV3InternalAllowed(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request GET :/v3/internal/broadcast_message
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3InternalBroadcastMessage(
@@ -1393,17 +1386,16 @@ export async function getV3GetV3InternalBroadcastMessage(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request GET :/v3/internal/check
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3InternalCheck(
@@ -1414,17 +1406,16 @@ export async function getV3GetV3InternalCheck(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request GET :/v3/internal/discover
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3InternalDiscover(
@@ -1435,17 +1426,16 @@ export async function getV3GetV3InternalDiscover(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request POST :/v3/internal/lfs_authenticate
- * @allowrelaxedtypes
  */
 export async function postV3PostV3InternalLfsAuthenticate(
   headers?: hasuraSdk.JSONValue,
@@ -1455,17 +1445,16 @@ export async function postV3PostV3InternalLfsAuthenticate(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request GET :/v3/internal/merge_request_urls
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3InternalMergeRequestUrls(
@@ -1476,17 +1465,16 @@ export async function getV3GetV3InternalMergeRequestUrls(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request POST :/v3/internal/two_factor_recovery_codes
- * @allowrelaxedtypes
  */
 export async function postV3PostV3InternalTwoFactorRecoveryCodes(
   headers?: hasuraSdk.JSONValue,
@@ -1496,10 +1484,10 @@ export async function postV3PostV3InternalTwoFactorRecoveryCodes(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -2278,7 +2266,6 @@ export async function getV3GetV3ProjectsVisible(
 /**
  * Remove a project
  * @request DELETE :/v3/projects/{id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsId(
   /**
@@ -2293,10 +2280,10 @@ export async function deleteV3DeleteV3ProjectsId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -2491,7 +2478,6 @@ export async function postV3PostV3ProjectsIdAccessRequests(
 /**
  * Denies an access request for the given user.
  * @request DELETE :/v3/projects/{id}/access_requests/{user_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdAccessRequestsUserId(
   /**
@@ -2511,10 +2497,10 @@ export async function deleteV3DeleteV3ProjectsIdAccessRequestsUserId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -2829,7 +2815,6 @@ export async function getV3GetV3ProjectsIdBuilds(
 /**
  * Download the artifacts file from build
  * @request GET :/v3/projects/{id}/builds/artifacts/{ref_name}/download
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBuildsArtifactsRefNameDownload(
@@ -2857,10 +2842,10 @@ export async function getV3GetV3ProjectsIdBuildsArtifactsRefNameDownload(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -2897,7 +2882,6 @@ export async function getV3GetV3ProjectsIdBuildsBuildId(
 /**
  * Download the artifacts file from build
  * @request GET :/v3/projects/{id}/builds/{build_id}/artifacts
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBuildsBuildIdArtifacts(
@@ -2918,10 +2902,10 @@ export async function getV3GetV3ProjectsIdBuildsBuildIdArtifacts(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3073,7 +3057,6 @@ export async function postV3PostV3ProjectsIdBuildsBuildIdRetry(
 /**
  * Get a trace of a specific build of a project
  * @request GET :/v3/projects/{id}/builds/{build_id}/trace
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdBuildsBuildIdTrace(
@@ -3094,10 +3077,10 @@ export async function getV3GetV3ProjectsIdBuildsBuildIdTrace(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3516,7 +3499,6 @@ export async function getV3GetV3ProjectsIdEvents(
 /**
  * Remove a forked_from relationship
  * @request DELETE :/v3/projects/{id}/fork
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdFork(
   /**
@@ -3531,17 +3513,16 @@ export async function deleteV3DeleteV3ProjectsIdFork(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Mark this project as forked from another
  * @request POST :/v3/projects/{id}/fork/{forked_from_id}
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdForkForkedFromId(
   /**
@@ -3561,10 +3542,10 @@ export async function postV3PostV3ProjectsIdForkForkedFromId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -3890,7 +3871,6 @@ export async function postV3PostV3ProjectsIdIssues(
 /**
  * Delete a project issue
  * @request DELETE :/v3/projects/{id}/issues/{issue_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdIssuesIssueId(
   /**
@@ -3910,10 +3890,10 @@ export async function deleteV3DeleteV3ProjectsIdIssuesIssueId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4012,7 +3992,6 @@ export async function putV3PutV3ProjectsIdIssuesIssueId(
 /**
  * Add spent time for a project issue
  * @request POST :/v3/projects/{id}/issues/{issue_id}/add_spent_time
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdAddSpentTime(
   /**
@@ -4038,10 +4017,10 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdAddSpentTime(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -4347,7 +4326,6 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdNotesNoteIdAwardEmojiAwar
 /**
  * Reset spent time for a project issue
  * @request POST :/v3/projects/{id}/issues/{issue_id}/reset_spent_time
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdResetSpentTime(
   /**
@@ -4367,17 +4345,16 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdResetSpentTime(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Reset the time estimate for a project issue
  * @request POST :/v3/projects/{id}/issues/{issue_id}/reset_time_estimate
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdResetTimeEstimate(
   /**
@@ -4397,17 +4374,16 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdResetTimeEstimate(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set a time estimate for a project issue
  * @request POST :/v3/projects/{id}/issues/{issue_id}/time_estimate
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdIssuesIssueIdTimeEstimate(
   /**
@@ -4433,17 +4409,16 @@ export async function postV3PostV3ProjectsIdIssuesIssueIdTimeEstimate(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Show time stats for a project issue
  * @request GET :/v3/projects/{id}/issues/{issue_id}/time_stats
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdIssuesIssueIdTimeStats(
@@ -4464,10 +4439,10 @@ export async function getV3GetV3ProjectsIdIssuesIssueIdTimeStats(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -5201,7 +5176,6 @@ export async function postV3PostV3ProjectsIdMembers(
 /**
  * Removes a user from a group or project.
  * @request DELETE :/v3/projects/{id}/members/{user_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdMembersUserId(
   /**
@@ -5221,10 +5195,10 @@ export async function deleteV3DeleteV3ProjectsIdMembersUserId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -5790,7 +5764,6 @@ export async function postV3PostV3ProjectsIdMergeRequests(
 /**
  * Delete a merge request
  * @request DELETE :/v3/projects/{id}/merge_requests/{merge_request_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestId(
   /**
@@ -5810,10 +5783,10 @@ export async function deleteV3DeleteV3ProjectsIdMergeRequestsMergeRequestId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -5900,7 +5873,6 @@ export async function putV3PutV3ProjectsIdMergeRequestsMergeRequestId(
 /**
  * Add spent time for a project merge_request
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/add_spent_time
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAddSpentTime(
   /**
@@ -5927,10 +5899,10 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdAddSpentT
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -6447,7 +6419,6 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdNotesNoteId
 /**
  * Reset spent time for a project merge_request
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/reset_spent_time
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetSpentTime(
   /**
@@ -6468,17 +6439,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetSpen
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Reset the time estimate for a project merge_request
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/reset_time_estimate
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetTimeEstimate(
   /**
@@ -6499,17 +6469,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdResetTime
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set a time estimate for a project merge_request
  * @request POST :/v3/projects/{id}/merge_requests/{merge_request_id}/time_estimate
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTimeEstimate(
   /**
@@ -6536,17 +6505,16 @@ export async function postV3PostV3ProjectsIdMergeRequestsMergeRequestIdTimeEstim
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Show time stats for a project merge_request
  * @request GET :/v3/projects/{id}/merge_requests/{merge_request_id}/time_stats
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdTimeStats(
@@ -6568,10 +6536,10 @@ export async function getV3GetV3ProjectsIdMergeRequestsMergeRequestIdTimeStats(
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -7362,7 +7330,6 @@ export async function postV3PostV3ProjectsIdPipelinesPipelineIdRetry(
 /**
  * Get an archive of the repository
  * @request GET :/v3/projects/{id}/repository/archive
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryArchive(
@@ -7389,17 +7356,16 @@ export async function getV3GetV3ProjectsIdRepositoryArchive(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get a raw file contents
  * @request GET :/v3/projects/{id}/repository/blobs/{sha}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryBlobsSha(
@@ -7427,10 +7393,10 @@ export async function getV3GetV3ProjectsIdRepositoryBlobsSha(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -7494,7 +7460,6 @@ export async function postV3PostV3ProjectsIdRepositoryBranches(
 /**
  * Delete a branch
  * @request DELETE :/v3/projects/{id}/repository/branches/{branch}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryBranchesBranch(
   /**
@@ -7514,10 +7479,10 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryBranchesBranch(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -7740,7 +7705,6 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsSha(
 /**
  * Get a raw file contents
  * @request GET :/v3/projects/{id}/repository/commits/{sha}/blob
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsShaBlob(
@@ -7768,10 +7732,10 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaBlob(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -7948,7 +7912,6 @@ export async function postV3PostV3ProjectsIdRepositoryCommitsShaComments(
 /**
  * Get the diff for a specific commit of a project
  * @request GET :/v3/projects/{id}/repository/commits/{sha}/diff
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryCommitsShaDiff(
@@ -7969,7 +7932,11 @@ export async function getV3GetV3ProjectsIdRepositoryCommitsShaDiff(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  return new hasuraSdk.JSONValue(result);
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
 }
 
 /**
@@ -8093,7 +8060,6 @@ export async function getV3GetV3ProjectsIdRepositoryContributors(
 /**
  * Delete an existing file in repository
  * @request DELETE :/v3/projects/{id}/repository/files
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryFiles(
   query: {
@@ -8131,17 +8097,16 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryFiles(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get a file from repository
  * @request GET :/v3/projects/{id}/repository/files
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryFiles(
@@ -8168,10 +8133,10 @@ export async function getV3GetV3ProjectsIdRepositoryFiles(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -8211,10 +8176,10 @@ export async function postV3PostV3ProjectsIdRepositoryFiles(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -8254,17 +8219,16 @@ export async function putV3PutV3ProjectsIdRepositoryFiles(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * undefined
  * @request DELETE :/v3/projects/{id}/repository/merged_branches
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryMergedBranches(
   /**
@@ -8279,17 +8243,16 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryMergedBranches(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get a raw blob contents by blob sha
  * @request GET :/v3/projects/{id}/repository/raw_blobs/{sha}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdRepositoryRawBlobsSha(
@@ -8310,10 +8273,10 @@ export async function getV3GetV3ProjectsIdRepositoryRawBlobsSha(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -8381,7 +8344,6 @@ export async function postV3PostV3ProjectsIdRepositoryTags(
 /**
  * Delete a repository tag
  * @request DELETE :/v3/projects/{id}/repository/tags/{tag_name}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdRepositoryTagsTagName(
   /**
@@ -8401,10 +8363,10 @@ export async function deleteV3DeleteV3ProjectsIdRepositoryTagsTagName(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -8654,7 +8616,6 @@ export async function deleteV3DeleteV3ProjectsIdRunnersRunnerId(
 /**
  * Set asana service for project
  * @request PUT :/v3/projects/{id}/services/asana
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesAsana(
   id: number,
@@ -8676,17 +8637,16 @@ export async function putV3PutV3ProjectsIdServicesAsana(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set assembla service for project
  * @request PUT :/v3/projects/{id}/services/assembla
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesAssembla(
   id: number,
@@ -8708,17 +8668,16 @@ export async function putV3PutV3ProjectsIdServicesAssembla(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set bamboo service for project
  * @request PUT :/v3/projects/{id}/services/bamboo
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBamboo(
   id: number,
@@ -8744,17 +8703,16 @@ export async function putV3PutV3ProjectsIdServicesBamboo(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set bugzilla service for project
  * @request PUT :/v3/projects/{id}/services/bugzilla
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBugzilla(
   id: number,
@@ -8782,17 +8740,16 @@ export async function putV3PutV3ProjectsIdServicesBugzilla(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set buildkite service for project
  * @request PUT :/v3/projects/{id}/services/buildkite
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBuildkite(
   id: number,
@@ -8816,17 +8773,16 @@ export async function putV3PutV3ProjectsIdServicesBuildkite(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set builds-email service for project
  * @request PUT :/v3/projects/{id}/services/builds-email
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesBuildsEmail(
   id: number,
@@ -8850,17 +8806,16 @@ export async function putV3PutV3ProjectsIdServicesBuildsEmail(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set campfire service for project
  * @request PUT :/v3/projects/{id}/services/campfire
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesCampfire(
   id: number,
@@ -8884,17 +8839,16 @@ export async function putV3PutV3ProjectsIdServicesCampfire(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set custom-issue-tracker service for project
  * @request PUT :/v3/projects/{id}/services/custom-issue-tracker
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesCustomIssueTracker(
   id: number,
@@ -8922,17 +8876,16 @@ export async function putV3PutV3ProjectsIdServicesCustomIssueTracker(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set drone-ci service for project
  * @request PUT :/v3/projects/{id}/services/drone-ci
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesDroneCi(
   id: number,
@@ -8960,17 +8913,16 @@ export async function putV3PutV3ProjectsIdServicesDroneCi(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set emails-on-push service for project
  * @request PUT :/v3/projects/{id}/services/emails-on-push
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesEmailsOnPush(
   id: number,
@@ -8996,17 +8948,16 @@ export async function putV3PutV3ProjectsIdServicesEmailsOnPush(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set external-wiki service for project
  * @request PUT :/v3/projects/{id}/services/external-wiki
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesExternalWiki(
   id: number,
@@ -9024,17 +8975,16 @@ export async function putV3PutV3ProjectsIdServicesExternalWiki(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set flowdock service for project
  * @request PUT :/v3/projects/{id}/services/flowdock
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesFlowdock(
   id: number,
@@ -9054,17 +9004,16 @@ export async function putV3PutV3ProjectsIdServicesFlowdock(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set gemnasium service for project
  * @request PUT :/v3/projects/{id}/services/gemnasium
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesGemnasium(
   id: number,
@@ -9086,17 +9035,16 @@ export async function putV3PutV3ProjectsIdServicesGemnasium(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set hipchat service for project
  * @request PUT :/v3/projects/{id}/services/hipchat
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesHipchat(
   id: number,
@@ -9138,17 +9086,16 @@ export async function putV3PutV3ProjectsIdServicesHipchat(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set irker service for project
  * @request PUT :/v3/projects/{id}/services/irker
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesIrker(
   id: number,
@@ -9179,17 +9126,16 @@ export async function putV3PutV3ProjectsIdServicesIrker(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set jira service for project
  * @request PUT :/v3/projects/{id}/services/jira
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesJira(
   id: number,
@@ -9222,17 +9168,16 @@ export async function putV3PutV3ProjectsIdServicesJira(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set kubernetes service for project
  * @request PUT :/v3/projects/{id}/services/kubernetes
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesKubernetes(
   id: number,
@@ -9256,17 +9201,16 @@ export async function putV3PutV3ProjectsIdServicesKubernetes(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set mattermost service for project
  * @request PUT :/v3/projects/{id}/services/mattermost
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesMattermost(
   id: number,
@@ -9301,17 +9245,16 @@ export async function putV3PutV3ProjectsIdServicesMattermost(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set mattermost-slash-commands service for project
  * @request PUT :/v3/projects/{id}/services/mattermost-slash-commands
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesMattermostSlashCommands(
   id: number,
@@ -9329,17 +9272,16 @@ export async function putV3PutV3ProjectsIdServicesMattermostSlashCommands(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Trigger a slash command for mattermost-slash-commands
  * @request POST :/v3/projects/{id}/services/mattermost_slash_commands/trigger
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdServicesMattermostSlashCommandsTrigger(
   /**
@@ -9361,17 +9303,16 @@ export async function postV3PostV3ProjectsIdServicesMattermostSlashCommandsTrigg
         headers: (headers?.value as Record<string, string>) ?? undefined,
       },
     });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set pipelines-email service for project
  * @request PUT :/v3/projects/{id}/services/pipelines-email
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesPipelinesEmail(
   id: number,
@@ -9392,17 +9333,16 @@ export async function putV3PutV3ProjectsIdServicesPipelinesEmail(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set pivotaltracker service for project
  * @request PUT :/v3/projects/{id}/services/pivotaltracker
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesPivotaltracker(
   id: number,
@@ -9424,17 +9364,16 @@ export async function putV3PutV3ProjectsIdServicesPivotaltracker(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set pushover service for project
  * @request PUT :/v3/projects/{id}/services/pushover
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesPushover(
   id: number,
@@ -9462,17 +9401,16 @@ export async function putV3PutV3ProjectsIdServicesPushover(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set redmine service for project
  * @request PUT :/v3/projects/{id}/services/redmine
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesRedmine(
   id: number,
@@ -9498,17 +9436,16 @@ export async function putV3PutV3ProjectsIdServicesRedmine(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set slack service for project
  * @request PUT :/v3/projects/{id}/services/slack
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesSlack(
   id: number,
@@ -9547,17 +9484,16 @@ export async function putV3PutV3ProjectsIdServicesSlack(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set slack-slash-commands service for project
  * @request PUT :/v3/projects/{id}/services/slack-slash-commands
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesSlackSlashCommands(
   id: number,
@@ -9575,17 +9511,16 @@ export async function putV3PutV3ProjectsIdServicesSlackSlashCommands(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Trigger a slash command for slack-slash-commands
  * @request POST :/v3/projects/{id}/services/slack_slash_commands/trigger
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdServicesSlackSlashCommandsTrigger(
   /**
@@ -9608,17 +9543,16 @@ export async function postV3PostV3ProjectsIdServicesSlackSlashCommandsTrigger(
       },
     },
   );
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Set teamcity service for project
  * @request PUT :/v3/projects/{id}/services/teamcity
- * @allowrelaxedtypes
  */
 export async function putV3PutV3ProjectsIdServicesTeamcity(
   id: number,
@@ -9644,10 +9578,10 @@ export async function putV3PutV3ProjectsIdServicesTeamcity(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -9697,10 +9631,10 @@ export async function deleteV3DeleteV3ProjectsIdServicesServiceSlug(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -9805,7 +9739,6 @@ export async function postV3PostV3ProjectsIdShare(
 /**
  * undefined
  * @request DELETE :/v3/projects/{id}/share/{group_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdShareGroupId(
   /**
@@ -9825,10 +9758,10 @@ export async function deleteV3DeleteV3ProjectsIdShareGroupId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -10098,7 +10031,6 @@ export async function putV3PutV3ProjectsIdSnippetsNoteableIdNotesNoteId(
 /**
  * Delete a project snippet
  * @request DELETE :/v3/projects/{id}/snippets/{snippet_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetId(
   /**
@@ -10118,10 +10050,10 @@ export async function deleteV3DeleteV3ProjectsIdSnippetsSnippetId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -10468,7 +10400,6 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji
 /**
  * Get a raw project snippet
  * @request GET :/v3/projects/{id}/snippets/{snippet_id}/raw
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3ProjectsIdSnippetsSnippetIdRaw(
@@ -10489,10 +10420,10 @@ export async function getV3GetV3ProjectsIdSnippetsSnippetIdRaw(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -10736,7 +10667,6 @@ export async function postV3PostV3ProjectsIdUnarchive(
 /**
  * Upload a file
  * @request POST :/v3/projects/{id}/uploads
- * @allowrelaxedtypes
  */
 export async function postV3PostV3ProjectsIdUploads(
   /**
@@ -10757,10 +10687,10 @@ export async function postV3PostV3ProjectsIdUploads(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -11157,7 +11087,6 @@ export async function postV3PostV3Session(
 /**
  * Get the Sidekiq Compound metrics. Includes queue, process, and job statistics
  * @request GET :/v3/sidekiq/compound_metrics
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3SidekiqCompoundMetrics(
@@ -11168,17 +11097,16 @@ export async function getV3GetV3SidekiqCompoundMetrics(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get the Sidekiq job statistics
  * @request GET :/v3/sidekiq/job_stats
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3SidekiqJobStats(
@@ -11189,17 +11117,16 @@ export async function getV3GetV3SidekiqJobStats(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get the Sidekiq process metrics
  * @request GET :/v3/sidekiq/process_metrics
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3SidekiqProcessMetrics(
@@ -11210,17 +11137,16 @@ export async function getV3GetV3SidekiqProcessMetrics(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get the Sidekiq queue metrics
  * @request GET :/v3/sidekiq/queue_metrics
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3SidekiqQueueMetrics(
@@ -11231,10 +11157,10 @@ export async function getV3GetV3SidekiqQueueMetrics(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -11428,7 +11354,6 @@ export async function putV3PutV3SnippetsId(
 /**
  * Get a raw snippet
  * @request GET :/v3/snippets/{id}/raw
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3SnippetsIdRaw(
@@ -11444,10 +11369,10 @@ export async function getV3GetV3SnippetsIdRaw(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -11641,7 +11566,6 @@ export async function getV3GetV3TemplatesLicensesName(
 /**
  * Mark all todos as done
  * @request DELETE :/v3/todos
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3Todos(
   headers?: hasuraSdk.JSONValue,
@@ -11651,10 +11575,10 @@ export async function deleteV3DeleteV3Todos(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -11781,7 +11705,6 @@ export async function postV3PostV3UserEmails(
 /**
  * Delete an email address from the currently authenticated user
  * @request DELETE :/v3/user/emails/{email_id}
- * @allowrelaxedtypes
  */
 export async function deleteV3DeleteV3UserEmailsEmailId(
   /**
@@ -11796,10 +11719,10 @@ export async function deleteV3DeleteV3UserEmailsEmailId(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -12156,7 +12079,6 @@ export async function putV3PutV3UsersId(
 /**
  * Block a user. Available only for admins.
  * @request PUT :/v3/users/{id}/block
- * @allowrelaxedtypes
  */
 export async function putV3PutV3UsersIdBlock(
   /**
@@ -12171,10 +12093,10 @@ export async function putV3PutV3UsersIdBlock(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
@@ -12387,7 +12309,6 @@ export async function deleteV3DeleteV3UsersIdKeysKeyId(
 /**
  * Unblock a user. Available only for admins.
  * @request PUT :/v3/users/{id}/unblock
- * @allowrelaxedtypes
  */
 export async function putV3PutV3UsersIdUnblock(
   /**
@@ -12402,17 +12323,16 @@ export async function putV3PutV3UsersIdUnblock(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
 
 /**
  * Get the version information of the GitLab instance.
  * @request GET :/v3/version
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getV3GetV3Version(
@@ -12423,9 +12343,9 @@ export async function getV3GetV3Version(
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
-  if (result.error) {
-    throw result.error;
+  if (result.data) {
+    return result.data;
   } else {
-    return new hasuraSdk.JSONValue(result.data);
+    throw result.error;
   }
 }
