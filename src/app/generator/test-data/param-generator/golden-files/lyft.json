@@ -33,11 +33,16 @@
         "rendered": "{\n    cost_estimates?: (CostEstimate)[],\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       },
       ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -64,11 +69,16 @@
         "rendered": "{\n    nearby_drivers?: (NearbyDriversByRideType)[],\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       },
       ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -107,11 +117,16 @@
         "rendered": "{\n    eta_estimates?: (Eta)[],\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       },
       ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -125,7 +140,10 @@
         "rendered": "Profile",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/rides": {
@@ -154,25 +172,42 @@
         "rendered": "{\n    ride_history?: (RideDetail)[],\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       },
       ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
   },
   "post__/rides": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: Ride,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "RideRequest",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/rides/{id}": {
@@ -189,12 +224,24 @@
         "rendered": "RideDetail",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "post__/rides/{id}/cancel": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: CancellationRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** The ID of the ride */\n id: string,",
@@ -206,12 +253,24 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/rides/{id}/destination": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: Location,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** The ID of the ride */\n id: string,",
@@ -223,12 +282,24 @@
         "rendered": "Location",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/rides/{id}/rating": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: RatingRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** The ID of the ride */\n id: string,",
@@ -240,7 +311,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/rides/{id}/receipt": {
@@ -257,7 +331,10 @@
         "rendered": "RideReceipt",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "get__/ridetypes": {
@@ -286,30 +363,56 @@
         "rendered": "{\n    ride_types?: (RideType)[],\n\n}",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
       ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       },
       ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
         "requiresRelaxedTypeAnnotation": false
       }
     }
   },
   "put__/sandbox/primetime": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: SandboxPrimetime,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/sandbox/rides/{id}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: SandboxRideStatus,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** The ID of the ride */\n id: string,",
@@ -321,24 +424,48 @@
         "rendered": "SandboxRideUpdate",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/sandbox/ridetypes": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: SandboxRideType,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
     "response": {
       ".__no_name": {
         "rendered": "SandboxRideType",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   },
   "put__/sandbox/ridetypes/{ride_type}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".request": {
+        "rendered": "\n/** Request body */\n request: SandboxDriverAvailability,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".request.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".rideType": {
         "rendered": " rideType: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\",",
@@ -350,7 +477,10 @@
         "rendered": "hasuraSdk.JSONValue",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": { "requiresRelaxedTypeAnnotation": false }
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
     }
   }
 }
