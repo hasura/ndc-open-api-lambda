@@ -362,7 +362,7 @@ function traverseSchema(
   const currentPath = `${path}.${types.getParameterName(schema) ?? "__no_name"}`;
   params[currentPath] = {
     rendered: schema._$rendered ?? "__undefined",
-    requiresRelaxedTypeAnnotation: schema._$requiresRelaxedTypeTag ?? false, // TODO: change when supported
+    requiresRelaxedTypeAnnotation: schema._$requiresRelaxedTypeTag ?? false,
   };
   if (types.schemaIsTypeObject(schema)) {
     for (const property of types.getSchemaTypeObjectChildren(schema)) {
