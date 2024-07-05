@@ -300,6 +300,8 @@ describe("param-generator", async () => {
         const basicChars = routeTypes.getBasicCharacteristics(route);
         const routeKey = `${basicChars.method}__${basicChars.route}`;
 
+        // console.log(`${routeKey}: ${cj.stringify(route)}`)
+
         const queryParams = routeTypes.getQueryParams(route);
         const renderedQueryParams: Record<string, RenderedParam> = {};
         if (queryParams) {
@@ -316,11 +318,25 @@ describe("param-generator", async () => {
           }
         }
 
+        const responseSchema = routeTypes.getResponseSchema(route);
+        const renderedResponseSchema: Record<string, RenderedParam> = {};
+        if (responseSchema) {
+          render.renderParams(responseSchema);
+          traverseSchema("", renderedResponseSchema, responseSchema);
+        }
+
+        const bodyParam = routeTypes.getRequestBody(route);
+        const renderedBodyParams: Record<string, RenderedParam> = {};
+        if (bodyParam) {
+          render.renderParams(bodyParam);
+          traverseSchema("", renderedBodyParams, bodyParam);
+        }
+
         got[routeKey] = {
           query: renderedQueryParams,
-          body: {},
+          body: renderedBodyParams,
           path: renderedPathParams,
-          response: {},
+          response: renderedResponseSchema,
         };
       }
 
@@ -339,7 +355,7 @@ function traverseSchema(
 ) {
   const currentPath = `${path}.${types.getParameterName(schema) ?? "__no_name"}`;
   params[currentPath] = {
-    rendered: schema._$rendered!,
+    rendered: schema._$rendered ?? "__undefined",
     requiresRelaxedTypeAnnotation: false, // TODO: change when supported
   };
   if (types.schemaIsTypeObject(schema)) {

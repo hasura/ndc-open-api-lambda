@@ -57,7 +57,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "Empty",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/v1/{name}": {
     "query": {
@@ -117,7 +126,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "Listing",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "patch__/v1/{name}": {
     "query": {
@@ -174,14 +192,32 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: Listing,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".name": {
         "rendered": "\n/** Output only. The resource name of the listing. e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456` */\n name: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "Listing",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/v1/{name}:subscribe": {
     "query": {
@@ -234,7 +270,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: SubscribeListingRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".name": {
         "rendered": "\n/** Required. Resource name of the listing that you want to subscribe to. e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`. */\n name: string,",
@@ -245,7 +290,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "SubscribeListingResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/v1/{organization}/dataExchanges": {
     "query": {
@@ -313,7 +367,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ListOrgDataExchangesResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/v1/{parent}/dataExchanges": {
     "query": {
@@ -381,7 +444,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ListDataExchangesResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/v1/{parent}/dataExchanges": {
     "query": {
@@ -438,14 +510,32 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: DataExchange,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".parent": {
         "rendered": "\n/** Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/US`. */\n parent: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "DataExchange",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/v1/{parent}/listings": {
     "query": {
@@ -513,7 +603,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ListListingsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/v1/{parent}/listings": {
     "query": {
@@ -570,14 +669,32 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: Listing,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".parent": {
         "rendered": "\n/** Required. The parent resource path of the listing. e.g. `projects/myproject/locations/US/dataExchanges/123`. */\n parent: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "Listing",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/v1/{resource}:getIamPolicy": {
     "query": {
@@ -630,7 +747,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: GetIamPolicyRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".resource": {
         "rendered": "\n/** REQUIRED: The resource for which the policy is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field. */\n resource: string,",
@@ -641,7 +767,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "Policy",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/v1/{resource}:setIamPolicy": {
     "query": {
@@ -694,7 +829,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: SetIamPolicyRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".resource": {
         "rendered": "\n/** REQUIRED: The resource for which the policy is being specified. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field. */\n resource: string,",
@@ -705,7 +849,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "Policy",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/v1/{resource}:testIamPermissions": {
     "query": {
@@ -758,7 +911,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: TestIamPermissionsRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".resource": {
         "rendered": "\n/** REQUIRED: The resource for which the policy detail is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field. */\n resource: string,",
@@ -769,6 +931,15 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "TestIamPermissionsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   }
 }

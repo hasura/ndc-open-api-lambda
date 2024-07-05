@@ -57,7 +57,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ErrorGroup",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "put__/v1beta1/{name}": {
     "query": {
@@ -110,14 +119,32 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: ErrorGroup,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".name": {
         "rendered": "\n/** The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw */\n name: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ErrorGroup",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "delete__/v1beta1/{projectName}/events": {
     "query": {
@@ -177,7 +204,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "DeleteEventsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/v1beta1/{projectName}/events": {
     "query": {
@@ -265,7 +301,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ListEventsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/v1beta1/{projectName}/events:report": {
     "query": {
@@ -318,7 +363,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: ReportedErrorEvent,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".projectName": {
         "rendered": "\n/** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectId}`, where `{projectId}` is the [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840). Example: // `projects/my-project-123`. */\n projectName: string,",
@@ -329,7 +383,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ReportErrorEventResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/v1beta1/{projectName}/groupStats": {
     "query": {
@@ -437,6 +500,15 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "ListGroupStatsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   }
 }

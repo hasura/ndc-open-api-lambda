@@ -17,7 +17,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/id/{identifier}": {
     "query": {},
@@ -28,7 +37,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/search/{index}/{operation}": {
     "query": {
@@ -52,11 +70,29 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/search/{index}/{operation}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".body": {
+        "rendered": "\n/** Request body */\n body: hasuraSdk.JSONValue,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".body.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".index": {
         "rendered": "\n/** search index name\nPossible values:\n* `collectionsonline`\n* `cenotaph`\n */\n index: string,",
@@ -67,7 +103,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/sparql": {
     "query": {
@@ -90,7 +135,43 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
-  "post__/sparql": { "query": {}, "body": {}, "path": {}, "response": {} }
+  "post__/sparql": {
+    "query": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: {\n  /** sparql query */\n    query: string,\n  /**\n   * Whether to get inferred results in the response\n   * @default true\n   */\n    infer?: boolean,\n\n},",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  }
 }

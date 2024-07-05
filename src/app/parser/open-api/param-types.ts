@@ -6,7 +6,8 @@ export type Schema =
   | SchemaTypeOneOf
   | SchemaTypeAnyOf
   | SchemaTypeAllOf
-  | SchemaTypeArray;
+  | SchemaTypeArray
+  | SchemaTypeEmpty;
 
 /**
  * common properties shared across all types of Schema
@@ -91,6 +92,7 @@ export type SchemaTypeArray = BaseSchema & {
 export type SchemaTypeCustomType = BaseSchema & {
   type: string; // can be any valid type. Eg: Pet (in petstore API)
   schema: Schema;
+  _$forcedCustom: boolean | undefined; // this forced custom value is set by code, when some schema type needs to be forced into being a custom schema
 };
 
 export type SchemaTypeOneOf = BaseSchema & {
@@ -104,6 +106,12 @@ export type SchemaTypeAnyOf = BaseSchema & {
 export type SchemaTypeAllOf = BaseSchema & {
   allOf: Schema[];
 };
+
+/**
+ * Created so that empty schema objects can be generated for parser usage
+ * Unlikely to be actually part of the original Open API Document
+ */
+export type SchemaTypeEmpty = BaseSchema & {};
 
 export type $Parsed = {
   type: string; // this is *NOT* the actual data type.
@@ -135,6 +143,9 @@ export function schemaIsTypeScalar(schema: any): schema is SchemaTypeScalar {
 export function schemaIsTypeCustomType(
   schema: any,
 ): schema is SchemaTypeCustomType {
+  if (schema._$forcedCustom === true) {
+    return true;
+  }
   return (
     schema.schema &&
     schema.type &&
@@ -183,6 +194,21 @@ export function schemaIsTypeAnyOf(schema: any): schema is SchemaTypeAnyOf {
 
 export function schemaIsTypeAllOf(schema: any): schema is SchemaTypeAllOf {
   return schema.allOf && schema.allOf.length > 0;
+}
+
+export function schemaTypeIsEmpty(schema: any): schema is SchemaTypeEmpty {
+  const allKeys = Object.keys(schema);
+  return (
+    allKeys && // the object should have some keys
+    allKeys.length === 5 && // the number of keys should be 5 (equal to number of properties in BaseSchema)
+    //
+    // the allKeys array should only have the properties present in BaseSchema
+    allKeys.includes("paramName") &&
+    allKeys.includes("name") &&
+    allKeys.includes("required") &&
+    allKeys.includes("description") &&
+    allKeys.includes("_$rendered")
+  );
 }
 
 export function getParameterName(schema: BaseSchema): string | undefined {
@@ -240,4 +266,14 @@ export function getParsedSchemaForSchemaTypeRef(
     return schema.schema.$parsed;
   }
   return undefined;
+}
+
+export function getEmptySchema(): Schema {
+  return {
+    paramName: undefined,
+    name: undefined,
+    required: undefined,
+    description: undefined,
+    _$rendered: undefined,
+  };
 }

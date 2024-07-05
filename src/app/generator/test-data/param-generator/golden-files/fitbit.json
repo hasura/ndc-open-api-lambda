@@ -1,5 +1,28 @@
 {
-  "post__/action": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/action": {
+    "query": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateActionRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateActionResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
   "get__/action/{id}": {
     "query": {},
     "body": {},
@@ -9,20 +32,70 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchActionResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "patch__/action/{id}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: UpdateActionRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** Action identifier */\n id: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "UpdateActionResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
-  "post__/bundle": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/bundle": {
+    "query": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateBundleRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateBundleResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
   "get__/bundle/{id}": {
     "query": {},
     "body": {},
@@ -32,18 +105,45 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchBundleResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "patch__/bundle/{id}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: UpdateBundleRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** Bundle identifier */\n id: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "UpdateBundleResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/calendar_event": {
     "query": {
@@ -118,13 +218,40 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchCalendarEventsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/calendar_event": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateCalendarEventRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateCalendarEventResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "delete__/calendar_event/{id}": {
     "query": {},
@@ -135,7 +262,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "hasuraSdk.JSONValue",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/calendar_event/{id}": {
     "query": {},
@@ -146,24 +282,69 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchCalendarEventResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "patch__/calendar_event/{id}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: UpdateCalendarEventRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** Calendar event identifier */\n id: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "UpdateCalendarEventResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/calendar_event_response": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateCalendarEventResponseRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateCalendarEventResponseRequest",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/coach": {
     "query": {
@@ -182,7 +363,16 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchCoachesResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/coach/{id}": {
     "query": {},
@@ -193,7 +383,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchCoachResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/email_history": {
     "query": {
@@ -220,7 +419,16 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchEmailHistoriesResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/email_history/{id}": {
     "query": {},
@@ -231,7 +439,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchEmailHistoryResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/group": {
     "query": {
@@ -250,9 +467,41 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchGroupsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
-  "post__/group": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/group": {
+    "query": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateGroupRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateGroupResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
   "get__/group/{id}": {
     "query": {},
     "body": {},
@@ -262,7 +511,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchGroupResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_profile": {
     "query": {
@@ -305,7 +563,16 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthProfilesResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_profile/{id}": {
     "query": {
@@ -325,7 +592,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthProfileResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_profile_answer": {
     "query": {
@@ -368,7 +644,16 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthProfileAnswersResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_profile_answer/{id}": {
     "query": {
@@ -388,7 +673,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthProfileAnswerResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_profile_question": {
     "query": {
@@ -415,7 +709,16 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthProfileQuestionsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_profile_question/{id}": {
     "query": {
@@ -435,13 +738,31 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthProfileQuestionResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_question_definition": {
     "query": {},
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthQuestionDefinitionsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/health_question_definition/{id}": {
     "query": {},
@@ -452,7 +773,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchHealthQuestionDefinitionResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/oauth/token": {
     "query": {
@@ -465,9 +795,27 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateTokenRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateTokenResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/oauth/token/{id}/groups": {
     "query": {},
@@ -478,7 +826,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchGroupsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/oauth/token/{id}/organization": {
     "query": {},
@@ -489,7 +846,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchOrganizationResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/organization/{id}": {
     "query": {},
@@ -500,7 +866,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchOrganizationResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/patient": {
     "query": {
@@ -555,10 +930,65 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
-  "post__/patient": { "query": {}, "body": {}, "path": {}, "response": {} },
-  "put__/patient": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/patient": {
+    "query": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreatePatientRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "CreatePatientResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
+  "put__/patient": {
+    "query": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: UpsertPatientRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "CreatePatientResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
   "get__/patient/{id}": {
     "query": {},
     "body": {},
@@ -568,18 +998,45 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "patch__/patient/{id}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: UpdatePatientRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** Patient identifier */\n id: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "UpdatePatientResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/patient/{id}/coaches": {
     "query": {},
@@ -590,7 +1047,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchCoachesResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/patient/{id}/groups": {
     "query": {},
@@ -601,7 +1067,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchGroupsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/patient_health_metric": {
     "query": {
@@ -640,13 +1115,40 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientHealthMetricResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/patient_health_metric": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreatePatientHealthMetricRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreatePatientHealthMetricResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/patient_health_metric/{id}": {
     "query": {},
@@ -657,7 +1159,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientHealthMetricResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/patient_plan_summary": {
     "query": {
@@ -684,7 +1195,16 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientPlanSummariesResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/patient_plan_summary/{id}": {
     "query": {
@@ -704,18 +1224,45 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientPlanSummaryResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "patch__/patient_plan_summary/{id}": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: UpdatePatientPlanSummaryRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {
       ".id": {
         "rendered": "\n/** Plan summary identifier */\n id: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "UpdatePatientPlanSummaryResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/result": {
     "query": {
@@ -770,7 +1317,16 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientHealthResultResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/result/{id}": {
     "query": {},
@@ -781,7 +1337,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchPatientHealthResultResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward": {
     "query": {
@@ -812,9 +1377,41 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
-  "post__/reward": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "post__/reward": {
+    "query": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateRewardRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateRewardResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
   "get__/reward/{id}": {
     "query": {},
     "body": {},
@@ -824,7 +1421,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_earning": {
     "query": {
@@ -847,13 +1453,40 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardEarningsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/reward_earning": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateRewardEarningRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateRewardEarningResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_earning/{id}": {
     "query": {},
@@ -864,7 +1497,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardEarningResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_earning_fulfillment": {
     "query": {
@@ -879,13 +1521,40 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardEarningFulfillmentsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/reward_earning_fulfillment": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateRewardEarningFulfillmentRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateRewardEarningFulfillmentResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_earning_fulfillment/{id}": {
     "query": {},
@@ -896,7 +1565,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardEarningFulfillmentResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_program": {
     "query": {
@@ -915,13 +1593,40 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardProgramsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/reward_program": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateRewardProgramRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateRewardProgramResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_program/{id}": {
     "query": {},
@@ -932,7 +1637,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardProgramResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_program/{id}/group": {
     "query": {},
@@ -943,7 +1657,16 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchGroupsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_program_activation": {
     "query": {
@@ -966,13 +1689,40 @@
     },
     "body": {},
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardProgramActivationsResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "post__/reward_program_activation": {
     "query": {},
-    "body": {},
+    "body": {
+      ".data": {
+        "rendered": "\n/** Request body */\n data: CreateRewardProgramActivationRequest,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".data.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    },
     "path": {},
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "CreateRewardProgramActivationResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/reward_program_activation/{id}": {
     "query": {},
@@ -983,6 +1733,15 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "FetchRewardProgramActivationResponse",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   }
 }

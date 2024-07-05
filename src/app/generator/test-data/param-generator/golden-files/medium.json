@@ -1,5 +1,23 @@
 {
-  "get__/": { "query": {}, "body": {}, "path": {}, "response": {} },
+  "get__/": {
+    "query": {},
+    "body": {},
+    "path": {},
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /**\n   * Full name of the API's developer\n   * @example \"Nishu Jain\"\n   */\n    developer?: string,\n  /**\n   * Link to the Medium API's documentation\n   * @example \"https://docs.mediumapi.com\"\n   */\n    documentation?: string,\n  /**\n   * Email ID of the developer\n   * @example \"nishu@mediumapi.com\"\n   */\n    email?: string,\n  /**\n   * LinkedIn Page URL\n   * @example \"https://www.linkedin.com/company/medium-api\"\n   */\n    linkedin?: string,\n  /**\n   * Full name of the API\n   * @example \"Medium API\"\n   */\n    name?: string,\n  /**\n   * Twitter Profile URL\n   * @example \"https://twitter.com/medium_api\"\n   */\n    twitter?: string,\n  /**\n   * Link to the Medium API's website\n   * @example \"https://mediumapi.com\"\n   */\n    website?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
+  },
   "get__/article/{article_id}": {
     "query": {},
     "body": {},
@@ -9,7 +27,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"1985b61817c3\" */\n    author?: string,\n  /**\n   * @format int32\n   * @example 53\n   */\n    claps?: number,\n  /** @example \"f06086080568\" */\n    id?: string,\n  /** @example \"https://miro.medium.com/1*W0wM9xIeeIR3_Oo0E_thaA.png\" */\n    image_url?: string,\n  /** @example true */\n    is_locked?: boolean,\n  /** @example false */\n    is_series?: boolean,\n  /** @example \"en\" */\n    lang?: string,\n  /** @example \"2021-05-28 04:22:48\" */\n    last_modified_at?: string,\n  /** @example \"e7040e67514c\" */\n    publication_id?: string,\n  /** @example \"2020-08-25 11:08:18\" */\n    published_at?: string,\n  /** @example 3.5720125786164 */\n    reading_time?: number,\n  /**\n   * @format int32\n   * @example 10\n   */\n    responses_count?: number,\n  /** @example \"Re-energize your relationship in the midst of a crisis\" */\n    subtitle?: string,\n    tags?: (string)[],\n  /** @example \"4 Tips to Strengthen Your Bonds — Now\" */\n    title?: string,\n    topics?: (string)[],\n  /** @example \"https://medium.com/age-of-awareness/re-energizing-your-relationship-in-the-midst-of-a-crisis-f06086080568\" */\n    url?: string,\n  /**\n   * @format int32\n   * @example 3\n   */\n    voters?: number,\n  /**\n   * @format int32\n   * @example 845\n   */\n    word_count?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/article/{article_id}/content": {
     "query": {},
@@ -20,7 +55,20 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /**\n   * @example \"Article title\n   * Article Subtitle\n   * Article Content ....\n   * \"\n   */\n    content?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/article/{article_id}/fans": {
     "query": {},
@@ -31,7 +79,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"67fa62fc1971\" */\n    article_id?: string,\n  /**\n   * @format int32\n   * @example 145\n   */\n    count?: number,\n    voters?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/article/{article_id}/markdown": {
     "query": {},
@@ -42,7 +107,20 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /**\n   * @example \"# Article title\n   * ## Article Subtitle\n   * Article **Content** with lot of _markups_ ....\n   * ![Images Alt](Image URL)\n   * \"\n   */\n    markdown?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/article/{article_id}/related": {
     "query": {},
@@ -53,7 +131,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"67fa62fc1971\" */\n    id?: string,\n    related_articles?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/article/{article_id}/responses": {
     "query": {},
@@ -64,7 +159,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"67fa62fc1971\" */\n    id?: string,\n    responses?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/latestposts/{topic_slug}": {
     "query": {},
@@ -75,7 +187,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    latestposts?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/list/{list_id}": {
     "query": {},
@@ -86,7 +215,20 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /**\n   * `user_id` of the author\n   * @example \"1985b61817c3\"\n   */\n    author?: string,\n  /**\n   * @format int32\n   * @example 48\n   */\n    claps?: number,\n  /**\n   * Number of articles in the list\n   * @format int32\n   * @example 18\n   */\n    count?: number,\n  /** @example \"2023-03-12 06:46:46\" */\n    created_at?: string,\n  /** @example \"Collections of all the articles and resources related to Medium API\" */\n    description?: string,\n  /** @example \"38f9e0f9bea6\" */\n    id?: string,\n  /** @example \"2023-03-12 06:53:02\" */\n    last_item_inserted_at?: string,\n  /** @example \"Medium API\" */\n    name?: string,\n  /**\n   * @format int32\n   * @example 1\n   */\n    responses_count?: number,\n  /**\n   * Image URL\n   * @example \"https://miro.medium.com/0*8f634a2860234802375db89fbfcccb5cc717f3fd.jpeg\"\n   */\n    thumbnail?: string,\n  /**\n   * @format int32\n   * @example 1\n   */\n    voters?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/list/{list_id}/articles": {
     "query": {},
@@ -97,7 +239,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"38f9e0f9bea6\" */\n    id?: string,\n    list_articles?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/list/{list_id}/responses": {
     "query": {},
@@ -108,7 +267,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"38f9e0f9bea6\" */\n    id?: string,\n    responses?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/publication/id_for/{publication_slug}": {
     "query": {},
@@ -119,7 +295,20 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /**\n   * Unique hash id of the publication.\n   * @example \"29038077e4c6\"\n   */\n    publication_id?: string,\n  /**\n   * Same publication slug that you passed in the path parameters.\n   * @example \"codex\"\n   */\n    publication_slug?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/publication/{publication_id}": {
     "query": {},
@@ -130,7 +319,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"8a819983d566\" */\n    creator?: string,\n  /** @example \"Towards AI is the world's leading AI and technology publication. Publishing unbiased AI and technology-related articles. Read by thought-leaders and decision-makers around the world.\" */\n    description?: string,\n    editors?: (string)[],\n  /** @example \"towardsAl\" */\n    facebook_pagename?: string,\n  /**\n   * @format int32\n   * @example 25260\n   */\n    followers?: number,\n  /** @example \"98111c9905da\" */\n    id?: string,\n  /** @example \"towards_ai\" */\n    instagram_username?: string,\n  /** @example \"Towards AI\" */\n    name?: string,\n  /** @example \"towards-artificial-intelligence\" */\n    slug?: string,\n  /** @example \"The World's Leading AI and Technology Publication\" */\n    tagline?: string,\n    tags?: (string)[],\n  /** @example \"towards_AI\" */\n    twitter_username?: string,\n  /** @example \"pub.towardsai.net\" */\n    url?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/publication/{publication_id}/articles": {
     "query": {
@@ -150,7 +356,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    publication_articles?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/publication/{publication_id}/newsletter": {
     "query": {},
@@ -161,7 +384,20 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"aea8a19ea239\" */\n    creator_id?: string,\n  /** @example \"We have moved our newsletter. Subscribe → https://ws.towardsai.net/subscribe\" */\n    description?: string,\n  /** @example \"d710a73cd042\" */\n    id?: string,\n  /** @example \"https://miro.medium.com/1*j2OVd7j2o2FHeE7T8TzpXw.png\" */\n    image?: string,\n  /** @example \"This AI newsletter is all you need\" */\n    name?: string,\n  /** @example \"this-ai-newsletter-is-all-you-need\" */\n    slug?: string,\n  /**\n   * @format int32\n   * @example 6752\n   */\n    subscribers?: number,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/related_tags/{tag}": {
     "query": {},
@@ -172,7 +408,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"blockchain\" */\n    given_tag?: string,\n    related_tags?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/search/articles?query={query}": {
     "query": {
@@ -192,7 +445,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    articles?: (string)[],\n  /** @example \"startup\" */\n    search_query?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/search/lists?query={query}": {
     "query": {
@@ -212,7 +482,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    lists?: (string)[],\n  /** @example \"artificial intelligence\" */\n    search_query?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/search/publications?query={query}": {
     "query": {
@@ -232,7 +519,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    publications?: (string)[],\n  /** @example \"mental health\" */\n    search_query?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/search/tags?query={query}": {
     "query": {
@@ -252,7 +556,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"blockchain\" */\n    search_query?: string,\n    tags?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/search/users?query={query}": {
     "query": {
@@ -272,7 +593,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /** @example \"data engineer\" */\n    search_query?: string,\n    users?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/top_writer/{topic_slug}": {
     "query": {
@@ -292,7 +630,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    top_writers?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/topfeeds/{tag}/{mode}": {
     "query": {
@@ -320,7 +675,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    topfeeds?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/id_for/{username}": {
     "query": {},
@@ -331,7 +703,20 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n  /**\n   * Unique hash id of the user.\n   * @example \"1985b61817c3\"\n   */\n    id?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}": {
     "query": {},
@@ -342,7 +727,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    allow_notes?: boolean,\n  /** @example \"Obsessed with Tech Biz Arts &amp; Words; Does NOT dumb down the writing; Skilled Wordsmith; Delivers the best\" */\n    bio?: string,\n  /**\n   * @format int32\n   * @example 450\n   */\n    followers_count?: number,\n  /**\n   * @format int32\n   * @example 4\n   */\n    following_count?: number,\n  /** @example \"Nishu Jain\" */\n    fullname?: string,\n  /** @example true */\n    has_list?: boolean,\n  /** @example \"1985b61817c3\" */\n    id?: string,\n  /** @example \"https://miro.medium.com/1*C92Hx7k9nRM7TPlrmhgW9w.jpeg\" */\n    image_url?: string,\n  /** @example false */\n    is_book_author?: boolean,\n  /** @example false */\n    is_suspended?: boolean,\n    is_writer_program_enrolled?: boolean,\n  /** @example \"2020-06-24 16:05:46\" */\n    medium_member_at?: string,\n    top_writer_in?: (string)[],\n  /** @example \"one_anachronism\" */\n    twitter_username?: string,\n  /** @example \"nishu-jain\" */\n    username?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}/articles": {
     "query": {},
@@ -353,7 +755,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    associated_articles?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}/followers": {
     "query": {
@@ -373,7 +792,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    followers?: (string)[],\n  /** @example \"14d5c41e0264\" */\n    id?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}/following": {
     "query": {
@@ -393,7 +829,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    following?: (string)[],\n  /** @example \"14d5c41e0264\" */\n    id?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}/interests": {
     "query": {},
@@ -404,7 +857,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    tags_followed?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}/lists": {
     "query": {},
@@ -415,7 +885,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    lists?: (string)[],\n  /** @example \"5142451174a3\" */\n    user_id?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}/publications": {
     "query": {},
@@ -426,7 +913,24 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    publications?: (string)[],\n  /** @example \"14d5c41e0264\" */\n    user_id?: string,\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   },
   "get__/user/{user_id}/top_articles": {
     "query": {},
@@ -437,6 +941,23 @@
         "requiresRelaxedTypeAnnotation": false
       }
     },
-    "response": {}
+    "response": {
+      ".__no_name": {
+        "rendered": "{\n    associated_articles?: (string)[],\n\n}",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.__no_name.__no_name.__no_name": {
+        "rendered": "__undefined",
+        "requiresRelaxedTypeAnnotation": false
+      }
+    }
   }
 }
