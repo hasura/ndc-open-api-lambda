@@ -4,7 +4,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreateActionRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -15,7 +15,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreateActionResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -35,7 +35,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchActionResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -48,7 +48,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: UpdateActionRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -64,7 +64,7 @@
     "response": {
       ".__no_name": {
         "rendered": "UpdateActionResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -149,7 +149,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Patient id to fetch calendar event. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[organization]\"?: string, \n/** Comma-separated list of coach or patient ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[attendees]\"?: string, \n/** Calendar event type */\n \"filter[type]\"?: \"plan-check-in\" | \"reminder\" | \"telephone-call\" | \"office-visit\" | \"video-call\", \n/** If not specified, return all calendar events. If set to `true` return only events marked as completed, if set to `false`, return only events not marked as completed yet. */\n \"filter[completed]\"?: boolean, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events starting in November 2017 (America/New_York): `filter[start_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[start_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events ending in November 2017 (America/New_York): `filter[end_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[end_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events completed in November 2017 (America/New_York): `filter[completed_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[completed_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[cursor]\"?: string, \n/** List of related resources to include in the response */\n include?: \"owner\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter[patient]": {
         "rendered": "\n/** Patient id to fetch calendar event. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.\n */\n \"filter[patient]\"?: string,",
@@ -169,7 +169,7 @@
       },
       ".query.filter[type]": {
         "rendered": "\n/** Calendar event type */\n \"filter[type]\"?: \"plan-check-in\" | \"reminder\" | \"telephone-call\" | \"office-visit\" | \"video-call\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter[completed]": {
         "rendered": "\n/** If not specified, return all calendar events. If set to `true` return only events marked as completed, if set to `false`, return only events not marked as completed yet. */\n \"filter[completed]\"?: boolean,",
@@ -221,7 +221,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchCalendarEventsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -234,7 +234,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreateCalendarEventRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -245,7 +245,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreateCalendarEventResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -285,7 +285,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchCalendarEventResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -298,7 +298,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: UpdateCalendarEventRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -314,7 +314,7 @@
     "response": {
       ".__no_name": {
         "rendered": "UpdateCalendarEventResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -327,7 +327,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreateCalendarEventResponseRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -338,7 +338,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreateCalendarEventResponseRequest",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -366,7 +366,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchCoachesResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -386,7 +386,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchCoachResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -398,7 +398,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Fitbit Plus user id of email recipient. Required if filter[sender] is not defined. */\n \"filter[receiver]\"?: string, \n/** Fitbit Plus user id of email sender. Required if filter[receiver] is not defined. */\n \"filter[sender]\"?: string, \n/** Type of email */\n \"filter[emailType]\"?: string, \n/** valid sorts:\n  * send_time - ascending by send_time\n  * -send_time - descending by send_time\n */\n sort?: \"send_time\" | \"-send_time\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter[receiver]": {
         "rendered": "\n/** Fitbit Plus user id of email recipient. Required if filter[sender] is not defined. */\n \"filter[receiver]\"?: string,",
@@ -414,7 +414,7 @@
       },
       ".query.sort": {
         "rendered": "\n/** valid sorts:\n  * send_time - ascending by send_time\n  * -send_time - descending by send_time\n */\n sort?: \"send_time\" | \"-send_time\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -470,7 +470,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchGroupsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -483,7 +483,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreateGroupRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -494,7 +494,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreateGroupResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -514,7 +514,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchGroupResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -526,7 +526,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Patient id to fetch health profile. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[cursor]\"?: string, \n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter[patient]": {
         "rendered": "\n/** Patient id to fetch health profile. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
@@ -558,7 +558,7 @@
       },
       ".query.include": {
         "rendered": "\n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -566,7 +566,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchHealthProfilesResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -578,11 +578,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.include": {
         "rendered": "\n/** List of related resources to include in the response */\n include?: \"patient\" | \"questions\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -595,7 +595,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchHealthProfileResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -688,7 +688,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Patient id to fetch healt profile questions. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter[patient]": {
         "rendered": "\n/** Patient id to fetch healt profile questions. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
@@ -704,7 +704,7 @@
       },
       ".query.include": {
         "rendered": "\n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -724,11 +724,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.include": {
         "rendered": "\n/** List of related resources to include in the response */\n include?: \"question_definition\" | \"answer\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -756,7 +756,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchHealthQuestionDefinitionsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -776,7 +776,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchHealthQuestionDefinitionResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -788,17 +788,17 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"groups\" | \"organization\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.include": {
         "rendered": "\n/** List of related resources to include in the response */\n include?: \"groups\" | \"organization\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreateTokenRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -809,7 +809,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreateTokenResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -829,7 +829,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchGroupsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -849,7 +849,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchOrganizationResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -869,7 +869,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchOrganizationResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -933,7 +933,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -946,7 +946,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreatePatientRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -957,7 +957,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreatePatientResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -970,7 +970,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: UpsertPatientRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -981,7 +981,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreatePatientResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1001,7 +1001,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1014,7 +1014,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: UpdatePatientRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -1030,7 +1030,7 @@
     "response": {
       ".__no_name": {
         "rendered": "UpdatePatientResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1050,7 +1050,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchCoachesResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1070,7 +1070,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchGroupsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1118,7 +1118,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientHealthMetricResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1131,7 +1131,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreatePatientHealthMetricRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -1142,7 +1142,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreatePatientHealthMetricResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1162,7 +1162,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientHealthMetricResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1174,7 +1174,7 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** Patient id to fetch plan summary for. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string, \n/** Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[groups]\"?: string, \n/** Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[organization]\"?: string, \n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter[patient]": {
         "rendered": "\n/** Patient id to fetch plan summary for. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.\n */\n \"filter[patient]\"?: string,",
@@ -1190,7 +1190,7 @@
       },
       ".query.include": {
         "rendered": "\n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1198,7 +1198,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientPlanSummariesResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1210,11 +1210,11 @@
     "query": {
       ".query": {
         "rendered": " query: { \n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\", },",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".query.include": {
         "rendered": "\n/** List of related resources to include in the response */\n include?: \"actions\" | \"bundles\" | \"patient\" | \"current_results\",",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       }
     },
     "body": {},
@@ -1227,7 +1227,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientPlanSummaryResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1240,7 +1240,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: UpdatePatientPlanSummaryRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -1256,7 +1256,7 @@
     "response": {
       ".__no_name": {
         "rendered": "UpdatePatientPlanSummaryResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1320,7 +1320,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientHealthResultResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1340,7 +1340,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchPatientHealthResultResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1596,7 +1596,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchRewardProgramsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1609,7 +1609,7 @@
     "body": {
       ".data": {
         "rendered": "\n/** Request body */\n data: CreateRewardProgramRequest,",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
         "rendered": "__undefined",
@@ -1620,7 +1620,7 @@
     "response": {
       ".__no_name": {
         "rendered": "CreateRewardProgramResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1640,7 +1640,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchRewardProgramResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",
@@ -1660,7 +1660,7 @@
     "response": {
       ".__no_name": {
         "rendered": "FetchGroupsResponse",
-        "requiresRelaxedTypeAnnotation": false
+        "requiresRelaxedTypeAnnotation": true
       },
       ".__no_name.__no_name": {
         "rendered": "__undefined",

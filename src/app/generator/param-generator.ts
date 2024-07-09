@@ -1,24 +1,28 @@
 import * as types from "../parser/open-api/param-types";
 import * as logger from "../../util/logger";
+import { ParsedSchemaStore } from "../parser/open-api/schema-parser";
 
-export function renderParams(schema: types.Schema): types.Schema {
+export function renderParams(
+  schema: types.Schema,
+  schemaStore: ParsedSchemaStore,
+): types.Schema {
   let rendered: string | undefined = "";
   if (types.schemaIsTypeScalar(schema)) {
     rendered = renderScalarTypeSchema(schema);
   } else if (types.schemaIsTypeObject(schema)) {
-    rendered = renderObjectTypeSchema(schema);
+    rendered = renderObjectTypeSchema(schema, schemaStore);
   } else if (types.schemaIsTypeArray(schema)) {
-    rendered = renderArrayTypeSchema(schema);
+    rendered = renderArrayTypeSchema(schema, schemaStore);
   } else if (types.schemaIsTypeCustomType(schema)) {
-    rendered = renderCustomTypeSchema(schema);
+    rendered = renderCustomTypeSchema(schema, schemaStore);
   } else if (types.schemaIsTypeRef(schema)) {
-    rendered = renderRefTypeSchema(schema);
+    rendered = renderRefTypeSchema(schema, schemaStore);
   } else if (types.schemaIsTypeOneOf(schema)) {
-    rendered = renderOneOfTypeSchema(schema);
+    rendered = renderOneOfTypeSchema(schema, schemaStore);
   } else if (types.schemaIsTypeAnyOf(schema)) {
-    rendered = renderAnyOfTypeSchema(schema);
+    rendered = renderAnyOfTypeSchema(schema, schemaStore);
   } else if (types.schemaIsTypeAllOf(schema)) {
-    rendered = renderAllOfTypeSchema(schema);
+    rendered = renderAllOfTypeSchema(schema, schemaStore);
   } else {
     if (!types.schemaTypeIsEmpty(schema)) {
       logger.error(
@@ -50,6 +54,8 @@ export function renderSchema(
 export function renderScalarTypeSchema(
   schema: types.SchemaTypeScalar,
 ): string | undefined {
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForScalarTypeSchema(schema);
   if (types.scalarSchemaIsNumber(schema)) {
     return renderScalarTypeNumberSchema(schema);
   } else if (types.scalarSchemaIsString(schema)) {
@@ -106,37 +112,53 @@ export function renderScalarTypeObjectSchema(
   return renderSchema(paramType, schema);
 }
 
-export function renderObjectTypeSchema(schema: types.SchemaTypeObject): string {
+export function renderObjectTypeSchema(
+  schema: types.SchemaTypeObject,
+  schemaStore: ParsedSchemaStore,
+): string {
   const renderedProperties: string[] = [];
-  const children = types.getScehmaTypeObjectChildrenMap(schema);
+  const children = types.getSchemaTypeObjectChildrenMap(schema);
   for (const propertyName in children) {
     const property = children[propertyName]!;
     property!.name = propertyName; // ensure that the name property is present
-    renderedProperties.push(renderParams(property)._$rendered!);
+    renderedProperties.push(renderParams(property, schemaStore)._$rendered!);
   }
   const paramType = `{ ${renderedProperties.join(" ")} }`;
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForObjectTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
-export function renderArrayTypeSchema(schema: types.SchemaTypeArray): string {
-  const renderedProperty = renderParams(
-    types.getSchemaTypeArrayChild(schema),
-  )._$rendered!;
+export function renderArrayTypeSchema(
+  schema: types.SchemaTypeArray,
+  schemaStore: ParsedSchemaStore,
+): string {
+  const childSchema = types.getSchemaTypeArrayChild(schema);
+  const renderedProperty = renderParams(childSchema, schemaStore)._$rendered!;
   const paramType = `(${renderedProperty})[]`;
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForArrayTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
 export function renderCustomTypeSchema(
   schema: types.SchemaTypeCustomType,
+  schemaStore: ParsedSchemaStore,
 ): string {
   const renderedProperty =
     schema.type ??
-    renderParams(types.getSchemaTypeCustomChild(schema))._$rendered!;
+    renderParams(types.getSchemaTypeCustomChild(schema), schemaStore)
+      ._$rendered!;
+
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForCustomTypeSchema(schema, schemaStore);
   return renderSchema(renderedProperty, schema);
 }
 
-export function renderRefTypeSchema(schema: types.SchemaTypeRef): string {
-  // TODO: add schema store reference
+export function renderRefTypeSchema(
+  schema: types.SchemaTypeRef,
+  schemaStore: ParsedSchemaStore,
+): string {
   let paramType = "";
   const parsedSchema = types.getParsedSchemaForSchemaTypeRef(schema);
   if (parsedSchema && parsedSchema.name) {
@@ -147,35 +169,61 @@ export function renderRefTypeSchema(schema: types.SchemaTypeRef): string {
     const splitRef = schema.$ref.split("/");
     paramType = splitRef[splitRef.length - 1]!;
   }
+
+  try {
+    schema._$requiresRelaxedTypeTag =
+      types.isRelaxedTypeTagRequiredForRefTypeSchema(schema, schemaStore);
+  } catch (e) {
+    logger.error(`Error while rendering Ref Type Schema: ${schema.$ref}`);
+    logger.debug(e);
+  }
+
   return renderSchema(paramType, schema);
 }
 
-export function renderOneOfTypeSchema(schema: types.SchemaTypeOneOf): string {
+export function renderOneOfTypeSchema(
+  schema: types.SchemaTypeOneOf,
+  schemaStore: ParsedSchemaStore,
+): string {
   const renderedProperties: string[] = [];
   for (const property of types.getSchemaTypeOneOfChildren(schema)) {
-    renderedProperties.push(renderParams(property)._$rendered!);
+    renderedProperties.push(renderParams(property, schemaStore)._$rendered!);
   }
   const paramType = renderedProperties.join(" | ");
+
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForOneOfTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
-export function renderAnyOfTypeSchema(schema: types.SchemaTypeAnyOf): string {
+export function renderAnyOfTypeSchema(
+  schema: types.SchemaTypeAnyOf,
+  schemaStore: ParsedSchemaStore,
+): string {
   const renderedProperties: string[] = [];
   for (const property of types.getSchemaTypeAnyOfChildren(schema)) {
-    renderedProperties.push(renderParams(property)._$rendered!);
+    renderedProperties.push(renderParams(property, schemaStore)._$rendered!);
   }
-  const paramType = `| ${renderedProperties.join(" | ")}`;
+  const paramType = renderedProperties.join(" | ");
+
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForAnyOfTypeSchema(schema);
   return renderSchema(paramType, schema);
 }
 
-export function renderAllOfTypeSchema(schema: types.SchemaTypeAllOf): string {
+export function renderAllOfTypeSchema(
+  schema: types.SchemaTypeAllOf,
+  schemaStore: ParsedSchemaStore,
+): string {
   const renderedProperties: string[] = [];
   for (const property of types.getSchemaTypeAllOfChildren(schema)) {
-    renderParams(property);
+    renderParams(property, schemaStore);
     if (property._$rendered!.length > 0) {
       renderedProperties.push(property._$rendered!);
     }
   }
+  schema._$requiresRelaxedTypeTag =
+    types.isRelaxedTypeTagRequiredForAllOfTypeSchema(schema);
   const paramType = renderedProperties.join(" & ");
   return renderSchema(paramType, schema);
 }

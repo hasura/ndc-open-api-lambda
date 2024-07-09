@@ -136,7 +136,7 @@ function parseSchema(
    * Need to use `@ts-ignore` before the following if statement because the typescript
    * compiler thinks that the check for true has already happened, and points the
    * following if statement as an error (TS2367: unintentional comparison)
-   * Notice that `parseScehmaProperty()` can actually modify the shcema property
+   * Notice that `parseSchemaProperty()` can actually modify the shcema property
    * and that makes the check valid and necessary
    */
   // @ts-ignore

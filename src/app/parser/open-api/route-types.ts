@@ -132,6 +132,7 @@ export function getRequestBody(route: ApiRoute): paramTypes.Schema | undefined {
     schema: route.requestBodyInfo.schema ?? paramTypes.getEmptySchema(),
     _$rendered: "",
     _$forcedCustom: true,
+    _$requiresRelaxedTypeTag: false,
   };
   return schema;
 }
@@ -170,6 +171,7 @@ export function getResponseSchema(route: ApiRoute): paramTypes.Schema {
       paramTypes.getEmptySchema(),
     _$rendered: schemaType,
     _$forcedCustom: true,
+    _$requiresRelaxedTypeTag: false,
   };
   return schema;
 }
