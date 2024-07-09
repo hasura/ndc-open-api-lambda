@@ -239,7 +239,7 @@ export function getSchemaTypeObjectChildren(
   return Array.from(Object.values(schema.properties));
 }
 
-export function getScehmaTypeObjectChildrenMap(
+export function getSchemaTypeObjectChildrenMap(
   schema: SchemaTypeObject,
 ): Record<string, Schema> {
   return schema.properties;
@@ -320,7 +320,7 @@ export function isRelaxedTypeTagRequiredForScalarTypeSchema(
 export function isRelaxedTypeTagRequiredForObjectTypeSchema(
   schema: SchemaTypeObject,
 ): boolean {
-  const children = getScehmaTypeObjectChildrenMap(schema);
+  const children = getSchemaTypeObjectChildrenMap(schema);
   for (const childName in children) {
     const child = children[childName];
 

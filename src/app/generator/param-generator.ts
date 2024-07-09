@@ -117,7 +117,7 @@ export function renderObjectTypeSchema(
   schemaStore: ParsedSchemaStore,
 ): string {
   const renderedProperties: string[] = [];
-  const children = types.getScehmaTypeObjectChildrenMap(schema);
+  const children = types.getSchemaTypeObjectChildrenMap(schema);
   for (const propertyName in children) {
     const property = children[propertyName]!;
     property!.name = propertyName; // ensure that the name property is present
