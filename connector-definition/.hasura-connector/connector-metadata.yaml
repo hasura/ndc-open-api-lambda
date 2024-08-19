@@ -7,10 +7,10 @@ supportedEnvironmentVariables:
     description: "Base url of the API"
   - name: NDC_OAS_LAMBDA_PRETTY_LOGS
     description: "Print logs in a human readable format instead of JSON"
-    default: "true"
+    defaultValue: "true"
   - name: NDC_OAS_FILE_OVERWRITE
     description: "Overwrite previously generated functions.ts file and api.ts file"
-    default: "false"
+    defaultValue: "false"
 commands:
   update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -e NDC_OAS_BASE_URL -e NDC_OAS_DOCUMENT_URI -e NDC_OAS_LAMBDA_PRETTY_LOGS -e NDC_OAS_FILE_OVERWRITE -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector ghcr.io/hasura/ndc-open-api-lambda:v0.1.1 update"
 dockerComposeWatch:
