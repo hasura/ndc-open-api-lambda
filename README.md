@@ -87,7 +87,7 @@ This will generate the required metadata and TypeScript files.
 ddn connector-link add-resources <connector-name>
 ```
 
-This command will track all the indices in your Elasticsearch DB as Models
+This command will track all the API endpoints in your OpenAPI Document as [Commands](https://hasura.io/docs/3.0/supergraph-modeling/commands/).
 
 ## Known Limiations
 
