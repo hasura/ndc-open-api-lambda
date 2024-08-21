@@ -71,7 +71,7 @@ default suggested port.
 
 #### Step 2.3: Provide the env vars required for the connector
 
-Environment variables that can be used to configure the connector are listed under [Supported Environment Variables](./docs/documentation.md#supported-environment-variables)
+Environment variables that can be used to configure the connector are listed under [Supported Environment Variables](./docs/documentation.md#supported-environment-variables).
 
 ## Step 3: Introspect the connector
 
