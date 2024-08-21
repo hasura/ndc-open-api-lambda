@@ -79,7 +79,7 @@ Environment variables that can be used to configure the connector are listed und
 ddn connector introspect <connector-name>
 ```
 
-This will generate the required HML and TS files
+This will generate the required metadata and TypeScript files.
 
 ## Step 4: Add your resources
 
