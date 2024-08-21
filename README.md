@@ -4,7 +4,7 @@
 
 [![Docs](https://img.shields.io/badge/docs-v3.x-brightgreen.svg?style=flat)](https://hasura.io/docs/3.0)
 [![ndc-hub](https://img.shields.io/badge/ndc--hub-openapi-blue.svg?style=flat)](https://hasura.io/connectors/open-api-lambda)
-[![License](https://img.shields.io/badge/license-Apache--2.0-purple.svg?style=flat)](LICENSE.txt)
+[![License](https://img.shields.io/badge/license-Apache--2.0-purple.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 
 The OpenAPI Lambda Connector allows you to import APIs that are documented in the OpenAPI/Swagger format into the Hasura Supergraph. The connector exposes REST API endpoints as Typescript functions, which can be exposed as GraphQL queries or mutations via the [NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda).
 
