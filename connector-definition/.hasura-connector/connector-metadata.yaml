@@ -12,7 +12,13 @@ supportedEnvironmentVariables:
     description: "Overwrite previously generated functions.ts file and api.ts file"
     default: "false"
 commands:
-  update: "docker run --rm -e HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH -e NDC_OAS_BASE_URL -e NDC_OAS_DOCUMENT_URI -e NDC_OAS_LAMBDA_PRETTY_LOGS -e NDC_OAS_FILE_OVERWRITE -v ${HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH}:/etc/connector ghcr.io/hasura/ndc-open-api-lambda:v0.1.1 update"
+  update:
+    type: Dockerized
+    dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v0.1.1
+    commandArgs: [ "update" ]
+cliPlugin:
+  type: Docker
+  dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v0.1.1
 dockerComposeWatch:
   # Rebuild the container if a new package restore is required because package[-lock].json changed
   - path: package.json
