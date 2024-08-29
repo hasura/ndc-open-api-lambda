@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[0.1.2](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.2)] 2024-08-30
+
 - Add compatibilty for Windows Powershell and Command Prompt. ([#51](https://github.com/hasura/ndc-open-api-lambda/pull/51))
 
 - Use `hasuraSdk.JSONValue` as the type for `Record<>` and `object`. Also, make APIs that don't have a return type return `hasuraSdk.JSONValue` instead of `void` (39)[https://github.com/hasura/ndc-open-api-lambda/pull/39]
