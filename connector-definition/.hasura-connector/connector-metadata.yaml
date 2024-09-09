@@ -14,11 +14,11 @@ supportedEnvironmentVariables:
 commands:
   update:
     type: Dockerized
-    dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v0.1.2
+    dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v0.1.3
     commandArgs: [ "update" ]
 cliPlugin:
   type: Docker
-  dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v0.1.2
+  dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v0.1.3
 dockerComposeWatch:
   # Rebuild the container if a new package restore is required because package[-lock].json changed
   - path: package.json
