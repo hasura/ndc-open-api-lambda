@@ -29,7 +29,7 @@ export enum LogLevel {
   PANIC = "panic",
 }
 
-const NDC_NODEJS_LAMBDA_SDK_VERSION = "v1.4.0";
+const NDC_NODEJS_LAMBDA_SDK_VERSION = "v1.7.0";
 
 const PACKAGE_JSON_FILENAME = "package.json";
 const TS_CONFIG_FILENAME = "tsconfig.json";
