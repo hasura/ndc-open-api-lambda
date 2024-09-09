@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[0.1.3](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.3)] 2024-09-09
+
 - Update NDC NodeJS Lambda SDK version to `v1.7.0`. ([#53](https://github.com/hasura/ndc-open-api-lambda/pull/53))
 
 ## [[0.1.2](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.2)] 2024-09-02
