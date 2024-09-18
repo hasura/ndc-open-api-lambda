@@ -194,7 +194,10 @@ export class HttpClient<SecurityDataType = unknown> {
             r.error = (null as unknown) as E;
 
             if (!response.ok && response.status < 500) {
-              throw new hasuraSdk.UnprocessableContent("error: ", { response });
+              const data = await r.json()
+              r.data = data
+              r.error = data.error
+              throw new hasuraSdk.UnprocessableContent('error: ', { response })
             }
 
             const data = !responseFormat ? r : await response[responseFormat]()
