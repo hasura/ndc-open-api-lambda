@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Bugfix: `hasuraSdk.JSONValue` being serialized as null ([#58](https://github.com/hasura/ndc-open-api-lambda/pull/58))
+
 ## [[0.1.4](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.4)] 2024-09-12
 
 - Fix spelling ([#55](https://github.com/hasura/ndc-open-api-lambda/pull/55))
