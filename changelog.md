@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[0.1.5](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.5)] 2024-09-23
+
 - Bugfix: `hasuraSdk.JSONValue` being serialized as null ([#58](https://github.com/hasura/ndc-open-api-lambda/pull/58))
 - Update NDC NodeJS Lambda SDK version to `v1.8.0`. ([#59](https://github.com/hasura/ndc-open-api-lambda/pull/59))
 - Add more detailed error handling ([#49](https://github.com/hasura/ndc-open-api-lambda/pull/49))
