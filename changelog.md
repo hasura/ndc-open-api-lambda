@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[0.2.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.2.0)] 2024-09-26
+
 - Several bugfixes in `functions.ts` codegen due to integration of new parsers ([#50](https://github.com/hasura/ndc-open-api-lambda/pull/50))
 
 ## [[0.1.5](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.5)] 2024-09-23
