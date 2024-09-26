@@ -65,7 +65,7 @@
   "get__/aliases/v2/trackingId": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** An alias type */\n type: string, \n/** An external ID. An externalId and type pair uniquely identifies an alias. */\n externalId: string, \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, },",
+        "rendered": " query: { \n/** An alias type */\n type: string, \n/** An external ID. An externalId and type pair uniquely identifies an alias. */\n externalId: string, \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.type": {
@@ -1226,7 +1226,7 @@
   "post__/c2c/v4/callback": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** API Key */\n apiKey: string, },",
+        "rendered": " query: { \n/** API Key */\n apiKey: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.apiKey": {
@@ -2560,7 +2560,7 @@
   "get__/labels/v4/{resourceType}": {
     "query": {
       ".query": {
-        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A filter containing label key-value pairs. */\n labels?: object, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Field names to filter a result object.\n */\n fields?: (string)[], },",
+        "rendered": " query: { \n/** Project ID.\nAny HERE Tracking user must be a member of a Tracking project.\nThe project ID can be implicitly resolved if the user calling the API is a member of a single project.\nIf the user is a member of multiple projects, the `projectId` query parameter needs to be specified explicitly.\n */\n projectId?: string, \n/** A filter containing label key-value pairs. */\n labels?: hasuraSdk.JSONValue, \n/** A token from the previously returned response to retrieve the specified page. */\n pageToken?: string, \n/** The number of items to return per page */\n limit?: number, \n/** Field names to filter a result object.\n */\n fields?: (string)[], },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.projectId": {
@@ -2568,7 +2568,7 @@
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.labels": {
-        "rendered": "\n/** A filter containing label key-value pairs. */\n labels?: object,",
+        "rendered": "\n/** A filter containing label key-value pairs. */\n labels?: hasuraSdk.JSONValue,",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.pageToken": {

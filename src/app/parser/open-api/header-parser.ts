@@ -1,4 +1,4 @@
-import * as schemaTypes from "./types";
+import * as schemaTypes from "./schema-types";
 import * as routeTypes from "./route-types";
 import * as logger from "../../../util/logger";
 

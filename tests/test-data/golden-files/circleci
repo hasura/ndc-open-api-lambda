@@ -24,7 +24,6 @@ const api = new Api({
 });
 
 /**
- * undefined
  * @request GET :/me
  * @readonly
  */
@@ -42,41 +41,35 @@ export async function getMeGetMe(headers?: hasuraSdk.JSONValue): Promise<User> {
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}
  * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectProjectDetail(
+  /** XXXXXXXXX
+   */
+  username: string,
+  /** XXXXXXXXX
+   */
+  project: string,
   query: {
-    /**
-     * The number of builds to return. Maximum 100, defaults to 30.
+    /** The number of builds to return. Maximum 100, defaults to 30.
      */
     limit?: number;
-    /**
-     * The API returns builds starting from this offset, defaults to 0.
+    /** The API returns builds starting from this offset, defaults to 0.
      */
     offset?: number;
-    /**
-* Restricts which builds are returned.
+    /** Restricts which builds are returned.
 Set to "completed", "successful", "failed", "running", or defaults to no filter.
  */
     filter?: "completed" | "successful" | "failed" | "running";
   },
-  /**
-   * XXXXXXXXX
-   */
-  username: string,
-  /**
-   * XXXXXXXXX
-   */
-  project: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Builds> {
   const result = await api.project.projectDetail({
-    query: query,
     username: username,
     project: project,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -89,9 +82,7 @@ Set to "completed", "successful", "failed", "running", or defaults to no filter.
 }
 
 /**
- * undefined
  * @request POST :/project/{username}/{project}
- * @allowrelaxedtypes
  */
 export async function postProjectProjectCreate(
   username: string,
@@ -128,7 +119,6 @@ export async function postProjectProjectCreate(
 }
 
 /**
- * undefined
  * @request DELETE :/project/{username}/{project}/build-cache
  */
 export async function deleteProjectBuildCacheDelete(
@@ -153,9 +143,7 @@ export async function deleteProjectBuildCacheDelete(
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}/checkout-key
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail(
@@ -178,7 +166,6 @@ export async function getProjectCheckoutKeyDetail(
 }
 
 /**
- * undefined
  * @request POST :/project/{username}/{project}/checkout-key
  * @allowrelaxedtypes
  */
@@ -205,14 +192,12 @@ export async function postProjectCheckoutKeyCreate(
 }
 
 /**
- * undefined
  * @request DELETE :/project/{username}/{project}/checkout-key/{fingerprint}
  */
 export async function deleteProjectCheckoutKeyDelete(
   username: string,
   project: string,
-  /**
-   * XXXXXXXXXX
+  /** XXXXXXXXXX
    */
   fingerprint: string,
   headers?: hasuraSdk.JSONValue,
@@ -235,9 +220,7 @@ export async function deleteProjectCheckoutKeyDelete(
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}/checkout-key/{fingerprint}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail2(
@@ -262,7 +245,6 @@ export async function getProjectCheckoutKeyDetail2(
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}/envvar
  * @readonly
  */
@@ -286,7 +268,6 @@ export async function getProjectEnvvarDetail(
 }
 
 /**
- * undefined
  * @request POST :/project/{username}/{project}/envvar
  */
 export async function postProjectEnvvarCreate(
@@ -309,14 +290,12 @@ export async function postProjectEnvvarCreate(
 }
 
 /**
- * undefined
  * @request DELETE :/project/{username}/{project}/envvar/{name}
  */
 export async function deleteProjectEnvvarDelete(
   username: string,
   project: string,
-  /**
-   * XXXXXXXXXX
+  /** XXXXXXXXXX
    */
   name: string,
   headers?: hasuraSdk.JSONValue,
@@ -339,7 +318,6 @@ export async function deleteProjectEnvvarDelete(
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}/envvar/{name}
  * @readonly
  */
@@ -365,9 +343,7 @@ export async function getProjectEnvvarDetail2(
 }
 
 /**
- * undefined
  * @request POST :/project/{username}/{project}/ssh-key
- * @allowrelaxedtypes
  */
 export async function postProjectSshKeyCreate(
   username: string,
@@ -388,22 +364,19 @@ export async function postProjectSshKeyCreate(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/project/{username}/{project}/tree/{branch}
- * @allowrelaxedtypes
  */
 export async function postProjectTreeCreate(
   username: string,
   project: string,
-  /**
-   * The branch name should be url-encoded.
+  /** The branch name should be url-encoded.
    */
   branch: string,
   /** Request body */
@@ -437,16 +410,13 @@ export async function postProjectTreeCreate(
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}/{build_num}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectProjectDetail2(
   username: string,
   project: string,
-  /**
-   * XXXXXXXXXX
+  /** XXXXXXXXXX
    */
   buildNum: number,
   headers?: hasuraSdk.JSONValue,
@@ -467,7 +437,6 @@ export async function getProjectProjectDetail2(
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}/{build_num}/artifacts
  * @readonly
  */
@@ -493,9 +462,7 @@ export async function getProjectArtifactsDetail(
 }
 
 /**
- * undefined
  * @request POST :/project/{username}/{project}/{build_num}/cancel
- * @allowrelaxedtypes
  */
 export async function postProjectCancelCreate(
   username: string,
@@ -519,9 +486,7 @@ export async function postProjectCancelCreate(
 }
 
 /**
- * undefined
  * @request POST :/project/{username}/{project}/{build_num}/retry
- * @allowrelaxedtypes
  */
 export async function postProjectRetryCreate(
   username: string,
@@ -545,9 +510,7 @@ export async function postProjectRetryCreate(
 }
 
 /**
- * undefined
  * @request GET :/project/{username}/{project}/{build_num}/tests
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectTestsDetail(
@@ -572,9 +535,7 @@ export async function getProjectTestsDetail(
 }
 
 /**
- * undefined
  * @request GET :/projects
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectsProjectsList(
@@ -593,19 +554,15 @@ export async function getProjectsProjectsList(
 }
 
 /**
- * undefined
  * @request GET :/recent-builds
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getRecentBuildsRecentBuildsList(
   query: {
-    /**
-     * The number of builds to return. Maximum 100, defaults to 30.
+    /** The number of builds to return. Maximum 100, defaults to 30.
      */
     limit?: number;
-    /**
-     * The API returns builds starting from this offset, defaults to 0.
+    /** The API returns builds starting from this offset, defaults to 0.
      */
     offset?: number;
   },
@@ -625,9 +582,7 @@ export async function getRecentBuildsRecentBuildsList(
 }
 
 /**
- * undefined
  * @request POST :/user/heroku-key
- * @allowrelaxedtypes
  */
 export async function postUserHerokuKeyCreate(
   headers?: hasuraSdk.JSONValue,
@@ -638,7 +593,7 @@ export async function postUserHerokuKeyCreate(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }

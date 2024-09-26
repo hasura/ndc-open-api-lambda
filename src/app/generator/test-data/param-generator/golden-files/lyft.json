@@ -2,7 +2,7 @@
   "get__/cost": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** ID of a ride type */\n ride_type?: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\", \n/** Latitude of the starting location */\n start_lat: number, \n/** Longitude of the starting location */\n start_lng: number, \n/** Latitude of the ending location */\n end_lat?: number, \n/** Longitude of the ending location */\n end_lng?: number, },",
+        "rendered": " query: { \n/** ID of a ride type */\n ride_type?: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\", \n/** Latitude of the starting location */\n start_lat: number, \n/** Longitude of the starting location */\n start_lng: number, \n/** Latitude of the ending location */\n end_lat?: number, \n/** Longitude of the ending location */\n end_lng?: number, },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.ride_type": {
@@ -50,7 +50,7 @@
   "get__/drivers": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Latitude of a location */\n lat: number, \n/** Longitude of a location */\n lng: number, },",
+        "rendered": " query: { \n/** Latitude of a location */\n lat: number, \n/** Longitude of a location */\n lng: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.lat": {
@@ -86,7 +86,7 @@
   "get__/eta": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Latitude of a location */\n lat: number, \n/** Longitude of a location */\n lng: number, \n/** Latitude of destination location */\n destination_lat?: number, \n/** Longitude of destination location */\n destination_lng?: number, \n/** ID of a ride type */\n ride_type?: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\", },",
+        "rendered": " query: { \n/** Latitude of a location */\n lat: number, \n/** Longitude of a location */\n lng: number, \n/** Latitude of destination location */\n destination_lat?: number, \n/** Longitude of destination location */\n destination_lng?: number, \n/** ID of a ride type */\n ride_type?: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.lat": {
@@ -149,7 +149,7 @@
   "get__/rides": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Restrict to rides starting after this point in time. The earliest supported date is 2015-01-01T00:00:00+00:00\n */\n start_time: string, \n/** Restrict to rides starting before this point in time. The earliest supported date is 2015-01-01T00:00:00+00:00\n */\n end_time?: string, \n/** The maximum number of rides to return. The default limit is 10 if not specified. The maximum allowed value is 50, an integer greater that 50 will return at most 50 results.\n */\n limit?: number, },",
+        "rendered": " query: { \n/** Restrict to rides starting after this point in time. The earliest supported date is 2015-01-01T00:00:00+00:00\n */\n start_time: string, \n/** Restrict to rides starting before this point in time. The earliest supported date is 2015-01-01T00:00:00+00:00\n */\n end_time?: string, \n/** The maximum number of rides to return. The default limit is 10 if not specified. The maximum allowed value is 50, an integer greater that 50 will return at most 50 results.\n */\n limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.start_time": {
@@ -340,7 +340,7 @@
   "get__/ridetypes": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Latitude of a location */\n lat: number, \n/** Longitude of a location */\n lng: number, \n/** ID of a ride type */\n ride_type?: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\", },",
+        "rendered": " query: { \n/** Latitude of a location */\n lat: number, \n/** Longitude of a location */\n lng: number, \n/** ID of a ride type */\n ride_type?: \"lyft\" | \"lyft_line\" | \"lyft_plus\" | \"lyft_premier\" | \"lyft_lux\" | \"lyft_luxsuv\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.lat": {

@@ -1,0 +1,3181 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import {
+  AlbumObject,
+  Api,
+  ArtistObject,
+  AudioAnalysisObject,
+  AudioFeaturesObject,
+  AudiobookObject,
+  CategoryObject,
+  ChapterObject,
+  CurrentlyPlayingContextObject,
+  CursorPagingPlayHistoryObject,
+  CursorPagingSimplifiedArtistObject,
+  DeviceObject,
+  EpisodeObject,
+  ImageObject,
+  PagingArtistObject,
+  PagingFeaturedPlaylistObject,
+  PagingObject,
+  PagingPlaylistObject,
+  PagingPlaylistTrackObject,
+  PagingSavedAlbumObject,
+  PagingSavedEpisodeObject,
+  PagingSavedShowObject,
+  PagingSavedTrackObject,
+  PagingSimplifiedAlbumObject,
+  PagingSimplifiedAudiobookObject,
+  PagingSimplifiedChapterObject,
+  PagingSimplifiedEpisodeObject,
+  PagingSimplifiedShowObject,
+  PagingSimplifiedTrackObject,
+  PagingTrackObject,
+  PlaylistObject,
+  PrivateUserObject,
+  PublicUserObject,
+  QueueObject,
+  RecommendationsObject,
+  ShowObject,
+  SimplifiedShowObject,
+  TrackObject,
+} from "./api";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * Get Several Albums
+
+ * @request GET :/albums
+ * @readonly
+ */
+export async function getAlbumsGetMultipleAlbums(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+     */
+    ids: string;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  albums: AlbumObject[];
+}> {
+  const result = await api.albums.getMultipleAlbums({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Album
+
+ * @request GET :/albums/{id}
+ * @readonly
+ */
+export async function getAlbumsGetAnAlbum(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the album.
+   */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<AlbumObject> {
+  const result = await api.albums.getAnAlbum({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Album Tracks
+
+ * @request GET :/albums/{id}/tracks
+ * @readonly
+ */
+export async function getAlbumsGetAnAlbumsTracks(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the album.
+   */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSimplifiedTrackObject> {
+  const result = await api.albums.getAnAlbumsTracks({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Several Artists
+
+ * @request GET :/artists
+ * @readonly
+ */
+export async function getArtistsGetMultipleArtists(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the artists. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  artists: ArtistObject[];
+}> {
+  const result = await api.artists.getMultipleArtists({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Artist
+
+ * @request GET :/artists/{id}
+ * @readonly
+ */
+export async function getArtistsGetAnArtist(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+   */
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ArtistObject> {
+  const result = await api.artists.getAnArtist({
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Artist's Albums
+
+ * @request GET :/artists/{id}/albums
+ * @readonly
+ */
+export async function getArtistsGetAnArtistsAlbums(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+   */
+  id: string,
+  query: {
+    /** A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. <br/>
+Valid values are:<br/>- `album`<br/>- `single`<br/>- `appears_on`<br/>- `compilation`<br/>For example: `include_groups=album,single`.
+ */
+    include_groups?: string;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSimplifiedAlbumObject> {
+  const result = await api.artists.getAnArtistsAlbums({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Artist's Related Artists
+
+ * @request GET :/artists/{id}/related-artists
+ * @readonly
+ */
+export async function getArtistsGetAnArtistsRelatedArtists(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+   */
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  artists: ArtistObject[];
+}> {
+  const result = await api.artists.getAnArtistsRelatedArtists({
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Artist's Top Tracks
+
+ * @request GET :/artists/{id}/top-tracks
+ * @readonly
+ */
+export async function getArtistsGetAnArtistsTopTracks(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+   */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  tracks: TrackObject[];
+}> {
+  const result = await api.artists.getAnArtistsTopTracks({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Track's Audio Analysis
+
+ * @request GET :/audio-analysis/{id}
+ * @readonly
+ */
+export async function getAudioAnalysisGetAudioAnalysis(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids)
+for the track.
+ */
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<AudioAnalysisObject> {
+  const result = await api.audioAnalysis.getAudioAnalysis({
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Tracks' Audio Features
+
+ * @request GET :/audio-features
+ * @readonly
+ */
+export async function getAudioFeaturesGetSeveralAudioFeatures(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids)
+for the tracks. Maximum: 100 IDs.
+ */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  audio_features: AudioFeaturesObject[];
+}> {
+  const result = await api.audioFeatures.getSeveralAudioFeatures({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Track's Audio Features
+
+ * @request GET :/audio-features/{id}
+ * @readonly
+ */
+export async function getAudioFeaturesGetAudioFeatures(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.
+   */
+  id: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<AudioFeaturesObject> {
+  const result = await api.audioFeatures.getAudioFeatures({
+    id: id,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Several Audiobooks
+
+ * @request GET :/audiobooks
+ * @readonly
+ */
+export async function getAudiobooksGetMultipleAudiobooks(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+     */
+    ids: string;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  audiobooks: AudiobookObject[];
+}> {
+  const result = await api.audiobooks.getMultipleAudiobooks({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get an Audiobook
+
+ * @request GET :/audiobooks/{id}
+ * @readonly
+ */
+export async function getAudiobooksGetAnAudiobook(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids)
+for the audiobook.
+ */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<AudiobookObject> {
+  const result = await api.audiobooks.getAnAudiobook({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Audiobook Chapters
+
+ * @request GET :/audiobooks/{id}/chapters
+ * @readonly
+ */
+export async function getAudiobooksGetAudiobookChapters(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids)
+for the audiobook.
+ */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSimplifiedChapterObject> {
+  const result = await api.audiobooks.getAudiobookChapters({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Several Browse Categories
+
+ * @request GET :/browse/categories
+ * @readonly
+ */
+export async function getBrowseGetCategories(
+  query: {
+    /** A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter if you want to narrow the list of returned categories to those relevant to a particular country. If omitted, the returned items will be globally relevant.
+     */
+    country?: string;
+    /** The desired language, consisting of an [ISO 639-1](http://en.wikipedia.org/wiki/ISO_639-1) language code and an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), joined by an underscore. For example: `es_MX`, meaning "Spanish (Mexico)". Provide this parameter if you want the category metadata returned in a particular language. <br/>
+_**Note**: if `locale` is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The `locale` parameter, combined with the `country` parameter, may give odd results if not carefully matched. For example `country=SE&locale=de_DE` will return a list of categories relevant to Sweden but as German language strings._
+ */
+    locale?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  categories: PagingObject;
+}> {
+  const result = await api.browse.getCategories({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Single Browse Category
+
+ * @request GET :/browse/categories/{category_id}
+ * @readonly
+ */
+export async function getBrowseGetACategory(
+  /** The [Spotify category ID](/documentation/web-api/#spotify-uris-and-ids) for the category.
+   */
+  categoryId: string,
+  query: {
+    /** A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter to ensure that the category exists for a particular country.
+     */
+    country?: string;
+    /** The desired language, consisting of an [ISO 639-1](http://en.wikipedia.org/wiki/ISO_639-1) language code and an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), joined by an underscore. For example: `es_MX`, meaning &quot;Spanish (Mexico)&quot;. Provide this parameter if you want the category strings returned in a particular language.<br/> _**Note**: if `locale` is not supplied, or if the specified language is not available, the category strings returned will be in the Spotify default language (American English)._
+     */
+    locale?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<CategoryObject> {
+  const result = await api.browse.getACategory({
+    categoryId: categoryId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Category's Playlists
+
+ * @request GET :/browse/categories/{category_id}/playlists
+ * @readonly
+ */
+export async function getBrowseGetACategoriesPlaylists(
+  /** The [Spotify category ID](/documentation/web-api/#spotify-uris-and-ids) for the category.
+   */
+  categoryId: string,
+  query: {
+    /** A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter to ensure that the category exists for a particular country.
+     */
+    country?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingFeaturedPlaylistObject> {
+  const result = await api.browse.getACategoriesPlaylists({
+    categoryId: categoryId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Featured Playlists
+
+ * @request GET :/browse/featured-playlists
+ * @readonly
+ */
+export async function getBrowseGetFeaturedPlaylists(
+  query: {
+    /** A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.
+     */
+    country?: string;
+    /** The desired language, consisting of a lowercase [ISO 639-1 language code](http://en.wikipedia.org/wiki/ISO_639-1) and an uppercase [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), joined by an underscore. For example: `es_MX`, meaning "Spanish (Mexico)". Provide this parameter if you want the results returned in a particular language (where available). <br/>
+_**Note**: if `locale` is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The `locale` parameter, combined with the `country` parameter, may give odd results if not carefully matched. For example `country=SE&locale=de_DE` will return a list of categories relevant to Sweden but as German language strings._
+ */
+    locale?: string;
+    /** A timestamp in [ISO 8601 format](http://en.wikipedia.org/wiki/ISO_8601): `yyyy-MM-ddTHH:mm:ss`. Use this parameter to specify the user's local time to get results tailored for that specific date and time in the day. If not provided, the response defaults to the current UTC time. Example: "2014-10-23T09:00:00" for a user whose local time is 9AM. If there were no featured playlists (or there is no data) at the specified time, the response will revert to the current UTC time.
+     */
+    timestamp?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingFeaturedPlaylistObject> {
+  const result = await api.browse.getFeaturedPlaylists({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get New Releases
+
+ * @request GET :/browse/new-releases
+ * @readonly
+ */
+export async function getBrowseGetNewReleases(
+  query: {
+    /** A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.
+     */
+    country?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  albums: PagingSimplifiedAlbumObject;
+}> {
+  const result = await api.browse.getNewReleases({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Several Chapters
+
+ * @request GET :/chapters
+ * @readonly
+ */
+export async function getChaptersGetSeveralChapters(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=0IsXVP0JmcB2adSE338GkK,3ZXb8FKZGU0EHALYX6uCzU`. Maximum: 50 IDs.
+     */
+    ids: string;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  chapters: ChapterObject[];
+}> {
+  const result = await api.chapters.getSeveralChapters({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get a Chapter
+
+ * @request GET :/chapters/{id}
+ * @readonly
+ */
+export async function getChaptersGetAChapter(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids)
+for the chapter.
+ */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<ChapterObject> {
+  const result = await api.chapters.getAChapter({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Several Episodes
+
+ * @request GET :/episodes
+ * @readonly
+ */
+export async function getEpisodesGetMultipleEpisodes(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the episodes. Maximum: 50 IDs.
+     */
+    ids: string;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  episodes: EpisodeObject[];
+}> {
+  const result = await api.episodes.getMultipleEpisodes({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Episode
+
+ * @request GET :/episodes/{id}
+ * @readonly
+ */
+export async function getEpisodesGetAnEpisode(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the episode. */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<EpisodeObject> {
+  const result = await api.episodes.getAnEpisode({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Available Markets
+
+ * @request GET :/markets
+ * @readonly
+ */
+export async function getMarketsGetAvailableMarkets(
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  /** @example ["CA","BR","IT"] */
+  markets?: string[];
+}> {
+  const result = await api.markets.getAvailableMarkets({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Current User's Profile
+
+ * @request GET :/me
+ * @readonly
+ */
+export async function getMeGetCurrentUsersProfile(
+  headers?: hasuraSdk.JSONValue,
+): Promise<PrivateUserObject> {
+  const result = await api.me.getCurrentUsersProfile({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Remove Users' Saved Albums
+
+ * @request DELETE :/me/albums
+ */
+export async function deleteMeRemoveAlbumsUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+     */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /** A JSON array of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"]`<br/>A maximum of 50 items can be specified in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._ */
+    ids?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.removeAlbumsUser({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Saved Albums
+
+ * @request GET :/me/albums
+ * @readonly
+ */
+export async function getMeGetUsersSavedAlbums(
+  query: {
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSavedAlbumObject> {
+  const result = await api.me.getUsersSavedAlbums({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Save Albums for Current User
+
+ * @request PUT :/me/albums
+ */
+export async function putMeSaveAlbumsUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+     */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /** A JSON array of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"]`<br/>A maximum of 50 items can be specified in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._ */
+    ids?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.saveAlbumsUser({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check User's Saved Albums
+
+ * @request GET :/me/albums/contains
+ * @readonly
+ */
+export async function getMeCheckUsersSavedAlbums(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<boolean[]> {
+  const result = await api.me.checkUsersSavedAlbums({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Remove User's Saved Audiobooks
+
+ * @request DELETE :/me/audiobooks
+ */
+export async function deleteMeRemoveAudiobooksUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.removeAudiobooksUser({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Saved Audiobooks
+
+ * @request GET :/me/audiobooks
+ * @readonly
+ */
+export async function getMeGetUsersSavedAudiobooks(
+  query: {
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSimplifiedAudiobookObject> {
+  const result = await api.me.getUsersSavedAudiobooks({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Save Audiobooks for Current User
+
+ * @request PUT :/me/audiobooks
+ */
+export async function putMeSaveAudiobooksUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.saveAudiobooksUser({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check User's Saved Audiobooks
+
+ * @request GET :/me/audiobooks/contains
+ * @readonly
+ */
+export async function getMeCheckUsersSavedAudiobooks(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<boolean[]> {
+  const result = await api.me.checkUsersSavedAudiobooks({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Remove User's Saved Episodes
+
+ * @request DELETE :/me/episodes
+ */
+export async function deleteMeRemoveEpisodesUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /** A JSON array of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). <br/>A maximum of 50 items can be specified in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._ */
+    ids?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.removeEpisodesUser({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Saved Episodes
+
+ * @request GET :/me/episodes
+ * @readonly
+ */
+export async function getMeGetUsersSavedEpisodes(
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSavedEpisodeObject> {
+  const result = await api.me.getUsersSavedEpisodes({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Save Episodes for Current User
+
+ * @request PUT :/me/episodes
+ */
+export async function putMeSaveEpisodesUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /** A JSON array of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). <br/>A maximum of 50 items can be specified in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._ */
+    ids?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.saveEpisodesUser({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check User's Saved Episodes
+
+ * @request GET :/me/episodes/contains
+ * @readonly
+ */
+export async function getMeCheckUsersSavedEpisodes(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the episodes. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<boolean[]> {
+  const result = await api.me.checkUsersSavedEpisodes({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Unfollow Artists or Users
+
+ * @request DELETE :/me/following
+ * @allowrelaxedtypes
+ */
+export async function deleteMeUnfollowArtistsUsers(
+  query: {
+    /** The ID type: either `artist` or `user`.
+     */
+    type: "artist" | "user";
+    /** A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
+     */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /** A JSON array of the artist or user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `{ids:["74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q"]}`. A maximum of 50 IDs can be sent in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._ */
+    ids?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.unfollowArtistsUsers({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Followed Artists
+
+ * @request GET :/me/following
+ * @readonly
+ */
+export async function getMeGetFollowed(
+  query: {
+    /** The ID type: currently only `artist` is supported.
+     */
+    type: "artist";
+    /** The last artist ID retrieved from the previous request.
+     */
+    after?: string;
+    /** The maximum number of items to return. Default: 20\. Minimum: 1\. Maximum: 50\.
+     */
+    limit?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  artists: CursorPagingSimplifiedArtistObject;
+}> {
+  const result = await api.me.getFollowed({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Follow Artists or Users
+
+ * @request PUT :/me/following
+ * @allowrelaxedtypes
+ */
+export async function putMeFollowArtistsUsers(
+  query: {
+    /** The ID type.
+     */
+    type: "artist" | "user";
+    /** A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids).
+A maximum of 50 IDs can be sent in one request.
+ */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /**
+     * A JSON array of the artist or user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids).
+     * For example: `{ids:["74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q"]}`. A maximum of 50 IDs can be sent in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._
+     */
+    ids: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.followArtistsUsers({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check If User Follows Artists or Users
+
+ * @request GET :/me/following/contains
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getMeCheckCurrentUserFollows(
+  query: {
+    /** The ID type: either `artist` or `user`.
+     */
+    type: "artist" | "user";
+    /** A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) to check. For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<boolean[]> {
+  const result = await api.me.checkCurrentUserFollows({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Playback State
+
+ * @request GET :/me/player
+ * @readonly
+ */
+export async function getMeGetInformationAboutTheUsersCurrentPlayback(
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** A comma-separated list of item types that your client supports besides the default `track` type. Valid types are: `track` and `episode`.<br/>
+_**Note**: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future._<br/>
+In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the `type` field of each object.
+ */
+    additional_types?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<CurrentlyPlayingContextObject> {
+  const result = await api.me.getInformationAboutTheUsersCurrentPlayback({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Transfer Playback
+
+ * @request PUT :/me/player
+ */
+export async function putMeTransferAUsersPlayback(
+  /** Request body */
+  data: {
+    /** A JSON array containing the ID of the device on which playback should be started/transferred.<br/>For example:`{device_ids:["74ASZWbe4lXaubB36ztrGX"]}`<br/>_**Note**: Although an array is accepted, only a single device_id is currently supported. Supplying more than one will return `400 Bad Request`_ */
+    device_ids: string[];
+    /** **true**: ensure playback happens on new device.<br/>**false** or not provided: keep the current playback state. */
+    play?: boolean;
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.transferAUsersPlayback({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Currently Playing Track
+
+ * @request GET :/me/player/currently-playing
+ * @readonly
+ */
+export async function getMeGetTheUsersCurrentlyPlayingTrack(
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** A comma-separated list of item types that your client supports besides the default `track` type. Valid types are: `track` and `episode`.<br/>
+_**Note**: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future._<br/>
+In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the `type` field of each object.
+ */
+    additional_types?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<CurrentlyPlayingContextObject> {
+  const result = await api.me.getTheUsersCurrentlyPlayingTrack({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Available Devices
+
+ * @request GET :/me/player/devices
+ * @readonly
+ */
+export async function getMeGetAUsersAvailableDevices(
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  devices: DeviceObject[];
+}> {
+  const result = await api.me.getAUsersAvailableDevices({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Skip To Next
+
+ * @request POST :/me/player/next
+ */
+export async function postMeSkipUsersPlaybackToNextTrack(
+  query: {
+    /** The id of the device this command is targeting. If not supplied, the user's currently active device is the target. */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.skipUsersPlaybackToNextTrack({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Pause Playback
+
+ * @request PUT :/me/player/pause
+ */
+export async function putMePauseAUsersPlayback(
+  query: {
+    /** The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+     */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.pauseAUsersPlayback({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Start/Resume Playback
+
+ * @request PUT :/me/player/play
+ */
+export async function putMeStartAUsersPlayback(
+  query: {
+    /** The id of the device this command is targeting. If not supplied, the user's currently active device is the target. */
+    device_id?: string;
+  },
+  /** Request body */
+  data: {
+    /**
+     * Optional. Spotify URI of the context to play.
+     * Valid contexts are albums, artists & playlists.
+     * `{context_uri:"spotify:album:1Je1IMUlBXcx1Fz0WE7oPT"}`
+     */
+    context_uri?: string;
+    /**
+     * Optional. Indicates from where in the context playback should start. Only available when context_uri corresponds to an album or playlist object
+     * "position" is zero based and can’t be negative. Example: `"offset": {"position": 5}`
+     * "uri" is a string representing the uri of the item to start at. Example: `"offset": {"uri": "spotify:track:1301WleyT98MSxVHPZCA6M"}`
+     */
+    offset?: hasuraSdk.JSONValue;
+    /** integer */
+    position_ms?: number;
+    /**
+     * Optional. A JSON array of the Spotify track URIs to play.
+     * For example: `{"uris": ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M"]}`
+     */
+    uris?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.startAUsersPlayback({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Skip To Previous
+
+ * @request POST :/me/player/previous
+ */
+export async function postMeSkipUsersPlaybackToPreviousTrack(
+  query: {
+    /** The id of the device this command is targeting. If
+not supplied, the user's currently active device is the target.
+ */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.skipUsersPlaybackToPreviousTrack({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get the User's Queue
+
+ * @request GET :/me/player/queue
+ * @readonly
+ */
+export async function getMeGetQueue(
+  headers?: hasuraSdk.JSONValue,
+): Promise<QueueObject> {
+  const result = await api.me.getQueue({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Add Item to Playback Queue
+
+ * @request POST :/me/player/queue
+ */
+export async function postMeAddToQueue(
+  query: {
+    /** The uri of the item to add to the queue. Must be a track or an episode uri.
+     */
+    uri: string;
+    /** The id of the device this command is targeting. If
+not supplied, the user's currently active device is the target.
+ */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.addToQueue({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Recently Played Tracks
+
+ * @request GET :/me/player/recently-played
+ * @readonly
+ */
+export async function getMeGetRecentlyPlayed(
+  query: {
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** A Unix timestamp in milliseconds. Returns all items
+after (but not including) this cursor position. If `after` is specified, `before`
+must not be specified.
+ */
+    after?: number;
+    /** A Unix timestamp in milliseconds. Returns all items
+before (but not including) this cursor position. If `before` is specified,
+`after` must not be specified.
+ */
+    before?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<CursorPagingPlayHistoryObject> {
+  const result = await api.me.getRecentlyPlayed({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Set Repeat Mode
+
+ * @request PUT :/me/player/repeat
+ */
+export async function putMeSetRepeatModeOnUsersPlayback(
+  query: {
+    /** **track**, **context** or **off**.<br/>
+     **track** will repeat the current track.<br/>
+     **context** will repeat the current context.<br/>
+     **off** will turn repeat off.
+     */
+    state: string;
+    /** The id of the device this command is targeting. If
+not supplied, the user's currently active device is the target.
+ */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.setRepeatModeOnUsersPlayback({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Seek To Position
+
+ * @request PUT :/me/player/seek
+ */
+export async function putMeSeekToPositionInCurrentlyPlayingTrack(
+  query: {
+    /** The position in milliseconds to seek to. Must be a
+positive number. Passing in a position that is greater than the length of
+the track will cause the player to start playing the next song.
+ */
+    position_ms: number;
+    /** The id of the device this command is targeting. If
+not supplied, the user's currently active device is the target.
+ */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.seekToPositionInCurrentlyPlayingTrack({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Toggle Playback Shuffle
+
+ * @request PUT :/me/player/shuffle
+ */
+export async function putMeToggleShuffleForUsersPlayback(
+  query: {
+    /** **true** : Shuffle user's playback.<br/>
+     **false** : Do not shuffle user's playback.
+     */
+    state: boolean;
+    /** The id of the device this command is targeting. If
+not supplied, the user's currently active device is the target.
+ */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.toggleShuffleForUsersPlayback({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Set Playback Volume
+
+ * @request PUT :/me/player/volume
+ */
+export async function putMeSetVolumeForUsersPlayback(
+  query: {
+    /** The volume to set. Must be a value from 0 to 100 inclusive.
+     */
+    volume_percent: number;
+    /** The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+     */
+    device_id?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.setVolumeForUsersPlayback({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Current User's Playlists
+
+ * @request GET :/me/playlists
+ * @readonly
+ */
+export async function getMeGetAListOfCurrentUsersPlaylists(
+  query: {
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** 'The index of the first playlist to return. Default:
+0 (the first object). Maximum offset: 100.000\. Use with `limit` to get the
+next set of playlists.'
+ */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingPlaylistObject> {
+  const result = await api.me.getAListOfCurrentUsersPlaylists({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Remove User's Saved Shows
+
+ * @request DELETE :/me/shows
+ */
+export async function deleteMeRemoveShowsUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+     */
+    ids: string;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.removeShowsUser({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Saved Shows
+
+ * @request GET :/me/shows
+ * @readonly
+ */
+export async function getMeGetUsersSavedShows(
+  query: {
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSavedShowObject> {
+  const result = await api.me.getUsersSavedShows({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Save Shows for Current User
+
+ * @request PUT :/me/shows
+ */
+export async function putMeSaveShowsUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.saveShowsUser({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check User's Saved Shows
+
+ * @request GET :/me/shows/contains
+ * @readonly
+ */
+export async function getMeCheckUsersSavedShows(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<boolean[]> {
+  const result = await api.me.checkUsersSavedShows({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Top Items
+
+ * @request GET :/me/top/{type}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getMeGetUsersTopArtistsAndTracks(
+  /** The type of entity to return. Valid values: `artists` or `tracks`
+   */
+  type: "artists" | "tracks",
+  query: {
+    /** Over what time frame the affinities are computed. Valid values: `long_term` (calculated from several years of data and including all new data as it becomes available), `medium_term` (approximately last 6 months), `short_term` (approximately last 4 weeks). Default: `medium_term`
+     */
+    time_range?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<
+  PagingObject & {
+    items?: (ArtistObject | TrackObject)[];
+  }
+> {
+  const result = await api.me.getUsersTopArtistsAndTracks({
+    type: type,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Remove User's Saved Tracks
+
+ * @request DELETE :/me/tracks
+ */
+export async function deleteMeRemoveTracksUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /** A JSON array of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"]`<br/>A maximum of 50 items can be specified in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._ */
+    ids?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.removeTracksUser({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Saved Tracks
+
+ * @request GET :/me/tracks
+ * @readonly
+ */
+export async function getMeGetUsersSavedTracks(
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSavedTrackObject> {
+  const result = await api.me.getUsersSavedTracks({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Save Tracks for Current User
+
+ * @request PUT :/me/tracks
+ */
+export async function putMeSaveTracksUser(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  /** Request body */
+  data: {
+    /** A JSON array of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"]`<br/>A maximum of 50 items can be specified in one request. _**Note**: if the `ids` parameter is present in the query string, any IDs listed here in the body will be ignored._ */
+    ids?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.me.saveTracksUser({
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check User's Saved Tracks
+
+ * @request GET :/me/tracks/contains
+ * @readonly
+ */
+export async function getMeCheckUsersSavedTracks(
+  query: {
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<boolean[]> {
+  const result = await api.me.checkUsersSavedTracks({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Playlist
+
+ * @request GET :/playlists/{playlist_id}
+ * @readonly
+ */
+export async function getPlaylistsGetPlaylist(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** Filters for the query: a comma-separated list of the
+fields to return. If omitted, all fields are returned. For example, to get
+just the playlist''s description and URI: `fields=description,uri`. A dot
+separator can be used to specify non-reoccurring fields, while parentheses
+can be used to specify reoccurring fields within objects. For example, to
+get just the added date and user ID of the adder: `fields=tracks.items(added_at,added_by.id)`.
+Use multiple parentheses to drill down into nested objects, for example: `fields=tracks.items(track(name,href,album(name,href)))`.
+Fields can be excluded by prefixing them with an exclamation mark, for example:
+`fields=tracks.items(track(name,href,album(!name,href)))`
+ */
+    fields?: string;
+    /** A comma-separated list of item types that your client supports besides the default `track` type. Valid types are: `track` and `episode`.<br/>
+_**Note**: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future._<br/>
+In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the `type` field of each object.
+ */
+    additional_types?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PlaylistObject> {
+  const result = await api.playlists.getPlaylist({
+    playlistId: playlistId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Change Playlist Details
+
+ * @request PUT :/playlists/{playlist_id}
+ */
+export async function putPlaylistsChangePlaylistDetails(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  /** Request body */
+  data: {
+    /**
+     * If `true`, the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. <br/>
+     * _**Note**: You can only set `collaborative` to `true` on non-public playlists._
+     */
+    collaborative?: boolean;
+    /** Value for playlist description as displayed in Spotify Clients and in the Web API. */
+    description?: string;
+    /** The new name for the playlist, for example `"My New Playlist Title"` */
+    name?: string;
+    /** If `true` the playlist will be public, if `false` it will be private. */
+    public?: boolean;
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.playlists.changePlaylistDetails({
+    playlistId: playlistId,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Unfollow Playlist
+
+ * @request DELETE :/playlists/{playlist_id}/followers
+ */
+export async function deletePlaylistsUnfollowPlaylist(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.playlists.unfollowPlaylist({
+    playlistId: playlistId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Follow Playlist
+
+ * @request PUT :/playlists/{playlist_id}/followers
+ */
+export async function putPlaylistsFollowPlaylist(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  /** Request body */
+  data: {
+    /** Defaults to `true`. If `true` the playlist will be included in user's public playlists, if `false` it will remain private. */
+    public?: boolean;
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.playlists.followPlaylist({
+    playlistId: playlistId,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check if Users Follow Playlist
+
+ * @request GET :/playlists/{playlist_id}/followers/contains
+ * @readonly
+ */
+export async function getPlaylistsCheckIfUserFollowsPlaylist(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  query: {
+    /** A comma-separated list of [Spotify User IDs](/documentation/web-api/#spotify-uris-and-ids) ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<boolean[]> {
+  const result = await api.playlists.checkIfUserFollowsPlaylist({
+    playlistId: playlistId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Playlist Cover Image
+
+ * @request GET :/playlists/{playlist_id}/images
+ * @readonly
+ */
+export async function getPlaylistsGetPlaylistCover(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<ImageObject[]> {
+  const result = await api.playlists.getPlaylistCover({
+    playlistId: playlistId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Add Custom Playlist Cover Image
+
+ * @request PUT :/playlists/{playlist_id}/images
+ */
+export async function putPlaylistsUploadCustomPlaylistCover(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.playlists.uploadCustomPlaylistCover({
+    playlistId: playlistId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Remove Playlist Items
+
+ * @request DELETE :/playlists/{playlist_id}/tracks
+ */
+export async function deletePlaylistsRemoveTracksPlaylist(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  /** Request body */
+  data: {
+    /**
+     * The playlist's snapshot ID against which you want to make the changes.
+     * The API will validate that the specified items exist and in the specified positions and make the changes,
+     * even if more recent changes have been made to the playlist.
+     */
+    snapshot_id?: string;
+    /**
+     * An array of objects containing [Spotify URIs](https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids) of the tracks or episodes to remove.
+     * For example: `{ "tracks": [{ "uri": "spotify:track:4iV5W9uYEdYUVa79Axb7Rh" },{ "uri": "spotify:track:1301WleyT98MSxVHPZCA6M" }] }`. A maximum of 100 objects can be sent at once.
+     */
+    tracks: {
+      /** Spotify URI */
+      uri?: string;
+    }[];
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  /** @example "abc" */
+  snapshot_id?: string;
+}> {
+  const result = await api.playlists.removeTracksPlaylist({
+    playlistId: playlistId,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Playlist Items
+
+ * @request GET :/playlists/{playlist_id}/tracks
+ * @readonly
+ */
+export async function getPlaylistsGetPlaylistsTracks(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** Filters for the query: a comma-separated list of the
+fields to return. If omitted, all fields are returned. For example, to get
+just the total number of items and the request limit:<br/>`fields=total,limit`<br/>A
+dot separator can be used to specify non-reoccurring fields, while parentheses
+can be used to specify reoccurring fields within objects. For example, to
+get just the added date and user ID of the adder:<br/>`fields=items(added_at,added_by.id)`<br/>Use
+multiple parentheses to drill down into nested objects, for example:<br/>`fields=items(track(name,href,album(name,href)))`<br/>Fields
+can be excluded by prefixing them with an exclamation mark, for example:<br/>`fields=items.track.album(!external_urls,images)`
+ */
+    fields?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+    /** A comma-separated list of item types that your client supports besides the default `track` type. Valid types are: `track` and `episode`.<br/>
+_**Note**: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future._<br/>
+In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the `type` field of each object.
+ */
+    additional_types?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingPlaylistTrackObject> {
+  const result = await api.playlists.getPlaylistsTracks({
+    playlistId: playlistId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Add Items to Playlist
+
+ * @request POST :/playlists/{playlist_id}/tracks
+ */
+export async function postPlaylistsAddTracksToPlaylist(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  query: {
+    /** The position to insert the items, a zero-based index. For example, to insert the items in the first position: `position=0`; to insert the items in the third position: `position=2`. If omitted, the items will be appended to the playlist. Items are added in the order they are listed in the query string or request body.
+     */
+    position?: number;
+    /** A comma-separated list of [Spotify URIs](/documentation/web-api/#spotify-uris-and-ids) to add, can be track or episode URIs. For example:<br/>`uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:track:1301WleyT98MSxVHPZCA6M, spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be added in one request. <br/>
+_**Note**: it is likely that passing a large number of item URIs as a query parameter will exceed the maximum length of the request URI. When adding a large number of items, it is recommended to pass them in the request body, see below._
+ */
+    uris?: string;
+  },
+  /** Request body */
+  data: {
+    /** The position to insert the items, a zero-based index. For example, to insert the items in the first position: `position=0` ; to insert the items in the third position: `position=2`. If omitted, the items will be appended to the playlist. Items are added in the order they appear in the uris array. For example: `{"uris": ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh","spotify:track:1301WleyT98MSxVHPZCA6M"], "position": 3}` */
+    position?: number;
+    /** A JSON array of the [Spotify URIs](/documentation/web-api/#spotify-uris-and-ids) to add. For example: `{"uris": ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh","spotify:track:1301WleyT98MSxVHPZCA6M", "spotify:episode:512ojhOuo1ktJprKbVcKyQ"]}`<br/>A maximum of 100 items can be added in one request. _**Note**: if the `uris` parameter is present in the query string, any URIs listed here in the body will be ignored._ */
+    uris?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  /** @example "abc" */
+  snapshot_id?: string;
+}> {
+  const result = await api.playlists.addTracksToPlaylist({
+    playlistId: playlistId,
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Update Playlist Items
+
+ * @request PUT :/playlists/{playlist_id}/tracks
+ */
+export async function putPlaylistsReorderOrReplacePlaylistsTracks(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+   */
+  playlistId: string,
+  query: {
+    /** A comma-separated list of [Spotify URIs](/documentation/web-api/#spotify-uris-and-ids) to set, can be track or episode URIs. For example: `uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M,spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be set in one request.
+     */
+    uris?: string;
+  },
+  /** Request body */
+  data: {
+    /** The position where the items should be inserted.<br/>To reorder the items to the end of the playlist, simply set _insert_before_ to the position after the last item.<br/>Examples:<br/>To reorder the first item to the last position in a playlist with 10 items, set _range_start_ to 0, and _insert_before_ to 10.<br/>To reorder the last item in a playlist with 10 items to the start of the playlist, set _range_start_ to 9, and _insert_before_ to 0. */
+    insert_before?: number;
+    /** The amount of items to be reordered. Defaults to 1 if not set.<br/>The range of items to be reordered begins from the _range_start_ position, and includes the _range_length_ subsequent items.<br/>Example:<br/>To move the items at index 9-10 to the start of the playlist, _range_start_ is set to 9, and _range_length_ is set to 2. */
+    range_length?: number;
+    /** The position of the first item to be reordered. */
+    range_start?: number;
+    /** The playlist's snapshot ID against which you want to make the changes. */
+    snapshot_id?: string;
+    uris?: string[];
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  /** @example "abc" */
+  snapshot_id?: string;
+}> {
+  const result = await api.playlists.reorderOrReplacePlaylistsTracks({
+    playlistId: playlistId,
+    query: query,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Recommendations
+
+ * @request GET :/recommendations
+ * @readonly
+ */
+export async function getRecommendationsGetRecommendations(
+  query: {
+    /** The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. Debugging information for such cases is available in the response. Default: 20\. Minimum: 1\. Maximum: 100.
+     */
+    limit?: number;
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** A comma separated list of [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for seed artists.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
+     */
+    seed_artists: string;
+    /** A comma separated list of any genres in the set of [available genre seeds](#available-genre-seeds).  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
+     */
+    seed_genres: string;
+    /** A comma separated list of [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for a seed track.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
+     */
+    seed_tracks: string;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_acousticness?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_acousticness?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_acousticness?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_danceability?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_danceability?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_danceability?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_duration_ms?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_duration_ms?: number;
+    /** Target duration of the track (ms) */
+    target_duration_ms?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_energy?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_energy?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_energy?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_instrumentalness?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_instrumentalness?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_instrumentalness?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_key?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_key?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_key?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_liveness?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_liveness?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_liveness?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_loudness?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_loudness?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_loudness?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_mode?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_mode?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_mode?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_popularity?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_popularity?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_popularity?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_speechiness?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_speechiness?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_speechiness?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_tempo?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_tempo?: number;
+    /** Target tempo (BPM) */
+    target_tempo?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_time_signature?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_time_signature?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_time_signature?: number;
+    /** For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
+     */
+    min_valence?: number;
+    /** For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
+     */
+    max_valence?: number;
+    /** For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
+     */
+    target_valence?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<RecommendationsObject> {
+  const result = await api.recommendations.getRecommendations({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Available Genre Seeds
+
+ * @request GET :/recommendations/available-genre-seeds
+ * @readonly
+ */
+export async function getRecommendationsGetRecommendationGenres(
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  /** @example ["alternative","samba"] */
+  genres: string[];
+}> {
+  const result = await api.recommendations.getRecommendationGenres({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Search for Item
+
+ * @request GET :/search
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getSearchSearch(
+  query: {
+    /** Your search query.
+
+You can narrow down your search using field filters. The available filters are `album`, `artist`, `track`, `year`, `upc`, `tag:hipster`, `tag:new`, `isrc`, and `genre`. Each field filter only applies to certain result types.
+
+The `artist` and `year` filters can be used while searching albums, artists and tracks. You can filter on a single `year` or a range (e.g. 1955-1960).<br />
+The `album` filter can be used while searching albums and tracks.<br />
+The `genre` filter can be used while searching artists and tracks.<br />
+The `isrc` and `track` filters can be used while searching tracks.<br />
+The `upc`, `tag:new` and `tag:hipster` filters can only be used while searching albums. The `tag:new` filter will return albums released in the past two weeks and `tag:hipster` can be used to return only albums with the lowest 10% popularity.<br />
+ */
+    q: string;
+    /** A comma-separated list of item types to search across. Search results include hits
+from all the specified item types. For example: `q=abacab&type=album,track` returns
+both albums and tracks matching "abacab".
+ */
+    type: (
+      | "album"
+      | "artist"
+      | "playlist"
+      | "track"
+      | "show"
+      | "episode"
+      | "audiobook"
+    )[];
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** The maximum number of results to return in each item type.
+     */
+    limit?: number;
+    /** The index of the first result to return. Use
+with limit to get the next page of search results.
+ */
+    offset?: number;
+    /** If `include_external=audio` is specified it signals that the client can play externally hosted audio content, and marks
+the content as playable in the response. By default externally hosted audio content is marked as unplayable in the response.
+ */
+    include_external?: "audio";
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  albums?: PagingSimplifiedAlbumObject;
+  artists?: PagingArtistObject;
+  audiobooks?: PagingSimplifiedAudiobookObject;
+  episodes?: PagingSimplifiedEpisodeObject;
+  playlists?: PagingPlaylistObject;
+  shows?: PagingSimplifiedShowObject;
+  tracks?: PagingTrackObject;
+}> {
+  const result = await api.search.search({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Several Shows
+
+ * @request GET :/shows
+ * @readonly
+ */
+export async function getShowsGetMultipleShows(
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  shows: SimplifiedShowObject[];
+}> {
+  const result = await api.shows.getMultipleShows({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Show
+
+ * @request GET :/shows/{id}
+ * @readonly
+ */
+export async function getShowsGetAShow(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids)
+for the show.
+ */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<ShowObject> {
+  const result = await api.shows.getAShow({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Show Episodes
+
+ * @request GET :/shows/{id}/episodes
+ * @readonly
+ */
+export async function getShowsGetAShowsEpisodes(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids)
+for the show.
+ */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+     */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingSimplifiedEpisodeObject> {
+  const result = await api.shows.getAShowsEpisodes({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Several Tracks
+
+ * @request GET :/tracks
+ * @readonly
+ */
+export async function getTracksGetSeveralTracks(
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+    /** A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+     */
+    ids: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  tracks: TrackObject[];
+}> {
+  const result = await api.tracks.getSeveralTracks({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Track
+
+ * @request GET :/tracks/{id}
+ * @readonly
+ */
+export async function getTracksGetTrack(
+  /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids)
+for the track.
+ */
+  id: string,
+  query: {
+    /** An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+  If a country code is specified, only content that is available in that market will be returned.<br/>
+  If a valid user access token is specified in the request header, the country associated with
+  the user account will take priority over this parameter.<br/>
+  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>
+  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
+ */
+    market?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<TrackObject> {
+  const result = await api.tracks.getTrack({
+    id: id,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Profile
+
+ * @request GET :/users/{user_id}
+ * @readonly
+ */
+export async function getUsersGetUsersProfile(
+  /** The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+   */
+  userId: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<PublicUserObject> {
+  const result = await api.users.getUsersProfile({
+    userId: userId,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get User's Playlists
+
+ * @request GET :/users/{user_id}/playlists
+ * @readonly
+ */
+export async function getUsersGetListUsersPlaylists(
+  /** The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+   */
+  userId: string,
+  query: {
+    /** The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+     */
+    limit?: number;
+    /** The index of the first playlist to return. Default:
+0 (the first object). Maximum offset: 100.000\. Use with `limit` to get the
+next set of playlists.
+ */
+    offset?: number;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PagingPlaylistObject> {
+  const result = await api.users.getListUsersPlaylists({
+    userId: userId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Create Playlist
+
+ * @request POST :/users/{user_id}/playlists
+ */
+export async function postUsersCreatePlaylist(
+  /** The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+   */
+  userId: string,
+  /** Request body */
+  data: {
+    /** Defaults to `false`. If `true` the playlist will be collaborative. _**Note**: to create a collaborative playlist you must also set `public` to `false`. To create collaborative playlists you must have granted `playlist-modify-private` and `playlist-modify-public` [scopes](/documentation/general/guides/authorization-guide/#list-of-scopes)._ */
+    collaborative?: boolean;
+    /** value for playlist description as displayed in Spotify Clients and in the Web API. */
+    description?: string;
+    /** The name for the new playlist, for example `"Your Coolest Playlist"`. This name does not need to be unique; a user may have several playlists with the same name. */
+    name: string;
+    /** Defaults to `true`. If `true` the playlist will be public, if `false` it will be private. To be able to create private playlists, the user must have granted the `playlist-modify-private` [scope](/documentation/general/guides/authorization-guide/#list-of-scopes) */
+    public?: boolean;
+    [key: string]: any;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<PlaylistObject> {
+  const result = await api.users.createPlaylist({
+    userId: userId,
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

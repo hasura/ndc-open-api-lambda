@@ -1,5 +1,5 @@
-import * as parserTypes from "./types";
-import * as generatorTypes from "../../generator/types";
+import * as parserTypes from "./schema-types";
+import * as generatorTypes from "../../generator/api-ts-generator";
 import * as logger from "../../../util/logger";
 
 export function getParsedSchemaStore(

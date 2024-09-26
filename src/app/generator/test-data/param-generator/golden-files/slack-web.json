@@ -34,7 +34,7 @@
   "get__/admin.apps.approved.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.apps:read` */\n token: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string,  team_id?: string,  enterprise_id?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.apps:read` */\n token: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string,  team_id?: string,  enterprise_id?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -78,7 +78,7 @@
   "get__/admin.apps.requests.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.apps:read` */\n token: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string,  team_id?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.apps:read` */\n token: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string,  team_id?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -150,7 +150,7 @@
   "get__/admin.apps.restricted.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.apps:read` */\n token: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string,  team_id?: string,  enterprise_id?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.apps:read` */\n token: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string,  team_id?: string,  enterprise_id?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -354,7 +354,7 @@
   "get__/admin.conversations.ekm.listOriginalConnectedChannelInfo": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.conversations:read` */\n token: string, \n/** A comma-separated list of channels to filter to. */\n channel_ids?: string, \n/** A comma-separated list of the workspaces to which the channels you would like returned belong. */\n team_ids?: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.conversations:read` */\n token: string, \n/** A comma-separated list of channels to filter to. */\n channel_ids?: string, \n/** A comma-separated list of the workspaces to which the channels you would like returned belong. */\n team_ids?: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -398,7 +398,7 @@
   "get__/admin.conversations.getConversationPrefs": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The channel to get preferences for. */\n channel_id: string, },",
+        "rendered": " query: { \n/** The channel to get preferences for. */\n channel_id: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.channel_id": {
@@ -438,7 +438,7 @@
   "get__/admin.conversations.getTeams": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The channel to determine connected workspaces within the organization for. */\n channel_id: string, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, },",
+        "rendered": " query: { \n/** The channel to determine connected workspaces within the organization for. */\n channel_id: string, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.channel_id": {
@@ -574,7 +574,7 @@
   "get__/admin.conversations.restrictAccess.listGroups": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.conversations:read` */\n token: string,  channel_id: string, \n/** The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization. */\n team_id?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.conversations:read` */\n token: string,  channel_id: string, \n/** The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization. */\n team_id?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -858,7 +858,7 @@
   "get__/admin.emoji.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.teams:read` */\n token: string, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.teams:read` */\n token: string, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page */\n cursor?: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -1122,7 +1122,7 @@
   "get__/admin.teams.admins.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.teams:read` */\n token: string, \n/** The maximum number of items to return. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string,  team_id: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.teams:read` */\n token: string, \n/** The maximum number of items to return. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string,  team_id: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -1226,7 +1226,7 @@
   "get__/admin.teams.owners.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin.teams:read` */\n token: string,  team_id: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin.teams:read` */\n token: string,  team_id: string, \n/** The maximum number of items to return. Must be between 1 - 1000 both inclusive. */\n limit?: number, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -1266,7 +1266,7 @@
   "get__/admin.teams.settings.info": {
     "query": {
       ".query": {
-        "rendered": " query?: {  team_id: string, },",
+        "rendered": " query: {  team_id: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.team_id": {
@@ -1518,7 +1518,7 @@
   "get__/admin.usergroups.listChannels": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** ID of the IDP group to list default channels for. */\n usergroup_id: string, \n/** ID of the the workspace. */\n team_id?: string, \n/** Flag to include or exclude the count of members per channel. */\n include_num_members?: boolean, },",
+        "rendered": " query: { \n/** ID of the IDP group to list default channels for. */\n usergroup_id: string, \n/** ID of the the workspace. */\n team_id?: string, \n/** Flag to include or exclude the count of members per channel. */\n include_num_members?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.usergroup_id": {
@@ -1650,7 +1650,7 @@
   "get__/admin.users.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The ID (`T1234`) of the workspace. */\n team_id: string, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string, \n/** Limit for how many users to be retrieved per page */\n limit?: number, },",
+        "rendered": " query: { \n/** The ID (`T1234`) of the workspace. */\n team_id: string, \n/** Set `cursor` to `next_cursor` returned by the previous call to list items in the next page. */\n cursor?: string, \n/** Limit for how many users to be retrieved per page */\n limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.team_id": {
@@ -1942,7 +1942,7 @@
   "get__/apps.event.authorizations.list": {
     "query": {
       ".query": {
-        "rendered": " query?: {  event_context: string,  cursor?: string,  limit?: number, },",
+        "rendered": " query: {  event_context: string,  cursor?: string,  limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.event_context": {
@@ -2014,7 +2014,7 @@
   "get__/apps.permissions.request": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** A comma separated list of scopes to request for */\n scopes: string, \n/** Token used to trigger the permissions API */\n trigger_id: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** A comma separated list of scopes to request for */\n scopes: string, \n/** Token used to trigger the permissions API */\n trigger_id: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -2050,7 +2050,7 @@
   "get__/apps.permissions.resources.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail. */\n cursor?: string, \n/** The maximum number of items to return. */\n limit?: number, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail. */\n cursor?: string, \n/** The maximum number of items to return. */\n limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -2094,7 +2094,7 @@
   "get__/apps.permissions.scopes.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `none` */\n token: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `none` */\n token: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -2126,7 +2126,7 @@
   "get__/apps.permissions.users.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail. */\n cursor?: string, \n/** The maximum number of items to return. */\n limit?: number, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail. */\n cursor?: string, \n/** The maximum number of items to return. */\n limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -2162,7 +2162,7 @@
   "get__/apps.permissions.users.request": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** A comma separated list of user scopes to request for */\n scopes: string, \n/** Token used to trigger the request */\n trigger_id: string, \n/** The user this scope is being requested for */\n user: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** A comma separated list of user scopes to request for */\n scopes: string, \n/** Token used to trigger the request */\n trigger_id: string, \n/** The user this scope is being requested for */\n user: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -2238,7 +2238,7 @@
   "get__/auth.revoke": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** Setting this parameter to `1` triggers a _testing mode_ where the specified token will not actually be revoked. */\n test?: boolean, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** Setting this parameter to `1` triggers a _testing mode_ where the specified token will not actually be revoked. */\n test?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -2289,7 +2289,7 @@
   "get__/bots.info": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `users:read` */\n token: string, \n/** Bot user to get info on */\n bot?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `users:read` */\n token: string, \n/** Bot user to get info on */\n bot?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -2393,7 +2393,7 @@
   "get__/calls.info": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** `id` of the Call returned by the [`calls.add`](/methods/calls.add) method. */\n id: string, },",
+        "rendered": " query: { \n/** `id` of the Call returned by the [`calls.add`](/methods/calls.add) method. */\n id: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.id": {
@@ -2581,7 +2581,7 @@
   "get__/chat.getPermalink": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** The ID of the conversation or channel containing the message */\n channel: string, \n/** A message's `ts` value, uniquely identifying it within a channel */\n message_ts: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `none` */\n token: string, \n/** The ID of the conversation or channel containing the message */\n channel: string, \n/** A message's `ts` value, uniquely identifying it within a channel */\n message_ts: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -3553,7 +3553,7 @@
   "get__/dialog.open": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The dialog definition. This must be a JSON-encoded string. */\n dialog: string, \n/** Exchange a trigger to post to the user. */\n trigger_id: string, },",
+        "rendered": " query: { \n/** The dialog definition. This must be a JSON-encoded string. */\n dialog: string, \n/** Exchange a trigger to post to the user. */\n trigger_id: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.dialog": {
@@ -3719,7 +3719,7 @@
   "get__/emoji.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `emoji:read` */\n token: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `emoji:read` */\n token: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -4239,7 +4239,7 @@
   "get__/migration.exchange": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `tokens.basic` */\n token: string, \n/** A comma-separated list of user ids, up to 400 per request */\n users: string, \n/** Specify team_id starts with `T` in case of Org Token */\n team_id?: string, \n/** Specify `true` to convert `W` global user IDs to workspace-specific `U` IDs. Defaults to `false`. */\n to_old?: boolean, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `tokens.basic` */\n token: string, \n/** A comma-separated list of user ids, up to 400 per request */\n users: string, \n/** Specify team_id starts with `T` in case of Org Token */\n team_id?: string, \n/** Specify `true` to convert `W` global user IDs to workspace-specific `U` IDs. Defaults to `false`. */\n to_old?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -4371,7 +4371,7 @@
   "get__/oauth.v2.access": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Issued when you created your application. */\n client_id?: string, \n/** Issued when you created your application. */\n client_secret?: string, \n/** The `code` param returned via the OAuth callback. */\n code: string, \n/** This must match the originally submitted URI (if one was sent). */\n redirect_uri?: string, },",
+        "rendered": " query: { \n/** Issued when you created your application. */\n client_id?: string, \n/** Issued when you created your application. */\n client_secret?: string, \n/** The `code` param returned via the OAuth callback. */\n code: string, \n/** This must match the originally submitted URI (if one was sent). */\n redirect_uri?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.client_id": {
@@ -4443,7 +4443,7 @@
   "get__/pins.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `pins:read` */\n token: string, \n/** Channel to get pinned items for. */\n channel: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `pins:read` */\n token: string, \n/** Channel to get pinned items for. */\n channel: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -4535,7 +4535,7 @@
   "get__/reactions.get": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `reactions:read` */\n token: string, \n/** Channel where the message to get reactions for was posted. */\n channel?: string, \n/** File to get reactions for. */\n file?: string, \n/** File comment to get reactions for. */\n file_comment?: string, \n/** If true always return the complete reaction list. */\n full?: boolean, \n/** Timestamp of the message to get reactions for. */\n timestamp?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `reactions:read` */\n token: string, \n/** Channel where the message to get reactions for was posted. */\n channel?: string, \n/** File to get reactions for. */\n file?: string, \n/** File comment to get reactions for. */\n file_comment?: string, \n/** If true always return the complete reaction list. */\n full?: boolean, \n/** Timestamp of the message to get reactions for. */\n timestamp?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -4579,7 +4579,7 @@
   "get__/reactions.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `reactions:read` */\n token: string, \n/** Show reactions made by this user. Defaults to the authed user. */\n user?: string, \n/** If true always return the complete reaction list. */\n full?: boolean,  count?: number,  page?: number, \n/** Parameter for pagination. Set `cursor` equal to the `next_cursor` attribute returned by the previous request's `response_metadata`. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more details. */\n cursor?: string, \n/** The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. */\n limit?: number, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `reactions:read` */\n token: string, \n/** Show reactions made by this user. Defaults to the authed user. */\n user?: string, \n/** If true always return the complete reaction list. */\n full?: boolean,  count?: number,  page?: number, \n/** Parameter for pagination. Set `cursor` equal to the `next_cursor` attribute returned by the previous request's `response_metadata`. This parameter is optional, but pagination is mandatory: the default value simply fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more details. */\n cursor?: string, \n/** The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. */\n limit?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -4831,7 +4831,7 @@
   "get__/rtm.connect": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `rtm:stream` */\n token: string, \n/** Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/docs/presence-and-status#batching). */\n batch_presence_aware?: boolean, \n/** Only deliver presence events when requested by subscription. See [presence subscriptions](/docs/presence-and-status#subscriptions). */\n presence_sub?: boolean, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `rtm:stream` */\n token: string, \n/** Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/docs/presence-and-status#batching). */\n batch_presence_aware?: boolean, \n/** Only deliver presence events when requested by subscription. See [presence subscriptions](/docs/presence-and-status#subscriptions). */\n presence_sub?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -4871,7 +4871,7 @@
   "get__/search.messages": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `search:read` */\n token: string, \n/** Pass the number of results you want per \"page\". Maximum of `100`. */\n count?: number, \n/** Pass a value of `true` to enable query highlight markers (see below). */\n highlight?: boolean,  page?: number, \n/** Search query. */\n query: string, \n/** Return matches sorted by either `score` or `timestamp`. */\n sort?: string, \n/** Change sort direction to ascending (`asc`) or descending (`desc`). */\n sort_dir?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `search:read` */\n token: string, \n/** Pass the number of results you want per \"page\". Maximum of `100`. */\n count?: number, \n/** Pass a value of `true` to enable query highlight markers (see below). */\n highlight?: boolean,  page?: number, \n/** Search query. */\n query: string, \n/** Return matches sorted by either `score` or `timestamp`. */\n sort?: string, \n/** Change sort direction to ascending (`asc`) or descending (`desc`). */\n sort_dir?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5039,7 +5039,7 @@
   "get__/team.accessLogs": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin` */\n token: string, \n/** End of time range of logs to include in results (inclusive). */\n before?: string,  count?: string,  page?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin` */\n token: string, \n/** End of time range of logs to include in results (inclusive). */\n before?: string,  count?: string,  page?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5087,7 +5087,7 @@
   "get__/team.billableInfo": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin` */\n token: string, \n/** A user to retrieve the billable information for. Defaults to all users. */\n user?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin` */\n token: string, \n/** A user to retrieve the billable information for. Defaults to all users. */\n user?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5119,7 +5119,7 @@
   "get__/team.info": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `team:read` */\n token: string, \n/** Team to get info on, if omitted, will return information about the current team. Will only return team that the authenticated token is allowed to see through external shared channels */\n team?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `team:read` */\n token: string, \n/** Team to get info on, if omitted, will return information about the current team. Will only return team that the authenticated token is allowed to see through external shared channels */\n team?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5151,7 +5151,7 @@
   "get__/team.integrationLogs": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `admin` */\n token: string, \n/** Filter logs to this Slack app. Defaults to all logs. */\n app_id?: string, \n/** Filter logs with this change type. Defaults to all logs. */\n change_type?: string,  count?: string,  page?: string, \n/** Filter logs to this service. Defaults to all logs. */\n service_id?: string, \n/** Filter logs generated by this user’s actions. Defaults to all logs. */\n user?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `admin` */\n token: string, \n/** Filter logs to this Slack app. Defaults to all logs. */\n app_id?: string, \n/** Filter logs with this change type. Defaults to all logs. */\n change_type?: string,  count?: string,  page?: string, \n/** Filter logs to this service. Defaults to all logs. */\n service_id?: string, \n/** Filter logs generated by this user’s actions. Defaults to all logs. */\n user?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5211,7 +5211,7 @@
   "get__/team.profile.get": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `users.profile:read` */\n token: string, \n/** Filter by visibility. */\n visibility?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `users.profile:read` */\n token: string, \n/** Filter by visibility. */\n visibility?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5347,7 +5347,7 @@
   "get__/usergroups.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Include the list of users for each User Group. */\n include_users?: boolean, \n/** Authentication token. Requires scope: `usergroups:read` */\n token: string, \n/** Include the number of users in each User Group. */\n include_count?: boolean, \n/** Include disabled User Groups. */\n include_disabled?: boolean, },",
+        "rendered": " query: { \n/** Include the list of users for each User Group. */\n include_users?: boolean, \n/** Authentication token. Requires scope: `usergroups:read` */\n token: string, \n/** Include the number of users in each User Group. */\n include_count?: boolean, \n/** Include disabled User Groups. */\n include_disabled?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.include_users": {
@@ -5423,7 +5423,7 @@
   "get__/usergroups.users.list": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `usergroups:read` */\n token: string, \n/** Allow results that involve disabled User Groups. */\n include_disabled?: boolean, \n/** The encoded ID of the User Group to update. */\n usergroup: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `usergroups:read` */\n token: string, \n/** Allow results that involve disabled User Groups. */\n include_disabled?: boolean, \n/** The encoded ID of the User Group to update. */\n usergroup: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5579,7 +5579,7 @@
   "get__/users.getPresence": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `users:read` */\n token: string, \n/** User to get presence info on. Defaults to the authed user. */\n user?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `users:read` */\n token: string, \n/** User to get presence info on. Defaults to the authed user. */\n user?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5635,7 +5635,7 @@
   "get__/users.info": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `users:read` */\n token: string, \n/** Set this to `true` to receive the locale for this user. Defaults to `false` */\n include_locale?: boolean, \n/** User to get info on */\n user?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `users:read` */\n token: string, \n/** Set this to `true` to receive the locale for this user. Defaults to `false` */\n include_locale?: boolean, \n/** User to get info on */\n user?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5715,7 +5715,7 @@
   "get__/users.lookupByEmail": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `users:read.email` */\n token: string, \n/** An email address belonging to a user in the workspace */\n email: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `users:read.email` */\n token: string, \n/** An email address belonging to a user in the workspace */\n email: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5747,7 +5747,7 @@
   "get__/users.profile.get": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Authentication token. Requires scope: `users.profile:read` */\n token: string, \n/** Include labels for each ID in custom profile fields */\n include_labels?: boolean, \n/** User to retrieve profile info for */\n user?: string, },",
+        "rendered": " query: { \n/** Authentication token. Requires scope: `users.profile:read` */\n token: string, \n/** Include labels for each ID in custom profile fields */\n include_labels?: boolean, \n/** User to retrieve profile info for */\n user?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.token": {
@@ -5902,7 +5902,7 @@
   "get__/views.open": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Exchange a trigger to post to the user. */\n trigger_id: string, \n/** A [view payload](/reference/surfaces/views). This must be a JSON-encoded string. */\n view: string, },",
+        "rendered": " query: { \n/** Exchange a trigger to post to the user. */\n trigger_id: string, \n/** A [view payload](/reference/surfaces/views). This must be a JSON-encoded string. */\n view: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.trigger_id": {
@@ -5934,7 +5934,7 @@
   "get__/views.publish": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** `id` of the user you want publish a view to. */\n user_id: string, \n/** A [view payload](/reference/surfaces/views). This must be a JSON-encoded string. */\n view: string, \n/** A string that represents view state to protect against possible race conditions. */\n hash?: string, },",
+        "rendered": " query: { \n/** `id` of the user you want publish a view to. */\n user_id: string, \n/** A [view payload](/reference/surfaces/views). This must be a JSON-encoded string. */\n view: string, \n/** A string that represents view state to protect against possible race conditions. */\n hash?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.user_id": {
@@ -5970,7 +5970,7 @@
   "get__/views.push": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Exchange a trigger to post to the user. */\n trigger_id: string, \n/** A [view payload](/reference/surfaces/views). This must be a JSON-encoded string. */\n view: string, },",
+        "rendered": " query: { \n/** Exchange a trigger to post to the user. */\n trigger_id: string, \n/** A [view payload](/reference/surfaces/views). This must be a JSON-encoded string. */\n view: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.trigger_id": {
@@ -6042,7 +6042,7 @@
   "get__/workflows.stepCompleted": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Context identifier that maps to the correct workflow step execution. */\n workflow_step_execute_id: string, \n/** Key-value object of outputs from your step. Keys of this object reflect the configured `key` properties of your [`outputs`](/reference/workflows/workflow_step#output) array from your `workflow_step` object. */\n outputs?: string, },",
+        "rendered": " query: { \n/** Context identifier that maps to the correct workflow step execution. */\n workflow_step_execute_id: string, \n/** Key-value object of outputs from your step. Keys of this object reflect the configured `key` properties of your [`outputs`](/reference/workflows/workflow_step#output) array from your `workflow_step` object. */\n outputs?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.workflow_step_execute_id": {
@@ -6074,7 +6074,7 @@
   "get__/workflows.stepFailed": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Context identifier that maps to the correct workflow step execution. */\n workflow_step_execute_id: string, \n/** A JSON-based object with a `message` property that should contain a human readable error message. */\n error: string, },",
+        "rendered": " query: { \n/** Context identifier that maps to the correct workflow step execution. */\n workflow_step_execute_id: string, \n/** A JSON-based object with a `message` property that should contain a human readable error message. */\n error: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.workflow_step_execute_id": {
@@ -6106,7 +6106,7 @@
   "get__/workflows.updateStep": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A context identifier provided with `view_submission` payloads used to call back to `workflows.updateStep`. */\n workflow_step_edit_id: string, \n/** A JSON key-value map of inputs required from a user during configuration. This is the data your app expects to receive when the workflow step starts. **Please note**: the embedded variable format is set and replaced by the workflow system. You cannot create custom variables that will be replaced at runtime. [Read more about variables in workflow steps here](/workflows/steps#variables). */\n inputs?: string, \n/** An JSON array of output objects used during step execution. This is the data your app agrees to provide when your workflow step was executed. */\n outputs?: string, \n/** An optional field that can be used to override the step name that is shown in the Workflow Builder. */\n step_name?: string, \n/** An optional field that can be used to override app image that is shown in the Workflow Builder. */\n step_image_url?: string, },",
+        "rendered": " query: { \n/** A context identifier provided with `view_submission` payloads used to call back to `workflows.updateStep`. */\n workflow_step_edit_id: string, \n/** A JSON key-value map of inputs required from a user during configuration. This is the data your app expects to receive when the workflow step starts. **Please note**: the embedded variable format is set and replaced by the workflow system. You cannot create custom variables that will be replaced at runtime. [Read more about variables in workflow steps here](/workflows/steps#variables). */\n inputs?: string, \n/** An JSON array of output objects used during step execution. This is the data your app agrees to provide when your workflow step was executed. */\n outputs?: string, \n/** An optional field that can be used to override the step name that is shown in the Workflow Builder. */\n step_name?: string, \n/** An optional field that can be used to override app image that is shown in the Workflow Builder. */\n step_image_url?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.workflow_step_edit_id": {

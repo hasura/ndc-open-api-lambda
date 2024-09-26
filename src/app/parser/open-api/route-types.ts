@@ -1,7 +1,17 @@
 import * as swaggerTypescriptApi from "swagger-typescript-api";
-import * as schemaTypes from "./types";
+import * as schemaTypes from "./schema-types";
 import * as paramTypes from "./param-types";
 import * as logger from "../../../util/logger";
+import * as paramGenerator from "../../generator/param-generator";
+import { ParsedSchemaStore } from "./schema-parser";
+
+enum RequestType {
+  Get = "get",
+  Post = "post",
+  Put = "put",
+  Delete = "delete",
+  Patch = "patch",
+}
 
 export type ApiRoute = swaggerTypescriptApi.ParsedRoute & {
   headersObjectSchema: Headers | undefined;
@@ -73,9 +83,74 @@ export function getBasicCharacteristics(
   };
 }
 
+export function getNamespace(route: ApiRoute): string {
+  return route.namespace;
+}
+
+/**
+ * @returns the function name for this API in `api.ts` file
+ */
+export function getApiTsFunctionName(route: ApiRoute): string {
+  return route.routeName.usage;
+}
+
+export function getDescription(route: ApiRoute): string | undefined {
+  return route.raw.summary;
+}
+
+export function isGetRequest(route: ApiRoute): boolean {
+  return route.raw.method === RequestType.Get;
+}
+
+export function isPostRequest(route: ApiRoute): boolean {
+  return route.raw.method === RequestType.Post;
+}
+
+export function isPutRequest(route: ApiRoute): boolean {
+  return route.raw.method === RequestType.Put;
+}
+
+export function isDeleteRequest(route: ApiRoute): boolean {
+  return route.raw.method === RequestType.Delete;
+}
+
+export function isPatchRequest(route: ApiRoute): boolean {
+  return route.raw.method === RequestType.Patch;
+}
+
+export function getRequestMethod(route: ApiRoute): string {
+  return route.raw.method;
+}
+
+export function getApiPath(route: ApiRoute): string {
+  return route.raw.route;
+}
+
 export function getFormattedRouteName(route: ApiRoute): string {
   const basicChars = getBasicCharacteristics(route);
   return `${basicChars.method.toUpperCase()} :${basicChars.route}`;
+}
+
+export function getAllParams(route: ApiRoute): paramTypes.Schema[] {
+  const allParams: paramTypes.Schema[] = [
+    ...(hasPathParams(route) ? getPathParams(route)! : []),
+    ...(hasQueryParams(route) ? [getQueryParams(route)!] : []),
+    ...(hasRequestBody(route) ? [getRequestBody(route)!] : []),
+  ];
+
+  // sort by required params before returning
+  return allParams.sort((a, b) => (b.required ? 1 : 0) - (a.required ? 1 : 0));
+}
+
+export function getAllParamsRendered(
+  route: ApiRoute,
+  schemaStore: ParsedSchemaStore,
+): paramTypes.Schema[] {
+  const allParams = getAllParams(route);
+  for (let param of allParams) {
+    paramGenerator.renderParams(param, schemaStore);
+  }
+  return allParams;
 }
 
 export function getQueryParams(route: ApiRoute): paramTypes.Schema | undefined {
@@ -130,7 +205,7 @@ export function getRequestBody(route: ApiRoute): paramTypes.Schema | undefined {
     description: "Request body",
     type: route.requestBodyInfo.type!,
     schema: route.requestBodyInfo.schema ?? paramTypes.getEmptySchema(),
-    _$rendered: "",
+    _$rendered: "", // the reason this is a blank string here is because render params will render it correctly according to its type
     _$forcedCustom: true,
     _$requiresRelaxedTypeTag: false,
   };
@@ -181,7 +256,7 @@ export function getQueryParamName(route: ApiRoute): string {
 }
 
 export function isQueryParamRequired(route: ApiRoute): boolean {
-  return route.specificArgs.query?.optional ?? true;
+  return true; // route.specificArgs.query?.optional ?? true; // marked this as true becuase `api.ts` generator always seems to mark the query param as required
 }
 
 export type ParsedApiRoute = {

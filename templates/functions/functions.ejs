@@ -1,117 +1,36 @@
 <% const { apiRoutes, importList, baseUrl, headerMap } = it; _%>
 
-import { <%~ it.importList.join(', ') %> } from './api';
+import { Api, <%~ it.importList.join(', ') %> } from './api';
 import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
-
-<%-
-const hasParams = (route) => {
-  return (route.allParams && route.allParams.length > 0)
-}
-
-const getParameterAsFunctionParam = (param) => { // parameter accepted by the function in function.ts
-  if (param.required) {
-    return `${param.name}: ${param.tsType} ,`
-  } else {
-    return `${param.name}?: ${param.tsType} ,`
-  }
-}
-
-const hasHeaders = (headers) => {
-  return (headers && headers.size > 0)
-}
--%>
 
 const api = new Api({
   baseUrl: '<%~ baseUrl %>',
 });
 
-<%- for (let req of apiRoutes) { %>
+<% for (let routeFunction of it.routeFunctions) { %>
+  <%~ routeFunction.documentation %>
 
-/**
- * <%~ req.description %>
-
- * @request <%~ req.type %> :<%~ req.route %>
-
-<% if (req.shouldAllowRelaxedTypes) { %>
- * @allowrelaxedtypes
-<% } %>
-<% if (req.isQuery) { %>
- * @readonly
-<% } %>
- */
-  <% if (!hasParams(req)) { %>
-    export async function <%~ req.functionName %> (headers?: hasuraSdk.JSONValue):
-  <% } else { %>
-    export async function <%~ req.functionName %> (
-      <% if (req.parsedQueryParams) { %>
-        <%~ req.parsedQueryParams._rendered %>
-      <% } %>
-      <% if (req.parsedPathParams) { %>
-        <%~ req.parsedPathParams._rendered %>
-      <% } %>
-
-      <% for (parameter of req.allParams) { %>
-        <% if (parameter.paramType !== 'query' && parameter.paramType !== 'path') { %>
-          /** <%~parameter.description %> */
-          <%~ getParameterAsFunctionParam(parameter) %>
-          
-        <% } %>
-      <% } %>
-      headers?: hasuraSdk.JSONValue
-):
-<%- } -%>
- Promise
-<%_ if (req.shouldWrapReturnResultInJSON) { -%>
-<hasuraSdk.JSONValue>
-<%_ } else { -%>
-<<%~ req.successType-%>>
-<%- } -%>
- {
-
-<%- if (!hasParams(req)) { %>
-  const result = await api.<%~ req.namespace %>.<%~ req.apiFunction %>({
-    params: {
-      headers: headers?.value as Record<string, string> ?? undefined,
-    }
-  });
-<% } else { %>
-  const result = await api.<%~ req.namespace %>.<%~ req.apiFunction %>({
-<% if (req.parsedQueryParams) { %>
-  <%~req.parsedQueryParams.name%>: <%~req.parsedQueryParams.name%>,
-<% } %>
-
-<%- if (req.allParams && req.allParams.length > 0) { %>
-    <%_ for (const q of req.allParams) { %>
-      <%_ if (q.paramType !== 'query') { -%>
-    <%~q.name%>: <%~q.name%>,
-<%    }
-    }
-  } %>
+  export async function <%~ routeFunction.name %> (
+    <%- for (let param of routeFunction.params) { %>
+      <%~ param._$rendered %>
+    <%- } %>
+    headers?: hasuraSdk.JSONValue
+  ): Promise<<%~ routeFunction.returnType._$rendered %>> {
+    const result = await api<% if (routeFunction.namespace) { %>.<%~ routeFunction.namespace %><% } %>.<%~ routeFunction.apiTsFunctionName %>({
+      <%- for (let param of routeFunction.params) { %>
+        <%~ param.name %>: <%~ param.name %>,
+      <%- } %>
       params: {
-      headers: headers?.value as Record<string, string> ?? undefined,
+        headers: headers?.value as Record<string, string> ?? undefined,
+      }
+    });
+    if (result.data) {
+      return result.data;
+    } else {
+      throw (result.error)
     }
-  });
-<% } %>
-<% if (req.successAndErrorResponseIsVoid) { %>
-  return new hasuraSdk.JSONValue(result);
-}
-<% } else if (req.successResponseIsVoid) { %>
-  if (result.error) {
-    throw (result.error)
-  } else {
-    return new hasuraSdk.JSONValue(result.data);
   }
-}
-<% } else { %>
-  if (result.data) {
-    return <% if (req.shouldWrapReturnResultInJSON) { _%>
-      new hasuraSdk.JSONValue(result.data);
-<%   } else { _%>
-      result.data
-<%   } %>
-  } else {
-    throw (result.error)
-  }
-}
-<% } %>
-<% } %>
+
+
+<%- } %>
+
