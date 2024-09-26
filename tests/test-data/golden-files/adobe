@@ -13,9 +13,7 @@ const api = new Api({
 });
 
 /**
- * undefined
  * @request POST :/.cqactions.html
- * @allowrelaxedtypes
  */
 export async function postCqactionsHtmlPostCqActions(
   query: { authorizableId: string; changelog: string },
@@ -28,16 +26,14 @@ export async function postCqactionsHtmlPostCqActions(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/com.adobe.granite.auth.saml.SamlAuthenticationHandler.config
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(
   query: {
@@ -101,16 +97,14 @@ export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(
     },
   );
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/com.shinesolutions.aem.passwordreset.Activator
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigAemPasswordReset(
   query: {
@@ -126,16 +120,14 @@ export async function postAppsPostConfigAemPasswordReset(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/com.shinesolutions.healthcheck.hc.impl.ActiveBundleHealthCheck
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigAemHealthCheckServlet(
   query: { bundlesIgnored?: string[]; bundlesIgnoredTypeHint?: string },
@@ -148,16 +140,14 @@ export async function postAppsPostConfigAemHealthCheckServlet(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/org.apache.felix.http
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheFelixJettyBasedHttpService(
   query: {
@@ -191,16 +181,14 @@ export async function postAppsPostConfigApacheFelixJettyBasedHttpService(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/org.apache.http.proxyconfigurator.config
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(
   query: {
@@ -227,16 +215,14 @@ export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(
       },
     });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheSlingDavExServlet(
   query: {
@@ -254,16 +240,14 @@ export async function postAppsPostConfigApacheSlingDavExServlet(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/org.apache.sling.security.impl.ReferrerFilter
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheSlingReferrerFilter(
   query: {
@@ -285,16 +269,14 @@ export async function postAppsPostConfigApacheSlingReferrerFilter(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/org.apache.sling.servlets.get.DefaultGetServlet
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheSlingGetServlet(
   query: {
@@ -316,16 +298,14 @@ export async function postAppsPostConfigApacheSlingGetServlet(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/apps/system/config/{configNodeName}
- * @allowrelaxedtypes
  */
 export async function postAppsPostConfigProperty(
   configNodeName: string,
@@ -338,16 +318,14 @@ export async function postAppsPostConfigProperty(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/bin/querybuilder.json
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getBinGetQuery(
@@ -366,16 +344,14 @@ export async function getBinGetQuery(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/bin/querybuilder.json
- * @allowrelaxedtypes
  */
 export async function postBinPostQuery(
   query: {
@@ -393,16 +369,14 @@ export async function postBinPostQuery(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/crx/explorer/ui/setpassword.jsp
- * @allowrelaxedtypes
  */
 export async function postCrxPostSetPassword(
   query: { old: string; plain: string; verify: string },
@@ -415,14 +389,13 @@ export async function postCrxPostSetPassword(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/crx/packmgr/installstatus.jsp
  * @readonly
  */
@@ -442,9 +415,7 @@ export async function getCrxGetInstallStatus(
 }
 
 /**
- * undefined
  * @request POST :/crx/packmgr/service.jsp
- * @allowrelaxedtypes
  */
 export async function postCrxPostPackageService(
   query: { cmd: string },
@@ -457,18 +428,17 @@ export async function postCrxPostPackageService(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/crx/packmgr/service/.json/{path}
- * @allowrelaxedtypes
  */
 export async function postCrxPostPackageServiceJson(
+  path: string,
   query: {
     cmd: string;
     groupName?: string;
@@ -478,7 +448,6 @@ export async function postCrxPostPackageServiceJson(
     force?: boolean;
     recursive?: boolean;
   },
-  path: string,
   /** Request body */
   data: {
     /** @format binary */
@@ -487,24 +456,22 @@ export async function postCrxPostPackageServiceJson(
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.crx.postPackageServiceJson({
-    query: query,
     path: path,
+    query: query,
     data: data,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/crx/packmgr/service/script.html
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrxGetPackageManagerServlet(
@@ -516,16 +483,14 @@ export async function getCrxGetPackageManagerServlet(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/crx/packmgr/update.jsp
- * @allowrelaxedtypes
  */
 export async function postCrxPostPackageUpdate(
   query: {
@@ -545,14 +510,13 @@ export async function postCrxPostPackageUpdate(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/crx/server/crx.default/jcr:root/.1.json
  * @readonly
  */
@@ -574,9 +538,7 @@ export async function getCrxGetCrxdeStatus(
 }
 
 /**
- * undefined
  * @request GET :/etc/packages/{group}/{name}-{version}.zip
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetPackage(
@@ -594,16 +556,14 @@ export async function getEtcGetPackage(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetPackageFilter(
@@ -625,16 +585,14 @@ export async function getEtcGetPackageFilter(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/etc/replication/agents.{runmode}.-1.json
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetAgents(
@@ -648,16 +606,14 @@ export async function getEtcGetAgents(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request DELETE :/etc/replication/agents.{runmode}/{name}
- * @allowrelaxedtypes
  */
 export async function deleteEtcDeleteAgent(
   runmode: string,
@@ -672,16 +628,14 @@ export async function deleteEtcDeleteAgent(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/etc/replication/agents.{runmode}/{name}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetAgent(
@@ -697,18 +651,18 @@ export async function getEtcGetAgent(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/etc/replication/agents.{runmode}/{name}
- * @allowrelaxedtypes
  */
 export async function postEtcPostAgent(
+  runmode: string,
+  name: string,
   query: {
     "jcr:content/cq:distribute"?: boolean;
     "jcr:content/cq:distribute@TypeHint"?: string;
@@ -761,29 +715,25 @@ export async function postEtcPostAgent(
     "jcr:primaryType"?: string;
     ":operation"?: string;
   },
-  runmode: string,
-  name: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.etc.postAgent({
-    query: query,
     runmode: runmode,
     name: name,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/etc/truststore
- * @allowrelaxedtypes
  */
 export async function postEtcPostTruststorePkcs12(
   /** Request body */
@@ -800,16 +750,14 @@ export async function postEtcPostTruststorePkcs12(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/etc/truststore/truststore.p12
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetTruststore(
@@ -821,16 +769,14 @@ export async function getEtcGetTruststore(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/libs/granite/core/content/login.html
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getLibsGetLoginPage(
@@ -842,16 +788,14 @@ export async function getLibsGetLoginPage(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/libs/granite/security/post/authorizables
- * @allowrelaxedtypes
  */
 export async function postLibsPostAuthorizables(
   query: {
@@ -871,16 +815,14 @@ export async function postLibsPostAuthorizables(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/libs/granite/security/post/sslSetup.html
- * @allowrelaxedtypes
  */
 export async function postLibsSslSetup(
   query: {
@@ -908,16 +850,14 @@ export async function postLibsSslSetup(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/libs/granite/security/post/truststore
- * @allowrelaxedtypes
  */
 export async function postLibsPostTruststore(
   query: {
@@ -942,14 +882,13 @@ export async function postLibsPostTruststore(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/libs/granite/security/truststore.json
  * @readonly
  */
@@ -969,9 +908,7 @@ export async function getLibsGetTruststoreInfo(
 }
 
 /**
- * undefined
  * @request POST :/libs/replication/treeactivation.html
- * @allowrelaxedtypes
  */
 export async function postLibsPostTreeActivation(
   query: {
@@ -989,38 +926,35 @@ export async function postLibsPostTreeActivation(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/system/console/bundles/{name}
- * @allowrelaxedtypes
  */
 export async function postSystemPostBundle(
-  query: { action: string },
   name: string,
+  query: { action: string },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.system.postBundle({
-    query: query,
     name: name,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/system/console/bundles/{name}.json
  * @readonly
  */
@@ -1042,7 +976,6 @@ export async function getSystemGetBundleInfo(
 }
 
 /**
- * undefined
  * @request GET :/system/console/configMgr
  * @readonly
  */
@@ -1062,7 +995,6 @@ export async function getSystemGetConfigMgr(
 }
 
 /**
- * undefined
  * @request POST :/system/console/configMgr/com.adobe.granite.auth.saml.SamlAuthenticationHandler
  */
 export async function postSystemPostSamlConfiguration(
@@ -1114,9 +1046,7 @@ export async function postSystemPostSamlConfiguration(
 }
 
 /**
- * undefined
  * @request POST :/system/console/jmx/com.adobe.granite:type=Repository/op/{action}
- * @allowrelaxedtypes
  */
 export async function postSystemPostJmxRepository(
   action: string,
@@ -1131,16 +1061,14 @@ export async function postSystemPostJmxRepository(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/system/console/status-productinfo.json
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSystemGetAemProductInfo(
@@ -1152,16 +1080,14 @@ export async function getSystemGetAemProductInfo(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/system/health
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSystemGetAemHealthCheck(
@@ -1175,17 +1101,18 @@ export async function getSystemGetAemHealthCheck(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/{intermediatePath}/{authorizableId}.ks.html
  */
 export async function postIntermediatePathPostAuthorizableKeystore(
+  intermediatePath: string,
+  authorizableId: string,
   query: {
     ":operation"?: string;
     currentPassword?: string;
@@ -1197,8 +1124,6 @@ export async function postIntermediatePathPostAuthorizableKeystore(
     newAlias?: string;
     removeAlias?: string;
   },
-  intermediatePath: string,
-  authorizableId: string,
   /** Request body */
   data: {
     /** @format binary */
@@ -1211,9 +1136,9 @@ export async function postIntermediatePathPostAuthorizableKeystore(
   headers?: hasuraSdk.JSONValue,
 ): Promise<KeystoreInfo> {
   const result = await api.intermediatePath.postAuthorizableKeystore({
-    query: query,
     intermediatePath: intermediatePath,
     authorizableId: authorizableId,
+    query: query,
     data: data,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
@@ -1227,7 +1152,6 @@ export async function postIntermediatePathPostAuthorizableKeystore(
 }
 
 /**
- * undefined
  * @request GET :/{intermediatePath}/{authorizableId}.ks.json
  * @readonly
  */
@@ -1251,9 +1175,7 @@ export async function getIntermediatePathGetAuthorizableKeystore(
 }
 
 /**
- * undefined
  * @request GET :/{intermediatePath}/{authorizableId}/keystore/store.p12
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getIntermediatePathGetKeystore(
@@ -1269,40 +1191,36 @@ export async function getIntermediatePathGetKeystore(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/{path}/
- * @allowrelaxedtypes
  */
 export async function postPathPostPath(
-  query: { "jcr:primaryType": string; ":name": string },
   path: string,
+  query: { "jcr:primaryType": string; ":name": string },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postPath({
-    query: query,
     path: path,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request DELETE :/{path}/{name}
- * @allowrelaxedtypes
  */
 export async function deletePathDeleteNode(
   path: string,
@@ -1317,16 +1235,14 @@ export async function deletePathDeleteNode(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request GET :/{path}/{name}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getPathGetNode(
@@ -1342,21 +1258,19 @@ export async function getPathGetNode(
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/{path}/{name}
- * @allowrelaxedtypes
  */
 export async function postPathPostNode(
-  query: { ":operation"?: string; deleteAuthorizable?: string },
   path: string,
   name: string,
+  query: { ":operation"?: string; deleteAuthorizable?: string },
   /** Request body */
   data: {
     /** @format binary */
@@ -1365,42 +1279,40 @@ export async function postPathPostNode(
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postNode({
-    query: query,
     path: path,
     name: name,
+    query: query,
     data: data,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }
 }
 
 /**
- * undefined
  * @request POST :/{path}/{name}.rw.html
- * @allowrelaxedtypes
  */
 export async function postPathPostNodeRw(
-  query: { addMembers?: string },
   path: string,
   name: string,
+  query: { addMembers?: string },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.path.postNodeRw({
-    query: query,
     path: path,
     name: name,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
   });
   if (result.data) {
-    return new hasuraSdk.JSONValue(result.data);
+    return result.data;
   } else {
     throw result.error;
   }

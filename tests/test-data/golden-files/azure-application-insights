@@ -1,0 +1,359 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import {
+  Api,
+  EventsResults,
+  MetricsResult,
+  QueryBody,
+  QueryResults,
+} from "./api";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * Get OData metadata
+ * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/events/$metadata
+ * @readonly
+ */
+export async function getSubscriptionsEventsGetOdataMetadata(
+  /** Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call. */
+  subscriptionId: string,
+  /** The name of the resource group to get. The name is case insensitive. */
+  resourceGroupName: string,
+  /** Name of the Application Insights application. */
+  applicationName: string,
+  query: {
+    /** Client API version. */
+    apiVersion: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.subscriptions.eventsGetOdataMetadata({
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    applicationName: applicationName,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Execute OData query
+ * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/events/{eventType}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getSubscriptionsEventsGetByType(
+  subscriptionId: string,
+  resourceGroupName: string,
+  applicationName: string,
+  /** The type of events to query; either a standard event type (`traces`, `customEvents`, `pageViews`, `requests`, `dependencies`, `exceptions`, `availabilityResults`) or `$all` to query across all event types. */
+  eventType:
+    | "$all"
+    | "traces"
+    | "customEvents"
+    | "pageViews"
+    | "browserTimings"
+    | "requests"
+    | "dependencies"
+    | "exceptions"
+    | "availabilityResults"
+    | "performanceCounters"
+    | "customMetrics",
+  query: {
+    /** Optional. The timespan over which to retrieve events. This is an ISO8601 time period value.  This timespan is applied in addition to any that are specified in the Odata expression. */
+    timespan?: string;
+    /** An expression used to filter the returned events */
+    $filter?: string;
+    /** A free-text search expression to match for whether a particular event should be returned */
+    $search?: string;
+    /** A comma-separated list of properties with \"asc\" (the default) or \"desc\" to control the order of returned events */
+    $orderby?: string;
+    /** Limits the properties to just those requested on each returned event */
+    $select?: string;
+    /** The number of items to skip over before returning events */
+    $skip?: number;
+    /** The number of events to return */
+    $top?: number;
+    /** Format for the returned events */
+    $format?: string;
+    /** Request a count of matching items included with the returned events */
+    $count?: boolean;
+    /** An expression used for aggregation over returned events */
+    $apply?: string;
+    /** Client API version. */
+    apiVersion: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<EventsResults> {
+  const result = await api.subscriptions.eventsGetByType({
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    applicationName: applicationName,
+    eventType: eventType,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get an event
+ * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/events/{eventType}/{eventId}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getSubscriptionsEventsGet(
+  subscriptionId: string,
+  resourceGroupName: string,
+  applicationName: string,
+  eventType:
+    | "$all"
+    | "traces"
+    | "customEvents"
+    | "pageViews"
+    | "browserTimings"
+    | "requests"
+    | "dependencies"
+    | "exceptions"
+    | "availabilityResults"
+    | "performanceCounters"
+    | "customMetrics",
+  /** ID of event. */
+  eventId: string,
+  query: {
+    /** Optional. The timespan over which to retrieve events. This is an ISO8601 time period value.  This timespan is applied in addition to any that are specified in the Odata expression. */
+    timespan?: string;
+    /** Client API version. */
+    apiVersion: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<EventsResults> {
+  const result = await api.subscriptions.eventsGet({
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    applicationName: applicationName,
+    eventType: eventType,
+    eventId: eventId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Retrieve metric metadata
+ * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/metrics/metadata
+ * @readonly
+ */
+export async function getSubscriptionsMetricsGetMetadata(
+  subscriptionId: string,
+  resourceGroupName: string,
+  applicationName: string,
+  query: {
+    /** Client API version. */
+    apiVersion: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.subscriptions.metricsGetMetadata({
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    applicationName: applicationName,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Retrieve metric data
+ * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/metrics/{metricId}
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getSubscriptionsMetricsGet(
+  subscriptionId: string,
+  resourceGroupName: string,
+  applicationName: string,
+  /** ID of the metric. This is either a standard AI metric, or an application-specific custom metric. */
+  metricId:
+    | "requests/count"
+    | "requests/duration"
+    | "requests/failed"
+    | "users/count"
+    | "users/authenticated"
+    | "pageViews/count"
+    | "pageViews/duration"
+    | "client/processingDuration"
+    | "client/receiveDuration"
+    | "client/networkDuration"
+    | "client/sendDuration"
+    | "client/totalDuration"
+    | "dependencies/count"
+    | "dependencies/failed"
+    | "dependencies/duration"
+    | "exceptions/count"
+    | "exceptions/browser"
+    | "exceptions/server"
+    | "sessions/count"
+    | "performanceCounters/requestExecutionTime"
+    | "performanceCounters/requestsPerSecond"
+    | "performanceCounters/requestsInQueue"
+    | "performanceCounters/memoryAvailableBytes"
+    | "performanceCounters/exceptionsPerSecond"
+    | "performanceCounters/processCpuPercentage"
+    | "performanceCounters/processIOBytesPerSecond"
+    | "performanceCounters/processPrivateBytes"
+    | "performanceCounters/processorCpuPercentage"
+    | "availabilityResults/availabilityPercentage"
+    | "availabilityResults/duration"
+    | "billing/telemetryCount"
+    | "customEvents/count",
+  query: {
+    /** The timespan over which to retrieve metric values. This is an ISO8601 time period value. If timespan is omitted, a default time range of `PT12H` ("last 12 hours") is used. The actual timespan that is queried may be adjusted by the server based. In all cases, the actual time span used for the query is included in the response. */
+    timespan?: string;
+    /** The time interval to use when retrieving metric values. This is an ISO8601 duration. If interval is omitted, the metric value is aggregated across the entire timespan. If interval is supplied, the server may adjust the interval to a more appropriate size based on the timespan used for the query. In all cases, the actual interval used for the query is included in the response. */
+    interval?: string;
+    /** The aggregation to use when computing the metric values. To retrieve more than one aggregation at a time, separate them with a comma. If no aggregation is specified, then the default aggregation for the metric is used. */
+    aggregation?: ("min" | "max" | "avg" | "sum" | "count" | "unique")[];
+    /** The name of the dimension to segment the metric values by. This dimension must be applicable to the metric you are retrieving. To segment by more than one dimension at a time, separate them with a comma (,). In this case, the metric data will be segmented in the order the dimensions are listed in the parameter. */
+    segment?: (
+      | "applicationBuild"
+      | "applicationVersion"
+      | "authenticatedOrAnonymousTraffic"
+      | "browser"
+      | "browserVersion"
+      | "city"
+      | "cloudRoleName"
+      | "cloudServiceName"
+      | "continent"
+      | "countryOrRegion"
+      | "deploymentId"
+      | "deploymentUnit"
+      | "deviceType"
+      | "environment"
+      | "hostingLocation"
+      | "instanceName"
+    )[];
+    /** The number of segments to return.  This value is only valid when segment is specified. */
+    top?: number;
+    /** The aggregation function and direction to sort the segments by.  This value is only valid when segment is specified. */
+    orderby?: string;
+    /** An expression used to filter the results.  This value should be a valid OData filter expression where the keys of each clause should be applicable dimensions for the metric you are retrieving. */
+    filter?: string;
+    /** Client API version. */
+    apiVersion: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<MetricsResult> {
+  const result = await api.subscriptions.metricsGet({
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    applicationName: applicationName,
+    metricId: metricId,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Execute an Analytics query
+ * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/query
+ * @readonly
+ */
+export async function getSubscriptionsQueryGet(
+  subscriptionId: string,
+  resourceGroupName: string,
+  applicationName: string,
+  query: {
+    /** The Analytics query. Learn more about the [Analytics query syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/) */
+    query: string;
+    /** Optional. The timespan over which to query data. This is an ISO8601 time period value.  This timespan is applied in addition to any that are specified in the query expression. */
+    timespan?: string;
+    /** Client API version. */
+    apiVersion: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<QueryResults> {
+  const result = await api.subscriptions.queryGet({
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    applicationName: applicationName,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Execute an Analytics query
+ * @request POST :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/query
+ */
+export async function postSubscriptionsQueryExecute(
+  subscriptionId: string,
+  resourceGroupName: string,
+  applicationName: string,
+  query: {
+    /** Client API version. */
+    apiVersion: string;
+  },
+  /** Request body */
+  body: QueryBody,
+  headers?: hasuraSdk.JSONValue,
+): Promise<QueryResults> {
+  const result = await api.subscriptions.queryExecute({
+    subscriptionId: subscriptionId,
+    resourceGroupName: resourceGroupName,
+    applicationName: applicationName,
+    query: query,
+    body: body,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

@@ -2984,7 +2984,7 @@
   "get__/rest/api/3/fieldconfigurationscheme/project": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The list of project IDs. To include multiple projects, separate IDs with ampersand: `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
+        "rendered": " query: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The list of project IDs. To include multiple projects, separate IDs with ampersand: `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.startAt": {
@@ -3935,7 +3935,7 @@
   "delete__/rest/api/3/group/user": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** As a group's name can change, use of `groupId` is recommended to identify a group.  \nThe name of the group. This parameter cannot be used with the `groupId` parameter. */\n groupname?: string, \n/** The ID of the group. This parameter cannot be used with the `groupName` parameter. */\n groupId?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*. */\n accountId: string, },",
+        "rendered": " query: { \n/** As a group's name can change, use of `groupId` is recommended to identify a group.  \nThe name of the group. This parameter cannot be used with the `groupId` parameter. */\n groupname?: string, \n/** The ID of the group. This parameter cannot be used with the `groupName` parameter. */\n groupId?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*. */\n accountId: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.groupname": {
@@ -4064,7 +4064,7 @@
   "get__/rest/api/3/groupuserpicker": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The search string. */\n query: string, \n/** The maximum number of items to return in each list. */\n maxResults?: number, \n/** Whether the user avatar should be returned. If an invalid value is provided, the default value is used. */\n showAvatar?: boolean, \n/** The custom field ID of the field this request is for. */\n fieldId?: string, \n/** The ID of a project that returned users and groups must have permission to view. To include multiple projects, provide an ampersand-separated list. For example, `projectId=10000&projectId=10001`. This parameter is only used when `fieldId` is present. */\n projectId?: (string)[], \n/** The ID of an issue type that returned users and groups must have permission to view. To include multiple issue types, provide an ampersand-separated list. For example, `issueTypeId=10000&issueTypeId=10001`. Special values, such as `-1` (all standard issue types) and `-2` (all subtask issue types), are supported. This parameter is only used when `fieldId` is present. */\n issueTypeId?: (string)[], \n/** The size of the avatar to return. If an invalid value is provided, the default value is used. */\n avatarSize?: \"xsmall\" | \"xsmall@2x\" | \"xsmall@3x\" | \"small\" | \"small@2x\" | \"small@3x\" | \"medium\" | \"medium@2x\" | \"medium@3x\" | \"large\" | \"large@2x\" | \"large@3x\" | \"xlarge\" | \"xlarge@2x\" | \"xlarge@3x\" | \"xxlarge\" | \"xxlarge@2x\" | \"xxlarge@3x\" | \"xxxlarge\" | \"xxxlarge@2x\" | \"xxxlarge@3x\", \n/** Whether the search for groups should be case insensitive. */\n caseInsensitive?: boolean, \n/** Whether Connect app users and groups should be excluded from the search results. If an invalid value is provided, the default value is used. */\n excludeConnectAddons?: boolean, },",
+        "rendered": " query: { \n/** The search string. */\n query: string, \n/** The maximum number of items to return in each list. */\n maxResults?: number, \n/** Whether the user avatar should be returned. If an invalid value is provided, the default value is used. */\n showAvatar?: boolean, \n/** The custom field ID of the field this request is for. */\n fieldId?: string, \n/** The ID of a project that returned users and groups must have permission to view. To include multiple projects, provide an ampersand-separated list. For example, `projectId=10000&projectId=10001`. This parameter is only used when `fieldId` is present. */\n projectId?: (string)[], \n/** The ID of an issue type that returned users and groups must have permission to view. To include multiple issue types, provide an ampersand-separated list. For example, `issueTypeId=10000&issueTypeId=10001`. Special values, such as `-1` (all standard issue types) and `-2` (all subtask issue types), are supported. This parameter is only used when `fieldId` is present. */\n issueTypeId?: (string)[], \n/** The size of the avatar to return. If an invalid value is provided, the default value is used. */\n avatarSize?: \"xsmall\" | \"xsmall@2x\" | \"xsmall@3x\" | \"small\" | \"small@2x\" | \"small@3x\" | \"medium\" | \"medium@2x\" | \"medium@3x\" | \"large\" | \"large@2x\" | \"large@3x\" | \"xlarge\" | \"xlarge@2x\" | \"xlarge@3x\" | \"xxlarge\" | \"xxlarge@2x\" | \"xxlarge@3x\" | \"xxxlarge\" | \"xxxlarge@2x\" | \"xxxlarge@3x\", \n/** Whether the search for groups should be case insensitive. */\n caseInsensitive?: boolean, \n/** Whether Connect app users and groups should be excluded from the search results. If an invalid value is provided, the default value is used. */\n excludeConnectAddons?: boolean, },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.query": {
@@ -5031,7 +5031,7 @@
   "delete__/rest/api/3/issue/{issueIdOrKey}/remotelink": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The global ID of a remote issue link. */\n globalId: string, },",
+        "rendered": " query: { \n/** The global ID of a remote issue link. */\n globalId: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.globalId": {
@@ -6070,7 +6070,7 @@
   "get__/rest/api/3/issuetype/project": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The ID of the project. */\n projectId: number, \n/** The level of the issue type to filter by. Use:\n\n *  `-1` for Subtask.\n *  `0` for Base.\n *  `1` for Epic. */\n level?: number, },",
+        "rendered": " query: { \n/** The ID of the project. */\n projectId: number, \n/** The level of the issue type to filter by. Use:\n\n *  `-1` for Subtask.\n *  `0` for Base.\n *  `1` for Epic. */\n level?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -6204,7 +6204,7 @@
   "post__/rest/api/3/issuetype/{id}/avatar2": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The X coordinate of the top-left corner of the crop region. */\n x?: number, \n/** The Y coordinate of the top-left corner of the crop region. */\n y?: number, \n/** The length of each side of the crop region. */\n size: number, },",
+        "rendered": " query: { \n/** The X coordinate of the top-left corner of the crop region. */\n x?: number, \n/** The Y coordinate of the top-left corner of the crop region. */\n y?: number, \n/** The length of each side of the crop region. */\n size: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.x": {
@@ -6459,7 +6459,7 @@
   "get__/rest/api/3/issuetypescheme/project": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The list of project IDs. To include multiple project IDs, provide an ampersand-separated list. For example, `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
+        "rendered": " query: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The list of project IDs. To include multiple project IDs, provide an ampersand-separated list. For example, `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.startAt": {
@@ -6758,7 +6758,7 @@
   "get__/rest/api/3/issuetypescreenscheme/project": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The list of project IDs. To include multiple projects, separate IDs with ampersand: `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
+        "rendered": " query: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The list of project IDs. To include multiple projects, separate IDs with ampersand: `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.startAt": {
@@ -7354,7 +7354,7 @@
   "delete__/rest/api/3/mypreferences": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The key of the preference. */\n key: string, },",
+        "rendered": " query: { \n/** The key of the preference. */\n key: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.key": {
@@ -7378,7 +7378,7 @@
   "get__/rest/api/3/mypreferences": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The key of the preference. */\n key: string, },",
+        "rendered": " query: { \n/** The key of the preference. */\n key: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.key": {
@@ -7402,7 +7402,7 @@
   "put__/rest/api/3/mypreferences": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The key of the preference. The maximum length is 255 characters. */\n key: string, },",
+        "rendered": " query: { \n/** The key of the preference. The maximum length is 255 characters. */\n key: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.key": {
@@ -8226,7 +8226,7 @@
   "delete__/rest/api/3/priority/{id}": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The ID of the issue priority that will replace the currently selected resolution. */\n replaceWith: string, },",
+        "rendered": " query: { \n/** The ID of the issue priority that will replace the currently selected resolution. */\n replaceWith: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.replaceWith": {
@@ -9764,7 +9764,7 @@
   "get__/rest/api/3/projectvalidate/validProjectName": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The project name. */\n name: string, },",
+        "rendered": " query: { \n/** The project name. */\n name: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.name": {
@@ -9919,7 +9919,7 @@
   "delete__/rest/api/3/resolution/{id}": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The ID of the issue resolution that will replace the currently selected resolution. */\n replaceWith: string, },",
+        "rendered": " query: { \n/** The ID of the issue resolution that will replace the currently selected resolution. */\n replaceWith: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.replaceWith": {
@@ -11378,7 +11378,7 @@
   "post__/rest/api/3/universal_avatar/type/{type}/owner/{entityId}": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The X coordinate of the top-left corner of the crop region. */\n x?: number, \n/** The Y coordinate of the top-left corner of the crop region. */\n y?: number, \n/** The length of each side of the crop region. */\n size: number, },",
+        "rendered": " query: { \n/** The X coordinate of the top-left corner of the crop region. */\n x?: number, \n/** The Y coordinate of the top-left corner of the crop region. */\n y?: number, \n/** The length of each side of the crop region. */\n size: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.x": {
@@ -11563,7 +11563,7 @@
   "delete__/rest/api/3/user": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*. */\n accountId: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n key?: string, },",
+        "rendered": " query: { \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*. */\n accountId: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n key?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.accountId": {
@@ -11655,7 +11655,7 @@
   "get__/rest/api/3/user/assignable/multiProjectSearch": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A query string that is matched against user attributes, such as `displayName` and `emailAddress`, to find relevant users. The string can match the prefix of the attribute's value. For example, *query=john* matches a user with a `displayName` of *John Smith* and a user with an `emailAddress` of *johnson@example.com*. Required, unless `accountId` is specified. */\n query?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** A query string that is matched exactly against user `accountId`. Required, unless `query` is specified. */\n accountId?: string, \n/** A list of project keys (case sensitive). This parameter accepts a comma-separated list. */\n projectKeys: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
+        "rendered": " query: { \n/** A query string that is matched against user attributes, such as `displayName` and `emailAddress`, to find relevant users. The string can match the prefix of the attribute's value. For example, *query=john* matches a user with a `displayName` of *John Smith* and a user with an `emailAddress` of *johnson@example.com*. Required, unless `accountId` is specified. */\n query?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** A query string that is matched exactly against user `accountId`. Required, unless `query` is specified. */\n accountId?: string, \n/** A list of project keys (case sensitive). This parameter accepts a comma-separated list. */\n projectKeys: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.query": {
@@ -11767,7 +11767,7 @@
   "get__/rest/api/3/user/bulk": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** This parameter is no longer available and will be removed from the documentation soon. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: (string)[], \n/** This parameter is no longer available and will be removed from the documentation soon. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n key?: (string)[], \n/** The account ID of a user. To specify multiple users, pass multiple `accountId` parameters. For example, `accountId=5b10a2844c20165700ede21g&accountId=5b10ac8d82e05b22cc7d4ef5`. */\n accountId: (string)[], },",
+        "rendered": " query: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** This parameter is no longer available and will be removed from the documentation soon. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: (string)[], \n/** This parameter is no longer available and will be removed from the documentation soon. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n key?: (string)[], \n/** The account ID of a user. To specify multiple users, pass multiple `accountId` parameters. For example, `accountId=5b10a2844c20165700ede21g&accountId=5b10ac8d82e05b22cc7d4ef5`. */\n accountId: (string)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.startAt": {
@@ -11964,7 +11964,7 @@
   "get__/rest/api/3/user/email": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, `5b10ac8d82e05b22cc7d4ef5`. */\n accountId: string, },",
+        "rendered": " query: { \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, `5b10ac8d82e05b22cc7d4ef5`. */\n accountId: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.accountId": {
@@ -11988,7 +11988,7 @@
   "get__/rest/api/3/user/email/bulk": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The account IDs of the users for which emails are required. An `accountId` is an identifier that uniquely identifies the user across all Atlassian products. For example, `5b10ac8d82e05b22cc7d4ef5`. Note, this should be treated as an opaque identifier (that is, do not assume any structure in the value). */\n accountId: (string)[], },",
+        "rendered": " query: { \n/** The account IDs of the users for which emails are required. An `accountId` is an identifier that uniquely identifies the user across all Atlassian products. For example, `5b10ac8d82e05b22cc7d4ef5`. Note, this should be treated as an opaque identifier (that is, do not assume any structure in the value). */\n accountId: (string)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.accountId": {
@@ -12016,7 +12016,7 @@
   "get__/rest/api/3/user/groups": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*. */\n accountId: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n key?: string, },",
+        "rendered": " query: { \n/** The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*. */\n accountId: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n key?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.accountId": {
@@ -12052,7 +12052,7 @@
   "get__/rest/api/3/user/permission/search": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A query string that is matched against user attributes, such as `displayName` and `emailAddress`, to find relevant users. The string can match the prefix of the attribute's value. For example, *query=john* matches a user with a `displayName` of *John Smith* and a user with an `emailAddress` of *johnson@example.com*. Required, unless `accountId` is specified. */\n query?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** A query string that is matched exactly against user `accountId`. Required, unless `query` is specified. */\n accountId?: string, \n/** A comma separated list of permissions. Permissions can be specified as any:\n\n *  permission returned by [Get all permissions](#api-rest-api-3-permissions-get).\n *  custom project permission added by Connect apps.\n *  (deprecated) one of the following:\n    \n     *  ASSIGNABLE\\_USER\n     *  ASSIGN\\_ISSUE\n     *  ATTACHMENT\\_DELETE\\_ALL\n     *  ATTACHMENT\\_DELETE\\_OWN\n     *  BROWSE\n     *  CLOSE\\_ISSUE\n     *  COMMENT\\_DELETE\\_ALL\n     *  COMMENT\\_DELETE\\_OWN\n     *  COMMENT\\_EDIT\\_ALL\n     *  COMMENT\\_EDIT\\_OWN\n     *  COMMENT\\_ISSUE\n     *  CREATE\\_ATTACHMENT\n     *  CREATE\\_ISSUE\n     *  DELETE\\_ISSUE\n     *  EDIT\\_ISSUE\n     *  LINK\\_ISSUE\n     *  MANAGE\\_WATCHER\\_LIST\n     *  MODIFY\\_REPORTER\n     *  MOVE\\_ISSUE\n     *  PROJECT\\_ADMIN\n     *  RESOLVE\\_ISSUE\n     *  SCHEDULE\\_ISSUE\n     *  SET\\_ISSUE\\_SECURITY\n     *  TRANSITION\\_ISSUE\n     *  VIEW\\_VERSION\\_CONTROL\n     *  VIEW\\_VOTERS\\_AND\\_WATCHERS\n     *  VIEW\\_WORKFLOW\\_READONLY\n     *  WORKLOG\\_DELETE\\_ALL\n     *  WORKLOG\\_DELETE\\_OWN\n     *  WORKLOG\\_EDIT\\_ALL\n     *  WORKLOG\\_EDIT\\_OWN\n     *  WORK\\_ISSUE */\n permissions: string, \n/** The issue key for the issue. */\n issueKey?: string, \n/** The project key for the project (case sensitive). */\n projectKey?: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
+        "rendered": " query: { \n/** A query string that is matched against user attributes, such as `displayName` and `emailAddress`, to find relevant users. The string can match the prefix of the attribute's value. For example, *query=john* matches a user with a `displayName` of *John Smith* and a user with an `emailAddress` of *johnson@example.com*. Required, unless `accountId` is specified. */\n query?: string, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n username?: string, \n/** A query string that is matched exactly against user `accountId`. Required, unless `query` is specified. */\n accountId?: string, \n/** A comma separated list of permissions. Permissions can be specified as any:\n\n *  permission returned by [Get all permissions](#api-rest-api-3-permissions-get).\n *  custom project permission added by Connect apps.\n *  (deprecated) one of the following:\n    \n     *  ASSIGNABLE\\_USER\n     *  ASSIGN\\_ISSUE\n     *  ATTACHMENT\\_DELETE\\_ALL\n     *  ATTACHMENT\\_DELETE\\_OWN\n     *  BROWSE\n     *  CLOSE\\_ISSUE\n     *  COMMENT\\_DELETE\\_ALL\n     *  COMMENT\\_DELETE\\_OWN\n     *  COMMENT\\_EDIT\\_ALL\n     *  COMMENT\\_EDIT\\_OWN\n     *  COMMENT\\_ISSUE\n     *  CREATE\\_ATTACHMENT\n     *  CREATE\\_ISSUE\n     *  DELETE\\_ISSUE\n     *  EDIT\\_ISSUE\n     *  LINK\\_ISSUE\n     *  MANAGE\\_WATCHER\\_LIST\n     *  MODIFY\\_REPORTER\n     *  MOVE\\_ISSUE\n     *  PROJECT\\_ADMIN\n     *  RESOLVE\\_ISSUE\n     *  SCHEDULE\\_ISSUE\n     *  SET\\_ISSUE\\_SECURITY\n     *  TRANSITION\\_ISSUE\n     *  VIEW\\_VERSION\\_CONTROL\n     *  VIEW\\_VOTERS\\_AND\\_WATCHERS\n     *  VIEW\\_WORKFLOW\\_READONLY\n     *  WORKLOG\\_DELETE\\_ALL\n     *  WORKLOG\\_DELETE\\_OWN\n     *  WORKLOG\\_EDIT\\_ALL\n     *  WORKLOG\\_EDIT\\_OWN\n     *  WORK\\_ISSUE */\n permissions: string, \n/** The issue key for the issue. */\n issueKey?: string, \n/** The project key for the project (case sensitive). */\n projectKey?: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.query": {
@@ -12108,7 +12108,7 @@
   "get__/rest/api/3/user/picker": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A query string that is matched against user attributes, such as `displayName`, and `emailAddress`, to find relevant users. The string can match the prefix of the attribute's value. For example, *query=john* matches a user with a `displayName` of *John Smith* and a user with an `emailAddress` of *johnson@example.com*. */\n query: string, \n/** The maximum number of items to return. The total number of matched users is returned in `total`. */\n maxResults?: number, \n/** Include the URI to the user's avatar. */\n showAvatar?: boolean, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n exclude?: (string)[], \n/** A list of account IDs to exclude from the search results. This parameter accepts a comma-separated list. Multiple account IDs can also be provided using an ampersand-separated list. For example, `excludeAccountIds=5b10a2844c20165700ede21g,5b10a0effa615349cb016cd8&excludeAccountIds=5b10ac8d82e05b22cc7d4ef5`. Cannot be provided with `exclude`. */\n excludeAccountIds?: (string)[],  avatarSize?: string,  excludeConnectUsers?: boolean, },",
+        "rendered": " query: { \n/** A query string that is matched against user attributes, such as `displayName`, and `emailAddress`, to find relevant users. The string can match the prefix of the attribute's value. For example, *query=john* matches a user with a `displayName` of *John Smith* and a user with an `emailAddress` of *johnson@example.com*. */\n query: string, \n/** The maximum number of items to return. The total number of matched users is returned in `total`. */\n maxResults?: number, \n/** Include the URI to the user's avatar. */\n showAvatar?: boolean, \n/** This parameter is no longer available. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. */\n exclude?: (string)[], \n/** A list of account IDs to exclude from the search results. This parameter accepts a comma-separated list. Multiple account IDs can also be provided using an ampersand-separated list. For example, `excludeAccountIds=5b10a2844c20165700ede21g,5b10a0effa615349cb016cd8&excludeAccountIds=5b10ac8d82e05b22cc7d4ef5`. Cannot be provided with `exclude`. */\n excludeAccountIds?: (string)[],  avatarSize?: string,  excludeConnectUsers?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.query": {
@@ -12364,7 +12364,7 @@
   "get__/rest/api/3/user/search/query": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The search query. */\n query: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
+        "rendered": " query: { \n/** The search query. */\n query: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.query": {
@@ -12396,7 +12396,7 @@
   "get__/rest/api/3/user/search/query/key": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The search query. */\n query: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
+        "rendered": " query: { \n/** The search query. */\n query: string, \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.query": {
@@ -12961,7 +12961,7 @@
   "get__/rest/api/3/workflow/rule/config": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The types of the transition rules to return. */\n types: (\"postfunction\" | \"condition\" | \"validator\")[], \n/** The transition rule class keys, as defined in the Connect app descriptor, of the transition rules to return. */\n keys?: (string)[], \n/** EXPERIMENTAL: The list of workflow names to filter by. */\n workflowNames?: (string)[], \n/** EXPERIMENTAL: The list of `tags` to filter by. */\n withTags?: (string)[], \n/** EXPERIMENTAL: Whether draft or published workflows are returned. If not provided, both workflow types are returned. */\n draft?: boolean, \n/** Use [expand](#expansion) to include additional information in the response. This parameter accepts `transition`, which, for each rule, returns information about the transition the rule is assigned to. */\n expand?: string, },",
+        "rendered": " query: { \n/** The index of the first item to return in a page of results (page offset). */\n startAt?: number, \n/** The maximum number of items to return per page. */\n maxResults?: number, \n/** The types of the transition rules to return. */\n types: (\"postfunction\" | \"condition\" | \"validator\")[], \n/** The transition rule class keys, as defined in the Connect app descriptor, of the transition rules to return. */\n keys?: (string)[], \n/** EXPERIMENTAL: The list of workflow names to filter by. */\n workflowNames?: (string)[], \n/** EXPERIMENTAL: The list of `tags` to filter by. */\n withTags?: (string)[], \n/** EXPERIMENTAL: Whether draft or published workflows are returned. If not provided, both workflow types are returned. */\n draft?: boolean, \n/** Use [expand](#expansion) to include additional information in the response. This parameter accepts `transition`, which, for each rule, returns information about the transition the rule is assigned to. */\n expand?: string, },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.startAt": {
@@ -13129,7 +13129,7 @@
   "delete__/rest/api/3/workflow/transitions/{transitionId}/properties": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The name of the transition property to delete, also known as the name of the property. */\n key: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to `live` for inactive workflows or `draft` for draft workflows. Active workflows cannot be edited. */\n workflowMode?: \"live\" | \"draft\", },",
+        "rendered": " query: { \n/** The name of the transition property to delete, also known as the name of the property. */\n key: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to `live` for inactive workflows or `draft` for draft workflows. Active workflows cannot be edited. */\n workflowMode?: \"live\" | \"draft\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.key": {
@@ -13166,7 +13166,7 @@
   "get__/rest/api/3/workflow/transitions/{transitionId}/properties": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Some properties with keys that have the *jira.* prefix are reserved, which means they are not editable. To include these properties in the results, set this parameter to *true*. */\n includeReservedKeys?: boolean, \n/** The key of the property being returned, also known as the name of the property. If this parameter is not specified, all properties on the transition are returned. */\n key?: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to *live* for active and inactive workflows, or *draft* for draft workflows. */\n workflowMode?: \"live\" | \"draft\", },",
+        "rendered": " query: { \n/** Some properties with keys that have the *jira.* prefix are reserved, which means they are not editable. To include these properties in the results, set this parameter to *true*. */\n includeReservedKeys?: boolean, \n/** The key of the property being returned, also known as the name of the property. If this parameter is not specified, all properties on the transition are returned. */\n key?: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to *live* for active and inactive workflows, or *draft* for draft workflows. */\n workflowMode?: \"live\" | \"draft\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.includeReservedKeys": {
@@ -13207,7 +13207,7 @@
   "post__/rest/api/3/workflow/transitions/{transitionId}/properties": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The key of the property being added, also known as the name of the property. Set this to the same value as the `key` defined in the request body. */\n key: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to *live* for inactive workflows or *draft* for draft workflows. Active workflows cannot be edited. */\n workflowMode?: \"live\" | \"draft\", },",
+        "rendered": " query: { \n/** The key of the property being added, also known as the name of the property. Set this to the same value as the `key` defined in the request body. */\n key: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to *live* for inactive workflows or *draft* for draft workflows. Active workflows cannot be edited. */\n workflowMode?: \"live\" | \"draft\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.key": {
@@ -13253,7 +13253,7 @@
   "put__/rest/api/3/workflow/transitions/{transitionId}/properties": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The key of the property being updated, also known as the name of the property. Set this to the same value as the `key` defined in the request body. */\n key: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to `live` for inactive workflows or `draft` for draft workflows. Active workflows cannot be edited. */\n workflowMode?: \"live\" | \"draft\", },",
+        "rendered": " query: { \n/** The key of the property being updated, also known as the name of the property. Set this to the same value as the `key` defined in the request body. */\n key: string, \n/** The name of the workflow that the transition belongs to. */\n workflowName: string, \n/** The workflow status. Set to `live` for inactive workflows or `draft` for draft workflows. Active workflows cannot be edited. */\n workflowMode?: \"live\" | \"draft\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.key": {
@@ -13371,7 +13371,7 @@
   "get__/rest/api/3/workflowscheme/project": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The ID of a project to return the workflow schemes for. To include multiple projects, provide an ampersand-Jim: oneseparated list. For example, `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
+        "rendered": " query: { \n/** The ID of a project to return the workflow schemes for. To include multiple projects, provide an ampersand-Jim: oneseparated list. For example, `projectId=10000&projectId=10001`. */\n projectId: (number)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.projectId": {
@@ -13865,7 +13865,7 @@
   "delete__/rest/api/3/workflowscheme/{id}/draft/workflow": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The name of the workflow. */\n workflowName: string, },",
+        "rendered": " query: { \n/** The name of the workflow. */\n workflowName: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.workflowName": {
@@ -13923,7 +13923,7 @@
   "put__/rest/api/3/workflowscheme/{id}/draft/workflow": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The name of the workflow. */\n workflowName: string, },",
+        "rendered": " query: { \n/** The name of the workflow. */\n workflowName: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.workflowName": {
@@ -14060,7 +14060,7 @@
   "delete__/rest/api/3/workflowscheme/{id}/workflow": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The name of the workflow. */\n workflowName: string, \n/** Set to true to create or update the draft of a workflow scheme and delete the mapping from the draft, when the workflow scheme cannot be edited. Defaults to `false`. */\n updateDraftIfNeeded?: boolean, },",
+        "rendered": " query: { \n/** The name of the workflow. */\n workflowName: string, \n/** Set to true to create or update the draft of a workflow scheme and delete the mapping from the draft, when the workflow scheme cannot be edited. Defaults to `false`. */\n updateDraftIfNeeded?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.workflowName": {
@@ -14126,7 +14126,7 @@
   "put__/rest/api/3/workflowscheme/{id}/workflow": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The name of the workflow. */\n workflowName: string, },",
+        "rendered": " query: { \n/** The name of the workflow. */\n workflowName: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.workflowName": {

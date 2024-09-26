@@ -6,11 +6,14 @@ import * as schemaStore from "../parser/open-api/schema-parser";
 import * as render from "./param-generator";
 import * as fs from "fs";
 import * as assert from "assert";
+import * as context from "../context";
 
 const cj = require("circular-json");
 
 const OPEN_API_FILES_DIR = "../../../tests/test-data/open-api-docs";
 const GOLDEN_FILES_DIR = "./test-data/param-generator/golden-files/";
+
+context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
 type RenderedParam = {
   rendered: string;

@@ -155,7 +155,7 @@
   "get__/media/search": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Latitude of the center search coordinate. If used, `lng` is required. */\n lat: number, \n/** Longitude of the center search coordinate. If used, `lat` is required. */\n lng: number, \n/** A unix timestamp. All media returned will be taken later than this timestamp. */\n min_timestamp?: number, \n/** A unix timestamp. All media returned will be taken earlier than this timestamp. */\n max_timestamp?: number, \n/** Default is 1km (distance=1000), max distance is 5km. */\n distance?: number, },",
+        "rendered": " query: { \n/** Latitude of the center search coordinate. If used, `lng` is required. */\n lat: number, \n/** Longitude of the center search coordinate. If used, `lat` is required. */\n lng: number, \n/** A unix timestamp. All media returned will be taken later than this timestamp. */\n min_timestamp?: number, \n/** A unix timestamp. All media returned will be taken earlier than this timestamp. */\n max_timestamp?: number, \n/** Default is 1km (distance=1000), max distance is 5km. */\n distance?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.lat": {
@@ -255,7 +255,7 @@
   "post__/media/{media-id}/comments": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Text to post as a comment on the media object as specified in `media-id`. */\n text: string, },",
+        "rendered": " query: { \n/** Text to post as a comment on the media object as specified in `media-id`. */\n text: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.text": {
@@ -368,7 +368,7 @@
   "get__/tags/search": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A valid tag name without a leading \\#. (eg. snowy, nofilter) */\n q: string, },",
+        "rendered": " query: { \n/** A valid tag name without a leading \\#. (eg. snowy, nofilter) */\n q: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.q": {
@@ -449,7 +449,7 @@
   "get__/users/search": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A query string. */\n q: string, \n/** Number of users to return. */\n count?: number, },",
+        "rendered": " query: { \n/** A query string. */\n q: string, \n/** Number of users to return. */\n count?: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.q": {
@@ -677,7 +677,7 @@
   "post__/users/{user-id}/relationship": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Type of action to apply for relationship with the user. */\n action: \"follow\" | \"unfollow\" | \"block\" | \"unblock\" | \"approve\" | \"ignore\", },",
+        "rendered": " query: { \n/** Type of action to apply for relationship with the user. */\n action: \"follow\" | \"unfollow\" | \"block\" | \"unblock\" | \"approve\" | \"ignore\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.action": {

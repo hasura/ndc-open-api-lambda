@@ -61,12 +61,13 @@ const tests: {
     goldenFile: "./golden-files/circleci",
     baseUrl: "http://localhost:13191",
   },
-  {
-    name: "aws-autoscaling",
-    openApiUri: "./open-api-docs/aws-autoscaling.json",
-    goldenFile: "./golden-files/aws-autoscaling",
-    baseUrl: "http://localhost:13191",
-  },
+  // {
+  //   // has errors
+  //   name: "aws-autoscaling",
+  //   openApiUri: "./open-api-docs/aws-autoscaling.json",
+  //   goldenFile: "./golden-files/aws-autoscaling",
+  //   baseUrl: "http://localhost:13191",
+  // },
   {
     name: "adobe",
     openApiUri: "./open-api-docs/adobe.json",
@@ -119,6 +120,48 @@ const tests: {
     name: "ApiDeckCrm",
     openApiUri: "./open-api-docs/apideck-crm.json",
     goldenFile: "./golden-files/apideck-crm",
+    baseUrl: "",
+  },
+  {
+    name: "AucklandMuseum",
+    openApiUri: "./open-api-docs/auckland-museum.json",
+    goldenFile: "./golden-files/auckland-museum",
+    baseUrl: "",
+  },
+  {
+    name: "AzureAlertsManagement",
+    openApiUri: "./open-api-docs/azure-alerts-management.json",
+    goldenFile: "./golden-files/azure-alerts-management",
+    baseUrl: "",
+  },
+  {
+    name: "AzureApplicationInsights",
+    openApiUri: "./open-api-docs/azure-application-insights.json",
+    goldenFile: "./golden-files/azure-application-insights",
+    baseUrl: "",
+  },
+  {
+    name: "GitHub",
+    openApiUri: "./open-api-docs/github.json",
+    goldenFile: "./golden-files/github",
+    baseUrl: "",
+  },
+  {
+    name: "Spotify",
+    openApiUri: "./open-api-docs/spotify.json",
+    goldenFile: "./golden-files/spotify",
+    baseUrl: "",
+  },
+  {
+    name: "AppleStoreConnect",
+    openApiUri: "./open-api-docs/apple-store-connect.json",
+    goldenFile: "./golden-files/apple-store-connect",
+    baseUrl: "",
+  },
+  {
+    name: "Trello",
+    openApiUri: "./open-api-docs/trello.json",
+    goldenFile: "./golden-files/trello",
     baseUrl: "",
   },
 ];

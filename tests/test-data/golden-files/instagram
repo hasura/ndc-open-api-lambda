@@ -25,29 +25,22 @@ const api = new Api({
 /**
  * Get recent media from a custom geo-id.
  * @request GET :/geographies/{geo-id}/media/recent
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getGeographiesGeoIdMediaRecentList(
+  /** The geography ID. */
+  geoId: string,
   query: {
-    /**
-     * Max number of media to return.
-     */
+    /** Max number of media to return. */
     count?: number;
-    /**
-     * Return media before this `min_id`.
-     */
+    /** Return media before this `min_id`. */
     min_id?: string;
   },
-  /**
-   * The geography ID.
-   */
-  geoId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MediaListResponse> {
   const result = await api.geographies.geoIdMediaRecentList({
-    query: query,
     geoId: geoId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -66,29 +59,19 @@ export async function getGeographiesGeoIdMediaRecentList(
  */
 export async function getLocationsSearchList(
   query: {
-    /**
-     * Default is 1000m (distance=1000), max distance is 5000.
-     */
+    /** Default is 1000m (distance=1000), max distance is 5000. */
     distance?: number;
-    /**
-     * Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required.
-     */
+    /** Returns a location mapped off of a Facebook places id. If used, a Foursquare id and `lat`, `lng` are not required. */
     facebook_places_id?: string;
-    /**
-* Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use
+    /** Returns a location mapped off of a foursquare v1 api location id. If used, you are not required to use
 `lat` and `lng`. Note that this method is deprecated; you should use the new foursquare IDs with V2 of their API.
  */
     foursquare_id?: string;
-    /**
-     * Latitude of the center search coordinate. If used, `lng` is required.
-     */
+    /** Latitude of the center search coordinate. If used, `lng` is required. */
     lat?: number;
-    /**
-     * Longitude of the center search coordinate. If used, `lat` is required.
-     */
+    /** Longitude of the center search coordinate. If used, `lat` is required. */
     lng?: number;
-    /**
-* Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use
+    /** Returns a location mapped off of a foursquare v2 api location id. If used, you are not required to use
 `lat` and `lng`.
  */
     foursquare_v2_id?: string;
@@ -114,9 +97,7 @@ export async function getLocationsSearchList(
  * @readonly
  */
 export async function getLocationsLocationIdList(
-  /**
-   * The location ID.
-   */
+  /** The location ID. */
   locationId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<LocationInfoResponse> {
@@ -136,37 +117,26 @@ export async function getLocationsLocationIdList(
 /**
  * Get a list of recent media objects from a given location.
  * @request GET :/locations/{location-id}/media/recent
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getLocationsLocationIdMediaRecentList(
+  /** The location ID. */
+  locationId: string,
   query: {
-    /**
-     * Return media after this UNIX timestamp.
-     */
+    /** Return media after this UNIX timestamp. */
     min_timestamp?: number;
-    /**
-     * Return media before this UNIX timestamp.
-     */
+    /** Return media before this UNIX timestamp. */
     max_timestamp?: number;
-    /**
-     * Return media before this `min_id`.
-     */
+    /** Return media before this `min_id`. */
     min_id?: string;
-    /**
-     * Return media after this `max_id`.
-     */
+    /** Return media after this `max_id`. */
     max_id?: string;
   },
-  /**
-   * The location ID.
-   */
-  locationId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MediaListResponse> {
   const result = await api.locations.locationIdMediaRecentList({
-    query: query,
     locationId: locationId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -181,7 +151,6 @@ export async function getLocationsLocationIdMediaRecentList(
 /**
  * Get a list of currently popular media.
  * @request GET :/media/popular
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaPopularList(
@@ -202,30 +171,19 @@ export async function getMediaPopularList(
 /**
  * Search for media in a given area.
  * @request GET :/media/search
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaSearchList(
   query: {
-    /**
-     * Latitude of the center search coordinate. If used, `lng` is required.
-     */
+    /** Latitude of the center search coordinate. If used, `lng` is required. */
     lat: number;
-    /**
-     * Longitude of the center search coordinate. If used, `lat` is required.
-     */
+    /** Longitude of the center search coordinate. If used, `lat` is required. */
     lng: number;
-    /**
-     * A unix timestamp. All media returned will be taken later than this timestamp.
-     */
+    /** A unix timestamp. All media returned will be taken later than this timestamp. */
     min_timestamp?: number;
-    /**
-     * A unix timestamp. All media returned will be taken earlier than this timestamp.
-     */
+    /** A unix timestamp. All media returned will be taken earlier than this timestamp. */
     max_timestamp?: number;
-    /**
-     * Default is 1km (distance=1000), max distance is 5km.
-     */
+    /** Default is 1km (distance=1000), max distance is 5km. */
     distance?: number;
   },
   headers?: hasuraSdk.JSONValue,
@@ -246,13 +204,10 @@ export async function getMediaSearchList(
 /**
  * Get information about a media object.
  * @request GET :/media/shortcode/{shortcode}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaShortcodeDetail(
-  /**
-   * The short code of the media resource.
-   */
+  /** The short code of the media resource. */
   shortcode: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MediaEntryResponse> {
@@ -272,13 +227,10 @@ export async function getMediaShortcodeDetail(
 /**
  * Get information about a media object.
  * @request GET :/media/{media-id}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaMediaIdList(
-  /**
-   * The ID of the media resource.
-   */
+  /** The ID of the media resource. */
   mediaId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MediaEntryResponse> {
@@ -301,9 +253,7 @@ export async function getMediaMediaIdList(
  * @readonly
  */
 export async function getMediaMediaIdCommentsList(
-  /**
-   * The ID of the media resource.
-   */
+  /** The ID of the media resource. */
   mediaId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<CommentsResponse> {
@@ -325,21 +275,17 @@ export async function getMediaMediaIdCommentsList(
  * @request POST :/media/{media-id}/comments
  */
 export async function postMediaMediaIdCommentsCreate(
+  /** The ID of the media resource. */
+  mediaId: string,
   query: {
-    /**
-     * Text to post as a comment on the media object as specified in `media-id`.
-     */
+    /** Text to post as a comment on the media object as specified in `media-id`. */
     text: string;
   },
-  /**
-   * The ID of the media resource.
-   */
-  mediaId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<StatusResponse> {
   const result = await api.media.mediaIdCommentsCreate({
-    query: query,
     mediaId: mediaId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -356,13 +302,9 @@ export async function postMediaMediaIdCommentsCreate(
  * @request DELETE :/media/{media-id}/comments/{comment-id}
  */
 export async function deleteMediaMediaIdCommentsCommentIdDelete(
-  /**
-   * The ID of the media resource.
-   */
+  /** The ID of the media resource. */
   mediaId: string,
-  /**
-   * The ID of the comment entry.
-   */
+  /** The ID of the comment entry. */
   commentId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<StatusResponse> {
@@ -385,9 +327,7 @@ export async function deleteMediaMediaIdCommentsCommentIdDelete(
  * @request DELETE :/media/{media-id}/likes
  */
 export async function deleteMediaMediaIdLikesDelete(
-  /**
-   * The ID of the media resource.
-   */
+  /** The ID of the media resource. */
   mediaId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<StatusResponse> {
@@ -410,9 +350,7 @@ export async function deleteMediaMediaIdLikesDelete(
  * @readonly
  */
 export async function getMediaMediaIdLikesList(
-  /**
-   * The ID of the media resource.
-   */
+  /** The ID of the media resource. */
   mediaId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<UsersInfoResponse> {
@@ -434,9 +372,7 @@ export async function getMediaMediaIdLikesList(
  * @request POST :/media/{media-id}/likes
  */
 export async function postMediaMediaIdLikesCreate(
-  /**
-   * The ID of the media resource.
-   */
+  /** The ID of the media resource. */
   mediaId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<StatusResponse> {
@@ -460,9 +396,7 @@ export async function postMediaMediaIdLikesCreate(
  */
 export async function getTagsSearchList(
   query: {
-    /**
-     * A valid tag name without a leading \#. (eg. snowy, nofilter)
-     */
+    /** A valid tag name without a leading \#. (eg. snowy, nofilter) */
     q: string;
   },
   headers?: hasuraSdk.JSONValue,
@@ -486,9 +420,7 @@ export async function getTagsSearchList(
  * @readonly
  */
 export async function getTagsTagNameList(
-  /**
-   * The tag name.
-   */
+  /** The tag name. */
   tagName: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<TagInfoResponse> {
@@ -508,33 +440,24 @@ export async function getTagsTagNameList(
 /**
  * Get a list of recently tagged media.
  * @request GET :/tags/{tag-name}/media/recent
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getTagsTagNameMediaRecentList(
+  /** The tag name. */
+  tagName: string,
   query: {
-    /**
-     * Count of tagged media to return.
-     */
+    /** Count of tagged media to return. */
     count?: number;
-    /**
-     * Return media before this `min_tag_id`.
-     */
+    /** Return media before this `min_tag_id`. */
     min_tag_id?: string;
-    /**
-     * Return media after this `max_tag_id`.
-     */
+    /** Return media after this `max_tag_id`. */
     max_tag_id?: string;
   },
-  /**
-   * The tag name.
-   */
-  tagName: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<TagMediaListResponse> {
   const result = await api.tags.tagNameMediaRecentList({
-    query: query,
     tagName: tagName,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -553,13 +476,9 @@ export async function getTagsTagNameMediaRecentList(
  */
 export async function getUsersSearchList(
   query: {
-    /**
-     * A query string.
-     */
+    /** A query string. */
     q: string;
-    /**
-     * Number of users to return.
-     */
+    /** Number of users to return. */
     count?: number;
   },
   headers?: hasuraSdk.JSONValue,
@@ -580,22 +499,15 @@ export async function getUsersSearchList(
 /**
  * See the authenticated user's feed.
  * @request GET :/users/self/feed
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersSelfFeedList(
   query: {
-    /**
-     * Count of media to return.
-     */
+    /** Count of media to return. */
     count?: number;
-    /**
-     * Return media later than this `min_id`.
-     */
+    /** Return media later than this `min_id`. */
     min_id?: string;
-    /**
-     * Return media earlier than this `max_id`.
-     */
+    /** Return media earlier than this `max_id`. */
     max_id?: string;
   },
   headers?: hasuraSdk.JSONValue,
@@ -616,18 +528,13 @@ export async function getUsersSelfFeedList(
 /**
  * See the list of media liked by the authenticated user.
  * @request GET :/users/self/media/liked
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersSelfMediaLikedList(
   query: {
-    /**
-     * Count of media to return.
-     */
+    /** Count of media to return. */
     count?: number;
-    /**
-     * Return media liked before this id.
-     */
+    /** Return media liked before this id. */
     max_like_id?: string;
   },
   headers?: hasuraSdk.JSONValue,
@@ -671,9 +578,7 @@ export async function getUsersSelfRequestedByList(
  * @readonly
  */
 export async function getUsersUserIdList(
-  /**
-   * The ID of a user to get information about, or **self** to retrieve information about authenticated user.
-   */
+  /** The ID of a user to get information about, or **self** to retrieve information about authenticated user. */
   userId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<UserResponse> {
@@ -696,9 +601,7 @@ export async function getUsersUserIdList(
  * @readonly
  */
 export async function getUsersUserIdFollowedByList(
-  /**
-   * The ID of a user, or **self** to retrieve information about authenticated user.
-   */
+  /** The ID of a user, or **self** to retrieve information about authenticated user. */
   userId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<UsersPagingResponse> {
@@ -721,9 +624,7 @@ export async function getUsersUserIdFollowedByList(
  * @readonly
  */
 export async function getUsersUserIdFollowsList(
-  /**
-   * The ID of a user, or **self** to retrieve information about authenticated user.
-   */
+  /** The ID of a user, or **self** to retrieve information about authenticated user. */
   userId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<UsersPagingResponse> {
@@ -743,41 +644,28 @@ export async function getUsersUserIdFollowsList(
 /**
  * Get the most recent media published by a user.
  * @request GET :/users/{user-id}/media/recent
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUserIdMediaRecentList(
+  /** The ID of a user to get recent media of, or **self** to retrieve media of authenticated user. */
+  userId: string,
   query: {
-    /**
-     * Count of media to return.
-     */
+    /** Count of media to return. */
     count?: number;
-    /**
-     * Return media before this UNIX timestamp.
-     */
+    /** Return media before this UNIX timestamp. */
     max_timestamp?: number;
-    /**
-     * Return media after this UNIX timestamp.
-     */
+    /** Return media after this UNIX timestamp. */
     min_timestamp?: number;
-    /**
-     * Return media later than this `min_id`.
-     */
+    /** Return media later than this `min_id`. */
     min_id?: string;
-    /**
-     * Return media earlier than this `max_id`.
-     */
+    /** Return media earlier than this `max_id`. */
     max_id?: string;
   },
-  /**
-   * The ID of a user to get recent media of, or **self** to retrieve media of authenticated user.
-   */
-  userId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MediaListResponse> {
   const result = await api.users.userIdMediaRecentList({
-    query: query,
     userId: userId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -792,13 +680,10 @@ export async function getUsersUserIdMediaRecentList(
 /**
  * Get information about a relationship to another user.
  * @request GET :/users/{user-id}/relationship
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUserIdRelationshipList(
-  /**
-   * The ID of a user to get information about.
-   */
+  /** The ID of a user to get information about. */
   userId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<RelationshipResponse> {
@@ -821,21 +706,17 @@ export async function getUsersUserIdRelationshipList(
  * @allowrelaxedtypes
  */
 export async function postUsersUserIdRelationshipCreate(
+  /** The ID of the target user. */
+  userId: string,
   query: {
-    /**
-     * Type of action to apply for relationship with the user.
-     */
+    /** Type of action to apply for relationship with the user. */
     action: "follow" | "unfollow" | "block" | "unblock" | "approve" | "ignore";
   },
-  /**
-   * The ID of the target user.
-   */
-  userId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<RelationshipPostResponse> {
   const result = await api.users.userIdRelationshipCreate({
-    query: query,
     userId: userId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },

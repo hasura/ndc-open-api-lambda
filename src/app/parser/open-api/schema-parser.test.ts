@@ -3,14 +3,14 @@ import * as assert from "assert";
 import path from "path";
 import * as apiGenerator from "../../generator/api-ts-generator";
 import * as schemaParser from "./schema-parser";
-import * as parserTypes from "./types";
+import * as parserTypes from "./schema-types";
 import * as fs from "fs";
-import * as generatorTypes from "../../generator/types";
+import * as generatorTypes from "../../generator/api-ts-generator";
 import * as logger from "../../../util/logger";
 
 const cj = require("circular-json");
 
-context.getInstance().setLogLevel(context.LogLevel.ERROR);
+context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
 type RelaxedTypeCheck = {
   schemaRef: string;

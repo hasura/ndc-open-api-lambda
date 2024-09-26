@@ -970,7 +970,7 @@
   "get__/channels/{channel_id}/users": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter: \"moderators\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. */\n filter: \"moderators\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** The search query to use to filter the results. */\n query?: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"date\", },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {
@@ -3790,7 +3790,7 @@
   "delete__/me/projects/{project_id}/videos": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean, \n/** A comma-separated list of the video URIs to remove. */\n uris: string, },",
+        "rendered": " query: { \n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean, \n/** A comma-separated list of the video URIs to remove. */\n uris: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.should_delete_clips": {
@@ -3868,7 +3868,7 @@
   "put__/me/projects/{project_id}/videos": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A comma-separated list of video URIs to add. */\n uris: string, },",
+        "rendered": " query: { \n/** A comma-separated list of video URIs to add. */\n uris: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.uris": {
@@ -4905,7 +4905,7 @@
   "get__/ondemand/pages/{ondemand_id}/promotions": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The filter to apply to the results. */\n filter: \"batch\" | \"default\" | \"single\" | \"vip\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
+        "rendered": " query: { \n/** The filter to apply to the results. */\n filter: \"batch\" | \"default\" | \"single\" | \"vip\", \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.filter": {
@@ -8007,7 +8007,7 @@
   "delete__/users/{user_id}/projects/{project_id}/videos": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean, \n/** A comma-separated list of the video URIs to remove. */\n uris: string, },",
+        "rendered": " query: { \n/** Whether to delete the videos when removing them from the project. */\n should_delete_clips?: boolean, \n/** A comma-separated list of the video URIs to remove. */\n uris: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.should_delete_clips": {
@@ -8093,7 +8093,7 @@
   "put__/users/{user_id}/projects/{project_id}/videos": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** A comma-separated list of video URIs to add. */\n uris: string, },",
+        "rendered": " query: { \n/** A comma-separated list of video URIs to add. */\n uris: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.uris": {
@@ -8182,7 +8182,7 @@
   "delete__/users/{user_id}/uploads/{upload}": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The crypto signature of the completed upload. */\n signature: string, \n/** The ID of the uploaded file. */\n video_file_id: number, },",
+        "rendered": " query: { \n/** The crypto signature of the completed upload. */\n signature: string, \n/** The ID of the uploaded file. */\n video_file_id: number, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.signature": {
@@ -8498,7 +8498,7 @@
   "get__/videos": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. `CC` and related filters target videos with the corresponding Creative Commons licenses. For more information, see our [Creative Commons](https://vimeo.com/creativecommons) page. */\n filter?: \"CC\" | \"CC-BY\" | \"CC-BY-NC\" | \"CC-BY-NC-ND\" | \"CC-BY-NC-SA\" | \"CC-BY-ND\" | \"CC-BY-SA\" | \"CC0\" | \"categories\" | \"duration\" | \"in-progress\" | \"minimum_likes\" | \"trending\" | \"upload_date\", \n/** A comma-separated list of video URLs to find. */\n links?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** Search query. */\n query: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\" | \"relevant\", \n/** The comma-separated list of videos to find. */\n uris?: string, },",
+        "rendered": " query: { \n/** The sort direction of the results. */\n direction?: \"asc\" | \"desc\", \n/** The attribute by which to filter the results. `CC` and related filters target videos with the corresponding Creative Commons licenses. For more information, see our [Creative Commons](https://vimeo.com/creativecommons) page. */\n filter?: \"CC\" | \"CC-BY\" | \"CC-BY-NC\" | \"CC-BY-NC-ND\" | \"CC-BY-NC-SA\" | \"CC-BY-ND\" | \"CC-BY-SA\" | \"CC0\" | \"categories\" | \"duration\" | \"in-progress\" | \"minimum_likes\" | \"trending\" | \"upload_date\", \n/** A comma-separated list of video URLs to find. */\n links?: string, \n/** The page number of the results to show. */\n page?: number, \n/** The number of items to show on each page of results, up to a maximum of 100. */\n per_page?: number, \n/** Search query. */\n query: string, \n/** The way to sort the results. */\n sort?: \"alphabetical\" | \"comments\" | \"date\" | \"duration\" | \"likes\" | \"plays\" | \"relevant\", \n/** The comma-separated list of videos to find. */\n uris?: string, },",
         "requiresRelaxedTypeAnnotation": true
       },
       ".query.direction": {

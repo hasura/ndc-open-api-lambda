@@ -32,9 +32,7 @@ export async function postAuthorAuthorCreate(
  * @request DELETE :/author/{authorId}
  */
 export async function deleteAuthorAuthorDelete(
-  /**
-   * delete author
-   */
+  /** delete author */
   authorId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MainAuthor> {
@@ -121,9 +119,7 @@ export async function postBlogBlogCreate(
  */
 export async function patchBlogDislikePartialUpdate(
   query: {
-    /**
-     * blog to dislike
-     */
+    /** blog to dislike */
     blogId: string;
   },
   headers?: hasuraSdk.JSONValue,
@@ -147,9 +143,7 @@ export async function patchBlogDislikePartialUpdate(
  */
 export async function patchBlogLikePartialUpdate(
   query: {
-    /**
-     * blog to like
-     */
+    /** blog to like */
     blogId: string;
   },
   headers?: hasuraSdk.JSONValue,
@@ -172,9 +166,7 @@ export async function patchBlogLikePartialUpdate(
  * @request DELETE :/blog/{blogId}
  */
 export async function deleteBlogBlogDelete(
-  /**
-   * blog to delete
-   */
+  /** blog to delete */
   blogId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MainBlog> {
@@ -196,29 +188,21 @@ export async function deleteBlogBlogDelete(
  * @request PATCH :/blog/{blogId}
  */
 export async function patchBlogBlogPartialUpdate(
+  /** blog to update */
+  blogId: string,
   query: {
-    /**
-     * title to update
-     */
+    /** title to update */
     title?: string;
-    /**
-     * text to update
-     */
+    /** text to update */
     text?: string;
-    /**
-     * summary to update
-     */
+    /** summary to update */
     summary?: string;
   },
-  /**
-   * blog to update
-   */
-  blogId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MainBlog> {
   const result = await api.blog.blogPartialUpdate({
-    query: query,
     blogId: blogId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -237,9 +221,7 @@ export async function patchBlogBlogPartialUpdate(
  */
 export async function getBlogsBlogsList(
   query: {
-    /**
-     * id of the author
-     */
+    /** id of the author */
     authorId: string;
   },
   headers?: hasuraSdk.JSONValue,

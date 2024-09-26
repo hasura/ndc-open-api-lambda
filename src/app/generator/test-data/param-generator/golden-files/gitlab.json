@@ -2308,7 +2308,7 @@
   "get__/v3/projects/{id}/builds/artifacts/{ref_name}/download": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The name for the build */\n job: string, },",
+        "rendered": " query: { \n/** The name for the build */\n job: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.job": {
@@ -4296,7 +4296,7 @@
   "delete__/v3/projects/{id}/labels": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The name of the label to be deleted */\n name: string, },",
+        "rendered": " query: { \n/** The name of the label to be deleted */\n name: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.name": {
@@ -6705,7 +6705,7 @@
   "get__/v3/projects/{id}/repository/blobs/{sha}": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The path to the file to display */\n filepath: string, },",
+        "rendered": " query: { \n/** The path to the file to display */\n filepath: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.filepath": {
@@ -7034,7 +7034,7 @@
   "get__/v3/projects/{id}/repository/commits/{sha}/blob": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The path to the file to display */\n filepath: string, },",
+        "rendered": " query: { \n/** The path to the file to display */\n filepath: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.filepath": {
@@ -7308,7 +7308,7 @@
   "get__/v3/projects/{id}/repository/compare": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The commit, branch name, or tag name to start comparison */\n from: string, \n/** The commit, branch name, or tag name to stop comparison */\n to: string, },",
+        "rendered": " query: { \n/** The commit, branch name, or tag name to start comparison */\n from: string, \n/** The commit, branch name, or tag name to stop comparison */\n to: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.from": {
@@ -7361,7 +7361,7 @@
   "delete__/v3/projects/{id}/repository/files": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The path to new file. Ex. lib/class.rb */\n file_path: string, \n/** The name of branch */\n branch_name: string, \n/** Commit Message */\n commit_message: string, \n/** The email of the author */\n author_email?: string, \n/** The name of the author */\n author_name?: string, },",
+        "rendered": " query: { \n/** The path to new file. Ex. lib/class.rb */\n file_path: string, \n/** The name of branch */\n branch_name: string, \n/** Commit Message */\n commit_message: string, \n/** The email of the author */\n author_email?: string, \n/** The name of the author */\n author_name?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.file_path": {
@@ -7406,7 +7406,7 @@
   "get__/v3/projects/{id}/repository/files": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** The path to the file. Ex. lib/class.rb */\n file_path: string, \n/** The name of branch, tag, or commit */\n ref: string, },",
+        "rendered": " query: { \n/** The path to the file. Ex. lib/class.rb */\n file_path: string, \n/** The name of branch, tag, or commit */\n ref: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.file_path": {

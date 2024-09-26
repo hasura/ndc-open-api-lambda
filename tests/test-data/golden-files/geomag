@@ -13,21 +13,13 @@ const api = new Api({
  */
 export async function getMagneticFieldAppApiWmmEndpointsWmmMagneticField(
   query: {
-    /**
-     * Geodetic Altitude 0 km to 600 km.
-     */
+    /** Geodetic Altitude 0 km to 600 km. */
     altitude: number;
-    /**
-     * Geodetic Latitude. -90 deg (S) to 90 deg (N).
-     */
+    /** Geodetic Latitude. -90 deg (S) to 90 deg (N). */
     latitude: number;
-    /**
-     * Geodetic Longitude. -180 deg (W) to 180 deg (E).
-     */
+    /** Geodetic Longitude. -180 deg (W) to 180 deg (E). */
     longitude: number;
-    /**
-     * Year as a decimal in the range 2015-2025 (2017.5 would be half way through 2017).
-     */
+    /** Year as a decimal in the range 2015-2025 (2017.5 would be half way through 2017). */
     year: number;
   },
   headers?: hasuraSdk.JSONValue,
@@ -37,7 +29,7 @@ export async function getMagneticFieldAppApiWmmEndpointsWmmMagneticField(
     units?: string;
     value?: number;
   };
-  /** Referenced to grid north, referenced to 0 deg meridian of a polar stereographic projection.  Only defined for latitudes greater than 55 degrees and less than -55 degrees arctic and antarctic. */
+  /** Referenced to grid north, referenced to 0 deg meridian of a polar stereographic projection.  Only defined for latitudes greater than 55 degrees and less than -55 degrees (arctic and antarctic). */
   grid_variation?: {
     units?: string;
     value?: number;

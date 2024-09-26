@@ -1,0 +1,193 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import { Api } from "./api";
+
+const api = new Api({
+  baseUrl: "",
+});
+
+/**
+ * Retrieve media associated with Collections and Cenotaph subjects in Auckland Museum
+ * @request GET :/id/media/{path}
+ * @readonly
+ */
+export async function getIdGetMedia(
+  /** The media `identifier`
+   */
+  path: string,
+  query: {
+    /** The desired media `rendering`
+
+Possible values:
+* `original.jpg`
+* `original.pdf`
+* `thumbnail.jpg` (fixed with 70px)
+* `standard.jpg` (fixed width 440px and height 440px)
+* `preview.jpg` (fixed height 100px)
+ */
+    rendering?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.id.getMedia({
+    path: path,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Explore details about a given subject node
+ * @request GET :/id/{identifier}
+ * @readonly
+ */
+export async function getIdGetSubject(
+  /** The identifier path of the `subject` you're looking for
+   */
+  identifier: string,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.id.getSubject({
+    identifier: identifier,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Perform simple search queries over Auckland Museum Collections and Cenotaph data
+ * @request GET :/search/{index}/{operation}
+ * @readonly
+ */
+export async function getSearchGetSearch(
+  /** search index name
+Possible values:
+* `collectionsonline`
+* `cenotaph`
+ */
+  index: string,
+  /** One of the supported elasticsearch operations like `_search` or `_suggest` */
+  operation: string,
+  query: {
+    /** One of the supported elasticsearch query parameter values for key `q` */
+    q?: string;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.search.getSearch({
+    index: index,
+    operation: operation,
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Perform complex search queries over Auckland Museum Collections and Cenotaph data
+ * @request POST :/search/{index}/{operation}
+ */
+export async function postSearchPostSearch(
+  /** search index name
+Possible values:
+* `collectionsonline`
+* `cenotaph`
+ */
+  index: string,
+  /** One of the supported elasticsearch operations like `_search` or `_suggest` */
+  operation: string,
+  /** Request body */
+  body: hasuraSdk.JSONValue,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.search.postSearch({
+    index: index,
+    operation: operation,
+    body: body,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Auckland Museum SPARQL endpoint
+ * @request GET :/sparql
+ * @readonly
+ */
+export async function getSparqlGetSparql(
+  query: {
+    /** sparql query */
+    query: string;
+    /** The [JSON-P](http://json-p.org/) callback parameter */
+    callback?: string;
+    /** Whether to get inferred results in the response */
+    infer?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.sparql.getSparql({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Auckland Museum SPARQL endpoint
+ * @request POST :/sparql
+ */
+export async function postSparqlPostSparql(
+  /** Request body */
+  data: {
+    /** sparql query */
+    query: string;
+    /**
+     * Whether to get inferred results in the response
+     * @default true
+     */
+    infer?: boolean;
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.sparql.postSparql({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

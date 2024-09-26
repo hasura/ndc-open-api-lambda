@@ -453,7 +453,7 @@
   "get__/group": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Organization identifier */\n \"filter[organization]\": string, \n/** Group name */\n \"filter[name]\"?: string, },",
+        "rendered": " query: { \n/** Organization identifier */\n \"filter[organization]\": string, \n/** Group name */\n \"filter[name]\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.filter[organization]": {
@@ -1267,7 +1267,7 @@
   "get__/result": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Filter the patient health results for a specified patient */\n \"filter[patient]\": string, \n/** A comma-separated list of action identifiers */\n \"filter[actions]\"?: string, \n/** Filter results that occurred after the passed ISO date and time string */\n \"filter[start_at]\"?: string, \n/** Filter results that occurred before the passed ISO date and time string */\n \"filter[end_at]\"?: string, \n/** A comma-separated list of thread identifiers */\n \"filter[threads]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[after]\"?: string, },",
+        "rendered": " query: { \n/** Filter the patient health results for a specified patient */\n \"filter[patient]\": string, \n/** A comma-separated list of action identifiers */\n \"filter[actions]\"?: string, \n/** Filter results that occurred after the passed ISO date and time string */\n \"filter[start_at]\"?: string, \n/** Filter results that occurred before the passed ISO date and time string */\n \"filter[end_at]\"?: string, \n/** A comma-separated list of thread identifiers */\n \"filter[threads]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[created_at]\"?: string, \n/** The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`\n */\n \"filter[updated_at]\"?: string, \n/** Page number */\n \"page[number]\"?: number, \n/** Page size */\n \"page[size]\"?: number, \n/** Page limit */\n \"page[limit]\"?: number, \n/** Page cursor */\n \"page[after]\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.filter[patient]": {
@@ -1435,7 +1435,7 @@
   "get__/reward_earning": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Group identifiers */\n \"filter[groups]\": string, \n/** Patient identifier */\n \"filter[patient]\": string, \n/** If true, only returns those reward earnings for which ready_for_fulfillment is true and fulfilled_at is null. If false, only returns those reward earnings for which ready_for_fulfillment is false and fulfilled_at is null. */\n \"filter[ready_for_fulfillment]\"?: boolean, },",
+        "rendered": " query: { \n/** Group identifiers */\n \"filter[groups]\": string, \n/** Patient identifier */\n \"filter[patient]\": string, \n/** If true, only returns those reward earnings for which ready_for_fulfillment is true and fulfilled_at is null. If false, only returns those reward earnings for which ready_for_fulfillment is false and fulfilled_at is null. */\n \"filter[ready_for_fulfillment]\"?: boolean, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.filter[groups]": {
@@ -1511,7 +1511,7 @@
   "get__/reward_earning_fulfillment": {
     "query": {
       ".query": {
-        "rendered": " query?: { \n/** Patient identifier */\n \"filter[patient]\": string, },",
+        "rendered": " query: { \n/** Patient identifier */\n \"filter[patient]\": string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.filter[patient]": {

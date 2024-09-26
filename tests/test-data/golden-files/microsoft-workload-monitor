@@ -19,18 +19,13 @@ const api = new Api({
 /**
  * Gets the details of all operations possible on the resource provider.
  * @request GET :/providers/Microsoft.WorkloadMonitor/operations
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getProvidersOperationsList(
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * The page-continuation token to use with a paged version of this API.
-     */
+    /** The page-continuation token to use with a paged version of this API. */
     $skiptoken?: string;
   },
   headers?: hasuraSdk.JSONValue,
@@ -51,53 +46,34 @@ export async function getProvidersOperationsList(
 /**
  * Get subscription wide details of components.
  * @request GET :/subscriptions/{subscriptionId}/providers/Microsoft.WorkloadMonitor/componentsSummary
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsComponentsSummaryList(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * Properties to be returned in the response.
-     */
+    /** Properties to be returned in the response. */
     $select?: string;
-    /**
-     * Filter to be applied on the operation.
-     */
+    /** Filter to be applied on the operation. */
     $filter?: string;
-    /**
-     * Apply aggregation.
-     */
+    /** Apply aggregation. */
     $apply?: string;
-    /**
-     * Sort the result on one or more properties.
-     */
+    /** Sort the result on one or more properties. */
     $orderby?: string;
-    /**
-     * Include properties inline in the response.
-     */
+    /** Include properties inline in the response. */
     $expand?: string;
-    /**
-     * Limit the result to the specified number of rows.
-     */
+    /** Limit the result to the specified number of rows. */
     $top?: string;
-    /**
-     * The page-continuation token to use with a paged version of this API.
-     */
+    /** The page-continuation token to use with a paged version of this API. */
     $skiptoken?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<ComponentsCollection> {
   const result = await api.subscriptions.componentsSummaryList({
-    query: query,
     subscriptionId: subscriptionId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -112,53 +88,34 @@ export async function getSubscriptionsComponentsSummaryList(
 /**
  * Get subscription wide health instances.
  * @request GET :/subscriptions/{subscriptionId}/providers/Microsoft.WorkloadMonitor/monitorInstancesSummary
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorInstancesSummaryList(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * Properties to be returned in the response.
-     */
+    /** Properties to be returned in the response. */
     $select?: string;
-    /**
-     * Filter to be applied on the operation.
-     */
+    /** Filter to be applied on the operation. */
     $filter?: string;
-    /**
-     * Apply aggregation.
-     */
+    /** Apply aggregation. */
     $apply?: string;
-    /**
-     * Sort the result on one or more properties.
-     */
+    /** Sort the result on one or more properties. */
     $orderby?: string;
-    /**
-     * Include properties inline in the response.
-     */
+    /** Include properties inline in the response. */
     $expand?: string;
-    /**
-     * Limit the result to the specified number of rows.
-     */
+    /** Limit the result to the specified number of rows. */
     $top?: string;
-    /**
-     * The page-continuation token to use with a paged version of this API.
-     */
+    /** The page-continuation token to use with a paged version of this API. */
     $skiptoken?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MonitorInstancesCollection> {
   const result = await api.subscriptions.monitorInstancesSummaryList({
-    query: query,
     subscriptionId: subscriptionId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -173,73 +130,46 @@ export async function getSubscriptionsMonitorInstancesSummaryList(
 /**
  * Get list of components for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/components
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsComponentsListByResource(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * Properties to be returned in the response.
-     */
+    /** Properties to be returned in the response. */
     $select?: string;
-    /**
-     * Filter to be applied on the operation.
-     */
+    /** Filter to be applied on the operation. */
     $filter?: string;
-    /**
-     * Apply aggregation.
-     */
+    /** Apply aggregation. */
     $apply?: string;
-    /**
-     * Sort the result on one or more properties.
-     */
+    /** Sort the result on one or more properties. */
     $orderby?: string;
-    /**
-     * Include properties inline in the response.
-     */
+    /** Include properties inline in the response. */
     $expand?: string;
-    /**
-     * Limit the result to the specified number of rows.
-     */
+    /** Limit the result to the specified number of rows. */
     $top?: string;
-    /**
-     * The page-continuation token to use with a paged version of this API.
-     */
+    /** The page-continuation token to use with a paged version of this API. */
     $skiptoken?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<ComponentsCollection> {
   const result = await api.subscriptions.componentsListByResource({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -254,58 +184,39 @@ export async function getSubscriptionsComponentsListByResource(
 /**
  * Get details of a component.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/components/{componentId}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsComponentsGet(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
+  /** Component Id. */
+  componentId: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * Properties to be returned in the response.
-     */
+    /** Properties to be returned in the response. */
     $select?: string;
-    /**
-     * Include properties inline in the response.
-     */
+    /** Include properties inline in the response. */
     $expand?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
-  /**
-   * Component Id.
-   */
-  componentId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Component> {
   const result = await api.subscriptions.componentsGet({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
     componentId: componentId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -320,73 +231,46 @@ export async function getSubscriptionsComponentsGet(
 /**
  * Get list of monitor instances for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitorInstances
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorInstancesListByResource(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * Properties to be returned in the response.
-     */
+    /** Properties to be returned in the response. */
     $select?: string;
-    /**
-     * Filter to be applied on the operation.
-     */
+    /** Filter to be applied on the operation. */
     $filter?: string;
-    /**
-     * Apply aggregation.
-     */
+    /** Apply aggregation. */
     $apply?: string;
-    /**
-     * Sort the result on one or more properties.
-     */
+    /** Sort the result on one or more properties. */
     $orderby?: string;
-    /**
-     * Include properties inline in the response.
-     */
+    /** Include properties inline in the response. */
     $expand?: string;
-    /**
-     * Limit the result to the specified number of rows.
-     */
+    /** Limit the result to the specified number of rows. */
     $top?: string;
-    /**
-     * The page-continuation token to use with a paged version of this API.
-     */
+    /** The page-continuation token to use with a paged version of this API. */
     $skiptoken?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MonitorInstancesCollection> {
   const result = await api.subscriptions.monitorInstancesListByResource({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -401,58 +285,39 @@ export async function getSubscriptionsMonitorInstancesListByResource(
 /**
  * Get details of a monitorInstance.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitorInstances/{monitorInstanceId}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorInstancesGet(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
+  /** MonitorInstance Id. */
+  monitorInstanceId: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * Properties to be returned in the response.
-     */
+    /** Properties to be returned in the response. */
     $select?: string;
-    /**
-     * Include properties inline in the response.
-     */
+    /** Include properties inline in the response. */
     $expand?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
-  /**
-   * MonitorInstance Id.
-   */
-  monitorInstanceId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MonitorInstance> {
   const result = await api.subscriptions.monitorInstancesGet({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
     monitorInstanceId: monitorInstanceId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -467,53 +332,36 @@ export async function getSubscriptionsMonitorInstancesGet(
 /**
  * Get list of a monitors of a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitors
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorsListByResource(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * Filter to be applied on the operation.
-     */
+    /** Filter to be applied on the operation. */
     $filter?: string;
-    /**
-     * The page-continuation token to use with a paged version of this API.
-     */
+    /** The page-continuation token to use with a paged version of this API. */
     $skiptoken?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<MonitorsCollection> {
   const result = await api.subscriptions.monitorsListByResource({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -528,50 +376,35 @@ export async function getSubscriptionsMonitorsListByResource(
 /**
  * Get details of a single monitor.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitors/{monitorId}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorsGet(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
+  /** Monitor Id. */
+  monitorId: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
-  /**
-   * Monitor Id.
-   */
-  monitorId: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Monitor> {
   const result = await api.subscriptions.monitorsGet({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
     monitorId: monitorId,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -589,48 +422,34 @@ export async function getSubscriptionsMonitorsGet(
  * @allowrelaxedtypes
  */
 export async function patchSubscriptionsMonitorsUpdate(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
+  /** Monitor Id. */
+  monitorId: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
-  /**
-   * Monitor Id.
-   */
-  monitorId: string,
   /** Request body */
   body: Monitor,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Monitor> {
   const result = await api.subscriptions.monitorsUpdate({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
     monitorId: monitorId,
+    query: query,
     body: body,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
@@ -646,49 +465,34 @@ export async function patchSubscriptionsMonitorsUpdate(
 /**
  * Get list of notification settings for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsNotificationSettingsListByResource(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
-    /**
-     * The page-continuation token to use with a paged version of this API.
-     */
+    /** The page-continuation token to use with a paged version of this API. */
     $skiptoken?: string;
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<NotificationSettingsCollection> {
   const result = await api.subscriptions.notificationSettingsListByResource({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -703,50 +507,35 @@ export async function getSubscriptionsNotificationSettingsListByResource(
 /**
  * Get a of notification setting for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings/{notificationSettingName}
- * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsNotificationSettingsGet(
+  /** The ID of the target subscription. */
+  subscriptionId: string,
+  /** The name of the resource group. The name is case insensitive. */
+  resourceGroupName: string,
+  /** The Namespace of the resource. */
+  resourceNamespace: string,
+  /** The type of the resource. */
+  resourceType: string,
+  /** Name of the resource. */
+  resourceName: string,
+  /** Default string modeled as parameter for URL to work correctly. */
+  notificationSettingName: "default",
   query: {
-    /**
-     * The API version to use for this operation.
-     */
+    /** The API version to use for this operation. */
     "api-version": "2018-08-31-preview";
   },
-  /**
-   * The ID of the target subscription.
-   */
-  subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
-  resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
-  resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
-  resourceType: string,
-  /**
-   * Name of the resource.
-   */
-  resourceName: string,
-  /**
-   * Default string modeled as parameter for URL to work correctly.
-   */
-  notificationSettingName: "default",
   headers?: hasuraSdk.JSONValue,
 ): Promise<NotificationSetting> {
   const result = await api.subscriptions.notificationSettingsGet({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
     notificationSettingName: notificationSettingName,
+    query: query,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
     },
@@ -761,48 +550,35 @@ export async function getSubscriptionsNotificationSettingsGet(
 /**
  * Update notification settings for a resource.
  * @request PUT :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings/{notificationSettingName}
- * @allowrelaxedtypes
  */
 export async function putSubscriptionsNotificationSettingsUpdate(
-  query: {
-    /**
-     * The API version to use for this operation.
-     */
-    "api-version": "2018-08-31-preview";
-  },
-  /**
-   * The ID of the target subscription.
-   */
+  /** The ID of the target subscription. */
   subscriptionId: string,
-  /**
-   * The name of the resource group. The name is case insensitive.
-   */
+  /** The name of the resource group. The name is case insensitive. */
   resourceGroupName: string,
-  /**
-   * The Namespace of the resource.
-   */
+  /** The Namespace of the resource. */
   resourceNamespace: string,
-  /**
-   * The type of the resource.
-   */
+  /** The type of the resource. */
   resourceType: string,
-  /**
-   * Name of the resource.
-   */
+  /** Name of the resource. */
   resourceName: string,
   notificationSettingName: "default",
+  query: {
+    /** The API version to use for this operation. */
+    "api-version": "2018-08-31-preview";
+  },
   /** Request body */
   body: NotificationSetting,
   headers?: hasuraSdk.JSONValue,
 ): Promise<NotificationSetting> {
   const result = await api.subscriptions.notificationSettingsUpdate({
-    query: query,
     subscriptionId: subscriptionId,
     resourceGroupName: resourceGroupName,
     resourceNamespace: resourceNamespace,
     resourceType: resourceType,
     resourceName: resourceName,
     notificationSettingName: notificationSettingName,
+    query: query,
     body: body,
     params: {
       headers: (headers?.value as Record<string, string>) ?? undefined,
