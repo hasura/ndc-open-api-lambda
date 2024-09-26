@@ -5,6 +5,8 @@ import * as context from "../context";
 import * as types from "../types";
 import * as logger from "../../util/logger";
 import * as schemaParser from "../parser/open-api/schema-parser";
+import * as routeTypes from "../parser/open-api/route-types";
+import * as paramGenerator from "./param-generator";
 
 export async function generateCode(
   args: types.GenerateCodeInput,
@@ -22,10 +24,22 @@ export async function generateCode(
   );
   apiTsCode.schemaStore = parsedSchemaStore;
 
+  const routeComponentsArray: functionsTsGenerator.RouteComponents[] = [];
+
+  for (let route of apiTsCode.routes) {
+    const routeComponents: functionsTsGenerator.RouteComponents = {
+      route: route,
+      params: routeTypes.getAllParamsRendered(route, parsedSchemaStore),
+      returnType: routeTypes.getResponseSchema(route),
+    };
+
+    routeComponentsArray.push(routeComponents);
+  }
+
   const functionsTsCode = await functionsTsGenerator.generateFunctionsTsCode(
-    apiTsCode.legacyTypedApiComponents,
-    apiTsCode,
     args.baseUrl,
+    routeComponentsArray,
+    parsedSchemaStore,
   );
   logger.trace("finished function.ts code generation");
 

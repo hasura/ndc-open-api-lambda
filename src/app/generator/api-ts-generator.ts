@@ -1,19 +1,35 @@
 import * as swaggerTypescriptApi from "swagger-typescript-api";
 import * as uriUtil from "../../util/file";
 import * as context from "../context";
-import * as legacyApiTsGenerator from "../parser/open-api/api-generator";
-import * as functionParamsParser from "../parser/open-api/types-parser";
 import * as openApiParser from "../parser/open-api/open-api-parser";
-import * as types from "./types";
-import * as schemaTypes from "../parser/open-api/types";
+import * as schemaTypes from "../parser/open-api/schema-types";
 import * as routeTypes from "../parser/open-api/route-types";
+import { ParsedSchemaStore } from "../parser/open-api/schema-parser";
+import * as logger from "../../util/logger";
+
+/**
+ * This type holds the information about the generated API TypeScript code.
+ */
+export type GeneratedApiTsCode = {
+  schemaComponents: schemaTypes.Schema[];
+  routes: routeTypes.ApiRoute[];
+  typeNames: GeneratedTypeName[];
+  files: swaggerTypescriptApi.GenerateApiOutput;
+  schemaStore?: ParsedSchemaStore;
+};
+
+export type GeneratedTypeName = {
+  typeName: string;
+  rawTypeName: string | undefined;
+  schemaType: "type-name" | "enum-key" | undefined;
+};
 
 export async function generateApiTsCode(
   openApiUri: string,
-): Promise<types.GeneratedApiTsCode> {
+): Promise<GeneratedApiTsCode> {
   const generatedSchemaComponents: schemaTypes.Schema[] = [];
   const generatedRoutes: routeTypes.ApiRoute[] = [];
-  const generatedTypeNames: types.GeneratedTypeName[] = [];
+  const generatedTypeNames: GeneratedTypeName[] = [];
 
   let openApiUrl: string = "";
   let openApiFilePath: string = "";
@@ -23,8 +39,6 @@ export async function generateApiTsCode(
   } else {
     openApiFilePath = uriUtil.getFilePath(openApiUri);
   }
-
-  const typedOpenApiComponents = new legacyApiTsGenerator.ApiComponents();
 
   const genenratedApiTsFiles = await swaggerTypescriptApi.generateApi({
     name: context.getInstance().getApiFileName(),
@@ -39,7 +53,7 @@ export async function generateApiTsCode(
         String: "string",
         Boolean: "boolean",
         Any: "any",
-        Void: "void",
+        Void: "hasuraSdk.JSONValue",
         Unknown: "unknown",
         Null: "null",
         Undefined: "undefined",
@@ -66,8 +80,13 @@ export async function generateApiTsCode(
       },
 
       onCreateRoute: (routeData) => {
-        const route = processApiRoute(routeData, typedOpenApiComponents);
-        generatedRoutes.push(routeData as routeTypes.ApiRoute);
+        const parsedRoute: routeTypes.ApiRoute =
+          routeData as routeTypes.ApiRoute;
+        logger.info(
+          `Processing route: ${routeTypes.getBasicCharacteristics(parsedRoute).method.toUpperCase()} ${routeTypes.getBasicCharacteristics(parsedRoute).route}`,
+        );
+        const route = processApiRoute(parsedRoute);
+        generatedRoutes.push(route);
         return route;
       },
 
@@ -76,7 +95,7 @@ export async function generateApiTsCode(
        * rawTypeName is equal to the component.typename from onCreateComponent hook.
        */
       onFormatTypeName: (typeName, rawTypeName, schemaType) => {
-        const generatedTypeName: types.GeneratedTypeName = {
+        const generatedTypeName: GeneratedTypeName = {
           typeName,
           rawTypeName,
           schemaType,
@@ -93,8 +112,7 @@ export async function generateApiTsCode(
     },
   });
 
-  const generatedTsCode: types.GeneratedApiTsCode = {
-    legacyTypedApiComponents: typedOpenApiComponents,
+  const generatedTsCode: GeneratedApiTsCode = {
     schemaComponents: generatedSchemaComponents,
     routes: generatedRoutes,
     typeNames: generatedTypeNames,
@@ -104,16 +122,12 @@ export async function generateApiTsCode(
   return generatedTsCode;
 }
 
-function processApiRoute(
-  route: swaggerTypescriptApi.ParsedRoute,
-  typedOpenApiComponents: legacyApiTsGenerator.ApiComponents,
-): swaggerTypescriptApi.ParsedRoute {
-  const paramSchema = functionParamsParser.parse(route);
-  const apiRoute: legacyApiTsGenerator.ApiRoute = {
-    route: route,
-    paramSchema: paramSchema,
-  };
+/**
+ * processes the route and fixes the description (removes early end of typescript multiline comments due to cron job patterns mostly)
+ * @param route
+ * @returns
+ */
+function processApiRoute(route: routeTypes.ApiRoute): routeTypes.ApiRoute {
   route.raw.description = openApiParser.fixDescription(route.raw.description);
-  typedOpenApiComponents.addRoute(apiRoute);
   return route;
 }

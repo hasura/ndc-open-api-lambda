@@ -108,7 +108,9 @@ export function renderScalarTypeBooleanSchema(
 export function renderScalarTypeObjectSchema(
   schema: types.SchemaTypeScalar,
 ): string {
-  let paramType = "object";
+  // `object` type is not supported by the NodeJS Connector.
+  // Since we can't know what the object looks like, we'll just use JSONValue
+  let paramType = "hasuraSdk.JSONValue";
   return renderSchema(paramType, schema);
 }
 

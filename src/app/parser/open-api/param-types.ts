@@ -224,6 +224,7 @@ export function getParameterName(schema: BaseSchema): string | undefined {
     return schema.name;
   }
   if (schema.paramName) {
+    schema.name = schema.paramName; // ensure that every schema has a name property
     return schema.paramName;
   }
   return undefined;
