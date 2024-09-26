@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Several bugfixes in `functions.ts` codegen due to integration of new parsers ([#50](https://github.com/hasura/ndc-open-api-lambda/pull/50))
+
 ## [[0.1.5](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.5)] 2024-09-23
 
 - Bugfix: `hasuraSdk.JSONValue` being serialized as null ([#58](https://github.com/hasura/ndc-open-api-lambda/pull/58))
