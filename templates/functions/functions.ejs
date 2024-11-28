@@ -4,7 +4,7 @@ import { Api, <%~ it.importList.join(', ') %> } from './api';
 import * as hasuraSdk from "@hasura/ndc-lambda-sdk"
 
 const api = new Api({
-  baseUrl: '<%~ baseUrl %>',
+  baseUrl: `${process.env.NDC_OAS_BASE_URL}`,
 });
 
 <% for (let routeFunction of it.routeFunctions) { %>

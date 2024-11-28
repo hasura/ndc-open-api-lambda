@@ -8,7 +8,7 @@ import {
 } from "./api";
 
 const api = new Api({
-  baseUrl: "",
+  baseUrl: `${process.env.NDC_OAS_BASE_URL}`,
 });
 
 /**

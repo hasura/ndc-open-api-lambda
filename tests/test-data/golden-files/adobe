@@ -9,7 +9,7 @@ import {
 } from "./api";
 
 const api = new Api({
-  baseUrl: "http://localhost:13191",
+  baseUrl: `${process.env.NDC_OAS_BASE_URL}`,
 });
 
 /**
