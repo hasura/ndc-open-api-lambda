@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[1.1.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.1.0)] 2024-11-28
+
 - Read the value of `NDC_OAS_BASE_URL` at runtime instead of build time ([#66](https://github.com/hasura/ndc-open-api-lambda/pull/66))
 
 ## [[1.0.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.0.0)] 2024-11-07
