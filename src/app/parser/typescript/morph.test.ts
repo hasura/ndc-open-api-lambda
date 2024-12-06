@@ -51,6 +51,44 @@ describe("morph::preserveSavedFunctions", async () => {
   }
 });
 
+const variableTests: TestCase[] = [
+  {
+    name: "Add and Replace",
+    directory: "./test-data/morph-tests/variables/add-and-replace/",
+  },
+  {
+    name: "No change",
+    directory: "./test-data/morph-tests/variables/no-change/",
+  },
+];
+
+describe("morph::preserveSavedVariables", async () => {
+  for (const testCase of variableTests) {
+    before(function () {
+      setupTest(testCase);
+    });
+
+    it(testCase.name, async () => {
+      morph.preserveSavedVariables(
+        testCase.staleSourceFile!,
+        testCase.freshSourceFile!,
+      );
+
+      const gotStr = await prettier.format(
+        testCase.freshSourceFile?.getFullText()!,
+        {
+          parser: "typescript",
+        },
+      );
+
+      assert.equal(testCase.mergedFileContents, gotStr);
+
+      // uncomment to update merged golden file
+      // fs.writeFileSync(path.resolve(testCase.directory, "merged.ts"), gotStr);
+    });
+  }
+});
+
 function setupTest(testCase: TestCase) {
   testCase.directory = path.resolve(__dirname, testCase.directory);
   const staleProject = new ts.Project();
