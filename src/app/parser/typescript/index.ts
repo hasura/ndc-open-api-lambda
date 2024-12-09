@@ -9,18 +9,35 @@ export function preserveUserChanges(
 ): string {
   const staleProject = new ts.Project();
 
-  const staleSourceFile = staleProject.createSourceFile(
+  let staleSourceFile = staleProject.createSourceFile(
     path.resolve(context.getInstance().getOutputDirectory(), "stale.ts"),
     staleContent,
   );
 
-  const freshProject = new ts.Project();
-  const freshSourceFile = freshProject.createSourceFile(
+  let freshProject = new ts.Project();
+  let freshSourceFile = freshProject.createSourceFile(
     path.resolve(context.getInstance().getOutputDirectory(), "fresh.ts"),
     freshContent,
   );
 
   morph.preserveSavedFunctions(staleSourceFile, freshSourceFile);
+
+  // recalcuate nodes
+  staleContent = staleSourceFile.getFullText();
+  freshContent = freshSourceFile.getFullText();
+
+  staleSourceFile = staleProject.createSourceFile(
+    path.resolve(context.getInstance().getOutputDirectory(), "stale.ts"),
+    staleContent,
+  );
+
+  freshProject = new ts.Project();
+  freshSourceFile = freshProject.createSourceFile(
+    path.resolve(context.getInstance().getOutputDirectory(), "fresh.ts"),
+    freshContent,
+  );
+
+  morph.preserveSavedVariables(staleSourceFile, freshSourceFile);
 
   return freshSourceFile.getFullText();
 }
