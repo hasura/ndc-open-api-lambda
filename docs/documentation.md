@@ -14,7 +14,11 @@ This connector is published as a Docker Image. The image name is `ghcr.io/hasura
 
 ### Saving User Changes
 
-When re-introspecting the connector, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a function. This will ensure that that function is not overwritten and the saved function will be added if missing in the newly generated `functions.ts`
+When re-introspecting the connector, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a statement. `@save` is currently supported for the following statements:
+- functions
+- variable/constant declarations. 
+
+This will ensure that the statements marked with `@save` are not overwritten and the saved statements will be added if missing in the newly generated `functions.ts`
 
 Example
 
@@ -26,6 +30,12 @@ Example
 function mutateResponse(response: ApiResponseObject) {
   response.description = "This API does some work. I hope that's helpful";
 }
+
+/**
+ * localhost url for testing APIs
+ * @save
+ */
+const localApiBaseUrl = "http://localhost:8080"
 ```
 
 ### Usage without the DDN CLI
