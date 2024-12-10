@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[1.2.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.2.0)] 2024-12-11
+
 - Extend @save annotation support for variable declaration statements ([#68](https://github.com/hasura/ndc-open-api-lambda/pull/68))
 
 ## [[1.1.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.1.0)] 2024-11-28
