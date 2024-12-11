@@ -16,7 +16,10 @@ This connector is published as a Docker Image. The image name is `ghcr.io/hasura
 
 When re-introspecting the connector, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a statement. `@save` is currently supported for the following statements:
 - functions
-- variable/constant declarations. 
+- variable/constant declarations
+- types
+- interfaces
+- classes
 
 This will ensure that the statements marked with `@save` are not overwritten and the saved statements will be added if missing in the newly generated `functions.ts`
 
@@ -36,6 +39,30 @@ function mutateResponse(response: ApiResponseObject) {
  * @save
  */
 const localApiBaseUrl = "http://localhost:8080"
+
+/**
+ * an article
+ * @save
+ */
+type Article = {
+  title: string;
+  text: string;
+};
+
+/**
+ * @save
+ */
+interface Author {
+  name: string;
+  email: string;
+}
+
+/**
+ * @save
+ */
+class Publisher {
+  publish() {}
+}
 ```
 
 ### Usage without the DDN CLI
