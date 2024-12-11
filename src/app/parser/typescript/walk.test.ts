@@ -9,14 +9,14 @@ type TestCaseResult = {
   isSaved: boolean;
 };
 
-type FunctionTestCase = {
+type TestCase = {
   name: string;
   goldenFile: string;
   testFile: string;
   goldenFileContents?: Record<string, TestCaseResult>;
 };
 
-const getFunctionsWithTagsTests: FunctionTestCase[] = [
+const functionTests: TestCase[] = [
   {
     name: "GoogleHome",
     testFile: "./test-data/walk-tests/function-tests/got",
@@ -25,13 +25,9 @@ const getFunctionsWithTagsTests: FunctionTestCase[] = [
 ];
 
 describe("walk::function-tests", async () => {
-  for (const testCase of getFunctionsWithTagsTests) {
+  for (const testCase of functionTests) {
     before(function () {
-      testCase.testFile = path.resolve(__dirname, testCase.testFile);
-      testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);
-      testCase.goldenFileContents = JSON.parse(
-        readFileSync(testCase.goldenFile).toString(),
-      );
+      setupTestCase(testCase);
     });
 
     it(`${testCase.name}`, function () {
@@ -53,19 +49,7 @@ describe("walk::function-tests", async () => {
   }
 });
 
-type TsVariables = {
-  name: string;
-  isSaved: boolean;
-}
-
-type TestCase = {
-  name: string;
-  goldenFile: string;
-  testFile: string;
-  goldenFileContents?: string;
-};
-
-const getVars: TestCase[] = [
+const variableTests: TestCase[] = [
   {
     name: "getVars",
     testFile: "./test-data/walk-tests/variable-tests/got.ts",
@@ -73,47 +57,35 @@ const getVars: TestCase[] = [
   },
 ];
 
-describe("walk::getVars", async () => {
-  for (const testCase of getVars) {
+describe("walk::variable-tests", async () => {
+  for (const testCase of variableTests) {
     before(function () {
-      testCase.testFile = path.resolve(__dirname, testCase.testFile);
-      testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);
-      testCase.goldenFileContents = readFileSync(testCase.goldenFile).toString();
+      setupTestCase(testCase);
     });
 
     it(`${testCase.name}`, function () {
       const project = new ts.Project();
       const tsSourceFile = project.addSourceFileAtPath(testCase.testFile);
-      const gotVars = tsWalk.getAllVariables(tsSourceFile);
+      const vars = tsWalk.getAllVariablesMap(tsSourceFile);
+      const gotMap: Record<string, TestCaseResult> = {};
 
-      const gotArr: TsVariables[] = [];
-
-      gotVars.forEach((v) => {
-        gotArr.push({
-          name: tsWalk.getVariableName(v) ?? "",
-          isSaved: tsWalk.isNodeSaved(v),
-        });
+      vars.forEach((variable, variableName) => {
+        const jsDocTags = tsWalk.getAllJsDocTags(variable).sort();
+        const isSaved = tsWalk.isNodeSaved(variable);
+        gotMap[variableName] = { jsDocTags, isSaved };
       });
 
-      sortTsVariables(gotArr);
+      assert.deepEqual(testCase.goldenFileContents, gotMap);
 
-      const wantArr: TsVariables[] = JSON.parse(testCase.goldenFileContents!!);
-
-      assert.deepEqual(wantArr, gotArr);
-
-      // writeFileSync(testCase.goldenFile, JSON.stringify(gotArr, null, 2));
+      // writeFileSync(testCase.goldenFile, JSON.stringify(gotMap, null, 2));
     });
   }
 });
 
-function sortTsVariables(arr: TsVariables[]) {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i]!!.name > arr[j]!!.name) {
-        const temp: TsVariables = arr[i]!!;
-        arr[i] = arr[j]!!;
-        arr[j]!! = temp;
-      }
-    }
-  }
+function setupTestCase(testCase: TestCase) {
+  testCase.testFile = path.resolve(__dirname, testCase.testFile);
+      testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);
+      testCase.goldenFileContents = JSON.parse(
+        readFileSync(testCase.goldenFile).toString(),
+      );
 }
