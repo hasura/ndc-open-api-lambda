@@ -84,8 +84,8 @@ describe("walk::variable-tests", async () => {
 
 function setupTestCase(testCase: TestCase) {
   testCase.testFile = path.resolve(__dirname, testCase.testFile);
-      testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);
-      testCase.goldenFileContents = JSON.parse(
-        readFileSync(testCase.goldenFile).toString(),
-      );
+  testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);
+  testCase.goldenFileContents = JSON.parse(
+    readFileSync(testCase.goldenFile).toString(),
+  );
 }
