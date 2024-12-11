@@ -1,0 +1,679 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import {
+  AccessibilityRequest,
+  AlarmVolumeRequest,
+  Api,
+  AppDeviceIDRequest,
+  ChangeDiscoverabilityRequest,
+  CheckReadyStatusRequest,
+  ConnecttoWiFiNetworkRequest,
+  DeleteAlarmsandTimersRequest,
+  Example1,
+  Example11,
+  Example110,
+  Example111,
+  Example112,
+  Example113,
+  Example114,
+  Example12,
+  Example13,
+  Example14,
+  Example15,
+  Example16,
+  Example17,
+  Example18,
+  Example19,
+  ForgetWiFiNetworkRequest,
+  ForgetpaireddeviceRequest,
+  Getcurrentstate,
+  Getcurrentvalues,
+  Getvolume,
+  NightModesettingsRequest,
+  PairwithSpeakerRequest,
+  RebootandFactoryResetRequest,
+  ScanfordevicesRequest,
+  SetEqualizerValuesRequest,
+  SetEurekaInfoRequest,
+  TestInternetDownloadSpeedRequest,
+} from "./api";
+
+const api = new Api({
+  baseUrl: `${process.env.NDC_OAS_BASE_URL}`,
+});
+
+/**
+ * Legal Notice
+ * @request GET :/NOTICE.html.gz
+ * @readonly
+ */
+export async function getNoticeHtmlGzLegalNotice(
+  headers?: hasuraSdk.JSONValue,
+): Promise<string> {
+  const result = await api.noticeHtmlGz.legalNotice({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Accessibility
+ * @request POST :/assistant/a11y_mode
+ */
+export async function postAssistantAccessibility(
+  /** Request body */
+  data: AccessibilityRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<Getcurrentvalues> {
+  const result = await api.assistant.accessibility({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Alarms and Timers
+ * @request GET :/assistant/alarms
+ * @readonly
+ * @save
+ */
+export async function getAssistantGetAlarmsandTimers(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example18> {
+  const result = await api.assistant.getAlarmsandTimers({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Delete Alarms and Timers
+ * @request POST :/assistant/alarms/delete
+ */
+export async function postAssistantDeleteAlarmsandTimers(
+  /** Request body */
+  data: DeleteAlarmsandTimersRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example19> {
+  const result = await api.assistant.deleteAlarmsandTimers({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Alarm Volume
+ * @request POST :/assistant/alarms/volume
+ */
+export async function postAssistantAlarmVolume(
+  /** Request body */
+  data: AlarmVolumeRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<Getvolume> {
+  const result = await api.assistant.alarmVolume({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Check Ready Status
+ * @request POST :/assistant/check_ready_status
+ * @save
+ */
+export async function postAssistantCheckReadyStatus(
+  /** Request body */
+  data: CheckReadyStatusRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example13> {
+  const result = await api.assistant.checkReadyStatus({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Do Not Disturb
+ * @request POST :/assistant/notifications
+ */
+export async function postAssistantDoNotDisturb(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Getcurrentstate> {
+  const result = await api.assistant.doNotDisturb({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Night Mode settings
+ * @request POST :/assistant/set_night_mode_params
+ */
+export async function postAssistantNightModesettings(
+  /** Request body */
+  data: NightModesettingsRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example17> {
+  const result = await api.assistant.nightModesettings({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Forget paired device
+ * @request POST :/bluetooth/bond
+ */
+export async function postBluetoothForgetpaireddevice(
+  /** Request body */
+  data: ForgetpaireddeviceRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.bluetooth.forgetpaireddevice({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Pair with Speaker
+ * @request POST :/bluetooth/connect
+ */
+export async function postBluetoothPairwithSpeaker(
+  /** Request body */
+  data: PairwithSpeakerRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.bluetooth.pairwithSpeaker({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * @save
+ * Change Discoverability
+ * @request POST :/bluetooth/discovery
+ */
+export async function postBluetoothChangeDiscoverability(
+  /** Request body */
+  data: ChangeDiscoverabilityRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.bluetooth.changeDiscoverability({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Paired Devices
+ * @request GET :/bluetooth/get_bonded
+ * @readonly
+ */
+export async function getBluetoothGetPairedDevices(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example111[]> {
+  const result = await api.bluetooth.getPairedDevices({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Scan for devices
+ * @request POST :/bluetooth/scan
+ */
+export async function postBluetoothScanfordevices(
+  /** Request body */
+  data: ScanfordevicesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.bluetooth.scanfordevices({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Scan Results
+ * @request GET :/bluetooth/scan_results
+ * @readonly
+ */
+export async function getBluetoothGetScanResults(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example112[]> {
+  const result = await api.bluetooth.getScanResults({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Status
+ * @request GET :/bluetooth/status
+ * @readonly
+ */
+export async function getBluetoothStatus(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example110> {
+  const result = await api.bluetooth.status({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Saved Networks
+ * @request GET :/configured_networks
+ * @readonly
+ */
+export async function getConfiguredNetworksGetSavedNetworks(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example113[]> {
+  const result = await api.configuredNetworks.getSavedNetworks({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Connect to Wi-Fi Network
+ * @save
+ * @request POST :/connect_wifi
+ */
+export async function postConnectWifiConnecttoWiFiNetwork(
+  /** Request body */
+  data: ConnecttoWiFiNetworkRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.connectWifi.connecttoWiFiNetwork({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Eureka Info
+ * @request GET :/eureka_info
+ * @readonly
+ */
+export async function getEurekaInfoEurekaInfo(
+  query: { params: string; options: string; nonce: number },
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example1> {
+  const result = await api.eurekaInfo.eurekaInfo({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Forget Wi-Fi Network
+ * @request POST :/forget_wifi
+ */
+export async function postForgetWifiForgetWiFiNetwork(
+  /** Request body */
+  data: ForgetWiFiNetworkRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.forgetWifi.forgetWiFiNetwork({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * App Device ID
+ * @request POST :/get_app_device_id
+ */
+export async function postGetAppDeviceIdAppDeviceId(
+  /** Request body */
+  data: AppDeviceIDRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example11> {
+  const result = await api.getAppDeviceId.appDeviceId({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Chromecast Icon
+ * @request GET :/icon.png
+ * @readonly
+ */
+export async function getIconPngChromecastIcon(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.iconPng.chromecastIcon({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Offer
+ * @request GET :/offer
+ * @readonly
+ */
+export async function getOfferOffer(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example12> {
+  const result = await api.offer.offer({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Reboot and Factory Reset
+ * @request POST :/reboot
+ * @save
+ */
+export async function postRebootRebootandFactoryReset(
+  /** Request body */
+  data: RebootandFactoryResetRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.reboot.rebootandFactoryReset({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Get Wi-Fi Scan Results
+ * @request GET :/scan_results
+ * @readonly
+ */
+export async function getScanResultsGetWiFiScanResults(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example114[]> {
+  const result = await api.scanResults.getWiFiScanResults({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Scan for Networks
+ * @request POST :/scan_wifi
+ */
+export async function postScanWifiScanforNetworks(
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.scanWifi.scanforNetworks({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Set Eureka Info
+ * @request POST :/set_eureka_info
+ */
+export async function postSetEurekaInfoSetEurekaInfo(
+  /** Request body */
+  data: SetEurekaInfoRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.setEurekaInfo.setEurekaInfo({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Locales
+ * @request GET :/supported_locales
+ * @readonly
+ */
+export async function getSupportedLocalesLocales(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example15[]> {
+  const result = await api.supportedLocales.locales({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Timezones
+ * @request GET :/supported_timezones
+ * @readonly
+ */
+export async function getSupportedTimezonesTimezones(
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example14[]> {
+  const result = await api.supportedTimezones.timezones({
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Test Internet Download Speed
+ * @request POST :/test_internet_download_speed
+ */
+export async function postTestInternetDownloadSpeedTestInternetDownloadSpeed(
+  /** Request body */
+  data: TestInternetDownloadSpeedRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<Example16> {
+  const result = await api.testInternetDownloadSpeed.testInternetDownloadSpeed({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}
+
+/**
+ * Set Equalizer Values
+ * @request POST :/user_eq/set_equalizer
+ */
+export async function postUserEqSetEqualizerValues(
+  /** Request body */
+  data: SetEqualizerValuesRequest,
+  headers?: hasuraSdk.JSONValue,
+): Promise<hasuraSdk.JSONValue> {
+  const result = await api.userEq.setEqualizerValues({
+    data: data,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

@@ -4,27 +4,27 @@ import * as ts from "ts-morph";
 import * as tsWalk from "./walk";
 import * as assert from "assert";
 
-type FunctionsAndTags = {
-  functionName: string;
+type TestCaseResult = {
   jsDocTags: string[];
+  isSaved: boolean;
 };
 
 type FunctionTestCase = {
   name: string;
   goldenFile: string;
   testFile: string;
-  goldenFileContents?: FunctionsAndTags[];
+  goldenFileContents?: Record<string, TestCaseResult>;
 };
 
 const getFunctionsWithTagsTests: FunctionTestCase[] = [
   {
     name: "GoogleHome",
-    testFile: "../../../../tests/test-data/golden-files/google-home",
-    goldenFile: "./test-data/walk-tests/google-home-functions-with-tags.json",
+    testFile: "./test-data/walk-tests/function-tests/got",
+    goldenFile: "./test-data/walk-tests/function-tests/want.json",
   },
 ];
 
-describe("walk::getFunctionsWithJSDocTags", async () => {
+describe("walk::function-tests", async () => {
   for (const testCase of getFunctionsWithTagsTests) {
     before(function () {
       testCase.testFile = path.resolve(__dirname, testCase.testFile);
@@ -37,19 +37,18 @@ describe("walk::getFunctionsWithJSDocTags", async () => {
     it(`${testCase.name}`, function () {
       const project = new ts.Project();
       const tsSourceFile = project.addSourceFileAtPath(testCase.testFile);
-      const gotMap = tsWalk.getFunctionsWithJSDocTags(tsSourceFile);
-      const gotArray: FunctionsAndTags[] = [];
+      const functions = tsWalk.getAllFunctionsMap(tsSourceFile);
+      const gotMap: Record<string, TestCaseResult> = {};
 
-      gotMap.forEach((value, key) => {
-        gotArray.push({
-          functionName: key,
-          jsDocTags: value.tags,
-        });
+      functions.forEach((func, funcName) => {
+        const jsDocTags = tsWalk.getAllJsDocTags(func).sort();
+        const isSaved = tsWalk.isNodeSaved(func);
+        gotMap[funcName] = { jsDocTags, isSaved };
       });
 
-      assert.deepEqual(testCase.goldenFileContents, gotArray);
+      assert.deepEqual(testCase.goldenFileContents, gotMap);
 
-      // writeFileSync(testCase.goldenFile, JSON.stringify(gotArray));
+      // writeFileSync(testCase.goldenFile, JSON.stringify(gotMap, null, 2));
     });
   }
 });

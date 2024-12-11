@@ -15,24 +15,25 @@ export function preserveSavedFunctions(
   freshTsSourceFile: tsMorph.SourceFile,
 ) {
   const staleSourceFunctions =
-    walk.getFunctionsWithJSDocTags(staleTsSourceFile);
+    walk.getAllFunctionsMap(staleTsSourceFile);
   const freshSourceFunctions =
-    walk.getFunctionsWithJSDocTags(freshTsSourceFile);
+    walk.getAllFunctionsMap(freshTsSourceFile);
 
-  staleSourceFunctions.forEach((value, key) => {
-    if (!walk.isSavedFunction(value)) {
+  staleSourceFunctions.forEach((func, funcName) => {
+    if (!walk.isNodeSaved(func)) {
       return;
     }
 
+    const freshFunction = freshSourceFunctions.get(funcName);
+
     // case 1: @save function exists in the fresh source file
-    if (freshSourceFunctions.has(key)) {
+    if (freshFunction) {
       // in this case, the function should be replaced with the stale function
-      const freshFunction = freshSourceFunctions.get(key);
-      freshFunction?.function.replaceWithText(value.function.getFullText());
+      freshFunction.replaceWithText(func.getFullText());
     } else {
       // case 2: @save function does not exist in the new/fresh ts source file
       // in this case, we add the @save function to the fresh ts source file
-      freshTsSourceFile.addStatements(value.function.getFullText());
+      freshTsSourceFile.addStatements(func.getFullText());
     }
   });
 }
