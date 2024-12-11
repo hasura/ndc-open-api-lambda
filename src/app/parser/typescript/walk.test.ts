@@ -19,8 +19,8 @@ type TestCase = {
 const functionTests: TestCase[] = [
   {
     name: "GoogleHome",
-    testFile: "./test-data/walk-tests/function-tests/got",
-    goldenFile: "./test-data/walk-tests/function-tests/want.json",
+    testFile: "./test-data/walk-tests/functions/got",
+    goldenFile: "./test-data/walk-tests/functions/want.json",
   },
 ];
 
@@ -52,8 +52,8 @@ describe("walk::function-tests", async () => {
 const variableTests: TestCase[] = [
   {
     name: "getVars",
-    testFile: "./test-data/walk-tests/variable-tests/got.ts",
-    goldenFile: "./test-data/walk-tests/variable-tests/want.json",
+    testFile: "./test-data/walk-tests/variables/got.ts",
+    goldenFile: "./test-data/walk-tests/variables/want.json",
   },
 ];
 
