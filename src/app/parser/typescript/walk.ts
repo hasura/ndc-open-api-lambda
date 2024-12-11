@@ -1,34 +1,17 @@
 import * as ts from "ts-morph";
 import * as logger from "../../../util/logger"
 
-export type FunctionWithTagsAsStringArray = {
-  function: ts.FunctionDeclaration;
-  tags: string[];
-};
-
-/**
- *
- * @param tsSourceFile
- * @returns map of function name to type FunctionWithTagsAsStringArray
- */
-export function getFunctionsWithJSDocTags(
-  tsSourceFile: ts.SourceFile,
-): Map<string, FunctionWithTagsAsStringArray> {
-  const functionsWithJSDocTags = new Map<
-    string,
-    FunctionWithTagsAsStringArray
-  >();
+export function getAllFunctionsMap(tsSourceFile: ts.SourceFile): Map<string, ts.FunctionDeclaration> {
   const allFunctions = getAllFunctions(tsSourceFile);
+  const allFunctionsMap: Map<string, ts.FunctionDeclaration> = new Map();
   allFunctions.forEach((func) => {
     const functionName = getFunctionName(func);
-    const allJSDocs = getAllJSDocs(func);
-    let tags: string[] = [];
-    allJSDocs.forEach((jsDoc) => {
-      tags = getAllJSDocsTagsAsStringArray(jsDoc);
-    });
-    functionsWithJSDocTags.set(functionName!, { function: func, tags: tags });
+    if (!functionName) {
+      return;
+    }
+    allFunctionsMap.set(functionName, func);
   });
-  return functionsWithJSDocTags;
+  return allFunctionsMap;
 }
 
 export function getAllFunctions(
@@ -46,6 +29,25 @@ export function getAllFunctions(
   return allFunctions;
 }
 
+export function getAllJsDocTags(node: ts.Node): string[] {
+  const allJSDocs = getAllJSDocs(node);
+  const allTags: string[] = [];
+  if (!allJSDocs) {
+    return allTags;
+  }
+
+  for (let i =0; i < allJSDocs.length; i++) {
+    const jsDoc = allJSDocs[i];
+    if (!jsDoc) {
+      continue;
+    }
+    const tags = extractTagsFromJsDocs(jsDoc);
+    allTags.push(...tags);
+    
+  }
+  return allTags;
+}
+
 export function getAllJSDocs(node: ts.Node) {
   const allJSDocTags: ts.JSDoc[] = [];
   if (!node) {
@@ -59,7 +61,7 @@ export function getAllJSDocs(node: ts.Node) {
   return allJSDocTags;
 }
 
-export function getAllJSDocsTagsAsStringArray(node: ts.JSDoc) {
+function extractTagsFromJsDocs(node: ts.JSDoc) {
   const allTags: string[] = [];
   if (!node) {
     return allTags;
@@ -74,27 +76,9 @@ export function getFunctionName(node: ts.FunctionDeclaration) {
   return node.getName();
 }
 
-export function isSavedFunction(func: FunctionWithTagsAsStringArray): boolean {
-  return func.tags.indexOf("save") > -1;
-}
-
 export function isNodeSaved(node: ts.Node): boolean {
-  const allJSDocs = getAllJSDocs(node);
-  if (!allJSDocs) {
-    return false;
-  }
-
-  for (let i =0; i < allJSDocs.length; i++) {
-    const jsDoc = allJSDocs[i];
-    if (!jsDoc) {
-      continue;
-    }
-    const allTags = getAllJSDocsTagsAsStringArray(jsDoc);
-    if (allTags.includes("save")) {
-      return true;
-    }
-  }
-  return false;
+  const allTags = getAllJsDocTags(node);
+  return allTags.includes("save")
 }
 
 /**
