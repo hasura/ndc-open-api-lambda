@@ -318,7 +318,7 @@ export function isRelaxedTypeTagRequiredForScalarTypeSchema(
  *
  * @param schema
  */
-export function isRelaxedTypeTagRequiredForObjectTypeSchema(
+export function isRelaxedTypeTagRequiredForObjectTypeSchemaShallow(
   schema: SchemaTypeObject,
 ): boolean {
   const children = getSchemaTypeObjectChildrenMap(schema);
@@ -341,12 +341,12 @@ export function isRelaxedTypeTagRequiredForObjectTypeSchema(
  * More Reading: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
  *
  * ### WARNING
- * This function should be called the child of the schema has been processed.
+ * This function should be called after the child of the schema has been processed.
  * This function *DOES NOT* process the tag requirements for the schema's child
  *
  * @param schema
  */
-export function isRelaxedTypeTagRequiredForArrayTypeSchema(
+export function isRelaxedTypeTagRequiredForArrayTypeSchemaShallow(
   schema: SchemaTypeArray,
 ): boolean {
   const child = getSchemaTypeArrayChild(schema);

@@ -127,7 +127,7 @@ export function renderObjectTypeSchema(
   }
   const paramType = `{ ${renderedProperties.join(" ")} }`;
   schema._$requiresRelaxedTypeTag =
-    types.isRelaxedTypeTagRequiredForObjectTypeSchema(schema);
+    types.isRelaxedTypeTagRequiredForObjectTypeSchemaShallow(schema);
   return renderSchema(paramType, schema);
 }
 
@@ -139,7 +139,7 @@ export function renderArrayTypeSchema(
   const renderedProperty = renderParams(childSchema, schemaStore)._$rendered!;
   const paramType = `(${renderedProperty})[]`;
   schema._$requiresRelaxedTypeTag =
-    types.isRelaxedTypeTagRequiredForArrayTypeSchema(schema);
+    types.isRelaxedTypeTagRequiredForArrayTypeSchemaShallow(schema);
   return renderSchema(paramType, schema);
 }
 
