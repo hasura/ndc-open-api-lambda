@@ -79,7 +79,7 @@ describe("header-parser", function () {
       assert.deepStrictEqual(got, testCase.expected);
 
       // uncomment to update golden file
-      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(Object.fromEntries(got)));
+      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(Object.fromEntries(got), null, 2));
     });
   }
 });
