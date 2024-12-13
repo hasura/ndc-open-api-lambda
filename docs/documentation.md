@@ -21,7 +21,9 @@ You can use either of the following ways to add additional headers to the OpenAP
 Since the OpenAPI Connector is simply a codegen mechnism on top of the NodeJS Connector, header forwarding works similarly for both. The OpenAPI Connector defines an optional `headers` variable of type `hasuraSdk.JSONValue` for every function in the `functions.ts` file. This variable, when configured in HML files, can recieve headers that are forwarded to it from the DDN Engine. [Read more about HTTP Header Forwarding in DDN](https://hasura.io/docs/3.0/recipes/business-logic/http-header-forwarding/).
 
 #### Example
+
 Add header forwarding to your OpenAPI Connector's `DataConnectorLink`
+
 ```yaml
 kind: DataConnectorLink
 version: v1
@@ -31,7 +33,7 @@ definition:
   headers:
     Authorization:
       valueFromEnv: APP_MYOPENAPI_AUTHORIZATION_HEADER # this header is received and consumed by the OpenAPI Connector. It is not forwarded to functions / API calls
-  
+
   # setup header forwarding
   argumentPresets:
     - argument: headers # the variable in functions that will receive headers
@@ -39,7 +41,7 @@ definition:
         httpHeaders:
           forward:
             - my-dynamic-header # a header whose value can be set at the time of making the GraphQL Request (eg. from the DDN Console)
-          additional: 
+          additional:
             auth: # a static header added to every request
               literal: "Bearer my-bearer-token" # static value of the header
 ```
@@ -47,6 +49,7 @@ definition:
 ### Via Typescript (`functions.ts`) File
 
 The `api` constant in the `functions.ts` file can be modified to add additional headers to every API request in the following way:
+
 ```javascript
 const api = new Api({
   baseUrl: `${process.env.NDC_OAS_BASE_URL}`,
@@ -62,14 +65,15 @@ const api = new Api({
 ## Saving User Changes
 
 When re-introspecting the connector, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a statement. `@save` is currently supported for the following statements:
+
 - functions
-- variable/constant declarations. 
+- variable/constant declarations.
 
 This will ensure that the statements marked with `@save` are not overwritten and the saved statements will be added if missing in the newly generated `functions.ts`
 
 Example
 
-```
+```javascript
 /**
  * Dummy function that mutates an API response
  * @save
@@ -96,7 +100,7 @@ The Docker Container will output the generated files at `/etc/connector`. Please
 
 ### Examples
 
-```
+```bash
 # get command documentation/help
 docker run --rm ghcr.io/hasura/ndc-open-api-lambda:v1.2.0 update -h
 
@@ -121,7 +125,7 @@ You can use the Open API Connector via Docker or via the bundled CLI.
 
 Clone the repository and run the following commands to build the Docker image that can then be used for code generation.
 
-```
+```bash
 cd ndc-open-api-lambda
 
 # build the docker image with the name `ndc-oas-lambda` and tag `latest`
@@ -154,7 +158,7 @@ NOTE: You can also pass CLI flags with values to the Docker Container instead of
 
 You can install the OpenAPI Connector as a CLI on your system. Please ensure you have NPM and Node 20+ installed. You can install and run the CLI using the following commands
 
-```
+```bash
 cd ndc-open-api-lambda
 
 # install dependencies and then install the CLI
