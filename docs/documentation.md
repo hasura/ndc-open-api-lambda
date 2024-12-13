@@ -2,7 +2,7 @@
 
 This connector is published as a Docker Image. The image name is `ghcr.io/hasura/ndc-open-api-lambda`. The Docker Image accepts the following environment variables that can be used to alter its functionality.
 
-### Supported Environment Variables
+## Supported Environment Variables
 
 | Environment Variable       | Description                                                                                                                                                                                                          | Required | Example Value                                                                                         |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
@@ -12,7 +12,7 @@ This connector is published as a Docker Image. The image name is `ghcr.io/hasura
 | HASURA_PLUGIN_LOG_LEVEL    | The log level. Possible values: `trace`, `debug`, `info`, `warn`, `error`, `fatal`, `panic`. Defaults to `info`                                                                                                      | false    | info                                                                                                  |
 | NDC_OAS_LAMBDA_PRETTY_LOGS | A Boolean flag to print human readable logs instead of JSON. Defaults to `false`                                                                                                                                     | false    | true                                                                                                  |
 
-### Saving User Changes
+## Saving User Changes
 
 When re-introspecting the connector, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a statement. `@save` is currently supported for the following statements:
 - functions
@@ -38,7 +38,7 @@ function mutateResponse(response: ApiResponseObject) {
 const localApiBaseUrl = "http://localhost:8080"
 ```
 
-### Usage without the DDN CLI
+## Usage without the DDN CLI
 
 The Docker Image can be used without the DDN CLI as a codegen tool for the [NDC NodeJS Lambda Connector](https://github.com/hasura/ndc-nodejs-lambda). Please see the Examples section on how to do that.
 
