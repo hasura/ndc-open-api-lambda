@@ -352,7 +352,7 @@ describe("param-generator", async () => {
       assert.deepStrictEqual(got, testCase.expected);
 
       // uncomment to update golden file
-      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(got));
+      // fs.writeFileSync(testCase.goldenFile, JSON.stringify(got, null, 2));
     });
   }
 });

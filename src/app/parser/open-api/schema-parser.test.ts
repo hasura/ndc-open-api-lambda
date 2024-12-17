@@ -286,7 +286,7 @@ describe("schema-parser", async () => {
       assert.deepStrictEqual(got, expected);
 
       // uncomment to write to golden file
-      // fs.writeFileSync(goldenFile, JSON.stringify(gotTyped));
+      // fs.writeFileSync(goldenFile, JSON.stringify(gotTyped, null, 2));
     });
 
     it(`schema-types::${testCase.name}`, function () {
@@ -310,7 +310,7 @@ describe("schema-parser", async () => {
       assert.deepStrictEqual(got, expected);
 
       // uncomment to write to golden file
-      // fs.writeFileSync(goldenFile, JSON.stringify(got));
+      // fs.writeFileSync(goldenFile, JSON.stringify(got, null, 2));
     });
   }
 });
