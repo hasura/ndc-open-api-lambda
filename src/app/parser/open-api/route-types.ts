@@ -5,6 +5,8 @@ import * as logger from "../../../util/logger";
 import * as paramGenerator from "../../generator/param-generator";
 import { ParsedSchemaStore } from "./schema-parser";
 
+const cj = require("circular-json");
+
 enum RequestType {
   Get = "get",
   Post = "post",
@@ -51,10 +53,31 @@ export type ApiRoute = swaggerTypescriptApi.ParsedRoute & {
   responseBodySchema: {
     description: string | undefined;
     contentKind: string | undefined;
+    contentTypes: string[] | undefined;
     type: string;
     content:
       | {
           "application/json":
+            | {
+                schema: paramTypes.Schema | undefined;
+              }
+            | undefined;
+          "application/xml":
+            | {
+                schema: paramTypes.Schema | undefined;
+              }
+            | undefined;
+          "text/plain":
+            | {
+                schema: paramTypes.Schema | undefined;
+              }
+            | undefined;
+          "plain/text":
+            | {
+                schema: paramTypes.Schema | undefined;
+              }
+            | undefined;
+          "*/*":
             | {
                 schema: paramTypes.Schema | undefined;
               }
@@ -219,6 +242,14 @@ export function hasResponseType(route: ApiRoute): boolean {
   return false;
 }
 
+function getResponseSchemaUtil(route: ApiRoute): paramTypes.Schema | undefined {
+  return route.responseBodySchema?.content?.["application/json"]?.schema
+    ?? route.responseBodySchema?.content?.["text/plain"]?.schema
+    ?? route.responseBodySchema?.content?.["application/xml"]?.schema
+    ?? route.responseBodySchema?.content?.["plain/text"]?.schema
+    ?? route.responseBodySchema?.content?.["*/*"]?.schema;
+}
+
 export function getResponseSchema(route: ApiRoute): paramTypes.Schema {
   let schemaType = route.responseBodySchema?.type;
   if (!hasResponseType(route)) {
@@ -231,23 +262,34 @@ export function getResponseSchema(route: ApiRoute): paramTypes.Schema {
     schemaType = "hasuraSdk.JSONValue";
   }
 
-  /**
-   * Since there isn't a proper parser for return types
-   * we'll render whatever is given by the library
-   */
-  const schema: paramTypes.SchemaTypeCustomType = {
-    paramName: undefined,
-    name: undefined,
-    required: true,
-    description: route.responseBodySchema?.description ?? "",
-    type: schemaType,
-    schema:
-      route.responseBodySchema?.content?.["application/json"]?.schema ??
-      paramTypes.getEmptySchema(),
-    _$rendered: schemaType,
-    _$forcedCustom: true,
-    _$requiresRelaxedTypeTag: false,
-  };
+  let schema = getResponseSchemaUtil(route);
+
+  if (!schema) {
+    logger.warn(
+      `No response schema type found for API Route ${getFormattedRouteName(route)}`,
+    );
+    logger.debug(
+      `Response content types for API Route ${getFormattedRouteName(route)}:\n${JSON.stringify(route.responseBodySchema?.contentTypes ?? "")}`,
+    );
+    /**
+     * Since there isn't a proper return type
+     * we'll switch the type to `hasuraSdk.JSONValue`
+     * and return a custom schema
+     */
+    schema = {
+      paramName: undefined,
+      name: undefined,
+      required: true,
+      description: route.responseBodySchema?.description ?? "",
+      type: schemaType,
+      schema: paramTypes.getEmptySchema(),
+      _$rendered: schemaType,
+      _$forcedCustom: true,
+      _$requiresRelaxedTypeTag: false,
+    };
+    return schema;
+  }
+  schema._$rendered = schemaType;
   return schema;
 }
 
