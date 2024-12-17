@@ -14,28 +14,10 @@ export function preserveSavedFunctions(
   staleTsSourceFile: tsMorph.SourceFile,
   freshTsSourceFile: tsMorph.SourceFile,
 ) {
-  const staleSourceFunctions =
-    walk.getAllFunctionsMap(staleTsSourceFile);
-  const freshSourceFunctions =
-    walk.getAllFunctionsMap(freshTsSourceFile);
+  const staleSourceFunctions = walk.getAllFunctionsMap(staleTsSourceFile);
+  const freshSourceFunctions = walk.getAllFunctionsMap(freshTsSourceFile);
 
-  staleSourceFunctions.forEach((func, funcName) => {
-    if (!walk.isNodeSaved(func)) {
-      return;
-    }
-
-    const freshFunction = freshSourceFunctions.get(funcName);
-
-    // case 1: @save function exists in the fresh source file
-    if (freshFunction) {
-      // in this case, the function should be replaced with the stale function
-      freshFunction.replaceWithText(func.getFullText());
-    } else {
-      // case 2: @save function does not exist in the new/fresh ts source file
-      // in this case, we add the @save function to the fresh ts source file
-      freshTsSourceFile.addStatements(func.getFullText());
-    }
-  });
+  preserveNode(staleSourceFunctions, freshSourceFunctions, freshTsSourceFile);
 }
 
 /**
@@ -50,22 +32,63 @@ export function preserveSavedVariables(
   const staleSourceVariables = walk.getAllVariablesMap(staleTsSourceFile);
   const freshSourceVariables = walk.getAllVariablesMap(freshTsSourceFile);
 
-  staleSourceVariables.forEach((staleVariable, staleVariableName) => {
-    if (!walk.isNodeSaved(staleVariable)) {
+  preserveNode(staleSourceVariables, freshSourceVariables, freshTsSourceFile);
+}
+
+export function preserveSavedTypes(
+  staleTsSourceFile: tsMorph.SourceFile,
+  freshTsSourceFile: tsMorph.SourceFile,
+) {
+  const staleSourceTypes = walk.getAllTypeDeclarationsMap(staleTsSourceFile);
+  const freshSourceTypes = walk.getAllTypeDeclarationsMap(freshTsSourceFile);
+
+  preserveNode(staleSourceTypes, freshSourceTypes, freshTsSourceFile);
+}
+
+export function preserveSavedInterfaces(
+  staleTsSourceFile: tsMorph.SourceFile,
+  freshTsSourceFile: tsMorph.SourceFile,
+) {
+  const staleSourceInterfaces = walk.getAllInterfaceDeclarationsMap(staleTsSourceFile);
+  const freshSourceInterfaces = walk.getAllInterfaceDeclarationsMap(freshTsSourceFile);
+
+  preserveNode(staleSourceInterfaces, freshSourceInterfaces, freshTsSourceFile);
+}
+
+export function preserveSavedClasses(
+  staleTsSourceFile: tsMorph.SourceFile,
+  freshTsSourceFile: tsMorph.SourceFile,
+) {
+  const staleSourceClasses = walk.getAllClassDeclarationsMap(staleTsSourceFile);
+  const freshSourceClasses = walk.getAllClassDeclarationsMap(freshTsSourceFile);
+
+  preserveNode(staleSourceClasses, freshSourceClasses, freshTsSourceFile);
+}
+
+/**
+ * this function preservers nodes that are marked with `@save` annotation in the stale source file
+ * if a saved node is missing in the fresh source file, it will be copied to it
+ * @param staleNodes 
+ * @param freshNodes 
+ * @param freshTsSourceFile 
+ */
+function preserveNode(staleNodes: Map<string, tsMorph.Node>, freshNodes: Map<string, tsMorph.Node>, freshTsSourceFile: tsMorph.SourceFile,) {
+  staleNodes.forEach((staleNode, staleNodeName) => {
+    if (!walk.isNodeSaved(staleNode)) {
       return;
     }
+    const freshNode = freshNodes.get(staleNodeName);
 
-    const freshVariable = freshSourceVariables.get(staleVariableName);
-
-    // case 1: @save variable exists in the fresh source file
-    if (freshVariable) {
-      // in this case, the variable should be replaced with the stale variable
-      freshVariable.replaceWithText(staleVariable.getFullText());
+    // case 1: @save node exists in the fresh source file
+    if (freshNode) {
+      // in this case, the node should be replaced with the stale node
+      freshNode.replaceWithText(staleNode.getFullText());
     } 
   else {
-      // case 2: @save variable does not exist in the new/fresh ts source file
-      // in this case, we add the @save variable to the fresh ts source file
-      freshTsSourceFile.addStatements(staleVariable.getFullText());
+      // case 2: @save node does not exist in the new/fresh ts source file
+      // in this case, we add the @save node to the fresh ts source file
+      freshTsSourceFile.addStatements(staleNode.getFullText());
     }
   });
+
 }

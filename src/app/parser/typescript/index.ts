@@ -20,25 +20,11 @@ export function preserveUserChanges(
     freshContent,
   );
 
-  morph.preserveSavedFunctions(staleSourceFile, freshSourceFile);
-
-  // recalcuate nodes
-  staleContent = staleSourceFile.getFullText();
-  freshContent = freshSourceFile.getFullText();
-
-  staleProject = new ts.Project();
-  staleSourceFile = staleProject.createSourceFile(
-    path.resolve(context.getInstance().getOutputDirectory(), "stale.ts"),
-    staleContent,
-  );
-
-  freshProject = new ts.Project();
-  freshSourceFile = freshProject.createSourceFile(
-    path.resolve(context.getInstance().getOutputDirectory(), "fresh.ts"),
-    freshContent,
-  );
-
+  morph.preserveSavedTypes(staleSourceFile, freshSourceFile);
+  morph.preserveSavedInterfaces(staleSourceFile, freshSourceFile);
+  morph.preserveSavedClasses(staleSourceFile, freshSourceFile);
   morph.preserveSavedVariables(staleSourceFile, freshSourceFile);
+  morph.preserveSavedFunctions(staleSourceFile, freshSourceFile);
 
   return freshSourceFile.getFullText();
 }

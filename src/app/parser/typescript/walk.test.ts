@@ -82,6 +82,60 @@ describe("walk::variable-tests", async () => {
   }
 });
 
+const userDefinedTypesTests: TestCase[] = [{  
+  name: "getUserDefinedTypesTests",
+  testFile: "./test-data/walk-tests/types/got.ts",
+  goldenFile: "./test-data/walk-tests/types/want.json",
+}];
+
+type UserDefinedTypeTestResult = {
+  jsDocTags: string[];
+  isSaved: boolean;
+  type: "type" | "interface" | "class";
+};
+
+describe("walk::user-defined-types-tests", async () => {
+  for (const testCase of userDefinedTypesTests) {
+    before(function () {
+      setupTestCase(testCase);
+    });
+
+    it(`${testCase.name}`, function () {
+      const project = new ts.Project();
+      const tsSourceFile = project.addSourceFileAtPath(testCase.testFile);
+      
+      // user defined types
+      const types = tsWalk.getAllTypeDeclarationsMap(tsSourceFile);
+      const interfaces = tsWalk.getAllInterfaceDeclarationsMap(tsSourceFile);
+      const classes = tsWalk.getAllClassDeclarationsMap(tsSourceFile);
+      
+      const gotMap: Record<string, UserDefinedTypeTestResult> = {};
+
+      types.forEach((type, typeName) => {
+        const jsDocTags = tsWalk.getAllJsDocTags(type).sort();
+        const isSaved = tsWalk.isNodeSaved(type);
+        gotMap[typeName] = { jsDocTags, isSaved, type: "type" };
+      });
+
+      interfaces.forEach((interfaceDecl, interfaceName) => {
+        const jsDocTags = tsWalk.getAllJsDocTags(interfaceDecl).sort();
+        const isSaved = tsWalk.isNodeSaved(interfaceDecl);
+        gotMap[interfaceName] = { jsDocTags, isSaved, type: "interface" };
+      });
+
+      classes.forEach((classDecl, className) => {
+        const jsDocTags = tsWalk.getAllJsDocTags(classDecl).sort();
+        const isSaved = tsWalk.isNodeSaved(classDecl);
+        gotMap[className] = { jsDocTags, isSaved, type: "class" };
+      });
+
+      assert.deepEqual(testCase.goldenFileContents, gotMap);
+
+      // writeFileSync(testCase.goldenFile, JSON.stringify(gotMap, null, 2));
+    });
+  }
+});
+
 function setupTestCase(testCase: TestCase) {
   testCase.testFile = path.resolve(__dirname, testCase.testFile);
   testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);

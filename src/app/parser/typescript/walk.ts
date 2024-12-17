@@ -131,3 +131,108 @@ export function getVariableName(node: ts.VariableStatement) {
   }
   return node.getDeclarations()[0]!.getName();
 }
+
+export function getTypeDeclarationName(node: ts.TypeAliasDeclaration) {
+  return node.getName();
+}
+
+export function getAllTypeDeclarationsMap(tsSourceFile: ts.SourceFile): Map<string, ts.TypeAliasDeclaration> {
+  const allTypeDeclarations = getTypeDeclarations(tsSourceFile);
+  const allTypeDeclarationsMap: Map<string, ts.TypeAliasDeclaration> = new Map();
+  allTypeDeclarations.forEach((typeDeclaration) => {
+    const typeDeclarationName = getTypeDeclarationName(typeDeclaration);
+    if (!typeDeclarationName) {
+      return;
+    }
+    allTypeDeclarationsMap.set(typeDeclarationName, typeDeclaration);
+  });
+  return allTypeDeclarationsMap;
+}
+
+/**
+ * get type decalarations in a TS source file
+ * @param tsSourceFile 
+ * @returns 
+ */
+export function getTypeDeclarations(tsSourceFile: ts.SourceFile): ts.TypeAliasDeclaration[] {
+  const allTypeDeclarations: ts.TypeAliasDeclaration[] = [];
+  if (!tsSourceFile) {
+    return allTypeDeclarations;
+  }
+  tsSourceFile.forEachChild((node) => {
+    if (ts.Node.isTypeAliasDeclaration(node)) {
+      allTypeDeclarations.push(node as ts.TypeAliasDeclaration);
+    }
+  });
+  return allTypeDeclarations;
+}
+
+export function getInterfaceDeclarationName(node: ts.InterfaceDeclaration) {
+  return node.getName();
+}
+
+export function getAllInterfaceDeclarationsMap(tsSourceFile: ts.SourceFile): Map<string, ts.InterfaceDeclaration> {
+  const allInterfaceDeclarations = getInterfaceDeclarations(tsSourceFile);
+  const allInterfaceDeclarationsMap: Map<string, ts.InterfaceDeclaration> = new Map();
+  allInterfaceDeclarations.forEach((interfaceDeclaration) => {
+    const interfaceDeclarationName = getInterfaceDeclarationName(interfaceDeclaration);
+    if (!interfaceDeclarationName) {
+      return;
+    }
+    allInterfaceDeclarationsMap.set(interfaceDeclarationName, interfaceDeclaration);
+  });
+  return allInterfaceDeclarationsMap;
+}
+
+/**
+ * get interface decalarations in a TS source file
+ * @param tsSourceFile 
+ * @returns 
+ */
+export function getInterfaceDeclarations(tsSourceFile: ts.SourceFile): ts.InterfaceDeclaration[] {
+  const allInterfaceDeclarations: ts.InterfaceDeclaration[] = [];
+  if (!tsSourceFile) {
+    return allInterfaceDeclarations;
+  }
+  tsSourceFile.forEachChild((node) => {
+    if (ts.Node.isInterfaceDeclaration(node)) {
+      allInterfaceDeclarations.push(node as ts.InterfaceDeclaration);
+    }
+  });
+  return allInterfaceDeclarations;
+}
+
+export function getClassDeclarationName(node: ts.ClassDeclaration) {
+  return node.getName();
+}
+
+export function getAllClassDeclarationsMap(tsSourceFile: ts.SourceFile): Map<string, ts.ClassDeclaration> {
+  const allClassDeclarations = getClassDeclarations(tsSourceFile);
+  const allClassDeclarationsMap: Map<string, ts.ClassDeclaration> = new Map();
+  allClassDeclarations.forEach((classDeclaration) => {
+    const classDeclarationName = getClassDeclarationName(classDeclaration);
+    if (!classDeclarationName) {
+      return;
+    }
+    allClassDeclarationsMap.set(classDeclarationName, classDeclaration);
+  });
+  return allClassDeclarationsMap;
+}
+
+/**
+ * get class decalarations in a TS source file
+ * @param tsSourceFile 
+ * @returns 
+ */
+export function getClassDeclarations(tsSourceFile: ts.SourceFile): ts.ClassDeclaration[] {
+  const allClassDeclarations: ts.ClassDeclaration[] = [];
+  if (!tsSourceFile) {
+    return allClassDeclarations;
+  }
+  tsSourceFile.forEachChild((node) => {
+    if (ts.Node.isClassDeclaration(node)) {
+      allClassDeclarations.push(node as ts.ClassDeclaration);
+    }
+  });
+  return allClassDeclarations;
+}
