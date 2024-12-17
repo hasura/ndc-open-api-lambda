@@ -13098,6 +13098,7 @@ Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward 
 
 /**
  * @request GET :/apis/apiextensions.k8s.io/v1/customresourcedefinitions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisListApiextensionsV1CustomResourceDefinition(
@@ -13232,6 +13233,7 @@ export async function deleteApisDeleteApiextensionsV1CustomResourceDefinition(
 
 /**
  * @request GET :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadApiextensionsV1CustomResourceDefinition(
@@ -13258,6 +13260,7 @@ export async function getApisReadApiextensionsV1CustomResourceDefinition(
 
 /**
  * @request PATCH :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchApiextensionsV1CustomResourceDefinition(
   name: string,
@@ -13329,6 +13332,7 @@ export async function putApisReplaceApiextensionsV1CustomResourceDefinition(
 
 /**
  * @request GET :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getApisReadApiextensionsV1CustomResourceDefinitionStatus(
@@ -13357,6 +13361,7 @@ export async function getApisReadApiextensionsV1CustomResourceDefinitionStatus(
 
 /**
  * @request PATCH :/apis/apiextensions.k8s.io/v1/customresourcedefinitions/{name}/status
+ * @allowrelaxedtypes
  */
 export async function patchApisPatchApiextensionsV1CustomResourceDefinitionStatus(
   name: string,

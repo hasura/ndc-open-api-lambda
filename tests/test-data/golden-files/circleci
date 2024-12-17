@@ -83,6 +83,7 @@ Set to "completed", "successful", "failed", "running", or defaults to no filter.
 
 /**
  * @request POST :/project/{username}/{project}
+ * @allowrelaxedtypes
  */
 export async function postProjectProjectCreate(
   username: string,
@@ -144,6 +145,7 @@ export async function deleteProjectBuildCacheDelete(
 
 /**
  * @request GET :/project/{username}/{project}/checkout-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail(
@@ -221,6 +223,7 @@ export async function deleteProjectCheckoutKeyDelete(
 
 /**
  * @request GET :/project/{username}/{project}/checkout-key/{fingerprint}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectCheckoutKeyDetail2(
@@ -372,6 +375,7 @@ export async function postProjectSshKeyCreate(
 
 /**
  * @request POST :/project/{username}/{project}/tree/{branch}
+ * @allowrelaxedtypes
  */
 export async function postProjectTreeCreate(
   username: string,
@@ -411,6 +415,7 @@ export async function postProjectTreeCreate(
 
 /**
  * @request GET :/project/{username}/{project}/{build_num}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectProjectDetail2(
@@ -463,6 +468,7 @@ export async function getProjectArtifactsDetail(
 
 /**
  * @request POST :/project/{username}/{project}/{build_num}/cancel
+ * @allowrelaxedtypes
  */
 export async function postProjectCancelCreate(
   username: string,
@@ -487,6 +493,7 @@ export async function postProjectCancelCreate(
 
 /**
  * @request POST :/project/{username}/{project}/{build_num}/retry
+ * @allowrelaxedtypes
  */
 export async function postProjectRetryCreate(
   username: string,
@@ -511,6 +518,7 @@ export async function postProjectRetryCreate(
 
 /**
  * @request GET :/project/{username}/{project}/{build_num}/tests
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectTestsDetail(
@@ -536,6 +544,7 @@ export async function getProjectTestsDetail(
 
 /**
  * @request GET :/projects
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectsProjectsList(
@@ -555,6 +564,7 @@ export async function getProjectsProjectsList(
 
 /**
  * @request GET :/recent-builds
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRecentBuildsRecentBuildsList(
