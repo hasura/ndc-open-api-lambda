@@ -182,11 +182,19 @@
     },
     "response": {
       ".__no_name": {
-        "rendered": "{\n  /** Can only be updated if `API_KEY` has edit access to request access settings. */\n    requestAccess?: {\n  /** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n    enabled: boolean,\n\n},\n  /** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n    sessionLength?: number,\n\n}",
+        "rendered": "{ \n/** Can only be updated if `API_KEY` has edit access to request access settings. */\n requestAccess: { \n/** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n enabled?: boolean, }, \n/** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n sessionLength?: number, }",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": {
-        "rendered": "__undefined",
+      ".__no_name.requestAccess": {
+        "rendered": "\n/** Can only be updated if `API_KEY` has edit access to request access settings. */\n requestAccess: { \n/** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n enabled?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.requestAccess.enabled": {
+        "rendered": "\n/** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n enabled?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.sessionLength": {
+        "rendered": "\n/** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n sessionLength?: number,",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -202,11 +210,19 @@
     },
     "response": {
       ".__no_name": {
-        "rendered": "{\n  /** Can only be updated if `API_KEY` has edit access to request access settings. */\n    requestAccess?: {\n  /** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n    enabled: boolean,\n\n},\n  /** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n    sessionLength?: number,\n\n}",
+        "rendered": "{ \n/** Can only be updated if `API_KEY` has edit access to request access settings. */\n requestAccess: { \n/** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n enabled?: boolean, }, \n/** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n sessionLength?: number, }",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": {
-        "rendered": "__undefined",
+      ".__no_name.requestAccess": {
+        "rendered": "\n/** Can only be updated if `API_KEY` has edit access to request access settings. */\n requestAccess: { \n/** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n enabled?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.requestAccess.enabled": {
+        "rendered": "\n/** Choose whether a user may request access to Snyk orgs in this group that they are not a member of. */\n enabled?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.sessionLength": {
+        "rendered": "\n/** The new session length for the group in minutes. This must be an integer between 1 and 43200 (30 days). Setting this value to null will result in this group inheriting from the global default of 30 days. */\n sessionLength?: number,",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -805,11 +821,87 @@
     },
     "response": {
       ".__no_name": {
-        "rendered": "{\n  /** Defines if the functionality is enabled */\n    autoDepUpgradeEnabled?: boolean,\n  /** A list of strings defining what dependencies should be ignored */\n    autoDepUpgradeIgnoredDependencies?: (any)[],\n  /** A limit on how many automatic dependency upgrade PRs can be opened simultaneously */\n    autoDepUpgradeLimit?: number,\n  /** The age (in days) that an automatic dependency check is valid for */\n    autoDepUpgradeMinAge?: number,\n  /** Defines automatic remediation policies */\n    autoRemediationPrs?: {\n  /** If true, allows automatic remediation of prioritized backlog issues */\n    backlogPrsEnabled?: boolean,\n  /** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n    freshPrsEnabled?: boolean,\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** If true, will automatically detect and scan Dockerfiles in your Git repositories, surface base image vulnerabilities and recommend possible fixes */\n    dockerfileSCMEnabled?: boolean,\n  /** Defines manual remediation policies */\n    manualRemediationPrs?: {\n  /** If true, allows using patched remediation */\n    usePatchRemediation?: boolean,\n\n},\n  /** assign Snyk pull requests */\n    pullRequestAssignment?: {\n  /** an array of usernames that have contributed to the organization's project(s). */\n    assignees?: (any)[],\n  /** if the organization's project(s) will assign Snyk pull requests. */\n    enabled?: boolean,\n  /** a string representing the type of assignment your projects require. */\n    type?: \"auto\" | \"manual\",\n\n},\n  /** If an opened PR should fail to be validated if any vulnerable dependencies have been detected */\n    pullRequestFailOnAnyVulns?: boolean,\n  /** If an opened PR only should fail its validation if any dependencies are marked as being of high severity */\n    pullRequestFailOnlyForHighSeverity?: boolean,\n  /** If opened PRs should be tested */\n    pullRequestTestEnabled?: boolean,\n\n}",
+        "rendered": "{ \n/** Defines if the functionality is enabled */\n autoDepUpgradeEnabled?: boolean, \n/** A list of strings defining what dependencies should be ignored */\n autoDepUpgradeIgnoredDependencies?: ()[], \n/** A limit on how many automatic dependency upgrade PRs can be opened simultaneously */\n autoDepUpgradeLimit?: number, \n/** The age (in days) that an automatic dependency check is valid for */\n autoDepUpgradeMinAge?: number, \n/** Defines automatic remediation policies */\n autoRemediationPrs?: { \n/** If true, allows automatic remediation of prioritized backlog issues */\n backlogPrsEnabled?: boolean, \n/** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n freshPrsEnabled?: boolean, \n/** If true, allows using patched remediation */\n usePatchRemediation?: boolean, }, \n/** If true, will automatically detect and scan Dockerfiles in your Git repositories, surface base image vulnerabilities and recommend possible fixes */\n dockerfileSCMEnabled?: boolean, \n/** Defines manual remediation policies */\n manualRemediationPrs?: { \n/** If true, allows using patched remediation */\n usePatchRemediation?: boolean, }, \n/** assign Snyk pull requests */\n pullRequestAssignment?: { \n/** an array of usernames that have contributed to the organization's project(s). */\n assignees?: ()[], \n/** if the organization's project(s) will assign Snyk pull requests. */\n enabled?: boolean, \n/** a string representing the type of assignment your projects require. */\n type?: \"auto\" | \"manual\", }, \n/** If an opened PR should fail to be validated if any vulnerable dependencies have been detected */\n pullRequestFailOnAnyVulns?: boolean, \n/** If an opened PR only should fail its validation if any dependencies are marked as being of high severity */\n pullRequestFailOnlyForHighSeverity?: boolean, \n/** If opened PRs should be tested */\n pullRequestTestEnabled?: boolean, }",
         "requiresRelaxedTypeAnnotation": true
       },
-      ".__no_name.__no_name": {
-        "rendered": "__undefined",
+      ".__no_name.autoDepUpgradeEnabled": {
+        "rendered": "\n/** Defines if the functionality is enabled */\n autoDepUpgradeEnabled?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoDepUpgradeIgnoredDependencies": {
+        "rendered": "\n/** A list of strings defining what dependencies should be ignored */\n autoDepUpgradeIgnoredDependencies?: ()[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoDepUpgradeIgnoredDependencies.__no_name": {
+        "rendered": "",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoDepUpgradeLimit": {
+        "rendered": "\n/** A limit on how many automatic dependency upgrade PRs can be opened simultaneously */\n autoDepUpgradeLimit?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoDepUpgradeMinAge": {
+        "rendered": "\n/** The age (in days) that an automatic dependency check is valid for */\n autoDepUpgradeMinAge?: number,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoRemediationPrs": {
+        "rendered": "\n/** Defines automatic remediation policies */\n autoRemediationPrs?: { \n/** If true, allows automatic remediation of prioritized backlog issues */\n backlogPrsEnabled?: boolean, \n/** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n freshPrsEnabled?: boolean, \n/** If true, allows using patched remediation */\n usePatchRemediation?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoRemediationPrs.backlogPrsEnabled": {
+        "rendered": "\n/** If true, allows automatic remediation of prioritized backlog issues */\n backlogPrsEnabled?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoRemediationPrs.freshPrsEnabled": {
+        "rendered": "\n/** If true, allows automatic remediation of newly identified issues, or older issues where a fix has been identified */\n freshPrsEnabled?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.autoRemediationPrs.usePatchRemediation": {
+        "rendered": "\n/** If true, allows using patched remediation */\n usePatchRemediation?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.dockerfileSCMEnabled": {
+        "rendered": "\n/** If true, will automatically detect and scan Dockerfiles in your Git repositories, surface base image vulnerabilities and recommend possible fixes */\n dockerfileSCMEnabled?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.manualRemediationPrs": {
+        "rendered": "\n/** Defines manual remediation policies */\n manualRemediationPrs?: { \n/** If true, allows using patched remediation */\n usePatchRemediation?: boolean, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.manualRemediationPrs.usePatchRemediation": {
+        "rendered": "\n/** If true, allows using patched remediation */\n usePatchRemediation?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.pullRequestAssignment": {
+        "rendered": "\n/** assign Snyk pull requests */\n pullRequestAssignment?: { \n/** an array of usernames that have contributed to the organization's project(s). */\n assignees?: ()[], \n/** if the organization's project(s) will assign Snyk pull requests. */\n enabled?: boolean, \n/** a string representing the type of assignment your projects require. */\n type?: \"auto\" | \"manual\", },",
+        "requiresRelaxedTypeAnnotation": true
+      },
+      ".__no_name.pullRequestAssignment.assignees": {
+        "rendered": "\n/** an array of usernames that have contributed to the organization's project(s). */\n assignees?: ()[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.pullRequestAssignment.assignees.__no_name": {
+        "rendered": "",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.pullRequestAssignment.enabled": {
+        "rendered": "\n/** if the organization's project(s) will assign Snyk pull requests. */\n enabled?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.pullRequestAssignment.type": {
+        "rendered": "\n/** a string representing the type of assignment your projects require. */\n type?: \"auto\" | \"manual\",",
+        "requiresRelaxedTypeAnnotation": true
+      },
+      ".__no_name.pullRequestFailOnAnyVulns": {
+        "rendered": "\n/** If an opened PR should fail to be validated if any vulnerable dependencies have been detected */\n pullRequestFailOnAnyVulns?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.pullRequestFailOnlyForHighSeverity": {
+        "rendered": "\n/** If an opened PR only should fail its validation if any dependencies are marked as being of high severity */\n pullRequestFailOnlyForHighSeverity?: boolean,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.pullRequestTestEnabled": {
+        "rendered": "\n/** If opened PRs should be tested */\n pullRequestTestEnabled?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -1508,11 +1600,55 @@
     },
     "response": {
       ".__no_name": {
-        "rendered": "{\n  /** Onward links from this record */\n    links?: {\n  /** The URL of the last page of paths for the issue */\n    last?: string,\n  /** The URL of the next page of paths for the issue, if not on the last page */\n    next?: string,\n  /** The URL of the previous page of paths for the issue, if not on the first page */\n    prev?: string,\n\n},\n  /** A list of the dependency paths that introduce the issue */\n    paths?: (({\n  /** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n    fixVersion?: string,\n  /** The package name */\n    name?: string,\n  /** The package version */\n    version?: string,\n\n})[])[],\n  /** The identifier of the snapshot for which the paths have been found */\n    snapshotId?: string,\n  /** The total number of results */\n    total?: number,\n\n}",
+        "rendered": "{ \n/** Onward links from this record */\n links?: { \n/** The URL of the last page of paths for the issue */\n last?: string, \n/** The URL of the next page of paths for the issue, if not on the last page */\n next?: string, \n/** The URL of the previous page of paths for the issue, if not on the first page */\n prev?: string, }, \n/** A list of the dependency paths that introduce the issue */\n paths?: (({ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, })[])[], \n/** The identifier of the snapshot for which the paths have been found */\n snapshotId?: string, \n/** The total number of results */\n total?: number, }",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": {
-        "rendered": "__undefined",
+      ".__no_name.links": {
+        "rendered": "\n/** Onward links from this record */\n links?: { \n/** The URL of the last page of paths for the issue */\n last?: string, \n/** The URL of the next page of paths for the issue, if not on the last page */\n next?: string, \n/** The URL of the previous page of paths for the issue, if not on the first page */\n prev?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.links.last": {
+        "rendered": "\n/** The URL of the last page of paths for the issue */\n last?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.links.next": {
+        "rendered": "\n/** The URL of the next page of paths for the issue, if not on the last page */\n next?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.links.prev": {
+        "rendered": "\n/** The URL of the previous page of paths for the issue, if not on the first page */\n prev?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths": {
+        "rendered": "\n/** A list of the dependency paths that introduce the issue */\n paths?: (({ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, })[])[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name": {
+        "rendered": "({ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, })[]",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name": {
+        "rendered": "{ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, }",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name.fixVersion": {
+        "rendered": "\n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name.name": {
+        "rendered": "\n/** The package name */\n name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name.version": {
+        "rendered": "\n/** The package version */\n version?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.snapshotId": {
+        "rendered": "\n/** The identifier of the snapshot for which the paths have been found */\n snapshotId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.total": {
+        "rendered": "\n/** The total number of results */\n total?: number,",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -1702,11 +1838,19 @@
     },
     "response": {
       ".__no_name": {
-        "rendered": "{\n  /** The details about the jira issue. */\n    jiraIssue?: {\n  /** The id of the issue in Jira. */\n    id?: string,\n  /** The key of the issue in Jira. */\n    key?: string,\n\n},\n\n}",
+        "rendered": "{ \n/** The details about the jira issue. */\n jiraIssue?: { \n/** The id of the issue in Jira. */\n id?: string, \n/** The key of the issue in Jira. */\n key?: string, }, }",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": {
-        "rendered": "__undefined",
+      ".__no_name.jiraIssue": {
+        "rendered": "\n/** The details about the jira issue. */\n jiraIssue?: { \n/** The id of the issue in Jira. */\n id?: string, \n/** The key of the issue in Jira. */\n key?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.jiraIssue.id": {
+        "rendered": "\n/** The id of the issue in Jira. */\n id?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.jiraIssue.key": {
+        "rendered": "\n/** The key of the issue in Jira. */\n key?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -1747,11 +1891,55 @@
     },
     "response": {
       ".__no_name": {
-        "rendered": "{\n  /** Onward links from this record */\n    links?: {\n  /** The URL of the last page of paths for the issue */\n    last?: string,\n  /** The URL of the next page of paths for the issue, if not on the last page */\n    next?: string,\n  /** The URL of the previous page of paths for the issue, if not on the first page */\n    prev?: string,\n\n},\n  /** A list of the dependency paths that introduce the issue */\n    paths?: (({\n  /** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n    fixVersion?: string,\n  /** The package name */\n    name?: string,\n  /** The package version */\n    version?: string,\n\n})[])[],\n  /** The identifier of the snapshot for which the paths have been found */\n    snapshotId?: string,\n  /** The total number of results */\n    total?: number,\n\n}",
+        "rendered": "{ \n/** Onward links from this record */\n links?: { \n/** The URL of the last page of paths for the issue */\n last?: string, \n/** The URL of the next page of paths for the issue, if not on the last page */\n next?: string, \n/** The URL of the previous page of paths for the issue, if not on the first page */\n prev?: string, }, \n/** A list of the dependency paths that introduce the issue */\n paths?: (({ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, })[])[], \n/** The identifier of the snapshot for which the paths have been found */\n snapshotId?: string, \n/** The total number of results */\n total?: number, }",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".__no_name.__no_name": {
-        "rendered": "__undefined",
+      ".__no_name.links": {
+        "rendered": "\n/** Onward links from this record */\n links?: { \n/** The URL of the last page of paths for the issue */\n last?: string, \n/** The URL of the next page of paths for the issue, if not on the last page */\n next?: string, \n/** The URL of the previous page of paths for the issue, if not on the first page */\n prev?: string, },",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.links.last": {
+        "rendered": "\n/** The URL of the last page of paths for the issue */\n last?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.links.next": {
+        "rendered": "\n/** The URL of the next page of paths for the issue, if not on the last page */\n next?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.links.prev": {
+        "rendered": "\n/** The URL of the previous page of paths for the issue, if not on the first page */\n prev?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths": {
+        "rendered": "\n/** A list of the dependency paths that introduce the issue */\n paths?: (({ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, })[])[],",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name": {
+        "rendered": "({ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, })[]",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name": {
+        "rendered": "{ \n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string, \n/** The package name */\n name?: string, \n/** The package version */\n version?: string, }",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name.fixVersion": {
+        "rendered": "\n/** The version to upgrade the package to in order to resolve the issue. This will only appear on the first element of the path, and only if the issue can be fixed by upgrading packages. Note that if the fix requires upgrading transitive dependencies, `fixVersion` will be the same as `version`. */\n fixVersion?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name.name": {
+        "rendered": "\n/** The package name */\n name?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.paths.__no_name.__no_name.version": {
+        "rendered": "\n/** The package version */\n version?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.snapshotId": {
+        "rendered": "\n/** The identifier of the snapshot for which the paths have been found */\n snapshotId?: string,",
+        "requiresRelaxedTypeAnnotation": false
+      },
+      ".__no_name.total": {
+        "rendered": "\n/** The total number of results */\n total?: number,",
         "requiresRelaxedTypeAnnotation": false
       }
     }
@@ -1771,12 +1959,8 @@
     },
     "response": {
       ".__no_name": {
-        "rendered": "IssueId",
+        "rendered": "issueId",
         "requiresRelaxedTypeAnnotation": true
-      },
-      ".__no_name.__no_name": {
-        "rendered": "__undefined",
-        "requiresRelaxedTypeAnnotation": false
       }
     }
   },

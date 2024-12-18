@@ -7,6 +7,9 @@ import * as logger from "../../util/logger";
 import * as schemaParser from "../parser/open-api/schema-parser";
 import * as routeTypes from "../parser/open-api/route-types";
 import * as paramGenerator from "./param-generator";
+import * as paramTypes from "../parser/open-api/param-types";
+
+const cj = require("circular-json");
 
 export async function generateCode(
   args: types.GenerateCodeInput,
@@ -27,10 +30,15 @@ export async function generateCode(
   const routeComponentsArray: functionsTsGenerator.RouteComponents[] = [];
 
   for (let route of apiTsCode.routes) {
+    // get the return type schema
+    const returnTypeSchema = routeTypes.getResponseSchema(route);
+    // check if the return type schema requires relaxed type tag
+    paramTypes.isRelaxedTypeTagRequiredForSchema(returnTypeSchema, parsedSchemaStore);
+
     const routeComponents: functionsTsGenerator.RouteComponents = {
       route: route,
       params: routeTypes.getAllParamsRendered(route, parsedSchemaStore),
-      returnType: routeTypes.getResponseSchema(route),
+      returnType: returnTypeSchema,
     };
 
     routeComponentsArray.push(routeComponents);

@@ -213,6 +213,7 @@ export async function postAssistantNightModesettings(
 /**
  * Forget paired device
  * @request POST :/bluetooth/bond
+ * @allowrelaxedtypes
  */
 export async function postBluetoothForgetpaireddevice(
   /** Request body */
@@ -235,6 +236,7 @@ export async function postBluetoothForgetpaireddevice(
 /**
  * Pair with Speaker
  * @request POST :/bluetooth/connect
+ * @allowrelaxedtypes
  */
 export async function postBluetoothPairwithSpeaker(
   /** Request body */
@@ -257,6 +259,7 @@ export async function postBluetoothPairwithSpeaker(
 /**
  * Change Discoverability
  * @request POST :/bluetooth/discovery
+ * @allowrelaxedtypes
  */
 export async function postBluetoothChangeDiscoverability(
   /** Request body */
@@ -299,6 +302,7 @@ export async function getBluetoothGetPairedDevices(
 /**
  * Scan for devices
  * @request POST :/bluetooth/scan
+ * @allowrelaxedtypes
  */
 export async function postBluetoothScanfordevices(
   /** Request body */
@@ -425,6 +429,7 @@ export async function getEurekaInfoEurekaInfo(
 /**
  * Forget Wi-Fi Network
  * @request POST :/forget_wifi
+ * @allowrelaxedtypes
  */
 export async function postForgetWifiForgetWiFiNetwork(
   /** Request body */
@@ -509,6 +514,7 @@ export async function getOfferOffer(
 /**
  * Reboot and Factory Reset
  * @request POST :/reboot
+ * @allowrelaxedtypes
  */
 export async function postRebootRebootandFactoryReset(
   /** Request body */
@@ -551,6 +557,7 @@ export async function getScanResultsGetWiFiScanResults(
 /**
  * Scan for Networks
  * @request POST :/scan_wifi
+ * @allowrelaxedtypes
  */
 export async function postScanWifiScanforNetworks(
   headers?: hasuraSdk.JSONValue,
@@ -570,6 +577,7 @@ export async function postScanWifiScanforNetworks(
 /**
  * Set Eureka Info
  * @request POST :/set_eureka_info
+ * @allowrelaxedtypes
  */
 export async function postSetEurekaInfoSetEurekaInfo(
   /** Request body */
@@ -654,6 +662,7 @@ export async function postTestInternetDownloadSpeedTestInternetDownloadSpeed(
 /**
  * Set Equalizer Values
  * @request POST :/user_eq/set_equalizer
+ * @allowrelaxedtypes
  */
 export async function postUserEqSetEqualizerValues(
   /** Request body */

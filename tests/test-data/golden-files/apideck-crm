@@ -67,6 +67,7 @@ const api = new Api({
 /**
  * List activities
  * @request GET :/crm/activities
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmActivitiesAll(
@@ -155,6 +156,7 @@ export async function deleteCrmActivitiesDelete(
 /**
  * Get activity
  * @request GET :/crm/activities/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmActivitiesOne(
@@ -304,6 +306,7 @@ export async function deleteCrmCompaniesDelete(
 /**
  * Get company
  * @request GET :/crm/companies/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmCompaniesOne(
@@ -453,6 +456,7 @@ export async function deleteCrmContactsDelete(
 /**
  * Get contact
  * @request GET :/crm/contacts/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmContactsOne(
@@ -602,6 +606,7 @@ export async function deleteCrmLeadsDelete(
 /**
  * Get lead
  * @request GET :/crm/leads/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmLeadsOne(
@@ -893,6 +898,7 @@ export async function deleteCrmOpportunitiesDelete(
 /**
  * Get opportunity
  * @request GET :/crm/opportunities/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmOpportunitiesOne(
@@ -952,6 +958,7 @@ export async function patchCrmOpportunitiesUpdate(
 /**
  * List pipelines
  * @request GET :/crm/pipelines
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmPipelinesAll(
@@ -1037,6 +1044,7 @@ export async function deleteCrmPipelinesDelete(
 /**
  * Get pipeline
  * @request GET :/crm/pipelines/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmPipelinesOne(
@@ -1096,6 +1104,7 @@ export async function patchCrmPipelinesUpdate(
 /**
  * List users
  * @request GET :/crm/users
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmUsersAll(
@@ -1181,6 +1190,7 @@ export async function deleteCrmUsersDelete(
 /**
  * Get user
  * @request GET :/crm/users/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrmUsersOne(

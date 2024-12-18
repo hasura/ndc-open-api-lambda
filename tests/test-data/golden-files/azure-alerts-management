@@ -7,6 +7,7 @@ const api = new Api({
 
 /**
  * @request GET :/subscriptions/{subscriptionId}/providers/microsoft.alertsManagement/smartDetectorAlertRules
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsSmartDetectorAlertRulesList(
@@ -36,6 +37,7 @@ export async function getSubscriptionsSmartDetectorAlertRulesList(
 
 /**
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsSmartDetectorAlertRulesListByResourceGroup(
@@ -98,6 +100,7 @@ export async function deleteSubscriptionsSmartDetectorAlertRulesDelete(
 
 /**
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsSmartDetectorAlertRulesGet(

@@ -85,6 +85,7 @@ export async function getAlbumsGetMultipleAlbums(
  * Get Album
 
  * @request GET :/albums/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAlbumsGetAnAlbum(
@@ -192,6 +193,7 @@ export async function getArtistsGetMultipleArtists(
  * Get Artist
 
  * @request GET :/artists/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getArtistsGetAnArtist(
@@ -328,6 +330,7 @@ export async function getArtistsGetAnArtistsTopTracks(
  * Get Track's Audio Analysis
 
  * @request GET :/audio-analysis/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAudioAnalysisGetAudioAnalysis(
@@ -384,6 +387,7 @@ for the tracks. Maximum: 100 IDs.
  * Get Track's Audio Features
 
  * @request GET :/audio-features/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAudioFeaturesGetAudioFeatures(
@@ -446,6 +450,7 @@ export async function getAudiobooksGetMultipleAudiobooks(
  * Get an Audiobook
 
  * @request GET :/audiobooks/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAudiobooksGetAnAudiobook(
@@ -748,6 +753,7 @@ export async function getChaptersGetSeveralChapters(
  * Get a Chapter
 
  * @request GET :/chapters/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getChaptersGetAChapter(
@@ -822,6 +828,7 @@ export async function getEpisodesGetMultipleEpisodes(
  * Get Episode
 
  * @request GET :/episodes/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getEpisodesGetAnEpisode(
@@ -2205,6 +2212,7 @@ export async function getMeCheckUsersSavedTracks(
  * Get Playlist
 
  * @request GET :/playlists/{playlist_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getPlaylistsGetPlaylist(
@@ -2627,6 +2635,7 @@ export async function putPlaylistsReorderOrReplacePlaylistsTracks(
  * Get Recommendations
 
  * @request GET :/recommendations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRecommendationsGetRecommendations(
@@ -2932,6 +2941,7 @@ export async function getShowsGetMultipleShows(
  * Get Show
 
  * @request GET :/shows/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getShowsGetAShow(
@@ -3049,6 +3059,7 @@ export async function getTracksGetSeveralTracks(
  * Get Track
 
  * @request GET :/tracks/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTracksGetTrack(
@@ -3086,6 +3097,7 @@ for the track.
  * Get User's Profile
 
  * @request GET :/users/{user_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersGetUsersProfile(
@@ -3147,6 +3159,7 @@ next set of playlists.
  * Create Playlist
 
  * @request POST :/users/{user_id}/playlists
+ * @allowrelaxedtypes
  */
 export async function postUsersCreatePlaylist(
   /** The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).

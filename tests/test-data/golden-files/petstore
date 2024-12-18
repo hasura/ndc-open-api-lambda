@@ -80,6 +80,7 @@ export async function getPetFindPetsByStatus(
 /**
  * Finds Pets by tags
  * @request GET :/pet/findByTags
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getPetFindPetsByTags(
@@ -105,6 +106,7 @@ export async function getPetFindPetsByTags(
 /**
  * Find pet by ID
  * @request GET :/pet/{petId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getPetGetPetById(
@@ -209,6 +211,7 @@ export async function postPetUploadFile(
 /**
  * Returns pet inventories by status
  * @request GET :/store/inventory
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getStoreGetInventory(
@@ -252,6 +255,7 @@ export async function postStorePlaceOrder(
 /**
  * Find purchase order by ID
  * @request GET :/store/order/{orderId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getStoreGetOrderById(
