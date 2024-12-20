@@ -25,6 +25,7 @@ const api = new Api({
 /**
  * Get recent media from a custom geo-id.
  * @request GET :/geographies/{geo-id}/media/recent
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getGeographiesGeoIdMediaRecentList(
@@ -117,6 +118,7 @@ export async function getLocationsLocationIdList(
 /**
  * Get a list of recent media objects from a given location.
  * @request GET :/locations/{location-id}/media/recent
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getLocationsLocationIdMediaRecentList(
@@ -151,6 +153,7 @@ export async function getLocationsLocationIdMediaRecentList(
 /**
  * Get a list of currently popular media.
  * @request GET :/media/popular
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaPopularList(
@@ -171,6 +174,7 @@ export async function getMediaPopularList(
 /**
  * Search for media in a given area.
  * @request GET :/media/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaSearchList(
@@ -204,6 +208,7 @@ export async function getMediaSearchList(
 /**
  * Get information about a media object.
  * @request GET :/media/shortcode/{shortcode}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaShortcodeDetail(
@@ -227,6 +232,7 @@ export async function getMediaShortcodeDetail(
 /**
  * Get information about a media object.
  * @request GET :/media/{media-id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMediaMediaIdList(
@@ -440,6 +446,7 @@ export async function getTagsTagNameList(
 /**
  * Get a list of recently tagged media.
  * @request GET :/tags/{tag-name}/media/recent
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTagsTagNameMediaRecentList(
@@ -499,6 +506,7 @@ export async function getUsersSearchList(
 /**
  * See the authenticated user's feed.
  * @request GET :/users/self/feed
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersSelfFeedList(
@@ -528,6 +536,7 @@ export async function getUsersSelfFeedList(
 /**
  * See the list of media liked by the authenticated user.
  * @request GET :/users/self/media/liked
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersSelfMediaLikedList(
@@ -644,6 +653,7 @@ export async function getUsersUserIdFollowsList(
 /**
  * Get the most recent media published by a user.
  * @request GET :/users/{user-id}/media/recent
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUserIdMediaRecentList(
@@ -680,6 +690,7 @@ export async function getUsersUserIdMediaRecentList(
 /**
  * Get information about a relationship to another user.
  * @request GET :/users/{user-id}/relationship
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUserIdRelationshipList(

@@ -289,6 +289,33 @@ export function getEmptySchema(): Schema {
 }
 
 /**
+ * Process a Schema and all its children to determine if a relaxed type tag is required
+ * @param schema 
+ * @param schemaStore 
+ * @returns 
+ */
+export function isRelaxedTypeTagRequiredForSchema(schema: Schema, schemaStore: ParsedSchemaStore): boolean {
+  if (schemaIsTypeRef(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForRefTypeSchema(schema, schemaStore);
+  } else if (schemaIsTypeObject(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForObjectTypeSchemaDeep(schema, schemaStore);
+  } else if (schemaIsTypeScalar(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForScalarTypeSchema(schema);
+  } else if (schemaIsTypeCustomType(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForCustomTypeSchema(schema, schemaStore);
+  } else if (schemaIsTypeArray(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForArrayTypeSchemaDeep(schema, schemaStore);
+  } else if (schemaIsTypeOneOf(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForOneOfTypeSchema(schema);
+  } else if (schemaIsTypeAnyOf(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForAnyOfTypeSchema(schema);
+  } else if (schemaIsTypeAllOf(schema)) {
+    schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForAllOfTypeSchema(schema);
+  }
+  return schema._$requiresRelaxedTypeTag ?? true;
+}
+
+/**
  * Function to determine if this scalar type schema requires
  * relaxed type tag
  *
@@ -318,7 +345,7 @@ export function isRelaxedTypeTagRequiredForScalarTypeSchema(
  *
  * @param schema
  */
-export function isRelaxedTypeTagRequiredForObjectTypeSchema(
+export function isRelaxedTypeTagRequiredForObjectTypeSchemaShallow(
   schema: SchemaTypeObject,
 ): boolean {
   const children = getSchemaTypeObjectChildrenMap(schema);
@@ -335,22 +362,64 @@ export function isRelaxedTypeTagRequiredForObjectTypeSchema(
 }
 
 /**
+ * Function to determine if this object type schema requires
+ * relaxed type tag. 
+ * This function also processes the tag requirements for its children
+ *
+ * More Reading: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+ *
+ * @param schema
+ */
+export function isRelaxedTypeTagRequiredForObjectTypeSchemaDeep(
+  schema: SchemaTypeObject,
+  schemaStore: ParsedSchemaStore,
+): boolean {
+  const children = getSchemaTypeObjectChildrenMap(schema);
+  for (const child of Object.values(children)) {
+    if (isRelaxedTypeTagRequiredForSchema(child, schemaStore)) {
+      child._$requiresRelaxedTypeTag = true;
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
  * Function to determine if this array type schema requires
  * relaxed type tag
  *
  * More Reading: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
  *
  * ### WARNING
- * This function should be called the child of the schema has been processed.
+ * This function should be called after the child of the schema has been processed.
  * This function *DOES NOT* process the tag requirements for the schema's child
  *
  * @param schema
  */
-export function isRelaxedTypeTagRequiredForArrayTypeSchema(
+export function isRelaxedTypeTagRequiredForArrayTypeSchemaShallow(
   schema: SchemaTypeArray,
 ): boolean {
   const child = getSchemaTypeArrayChild(schema);
   return child._$requiresRelaxedTypeTag ?? false;
+}
+
+/**
+ * Function to determine if this array type schema requires
+ * relaxed type tag
+ * This function also processes the tag requirements for its children
+ *
+ * More Reading: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
+ * 
+ * @param schema
+ */
+export function isRelaxedTypeTagRequiredForArrayTypeSchemaDeep(
+  schema: SchemaTypeArray,
+  schemaStore: ParsedSchemaStore,
+): boolean {
+  const child = getSchemaTypeArrayChild(schema);
+  const required = isRelaxedTypeTagRequiredForSchema(child, schemaStore);
+  child._$requiresRelaxedTypeTag = required;
+  return child._$requiresRelaxedTypeTag;
 }
 
 /**

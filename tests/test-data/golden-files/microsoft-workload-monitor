@@ -46,6 +46,7 @@ export async function getProvidersOperationsList(
 /**
  * Get subscription wide details of components.
  * @request GET :/subscriptions/{subscriptionId}/providers/Microsoft.WorkloadMonitor/componentsSummary
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsComponentsSummaryList(
@@ -88,6 +89,7 @@ export async function getSubscriptionsComponentsSummaryList(
 /**
  * Get subscription wide health instances.
  * @request GET :/subscriptions/{subscriptionId}/providers/Microsoft.WorkloadMonitor/monitorInstancesSummary
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorInstancesSummaryList(
@@ -130,6 +132,7 @@ export async function getSubscriptionsMonitorInstancesSummaryList(
 /**
  * Get list of components for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/components
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsComponentsListByResource(
@@ -184,6 +187,7 @@ export async function getSubscriptionsComponentsListByResource(
 /**
  * Get details of a component.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/components/{componentId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsComponentsGet(
@@ -231,6 +235,7 @@ export async function getSubscriptionsComponentsGet(
 /**
  * Get list of monitor instances for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitorInstances
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorInstancesListByResource(
@@ -285,6 +290,7 @@ export async function getSubscriptionsMonitorInstancesListByResource(
 /**
  * Get details of a monitorInstance.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitorInstances/{monitorInstanceId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorInstancesGet(
@@ -332,6 +338,7 @@ export async function getSubscriptionsMonitorInstancesGet(
 /**
  * Get list of a monitors of a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitors
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorsListByResource(
@@ -376,6 +383,7 @@ export async function getSubscriptionsMonitorsListByResource(
 /**
  * Get details of a single monitor.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/monitors/{monitorId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsMonitorsGet(

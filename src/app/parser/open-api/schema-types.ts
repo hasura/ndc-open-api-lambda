@@ -74,6 +74,7 @@ export type SchemaTypeObject = {
   example: string | undefined;
   description: string | undefined;
   $parsed: $ParsedSchema | undefined;
+  additionalProperties: boolean | undefined;
 };
 
 export type SchemaTypeScalar = {
@@ -371,7 +372,7 @@ export function getSchemaTypeSchemaChildren(
   return [];
 }
 
-export function primitiveSchemaPropertiveHasAmbigousType(
+export function primitiveSchemaPropertieHasAmbigousType(
   property: SchemaTypePrimitive,
 ) {
   if (property.content) {
@@ -381,6 +382,7 @@ export function primitiveSchemaPropertiveHasAmbigousType(
       property.$parsed.content,
     );
   }
+  return false;
 }
 
 /**
@@ -388,12 +390,19 @@ export function primitiveSchemaPropertiveHasAmbigousType(
  * More on RelaxedTypes: https://github.com/hasura/ndc-nodejs-lambda?tab=readme-ov-file#relaxed-types
  */
 export function schemaPropertyIsRelaxedType(schemaProperty: SchemaProperty) {
+  // if the schemaProperty is an object and it can accept additional properties
+  // that means it has an indexed type `[key: string]: any`. This is a relaxed type
+  if (schemaPropertyIsTypeObject(schemaProperty)) {
+    if (schemaProperty.additionalProperties === true) {
+      return true;
+    }
+  }
   if (schemaPropertyIsTypeScaler(schemaProperty)) {
     if (schemaPropertyIsEnum(schemaProperty)) {
       return true;
     }
   } else if (schemaPropertyIsTypePrimitive(schemaProperty)) {
-    return primitiveSchemaPropertiveHasAmbigousType(schemaProperty);
+    return primitiveSchemaPropertieHasAmbigousType(schemaProperty);
   }
   return false;
 }

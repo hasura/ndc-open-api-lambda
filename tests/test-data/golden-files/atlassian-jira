@@ -306,6 +306,7 @@ const api = new Api({
 /**
  * Get announcement banner configuration
  * @request GET :/rest/api/3/announcementBanner
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetBanner(
@@ -376,6 +377,7 @@ export async function postRestUpdateMultipleCustomFieldValues(
 /**
  * Get custom field configurations
  * @request GET :/rest/api/3/app/field/{fieldIdOrKey}/context/configuration
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetCustomFieldConfiguration(
@@ -590,6 +592,7 @@ export async function getRestGetApplicationRole(
 /**
  * Get attachment content
  * @request GET :/rest/api/3/attachment/content/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAttachmentContent(
@@ -638,6 +641,7 @@ export async function getRestGetAttachmentMeta(
 /**
  * Get attachment thumbnail
  * @request GET :/rest/api/3/attachment/thumbnail/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAttachmentThumbnail(
@@ -694,6 +698,7 @@ export async function deleteRestRemoveAttachment(
 /**
  * Get attachment metadata
  * @request GET :/rest/api/3/attachment/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAttachment(
@@ -820,6 +825,7 @@ export async function getRestGetAllSystemAvatars(
 /**
  * Get comments by IDs
  * @request POST :/rest/api/3/comment/list
+ * @allowrelaxedtypes
  */
 export async function postRestGetCommentsByIds(
   query: {
@@ -898,6 +904,7 @@ export async function deleteRestDeleteCommentProperty(
 /**
  * Get comment property
  * @request GET :/rest/api/3/comment/{commentId}/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetCommentProperty(
@@ -1002,6 +1009,7 @@ export async function deleteRestDeleteComponent(
 /**
  * Get component
  * @request GET :/rest/api/3/component/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetComponent(
@@ -1074,6 +1082,7 @@ export async function getRestGetComponentRelatedIssues(
 /**
  * Get global settings
  * @request GET :/rest/api/3/configuration
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetConfiguration(
@@ -1156,6 +1165,7 @@ export async function getRestGetAvailableTimeTrackingImplementations(
 /**
  * Get time tracking settings
  * @request GET :/rest/api/3/configuration/timetracking/options
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetSharedTimeTrackingConfiguration(
@@ -1378,6 +1388,7 @@ export async function getRestGetDashboardsPaginated(
 /**
  * Get gadgets
  * @request GET :/rest/api/3/dashboard/{dashboardId}/gadget
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllGadgets(
@@ -1410,6 +1421,7 @@ export async function getRestGetAllGadgets(
 /**
  * Add gadget to dashboard
  * @request POST :/rest/api/3/dashboard/{dashboardId}/gadget
+ * @allowrelaxedtypes
  */
 export async function postRestAddGadget(
   /** The ID of the dashboard. */
@@ -1542,6 +1554,7 @@ export async function deleteRestDeleteDashboardItemProperty(
 /**
  * Get dashboard item property
  * @request GET :/rest/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetDashboardItemProperty(
@@ -1624,6 +1637,7 @@ export async function deleteRestDeleteDashboard(
 /**
  * Get dashboard
  * @request GET :/rest/api/3/dashboard/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetDashboard(
@@ -1778,6 +1792,7 @@ export async function postRestEvaluateJiraExpression(
 /**
  * Get fields
  * @request GET :/rest/api/3/field
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetFields(
@@ -2491,6 +2506,7 @@ export async function postRestRemoveCustomFieldContextFromProjects(
 /**
  * Get contexts for a field
  * @request GET :/rest/api/3/field/{fieldId}/contexts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetContextsForFieldDeprecated(
@@ -2521,6 +2537,7 @@ export async function getRestGetContextsForFieldDeprecated(
 /**
  * Get screens for a field
  * @request GET :/rest/api/3/field/{fieldId}/screens
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetScreensForField(
@@ -2553,6 +2570,7 @@ export async function getRestGetScreensForField(
 /**
  * Get all issue field options
  * @request GET :/rest/api/3/field/{fieldKey}/option
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllIssueFieldOptions(
@@ -2615,6 +2633,7 @@ export async function postRestCreateIssueFieldOption(
 /**
  * Get selectable issue field options
  * @request GET :/rest/api/3/field/{fieldKey}/option/suggestions/edit
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetSelectableIssueFieldOptions(
@@ -2650,6 +2669,7 @@ export async function getRestGetSelectableIssueFieldOptions(
 /**
  * Get visible issue field options
  * @request GET :/rest/api/3/field/{fieldKey}/option/suggestions/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetVisibleIssueFieldOptions(
@@ -2713,6 +2733,7 @@ export async function deleteRestDeleteIssueFieldOption(
 /**
  * Get issue field option
  * @request GET :/rest/api/3/field/{fieldKey}/option/{optionId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueFieldOption(
@@ -3265,6 +3286,7 @@ export async function postRestRemoveIssueTypesFromGlobalFieldConfigurationScheme
 /**
  * Get filters
  * @request GET :/rest/api/3/filter
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetFilters(
@@ -3326,6 +3348,7 @@ export async function postRestCreateFilter(
 /**
  * Get default share scope
  * @request GET :/rest/api/3/filter/defaultShareScope
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetDefaultShareScope(
@@ -3369,6 +3392,7 @@ export async function putRestSetDefaultShareScope(
 /**
  * Get favorite filters
  * @request GET :/rest/api/3/filter/favourite
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetFavouriteFilters(
@@ -3397,6 +3421,7 @@ export async function getRestGetFavouriteFilters(
 /**
  * Get my filters
  * @request GET :/rest/api/3/filter/my
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetMyFilters(
@@ -3538,6 +3563,7 @@ export async function deleteRestDeleteFilter(
 /**
  * Get filter
  * @request GET :/rest/api/3/filter/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetFilter(
@@ -3677,6 +3703,7 @@ export async function putRestSetColumns(
 /**
  * Remove filter as favorite
  * @request DELETE :/rest/api/3/filter/{id}/favourite
+ * @allowrelaxedtypes
  */
 export async function deleteRestDeleteFavouriteForFilter(
   /** The ID of the filter. */
@@ -3707,6 +3734,7 @@ export async function deleteRestDeleteFavouriteForFilter(
 /**
  * Add filter as favorite
  * @request PUT :/rest/api/3/filter/{id}/favourite
+ * @allowrelaxedtypes
  */
 export async function putRestSetFavouriteForFilter(
   /** The ID of the filter. */
@@ -3762,6 +3790,7 @@ export async function putRestChangeFilterOwner(
 /**
  * Get share permissions
  * @request GET :/rest/api/3/filter/{id}/permission
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetSharePermissions(
@@ -3836,6 +3865,7 @@ export async function deleteRestDeleteSharePermission(
 /**
  * Get share permission
  * @request GET :/rest/api/3/filter/{id}/permission/{permissionId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetSharePermission(
@@ -3922,6 +3952,7 @@ The name of the group. This parameter cannot be used with the `groupId` paramete
 /**
  * Create group
  * @request POST :/rest/api/3/group
+ * @allowrelaxedtypes
  */
 export async function postRestCreateGroup(
   /** Request body */
@@ -4044,6 +4075,7 @@ The name of the group. This parameter cannot be used with the `groupId` paramete
 /**
  * Add user to group
  * @request POST :/rest/api/3/group/user
+ * @allowrelaxedtypes
  */
 export async function postRestAddUserToGroup(
   query: {
@@ -4074,6 +4106,7 @@ The name of the group. This parameter cannot be used with the `groupId` paramete
 /**
  * Find groups
  * @request GET :/rest/api/3/groups/picker
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestFindGroups(
@@ -4175,6 +4208,7 @@ export async function getRestFindUsersAndGroups(
 /**
  * Get license
  * @request GET :/rest/api/3/instance/license
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetLicense(
@@ -4246,6 +4280,7 @@ export async function postRestCreateIssues(
 /**
  * Get create issue metadata
  * @request GET :/rest/api/3/issue/createmeta
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetCreateIssueMeta(
@@ -4460,6 +4495,7 @@ export async function deleteRestDeleteIssue(
 /**
  * Get issue
  * @request GET :/rest/api/3/issue/{issueIdOrKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssue(
@@ -4590,6 +4626,7 @@ export async function putRestAssignIssue(
 /**
  * Add attachment
  * @request POST :/rest/api/3/issue/{issueIdOrKey}/attachments
+ * @allowrelaxedtypes
  */
 export async function postRestAddAttachment(
   /** The ID or key of the issue that attachments are added to. */
@@ -4615,6 +4652,7 @@ export async function postRestAddAttachment(
 /**
  * Get changelogs
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/changelog
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetChangeLogs(
@@ -4645,6 +4683,7 @@ export async function getRestGetChangeLogs(
 /**
  * Get changelogs by IDs
  * @request POST :/rest/api/3/issue/{issueIdOrKey}/changelog/list
+ * @allowrelaxedtypes
  */
 export async function postRestGetChangeLogsByIds(
   /** The ID or key of the issue. */
@@ -4761,6 +4800,7 @@ export async function deleteRestDeleteComment(
 /**
  * Get comment
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/comment/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetComment(
@@ -4860,6 +4900,7 @@ export async function getRestGetEditIssueMeta(
 /**
  * Send notification for issue
  * @request POST :/rest/api/3/issue/{issueIdOrKey}/notify
+ * @allowrelaxedtypes
  */
 export async function postRestNotify(
   /** ID or key of the issue that the notification is sent for. */
@@ -4933,6 +4974,7 @@ export async function deleteRestDeleteIssueProperty(
 /**
  * Get issue property
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueProperty(
@@ -5014,6 +5056,7 @@ export async function deleteRestDeleteRemoteIssueLinkByGlobalId(
 /**
  * Get remote issue links
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/remotelink
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetRemoteIssueLinks(
@@ -5042,6 +5085,7 @@ export async function getRestGetRemoteIssueLinks(
 /**
  * Create or update remote issue link
  * @request POST :/rest/api/3/issue/{issueIdOrKey}/remotelink
+ * @allowrelaxedtypes
  */
 export async function postRestCreateOrUpdateRemoteIssueLink(
   /** The ID or key of the issue. */
@@ -5092,6 +5136,7 @@ export async function deleteRestDeleteRemoteIssueLinkById(
 /**
  * Get remote issue link by ID
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/remotelink/{linkId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetRemoteIssueLinkById(
@@ -5118,6 +5163,7 @@ export async function getRestGetRemoteIssueLinkById(
 /**
  * Update remote issue link by ID
  * @request PUT :/rest/api/3/issue/{issueIdOrKey}/remotelink/{linkId}
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateRemoteIssueLink(
   /** The ID or key of the issue. */
@@ -5146,6 +5192,7 @@ export async function putRestUpdateRemoteIssueLink(
 /**
  * Get transitions
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/transitions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetTransitions(
@@ -5230,6 +5277,7 @@ export async function deleteRestRemoveVote(
 /**
  * Get votes
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/votes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetVotes(
@@ -5352,6 +5400,7 @@ export async function postRestAddWatcher(
 /**
  * Get issue worklogs
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/worklog
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueWorklog(
@@ -5478,6 +5527,7 @@ export async function deleteRestDeleteWorklog(
 /**
  * Get worklog
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/worklog/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetWorklog(
@@ -5611,6 +5661,7 @@ export async function deleteRestDeleteWorklogProperty(
 /**
  * Get worklog property
  * @request GET :/rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetWorklogProperty(
@@ -5716,6 +5767,7 @@ export async function deleteRestDeleteIssueLink(
 /**
  * Get issue link
  * @request GET :/rest/api/3/issueLink/{linkId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueLink(
@@ -5934,6 +5986,7 @@ export async function getRestGetIssueSecurityLevelMembers(
 /**
  * Get all issue types for user
  * @request GET :/rest/api/3/issuetype
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueAllTypes(
@@ -5977,6 +6030,7 @@ export async function postRestCreateIssueType(
 /**
  * Get issue types for project
  * @request GET :/rest/api/3/issuetype/project
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueTypesForProject(
@@ -6035,6 +6089,7 @@ export async function deleteRestDeleteIssueType(
 /**
  * Get issue type
  * @request GET :/rest/api/3/issuetype/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueType(
@@ -6058,6 +6113,7 @@ export async function getRestGetIssueType(
 /**
  * Update issue type
  * @request PUT :/rest/api/3/issuetype/{id}
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateIssueType(
   /** The ID of the issue type. */
@@ -6083,6 +6139,7 @@ export async function putRestUpdateIssueType(
 /**
  * Get alternative issue types
  * @request GET :/rest/api/3/issuetype/{id}/alternatives
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAlternativeIssueTypes(
@@ -6106,6 +6163,7 @@ export async function getRestGetAlternativeIssueTypes(
 /**
  * Load issue type avatar
  * @request POST :/rest/api/3/issuetype/{id}/avatar2
+ * @allowrelaxedtypes
  */
 export async function postRestCreateIssueTypeAvatar(
   /** The ID of the issue type. */
@@ -6188,6 +6246,7 @@ export async function deleteRestDeleteIssueTypeProperty(
 /**
  * Get issue type property
  * @request GET :/rest/api/3/issuetype/{issueTypeId}/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIssueTypeProperty(
@@ -6772,6 +6831,7 @@ export async function postRestRemoveMappingsFromIssueTypeScreenScheme(
 /**
  * Get issue type screen scheme projects
  * @request GET :/rest/api/3/issuetypescreenscheme/{issueTypeScreenSchemeId}/project
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectsForIssueTypeScreenScheme(
@@ -6803,6 +6863,7 @@ export async function getRestGetProjectsForIssueTypeScreenScheme(
 /**
  * Get field reference data (GET)
  * @request GET :/rest/api/3/jql/autocompletedata
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAutoComplete(
@@ -6823,6 +6884,7 @@ export async function getRestGetAutoComplete(
 /**
  * Get field reference data (POST)
  * @request POST :/rest/api/3/jql/autocompletedata
+ * @allowrelaxedtypes
  */
 export async function postRestGetAutoCompletePost(
   /** Request body */
@@ -7267,6 +7329,7 @@ export async function putRestSetLocale(
 /**
  * Get current user
  * @request GET :/rest/api/3/myself
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetCurrentUser(
@@ -7295,6 +7358,7 @@ export async function getRestGetCurrentUser(
 /**
  * Get notification schemes paginated
  * @request GET :/rest/api/3/notificationscheme
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetNotificationSchemes(
@@ -7337,6 +7401,7 @@ export async function getRestGetNotificationSchemes(
 /**
  * Create notification scheme
  * @request POST :/rest/api/3/notificationscheme
+ * @allowrelaxedtypes
  */
 export async function postRestCreateNotificationScheme(
   /** Request body */
@@ -7390,6 +7455,7 @@ export async function getRestGetNotificationSchemeToProjectMappings(
 /**
  * Get notification scheme
  * @request GET :/rest/api/3/notificationscheme/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetNotificationScheme(
@@ -7425,6 +7491,7 @@ export async function getRestGetNotificationScheme(
 /**
  * Update notification scheme
  * @request PUT :/rest/api/3/notificationscheme/{id}
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateNotificationScheme(
   /** The ID of the notification scheme. */
@@ -7450,6 +7517,7 @@ export async function putRestUpdateNotificationScheme(
 /**
  * Add notifications to notification scheme
  * @request PUT :/rest/api/3/notificationscheme/{id}/notification
+ * @allowrelaxedtypes
  */
 export async function putRestAddNotifications(
   /** The ID of the notification scheme. */
@@ -7586,6 +7654,7 @@ export async function postRestGetPermittedProjects(
 /**
  * Get all permission schemes
  * @request GET :/rest/api/3/permissionscheme
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllPermissionSchemes(
@@ -7675,6 +7744,7 @@ export async function deleteRestDeletePermissionScheme(
 /**
  * Get permission scheme
  * @request GET :/rest/api/3/permissionscheme/{schemeId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetPermissionScheme(
@@ -7883,6 +7953,7 @@ export async function getRestGetPermissionSchemeGrant(
 /**
  * Get priorities
  * @request GET :/rest/api/3/priority
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetPriorities(
@@ -7970,6 +8041,7 @@ export async function putRestMovePriorities(
 /**
  * Search priorities
  * @request GET :/rest/api/3/priority/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestSearchPriorities(
@@ -8028,6 +8100,7 @@ export async function deleteRestDeletePriority(
 /**
  * Get priority
  * @request GET :/rest/api/3/priority/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetPriority(
@@ -8077,6 +8150,7 @@ export async function putRestUpdatePriority(
 /**
  * Get all projects
  * @request GET :/rest/api/3/project
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllProjects(
@@ -8134,6 +8208,7 @@ export async function postRestCreateProject(
 /**
  * Get recent projects
  * @request GET :/rest/api/3/project/recent
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetRecent(
@@ -8398,6 +8473,7 @@ export async function deleteRestDeleteProject(
 /**
  * Get project
  * @request GET :/rest/api/3/project/{projectIdOrKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProject(
@@ -8492,6 +8568,7 @@ export async function postRestArchiveProject(
 /**
  * Set project avatar
  * @request PUT :/rest/api/3/project/{projectIdOrKey}/avatar
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateProjectAvatar(
   /** The ID or (case-sensitive) key of the project. */
@@ -8542,6 +8619,7 @@ export async function deleteRestDeleteProjectAvatar(
 /**
  * Load project avatar
  * @request POST :/rest/api/3/project/{projectIdOrKey}/avatar2
+ * @allowrelaxedtypes
  */
 export async function postRestCreateProjectAvatar(
   /** The ID or (case-sensitive) key of the project. */
@@ -8576,6 +8654,7 @@ export async function postRestCreateProjectAvatar(
 /**
  * Get all project avatars
  * @request GET :/rest/api/3/project/{projectIdOrKey}/avatars
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllProjectAvatars(
@@ -8651,6 +8730,7 @@ export async function getRestGetProjectComponentsPaginated(
 /**
  * Get project components
  * @request GET :/rest/api/3/project/{projectIdOrKey}/components
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectComponents(
@@ -8696,6 +8776,7 @@ export async function postRestDeleteProjectAsynchronously(
 /**
  * Get project features
  * @request GET :/rest/api/3/project/{projectIdOrKey}/features
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetFeaturesForProject(
@@ -8796,6 +8877,7 @@ export async function deleteRestDeleteProjectProperty(
 /**
  * Get project property
  * @request GET :/rest/api/3/project/{projectIdOrKey}/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectProperty(
@@ -8850,6 +8932,7 @@ export async function putRestSetProjectProperty(
 /**
  * Restore deleted or archived project
  * @request POST :/rest/api/3/project/{projectIdOrKey}/restore
+ * @allowrelaxedtypes
  */
 export async function postRestRestore(
   /** The project ID or project key (case sensitive). */
@@ -8872,6 +8955,7 @@ export async function postRestRestore(
 /**
  * Get project roles for project
  * @request GET :/rest/api/3/project/{projectIdOrKey}/role
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectRoles(
@@ -8929,6 +9013,7 @@ export async function deleteRestDeleteActor(
 /**
  * Get project role for project
  * @request GET :/rest/api/3/project/{projectIdOrKey}/role/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectRole(
@@ -8960,6 +9045,7 @@ export async function getRestGetProjectRole(
 /**
  * Add actors to project role
  * @request POST :/rest/api/3/project/{projectIdOrKey}/role/{id}
+ * @allowrelaxedtypes
  */
 export async function postRestAddActorUsers(
   /** The project ID or project key (case sensitive). */
@@ -8988,6 +9074,7 @@ export async function postRestAddActorUsers(
 /**
  * Set actors for project role
  * @request PUT :/rest/api/3/project/{projectIdOrKey}/role/{id}
+ * @allowrelaxedtypes
  */
 export async function putRestSetActors(
   /** The project ID or project key (case sensitive). */
@@ -9016,6 +9103,7 @@ export async function putRestSetActors(
 /**
  * Get project role details
  * @request GET :/rest/api/3/project/{projectIdOrKey}/roledetails
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectRoleDetails(
@@ -9045,6 +9133,7 @@ export async function getRestGetProjectRoleDetails(
 /**
  * Get all statuses for project
  * @request GET :/rest/api/3/project/{projectIdOrKey}/statuses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllStatuses(
@@ -9157,6 +9246,7 @@ export async function getRestGetProjectVersionsPaginated(
 /**
  * Get project versions
  * @request GET :/rest/api/3/project/{projectIdOrKey}/versions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectVersions(
@@ -9279,6 +9369,7 @@ export async function getRestGetProjectIssueSecurityScheme(
 /**
  * Get project notification scheme
  * @request GET :/rest/api/3/project/{projectKeyOrId}/notificationscheme
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetNotificationSchemeForProject(
@@ -9314,6 +9405,7 @@ export async function getRestGetNotificationSchemeForProject(
 /**
  * Get assigned permission scheme
  * @request GET :/rest/api/3/project/{projectKeyOrId}/permissionscheme
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAssignedPermissionScheme(
@@ -9349,6 +9441,7 @@ export async function getRestGetAssignedPermissionScheme(
 /**
  * Assign permission scheme
  * @request PUT :/rest/api/3/project/{projectKeyOrId}/permissionscheme
+ * @allowrelaxedtypes
  */
 export async function putRestAssignPermissionScheme(
   /** The project ID or project key (case sensitive). */
@@ -9615,6 +9708,7 @@ export async function getRestGetResolutions(
 /**
  * Create resolution
  * @request POST :/rest/api/3/resolution
+ * @allowrelaxedtypes
  */
 export async function postRestCreateResolution(
   /** Request body */
@@ -9762,6 +9856,7 @@ export async function getRestGetResolution(
 /**
  * Update resolution
  * @request PUT :/rest/api/3/resolution/{id}
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateResolution(
   /** The ID of the issue resolution. */
@@ -9787,6 +9882,7 @@ export async function putRestUpdateResolution(
 /**
  * Get all project roles
  * @request GET :/rest/api/3/role
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllProjectRoles(
@@ -9807,6 +9903,7 @@ export async function getRestGetAllProjectRoles(
 /**
  * Create project role
  * @request POST :/rest/api/3/role
+ * @allowrelaxedtypes
  */
 export async function postRestCreateProjectRole(
   /** Request body */
@@ -9856,6 +9953,7 @@ export async function deleteRestDeleteProjectRole(
 /**
  * Get project role by ID
  * @request GET :/rest/api/3/role/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectRoleById(
@@ -9879,6 +9977,7 @@ export async function getRestGetProjectRoleById(
 /**
  * Partial update project role
  * @request POST :/rest/api/3/role/{id}
+ * @allowrelaxedtypes
  */
 export async function postRestPartialUpdateProjectRole(
   /** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */
@@ -9904,6 +10003,7 @@ export async function postRestPartialUpdateProjectRole(
 /**
  * Fully update project role
  * @request PUT :/rest/api/3/role/{id}
+ * @allowrelaxedtypes
  */
 export async function putRestFullyUpdateProjectRole(
   /** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */
@@ -9929,6 +10029,7 @@ export async function putRestFullyUpdateProjectRole(
 /**
  * Delete default actors from project role
  * @request DELETE :/rest/api/3/role/{id}/actors
+ * @allowrelaxedtypes
  */
 export async function deleteRestDeleteProjectRoleActorsFromRole(
   /** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */
@@ -9960,6 +10061,7 @@ export async function deleteRestDeleteProjectRoleActorsFromRole(
 /**
  * Get default actors for project role
  * @request GET :/rest/api/3/role/{id}/actors
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetProjectRoleActorsForRole(
@@ -9983,6 +10085,7 @@ export async function getRestGetProjectRoleActorsForRole(
 /**
  * Add default actors to project role
  * @request POST :/rest/api/3/role/{id}/actors
+ * @allowrelaxedtypes
  */
 export async function postRestAddProjectRoleActorsToRole(
   /** The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs. */
@@ -10047,6 +10150,7 @@ export async function getRestGetScreens(
 /**
  * Create screen
  * @request POST :/rest/api/3/screens
+ * @allowrelaxedtypes
  */
 export async function postRestCreateScreen(
   /** Request body */
@@ -10113,6 +10217,7 @@ export async function deleteRestDeleteScreen(
 /**
  * Update screen
  * @request PUT :/rest/api/3/screens/{screenId}
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateScreen(
   /** The ID of the screen. */
@@ -10705,6 +10810,7 @@ export async function putRestSetIssueNavigatorDefaultColumns(
 /**
  * Get all statuses
  * @request GET :/rest/api/3/status
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetStatuses(
@@ -10725,6 +10831,7 @@ export async function getRestGetStatuses(
 /**
  * Get status
  * @request GET :/rest/api/3/status/{idOrName}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetStatus(
@@ -10748,6 +10855,7 @@ export async function getRestGetStatus(
 /**
  * Get all status categories
  * @request GET :/rest/api/3/statuscategory
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetStatusCategories(
@@ -10768,6 +10876,7 @@ export async function getRestGetStatusCategories(
 /**
  * Get status category
  * @request GET :/rest/api/3/statuscategory/{idOrKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetStatusCategory(
@@ -10817,6 +10926,7 @@ Min items `1`, Max items `50` */
 /**
  * Bulk get statuses
  * @request GET :/rest/api/3/statuses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetStatusesById(
@@ -10894,6 +11004,7 @@ export async function putRestUpdateStatuses(
 /**
  * Search statuses paginated
  * @request GET :/rest/api/3/statuses/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestSearch(
@@ -10931,6 +11042,7 @@ export async function getRestSearch(
 /**
  * Get task
  * @request GET :/rest/api/3/task/{taskId}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetTask(
@@ -11298,6 +11410,7 @@ export async function deleteRestRemoveUser(
 /**
  * Get user
  * @request GET :/rest/api/3/user
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetUser(
@@ -11332,6 +11445,7 @@ export async function getRestGetUser(
 /**
  * Create user
  * @request POST :/rest/api/3/user
+ * @allowrelaxedtypes
  */
 export async function postRestCreateUser(
   /** Request body */
@@ -11354,6 +11468,7 @@ export async function postRestCreateUser(
 /**
  * Find users assignable to projects
  * @request GET :/rest/api/3/user/assignable/multiProjectSearch
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestFindBulkAssignableUsers(
@@ -11389,6 +11504,7 @@ export async function getRestFindBulkAssignableUsers(
 /**
  * Find users assignable to issues
  * @request GET :/rest/api/3/user/assignable/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestFindAssignableUsers(
@@ -11431,6 +11547,7 @@ export async function getRestFindAssignableUsers(
 /**
  * Bulk get users
  * @request GET :/rest/api/3/user/bulk
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestBulkGetUsers(
@@ -11575,6 +11692,7 @@ export async function putRestSetUserColumns(
 /**
  * Get user email
  * @request GET :/rest/api/3/user/email
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetUserEmail(
@@ -11600,6 +11718,7 @@ export async function getRestGetUserEmail(
 /**
  * Get user email bulk
  * @request GET :/rest/api/3/user/email/bulk
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetUserEmailBulk(
@@ -11654,6 +11773,7 @@ export async function getRestGetUserGroups(
 /**
  * Find users with permissions
  * @request GET :/rest/api/3/user/permission/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestFindUsersWithAllPermissions(
@@ -11825,6 +11945,7 @@ export async function deleteRestDeleteUserProperty(
 /**
  * Get user property
  * @request GET :/rest/api/3/user/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetUserProperty(
@@ -11891,6 +12012,7 @@ export async function putRestSetUserProperty(
 /**
  * Find users
  * @request GET :/rest/api/3/user/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestFindUsers(
@@ -11925,6 +12047,7 @@ export async function getRestFindUsers(
 /**
  * Find users by query
  * @request GET :/rest/api/3/user/search/query
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestFindUsersByQuery(
@@ -11983,6 +12106,7 @@ export async function getRestFindUserKeysByQuery(
 /**
  * Find users with browse permission
  * @request GET :/rest/api/3/user/viewissue/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestFindUsersWithBrowsePermission(
@@ -12020,6 +12144,7 @@ export async function getRestFindUsersWithBrowsePermission(
 /**
  * Get all users default
  * @request GET :/rest/api/3/users
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllUsersDefault(
@@ -12047,6 +12172,7 @@ export async function getRestGetAllUsersDefault(
 /**
  * Get all users
  * @request GET :/rest/api/3/users/search
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllUsers(
@@ -12074,6 +12200,7 @@ export async function getRestGetAllUsers(
 /**
  * Create version
  * @request POST :/rest/api/3/version
+ * @allowrelaxedtypes
  */
 export async function postRestCreateVersion(
   /** Request body */
@@ -12125,6 +12252,7 @@ export async function deleteRestDeleteVersion(
 /**
  * Get version
  * @request GET :/rest/api/3/version/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetVersion(
@@ -12156,6 +12284,7 @@ export async function getRestGetVersion(
 /**
  * Update version
  * @request PUT :/rest/api/3/version/{id}
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateVersion(
   /** The ID of the version. */
@@ -12325,6 +12454,7 @@ export async function deleteRestDeleteWebhookById(
 /**
  * Get dynamic webhooks for app
  * @request GET :/rest/api/3/webhook
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetDynamicWebhooksForApp(
@@ -12424,6 +12554,7 @@ export async function putRestRefreshWebhooks(
 /**
  * Get all workflows
  * @request GET :/rest/api/3/workflow
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllWorkflows(
@@ -12777,6 +12908,7 @@ export async function deleteRestDeleteInactiveWorkflow(
 /**
  * Get all workflow schemes
  * @request GET :/rest/api/3/workflowscheme
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetAllWorkflowSchemes(
@@ -12827,6 +12959,7 @@ export async function postRestCreateWorkflowScheme(
 /**
  * Get workflow scheme project associations
  * @request GET :/rest/api/3/workflowscheme/project
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetWorkflowSchemeProjectAssociations(
@@ -12896,6 +13029,7 @@ export async function deleteRestDeleteWorkflowScheme(
 /**
  * Get workflow scheme
  * @request GET :/rest/api/3/workflowscheme/{id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetWorkflowScheme(
@@ -12950,6 +13084,7 @@ export async function putRestUpdateWorkflowScheme(
 /**
  * Create draft workflow scheme
  * @request POST :/rest/api/3/workflowscheme/{id}/createdraft
+ * @allowrelaxedtypes
  */
 export async function postRestCreateWorkflowSchemeDraftFromParent(
   /** The ID of the active workflow scheme that the draft is created from. */
@@ -12972,6 +13107,7 @@ export async function postRestCreateWorkflowSchemeDraftFromParent(
 /**
  * Delete default workflow
  * @request DELETE :/rest/api/3/workflowscheme/{id}/default
+ * @allowrelaxedtypes
  */
 export async function deleteRestDeleteDefaultWorkflow(
   /** The ID of the workflow scheme. */
@@ -13027,6 +13163,7 @@ export async function getRestGetDefaultWorkflow(
 /**
  * Update default workflow
  * @request PUT :/rest/api/3/workflowscheme/{id}/default
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateDefaultWorkflow(
   /** The ID of the workflow scheme. */
@@ -13074,6 +13211,7 @@ export async function deleteRestDeleteWorkflowSchemeDraft(
 /**
  * Get draft workflow scheme
  * @request GET :/rest/api/3/workflowscheme/{id}/draft
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetWorkflowSchemeDraft(
@@ -13123,6 +13261,7 @@ export async function putRestUpdateWorkflowSchemeDraft(
 /**
  * Delete draft default workflow
  * @request DELETE :/rest/api/3/workflowscheme/{id}/draft/default
+ * @allowrelaxedtypes
  */
 export async function deleteRestDeleteDraftDefaultWorkflow(
   /** The ID of the workflow scheme that the draft belongs to. */
@@ -13168,6 +13307,7 @@ export async function getRestGetDraftDefaultWorkflow(
 /**
  * Update draft default workflow
  * @request PUT :/rest/api/3/workflowscheme/{id}/draft/default
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateDraftDefaultWorkflow(
   /** The ID of the workflow scheme that the draft belongs to. */
@@ -13193,6 +13333,7 @@ export async function putRestUpdateDraftDefaultWorkflow(
 /**
  * Delete workflow for issue type in draft workflow scheme
  * @request DELETE :/rest/api/3/workflowscheme/{id}/draft/issuetype/{issueType}
+ * @allowrelaxedtypes
  */
 export async function deleteRestDeleteWorkflowSchemeDraftIssueType(
   /** The ID of the workflow scheme that the draft belongs to. */
@@ -13244,6 +13385,7 @@ export async function getRestGetWorkflowSchemeDraftIssueType(
 /**
  * Set workflow for issue type in draft workflow scheme
  * @request PUT :/rest/api/3/workflowscheme/{id}/draft/issuetype/{issueType}
+ * @allowrelaxedtypes
  */
 export async function putRestSetWorkflowSchemeDraftIssueType(
   /** The ID of the workflow scheme that the draft belongs to. */
@@ -13357,6 +13499,7 @@ export async function getRestGetDraftWorkflow(
 /**
  * Set issue types for workflow in workflow scheme
  * @request PUT :/rest/api/3/workflowscheme/{id}/draft/workflow
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateDraftWorkflowMapping(
   /** The ID of the workflow scheme that the draft belongs to. */
@@ -13387,6 +13530,7 @@ export async function putRestUpdateDraftWorkflowMapping(
 /**
  * Delete workflow for issue type in workflow scheme
  * @request DELETE :/rest/api/3/workflowscheme/{id}/issuetype/{issueType}
+ * @allowrelaxedtypes
  */
 export async function deleteRestDeleteWorkflowSchemeIssueType(
   /** The ID of the workflow scheme. */
@@ -13448,6 +13592,7 @@ export async function getRestGetWorkflowSchemeIssueType(
 /**
  * Set workflow for issue type in workflow scheme
  * @request PUT :/rest/api/3/workflowscheme/{id}/issuetype/{issueType}
+ * @allowrelaxedtypes
  */
 export async function putRestSetWorkflowSchemeIssueType(
   /** The ID of the workflow scheme. */
@@ -13535,6 +13680,7 @@ export async function getRestGetWorkflow(
 /**
  * Set issue types for workflow in workflow scheme
  * @request PUT :/rest/api/3/workflowscheme/{id}/workflow
+ * @allowrelaxedtypes
  */
 export async function putRestUpdateWorkflowMapping(
   /** The ID of the workflow scheme. */
@@ -13565,6 +13711,7 @@ export async function putRestUpdateWorkflowMapping(
 /**
  * Get IDs of deleted worklogs
  * @request GET :/rest/api/3/worklog/deleted
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIdsOfWorklogsDeletedSince(
@@ -13590,6 +13737,7 @@ export async function getRestGetIdsOfWorklogsDeletedSince(
 /**
  * Get worklogs
  * @request POST :/rest/api/3/worklog/list
+ * @allowrelaxedtypes
  */
 export async function postRestGetWorklogsForIds(
   query: {
@@ -13617,6 +13765,7 @@ export async function postRestGetWorklogsForIds(
 /**
  * Get IDs of updated worklogs
  * @request GET :/rest/api/3/worklog/updated
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestGetIdsOfWorklogsModifiedSince(
@@ -13693,6 +13842,7 @@ export async function deleteRestAddonPropertiesResourceDeleteAddonPropertyDelete
 /**
  * Get app property
  * @request GET :/rest/atlassian-connect/1/addons/{addonKey}/properties/{propertyKey}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRestAddonPropertiesResourceGetAddonPropertyGet(
