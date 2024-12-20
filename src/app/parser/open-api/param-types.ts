@@ -312,7 +312,7 @@ export function isRelaxedTypeTagRequiredForSchema(schema: Schema, schemaStore: P
   } else if (schemaIsTypeAllOf(schema)) {
     schema._$requiresRelaxedTypeTag = isRelaxedTypeTagRequiredForAllOfTypeSchema(schema);
   }
-  return schema._$requiresRelaxedTypeTag ?? false;
+  return schema._$requiresRelaxedTypeTag ?? true;
 }
 
 /**
