@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Extend `@save` annotation support for user defined type (types, interfaces, classes) ([#71](https://github.com/hasura/ndc-open-api-lambda/pull/71))
+- Remove `--overwrite` flag from help for overwrite behaviour ([#76](https://github.com/hasura/ndc-open-api-lambda/pull/76))
 
 ## [[1.2.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.2.0)] 2024-12-11
 
