@@ -2,8 +2,11 @@
 
 ## Unreleased
 
+## [[1.3.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.3.0)] 2025-01-22
+
 - Extend `@save` annotation support for user defined type (types, interfaces, classes) ([#71](https://github.com/hasura/ndc-open-api-lambda/pull/71))
 - Remove `--overwrite` flag from help for overwrite behaviour ([#76](https://github.com/hasura/ndc-open-api-lambda/pull/76))
+- Add `@allowrelaxedtypes` annotation support for response types ([#74](https://github.com/hasura/ndc-open-api-lambda/pull/74))
 
 ## [[1.2.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.2.0)] 2024-12-11
 
