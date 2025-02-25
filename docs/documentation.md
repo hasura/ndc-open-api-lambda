@@ -44,6 +44,8 @@ definition:
           additional:
             auth: # a static header added to every request
               literal: "Bearer my-bearer-token" # static value of the header
+            auth-from-env: # a static header added to every request
+              valueFromEnv: MY_HEADER_ENV_VAR # value of the header that will be read from the specified env var in the project .env file
 ```
 
 ### Via Typescript (`functions.ts`) File
