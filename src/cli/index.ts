@@ -5,7 +5,7 @@ import * as updateCmd from "./update";
 import { exec, execSync } from "child_process";
 
 export const program = new Command()
-  .version("1.3.0")
+  .version("1.5.0")
   .description("OAS Connector CLI")
   // .addCommand(initCmd.cmd) TODO: Enable when required by the CLI spec
   .addCommand(updateCmd.cmd)
