@@ -4,6 +4,8 @@
 
 - Update NDC NodeJS Lambda to `v1.11.0` [#80](https://github.com/hasura/ndc-open-api-lambda/pull/80)
 
+- Add native toolchain support [#79](https://github.com/hasura/ndc-open-api-lambda/pull/79)
+
 ## [[1.3.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.3.0)] 2025-01-22
 
 - Extend `@save` annotation support for user defined type (types, interfaces, classes) ([#71](https://github.com/hasura/ndc-open-api-lambda/pull/71))
