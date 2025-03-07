@@ -32,3 +32,22 @@ dockerComposeWatch:
     target: /functions
     action: sync+restart
     exclude: swagger.json
+nativeToolchainDefinition:
+  commands:
+    start:
+      type: ShellScript
+      bash: ./start.sh
+      powershell: ./start.ps1
+    watch:
+      type: ShellScript
+      bash: ./watch.sh
+      powershell: ./watch.ps1
+    update:
+      type: ShellScript
+      bash: |
+        #!/usr/bin/env bash
+        set -eu -o pipefail
+        HASURA_CONFIGURATION_DIRECTORY="$HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH" "$HASURA_DDN_NATIVE_CONNECTOR_PLUGIN_DIR/ndc-oas-lambda" update
+      powershell: |
+        $ErrorActionPreference = "Stop"
+        & "$env:HASURA_DDN_NATIVE_CONNECTOR_PLUGIN_DIR\ndc-oas-lambda.bat" update

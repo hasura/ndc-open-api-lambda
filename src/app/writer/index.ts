@@ -22,7 +22,12 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
     tsConfigWriter.writeToFileSystem();
 
     logger.info("running npm install :: installing dependencies");
-    execSync("npm install", { stdio: "inherit" });
+    if (process.env.HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH) {
+      execSync("npm install ", { stdio: "inherit", cwd: process.env.HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH });
+    } else {
+      execSync("npm install ", { stdio: "inherit" });
+    }
+    
     logger.info("all dependencies installed");
   } catch (e) {
     if (e instanceof apiWriter.SimilarFileContentsError) {
