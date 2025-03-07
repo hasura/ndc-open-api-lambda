@@ -41,8 +41,8 @@ export async function writeToFileSystem() {
 function getScripts(packageJson: NPMCliPackageJson) {
   let scripts: any;
 
-  const startScript = `ndc-lambda-sdk host -f functions.ts serve --configuration ./ --port 8080`;
-  const watchScript = `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ./ --pretty-print-logs --port 8080`;
+  const startScript = `ndc-lambda-sdk host -f functions.ts serve --configuration ./`;
+  const watchScript = `ndc-lambda-sdk host -f functions.ts --watch serve --configuration ./ --pretty-print-logs`;
 
   if (packageJson.content.scripts) {
     scripts = {
