@@ -143,7 +143,12 @@ export function schemaIsTypeScalar(schema: any): schema is SchemaTypeScalar {
   return (
     schema.type &&
     Object.values(ScalarTypeEnum).includes(schema.type) &&
-    schema.properties === undefined
+    !schemaIsTypeObject(schema) &&  
+    !schemaIsTypeRef(schema)  &&
+    !schemaIsTypeArray(schema) &&
+    !schemaIsTypeAnyOf(schema) &&
+    !schemaIsTypeOneOf(schema) &&
+    !schemaIsTypeAllOf(schema)
   );
 }
 

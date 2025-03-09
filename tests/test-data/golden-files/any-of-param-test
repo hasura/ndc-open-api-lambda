@@ -1,0 +1,46 @@
+import * as hasuraSdk from "@hasura/ndc-lambda-sdk";
+import { Api } from "./api";
+
+const api = new Api({
+  baseUrl: `${process.env.NDC_OAS_BASE_URL}`,
+});
+
+/**
+ * Get total
+ * @request GET :/total
+ * @allowrelaxedtypes
+ * @readonly
+ */
+export async function getTotalTotalList(
+  query: {
+    content?: {
+      /** Depending of resurce, use different content params */
+      inner_content?:
+        | { fields?: { include?: string[] } }
+        | {
+            expand?: { all?: hasuraSdk.JSONValue; false?: hasuraSdk.JSONValue };
+          }
+        | {
+            structure?: {
+              /** Possible have empty object, or different parent or child combinations */
+              tree?: hasuraSdk.JSONValue;
+            };
+          };
+    };
+  },
+  headers?: hasuraSdk.JSONValue,
+): Promise<{
+  total?: number;
+}> {
+  const result = await api.total.totalList({
+    query: query,
+    params: {
+      headers: (headers?.value as Record<string, string>) ?? undefined,
+    },
+  });
+  if (result.data) {
+    return result.data;
+  } else {
+    throw result.error;
+  }
+}

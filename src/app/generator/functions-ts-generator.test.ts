@@ -164,6 +164,24 @@ const tests: {
     goldenFile: "./golden-files/trello",
     baseUrl: "",
   },
+  {
+    name: "one-of-param-test",
+    openApiUri: "./open-api-docs/one-of-param-test.json",
+    goldenFile: "./golden-files/one-of-param-test",
+    baseUrl: "",
+  },
+  {
+    name: "any-of-param-test",
+    openApiUri: "./open-api-docs/one-of-param-test.json",
+    goldenFile: "./golden-files/one-of-param-test",
+    baseUrl: "",
+  },
+  {
+    name: "all-of-param-test",
+    openApiUri: "./open-api-docs/one-of-param-test.json",
+    goldenFile: "./golden-files/one-of-param-test",
+    baseUrl: "",
+  },
 ];
 
 describe("functions-ts-generator", async () => {
