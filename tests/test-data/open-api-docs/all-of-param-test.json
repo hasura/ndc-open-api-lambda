@@ -1,0 +1,134 @@
+{
+  "openapi": "3.0.3",
+  "info": {},
+  "servers": [],
+  "security": [],
+  "paths": {
+    "/total": {
+      "get": {
+        "summary": "Get total",
+        "description": "Get total",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/content"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get Total",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequestError"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthorizationError"
+          },
+          "403": {
+            "$ref": "#/components/responses/ForbiddenError"
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "content": {
+        "name": "content",
+        "in": "query",
+        "required": false,
+        "example": "",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "inner_content": {
+              "type": "object",
+              "description": "Depending of resurce, use different content params",
+              "allOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "fields": {
+                      "type": "object",
+                      "properties": {
+                        "include": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "expand": {
+                      "type": "object",
+                      "properties": {
+                        "all": {
+                          "type": "object"
+                        },
+                        "false": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "structure": {
+                      "type": "object",
+                      "properties": {
+                        "tree": {
+                          "type": "object",
+                          "description": "Possible have empty object, or different parent or child combinations"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "schemas": {},
+    "securitySchemes": {},
+    "responses": {
+      "BadRequestError": {
+        "description": "BadRequestError\n"
+      },
+      "AuthorizationError": {
+        "description": "AuthorizationError\n"
+      },
+      "ForbiddenError": {
+        "description": "ForbiddenError\n"
+      },
+      "NotFoundError": {
+        "description": "NotFoundError    \n"
+      },
+      "ServerError": {
+        "description": "ServerError\n"
+      }
+    }
+  }
+}
