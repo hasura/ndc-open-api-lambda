@@ -14,6 +14,7 @@ const api = new Api({
 /**
  * Get OData metadata
  * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/events/$metadata
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsEventsGetOdataMetadata(
@@ -294,6 +295,7 @@ export async function getSubscriptionsMetricsGet(
 /**
  * Execute an Analytics query
  * @request GET :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/query
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsQueryGet(
@@ -329,6 +331,7 @@ export async function getSubscriptionsQueryGet(
 /**
  * Execute an Analytics query
  * @request POST :/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/query
+ * @allowrelaxedtypes
  */
 export async function postSubscriptionsQueryExecute(
   subscriptionId: string,

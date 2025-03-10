@@ -48,6 +48,7 @@ const api = new Api({
  * Get Several Albums
 
  * @request GET :/albums
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAlbumsGetMultipleAlbums(
@@ -122,6 +123,7 @@ export async function getAlbumsGetAnAlbum(
  * Get Album Tracks
 
  * @request GET :/albums/{id}/tracks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAlbumsGetAnAlbumsTracks(
@@ -164,6 +166,7 @@ export async function getAlbumsGetAnAlbumsTracks(
  * Get Several Artists
 
  * @request GET :/artists
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getArtistsGetMultipleArtists(
@@ -219,6 +222,7 @@ export async function getArtistsGetAnArtist(
  * Get Artist's Albums
 
  * @request GET :/artists/{id}/albums
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getArtistsGetAnArtistsAlbums(
@@ -265,6 +269,7 @@ Valid values are:<br/>- `album`<br/>- `single`<br/>- `appears_on`<br/>- `compila
  * Get Artist's Related Artists
 
  * @request GET :/artists/{id}/related-artists
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getArtistsGetAnArtistsRelatedArtists(
@@ -292,6 +297,7 @@ export async function getArtistsGetAnArtistsRelatedArtists(
  * Get Artist's Top Tracks
 
  * @request GET :/artists/{id}/top-tracks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getArtistsGetAnArtistsTopTracks(
@@ -357,6 +363,7 @@ for the track.
  * Get Tracks' Audio Features
 
  * @request GET :/audio-features
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAudioFeaturesGetSeveralAudioFeatures(
@@ -413,6 +420,7 @@ export async function getAudioFeaturesGetAudioFeatures(
  * Get Several Audiobooks
 
  * @request GET :/audiobooks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAudiobooksGetMultipleAudiobooks(
@@ -488,6 +496,7 @@ for the audiobook.
  * Get Audiobook Chapters
 
  * @request GET :/audiobooks/{id}/chapters
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAudiobooksGetAudiobookChapters(
@@ -531,6 +540,7 @@ for the audiobook.
  * Get Several Browse Categories
 
  * @request GET :/browse/categories
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getBrowseGetCategories(
@@ -570,6 +580,7 @@ _**Note**: if `locale` is not supplied, or if the specified language is not avai
  * Get Single Browse Category
 
  * @request GET :/browse/categories/{category_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getBrowseGetACategory(
@@ -604,6 +615,7 @@ export async function getBrowseGetACategory(
  * Get Category's Playlists
 
  * @request GET :/browse/categories/{category_id}/playlists
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getBrowseGetACategoriesPlaylists(
@@ -641,6 +653,7 @@ export async function getBrowseGetACategoriesPlaylists(
  * Get Featured Playlists
 
  * @request GET :/browse/featured-playlists
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getBrowseGetFeaturedPlaylists(
@@ -681,6 +694,7 @@ _**Note**: if `locale` is not supplied, or if the specified language is not avai
  * Get New Releases
 
  * @request GET :/browse/new-releases
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getBrowseGetNewReleases(
@@ -716,6 +730,7 @@ export async function getBrowseGetNewReleases(
  * Get Several Chapters
 
  * @request GET :/chapters
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getChaptersGetSeveralChapters(
@@ -791,6 +806,7 @@ for the chapter.
  * Get Several Episodes
 
  * @request GET :/episodes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getEpisodesGetMultipleEpisodes(
@@ -864,6 +880,7 @@ export async function getEpisodesGetAnEpisode(
  * Get Available Markets
 
  * @request GET :/markets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMarketsGetAvailableMarkets(
@@ -888,6 +905,7 @@ export async function getMarketsGetAvailableMarkets(
  * Get Current User's Profile
 
  * @request GET :/me
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetCurrentUsersProfile(
@@ -909,6 +927,7 @@ export async function getMeGetCurrentUsersProfile(
  * Remove Users' Saved Albums
 
  * @request DELETE :/me/albums
+ * @allowrelaxedtypes
  */
 export async function deleteMeRemoveAlbumsUser(
   query: {
@@ -942,6 +961,7 @@ export async function deleteMeRemoveAlbumsUser(
  * Get User's Saved Albums
 
  * @request GET :/me/albums
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetUsersSavedAlbums(
@@ -980,6 +1000,7 @@ export async function getMeGetUsersSavedAlbums(
  * Save Albums for Current User
 
  * @request PUT :/me/albums
+ * @allowrelaxedtypes
  */
 export async function putMeSaveAlbumsUser(
   query: {
@@ -1013,6 +1034,7 @@ export async function putMeSaveAlbumsUser(
  * Check User's Saved Albums
 
  * @request GET :/me/albums/contains
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeCheckUsersSavedAlbums(
@@ -1040,6 +1062,7 @@ export async function getMeCheckUsersSavedAlbums(
  * Remove User's Saved Audiobooks
 
  * @request DELETE :/me/audiobooks
+ * @allowrelaxedtypes
  */
 export async function deleteMeRemoveAudiobooksUser(
   query: {
@@ -1066,6 +1089,7 @@ export async function deleteMeRemoveAudiobooksUser(
  * Get User's Saved Audiobooks
 
  * @request GET :/me/audiobooks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetUsersSavedAudiobooks(
@@ -1096,6 +1120,7 @@ export async function getMeGetUsersSavedAudiobooks(
  * Save Audiobooks for Current User
 
  * @request PUT :/me/audiobooks
+ * @allowrelaxedtypes
  */
 export async function putMeSaveAudiobooksUser(
   query: {
@@ -1122,6 +1147,7 @@ export async function putMeSaveAudiobooksUser(
  * Check User's Saved Audiobooks
 
  * @request GET :/me/audiobooks/contains
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeCheckUsersSavedAudiobooks(
@@ -1149,6 +1175,7 @@ export async function getMeCheckUsersSavedAudiobooks(
  * Remove User's Saved Episodes
 
  * @request DELETE :/me/episodes
+ * @allowrelaxedtypes
  */
 export async function deleteMeRemoveEpisodesUser(
   query: {
@@ -1182,6 +1209,7 @@ export async function deleteMeRemoveEpisodesUser(
  * Get User's Saved Episodes
 
  * @request GET :/me/episodes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetUsersSavedEpisodes(
@@ -1220,6 +1248,7 @@ export async function getMeGetUsersSavedEpisodes(
  * Save Episodes for Current User
 
  * @request PUT :/me/episodes
+ * @allowrelaxedtypes
  */
 export async function putMeSaveEpisodesUser(
   query: {
@@ -1253,6 +1282,7 @@ export async function putMeSaveEpisodesUser(
  * Check User's Saved Episodes
 
  * @request GET :/me/episodes/contains
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeCheckUsersSavedEpisodes(
@@ -1317,6 +1347,7 @@ export async function deleteMeUnfollowArtistsUsers(
  * Get Followed Artists
 
  * @request GET :/me/following
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetFollowed(
@@ -1424,6 +1455,7 @@ export async function getMeCheckCurrentUserFollows(
  * Get Playback State
 
  * @request GET :/me/player
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetInformationAboutTheUsersCurrentPlayback(
@@ -1461,6 +1493,7 @@ In addition to providing this parameter, make sure that your client properly han
  * Transfer Playback
 
  * @request PUT :/me/player
+ * @allowrelaxedtypes
  */
 export async function putMeTransferAUsersPlayback(
   /** Request body */
@@ -1490,6 +1523,7 @@ export async function putMeTransferAUsersPlayback(
  * Get Currently Playing Track
 
  * @request GET :/me/player/currently-playing
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetTheUsersCurrentlyPlayingTrack(
@@ -1527,6 +1561,7 @@ In addition to providing this parameter, make sure that your client properly han
  * Get Available Devices
 
  * @request GET :/me/player/devices
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetAUsersAvailableDevices(
@@ -1550,6 +1585,7 @@ export async function getMeGetAUsersAvailableDevices(
  * Skip To Next
 
  * @request POST :/me/player/next
+ * @allowrelaxedtypes
  */
 export async function postMeSkipUsersPlaybackToNextTrack(
   query: {
@@ -1575,6 +1611,7 @@ export async function postMeSkipUsersPlaybackToNextTrack(
  * Pause Playback
 
  * @request PUT :/me/player/pause
+ * @allowrelaxedtypes
  */
 export async function putMePauseAUsersPlayback(
   query: {
@@ -1601,6 +1638,7 @@ export async function putMePauseAUsersPlayback(
  * Start/Resume Playback
 
  * @request PUT :/me/player/play
+ * @allowrelaxedtypes
  */
 export async function putMeStartAUsersPlayback(
   query: {
@@ -1650,6 +1688,7 @@ export async function putMeStartAUsersPlayback(
  * Skip To Previous
 
  * @request POST :/me/player/previous
+ * @allowrelaxedtypes
  */
 export async function postMeSkipUsersPlaybackToPreviousTrack(
   query: {
@@ -1677,6 +1716,7 @@ not supplied, the user's currently active device is the target.
  * Get the User's Queue
 
  * @request GET :/me/player/queue
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetQueue(
@@ -1698,6 +1738,7 @@ export async function getMeGetQueue(
  * Add Item to Playback Queue
 
  * @request POST :/me/player/queue
+ * @allowrelaxedtypes
  */
 export async function postMeAddToQueue(
   query: {
@@ -1728,6 +1769,7 @@ not supplied, the user's currently active device is the target.
  * Get Recently Played Tracks
 
  * @request GET :/me/player/recently-played
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetRecentlyPlayed(
@@ -1765,6 +1807,7 @@ before (but not including) this cursor position. If `before` is specified,
  * Set Repeat Mode
 
  * @request PUT :/me/player/repeat
+ * @allowrelaxedtypes
  */
 export async function putMeSetRepeatModeOnUsersPlayback(
   query: {
@@ -1798,6 +1841,7 @@ not supplied, the user's currently active device is the target.
  * Seek To Position
 
  * @request PUT :/me/player/seek
+ * @allowrelaxedtypes
  */
 export async function putMeSeekToPositionInCurrentlyPlayingTrack(
   query: {
@@ -1830,6 +1874,7 @@ not supplied, the user's currently active device is the target.
  * Toggle Playback Shuffle
 
  * @request PUT :/me/player/shuffle
+ * @allowrelaxedtypes
  */
 export async function putMeToggleShuffleForUsersPlayback(
   query: {
@@ -1861,6 +1906,7 @@ not supplied, the user's currently active device is the target.
  * Set Playback Volume
 
  * @request PUT :/me/player/volume
+ * @allowrelaxedtypes
  */
 export async function putMeSetVolumeForUsersPlayback(
   query: {
@@ -1890,6 +1936,7 @@ export async function putMeSetVolumeForUsersPlayback(
  * Get Current User's Playlists
 
  * @request GET :/me/playlists
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetAListOfCurrentUsersPlaylists(
@@ -1922,6 +1969,7 @@ next set of playlists.'
  * Remove User's Saved Shows
 
  * @request DELETE :/me/shows
+ * @allowrelaxedtypes
  */
 export async function deleteMeRemoveShowsUser(
   query: {
@@ -1956,6 +2004,7 @@ export async function deleteMeRemoveShowsUser(
  * Get User's Saved Shows
 
  * @request GET :/me/shows
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetUsersSavedShows(
@@ -1986,6 +2035,7 @@ export async function getMeGetUsersSavedShows(
  * Save Shows for Current User
 
  * @request PUT :/me/shows
+ * @allowrelaxedtypes
  */
 export async function putMeSaveShowsUser(
   query: {
@@ -2012,6 +2062,7 @@ export async function putMeSaveShowsUser(
  * Check User's Saved Shows
 
  * @request GET :/me/shows/contains
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeCheckUsersSavedShows(
@@ -2081,6 +2132,7 @@ export async function getMeGetUsersTopArtistsAndTracks(
  * Remove User's Saved Tracks
 
  * @request DELETE :/me/tracks
+ * @allowrelaxedtypes
  */
 export async function deleteMeRemoveTracksUser(
   query: {
@@ -2114,6 +2166,7 @@ export async function deleteMeRemoveTracksUser(
  * Get User's Saved Tracks
 
  * @request GET :/me/tracks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetUsersSavedTracks(
@@ -2152,6 +2205,7 @@ export async function getMeGetUsersSavedTracks(
  * Save Tracks for Current User
 
  * @request PUT :/me/tracks
+ * @allowrelaxedtypes
  */
 export async function putMeSaveTracksUser(
   query: {
@@ -2185,6 +2239,7 @@ export async function putMeSaveTracksUser(
  * Check User's Saved Tracks
 
  * @request GET :/me/tracks/contains
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeCheckUsersSavedTracks(
@@ -2265,6 +2320,7 @@ In addition to providing this parameter, make sure that your client properly han
  * Change Playlist Details
 
  * @request PUT :/playlists/{playlist_id}
+ * @allowrelaxedtypes
  */
 export async function putPlaylistsChangePlaylistDetails(
   /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
@@ -2305,6 +2361,7 @@ export async function putPlaylistsChangePlaylistDetails(
  * Unfollow Playlist
 
  * @request DELETE :/playlists/{playlist_id}/followers
+ * @allowrelaxedtypes
  */
 export async function deletePlaylistsUnfollowPlaylist(
   /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
@@ -2329,6 +2386,7 @@ export async function deletePlaylistsUnfollowPlaylist(
  * Follow Playlist
 
  * @request PUT :/playlists/{playlist_id}/followers
+ * @allowrelaxedtypes
  */
 export async function putPlaylistsFollowPlaylist(
   /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
@@ -2360,6 +2418,7 @@ export async function putPlaylistsFollowPlaylist(
  * Check if Users Follow Playlist
 
  * @request GET :/playlists/{playlist_id}/followers/contains
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getPlaylistsCheckIfUserFollowsPlaylist(
@@ -2391,6 +2450,7 @@ export async function getPlaylistsCheckIfUserFollowsPlaylist(
  * Get Playlist Cover Image
 
  * @request GET :/playlists/{playlist_id}/images
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getPlaylistsGetPlaylistCover(
@@ -2416,6 +2476,7 @@ export async function getPlaylistsGetPlaylistCover(
  * Add Custom Playlist Cover Image
 
  * @request PUT :/playlists/{playlist_id}/images
+ * @allowrelaxedtypes
  */
 export async function putPlaylistsUploadCustomPlaylistCover(
   /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
@@ -2440,6 +2501,7 @@ export async function putPlaylistsUploadCustomPlaylistCover(
  * Remove Playlist Items
 
  * @request DELETE :/playlists/{playlist_id}/tracks
+ * @allowrelaxedtypes
  */
 export async function deletePlaylistsRemoveTracksPlaylist(
   /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
@@ -2485,6 +2547,7 @@ export async function deletePlaylistsRemoveTracksPlaylist(
  * Get Playlist Items
 
  * @request GET :/playlists/{playlist_id}/tracks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getPlaylistsGetPlaylistsTracks(
@@ -2542,6 +2605,7 @@ In addition to providing this parameter, make sure that your client properly han
  * Add Items to Playlist
 
  * @request POST :/playlists/{playlist_id}/tracks
+ * @allowrelaxedtypes
  */
 export async function postPlaylistsAddTracksToPlaylist(
   /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
@@ -2588,6 +2652,7 @@ _**Note**: it is likely that passing a large number of item URIs as a query para
  * Update Playlist Items
 
  * @request PUT :/playlists/{playlist_id}/tracks
+ * @allowrelaxedtypes
  */
 export async function putPlaylistsReorderOrReplacePlaylistsTracks(
   /** The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
@@ -2804,6 +2869,7 @@ export async function getRecommendationsGetRecommendations(
  * Get Available Genre Seeds
 
  * @request GET :/recommendations/available-genre-seeds
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRecommendationsGetRecommendationGenres(
@@ -2904,6 +2970,7 @@ the content as playable in the response. By default externally hosted audio cont
  * Get Several Shows
 
  * @request GET :/shows
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getShowsGetMultipleShows(
@@ -2979,6 +3046,7 @@ for the show.
  * Get Show Episodes
 
  * @request GET :/shows/{id}/episodes
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getShowsGetAShowsEpisodes(
@@ -3022,6 +3090,7 @@ for the show.
  * Get Several Tracks
 
  * @request GET :/tracks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTracksGetSeveralTracks(
@@ -3123,6 +3192,7 @@ export async function getUsersGetUsersProfile(
  * Get User's Playlists
 
  * @request GET :/users/{user_id}/playlists
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersGetListUsersPlaylists(

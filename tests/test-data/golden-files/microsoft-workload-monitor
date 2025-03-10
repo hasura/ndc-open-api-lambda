@@ -19,6 +19,7 @@ const api = new Api({
 /**
  * Gets the details of all operations possible on the resource provider.
  * @request GET :/providers/Microsoft.WorkloadMonitor/operations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProvidersOperationsList(
@@ -473,6 +474,7 @@ export async function patchSubscriptionsMonitorsUpdate(
 /**
  * Get list of notification settings for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsNotificationSettingsListByResource(
@@ -515,6 +517,7 @@ export async function getSubscriptionsNotificationSettingsListByResource(
 /**
  * Get a of notification setting for a resource.
  * @request GET :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings/{notificationSettingName}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSubscriptionsNotificationSettingsGet(
@@ -558,6 +561,7 @@ export async function getSubscriptionsNotificationSettingsGet(
 /**
  * Update notification settings for a resource.
  * @request PUT :/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceNamespace}/{resourceType}/{resourceName}/providers/Microsoft.WorkloadMonitor/notificationSettings/{notificationSettingName}
+ * @allowrelaxedtypes
  */
 export async function putSubscriptionsNotificationSettingsUpdate(
   /** The ID of the target subscription. */

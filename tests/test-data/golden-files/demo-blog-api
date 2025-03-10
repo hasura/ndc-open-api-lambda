@@ -8,6 +8,7 @@ const api = new Api({
 /**
  * create author
  * @request POST :/author
+ * @allowrelaxedtypes
  */
 export async function postAuthorAuthorCreate(
   /** Request body */
@@ -30,6 +31,7 @@ export async function postAuthorAuthorCreate(
 /**
  * delete author
  * @request DELETE :/author/{authorId}
+ * @allowrelaxedtypes
  */
 export async function deleteAuthorAuthorDelete(
   /** delete author */
@@ -52,6 +54,7 @@ export async function deleteAuthorAuthorDelete(
 /**
  * get all authors
  * @request GET :/authors
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAuthorsAuthorsList(
@@ -72,6 +75,7 @@ export async function getAuthorsAuthorsList(
 /**
  * update a  blog post
  * @request PUT :/blog/
+ * @allowrelaxedtypes
  */
 export async function putBlogBlogUpdate(
   /** Request body */
@@ -94,6 +98,7 @@ export async function putBlogBlogUpdate(
 /**
  * create a new blog post
  * @request POST :/blog/
+ * @allowrelaxedtypes
  */
 export async function postBlogBlogCreate(
   /** Request body */
@@ -116,6 +121,7 @@ export async function postBlogBlogCreate(
 /**
  * dislike a blog post
  * @request PATCH :/blog/dislike
+ * @allowrelaxedtypes
  */
 export async function patchBlogDislikePartialUpdate(
   query: {
@@ -140,6 +146,7 @@ export async function patchBlogDislikePartialUpdate(
 /**
  * like a blog post
  * @request PATCH :/blog/like
+ * @allowrelaxedtypes
  */
 export async function patchBlogLikePartialUpdate(
   query: {
@@ -164,6 +171,7 @@ export async function patchBlogLikePartialUpdate(
 /**
  * delete a blog post
  * @request DELETE :/blog/{blogId}
+ * @allowrelaxedtypes
  */
 export async function deleteBlogBlogDelete(
   /** blog to delete */
@@ -186,6 +194,7 @@ export async function deleteBlogBlogDelete(
 /**
  * update a blog post
  * @request PATCH :/blog/{blogId}
+ * @allowrelaxedtypes
  */
 export async function patchBlogBlogPartialUpdate(
   /** blog to update */
@@ -217,6 +226,7 @@ export async function patchBlogBlogPartialUpdate(
 /**
  * get blogs by author
  * @request GET :/blogs/
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getBlogsBlogsList(

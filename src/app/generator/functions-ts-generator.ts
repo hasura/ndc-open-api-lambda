@@ -24,10 +24,15 @@ export async function generateFunctionsTsCode(
       description: routeTypes.getDescription(route.route),
       request: routeTypes.getFormattedRouteName(route.route),
       isGetRequest: routeTypes.isGetRequest(route.route),
-      requiresRelaxedTypeAnnotation: requiresRelaxedTypeAnnotation(
-        route.params,
-        route.returnType,
-      ),
+
+      // set requiresRelaxedTypeAnnotation to `true` for everything for now becuase it does not cause issues with types that don't need it
+      requiresRelaxedTypeAnnotation: true,
+
+      // previous implementation
+      // requiresRelaxedTypeAnnotation: requiresRelaxedTypeAnnotation(
+      //   route.params,
+      //   route.returnType,
+      // ),
     });
 
     const namespace = routeTypes.getNamespace(route.route);
