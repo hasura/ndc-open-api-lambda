@@ -4,6 +4,9 @@
 
 - Set `allowrelaxedtypes` annotation for every function (API) ([#85](https://github.com/hasura/ndc-open-api-lambda/pull/85)) 
 
+- Fix param parsing of `anyOf`, `allOf` and `oneOf` ([#83](https://github.com/hasura/ndc-open-api-lambda/pull/83))
+
+
 ## [[1.5.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.5.0)] 2025-03-07
 
 - Update NDC NodeJS Lambda to `v1.11.0` [#80](https://github.com/hasura/ndc-open-api-lambda/pull/80)
