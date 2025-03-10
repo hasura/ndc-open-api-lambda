@@ -252,6 +252,7 @@ const api = new Api({
 /**
  * GitHub API Root
  * @request GET :/
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMetaRoot(
@@ -272,6 +273,7 @@ export async function getMetaRoot(
 /**
  * Get the authenticated app
  * @request GET :/app
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAppAppsGetAuthenticated(
@@ -292,6 +294,7 @@ export async function getAppAppsGetAuthenticated(
 /**
  * Create a GitHub App from a manifest
  * @request POST :/app-manifests/{code}/conversions
+ * @allowrelaxedtypes
  */
 export async function postAppManifestsAppsCreateFromManifest(
   code: string,
@@ -321,6 +324,7 @@ export async function postAppManifestsAppsCreateFromManifest(
 /**
  * Get a webhook configuration for an app
  * @request GET :/app/hook/config
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAppAppsGetWebhookConfigForApp(
@@ -341,6 +345,7 @@ export async function getAppAppsGetWebhookConfigForApp(
 /**
  * Update a webhook configuration for an app
  * @request PATCH :/app/hook/config
+ * @allowrelaxedtypes
  */
 export async function patchAppAppsUpdateWebhookConfigForApp(
   /** Request body */
@@ -372,6 +377,7 @@ export async function patchAppAppsUpdateWebhookConfigForApp(
 /**
  * List deliveries for an app webhook
  * @request GET :/app/hook/deliveries
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAppAppsListWebhookDeliveries(
@@ -400,6 +406,7 @@ export async function getAppAppsListWebhookDeliveries(
 /**
  * Get a delivery for an app webhook
  * @request GET :/app/hook/deliveries/{delivery_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAppAppsGetWebhookDelivery(
@@ -422,6 +429,7 @@ export async function getAppAppsGetWebhookDelivery(
 /**
  * Redeliver a delivery for an app webhook
  * @request POST :/app/hook/deliveries/{delivery_id}/attempts
+ * @allowrelaxedtypes
  */
 export async function postAppAppsRedeliverWebhookDelivery(
   deliveryId: number,
@@ -474,6 +482,7 @@ export async function getAppAppsListInstallations(
 /**
  * Delete an installation for the authenticated app
  * @request DELETE :/app/installations/{installation_id}
+ * @allowrelaxedtypes
  */
 export async function deleteAppAppsDeleteInstallation(
   /** The unique identifier of the installation. */
@@ -554,6 +563,7 @@ export async function postAppAppsCreateInstallationAccessToken(
 /**
  * Unsuspend an app installation
  * @request DELETE :/app/installations/{installation_id}/suspended
+ * @allowrelaxedtypes
  */
 export async function deleteAppAppsUnsuspendInstallation(
   installationId: number,
@@ -575,6 +585,7 @@ export async function deleteAppAppsUnsuspendInstallation(
 /**
  * Suspend an app installation
  * @request PUT :/app/installations/{installation_id}/suspended
+ * @allowrelaxedtypes
  */
 export async function putAppAppsSuspendInstallation(
   installationId: number,
@@ -596,6 +607,7 @@ export async function putAppAppsSuspendInstallation(
 /**
  * Delete an app authorization
  * @request DELETE :/applications/{client_id}/grant
+ * @allowrelaxedtypes
  */
 export async function deleteApplicationsAppsDeleteAuthorization(
   /** The client ID of the GitHub app. */
@@ -624,6 +636,7 @@ export async function deleteApplicationsAppsDeleteAuthorization(
 /**
  * Delete an app token
  * @request DELETE :/applications/{client_id}/token
+ * @allowrelaxedtypes
  */
 export async function deleteApplicationsAppsDeleteToken(
   clientId: string,
@@ -757,6 +770,7 @@ export async function postApplicationsAppsScopeToken(
 /**
  * Get an app
  * @request GET :/apps/{app_slug}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getAppsAppsGetBySlug(
@@ -779,6 +793,7 @@ export async function getAppsAppsGetBySlug(
 /**
  * Get all codes of conduct
  * @request GET :/codes_of_conduct
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCodesOfConductCodesOfConductGetAllCodesOfConduct(
@@ -799,6 +814,7 @@ export async function getCodesOfConductCodesOfConductGetAllCodesOfConduct(
 /**
  * Get a code of conduct
  * @request GET :/codes_of_conduct/{key}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCodesOfConductCodesOfConductGetConductCode(
@@ -977,6 +993,7 @@ export async function getEventsActivityListPublicEvents(
 /**
  * Get feeds
  * @request GET :/feeds
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getFeedsActivityGetFeeds(
@@ -1123,6 +1140,7 @@ export async function getGistsGistsListStarred(
 /**
  * Delete a gist
  * @request DELETE :/gists/{gist_id}
+ * @allowrelaxedtypes
  */
 export async function deleteGistsGistsDelete(
   /** The unique identifier of the gist. */
@@ -1269,6 +1287,7 @@ export async function postGistsGistsCreateComment(
 /**
  * Delete a gist comment
  * @request DELETE :/gists/{gist_id}/comments/{comment_id}
+ * @allowrelaxedtypes
  */
 export async function deleteGistsGistsDeleteComment(
   gistId: string,
@@ -1352,6 +1371,7 @@ export async function patchGistsGistsUpdateComment(
 /**
  * List gist commits
  * @request GET :/gists/{gist_id}/commits
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getGistsGistsListCommits(
@@ -1433,6 +1453,7 @@ export async function postGistsGistsFork(
 /**
  * Unstar a gist
  * @request DELETE :/gists/{gist_id}/star
+ * @allowrelaxedtypes
  */
 export async function deleteGistsGistsUnstar(
   gistId: string,
@@ -1454,6 +1475,7 @@ export async function deleteGistsGistsUnstar(
 /**
  * Check if a gist is starred
  * @request GET :/gists/{gist_id}/star
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getGistsGistsCheckIsStarred(
@@ -1476,6 +1498,7 @@ export async function getGistsGistsCheckIsStarred(
 /**
  * Star a gist
  * @request PUT :/gists/{gist_id}/star
+ * @allowrelaxedtypes
  */
 export async function putGistsGistsStar(
   gistId: string,
@@ -1522,6 +1545,7 @@ export async function getGistsGistsGetRevision(
 /**
  * Get all gitignore templates
  * @request GET :/gitignore/templates
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getGitignoreGitignoreGetAllTemplates(
@@ -1542,6 +1566,7 @@ export async function getGitignoreGitignoreGetAllTemplates(
 /**
  * Get a gitignore template
  * @request GET :/gitignore/templates/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getGitignoreGitignoreGetTemplate(
@@ -1597,6 +1622,7 @@ export async function getInstallationAppsListReposAccessibleToInstallation(
 /**
  * Revoke an installation access token
  * @request DELETE :/installation/token
+ * @allowrelaxedtypes
  */
 export async function deleteInstallationAppsRevokeInstallationAccessToken(
   headers?: hasuraSdk.JSONValue,
@@ -1666,6 +1692,7 @@ export async function getIssuesIssuesList(
 /**
  * Get all commonly used licenses
  * @request GET :/licenses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getLicensesLicensesGetAllCommonlyUsed(
@@ -1694,6 +1721,7 @@ export async function getLicensesLicensesGetAllCommonlyUsed(
 /**
  * Get a license
  * @request GET :/licenses/{license}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getLicensesLicensesGet(
@@ -1750,6 +1778,7 @@ export async function postMarkdownMarkdownRender(
 /**
  * Render a Markdown document in raw mode
  * @request POST :/markdown/raw
+ * @allowrelaxedtypes
  */
 export async function postMarkdownMarkdownRenderRaw(
   /** Request body */
@@ -1947,6 +1976,7 @@ export async function getMarketplaceListingAppsListAccountsForPlanStubbed(
 /**
  * Get GitHub meta information
  * @request GET :/meta
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMetaMetaGet(
@@ -2038,6 +2068,7 @@ export async function getNotificationsActivityListNotificationsForAuthenticatedU
 /**
  * Mark notifications as read
  * @request PUT :/notifications
+ * @allowrelaxedtypes
  */
 export async function putNotificationsActivityMarkNotificationsAsRead(
   /** Request body */
@@ -2094,6 +2125,7 @@ export async function getNotificationsActivityGetThread(
 /**
  * Mark a thread as read
  * @request PATCH :/notifications/threads/{thread_id}
+ * @allowrelaxedtypes
  */
 export async function patchNotificationsActivityMarkThreadAsRead(
   threadId: number,
@@ -2115,6 +2147,7 @@ export async function patchNotificationsActivityMarkThreadAsRead(
 /**
  * Delete a thread subscription
  * @request DELETE :/notifications/threads/{thread_id}/subscription
+ * @allowrelaxedtypes
  */
 export async function deleteNotificationsActivityDeleteThreadSubscription(
   threadId: number,
@@ -2136,6 +2169,7 @@ export async function deleteNotificationsActivityDeleteThreadSubscription(
 /**
  * Get a thread subscription for the authenticated user
  * @request GET :/notifications/threads/{thread_id}/subscription
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getNotificationsActivityGetThreadSubscriptionForAuthenticatedUser(
@@ -2159,6 +2193,7 @@ export async function getNotificationsActivityGetThreadSubscriptionForAuthentica
 /**
  * Set a thread subscription
  * @request PUT :/notifications/threads/{thread_id}/subscription
+ * @allowrelaxedtypes
  */
 export async function putNotificationsActivitySetThreadSubscription(
   threadId: number,
@@ -2189,6 +2224,7 @@ export async function putNotificationsActivitySetThreadSubscription(
 /**
  * Get Octocat
  * @request GET :/octocat
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOctocatMetaGetOctocat(
@@ -2214,6 +2250,7 @@ export async function getOctocatMetaGetOctocat(
 /**
  * List organizations
  * @request GET :/organizations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrganizationsOrgsList(
@@ -2241,6 +2278,7 @@ export async function getOrganizationsOrgsList(
 /**
  * Get an organization
  * @request GET :/orgs/{org}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsGet(
@@ -2408,6 +2446,7 @@ export async function patchOrgsOrgsUpdate(
 /**
  * Get GitHub Actions cache usage for an organization
  * @request GET :/orgs/{org}/actions/cache/usage
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsActionsGetActionsCacheUsageForOrg(
@@ -2430,6 +2469,7 @@ export async function getOrgsActionsGetActionsCacheUsageForOrg(
 /**
  * List repositories with GitHub Actions cache usage for an organization
  * @request GET :/orgs/{org}/actions/cache/usage-by-repository
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsActionsGetActionsCacheUsageByRepoForOrg(
@@ -2462,6 +2502,7 @@ export async function getOrgsActionsGetActionsCacheUsageByRepoForOrg(
 /**
  * Get the customization template for an OIDC subject claim for an organization
  * @request GET :/orgs/{org}/actions/oidc/customization/sub
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOidcGetOidcCustomSubTemplateForOrg(
@@ -2484,6 +2525,7 @@ export async function getOrgsOidcGetOidcCustomSubTemplateForOrg(
 /**
  * Set the customization template for an OIDC subject claim for an organization
  * @request PUT :/orgs/{org}/actions/oidc/customization/sub
+ * @allowrelaxedtypes
  */
 export async function putOrgsOidcUpdateOidcCustomSubTemplateForOrg(
   org: string,
@@ -2531,6 +2573,7 @@ export async function getOrgsActionsGetGithubActionsPermissionsOrganization(
 /**
  * Set GitHub Actions permissions for an organization
  * @request PUT :/orgs/{org}/actions/permissions
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsSetGithubActionsPermissionsOrganization(
   org: string,
@@ -2596,6 +2639,7 @@ export async function getOrgsActionsListSelectedRepositoriesEnabledGithubActions
 /**
  * Set selected repositories enabled for GitHub Actions in an organization
  * @request PUT :/orgs/{org}/actions/permissions/repositories
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsSetSelectedRepositoriesEnabledGithubActionsOrganization(
   org: string,
@@ -2626,6 +2670,7 @@ export async function putOrgsActionsSetSelectedRepositoriesEnabledGithubActionsO
 /**
  * Disable a selected repository for GitHub Actions in an organization
  * @request DELETE :/orgs/{org}/actions/permissions/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsDisableSelectedRepositoryGithubActionsOrganization(
   org: string,
@@ -2651,6 +2696,7 @@ export async function deleteOrgsActionsDisableSelectedRepositoryGithubActionsOrg
 /**
  * Enable a selected repository for GitHub Actions in an organization
  * @request PUT :/orgs/{org}/actions/permissions/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsEnableSelectedRepositoryGithubActionsOrganization(
   org: string,
@@ -2675,6 +2721,7 @@ export async function putOrgsActionsEnableSelectedRepositoryGithubActionsOrganiz
 /**
  * Get allowed actions and reusable workflows for an organization
  * @request GET :/orgs/{org}/actions/permissions/selected-actions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsActionsGetAllowedActionsOrganization(
@@ -2697,6 +2744,7 @@ export async function getOrgsActionsGetAllowedActionsOrganization(
 /**
  * Set allowed actions and reusable workflows for an organization
  * @request PUT :/orgs/{org}/actions/permissions/selected-actions
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsSetAllowedActionsOrganization(
   org: string,
@@ -2845,6 +2893,7 @@ export async function postOrgsActionsCreateRequiredWorkflow(
 /**
  * Delete a required workflow
  * @request DELETE :/orgs/{org}/actions/required_workflows/{required_workflow_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsDeleteRequiredWorkflow(
   org: string,
@@ -2963,6 +3012,7 @@ export async function getOrgsActionsListSelectedRepositoriesRequiredWorkflow(
 /**
  * Sets repositories for a required workflow
  * @request PUT :/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsSetSelectedReposToRequiredWorkflow(
   org: string,
@@ -2992,6 +3042,7 @@ export async function putOrgsActionsSetSelectedReposToRequiredWorkflow(
 /**
  * Remove a selected repository from required workflow
  * @request DELETE :/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsRemoveSelectedRepoFromRequiredWorkflow(
   org: string,
@@ -3017,6 +3068,7 @@ export async function deleteOrgsActionsRemoveSelectedRepoFromRequiredWorkflow(
 /**
  * Add a repository to a required workflow
  * @request PUT :/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsAddSelectedRepoToRequiredWorkflow(
   org: string,
@@ -3075,6 +3127,7 @@ export async function getOrgsActionsListSelfHostedRunnersForOrg(
 /**
  * List runner applications for an organization
  * @request GET :/orgs/{org}/actions/runners/downloads
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsActionsListRunnerApplicationsForOrg(
@@ -3141,6 +3194,7 @@ export async function postOrgsActionsCreateRemoveTokenForOrg(
 /**
  * Delete a self-hosted runner from an organization
  * @request DELETE :/orgs/{org}/actions/runners/{runner_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsDeleteSelfHostedRunnerFromOrg(
   org: string,
@@ -3190,6 +3244,7 @@ export async function getOrgsActionsGetSelfHostedRunnerForOrg(
 /**
  * Remove all custom labels from a self-hosted runner for an organization
  * @request DELETE :/orgs/{org}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg(
   org: string,
@@ -3217,6 +3272,7 @@ export async function deleteOrgsActionsRemoveAllCustomLabelsFromSelfHostedRunner
 /**
  * List labels for a self-hosted runner for an organization
  * @request GET :/orgs/{org}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsActionsListLabelsForSelfHostedRunnerForOrg(
@@ -3244,6 +3300,7 @@ export async function getOrgsActionsListLabelsForSelfHostedRunnerForOrg(
 /**
  * Add custom labels to a self-hosted runner for an organization
  * @request POST :/orgs/{org}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  */
 export async function postOrgsActionsAddCustomLabelsToSelfHostedRunnerForOrg(
   org: string,
@@ -3280,6 +3337,7 @@ export async function postOrgsActionsAddCustomLabelsToSelfHostedRunnerForOrg(
 /**
  * Set custom labels for a self-hosted runner for an organization
  * @request PUT :/orgs/{org}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsSetCustomLabelsForSelfHostedRunnerForOrg(
   org: string,
@@ -3318,6 +3376,7 @@ export async function putOrgsActionsSetCustomLabelsForSelfHostedRunnerForOrg(
 /**
  * Remove a custom label from a self-hosted runner for an organization
  * @request DELETE :/orgs/{org}/actions/runners/{runner_id}/labels/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsRemoveCustomLabelFromSelfHostedRunnerForOrg(
   org: string,
@@ -3381,6 +3440,7 @@ export async function getOrgsActionsListOrgSecrets(
 /**
  * Get an organization public key
  * @request GET :/orgs/{org}/actions/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsActionsGetOrgPublicKey(
@@ -3403,6 +3463,7 @@ export async function getOrgsActionsGetOrgPublicKey(
 /**
  * Delete an organization secret
  * @request DELETE :/orgs/{org}/actions/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsDeleteOrgSecret(
   org: string,
@@ -3526,6 +3587,7 @@ export async function getOrgsActionsListSelectedReposForOrgSecret(
 /**
  * Set selected repositories for an organization secret
  * @request PUT :/orgs/{org}/actions/secrets/{secret_name}/repositories
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsSetSelectedReposForOrgSecret(
   org: string,
@@ -3555,6 +3617,7 @@ export async function putOrgsActionsSetSelectedReposForOrgSecret(
 /**
  * Remove selected repository from an organization secret
  * @request DELETE :/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsRemoveSelectedRepoFromOrgSecret(
   org: string,
@@ -3580,6 +3643,7 @@ export async function deleteOrgsActionsRemoveSelectedRepoFromOrgSecret(
 /**
  * Add selected repository to an organization secret
  * @request PUT :/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsAddSelectedRepoToOrgSecret(
   org: string,
@@ -3672,6 +3736,7 @@ export async function postOrgsActionsCreateOrgVariable(
 /**
  * Delete an organization variable
  * @request DELETE :/orgs/{org}/actions/variables/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsDeleteOrgVariable(
   org: string,
@@ -3792,6 +3857,7 @@ export async function getOrgsActionsListSelectedReposForOrgVariable(
 /**
  * Set selected repositories for an organization variable
  * @request PUT :/orgs/{org}/actions/variables/{name}/repositories
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsSetSelectedReposForOrgVariable(
   org: string,
@@ -3821,6 +3887,7 @@ export async function putOrgsActionsSetSelectedReposForOrgVariable(
 /**
  * Remove selected repository from an organization variable
  * @request DELETE :/orgs/{org}/actions/variables/{name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsActionsRemoveSelectedRepoFromOrgVariable(
   org: string,
@@ -3846,6 +3913,7 @@ export async function deleteOrgsActionsRemoveSelectedRepoFromOrgVariable(
 /**
  * Add selected repository to an organization variable
  * @request PUT :/orgs/{org}/actions/variables/{name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putOrgsActionsAddSelectedRepoToOrgVariable(
   org: string,
@@ -3871,6 +3939,7 @@ export async function putOrgsActionsAddSelectedRepoToOrgVariable(
 /**
  * List users blocked by an organization
  * @request GET :/orgs/{org}/blocks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsListBlockedUsers(
@@ -3900,6 +3969,7 @@ export async function getOrgsOrgsListBlockedUsers(
 /**
  * Unblock a user from an organization
  * @request DELETE :/orgs/{org}/blocks/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsUnblockUser(
   org: string,
@@ -3924,6 +3994,7 @@ export async function deleteOrgsOrgsUnblockUser(
 /**
  * Check if a user is blocked by an organization
  * @request GET :/orgs/{org}/blocks/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsCheckBlockedUser(
@@ -3948,6 +4019,7 @@ export async function getOrgsOrgsCheckBlockedUser(
 /**
  * Block a user from an organization
  * @request PUT :/orgs/{org}/blocks/{username}
+ * @allowrelaxedtypes
  */
 export async function putOrgsOrgsBlockUser(
   org: string,
@@ -4087,6 +4159,7 @@ export async function putOrgsCodespacesSetCodespacesBilling(
 /**
  * Removes users from Codespaces billing for an organization
  * @request DELETE :/orgs/{org}/codespaces/billing/selected_users
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsCodespacesDeleteCodespacesBillingUsers(
   org: string,
@@ -4117,6 +4190,7 @@ export async function deleteOrgsCodespacesDeleteCodespacesBillingUsers(
 /**
  * Add users to Codespaces billing for an organization
  * @request POST :/orgs/{org}/codespaces/billing/selected_users
+ * @allowrelaxedtypes
  */
 export async function postOrgsCodespacesSetCodespacesBillingUsers(
   org: string,
@@ -4180,6 +4254,7 @@ export async function getOrgsCodespacesListOrgSecrets(
 /**
  * Get an organization public key
  * @request GET :/orgs/{org}/codespaces/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsCodespacesGetOrgPublicKey(
@@ -4202,6 +4277,7 @@ export async function getOrgsCodespacesGetOrgPublicKey(
 /**
  * Delete an organization secret
  * @request DELETE :/orgs/{org}/codespaces/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsCodespacesDeleteOrgSecret(
   org: string,
@@ -4324,6 +4400,7 @@ export async function getOrgsCodespacesListSelectedReposForOrgSecret(
 /**
  * Set selected repositories for an organization secret
  * @request PUT :/orgs/{org}/codespaces/secrets/{secret_name}/repositories
+ * @allowrelaxedtypes
  */
 export async function putOrgsCodespacesSetSelectedReposForOrgSecret(
   org: string,
@@ -4353,6 +4430,7 @@ export async function putOrgsCodespacesSetSelectedReposForOrgSecret(
 /**
  * Remove selected repository from an organization secret
  * @request DELETE :/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsCodespacesRemoveSelectedRepoFromOrgSecret(
   org: string,
@@ -4378,6 +4456,7 @@ export async function deleteOrgsCodespacesRemoveSelectedRepoFromOrgSecret(
 /**
  * Add selected repository to an organization secret
  * @request PUT :/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putOrgsCodespacesAddSelectedRepoToOrgSecret(
   org: string,
@@ -4498,6 +4577,7 @@ export async function getOrgsDependabotListOrgSecrets(
 /**
  * Get an organization public key
  * @request GET :/orgs/{org}/dependabot/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsDependabotGetOrgPublicKey(
@@ -4520,6 +4600,7 @@ export async function getOrgsDependabotGetOrgPublicKey(
 /**
  * Delete an organization secret
  * @request DELETE :/orgs/{org}/dependabot/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsDependabotDeleteOrgSecret(
   org: string,
@@ -4642,6 +4723,7 @@ export async function getOrgsDependabotListSelectedReposForOrgSecret(
 /**
  * Set selected repositories for an organization secret
  * @request PUT :/orgs/{org}/dependabot/secrets/{secret_name}/repositories
+ * @allowrelaxedtypes
  */
 export async function putOrgsDependabotSetSelectedReposForOrgSecret(
   org: string,
@@ -4671,6 +4753,7 @@ export async function putOrgsDependabotSetSelectedReposForOrgSecret(
 /**
  * Remove selected repository from an organization secret
  * @request DELETE :/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsDependabotRemoveSelectedRepoFromOrgSecret(
   org: string,
@@ -4696,6 +4779,7 @@ export async function deleteOrgsDependabotRemoveSelectedRepoFromOrgSecret(
 /**
  * Add selected repository to an organization secret
  * @request PUT :/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putOrgsDependabotAddSelectedRepoToOrgSecret(
   org: string,
@@ -4751,6 +4835,7 @@ export async function getOrgsActivityListPublicOrgEvents(
 /**
  * List failed organization invitations
  * @request GET :/orgs/{org}/failed_invitations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsListFailedInvitations(
@@ -4780,6 +4865,7 @@ export async function getOrgsOrgsListFailedInvitations(
 /**
  * List organization webhooks
  * @request GET :/orgs/{org}/hooks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsListWebhooks(
@@ -4809,6 +4895,7 @@ export async function getOrgsOrgsListWebhooks(
 /**
  * Create an organization webhook
  * @request POST :/orgs/{org}/hooks
+ * @allowrelaxedtypes
  */
 export async function postOrgsOrgsCreateWebhook(
   org: string,
@@ -4861,6 +4948,7 @@ export async function postOrgsOrgsCreateWebhook(
 /**
  * Delete an organization webhook
  * @request DELETE :/orgs/{org}/hooks/{hook_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsDeleteWebhook(
   org: string,
@@ -4885,6 +4973,7 @@ export async function deleteOrgsOrgsDeleteWebhook(
 /**
  * Get an organization webhook
  * @request GET :/orgs/{org}/hooks/{hook_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsGetWebhook(
@@ -4909,6 +4998,7 @@ export async function getOrgsOrgsGetWebhook(
 /**
  * Update an organization webhook
  * @request PATCH :/orgs/{org}/hooks/{hook_id}
+ * @allowrelaxedtypes
  */
 export async function patchOrgsOrgsUpdateWebhook(
   org: string,
@@ -4959,6 +5049,7 @@ export async function patchOrgsOrgsUpdateWebhook(
 /**
  * Get a webhook configuration for an organization
  * @request GET :/orgs/{org}/hooks/{hook_id}/config
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsGetWebhookConfigForOrg(
@@ -4983,6 +5074,7 @@ export async function getOrgsOrgsGetWebhookConfigForOrg(
 /**
  * Update a webhook configuration for an organization
  * @request PATCH :/orgs/{org}/hooks/{hook_id}/config
+ * @allowrelaxedtypes
  */
 export async function patchOrgsOrgsUpdateWebhookConfigForOrg(
   org: string,
@@ -5018,6 +5110,7 @@ export async function patchOrgsOrgsUpdateWebhookConfigForOrg(
 /**
  * List deliveries for an organization webhook
  * @request GET :/orgs/{org}/hooks/{hook_id}/deliveries
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsListWebhookDeliveries(
@@ -5050,6 +5143,7 @@ export async function getOrgsOrgsListWebhookDeliveries(
 /**
  * Get a webhook delivery for an organization webhook
  * @request GET :/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsGetWebhookDelivery(
@@ -5076,6 +5170,7 @@ export async function getOrgsOrgsGetWebhookDelivery(
 /**
  * Redeliver a delivery for an organization webhook
  * @request POST :/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts
+ * @allowrelaxedtypes
  */
 export async function postOrgsOrgsRedeliverWebhookDelivery(
   org: string,
@@ -5101,6 +5196,7 @@ export async function postOrgsOrgsRedeliverWebhookDelivery(
 /**
  * Ping an organization webhook
  * @request POST :/orgs/{org}/hooks/{hook_id}/pings
+ * @allowrelaxedtypes
  */
 export async function postOrgsOrgsPingWebhook(
   org: string,
@@ -5180,6 +5276,7 @@ export async function getOrgsOrgsListAppInstallations(
 /**
  * Remove interaction restrictions for an organization
  * @request DELETE :/orgs/{org}/interaction-limits
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsInteractionsRemoveRestrictionsForOrg(
   org: string,
@@ -5328,6 +5425,7 @@ export async function postOrgsOrgsCreateInvitation(
 /**
  * Cancel an organization invitation
  * @request DELETE :/orgs/{org}/invitations/{invitation_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsCancelInvitation(
   org: string,
@@ -5352,6 +5450,7 @@ export async function deleteOrgsOrgsCancelInvitation(
 /**
  * List organization invitation teams
  * @request GET :/orgs/{org}/invitations/{invitation_id}/teams
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsListInvitationTeams(
@@ -5465,6 +5564,7 @@ export async function getOrgsOrgsListMembers(
 /**
  * Remove an organization member
  * @request DELETE :/orgs/{org}/members/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsRemoveMember(
   org: string,
@@ -5488,6 +5588,7 @@ export async function deleteOrgsOrgsRemoveMember(
 /**
  * Check organization membership for a user
  * @request GET :/orgs/{org}/members/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsCheckMembershipForUser(
@@ -5547,6 +5648,7 @@ export async function getOrgsCodespacesGetCodespacesForUserInOrg(
 /**
  * Delete a codespace from the organization
  * @request DELETE :/orgs/{org}/members/{username}/codespaces/{codespace_name}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsCodespacesDeleteFromOrganization(
   org: string,
@@ -5599,6 +5701,7 @@ export async function postOrgsCodespacesStopInOrganization(
 /**
  * Remove organization membership for a user
  * @request DELETE :/orgs/{org}/memberships/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsRemoveMembershipForUser(
   org: string,
@@ -5815,6 +5918,7 @@ export async function getOrgsMigrationsGetStatusForOrg(
 /**
  * Delete an organization migration archive
  * @request DELETE :/orgs/{org}/migrations/{migration_id}/archive
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsMigrationsDeleteArchiveForOrg(
   org: string,
@@ -5838,6 +5942,7 @@ export async function deleteOrgsMigrationsDeleteArchiveForOrg(
 /**
  * Download an organization migration archive
  * @request GET :/orgs/{org}/migrations/{migration_id}/archive
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsMigrationsDownloadArchiveForOrg(
@@ -5862,6 +5967,7 @@ export async function getOrgsMigrationsDownloadArchiveForOrg(
 /**
  * Unlock an organization repository
  * @request DELETE :/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsMigrationsUnlockRepoForOrg(
   org: string,
@@ -5952,6 +6058,7 @@ export async function getOrgsOrgsListOutsideCollaborators(
 /**
  * Remove outside collaborator from an organization
  * @request DELETE :/orgs/{org}/outside_collaborators/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsRemoveOutsideCollaborator(
   org: string,
@@ -5975,6 +6082,7 @@ export async function deleteOrgsOrgsRemoveOutsideCollaborator(
 /**
  * Convert an organization member to outside collaborator
  * @request PUT :/orgs/{org}/outside_collaborators/{username}
+ * @allowrelaxedtypes
  */
 export async function putOrgsOrgsConvertMemberToOutsideCollaborator(
   org: string,
@@ -6321,6 +6429,7 @@ export async function postOrgsProjectsCreateForOrg(
 /**
  * List public organization members
  * @request GET :/orgs/{org}/public_members
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsListPublicMembers(
@@ -6350,6 +6459,7 @@ export async function getOrgsOrgsListPublicMembers(
 /**
  * Remove public organization membership for the authenticated user
  * @request DELETE :/orgs/{org}/public_members/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsRemovePublicMembershipForAuthenticatedUser(
   org: string,
@@ -6373,6 +6483,7 @@ export async function deleteOrgsOrgsRemovePublicMembershipForAuthenticatedUser(
 /**
  * Check public organization membership for a user
  * @request GET :/orgs/{org}/public_members/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsCheckPublicMembershipForUser(
@@ -6397,6 +6508,7 @@ export async function getOrgsOrgsCheckPublicMembershipForUser(
 /**
  * Set public organization membership for the authenticated user
  * @request PUT :/orgs/{org}/public_members/{username}
+ * @allowrelaxedtypes
  */
 export async function putOrgsOrgsSetPublicMembershipForAuthenticatedUser(
   org: string,
@@ -6639,6 +6751,7 @@ for a complete list of secret types. */
 /**
  * List security manager teams
  * @request GET :/orgs/{org}/security-managers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsOrgsListSecurityManagerTeams(
@@ -6661,6 +6774,7 @@ export async function getOrgsOrgsListSecurityManagerTeams(
 /**
  * Remove a security manager team
  * @request DELETE :/orgs/{org}/security-managers/teams/{team_slug}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsOrgsRemoveSecurityManagerTeam(
   org: string,
@@ -6685,6 +6799,7 @@ export async function deleteOrgsOrgsRemoveSecurityManagerTeam(
 /**
  * Add a security manager team
  * @request PUT :/orgs/{org}/security-managers/teams/{team_slug}
+ * @allowrelaxedtypes
  */
 export async function putOrgsOrgsAddSecurityManagerTeam(
   org: string,
@@ -6708,6 +6823,7 @@ export async function putOrgsOrgsAddSecurityManagerTeam(
 /**
  * Get GitHub Actions billing for an organization
  * @request GET :/orgs/{org}/settings/billing/actions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsBillingGetGithubActionsBillingOrg(
@@ -6730,6 +6846,7 @@ export async function getOrgsBillingGetGithubActionsBillingOrg(
 /**
  * Get GitHub Packages billing for an organization
  * @request GET :/orgs/{org}/settings/billing/packages
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsBillingGetGithubPackagesBillingOrg(
@@ -6752,6 +6869,7 @@ export async function getOrgsBillingGetGithubPackagesBillingOrg(
 /**
  * Get shared storage billing for an organization
  * @request GET :/orgs/{org}/settings/billing/shared-storage
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsBillingGetSharedStorageBillingOrg(
@@ -6774,6 +6892,7 @@ export async function getOrgsBillingGetSharedStorageBillingOrg(
 /**
  * List teams
  * @request GET :/orgs/{org}/teams
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsTeamsList(
@@ -6855,6 +6974,7 @@ export async function postOrgsTeamsCreate(
 /**
  * Delete a team
  * @request DELETE :/orgs/{org}/teams/{team_slug}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsTeamsDeleteInOrg(
   org: string,
@@ -6987,6 +7107,7 @@ export async function getOrgsTeamsListDiscussionsInOrg(
 /**
  * Create a discussion
  * @request POST :/orgs/{org}/teams/{team_slug}/discussions
+ * @allowrelaxedtypes
  */
 export async function postOrgsTeamsCreateDiscussionInOrg(
   org: string,
@@ -7023,6 +7144,7 @@ export async function postOrgsTeamsCreateDiscussionInOrg(
 /**
  * Delete a discussion
  * @request DELETE :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsTeamsDeleteDiscussionInOrg(
   org: string,
@@ -7049,6 +7171,7 @@ export async function deleteOrgsTeamsDeleteDiscussionInOrg(
 /**
  * Get a discussion
  * @request GET :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsTeamsGetDiscussionInOrg(
@@ -7075,6 +7198,7 @@ export async function getOrgsTeamsGetDiscussionInOrg(
 /**
  * Update a discussion
  * @request PATCH :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}
+ * @allowrelaxedtypes
  */
 export async function patchOrgsTeamsUpdateDiscussionInOrg(
   org: string,
@@ -7144,6 +7268,7 @@ export async function getOrgsTeamsListDiscussionCommentsInOrg(
 /**
  * Create a discussion comment
  * @request POST :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments
+ * @allowrelaxedtypes
  */
 export async function postOrgsTeamsCreateDiscussionCommentInOrg(
   org: string,
@@ -7175,6 +7300,7 @@ export async function postOrgsTeamsCreateDiscussionCommentInOrg(
 /**
  * Delete a discussion comment
  * @request DELETE :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsTeamsDeleteDiscussionCommentInOrg(
   org: string,
@@ -7203,6 +7329,7 @@ export async function deleteOrgsTeamsDeleteDiscussionCommentInOrg(
 /**
  * Get a discussion comment
  * @request GET :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsTeamsGetDiscussionCommentInOrg(
@@ -7231,6 +7358,7 @@ export async function getOrgsTeamsGetDiscussionCommentInOrg(
 /**
  * Update a discussion comment
  * @request PATCH :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}
+ * @allowrelaxedtypes
  */
 export async function patchOrgsTeamsUpdateDiscussionCommentInOrg(
   org: string,
@@ -7352,6 +7480,7 @@ export async function postOrgsReactionsCreateForTeamDiscussionCommentInOrg(
 /**
  * Delete team discussion comment reaction
  * @request DELETE :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsReactionsDeleteForTeamDiscussionComment(
   org: string,
@@ -7466,6 +7595,7 @@ export async function postOrgsReactionsCreateForTeamDiscussionInOrg(
 /**
  * Delete team discussion reaction
  * @request DELETE :/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsReactionsDeleteForTeamDiscussion(
   org: string,
@@ -7493,6 +7623,7 @@ export async function deleteOrgsReactionsDeleteForTeamDiscussion(
 /**
  * List pending team invitations
  * @request GET :/orgs/{org}/teams/{team_slug}/invitations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsTeamsListPendingInvitationsInOrg(
@@ -7558,6 +7689,7 @@ export async function getOrgsTeamsListMembersInOrg(
 /**
  * Remove team membership for a user
  * @request DELETE :/orgs/{org}/teams/{team_slug}/memberships/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsTeamsRemoveMembershipForUserInOrg(
   org: string,
@@ -7645,6 +7777,7 @@ export async function putOrgsTeamsAddOrUpdateMembershipForUserInOrg(
 /**
  * List team projects
  * @request GET :/orgs/{org}/teams/{team_slug}/projects
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsTeamsListProjectsInOrg(
@@ -7676,6 +7809,7 @@ export async function getOrgsTeamsListProjectsInOrg(
 /**
  * Remove a project from a team
  * @request DELETE :/orgs/{org}/teams/{team_slug}/projects/{project_id}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsTeamsRemoveProjectInOrg(
   org: string,
@@ -7702,6 +7836,7 @@ export async function deleteOrgsTeamsRemoveProjectInOrg(
 /**
  * Check team permissions for a project
  * @request GET :/orgs/{org}/teams/{team_slug}/projects/{project_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsTeamsCheckPermissionsForProjectInOrg(
@@ -7792,6 +7927,7 @@ export async function getOrgsTeamsListReposInOrg(
 /**
  * Remove a repository from a team
  * @request DELETE :/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}
+ * @allowrelaxedtypes
  */
 export async function deleteOrgsTeamsRemoveRepoInOrg(
   org: string,
@@ -7848,6 +7984,7 @@ export async function getOrgsTeamsCheckPermissionsForRepoInOrg(
 /**
  * Add or update team repository permissions
  * @request PUT :/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}
+ * @allowrelaxedtypes
  */
 export async function putOrgsTeamsAddOrUpdateRepoPermissionsInOrg(
   org: string,
@@ -7884,6 +8021,7 @@ export async function putOrgsTeamsAddOrUpdateRepoPermissionsInOrg(
 /**
  * List child teams
  * @request GET :/orgs/{org}/teams/{team_slug}/teams
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getOrgsTeamsListChildInOrg(
@@ -7954,6 +8092,7 @@ export async function postOrgsOrgsEnableOrDisableSecurityProductOnAllOrgRepos(
 /**
  * Delete a project card
  * @request DELETE :/projects/columns/cards/{card_id}
+ * @allowrelaxedtypes
  */
 export async function deleteProjectsProjectsDeleteCard(
   /** The unique identifier of the card. */
@@ -7976,6 +8115,7 @@ export async function deleteProjectsProjectsDeleteCard(
 /**
  * Get a project card
  * @request GET :/projects/columns/cards/{card_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectsProjectsGetCard(
@@ -8034,6 +8174,7 @@ export async function patchProjectsProjectsUpdateCard(
 /**
  * Move a project card
  * @request POST :/projects/columns/cards/{card_id}/moves
+ * @allowrelaxedtypes
  */
 export async function postProjectsProjectsMoveCard(
   cardId: number,
@@ -8070,6 +8211,7 @@ export async function postProjectsProjectsMoveCard(
 /**
  * Delete a project column
  * @request DELETE :/projects/columns/{column_id}
+ * @allowrelaxedtypes
  */
 export async function deleteProjectsProjectsDeleteColumn(
   /** The unique identifier of the column. */
@@ -8092,6 +8234,7 @@ export async function deleteProjectsProjectsDeleteColumn(
 /**
  * Get a project column
  * @request GET :/projects/columns/{column_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectsProjectsGetColumn(
@@ -8114,6 +8257,7 @@ export async function getProjectsProjectsGetColumn(
 /**
  * Update an existing project column
  * @request PATCH :/projects/columns/{column_id}
+ * @allowrelaxedtypes
  */
 export async function patchProjectsProjectsUpdateColumn(
   columnId: number,
@@ -8220,6 +8364,7 @@ export async function postProjectsProjectsCreateCard(
 /**
  * Move a project column
  * @request POST :/projects/columns/{column_id}/moves
+ * @allowrelaxedtypes
  */
 export async function postProjectsProjectsMoveColumn(
   columnId: number,
@@ -8251,6 +8396,7 @@ export async function postProjectsProjectsMoveColumn(
 /**
  * Delete a project
  * @request DELETE :/projects/{project_id}
+ * @allowrelaxedtypes
  */
 export async function deleteProjectsProjectsDelete(
   projectId: number,
@@ -8372,6 +8518,7 @@ export async function getProjectsProjectsListCollaborators(
 /**
  * Remove user as a collaborator
  * @request DELETE :/projects/{project_id}/collaborators/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteProjectsProjectsRemoveCollaborator(
   projectId: number,
@@ -8429,6 +8576,7 @@ export async function putProjectsProjectsAddCollaborator(
 /**
  * Get project permission for a user
  * @request GET :/projects/{project_id}/collaborators/{username}/permission
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectsProjectsGetPermissionForUser(
@@ -8453,6 +8601,7 @@ export async function getProjectsProjectsGetPermissionForUser(
 /**
  * List project columns
  * @request GET :/projects/{project_id}/columns
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectsProjectsListColumns(
@@ -8482,6 +8631,7 @@ export async function getProjectsProjectsListColumns(
 /**
  * Create a project column
  * @request POST :/projects/{project_id}/columns
+ * @allowrelaxedtypes
  */
 export async function postProjectsProjectsCreateColumn(
   projectId: number,
@@ -8512,6 +8662,7 @@ export async function postProjectsProjectsCreateColumn(
 /**
  * Get rate limit status for the authenticated user
  * @request GET :/rate_limit
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRateLimitRateLimitGet(
@@ -8595,6 +8746,7 @@ export async function getReposActionsGetRepoRequiredWorkflow(
 /**
  * Get required workflow usage
  * @request GET :/repos/{org}/{repo}/actions/required_workflows/{required_workflow_id_for_repo}/timing
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetRepoRequiredWorkflowUsage(
@@ -8621,6 +8773,7 @@ export async function getReposActionsGetRepoRequiredWorkflowUsage(
 /**
  * Delete a repository
  * @request DELETE :/repos/{owner}/{repo}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDelete(
   owner: string,
@@ -8841,6 +8994,7 @@ export async function patchReposReposUpdate(
 /**
  * List artifacts for a repository
  * @request GET :/repos/{owner}/{repo}/actions/artifacts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsListArtifactsForRepo(
@@ -8877,6 +9031,7 @@ export async function getReposActionsListArtifactsForRepo(
 /**
  * Delete an artifact
  * @request DELETE :/repos/{owner}/{repo}/actions/artifacts/{artifact_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteArtifact(
   owner: string,
@@ -8903,6 +9058,7 @@ export async function deleteReposActionsDeleteArtifact(
 /**
  * Get an artifact
  * @request GET :/repos/{owner}/{repo}/actions/artifacts/{artifact_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetArtifact(
@@ -8929,6 +9085,7 @@ export async function getReposActionsGetArtifact(
 /**
  * Download an artifact
  * @request GET :/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsDownloadArtifact(
@@ -8957,6 +9114,7 @@ export async function getReposActionsDownloadArtifact(
 /**
  * Get GitHub Actions cache usage for a repository
  * @request GET :/repos/{owner}/{repo}/actions/cache/usage
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetActionsCacheUsage(
@@ -8981,6 +9139,7 @@ export async function getReposActionsGetActionsCacheUsage(
 /**
  * Delete GitHub Actions caches for a repository (using a cache key)
  * @request DELETE :/repos/{owner}/{repo}/actions/caches
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteActionsCacheByKey(
   owner: string,
@@ -9051,6 +9210,7 @@ export async function getReposActionsGetActionsCacheList(
 /**
  * Delete a GitHub Actions cache for a repository (using a cache ID)
  * @request DELETE :/repos/{owner}/{repo}/actions/caches/{cache_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteActionsCacheById(
   owner: string,
@@ -9105,6 +9265,7 @@ export async function getReposActionsGetJobForWorkflowRun(
 /**
  * Download job logs for a workflow run
  * @request GET :/repos/{owner}/{repo}/actions/jobs/{job_id}/logs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsDownloadJobLogsForWorkflowRun(
@@ -9166,6 +9327,7 @@ export async function postReposActionsReRunJobForWorkflowRun(
 /**
  * Get the customization template for an OIDC subject claim for a repository
  * @request GET :/repos/{owner}/{repo}/actions/oidc/customization/sub
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetCustomOidcSubClaimForRepo(
@@ -9190,6 +9352,7 @@ export async function getReposActionsGetCustomOidcSubClaimForRepo(
 /**
  * Set the customization template for an OIDC subject claim for a repository
  * @request PUT :/repos/{owner}/{repo}/actions/oidc/customization/sub
+ * @allowrelaxedtypes
  */
 export async function putReposActionsSetCustomOidcSubClaimForRepo(
   owner: string,
@@ -9246,6 +9409,7 @@ export async function getReposActionsGetGithubActionsPermissionsRepository(
 /**
  * Set GitHub Actions permissions for a repository
  * @request PUT :/repos/{owner}/{repo}/actions/permissions
+ * @allowrelaxedtypes
  */
 export async function putReposActionsSetGithubActionsPermissionsRepository(
   owner: string,
@@ -9329,6 +9493,7 @@ export async function putReposActionsSetWorkflowAccessToRepository(
 /**
  * Get allowed actions and reusable workflows for a repository
  * @request GET :/repos/{owner}/{repo}/actions/permissions/selected-actions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetAllowedActionsRepository(
@@ -9353,6 +9518,7 @@ export async function getReposActionsGetAllowedActionsRepository(
 /**
  * Set allowed actions and reusable workflows for a repository
  * @request PUT :/repos/{owner}/{repo}/actions/permissions/selected-actions
+ * @allowrelaxedtypes
  */
 export async function putReposActionsSetAllowedActionsRepository(
   owner: string,
@@ -9539,6 +9705,7 @@ export async function getReposActionsListSelfHostedRunnersForRepo(
 /**
  * List runner applications for a repository
  * @request GET :/repos/{owner}/{repo}/actions/runners/downloads
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsListRunnerApplicationsForRepo(
@@ -9611,6 +9778,7 @@ export async function postReposActionsCreateRemoveTokenForRepo(
 /**
  * Delete a self-hosted runner from a repository
  * @request DELETE :/repos/{owner}/{repo}/actions/runners/{runner_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteSelfHostedRunnerFromRepo(
   owner: string,
@@ -9663,6 +9831,7 @@ export async function getReposActionsGetSelfHostedRunnerForRepo(
 /**
  * Remove all custom labels from a self-hosted runner for a repository
  * @request DELETE :/repos/{owner}/{repo}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo(
   owner: string,
@@ -9692,6 +9861,7 @@ export async function deleteReposActionsRemoveAllCustomLabelsFromSelfHostedRunne
 /**
  * List labels for a self-hosted runner for a repository
  * @request GET :/repos/{owner}/{repo}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsListLabelsForSelfHostedRunnerForRepo(
@@ -9721,6 +9891,7 @@ export async function getReposActionsListLabelsForSelfHostedRunnerForRepo(
 /**
  * Add custom labels to a self-hosted runner for a repository
  * @request POST :/repos/{owner}/{repo}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  */
 export async function postReposActionsAddCustomLabelsToSelfHostedRunnerForRepo(
   owner: string,
@@ -9760,6 +9931,7 @@ export async function postReposActionsAddCustomLabelsToSelfHostedRunnerForRepo(
 /**
  * Set custom labels for a self-hosted runner for a repository
  * @request PUT :/repos/{owner}/{repo}/actions/runners/{runner_id}/labels
+ * @allowrelaxedtypes
  */
 export async function putReposActionsSetCustomLabelsForSelfHostedRunnerForRepo(
   owner: string,
@@ -9799,6 +9971,7 @@ export async function putReposActionsSetCustomLabelsForSelfHostedRunnerForRepo(
 /**
  * Remove a custom label from a self-hosted runner for a repository
  * @request DELETE :/repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsRemoveCustomLabelFromSelfHostedRunnerForRepo(
   owner: string,
@@ -9895,6 +10068,7 @@ export async function getReposActionsListWorkflowRunsForRepo(
 /**
  * Delete a workflow run
  * @request DELETE :/repos/{owner}/{repo}/actions/runs/{run_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteWorkflowRun(
   owner: string,
@@ -9980,6 +10154,7 @@ export async function getReposActionsGetReviewsForRun(
 /**
  * Approve a workflow run for a fork pull request
  * @request POST :/repos/{owner}/{repo}/actions/runs/{run_id}/approve
+ * @allowrelaxedtypes
  */
 export async function postReposActionsApproveWorkflowRun(
   owner: string,
@@ -10005,6 +10180,7 @@ export async function postReposActionsApproveWorkflowRun(
 /**
  * List workflow run artifacts
  * @request GET :/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsListWorkflowRunArtifacts(
@@ -10115,6 +10291,7 @@ export async function getReposActionsListJobsForWorkflowRunAttempt(
 /**
  * Download workflow run attempt logs
  * @request GET :/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsDownloadWorkflowRunAttemptLogs(
@@ -10143,6 +10320,7 @@ export async function getReposActionsDownloadWorkflowRunAttemptLogs(
 /**
  * Cancel a workflow run
  * @request POST :/repos/{owner}/{repo}/actions/runs/{run_id}/cancel
+ * @allowrelaxedtypes
  */
 export async function postReposActionsCancelWorkflowRun(
   owner: string,
@@ -10207,6 +10385,7 @@ export async function getReposActionsListJobsForWorkflowRun(
 /**
  * Delete workflow run logs
  * @request DELETE :/repos/{owner}/{repo}/actions/runs/{run_id}/logs
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteWorkflowRunLogs(
   owner: string,
@@ -10232,6 +10411,7 @@ export async function deleteReposActionsDeleteWorkflowRunLogs(
 /**
  * Download workflow run logs
  * @request GET :/repos/{owner}/{repo}/actions/runs/{run_id}/logs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsDownloadWorkflowRunLogs(
@@ -10400,6 +10580,7 @@ export async function postReposActionsReRunWorkflowFailedJobs(
 /**
  * Get workflow run usage
  * @request GET :/repos/{owner}/{repo}/actions/runs/{run_id}/timing
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetWorkflowRunUsage(
@@ -10426,6 +10607,7 @@ export async function getReposActionsGetWorkflowRunUsage(
 /**
  * List repository secrets
  * @request GET :/repos/{owner}/{repo}/actions/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsListRepoSecrets(
@@ -10460,6 +10642,7 @@ export async function getReposActionsListRepoSecrets(
 /**
  * Get a repository public key
  * @request GET :/repos/{owner}/{repo}/actions/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetRepoPublicKey(
@@ -10484,6 +10667,7 @@ export async function getReposActionsGetRepoPublicKey(
 /**
  * Delete a repository secret
  * @request DELETE :/repos/{owner}/{repo}/actions/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteRepoSecret(
   owner: string,
@@ -10509,6 +10693,7 @@ export async function deleteReposActionsDeleteRepoSecret(
 /**
  * Get a repository secret
  * @request GET :/repos/{owner}/{repo}/actions/secrets/{secret_name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetRepoSecret(
@@ -10535,6 +10720,7 @@ export async function getReposActionsGetRepoSecret(
 /**
  * Create or update a repository secret
  * @request PUT :/repos/{owner}/{repo}/actions/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function putReposActionsCreateOrUpdateRepoSecret(
   owner: string,
@@ -10571,6 +10757,7 @@ export async function putReposActionsCreateOrUpdateRepoSecret(
 /**
  * List repository variables
  * @request GET :/repos/{owner}/{repo}/actions/variables
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsListRepoVariables(
@@ -10605,6 +10792,7 @@ export async function getReposActionsListRepoVariables(
 /**
  * Create a repository variable
  * @request POST :/repos/{owner}/{repo}/actions/variables
+ * @allowrelaxedtypes
  */
 export async function postReposActionsCreateRepoVariable(
   owner: string,
@@ -10636,6 +10824,7 @@ export async function postReposActionsCreateRepoVariable(
 /**
  * Delete a repository variable
  * @request DELETE :/repos/{owner}/{repo}/actions/variables/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposActionsDeleteRepoVariable(
   owner: string,
@@ -10661,6 +10850,7 @@ export async function deleteReposActionsDeleteRepoVariable(
 /**
  * Get a repository variable
  * @request GET :/repos/{owner}/{repo}/actions/variables/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActionsGetRepoVariable(
@@ -10687,6 +10877,7 @@ export async function getReposActionsGetRepoVariable(
 /**
  * Update a repository variable
  * @request PATCH :/repos/{owner}/{repo}/actions/variables/{name}
+ * @allowrelaxedtypes
  */
 export async function patchReposActionsUpdateRepoVariable(
   owner: string,
@@ -10963,6 +11154,7 @@ export async function getReposActionsGetWorkflowUsage(
 /**
  * List assignees
  * @request GET :/repos/{owner}/{repo}/assignees
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesListAssignees(
@@ -10994,6 +11186,7 @@ export async function getReposIssuesListAssignees(
 /**
  * Check if a user can be assigned
  * @request GET :/repos/{owner}/{repo}/assignees/{assignee}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesCheckUserCanBeAssigned(
@@ -11020,6 +11213,7 @@ export async function getReposIssuesCheckUserCanBeAssigned(
 /**
  * List all autolinks of a repository
  * @request GET :/repos/{owner}/{repo}/autolinks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListAutolinks(
@@ -11049,6 +11243,7 @@ export async function getReposReposListAutolinks(
 /**
  * Create an autolink reference for a repository
  * @request POST :/repos/{owner}/{repo}/autolinks
+ * @allowrelaxedtypes
  */
 export async function postReposReposCreateAutolink(
   owner: string,
@@ -11085,6 +11280,7 @@ export async function postReposReposCreateAutolink(
 /**
  * Delete an autolink reference from a repository
  * @request DELETE :/repos/{owner}/{repo}/autolinks/{autolink_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteAutolink(
   owner: string,
@@ -11111,6 +11307,7 @@ export async function deleteReposReposDeleteAutolink(
 /**
  * Get an autolink reference of a repository
  * @request GET :/repos/{owner}/{repo}/autolinks/{autolink_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetAutolink(
@@ -11137,6 +11334,7 @@ export async function getReposReposGetAutolink(
 /**
  * Disable automated security fixes
  * @request DELETE :/repos/{owner}/{repo}/automated-security-fixes
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDisableAutomatedSecurityFixes(
   owner: string,
@@ -11160,6 +11358,7 @@ export async function deleteReposReposDisableAutomatedSecurityFixes(
 /**
  * Enable automated security fixes
  * @request PUT :/repos/{owner}/{repo}/automated-security-fixes
+ * @allowrelaxedtypes
  */
 export async function putReposReposEnableAutomatedSecurityFixes(
   owner: string,
@@ -11183,6 +11382,7 @@ export async function putReposReposEnableAutomatedSecurityFixes(
 /**
  * List branches
  * @request GET :/repos/{owner}/{repo}/branches
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListBranches(
@@ -11244,6 +11444,7 @@ export async function getReposReposGetBranch(
 /**
  * Delete branch protection
  * @request DELETE :/repos/{owner}/{repo}/branches/{branch}/protection
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteBranchProtection(
   owner: string,
@@ -11269,6 +11470,7 @@ export async function deleteReposReposDeleteBranchProtection(
 /**
  * Get branch protection
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetBranchProtection(
@@ -11405,6 +11607,7 @@ export async function putReposReposUpdateBranchProtection(
 /**
  * Delete admin branch protection
  * @request DELETE :/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteAdminBranchProtection(
   owner: string,
@@ -11430,6 +11633,7 @@ export async function deleteReposReposDeleteAdminBranchProtection(
 /**
  * Get admin branch protection
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetAdminBranchProtection(
@@ -11456,6 +11660,7 @@ export async function getReposReposGetAdminBranchProtection(
 /**
  * Set admin branch protection
  * @request POST :/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins
+ * @allowrelaxedtypes
  */
 export async function postReposReposSetAdminBranchProtection(
   owner: string,
@@ -11481,6 +11686,7 @@ export async function postReposReposSetAdminBranchProtection(
 /**
  * Delete pull request review protection
  * @request DELETE :/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeletePullRequestReviewProtection(
   owner: string,
@@ -11506,6 +11712,7 @@ export async function deleteReposReposDeletePullRequestReviewProtection(
 /**
  * Get pull request review protection
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetPullRequestReviewProtection(
@@ -11532,6 +11739,7 @@ export async function getReposReposGetPullRequestReviewProtection(
 /**
  * Update pull request review protection
  * @request PATCH :/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews
+ * @allowrelaxedtypes
  */
 export async function patchReposReposUpdatePullRequestReviewProtection(
   owner: string,
@@ -11590,6 +11798,7 @@ export async function patchReposReposUpdatePullRequestReviewProtection(
 /**
  * Delete commit signature protection
  * @request DELETE :/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteCommitSignatureProtection(
   owner: string,
@@ -11615,6 +11824,7 @@ export async function deleteReposReposDeleteCommitSignatureProtection(
 /**
  * Get commit signature protection
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetCommitSignatureProtection(
@@ -11641,6 +11851,7 @@ export async function getReposReposGetCommitSignatureProtection(
 /**
  * Create commit signature protection
  * @request POST :/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures
+ * @allowrelaxedtypes
  */
 export async function postReposReposCreateCommitSignatureProtection(
   owner: string,
@@ -11666,6 +11877,7 @@ export async function postReposReposCreateCommitSignatureProtection(
 /**
  * Remove status check protection
  * @request DELETE :/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposRemoveStatusCheckProtection(
   owner: string,
@@ -11691,6 +11903,7 @@ export async function deleteReposReposRemoveStatusCheckProtection(
 /**
  * Get status checks protection
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetStatusChecksProtection(
@@ -11717,6 +11930,7 @@ export async function getReposReposGetStatusChecksProtection(
 /**
  * Update status check protection
  * @request PATCH :/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks
+ * @allowrelaxedtypes
  */
 export async function patchReposReposUpdateStatusCheckProtection(
   owner: string,
@@ -11794,6 +12008,7 @@ export async function deleteReposReposRemoveStatusCheckContexts(
 /**
  * Get all status check contexts
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetAllStatusCheckContexts(
@@ -11888,6 +12103,7 @@ export async function putReposReposSetStatusCheckContexts(
 /**
  * Delete access restrictions
  * @request DELETE :/repos/{owner}/{repo}/branches/{branch}/protection/restrictions
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteAccessRestrictions(
   owner: string,
@@ -11913,6 +12129,7 @@ export async function deleteReposReposDeleteAccessRestrictions(
 /**
  * Get access restrictions
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/restrictions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetAccessRestrictions(
@@ -11973,6 +12190,7 @@ export async function deleteReposReposRemoveAppAccessRestrictions(
 /**
  * Get apps with access to the protected branch
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetAppsWithAccessToProtectedBranch(
@@ -12101,6 +12319,7 @@ export async function deleteReposReposRemoveTeamAccessRestrictions(
 /**
  * Get teams with access to the protected branch
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetTeamsWithAccessToProtectedBranch(
@@ -12229,6 +12448,7 @@ export async function deleteReposReposRemoveUserAccessRestrictions(
 /**
  * Get users with access to the protected branch
  * @request GET :/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetUsersWithAccessToProtectedBranch(
@@ -12664,6 +12884,7 @@ export async function patchReposChecksUpdate(
 /**
  * List check run annotations
  * @request GET :/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposChecksListAnnotations(
@@ -12697,6 +12918,7 @@ export async function getReposChecksListAnnotations(
 /**
  * Rerequest a check run
  * @request POST :/repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest
+ * @allowrelaxedtypes
  */
 export async function postReposChecksRerequestRun(
   owner: string,
@@ -12861,6 +13083,7 @@ export async function getReposChecksListForSuite(
 /**
  * Rerequest a check suite
  * @request POST :/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest
+ * @allowrelaxedtypes
  */
 export async function postReposChecksRerequestSuite(
   owner: string,
@@ -13076,6 +13299,7 @@ export async function getReposCodeScanningListRecentAnalyses(
 /**
  * Delete a code scanning analysis from a repository
  * @request DELETE :/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposCodeScanningDeleteAnalysis(
   owner: string,
@@ -13107,6 +13331,7 @@ export async function deleteReposCodeScanningDeleteAnalysis(
 /**
  * Get a code scanning analysis for a repository
  * @request GET :/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodeScanningGetAnalysis(
@@ -13134,6 +13359,7 @@ export async function getReposCodeScanningGetAnalysis(
 /**
  * List CodeQL databases for a repository
  * @request GET :/repos/{owner}/{repo}/code-scanning/codeql/databases
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodeScanningListCodeqlDatabases(
@@ -13158,6 +13384,7 @@ export async function getReposCodeScanningListCodeqlDatabases(
 /**
  * Get a CodeQL database for a repository
  * @request GET :/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodeScanningGetCodeqlDatabase(
@@ -13185,6 +13412,7 @@ export async function getReposCodeScanningGetCodeqlDatabase(
 /**
  * Upload an analysis as SARIF data
  * @request POST :/repos/{owner}/{repo}/code-scanning/sarifs
+ * @allowrelaxedtypes
  */
 export async function postReposCodeScanningUploadSarif(
   owner: string,
@@ -13268,6 +13496,7 @@ export async function getReposCodeScanningGetSarif(
 /**
  * List CODEOWNERS errors
  * @request GET :/repos/{owner}/{repo}/codeowners/errors
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposCodeownersErrors(
@@ -13382,6 +13611,7 @@ export async function postReposCodespacesCreateWithRepoForAuthenticatedUser(
 /**
  * List devcontainer configurations in a repository for the authenticated user
  * @request GET :/repos/{owner}/{repo}/codespaces/devcontainers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodespacesListDevcontainersInRepositoryForAuthenticatedUser(
@@ -13457,6 +13687,7 @@ export async function getReposCodespacesRepoMachinesForAuthenticatedUser(
 /**
  * Get default attributes for a codespace
  * @request GET :/repos/{owner}/{repo}/codespaces/new
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodespacesPreFlightWithRepoForAuthenticatedUser(
@@ -13496,6 +13727,7 @@ export async function getReposCodespacesPreFlightWithRepoForAuthenticatedUser(
 /**
  * List repository secrets
  * @request GET :/repos/{owner}/{repo}/codespaces/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodespacesListRepoSecrets(
@@ -13530,6 +13762,7 @@ export async function getReposCodespacesListRepoSecrets(
 /**
  * Get a repository public key
  * @request GET :/repos/{owner}/{repo}/codespaces/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodespacesGetRepoPublicKey(
@@ -13554,6 +13787,7 @@ export async function getReposCodespacesGetRepoPublicKey(
 /**
  * Delete a repository secret
  * @request DELETE :/repos/{owner}/{repo}/codespaces/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposCodespacesDeleteRepoSecret(
   owner: string,
@@ -13579,6 +13813,7 @@ export async function deleteReposCodespacesDeleteRepoSecret(
 /**
  * Get a repository secret
  * @request GET :/repos/{owner}/{repo}/codespaces/secrets/{secret_name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposCodespacesGetRepoSecret(
@@ -13605,6 +13840,7 @@ export async function getReposCodespacesGetRepoSecret(
 /**
  * Create or update a repository secret
  * @request PUT :/repos/{owner}/{repo}/codespaces/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function putReposCodespacesCreateOrUpdateRepoSecret(
   owner: string,
@@ -13677,6 +13913,7 @@ export async function getReposReposListCollaborators(
 /**
  * Remove a repository collaborator
  * @request DELETE :/repos/{owner}/{repo}/collaborators/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposRemoveCollaborator(
   owner: string,
@@ -13702,6 +13939,7 @@ export async function deleteReposReposRemoveCollaborator(
 /**
  * Check if a user is a repository collaborator
  * @request GET :/repos/{owner}/{repo}/collaborators/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposCheckCollaborator(
@@ -13763,6 +14001,7 @@ export async function putReposReposAddCollaborator(
 /**
  * Get repository permissions for a user
  * @request GET :/repos/{owner}/{repo}/collaborators/{username}/permission
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetCollaboratorPermissionLevel(
@@ -13821,6 +14060,7 @@ export async function getReposReposListCommitCommentsForRepo(
 /**
  * Delete a commit comment
  * @request DELETE :/repos/{owner}/{repo}/comments/{comment_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteCommitComment(
   owner: string,
@@ -13989,6 +14229,7 @@ export async function postReposReactionsCreateForCommitComment(
 /**
  * Delete a commit comment reaction
  * @request DELETE :/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReactionsDeleteForCommitComment(
   owner: string,
@@ -14058,6 +14299,7 @@ export async function getReposReposListCommits(
 /**
  * List branches for HEAD commit
  * @request GET :/repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListBranchesForHeadCommit(
@@ -14348,6 +14590,7 @@ export async function getReposReposGetCombinedStatusForRef(
 /**
  * List commit statuses for a reference
  * @request GET :/repos/{owner}/{repo}/commits/{ref}/statuses
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListCommitStatusesForRef(
@@ -14382,6 +14625,7 @@ export async function getReposReposListCommitStatusesForRef(
 /**
  * Get community profile metrics
  * @request GET :/repos/{owner}/{repo}/community/profile
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetCommunityProfileMetrics(
@@ -14441,6 +14685,7 @@ export async function getReposReposCompareCommits(
 /**
  * Delete a file
  * @request DELETE :/repos/{owner}/{repo}/contents/{path}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteFile(
   owner: string,
@@ -14524,6 +14769,7 @@ export async function getReposReposGetContent(
 /**
  * Create or update file contents
  * @request PUT :/repos/{owner}/{repo}/contents/{path}
+ * @allowrelaxedtypes
  */
 export async function putReposReposCreateOrUpdateFileContents(
   owner: string,
@@ -14580,6 +14826,7 @@ export async function putReposReposCreateOrUpdateFileContents(
 /**
  * List repository contributors
  * @request GET :/repos/{owner}/{repo}/contributors
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListContributors(
@@ -14759,6 +15006,7 @@ export async function patchReposDependabotUpdateAlert(
 /**
  * List repository secrets
  * @request GET :/repos/{owner}/{repo}/dependabot/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposDependabotListRepoSecrets(
@@ -14793,6 +15041,7 @@ export async function getReposDependabotListRepoSecrets(
 /**
  * Get a repository public key
  * @request GET :/repos/{owner}/{repo}/dependabot/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposDependabotGetRepoPublicKey(
@@ -14817,6 +15066,7 @@ export async function getReposDependabotGetRepoPublicKey(
 /**
  * Delete a repository secret
  * @request DELETE :/repos/{owner}/{repo}/dependabot/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposDependabotDeleteRepoSecret(
   owner: string,
@@ -14842,6 +15092,7 @@ export async function deleteReposDependabotDeleteRepoSecret(
 /**
  * Get a repository secret
  * @request GET :/repos/{owner}/{repo}/dependabot/secrets/{secret_name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposDependabotGetRepoSecret(
@@ -14868,6 +15119,7 @@ export async function getReposDependabotGetRepoSecret(
 /**
  * Create or update a repository secret
  * @request PUT :/repos/{owner}/{repo}/dependabot/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function putReposDependabotCreateOrUpdateRepoSecret(
   owner: string,
@@ -14937,6 +15189,7 @@ export async function getReposDependencyGraphDiffRange(
 /**
  * Create a snapshot of dependencies for a repository
  * @request POST :/repos/{owner}/{repo}/dependency-graph/snapshots
+ * @allowrelaxedtypes
  */
 export async function postReposDependencyGraphCreateRepositorySnapshot(
   owner: string,
@@ -14972,6 +15225,7 @@ export async function postReposDependencyGraphCreateRepositorySnapshot(
 /**
  * List deployments
  * @request GET :/repos/{owner}/{repo}/deployments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListDeployments(
@@ -15072,6 +15326,7 @@ export async function postReposReposCreateDeployment(
 /**
  * Delete a deployment
  * @request DELETE :/repos/{owner}/{repo}/deployments/{deployment_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteDeployment(
   owner: string,
@@ -15098,6 +15353,7 @@ export async function deleteReposReposDeleteDeployment(
 /**
  * Get a deployment
  * @request GET :/repos/{owner}/{repo}/deployments/{deployment_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetDeployment(
@@ -15250,6 +15506,7 @@ export async function getReposReposGetDeploymentStatus(
 /**
  * Create a repository dispatch event
  * @request POST :/repos/{owner}/{repo}/dispatches
+ * @allowrelaxedtypes
  */
 export async function postReposReposCreateDispatchEvent(
   owner: string,
@@ -15285,6 +15542,7 @@ export async function postReposReposCreateDispatchEvent(
 /**
  * List environments
  * @request GET :/repos/{owner}/{repo}/environments
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetAllEnvironments(
@@ -15323,6 +15581,7 @@ export async function getReposReposGetAllEnvironments(
 /**
  * Delete an environment
  * @request DELETE :/repos/{owner}/{repo}/environments/{environment_name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteAnEnvironment(
   owner: string,
@@ -15349,6 +15608,7 @@ export async function deleteReposReposDeleteAnEnvironment(
 /**
  * Get an environment
  * @request GET :/repos/{owner}/{repo}/environments/{environment_name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetEnvironment(
@@ -15421,6 +15681,7 @@ export async function putReposReposCreateOrUpdateEnvironment(
 /**
  * List deployment branch policies
  * @request GET :/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListDeploymentBranchPolicies(
@@ -15461,6 +15722,7 @@ export async function getReposReposListDeploymentBranchPolicies(
 /**
  * Create a deployment branch policy
  * @request POST :/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies
+ * @allowrelaxedtypes
  */
 export async function postReposReposCreateDeploymentBranchPolicy(
   owner: string,
@@ -15489,6 +15751,7 @@ export async function postReposReposCreateDeploymentBranchPolicy(
 /**
  * Delete a deployment branch policy
  * @request DELETE :/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteDeploymentBranchPolicy(
   owner: string,
@@ -15517,6 +15780,7 @@ export async function deleteReposReposDeleteDeploymentBranchPolicy(
 /**
  * Get a deployment branch policy
  * @request GET :/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetDeploymentBranchPolicy(
@@ -15545,6 +15809,7 @@ export async function getReposReposGetDeploymentBranchPolicy(
 /**
  * Update a deployment branch policy
  * @request PUT :/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}
+ * @allowrelaxedtypes
  */
 export async function putReposReposUpdateDeploymentBranchPolicy(
   owner: string,
@@ -15675,6 +15940,7 @@ export async function postReposReposCreateFork(
 /**
  * Create a blob
  * @request POST :/repos/{owner}/{repo}/git/blobs
+ * @allowrelaxedtypes
  */
 export async function postReposGitCreateBlob(
   owner: string,
@@ -15709,6 +15975,7 @@ export async function postReposGitCreateBlob(
 /**
  * Get a blob
  * @request GET :/repos/{owner}/{repo}/git/blobs/{file_sha}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposGitGetBlob(
@@ -15735,6 +16002,7 @@ export async function getReposGitGetBlob(
 /**
  * Create a commit
  * @request POST :/repos/{owner}/{repo}/git/commits
+ * @allowrelaxedtypes
  */
 export async function postReposGitCreateCommit(
   owner: string,
@@ -15794,6 +16062,7 @@ export async function postReposGitCreateCommit(
 /**
  * Get a commit
  * @request GET :/repos/{owner}/{repo}/git/commits/{commit_sha}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposGitGetCommit(
@@ -15820,6 +16089,7 @@ export async function getReposGitGetCommit(
 /**
  * List matching references
  * @request GET :/repos/{owner}/{repo}/git/matching-refs/{ref}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposGitListMatchingRefs(
@@ -15847,6 +16117,7 @@ export async function getReposGitListMatchingRefs(
 /**
  * Get a reference
  * @request GET :/repos/{owner}/{repo}/git/ref/{ref}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposGitGetRef(
@@ -15874,6 +16145,7 @@ export async function getReposGitGetRef(
 /**
  * Create a reference
  * @request POST :/repos/{owner}/{repo}/git/refs
+ * @allowrelaxedtypes
  */
 export async function postReposGitCreateRef(
   owner: string,
@@ -15907,6 +16179,7 @@ export async function postReposGitCreateRef(
 /**
  * Delete a reference
  * @request DELETE :/repos/{owner}/{repo}/git/refs/{ref}
+ * @allowrelaxedtypes
  */
 export async function deleteReposGitDeleteRef(
   owner: string,
@@ -15933,6 +16206,7 @@ export async function deleteReposGitDeleteRef(
 /**
  * Update a reference
  * @request PATCH :/repos/{owner}/{repo}/git/refs/{ref}
+ * @allowrelaxedtypes
  */
 export async function patchReposGitUpdateRef(
   owner: string,
@@ -16018,6 +16292,7 @@ export async function postReposGitCreateTag(
 /**
  * Get a tag
  * @request GET :/repos/{owner}/{repo}/git/tags/{tag_sha}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposGitGetTag(
@@ -16098,6 +16373,7 @@ export async function postReposGitCreateTree(
 /**
  * Get a tree
  * @request GET :/repos/{owner}/{repo}/git/trees/{tree_sha}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposGitGetTree(
@@ -16129,6 +16405,7 @@ export async function getReposGitGetTree(
 /**
  * List repository webhooks
  * @request GET :/repos/{owner}/{repo}/hooks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListWebhooks(
@@ -16215,6 +16492,7 @@ export async function postReposReposCreateWebhook(
 /**
  * Delete a repository webhook
  * @request DELETE :/repos/{owner}/{repo}/hooks/{hook_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteWebhook(
   owner: string,
@@ -16240,6 +16518,7 @@ export async function deleteReposReposDeleteWebhook(
 /**
  * Get a repository webhook
  * @request GET :/repos/{owner}/{repo}/hooks/{hook_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetWebhook(
@@ -16266,6 +16545,7 @@ export async function getReposReposGetWebhook(
 /**
  * Update a repository webhook
  * @request PATCH :/repos/{owner}/{repo}/hooks/{hook_id}
+ * @allowrelaxedtypes
  */
 export async function patchReposReposUpdateWebhook(
   owner: string,
@@ -16324,6 +16604,7 @@ export async function patchReposReposUpdateWebhook(
 /**
  * Get a webhook configuration for a repository
  * @request GET :/repos/{owner}/{repo}/hooks/{hook_id}/config
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetWebhookConfigForRepo(
@@ -16350,6 +16631,7 @@ export async function getReposReposGetWebhookConfigForRepo(
 /**
  * Update a webhook configuration for a repository
  * @request PATCH :/repos/{owner}/{repo}/hooks/{hook_id}/config
+ * @allowrelaxedtypes
  */
 export async function patchReposReposUpdateWebhookConfigForRepo(
   owner: string,
@@ -16387,6 +16669,7 @@ export async function patchReposReposUpdateWebhookConfigForRepo(
 /**
  * List deliveries for a repository webhook
  * @request GET :/repos/{owner}/{repo}/hooks/{hook_id}/deliveries
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListWebhookDeliveries(
@@ -16421,6 +16704,7 @@ export async function getReposReposListWebhookDeliveries(
 /**
  * Get a delivery for a repository webhook
  * @request GET :/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetWebhookDelivery(
@@ -16449,6 +16733,7 @@ export async function getReposReposGetWebhookDelivery(
 /**
  * Redeliver a delivery for a repository webhook
  * @request POST :/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}/attempts
+ * @allowrelaxedtypes
  */
 export async function postReposReposRedeliverWebhookDelivery(
   owner: string,
@@ -16476,6 +16761,7 @@ export async function postReposReposRedeliverWebhookDelivery(
 /**
  * Ping a repository webhook
  * @request POST :/repos/{owner}/{repo}/hooks/{hook_id}/pings
+ * @allowrelaxedtypes
  */
 export async function postReposReposPingWebhook(
   owner: string,
@@ -16501,6 +16787,7 @@ export async function postReposReposPingWebhook(
 /**
  * Test the push repository webhook
  * @request POST :/repos/{owner}/{repo}/hooks/{hook_id}/tests
+ * @allowrelaxedtypes
  */
 export async function postReposReposTestPushWebhook(
   owner: string,
@@ -16526,6 +16813,7 @@ export async function postReposReposTestPushWebhook(
 /**
  * Cancel an import
  * @request DELETE :/repos/{owner}/{repo}/import
+ * @allowrelaxedtypes
  */
 export async function deleteReposMigrationsCancelImport(
   owner: string,
@@ -16654,6 +16942,7 @@ export async function putReposMigrationsStartImport(
 /**
  * Get commit authors
  * @request GET :/repos/{owner}/{repo}/import/authors
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposMigrationsGetCommitAuthors(
@@ -16683,6 +16972,7 @@ export async function getReposMigrationsGetCommitAuthors(
 /**
  * Map a commit author
  * @request PATCH :/repos/{owner}/{repo}/import/authors/{author_id}
+ * @allowrelaxedtypes
  */
 export async function patchReposMigrationsMapCommitAuthor(
   owner: string,
@@ -16716,6 +17006,7 @@ export async function patchReposMigrationsMapCommitAuthor(
 /**
  * Get large files
  * @request GET :/repos/{owner}/{repo}/import/large_files
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposMigrationsGetLargeFiles(
@@ -16795,6 +17086,7 @@ export async function getReposAppsGetRepoInstallation(
 /**
  * Remove interaction restrictions for a repository
  * @request DELETE :/repos/{owner}/{repo}/interaction-limits
+ * @allowrelaxedtypes
  */
 export async function deleteReposInteractionsRemoveRestrictionsForRepo(
   owner: string,
@@ -16902,6 +17194,7 @@ export async function getReposReposListInvitations(
 /**
  * Delete a repository invitation
  * @request DELETE :/repos/{owner}/{repo}/invitations/{invitation_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteInvitation(
   owner: string,
@@ -17095,6 +17388,7 @@ export async function getReposIssuesListCommentsForRepo(
 /**
  * Delete an issue comment
  * @request DELETE :/repos/{owner}/{repo}/issues/comments/{comment_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposIssuesDeleteComment(
   owner: string,
@@ -17263,6 +17557,7 @@ export async function postReposReactionsCreateForIssueComment(
 /**
  * Delete an issue comment reaction
  * @request DELETE :/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReactionsDeleteForIssueComment(
   owner: string,
@@ -17498,6 +17793,7 @@ export async function postReposIssuesAddAssignees(
 /**
  * Check if a user can be assigned to a issue
  * @request GET :/repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesCheckUserCanBeAssignedToIssue(
@@ -17594,6 +17890,7 @@ export async function postReposIssuesCreateComment(
 /**
  * List issue events
  * @request GET :/repos/{owner}/{repo}/issues/{issue_number}/events
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesListEvents(
@@ -17627,6 +17924,7 @@ export async function getReposIssuesListEvents(
 /**
  * Remove all labels from an issue
  * @request DELETE :/repos/{owner}/{repo}/issues/{issue_number}/labels
+ * @allowrelaxedtypes
  */
 export async function deleteReposIssuesRemoveAllLabels(
   owner: string,
@@ -17652,6 +17950,7 @@ export async function deleteReposIssuesRemoveAllLabels(
 /**
  * List labels for an issue
  * @request GET :/repos/{owner}/{repo}/issues/{issue_number}/labels
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesListLabelsOnIssue(
@@ -17779,6 +18078,7 @@ export async function putReposIssuesSetLabels(
 /**
  * Remove a label from an issue
  * @request DELETE :/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposIssuesRemoveLabel(
   owner: string,
@@ -17806,6 +18106,7 @@ export async function deleteReposIssuesRemoveLabel(
 /**
  * Unlock an issue
  * @request DELETE :/repos/{owner}/{repo}/issues/{issue_number}/lock
+ * @allowrelaxedtypes
  */
 export async function deleteReposIssuesUnlock(
   owner: string,
@@ -17953,6 +18254,7 @@ export async function postReposReactionsCreateForIssue(
 /**
  * Delete an issue reaction
  * @request DELETE :/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReactionsDeleteForIssue(
   owner: string,
@@ -17980,6 +18282,7 @@ export async function deleteReposReactionsDeleteForIssue(
 /**
  * List timeline events for an issue
  * @request GET :/repos/{owner}/{repo}/issues/{issue_number}/timeline
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesListEventsForTimeline(
@@ -18013,6 +18316,7 @@ export async function getReposIssuesListEventsForTimeline(
 /**
  * List deploy keys
  * @request GET :/repos/{owner}/{repo}/keys
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListDeployKeys(
@@ -18044,6 +18348,7 @@ export async function getReposReposListDeployKeys(
 /**
  * Create a deploy key
  * @request POST :/repos/{owner}/{repo}/keys
+ * @allowrelaxedtypes
  */
 export async function postReposReposCreateDeployKey(
   owner: string,
@@ -18081,6 +18386,7 @@ export async function postReposReposCreateDeployKey(
 /**
  * Delete a deploy key
  * @request DELETE :/repos/{owner}/{repo}/keys/{key_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteDeployKey(
   owner: string,
@@ -18107,6 +18413,7 @@ export async function deleteReposReposDeleteDeployKey(
 /**
  * Get a deploy key
  * @request GET :/repos/{owner}/{repo}/keys/{key_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetDeployKey(
@@ -18133,6 +18440,7 @@ export async function getReposReposGetDeployKey(
 /**
  * List labels for a repository
  * @request GET :/repos/{owner}/{repo}/labels
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesListLabelsForRepo(
@@ -18164,6 +18472,7 @@ export async function getReposIssuesListLabelsForRepo(
 /**
  * Create a label
  * @request POST :/repos/{owner}/{repo}/labels
+ * @allowrelaxedtypes
  */
 export async function postReposIssuesCreateLabel(
   owner: string,
@@ -18197,6 +18506,7 @@ export async function postReposIssuesCreateLabel(
 /**
  * Delete a label
  * @request DELETE :/repos/{owner}/{repo}/labels/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteReposIssuesDeleteLabel(
   owner: string,
@@ -18222,6 +18532,7 @@ export async function deleteReposIssuesDeleteLabel(
 /**
  * Get a label
  * @request GET :/repos/{owner}/{repo}/labels/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesGetLabel(
@@ -18248,6 +18559,7 @@ export async function getReposIssuesGetLabel(
 /**
  * Update a label
  * @request PATCH :/repos/{owner}/{repo}/labels/{name}
+ * @allowrelaxedtypes
  */
 export async function patchReposIssuesUpdateLabel(
   owner: string,
@@ -18283,6 +18595,7 @@ export async function patchReposIssuesUpdateLabel(
 /**
  * List repository languages
  * @request GET :/repos/{owner}/{repo}/languages
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListLanguages(
@@ -18307,6 +18620,7 @@ export async function getReposReposListLanguages(
 /**
  * Disable Git LFS for a repository
  * @request DELETE :/repos/{owner}/{repo}/lfs
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDisableLfsForRepo(
   owner: string,
@@ -18330,6 +18644,7 @@ export async function deleteReposReposDisableLfsForRepo(
 /**
  * Enable Git LFS for a repository
  * @request PUT :/repos/{owner}/{repo}/lfs
+ * @allowrelaxedtypes
  */
 export async function putReposReposEnableLfsForRepo(
   owner: string,
@@ -18353,6 +18668,7 @@ export async function putReposReposEnableLfsForRepo(
 /**
  * Get the license for a repository
  * @request GET :/repos/{owner}/{repo}/license
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposLicensesGetForRepo(
@@ -18521,6 +18837,7 @@ export async function postReposIssuesCreateMilestone(
 /**
  * Delete a milestone
  * @request DELETE :/repos/{owner}/{repo}/milestones/{milestone_number}
+ * @allowrelaxedtypes
  */
 export async function deleteReposIssuesDeleteMilestone(
   owner: string,
@@ -18618,6 +18935,7 @@ export async function patchReposIssuesUpdateMilestone(
 /**
  * List labels for issues in a milestone
  * @request GET :/repos/{owner}/{repo}/milestones/{milestone_number}/labels
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposIssuesListLabelsForMilestone(
@@ -18692,6 +19010,7 @@ export async function getReposActivityListRepoNotificationsForAuthenticatedUser(
 /**
  * Mark repository notifications as read
  * @request PUT :/repos/{owner}/{repo}/notifications
+ * @allowrelaxedtypes
  */
 export async function putReposActivityMarkRepoNotificationsAsRead(
   owner: string,
@@ -18727,6 +19046,7 @@ export async function putReposActivityMarkRepoNotificationsAsRead(
 /**
  * Delete a GitHub Pages site
  * @request DELETE :/repos/{owner}/{repo}/pages
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeletePagesSite(
   owner: string,
@@ -18861,6 +19181,7 @@ export async function putReposReposUpdateInformationAboutPagesSite(
 /**
  * List GitHub Pages builds
  * @request GET :/repos/{owner}/{repo}/pages/builds
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListPagesBuilds(
@@ -18892,6 +19213,7 @@ export async function getReposReposListPagesBuilds(
 /**
  * Request a GitHub Pages build
  * @request POST :/repos/{owner}/{repo}/pages/builds
+ * @allowrelaxedtypes
  */
 export async function postReposReposRequestPagesBuild(
   owner: string,
@@ -18915,6 +19237,7 @@ export async function postReposReposRequestPagesBuild(
 /**
  * Get latest Pages build
  * @request GET :/repos/{owner}/{repo}/pages/builds/latest
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetLatestPagesBuild(
@@ -18939,6 +19262,7 @@ export async function getReposReposGetLatestPagesBuild(
 /**
  * Get GitHub Pages build
  * @request GET :/repos/{owner}/{repo}/pages/builds/{build_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetPagesBuild(
@@ -18965,6 +19289,7 @@ export async function getReposReposGetPagesBuild(
 /**
  * Create a GitHub Pages deployment
  * @request POST :/repos/{owner}/{repo}/pages/deployment
+ * @allowrelaxedtypes
  */
 export async function postReposReposCreatePagesDeployment(
   owner: string,
@@ -19006,6 +19331,7 @@ export async function postReposReposCreatePagesDeployment(
 /**
  * Get a DNS health check for GitHub Pages
  * @request GET :/repos/{owner}/{repo}/pages/health
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetPagesHealthCheck(
@@ -19226,6 +19552,7 @@ export async function getReposPullsListReviewCommentsForRepo(
 /**
  * Delete a review comment for a pull request
  * @request DELETE :/repos/{owner}/{repo}/pulls/comments/{comment_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposPullsDeleteReviewComment(
   owner: string,
@@ -19394,6 +19721,7 @@ export async function postReposReactionsCreateForPullRequestReviewComment(
 /**
  * Delete a pull request comment reaction
  * @request DELETE :/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReactionsDeleteForPullRequestComment(
   owner: string,
@@ -19733,6 +20061,7 @@ export async function getReposPullsListFiles(
 /**
  * Check if a pull request has been merged
  * @request GET :/repos/{owner}/{repo}/pulls/{pull_number}/merge
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposPullsCheckIfMerged(
@@ -19831,6 +20160,7 @@ export async function deleteReposPullsRemoveRequestedReviewers(
 /**
  * Get all requested reviewers for a pull request
  * @request GET :/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposPullsListRequestedReviewers(
@@ -20366,6 +20696,7 @@ export async function postReposReposCreateRelease(
 /**
  * Delete a release asset
  * @request DELETE :/repos/{owner}/{repo}/releases/assets/{asset_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteReleaseAsset(
   owner: string,
@@ -20455,6 +20786,7 @@ export async function patchReposReposUpdateReleaseAsset(
 /**
  * Generate release notes content for a release
  * @request POST :/repos/{owner}/{repo}/releases/generate-notes
+ * @allowrelaxedtypes
  */
 export async function postReposReposGenerateReleaseNotes(
   owner: string,
@@ -20543,6 +20875,7 @@ export async function getReposReposGetReleaseByTag(
 /**
  * Delete a release
  * @request DELETE :/repos/{owner}/{repo}/releases/{release_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteRelease(
   owner: string,
@@ -20778,6 +21111,7 @@ export async function postReposReactionsCreateForRelease(
 /**
  * Delete a release reaction
  * @request DELETE :/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReactionsDeleteForRelease(
   owner: string,
@@ -20982,6 +21316,7 @@ export async function getReposActivityListStargazersForRepo(
 /**
  * Get the weekly commit activity
  * @request GET :/repos/{owner}/{repo}/stats/code_frequency
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetCodeFrequencyStats(
@@ -21006,6 +21341,7 @@ export async function getReposReposGetCodeFrequencyStats(
 /**
  * Get the last year of commit activity
  * @request GET :/repos/{owner}/{repo}/stats/commit_activity
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetCommitActivityStats(
@@ -21030,6 +21366,7 @@ export async function getReposReposGetCommitActivityStats(
 /**
  * Get all contributor commit activity
  * @request GET :/repos/{owner}/{repo}/stats/contributors
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetContributorsStats(
@@ -21054,6 +21391,7 @@ export async function getReposReposGetContributorsStats(
 /**
  * Get the weekly commit count
  * @request GET :/repos/{owner}/{repo}/stats/participation
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetParticipationStats(
@@ -21078,6 +21416,7 @@ export async function getReposReposGetParticipationStats(
 /**
  * Get the hourly commit count for each day
  * @request GET :/repos/{owner}/{repo}/stats/punch_card
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetPunchCardStats(
@@ -21147,6 +21486,7 @@ export async function postReposReposCreateCommitStatus(
 /**
  * List watchers
  * @request GET :/repos/{owner}/{repo}/subscribers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActivityListWatchersForRepo(
@@ -21178,6 +21518,7 @@ export async function getReposActivityListWatchersForRepo(
 /**
  * Delete a repository subscription
  * @request DELETE :/repos/{owner}/{repo}/subscription
+ * @allowrelaxedtypes
  */
 export async function deleteReposActivityDeleteRepoSubscription(
   owner: string,
@@ -21201,6 +21542,7 @@ export async function deleteReposActivityDeleteRepoSubscription(
 /**
  * Get a repository subscription
  * @request GET :/repos/{owner}/{repo}/subscription
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposActivityGetRepoSubscription(
@@ -21225,6 +21567,7 @@ export async function getReposActivityGetRepoSubscription(
 /**
  * Set a repository subscription
  * @request PUT :/repos/{owner}/{repo}/subscription
+ * @allowrelaxedtypes
  */
 export async function putReposActivitySetRepoSubscription(
   owner: string,
@@ -21256,6 +21599,7 @@ export async function putReposActivitySetRepoSubscription(
 /**
  * List repository tags
  * @request GET :/repos/{owner}/{repo}/tags
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListTags(
@@ -21287,6 +21631,7 @@ export async function getReposReposListTags(
 /**
  * List tag protection states for a repository
  * @request GET :/repos/{owner}/{repo}/tags/protection
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListTagProtection(
@@ -21311,6 +21656,7 @@ export async function getReposReposListTagProtection(
 /**
  * Create a tag protection state for a repository
  * @request POST :/repos/{owner}/{repo}/tags/protection
+ * @allowrelaxedtypes
  */
 export async function postReposReposCreateTagProtection(
   owner: string,
@@ -21340,6 +21686,7 @@ export async function postReposReposCreateTagProtection(
 /**
  * Delete a tag protection state for a repository
  * @request DELETE :/repos/{owner}/{repo}/tags/protection/{tag_protection_id}
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDeleteTagProtection(
   owner: string,
@@ -21366,6 +21713,7 @@ export async function deleteReposReposDeleteTagProtection(
 /**
  * Download a repository archive (tar)
  * @request GET :/repos/{owner}/{repo}/tarball/{ref}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposDownloadTarballArchive(
@@ -21392,6 +21740,7 @@ export async function getReposReposDownloadTarballArchive(
 /**
  * List repository teams
  * @request GET :/repos/{owner}/{repo}/teams
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposListTeams(
@@ -21423,6 +21772,7 @@ export async function getReposReposListTeams(
 /**
  * Get all repository topics
  * @request GET :/repos/{owner}/{repo}/topics
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetAllTopics(
@@ -21454,6 +21804,7 @@ export async function getReposReposGetAllTopics(
 /**
  * Replace all repository topics
  * @request PUT :/repos/{owner}/{repo}/topics
+ * @allowrelaxedtypes
  */
 export async function putReposReposReplaceAllTopics(
   owner: string,
@@ -21513,6 +21864,7 @@ export async function getReposReposGetClones(
 /**
  * Get top referral paths
  * @request GET :/repos/{owner}/{repo}/traffic/popular/paths
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetTopPaths(
@@ -21537,6 +21889,7 @@ export async function getReposReposGetTopPaths(
 /**
  * Get top referral sources
  * @request GET :/repos/{owner}/{repo}/traffic/popular/referrers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposGetTopReferrers(
@@ -21625,6 +21978,7 @@ export async function postReposReposTransfer(
 /**
  * Disable vulnerability alerts
  * @request DELETE :/repos/{owner}/{repo}/vulnerability-alerts
+ * @allowrelaxedtypes
  */
 export async function deleteReposReposDisableVulnerabilityAlerts(
   owner: string,
@@ -21648,6 +22002,7 @@ export async function deleteReposReposDisableVulnerabilityAlerts(
 /**
  * Check if vulnerability alerts are enabled for a repository
  * @request GET :/repos/{owner}/{repo}/vulnerability-alerts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposCheckVulnerabilityAlerts(
@@ -21672,6 +22027,7 @@ export async function getReposReposCheckVulnerabilityAlerts(
 /**
  * Enable vulnerability alerts
  * @request PUT :/repos/{owner}/{repo}/vulnerability-alerts
+ * @allowrelaxedtypes
  */
 export async function putReposReposEnableVulnerabilityAlerts(
   owner: string,
@@ -21695,6 +22051,7 @@ export async function putReposReposEnableVulnerabilityAlerts(
 /**
  * Download a repository archive (zip)
  * @request GET :/repos/{owner}/{repo}/zipball/{ref}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getReposReposDownloadZipballArchive(
@@ -21791,6 +22148,7 @@ export async function getRepositoriesReposListPublic(
 /**
  * List environment secrets
  * @request GET :/repositories/{repository_id}/environments/{environment_name}/secrets
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRepositoriesActionsListEnvironmentSecrets(
@@ -21825,6 +22183,7 @@ export async function getRepositoriesActionsListEnvironmentSecrets(
 /**
  * Get an environment public key
  * @request GET :/repositories/{repository_id}/environments/{environment_name}/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRepositoriesActionsGetEnvironmentPublicKey(
@@ -21849,6 +22208,7 @@ export async function getRepositoriesActionsGetEnvironmentPublicKey(
 /**
  * Delete an environment secret
  * @request DELETE :/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteRepositoriesActionsDeleteEnvironmentSecret(
   repositoryId: number,
@@ -21874,6 +22234,7 @@ export async function deleteRepositoriesActionsDeleteEnvironmentSecret(
 /**
  * Get an environment secret
  * @request GET :/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRepositoriesActionsGetEnvironmentSecret(
@@ -21900,6 +22261,7 @@ export async function getRepositoriesActionsGetEnvironmentSecret(
 /**
  * Create or update an environment secret
  * @request PUT :/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function putRepositoriesActionsCreateOrUpdateEnvironmentSecret(
   repositoryId: number,
@@ -21936,6 +22298,7 @@ export async function putRepositoriesActionsCreateOrUpdateEnvironmentSecret(
 /**
  * List environment variables
  * @request GET :/repositories/{repository_id}/environments/{environment_name}/variables
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRepositoriesActionsListEnvironmentVariables(
@@ -21970,6 +22333,7 @@ export async function getRepositoriesActionsListEnvironmentVariables(
 /**
  * Create an environment variable
  * @request POST :/repositories/{repository_id}/environments/{environment_name}/variables
+ * @allowrelaxedtypes
  */
 export async function postRepositoriesActionsCreateEnvironmentVariable(
   repositoryId: number,
@@ -22001,6 +22365,7 @@ export async function postRepositoriesActionsCreateEnvironmentVariable(
 /**
  * Delete an environment variable
  * @request DELETE :/repositories/{repository_id}/environments/{environment_name}/variables/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteRepositoriesActionsDeleteEnvironmentVariable(
   repositoryId: number,
@@ -22026,6 +22391,7 @@ export async function deleteRepositoriesActionsDeleteEnvironmentVariable(
 /**
  * Get an environment variable
  * @request GET :/repositories/{repository_id}/environments/{environment_name}/variables/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getRepositoriesActionsGetEnvironmentVariable(
@@ -22052,6 +22418,7 @@ export async function getRepositoriesActionsGetEnvironmentVariable(
 /**
  * Update an environment variable
  * @request PATCH :/repositories/{repository_id}/environments/{environment_name}/variables/{name}
+ * @allowrelaxedtypes
  */
 export async function patchRepositoriesActionsUpdateEnvironmentVariable(
   repositoryId: number,
@@ -22288,6 +22655,7 @@ export async function getSearchSearchRepos(
 /**
  * Search topics
  * @request GET :/search/topics
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSearchSearchTopics(
@@ -22359,6 +22727,7 @@ export async function getSearchSearchUsers(
 /**
  * Delete a team (Legacy)
  * @request DELETE :/teams/{team_id}
+ * @allowrelaxedtypes
  */
 export async function deleteTeamsTeamsDeleteLegacy(
   /** The unique identifier of the team. */
@@ -22482,6 +22851,7 @@ export async function getTeamsTeamsListDiscussionsLegacy(
 /**
  * Create a discussion (Legacy)
  * @request POST :/teams/{team_id}/discussions
+ * @allowrelaxedtypes
  */
 export async function postTeamsTeamsCreateDiscussionLegacy(
   teamId: number,
@@ -22516,6 +22886,7 @@ export async function postTeamsTeamsCreateDiscussionLegacy(
 /**
  * Delete a discussion (Legacy)
  * @request DELETE :/teams/{team_id}/discussions/{discussion_number}
+ * @allowrelaxedtypes
  */
 export async function deleteTeamsTeamsDeleteDiscussionLegacy(
   teamId: number,
@@ -22539,6 +22910,7 @@ export async function deleteTeamsTeamsDeleteDiscussionLegacy(
 /**
  * Get a discussion (Legacy)
  * @request GET :/teams/{team_id}/discussions/{discussion_number}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTeamsTeamsGetDiscussionLegacy(
@@ -22563,6 +22935,7 @@ export async function getTeamsTeamsGetDiscussionLegacy(
 /**
  * Update a discussion (Legacy)
  * @request PATCH :/teams/{team_id}/discussions/{discussion_number}
+ * @allowrelaxedtypes
  */
 export async function patchTeamsTeamsUpdateDiscussionLegacy(
   teamId: number,
@@ -22628,6 +23001,7 @@ export async function getTeamsTeamsListDiscussionCommentsLegacy(
 /**
  * Create a discussion comment (Legacy)
  * @request POST :/teams/{team_id}/discussions/{discussion_number}/comments
+ * @allowrelaxedtypes
  */
 export async function postTeamsTeamsCreateDiscussionCommentLegacy(
   teamId: number,
@@ -22657,6 +23031,7 @@ export async function postTeamsTeamsCreateDiscussionCommentLegacy(
 /**
  * Delete a discussion comment (Legacy)
  * @request DELETE :/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
+ * @allowrelaxedtypes
  */
 export async function deleteTeamsTeamsDeleteDiscussionCommentLegacy(
   teamId: number,
@@ -22682,6 +23057,7 @@ export async function deleteTeamsTeamsDeleteDiscussionCommentLegacy(
 /**
  * Get a discussion comment (Legacy)
  * @request GET :/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTeamsTeamsGetDiscussionCommentLegacy(
@@ -22708,6 +23084,7 @@ export async function getTeamsTeamsGetDiscussionCommentLegacy(
 /**
  * Update a discussion comment (Legacy)
  * @request PATCH :/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}
+ * @allowrelaxedtypes
  */
 export async function patchTeamsTeamsUpdateDiscussionCommentLegacy(
   teamId: number,
@@ -22903,6 +23280,7 @@ export async function postTeamsReactionsCreateForTeamDiscussionLegacy(
 /**
  * List pending team invitations (Legacy)
  * @request GET :/teams/{team_id}/invitations
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTeamsTeamsListPendingInvitationsLegacy(
@@ -22964,6 +23342,7 @@ export async function getTeamsTeamsListMembersLegacy(
 /**
  * Remove team member (Legacy)
  * @request DELETE :/teams/{team_id}/members/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteTeamsTeamsRemoveMemberLegacy(
   teamId: number,
@@ -22987,6 +23366,7 @@ export async function deleteTeamsTeamsRemoveMemberLegacy(
 /**
  * Get team member (Legacy)
  * @request GET :/teams/{team_id}/members/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTeamsTeamsGetMemberLegacy(
@@ -23011,6 +23391,7 @@ export async function getTeamsTeamsGetMemberLegacy(
 /**
  * Add team member (Legacy)
  * @request PUT :/teams/{team_id}/members/{username}
+ * @allowrelaxedtypes
  */
 export async function putTeamsTeamsAddMemberLegacy(
   teamId: number,
@@ -23034,6 +23415,7 @@ export async function putTeamsTeamsAddMemberLegacy(
 /**
  * Remove team membership for a user (Legacy)
  * @request DELETE :/teams/{team_id}/memberships/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteTeamsTeamsRemoveMembershipForUserLegacy(
   teamId: number,
@@ -23115,6 +23497,7 @@ export async function putTeamsTeamsAddOrUpdateMembershipForUserLegacy(
 /**
  * List team projects (Legacy)
  * @request GET :/teams/{team_id}/projects
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTeamsTeamsListProjectsLegacy(
@@ -23144,6 +23527,7 @@ export async function getTeamsTeamsListProjectsLegacy(
 /**
  * Remove a project from a team (Legacy)
  * @request DELETE :/teams/{team_id}/projects/{project_id}
+ * @allowrelaxedtypes
  */
 export async function deleteTeamsTeamsRemoveProjectLegacy(
   teamId: number,
@@ -23167,6 +23551,7 @@ export async function deleteTeamsTeamsRemoveProjectLegacy(
 /**
  * Check team permissions for a project (Legacy)
  * @request GET :/teams/{team_id}/projects/{project_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTeamsTeamsCheckPermissionsForProjectLegacy(
@@ -23251,6 +23636,7 @@ export async function getTeamsTeamsListReposLegacy(
 /**
  * Remove a repository from a team (Legacy)
  * @request DELETE :/teams/{team_id}/repos/{owner}/{repo}
+ * @allowrelaxedtypes
  */
 export async function deleteTeamsTeamsRemoveRepoLegacy(
   teamId: number,
@@ -23335,6 +23721,7 @@ export async function putTeamsTeamsAddOrUpdateRepoPermissionsLegacy(
 /**
  * List child teams (Legacy)
  * @request GET :/teams/{team_id}/teams
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getTeamsTeamsListChildLegacy(
@@ -23443,6 +23830,7 @@ export async function patchUserUsersUpdateAuthenticated(
 /**
  * List users blocked by the authenticated user
  * @request GET :/user/blocks
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersListBlockedByAuthenticatedUser(
@@ -23470,6 +23858,7 @@ export async function getUserUsersListBlockedByAuthenticatedUser(
 /**
  * Unblock a user
  * @request DELETE :/user/blocks/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteUserUsersUnblock(
   username: string,
@@ -23491,6 +23880,7 @@ export async function deleteUserUsersUnblock(
 /**
  * Check if a user is blocked by the authenticated user
  * @request GET :/user/blocks/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersCheckBlocked(
@@ -23513,6 +23903,7 @@ export async function getUserUsersCheckBlocked(
 /**
  * Block a user
  * @request PUT :/user/blocks/{username}
+ * @allowrelaxedtypes
  */
 export async function putUserUsersBlock(
   username: string,
@@ -23664,6 +24055,7 @@ export async function getUserCodespacesListSecretsForAuthenticatedUser(
 /**
  * Get public key for the authenticated user
  * @request GET :/user/codespaces/secrets/public-key
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserCodespacesGetPublicKeyForAuthenticatedUser(
@@ -23684,6 +24076,7 @@ export async function getUserCodespacesGetPublicKeyForAuthenticatedUser(
 /**
  * Delete a secret for the authenticated user
  * @request DELETE :/user/codespaces/secrets/{secret_name}
+ * @allowrelaxedtypes
  */
 export async function deleteUserCodespacesDeleteSecretForAuthenticatedUser(
   secretName: string,
@@ -23791,6 +24184,7 @@ export async function getUserCodespacesListRepositoriesForSecretForAuthenticated
 /**
  * Set selected repositories for a user secret
  * @request PUT :/user/codespaces/secrets/{secret_name}/repositories
+ * @allowrelaxedtypes
  */
 export async function putUserCodespacesSetRepositoriesForSecretForAuthenticatedUser(
   secretName: string,
@@ -23819,6 +24213,7 @@ export async function putUserCodespacesSetRepositoriesForSecretForAuthenticatedU
 /**
  * Remove a selected repository from a user secret
  * @request DELETE :/user/codespaces/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteUserCodespacesRemoveRepositoryForSecretForAuthenticatedUser(
   secretName: string,
@@ -23843,6 +24238,7 @@ export async function deleteUserCodespacesRemoveRepositoryForSecretForAuthentica
 /**
  * Add a selected repository to a user secret
  * @request PUT :/user/codespaces/secrets/{secret_name}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putUserCodespacesAddRepositoryForSecretForAuthenticatedUser(
   secretName: string,
@@ -23867,6 +24263,7 @@ export async function putUserCodespacesAddRepositoryForSecretForAuthenticatedUse
 /**
  * Delete a codespace for the authenticated user
  * @request DELETE :/user/codespaces/{codespace_name}
+ * @allowrelaxedtypes
  */
 export async function deleteUserCodespacesDeleteForAuthenticatedUser(
   codespaceName: string,
@@ -23943,6 +24340,7 @@ export async function patchUserCodespacesUpdateForAuthenticatedUser(
 /**
  * Export a codespace for the authenticated user
  * @request POST :/user/codespaces/{codespace_name}/exports
+ * @allowrelaxedtypes
  */
 export async function postUserCodespacesExportForAuthenticatedUser(
   codespaceName: string,
@@ -23964,6 +24362,7 @@ export async function postUserCodespacesExportForAuthenticatedUser(
 /**
  * Get details about a codespace export
  * @request GET :/user/codespaces/{codespace_name}/exports/{export_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserCodespacesGetExportDetailsForAuthenticatedUser(
@@ -24150,6 +24549,7 @@ export async function deleteUserUsersDeleteEmailForAuthenticatedUser(
 /**
  * List email addresses for the authenticated user
  * @request GET :/user/emails
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersListEmailsForAuthenticatedUser(
@@ -24209,6 +24609,7 @@ export async function postUserUsersAddEmailForAuthenticatedUser(
 /**
  * List followers of the authenticated user
  * @request GET :/user/followers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersListFollowersForAuthenticatedUser(
@@ -24236,6 +24637,7 @@ export async function getUserUsersListFollowersForAuthenticatedUser(
 /**
  * List the people the authenticated user follows
  * @request GET :/user/following
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersListFollowedByAuthenticatedUser(
@@ -24263,6 +24665,7 @@ export async function getUserUsersListFollowedByAuthenticatedUser(
 /**
  * Unfollow a user
  * @request DELETE :/user/following/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteUserUsersUnfollow(
   username: string,
@@ -24284,6 +24687,7 @@ export async function deleteUserUsersUnfollow(
 /**
  * Check if a person is followed by the authenticated user
  * @request GET :/user/following/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersCheckPersonIsFollowedByAuthenticated(
@@ -24306,6 +24710,7 @@ export async function getUserUsersCheckPersonIsFollowedByAuthenticated(
 /**
  * Follow a user
  * @request PUT :/user/following/{username}
+ * @allowrelaxedtypes
  */
 export async function putUserUsersFollow(
   username: string,
@@ -24383,6 +24788,7 @@ export async function postUserUsersCreateGpgKeyForAuthenticatedUser(
 /**
  * Delete a GPG key for the authenticated user
  * @request DELETE :/user/gpg_keys/{gpg_key_id}
+ * @allowrelaxedtypes
  */
 export async function deleteUserUsersDeleteGpgKeyForAuthenticatedUser(
   /** The unique identifier of the GPG key. */
@@ -24493,6 +24899,7 @@ export async function getUserAppsListInstallationReposForAuthenticatedUser(
 /**
  * Remove a repository from an app installation
  * @request DELETE :/user/installations/{installation_id}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function deleteUserAppsRemoveRepoFromInstallationForAuthenticatedUser(
   installationId: number,
@@ -24517,6 +24924,7 @@ export async function deleteUserAppsRemoveRepoFromInstallationForAuthenticatedUs
 /**
  * Add a repository to an app installation
  * @request PUT :/user/installations/{installation_id}/repositories/{repository_id}
+ * @allowrelaxedtypes
  */
 export async function putUserAppsAddRepoToInstallationForAuthenticatedUser(
   installationId: number,
@@ -24540,6 +24948,7 @@ export async function putUserAppsAddRepoToInstallationForAuthenticatedUser(
 /**
  * Remove interaction restrictions from your public repositories
  * @request DELETE :/user/interaction-limits
+ * @allowrelaxedtypes
  */
 export async function deleteUserInteractionsRemoveRestrictionsForAuthenticatedUser(
   headers?: hasuraSdk.JSONValue,
@@ -24654,6 +25063,7 @@ export async function getUserIssuesListForAuthenticatedUser(
 /**
  * List public SSH keys for the authenticated user
  * @request GET :/user/keys
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersListPublicSshKeysForAuthenticatedUser(
@@ -24681,6 +25091,7 @@ export async function getUserUsersListPublicSshKeysForAuthenticatedUser(
 /**
  * Create a public SSH key for the authenticated user
  * @request POST :/user/keys
+ * @allowrelaxedtypes
  */
 export async function postUserUsersCreatePublicSshKeyForAuthenticatedUser(
   /** Request body */
@@ -24714,6 +25125,7 @@ export async function postUserUsersCreatePublicSshKeyForAuthenticatedUser(
 /**
  * Delete a public SSH key for the authenticated user
  * @request DELETE :/user/keys/{key_id}
+ * @allowrelaxedtypes
  */
 export async function deleteUserUsersDeletePublicSshKeyForAuthenticatedUser(
   keyId: number,
@@ -24735,6 +25147,7 @@ export async function deleteUserUsersDeletePublicSshKeyForAuthenticatedUser(
 /**
  * Get a public SSH key for the authenticated user
  * @request GET :/user/keys/{key_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersGetPublicSshKeyForAuthenticatedUser(
@@ -25014,6 +25427,7 @@ export async function getUserMigrationsGetStatusForAuthenticatedUser(
 /**
  * Delete a user migration archive
  * @request DELETE :/user/migrations/{migration_id}/archive
+ * @allowrelaxedtypes
  */
 export async function deleteUserMigrationsDeleteArchiveForAuthenticatedUser(
   migrationId: number,
@@ -25035,6 +25449,7 @@ export async function deleteUserMigrationsDeleteArchiveForAuthenticatedUser(
 /**
  * Download a user migration archive
  * @request GET :/user/migrations/{migration_id}/archive
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserMigrationsGetArchiveForAuthenticatedUser(
@@ -25057,6 +25472,7 @@ export async function getUserMigrationsGetArchiveForAuthenticatedUser(
 /**
  * Unlock a user repository
  * @request DELETE :/user/migrations/{migration_id}/repos/{repo_name}/lock
+ * @allowrelaxedtypes
  */
 export async function deleteUserMigrationsUnlockRepoForAuthenticatedUser(
   migrationId: number,
@@ -25110,6 +25526,7 @@ export async function getUserMigrationsListReposForAuthenticatedUser(
 /**
  * List organizations for the authenticated user
  * @request GET :/user/orgs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserOrgsListForAuthenticatedUser(
@@ -25404,6 +25821,7 @@ export async function postUserProjectsCreateForAuthenticatedUser(
 /**
  * List public email addresses for the authenticated user
  * @request GET :/user/public_emails
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersListPublicEmailsForAuthenticatedUser(
@@ -25655,6 +26073,7 @@ export async function getUserReposListInvitationsForAuthenticatedUser(
 /**
  * Decline a repository invitation
  * @request DELETE :/user/repository_invitations/{invitation_id}
+ * @allowrelaxedtypes
  */
 export async function deleteUserReposDeclineInvitationForAuthenticatedUser(
   invitationId: number,
@@ -25676,6 +26095,7 @@ export async function deleteUserReposDeclineInvitationForAuthenticatedUser(
 /**
  * Accept a repository invitation
  * @request PATCH :/user/repository_invitations/{invitation_id}
+ * @allowrelaxedtypes
  */
 export async function patchUserReposAcceptInvitationForAuthenticatedUser(
   invitationId: number,
@@ -25697,6 +26117,7 @@ export async function patchUserReposAcceptInvitationForAuthenticatedUser(
 /**
  * List SSH signing keys for the authenticated user
  * @request GET :/user/ssh_signing_keys
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersListSshSigningKeysForAuthenticatedUser(
@@ -25724,6 +26145,7 @@ export async function getUserUsersListSshSigningKeysForAuthenticatedUser(
 /**
  * Create a SSH signing key for the authenticated user
  * @request POST :/user/ssh_signing_keys
+ * @allowrelaxedtypes
  */
 export async function postUserUsersCreateSshSigningKeyForAuthenticatedUser(
   /** Request body */
@@ -25757,6 +26179,7 @@ export async function postUserUsersCreateSshSigningKeyForAuthenticatedUser(
 /**
  * Delete an SSH signing key for the authenticated user
  * @request DELETE :/user/ssh_signing_keys/{ssh_signing_key_id}
+ * @allowrelaxedtypes
  */
 export async function deleteUserUsersDeleteSshSigningKeyForAuthenticatedUser(
   /** The unique identifier of the SSH signing key. */
@@ -25779,6 +26202,7 @@ export async function deleteUserUsersDeleteSshSigningKeyForAuthenticatedUser(
 /**
  * Get an SSH signing key for the authenticated user
  * @request GET :/user/ssh_signing_keys/{ssh_signing_key_id}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserUsersGetSshSigningKeyForAuthenticatedUser(
@@ -25833,6 +26257,7 @@ export async function getUserActivityListReposStarredByAuthenticatedUser(
 /**
  * Unstar a repository for the authenticated user
  * @request DELETE :/user/starred/{owner}/{repo}
+ * @allowrelaxedtypes
  */
 export async function deleteUserActivityUnstarRepoForAuthenticatedUser(
   owner: string,
@@ -25856,6 +26281,7 @@ export async function deleteUserActivityUnstarRepoForAuthenticatedUser(
 /**
  * Check if a repository is starred by the authenticated user
  * @request GET :/user/starred/{owner}/{repo}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserActivityCheckRepoIsStarredByAuthenticatedUser(
@@ -25880,6 +26306,7 @@ export async function getUserActivityCheckRepoIsStarredByAuthenticatedUser(
 /**
  * Star a repository for the authenticated user
  * @request PUT :/user/starred/{owner}/{repo}
+ * @allowrelaxedtypes
  */
 export async function putUserActivityStarRepoForAuthenticatedUser(
   owner: string,
@@ -25959,6 +26386,7 @@ export async function getUserTeamsListForAuthenticatedUser(
 /**
  * List users
  * @request GET :/users
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUsersList(
@@ -26101,6 +26529,7 @@ export async function getUsersActivityListPublicEventsForUser(
 /**
  * List followers of a user
  * @request GET :/users/{username}/followers
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUsersListFollowersForUser(
@@ -26130,6 +26559,7 @@ export async function getUsersUsersListFollowersForUser(
 /**
  * List the people a user follows
  * @request GET :/users/{username}/following
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUsersListFollowingForUser(
@@ -26159,6 +26589,7 @@ export async function getUsersUsersListFollowingForUser(
 /**
  * Check if a user follows another user
  * @request GET :/users/{username}/following/{target_user}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUsersCheckFollowingForUser(
@@ -26298,6 +26729,7 @@ export async function getUsersAppsGetUserInstallation(
 /**
  * List public keys for a user
  * @request GET :/users/{username}/keys
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUsersListPublicKeysForUser(
@@ -26327,6 +26759,7 @@ export async function getUsersUsersListPublicKeysForUser(
 /**
  * List organizations for a user
  * @request GET :/users/{username}/orgs
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersOrgsListForUser(
@@ -26720,6 +27153,7 @@ export async function getUsersReposListForUser(
 /**
  * Get GitHub Actions billing for a user
  * @request GET :/users/{username}/settings/billing/actions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersBillingGetGithubActionsBillingUser(
@@ -26742,6 +27176,7 @@ export async function getUsersBillingGetGithubActionsBillingUser(
 /**
  * Get GitHub Packages billing for a user
  * @request GET :/users/{username}/settings/billing/packages
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersBillingGetGithubPackagesBillingUser(
@@ -26764,6 +27199,7 @@ export async function getUsersBillingGetGithubPackagesBillingUser(
 /**
  * Get shared storage billing for a user
  * @request GET :/users/{username}/settings/billing/shared-storage
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersBillingGetSharedStorageBillingUser(
@@ -26786,6 +27222,7 @@ export async function getUsersBillingGetSharedStorageBillingUser(
 /**
  * List SSH signing keys for a user
  * @request GET :/users/{username}/ssh_signing_keys
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUsersUsersListSshSigningKeysForUser(
@@ -26879,6 +27316,7 @@ export async function getUsersActivityListReposWatchedByUser(
 /**
  * Get all API versions
  * @request GET :/versions
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getVersionsMetaGetAllVersions(
@@ -26899,6 +27337,7 @@ export async function getVersionsMetaGetAllVersions(
 /**
  * Get the Zen of GitHub
  * @request GET :/zen
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getZenMetaGetZen(

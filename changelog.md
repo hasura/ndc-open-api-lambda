@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Set `allowrelaxedtypes` annotation for every function (API) ([#85](https://github.com/hasura/ndc-open-api-lambda/pull/85)) 
+
 - Fix param parsing of `anyOf`, `allOf` and `oneOf` ([#83](https://github.com/hasura/ndc-open-api-lambda/pull/83))
 
 

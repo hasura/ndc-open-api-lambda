@@ -130,6 +130,7 @@ export async function getPetGetPetById(
 /**
  * Updates a pet in the store with form data
  * @request POST :/pet/{petId}
+ * @allowrelaxedtypes
  */
 export async function postPetUpdatePetWithForm(
   /** ID of pet that needs to be updated */
@@ -159,6 +160,7 @@ export async function postPetUpdatePetWithForm(
 /**
  * Deletes a pet
  * @request DELETE :/pet/{petId}
+ * @allowrelaxedtypes
  */
 export async function deletePetDeletePet(
   /** Pet id to delete */
@@ -181,6 +183,7 @@ export async function deletePetDeletePet(
 /**
  * uploads an image
  * @request POST :/pet/{petId}/uploadImage
+ * @allowrelaxedtypes
  */
 export async function postPetUploadFile(
   /** ID of pet to update */
@@ -279,6 +282,7 @@ export async function getStoreGetOrderById(
 /**
  * Delete purchase order by ID
  * @request DELETE :/store/order/{orderId}
+ * @allowrelaxedtypes
  */
 export async function deleteStoreDeleteOrder(
   /** ID of the order that needs to be deleted */
@@ -301,6 +305,7 @@ export async function deleteStoreDeleteOrder(
 /**
  * Create user
  * @request POST :/user
+ * @allowrelaxedtypes
  */
 export async function postUserCreateUser(
   /** Request body */
@@ -323,6 +328,7 @@ export async function postUserCreateUser(
 /**
  * Creates list of users with given input array
  * @request POST :/user/createWithList
+ * @allowrelaxedtypes
  */
 export async function postUserCreateUsersWithListInput(
   /** Request body */
@@ -345,6 +351,7 @@ export async function postUserCreateUsersWithListInput(
 /**
  * Logs user into the system
  * @request GET :/user/login
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserLoginUser(
@@ -372,6 +379,7 @@ export async function getUserLoginUser(
 /**
  * Logs out current logged in user session
  * @request GET :/user/logout
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserLogoutUser(
@@ -392,6 +400,7 @@ export async function getUserLogoutUser(
 /**
  * Get user by user name
  * @request GET :/user/{username}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getUserGetUserByName(
@@ -415,6 +424,7 @@ export async function getUserGetUserByName(
 /**
  * Update user
  * @request PUT :/user/{username}
+ * @allowrelaxedtypes
  */
 export async function putUserUpdateUser(
   /** name that needs to be updated */
@@ -440,6 +450,7 @@ export async function putUserUpdateUser(
 /**
  * Delete user
  * @request DELETE :/user/{username}
+ * @allowrelaxedtypes
  */
 export async function deleteUserDeleteUser(
   /** The name that needs to be deleted */

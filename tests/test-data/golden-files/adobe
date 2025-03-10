@@ -14,6 +14,7 @@ const api = new Api({
 
 /**
  * @request POST :/.cqactions.html
+ * @allowrelaxedtypes
  */
 export async function postCqactionsHtmlPostCqActions(
   query: { authorizableId: string; changelog: string },
@@ -34,6 +35,7 @@ export async function postCqactionsHtmlPostCqActions(
 
 /**
  * @request POST :/apps/system/config/com.adobe.granite.auth.saml.SamlAuthenticationHandler.config
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(
   query: {
@@ -105,6 +107,7 @@ export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(
 
 /**
  * @request POST :/apps/system/config/com.shinesolutions.aem.passwordreset.Activator
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigAemPasswordReset(
   query: {
@@ -128,6 +131,7 @@ export async function postAppsPostConfigAemPasswordReset(
 
 /**
  * @request POST :/apps/system/config/com.shinesolutions.healthcheck.hc.impl.ActiveBundleHealthCheck
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigAemHealthCheckServlet(
   query: { bundlesIgnored?: string[]; bundlesIgnoredTypeHint?: string },
@@ -148,6 +152,7 @@ export async function postAppsPostConfigAemHealthCheckServlet(
 
 /**
  * @request POST :/apps/system/config/org.apache.felix.http
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheFelixJettyBasedHttpService(
   query: {
@@ -189,6 +194,7 @@ export async function postAppsPostConfigApacheFelixJettyBasedHttpService(
 
 /**
  * @request POST :/apps/system/config/org.apache.http.proxyconfigurator.config
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(
   query: {
@@ -223,6 +229,7 @@ export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(
 
 /**
  * @request POST :/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheSlingDavExServlet(
   query: {
@@ -248,6 +255,7 @@ export async function postAppsPostConfigApacheSlingDavExServlet(
 
 /**
  * @request POST :/apps/system/config/org.apache.sling.security.impl.ReferrerFilter
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheSlingReferrerFilter(
   query: {
@@ -277,6 +285,7 @@ export async function postAppsPostConfigApacheSlingReferrerFilter(
 
 /**
  * @request POST :/apps/system/config/org.apache.sling.servlets.get.DefaultGetServlet
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigApacheSlingGetServlet(
   query: {
@@ -306,6 +315,7 @@ export async function postAppsPostConfigApacheSlingGetServlet(
 
 /**
  * @request POST :/apps/system/config/{configNodeName}
+ * @allowrelaxedtypes
  */
 export async function postAppsPostConfigProperty(
   configNodeName: string,
@@ -326,6 +336,7 @@ export async function postAppsPostConfigProperty(
 
 /**
  * @request GET :/bin/querybuilder.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getBinGetQuery(
@@ -352,6 +363,7 @@ export async function getBinGetQuery(
 
 /**
  * @request POST :/bin/querybuilder.json
+ * @allowrelaxedtypes
  */
 export async function postBinPostQuery(
   query: {
@@ -377,6 +389,7 @@ export async function postBinPostQuery(
 
 /**
  * @request POST :/crx/explorer/ui/setpassword.jsp
+ * @allowrelaxedtypes
  */
 export async function postCrxPostSetPassword(
   query: { old: string; plain: string; verify: string },
@@ -397,6 +410,7 @@ export async function postCrxPostSetPassword(
 
 /**
  * @request GET :/crx/packmgr/installstatus.jsp
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrxGetInstallStatus(
@@ -416,6 +430,7 @@ export async function getCrxGetInstallStatus(
 
 /**
  * @request POST :/crx/packmgr/service.jsp
+ * @allowrelaxedtypes
  */
 export async function postCrxPostPackageService(
   query: { cmd: string },
@@ -436,6 +451,7 @@ export async function postCrxPostPackageService(
 
 /**
  * @request POST :/crx/packmgr/service/.json/{path}
+ * @allowrelaxedtypes
  */
 export async function postCrxPostPackageServiceJson(
   path: string,
@@ -472,6 +488,7 @@ export async function postCrxPostPackageServiceJson(
 
 /**
  * @request GET :/crx/packmgr/service/script.html
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrxGetPackageManagerServlet(
@@ -491,6 +508,7 @@ export async function getCrxGetPackageManagerServlet(
 
 /**
  * @request POST :/crx/packmgr/update.jsp
+ * @allowrelaxedtypes
  */
 export async function postCrxPostPackageUpdate(
   query: {
@@ -518,6 +536,7 @@ export async function postCrxPostPackageUpdate(
 
 /**
  * @request GET :/crx/server/crx.default/jcr:root/.1.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getCrxGetCrxdeStatus(
@@ -539,6 +558,7 @@ export async function getCrxGetCrxdeStatus(
 
 /**
  * @request GET :/etc/packages/{group}/{name}-{version}.zip
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetPackage(
@@ -564,6 +584,7 @@ export async function getEtcGetPackage(
 
 /**
  * @request GET :/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetPackageFilter(
@@ -593,6 +614,7 @@ export async function getEtcGetPackageFilter(
 
 /**
  * @request GET :/etc/replication/agents.{runmode}.-1.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetAgents(
@@ -614,6 +636,7 @@ export async function getEtcGetAgents(
 
 /**
  * @request DELETE :/etc/replication/agents.{runmode}/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteEtcDeleteAgent(
   runmode: string,
@@ -636,6 +659,7 @@ export async function deleteEtcDeleteAgent(
 
 /**
  * @request GET :/etc/replication/agents.{runmode}/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetAgent(
@@ -659,6 +683,7 @@ export async function getEtcGetAgent(
 
 /**
  * @request POST :/etc/replication/agents.{runmode}/{name}
+ * @allowrelaxedtypes
  */
 export async function postEtcPostAgent(
   runmode: string,
@@ -734,6 +759,7 @@ export async function postEtcPostAgent(
 
 /**
  * @request POST :/etc/truststore
+ * @allowrelaxedtypes
  */
 export async function postEtcPostTruststorePkcs12(
   /** Request body */
@@ -758,6 +784,7 @@ export async function postEtcPostTruststorePkcs12(
 
 /**
  * @request GET :/etc/truststore/truststore.p12
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getEtcGetTruststore(
@@ -777,6 +804,7 @@ export async function getEtcGetTruststore(
 
 /**
  * @request GET :/libs/granite/core/content/login.html
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getLibsGetLoginPage(
@@ -796,6 +824,7 @@ export async function getLibsGetLoginPage(
 
 /**
  * @request POST :/libs/granite/security/post/authorizables
+ * @allowrelaxedtypes
  */
 export async function postLibsPostAuthorizables(
   query: {
@@ -823,6 +852,7 @@ export async function postLibsPostAuthorizables(
 
 /**
  * @request POST :/libs/granite/security/post/sslSetup.html
+ * @allowrelaxedtypes
  */
 export async function postLibsSslSetup(
   query: {
@@ -858,6 +888,7 @@ export async function postLibsSslSetup(
 
 /**
  * @request POST :/libs/granite/security/post/truststore
+ * @allowrelaxedtypes
  */
 export async function postLibsPostTruststore(
   query: {
@@ -890,6 +921,7 @@ export async function postLibsPostTruststore(
 
 /**
  * @request GET :/libs/granite/security/truststore.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getLibsGetTruststoreInfo(
@@ -909,6 +941,7 @@ export async function getLibsGetTruststoreInfo(
 
 /**
  * @request POST :/libs/replication/treeactivation.html
+ * @allowrelaxedtypes
  */
 export async function postLibsPostTreeActivation(
   query: {
@@ -934,6 +967,7 @@ export async function postLibsPostTreeActivation(
 
 /**
  * @request POST :/system/console/bundles/{name}
+ * @allowrelaxedtypes
  */
 export async function postSystemPostBundle(
   name: string,
@@ -956,6 +990,7 @@ export async function postSystemPostBundle(
 
 /**
  * @request GET :/system/console/bundles/{name}.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSystemGetBundleInfo(
@@ -977,6 +1012,7 @@ export async function getSystemGetBundleInfo(
 
 /**
  * @request GET :/system/console/configMgr
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSystemGetConfigMgr(
@@ -996,6 +1032,7 @@ export async function getSystemGetConfigMgr(
 
 /**
  * @request POST :/system/console/configMgr/com.adobe.granite.auth.saml.SamlAuthenticationHandler
+ * @allowrelaxedtypes
  */
 export async function postSystemPostSamlConfiguration(
   query: {
@@ -1047,6 +1084,7 @@ export async function postSystemPostSamlConfiguration(
 
 /**
  * @request POST :/system/console/jmx/com.adobe.granite:type=Repository/op/{action}
+ * @allowrelaxedtypes
  */
 export async function postSystemPostJmxRepository(
   action: string,
@@ -1069,6 +1107,7 @@ export async function postSystemPostJmxRepository(
 
 /**
  * @request GET :/system/console/status-productinfo.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSystemGetAemProductInfo(
@@ -1088,6 +1127,7 @@ export async function getSystemGetAemProductInfo(
 
 /**
  * @request GET :/system/health
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getSystemGetAemHealthCheck(
@@ -1109,6 +1149,7 @@ export async function getSystemGetAemHealthCheck(
 
 /**
  * @request POST :/{intermediatePath}/{authorizableId}.ks.html
+ * @allowrelaxedtypes
  */
 export async function postIntermediatePathPostAuthorizableKeystore(
   intermediatePath: string,
@@ -1153,6 +1194,7 @@ export async function postIntermediatePathPostAuthorizableKeystore(
 
 /**
  * @request GET :/{intermediatePath}/{authorizableId}.ks.json
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getIntermediatePathGetAuthorizableKeystore(
@@ -1176,6 +1218,7 @@ export async function getIntermediatePathGetAuthorizableKeystore(
 
 /**
  * @request GET :/{intermediatePath}/{authorizableId}/keystore/store.p12
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getIntermediatePathGetKeystore(
@@ -1199,6 +1242,7 @@ export async function getIntermediatePathGetKeystore(
 
 /**
  * @request POST :/{path}/
+ * @allowrelaxedtypes
  */
 export async function postPathPostPath(
   path: string,
@@ -1221,6 +1265,7 @@ export async function postPathPostPath(
 
 /**
  * @request DELETE :/{path}/{name}
+ * @allowrelaxedtypes
  */
 export async function deletePathDeleteNode(
   path: string,
@@ -1243,6 +1288,7 @@ export async function deletePathDeleteNode(
 
 /**
  * @request GET :/{path}/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getPathGetNode(
@@ -1266,6 +1312,7 @@ export async function getPathGetNode(
 
 /**
  * @request POST :/{path}/{name}
+ * @allowrelaxedtypes
  */
 export async function postPathPostNode(
   path: string,
@@ -1296,6 +1343,7 @@ export async function postPathPostNode(
 
 /**
  * @request POST :/{path}/{name}.rw.html
+ * @allowrelaxedtypes
  */
 export async function postPathPostNodeRw(
   path: string,

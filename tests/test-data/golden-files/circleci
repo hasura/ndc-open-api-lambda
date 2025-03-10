@@ -25,6 +25,7 @@ const api = new Api({
 
 /**
  * @request GET :/me
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getMeGetMe(headers?: hasuraSdk.JSONValue): Promise<User> {
@@ -121,6 +122,7 @@ export async function postProjectProjectCreate(
 
 /**
  * @request DELETE :/project/{username}/{project}/build-cache
+ * @allowrelaxedtypes
  */
 export async function deleteProjectBuildCacheDelete(
   username: string,
@@ -195,6 +197,7 @@ export async function postProjectCheckoutKeyCreate(
 
 /**
  * @request DELETE :/project/{username}/{project}/checkout-key/{fingerprint}
+ * @allowrelaxedtypes
  */
 export async function deleteProjectCheckoutKeyDelete(
   username: string,
@@ -249,6 +252,7 @@ export async function getProjectCheckoutKeyDetail2(
 
 /**
  * @request GET :/project/{username}/{project}/envvar
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectEnvvarDetail(
@@ -272,6 +276,7 @@ export async function getProjectEnvvarDetail(
 
 /**
  * @request POST :/project/{username}/{project}/envvar
+ * @allowrelaxedtypes
  */
 export async function postProjectEnvvarCreate(
   username: string,
@@ -294,6 +299,7 @@ export async function postProjectEnvvarCreate(
 
 /**
  * @request DELETE :/project/{username}/{project}/envvar/{name}
+ * @allowrelaxedtypes
  */
 export async function deleteProjectEnvvarDelete(
   username: string,
@@ -322,6 +328,7 @@ export async function deleteProjectEnvvarDelete(
 
 /**
  * @request GET :/project/{username}/{project}/envvar/{name}
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectEnvvarDetail2(
@@ -347,6 +354,7 @@ export async function getProjectEnvvarDetail2(
 
 /**
  * @request POST :/project/{username}/{project}/ssh-key
+ * @allowrelaxedtypes
  */
 export async function postProjectSshKeyCreate(
   username: string,
@@ -443,6 +451,7 @@ export async function getProjectProjectDetail2(
 
 /**
  * @request GET :/project/{username}/{project}/{build_num}/artifacts
+ * @allowrelaxedtypes
  * @readonly
  */
 export async function getProjectArtifactsDetail(
@@ -593,6 +602,7 @@ export async function getRecentBuildsRecentBuildsList(
 
 /**
  * @request POST :/user/heroku-key
+ * @allowrelaxedtypes
  */
 export async function postUserHerokuKeyCreate(
   headers?: hasuraSdk.JSONValue,
