@@ -5,8 +5,6 @@ import * as logger from "../../../util/logger";
 import * as paramGenerator from "../../generator/param-generator";
 import { ParsedSchemaStore } from "./schema-parser";
 
-const cj = require("circular-json");
-
 enum RequestType {
   Get = "get",
   Post = "post",

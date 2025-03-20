@@ -9,8 +9,6 @@ import * as routeTypes from "../parser/open-api/route-types";
 import * as paramGenerator from "./param-generator";
 import * as paramTypes from "../parser/open-api/param-types";
 
-const cj = require("circular-json");
-
 export async function generateCode(
   args: types.GenerateCodeInput,
 ): Promise<types.GeneratedCode[]> {
