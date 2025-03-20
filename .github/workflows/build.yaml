@@ -1,0 +1,81 @@
+name: Build and Scan Docker Image
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Dockerfile'
+      - '.dockerignore'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - '.github/workflows/build.yaml'
+
+jobs:
+  build-docker-image:
+    runs-on: ubuntu-24.04
+    outputs:
+      image_tag: ${{ steps.vars.outputs.commit_hash }}
+      tar_file: ${{ steps.vars.outputs.tar_file }}
+      image_name: ${{ steps.vars.outputs.image_name }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+    
+      - name: Get Commit Hash
+        id: vars
+        run: |
+          commit_hash=$(git rev-parse --short HEAD)
+          tar_file="ndc-openapi-${commit_hash}.tar"
+          image_name="ndc-openapi:${commit_hash}"
+
+          echo "commit_hash: $commit_hash"
+          echo "tar_file: $tar_file"
+          echo "image_name: $image_name"
+
+          echo "commit_hash=$commit_hash" >> $GITHUB_ENV
+          echo "tar_file=$tar_file" >> $GITHUB_ENV
+          echo "image_name=$image_name" >> $GITHUB_ENV
+          echo "::set-output name=commit_hash::$commit_hash"
+          echo "::set-output name=tar_file::$tar_file"
+          echo "::set-output name=image_name::$image_name"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: |
+          docker build -t $image_name .
+
+      - name: Save Docker image as artifact
+        run: |
+          docker save -o $tar_file $image_name
+
+      - name: Upload Docker image artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.tar_file }}
+          path: ${{ env.tar_file }}
+          retention-days: 1
+
+  scan-docker-image-with-trivy:
+    needs: build-docker-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Docker image artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build-docker-image.outputs.tar_file }}
+
+      - name: Load Docker image
+        run: |
+          docker load -i ${{ needs.build-docker-image.outputs.tar_file }}
+
+      - name: Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: '${{ needs.build-docker-image.outputs.image_name }}'
+          format: 'table'
+          exit-code: 1
+          severity: 'CRITICAL,HIGH'
