@@ -4,7 +4,7 @@ COPY ./ /app/
 WORKDIR /app/
 
 RUN npm install
-RUN npm run install-bin
+RUN npm run install-bin-unsafe
 
 RUN mkdir /etc/connector/
 WORKDIR /etc/connector/
