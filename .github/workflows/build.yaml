@@ -84,3 +84,23 @@ jobs:
           cf_client_secret: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
           interval: 10
           retries: 8
+
+  scan-docker-image-with-trivy:
+    needs: build-docker-image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Docker image artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build-docker-image.outputs.tar_file }}
+
+      - name: Load Docker image
+        run: |
+          docker load -i ${{ needs.build-docker-image.outputs.tar_file }}
+      - name: Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: '${{ needs.build-docker-image.outputs.image_name }}'
+          format: 'table'
+          exit-code: 1
+          severity: 'CRITICAL,HIGH'
