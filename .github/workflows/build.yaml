@@ -59,7 +59,7 @@ jobs:
           path: ${{ env.tar_file }}
           retention-days: 1
 
-  scan-docker-image-with-trivy:
+  scan-docker-image-with-gokakashi:
     needs: build-docker-image
     runs-on: ubuntu-latest
     steps:
@@ -72,10 +72,15 @@ jobs:
         run: |
           docker load -i ${{ needs.build-docker-image.outputs.tar_file }}
 
-      - name: Run Trivy vulnerability scan
-        uses: aquasecurity/trivy-action@master
+      - name: Scan docker image with gokakashi
+        uses: shinobistack/gokakashi-action@v0.1.1
         with:
           image-ref: '${{ needs.build-docker-image.outputs.image_name }}'
-          format: 'table'
-          exit-code: 1
-          severity: 'CRITICAL,HIGH'
+          labels: agentKey=${{ github.run_id }}
+          policy: ci-platform
+          server: https://gokakashi-server.hasura-app.io
+          token: ${{ secrets.GOKAKASHI_API_TOKEN }}
+          cf_client_id: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+          cf_client_secret: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
+          interval: 10
+          retries: 8
