@@ -8,8 +8,6 @@ import * as fs from "fs";
 import * as generatorTypes from "../../generator/api-ts-generator";
 import * as logger from "../../../util/logger";
 
-const cj = require("circular-json");
-
 context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
 type RelaxedTypeCheck = {

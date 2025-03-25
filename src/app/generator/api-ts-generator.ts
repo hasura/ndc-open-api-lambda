@@ -77,6 +77,7 @@ export async function generateApiTsCode(
       onCreateComponent: (component) => {
         const anyComponent: any = component;
         generatedSchemaComponents.push(anyComponent as schemaTypes.Schema);
+        return undefined;
       },
 
       onCreateRoute: (routeData) => {
@@ -101,13 +102,14 @@ export async function generateApiTsCode(
           schemaType,
         };
         generatedTypeNames.push(generatedTypeName);
+        return undefined;
       },
 
       onPreParseSchema: (originalSchema, typeName, schemaType) => {
-        originalSchema.description = openApiParser.fixDescription(
-          originalSchema.description,
+        (originalSchema as any).description = openApiParser.fixDescription(
+          (originalSchema as any).description,
         );
-        return originalSchema;
+        return originalSchema as any;
       },
     },
   });

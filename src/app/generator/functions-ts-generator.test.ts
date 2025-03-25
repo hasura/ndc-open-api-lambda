@@ -5,8 +5,6 @@ import { readFileSync, writeFileSync } from "fs";
 import * as generator from ".";
 import { cleanupAndFormat } from "../writer/functions-ts-writer";
 
-const CircularJSON = require("circular-json");
-
 context.getInstance().setLogLevel(context.LogLevel.PANIC);
 
 const tests: {
