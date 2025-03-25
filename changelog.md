@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Update dependencies. Also update ndc-nodejs-lambda to `v1.12.0` ([#87](https://github.com/hasura/ndc-open-api-lambda/pull/87))
+
 ## [[1.5.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.5.1)] 2025-03-10
 
 - Set `allowrelaxedtypes` annotation for every function (API) ([#85](https://github.com/hasura/ndc-open-api-lambda/pull/85)) 
