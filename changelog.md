@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[1.5.2](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.5.2)] 2025-03-25
+
 - Update dependencies. Also update ndc-nodejs-lambda to `v1.12.0` ([#87](https://github.com/hasura/ndc-open-api-lambda/pull/87))
 
 ## [[1.5.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.5.1)] 2025-03-10
