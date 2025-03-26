@@ -16,7 +16,7 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
       (element) => element.fileType === "functions-ts",
     )[0]!;
 
-    apiWriter.writeToFileSystem(apiTsCode);
+    await apiWriter.writeToFileSystem(apiTsCode);
     await functionsWriter.writeToFileSystem(functionsTsCode, apiTsCode);
     await packageJsonWriter.writeToFileSystem();
     tsConfigWriter.writeToFileSystem();

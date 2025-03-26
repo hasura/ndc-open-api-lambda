@@ -66,7 +66,7 @@ const api = new Api({
 
 ## Saving User Changes
 
-When re-introspecting the connector, user changes in `functions.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a statement. `@save` is currently supported for the following statements:
+When re-introspecting the connector, user changes in `functions.ts` or `api.ts` can be preserved by adding an `@save` JS Doc Tag to the documentation comment of a statement. `@save` is only supported for root level statements. `@save` is currently supported for the following statements:
 
 - functions
 - variable/constant declarations
@@ -74,7 +74,7 @@ When re-introspecting the connector, user changes in `functions.ts` can be prese
 - interfaces
 - classes
 
-This will ensure that the statements marked with `@save` are not overwritten and the saved statements will be added if missing in the newly generated `functions.ts`
+This will ensure that the statements marked with `@save` are not overwritten and the saved statements will be added if missing in the newly generated `functions.ts` or the `apt.ts` file
 
 Example
 
