@@ -136,6 +136,36 @@ describe("walk::user-defined-types-tests", async () => {
   }
 });
 
+const importDeclarationsTests: TestCase[] = [{  
+  name: "getImportDeclarationTests",
+  testFile: "./test-data/walk-tests/imports/got",
+  goldenFile: "./test-data/walk-tests/imports/want.json",
+}];
+
+describe("walk::import-declarations-tests", async () => {
+  for (const testCase of importDeclarationsTests) {
+    before(function () {
+      setupTestCase(testCase);
+    });
+
+    it(`${testCase.name}`, function () {
+      const project = new ts.Project();
+      const tsSourceFile = project.addSourceFileAtPath(testCase.testFile);
+
+      const importsMap = tsWalk.getAllImportDeclarationsMap(tsSourceFile);
+      const gotImports: Record<string, string> = {};
+
+      importsMap.forEach((importDeclaration, importName) => {
+        gotImports[importName] = importDeclaration.getText();
+      });
+
+      assert.deepEqual(testCase.goldenFileContents, gotImports);
+
+      // writeFileSync(testCase.goldenFile, JSON.stringify(gotImports, null, 2));
+    });
+  }
+});
+
 function setupTestCase(testCase: TestCase) {
   testCase.testFile = path.resolve(__dirname, testCase.testFile);
   testCase.goldenFile = path.resolve(__dirname, testCase.goldenFile);

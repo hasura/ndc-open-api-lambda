@@ -236,3 +236,47 @@ export function getClassDeclarations(tsSourceFile: ts.SourceFile): ts.ClassDecla
   });
   return allClassDeclarations;
 }
+
+export function getAllImportDecalarations(tsSourceFile: ts.SourceFile): ts.ImportDeclaration[] {
+  const allImportDeclarations: ts.ImportDeclaration[] = [];
+  if (!tsSourceFile) {
+    return allImportDeclarations;
+  }
+  tsSourceFile.forEachChild((node) => {
+    if (ts.Node.isImportDeclaration(node)) {
+      allImportDeclarations.push(node as ts.ImportDeclaration);
+    }
+  });
+
+  return allImportDeclarations;
+}
+
+/**
+ * get all import declarations as a map of imported library to ts.ImportDeclaration
+ */
+export function getAllImportDeclarationsMap(tsSourceFile: ts.SourceFile): Map<string, ts.ImportDeclaration> {
+  const allImportDeclarations = getAllImportDecalarations(tsSourceFile);
+  const allImportDeclarationsMap: Map<string, ts.ImportDeclaration> = new Map();
+  allImportDeclarations.forEach((importDeclaration) => {
+    const importLibrary = getLibraryFromImportDeclaration(importDeclaration)?.getText();
+    if (!importLibrary) {
+      logger.error("unable to get import library from import declaration: ", importDeclaration.getText());
+      return;
+    }
+    allImportDeclarationsMap.set(importLibrary, importDeclaration);
+  });
+  return allImportDeclarationsMap;
+}
+
+function getLibraryFromImportDeclaration(importDeclaration: ts.ImportDeclaration): ts.StringLiteral | undefined {
+  for (let i = importDeclaration.getChildCount() - 1; i >= 0; i--) {
+    // import declarations are of the format: import * as tsMorph from "ts-morph";
+    // the library name is "ts-morph", which is a string literal
+    // the library name is typically the last string literal in the import declaration
+    const child = importDeclaration.getChildAtIndexIfKind(i, ts.SyntaxKind.StringLiteral);
+    if (child) {
+      return child
+    }
+  }
+  return undefined;
+}
