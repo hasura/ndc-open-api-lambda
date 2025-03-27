@@ -133,19 +133,19 @@ The Docker Container will output the generated files at `/etc/connector`. Please
 
 ```bash
 # get command documentation/help
-docker run --rm ghcr.io/hasura/ndc-open-api-lambda:v1.5.2 update -h
+docker run --rm ghcr.io/hasura/ndc-open-api-lambda:v1.6.0 update -h
 
 # run the code generation (using env vars)
-docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ghcr.io/hasura/ndc-open-api-lambda:v1.5.2 update
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ghcr.io/hasura/ndc-open-api-lambda:v1.6.0 update
 
 # run the code generation (using CLI flags)
-docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.5.2 update --open-api ${url to open API document}
+docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.6.0 update --open-api ${url to open API document}
 
 # with baseUrl (using env vars)
-docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_BASE_URL=http://demoapi.com/ ghcr.io/hasura/ndc-open-api-lambda:v1.5.2 update
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_BASE_URL=http://demoapi.com/ ghcr.io/hasura/ndc-open-api-lambda:v1.6.0 update
 
 # with baseUrl (using CLI flags)
-docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.5.2 update --open-api ${url to open API document} --base-url http://demoapi.com/
+docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.6.0 update --open-api ${url to open API document} --base-url http://demoapi.com/
 ```
 
 ## Build and Run

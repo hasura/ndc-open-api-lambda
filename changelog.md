@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [[1.6.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.6.0)] 2025-03-28
+
 - Add support for `@save` in `api.ts` ([#89](https://github.com/hasura/ndc-open-api-lambda/pull/89))
 - Add support for preserving imports from stale files ([#90](https://github.com/hasura/ndc-open-api-lambda/pull/90))
 
@@ -11,10 +13,9 @@
 
 ## [[1.5.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.5.1)] 2025-03-10
 
-- Set `allowrelaxedtypes` annotation for every function (API) ([#85](https://github.com/hasura/ndc-open-api-lambda/pull/85)) 
+- Set `allowrelaxedtypes` annotation for every function (API) ([#85](https://github.com/hasura/ndc-open-api-lambda/pull/85))
 
 - Fix param parsing of `anyOf`, `allOf` and `oneOf` ([#83](https://github.com/hasura/ndc-open-api-lambda/pull/83))
-
 
 ## [[1.5.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.5.0)] 2025-03-07
 
