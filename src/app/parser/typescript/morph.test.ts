@@ -137,6 +137,40 @@ describe("morph::user-defined-types", async () => {
   }
 });
 
+const importDeclarationsTests: TestCase[] = [
+  {
+    name: "Preserve Imports",
+    directory: "./test-data/morph-tests/imports/",
+  }
+];
+
+describe("morph::import-declarations", async () => {
+  for (const testCase of importDeclarationsTests) {
+    before(function () {
+      setupTest(testCase);
+    });
+
+    it(testCase.name, async () => {
+      morph.preserveImportDeclarations(
+        testCase.staleSourceFile!,
+        testCase.freshSourceFile!,
+      );
+
+      const gotStr = await prettier.format(
+        testCase.freshSourceFile?.getFullText()!,
+        {
+          parser: "typescript",
+        },
+      );
+
+      assert.equal(testCase.mergedFileContents, gotStr);
+
+      // uncomment to update merged golden file
+      // fs.writeFileSync(path.resolve(testCase.directory, "merged.ts"), gotStr);
+    });
+  }
+});
+
 function setupTest(testCase: TestCase) {
   testCase.directory = path.resolve(__dirname, testCase.directory);
   const staleProject = new ts.Project();

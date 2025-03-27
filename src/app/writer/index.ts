@@ -16,10 +16,10 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
       (element) => element.fileType === "functions-ts",
     )[0]!;
 
-    await apiWriter.writeToFileSystem(apiTsCode);
-    await functionsWriter.writeToFileSystem(functionsTsCode, apiTsCode);
     await packageJsonWriter.writeToFileSystem();
     tsConfigWriter.writeToFileSystem();
+    await apiWriter.writeToFileSystem(apiTsCode);
+    await functionsWriter.writeToFileSystem(functionsTsCode, apiTsCode);
 
     logger.info("running npm install :: installing dependencies");
     if (process.env.HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH) {

@@ -76,6 +76,8 @@ When re-introspecting the connector, user changes in `functions.ts` or `api.ts` 
 
 This will ensure that the statements marked with `@save` are not overwritten and the saved statements will be added if missing in the newly generated `functions.ts` or the `apt.ts` file
 
+> **NOTE:** `import` statements are always preserved and orgranized for both files, they don't need the `@save` annotation
+
 Example
 
 ```javascript

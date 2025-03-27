@@ -26,5 +26,8 @@ export function preserveUserChanges(
   morph.preserveSavedVariables(staleSourceFile, freshSourceFile);
   morph.preserveSavedFunctions(staleSourceFile, freshSourceFile);
 
+  // imports don't need @save annotation, they are always preserved and organized
+  morph.preserveImportDeclarations(staleSourceFile, freshSourceFile);
+
   return freshSourceFile.getFullText();
 }

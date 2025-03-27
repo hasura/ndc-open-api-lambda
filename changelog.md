@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Add support for `@save` in `api.ts` ([#89](https://github.com/hasura/ndc-open-api-lambda/pull/89))
+- Add support for preserving imports from stale files ([#90](https://github.com/hasura/ndc-open-api-lambda/pull/90))
 
 ## [[1.5.2](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.5.2)] 2025-03-25
 

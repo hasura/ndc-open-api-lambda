@@ -19,16 +19,12 @@ export function fixImports(generatedCodeList: types.GeneratedCode[]) {
     project.createSourceFile(
       generatedCode.filePath,
       generatedCode.fileContent,
-      {
-        overwrite: true,
-      },
+      { overwrite: true },
     );
   }
 
   try {
     for (const sourceFile of project.getSourceFiles()) {
-      sourceFile.fixMissingImports().organizeImports();
-
       // find the source file in the generated code file list
       let curSourceFile =
         generatedCodeList.filter(
@@ -41,12 +37,18 @@ export function fixImports(generatedCodeList: types.GeneratedCode[]) {
             path.basename(sourceFile.getFilePath()),
         )[0];
 
-      if (curSourceFile) {
+      if (curSourceFile) { // if the current file is either functions.ts or api.ts, fix imports and organize them
+        sourceFile.fixMissingImports().organizeImports();
         curSourceFile!.fileContent = sourceFile.getFullText();
       } else {
-        logger.error(
-          `Error while fixing imports: Unable to find the source file for ${sourceFile.getFilePath()}\n\nSkipping import fixing and cleanup for this file`,
-        );
+        if (
+          path.basename(sourceFile.getFilePath()) === "functions.ts" ||
+          path.basename(sourceFile.getFilePath()) === "api.ts"
+        ) { // we only want to show this error if we're unable to find functions.ts or api.ts
+          logger.error(
+            `Error while fixing imports: Unable to find the source file for ${sourceFile.getFilePath()}\n\nSkipping import fixing and cleanup for this file`,
+          );
+        }
       }
     }
   } catch (error) {

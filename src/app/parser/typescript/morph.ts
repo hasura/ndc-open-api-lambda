@@ -65,6 +65,29 @@ export function preserveSavedClasses(
   preserveNode(staleSourceClasses, freshSourceClasses, freshTsSourceFile);
 }
 
+export function preserveImportDeclarations(
+  staleTsSourceFile: tsMorph.SourceFile,
+  freshTsSourceFile: tsMorph.SourceFile,
+) {
+  const staleSourceImports = walk.getAllImportDeclarationsMap(staleTsSourceFile);
+  const freshSourceImports = walk.getAllImportDeclarationsMap(freshTsSourceFile);
+
+  staleSourceImports.forEach((staleNode, staleNodeName) => {
+    const freshNode = freshSourceImports.get(staleNodeName);
+
+    if (freshNode) {
+      // this import statement already exists in the fresh source file
+      // replace it with the stale import statement
+      freshNode.replaceWithText(staleNode.getText());
+    } else {
+      // this import statement does not exist in the fresh source file
+      // add it to the fresh source
+      freshTsSourceFile.insertStatements(0, staleNode.getText());
+    }
+  })
+}
+
+
 /**
  * this function preservers nodes that are marked with `@save` annotation in the stale source file
  * if a saved node is missing in the fresh source file, it will be copied to it
