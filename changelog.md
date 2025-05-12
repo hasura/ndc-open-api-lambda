@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## [[1.6.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.6.1)] 2025-05-12
+
+- Update dependencies. Also update ndc-nodejs-lambda to `v1.14.0` ([#93](https://github.com/hasura/ndc-open-api-lambda/pull/93))
+
 ## [[1.6.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.6.0)] 2025-03-28
 
 - Add support for `@save` in `api.ts` ([#89](https://github.com/hasura/ndc-open-api-lambda/pull/89))
