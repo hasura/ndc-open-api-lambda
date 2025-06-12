@@ -2,6 +2,7 @@ FROM node:20-alpine
 
 # we need to update npm to update cross-spawn to a version higher than or equal to 7.0.6 to avoid a critical vulnerability
 RUN npm update -g npm
+RUN apk add bash jq curl
 
 COPY ./ /app/
 WORKDIR /app/
