@@ -83,20 +83,13 @@ function packageJsonExists(): boolean {
 }
 
 async function getLatestNdcNodeJsLambdaSdkVersion(): Promise<SemVer> {
-  // Temporarily change working directory if needed for npm config resolution (.npmrc file)
-  // we need to do this so that pacote can find the .npmrc file in the mounted directory
-  const originalCwd = process.cwd();
-  process.chdir(context.getInstance().getUserMountedFilePath());
+  const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
+    `@hasura/ndc-lambda-sdk`,
+    {
+      // this is required for custom registry support via .npmrc files (and other npm config options)
+      where: context.getInstance().getUserMountedFilePath(), // Use pacote's where option for npm config resolution (.npmrc file)
+    },
+  );
 
-  try {
-    const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
-      `@hasura/ndc-lambda-sdk`,
-      {}, // Let pacote automatically read npm config from current directory
-    );
-
-    return new SemVer(ndcNodeJsLambdaPackageManifest.version);
-  } finally {
-    // Always restore the original working directory
-    process.chdir(originalCwd);
-  }
+  return new SemVer(ndcNodeJsLambdaPackageManifest.version);
 }
