@@ -3,10 +3,11 @@ import * as fs from "fs";
 import * as context from "../context";
 import * as logger from "../../util/logger";
 import { SemVer } from "semver";
-import NPMCliPackageJson, * as PackageJson from "@npmcli/package-json";
+import NPMCliPackageJson from "@npmcli/package-json";
+import { exit } from "process";
 
 export async function writeToFileSystem() {
-  const ndcNodeJsLambdaSdkVersion = await getNdcNodeJsLambdaSdkVersion();
+  const ndcNodeJsLambdaSdkVersion = await getLatestNdcNodeJsLambdaSdkVersion();
 
   if (packageJsonExists()) {
     logger.info(
@@ -82,29 +83,19 @@ function packageJsonExists(): boolean {
   return fs.existsSync(context.getInstance().getPackageJsonFilePath());
 }
 
-async function getNdcNodeJsLambdaSdkVersion(): Promise<SemVer> {
-  try {
-    await pacote.manifest(
-      `@hasura/ndc-lambda-sdk@${context.getInstance().getNdcNodeJsLambdaSdkVersion()}`,
-      {},
-    );
-
-    return context.getInstance().getNdcNodeJsLambdaSdkVersion();
-  } catch (e) {
-    const latestNdcNodeJsLambdaSdkVersion =
-      getLatestNdcNodeJsLambdaSdkVersion();
-    logger.error(
-      `Error while fetching NDC NodeJS Lambda SDK Version: ${context.getInstance().getNdcNodeJsLambdaSdkVersion()}. Using the latest version (${latestNdcNodeJsLambdaSdkVersion}) instead`,
-    );
-    return latestNdcNodeJsLambdaSdkVersion;
-  }
-}
-
 async function getLatestNdcNodeJsLambdaSdkVersion(): Promise<SemVer> {
-  const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
-    `@hasura/ndc-lambda-sdk`,
-    {},
-  );
+  try {
+    const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
+      `@hasura/ndc-lambda-sdk`,
+      {
+        // this is required for custom registry support via .npmrc file (and other npm config options)
+        where: context.getInstance().getUserMountedFilePath(), // Use pacote's where option for npm config resolution (.npmrc file)
+      },
+    );
 
-  return new SemVer(ndcNodeJsLambdaPackageManifest.version);
+    return new SemVer(ndcNodeJsLambdaPackageManifest.version);
+  } catch (e) {
+    logger.fatal("Error while downloading dependency @hasura/ndc-lambda-sdk", e);
+    exit(1);
+  }
 }
