@@ -39,7 +39,9 @@ const FUNCTIONS_TS_FILE_TEMPLATE_DIRECTORY = "./functions"; // relative path (to
 const FUNCTIONS_TS_FILE_TEMPLATE_FILE_NAME = "functions.ejs"; // name of the template ejs file that renders the functions.ts file
 
 const NODE_VERSION = "node20";
+
 const OPENAPI_SWAGGER_FILE_NAME = "swagger.json";
+const DEFAULT_CONFIGURATION_DIRECTORY = "/etc/connector/";
 
 /**
  * Context is a singleton class that holds the configuration of the app
@@ -208,8 +210,8 @@ export class Context {
     }
 
     // If neither variable is present, log warning and return default path
-    logger.warn("Neither HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH nor HASURA_CONFIGURATION_DIRECTORY environment variables are set. Using default path (/etc/connector/).");
-    return "/etc/connector/";
+    logger.warn(`Neither HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH nor HASURA_CONFIGURATION_DIRECTORY environment variables are set. Using default path (${DEFAULT_CONFIGURATION_DIRECTORY}).`);
+    return DEFAULT_CONFIGURATION_DIRECTORY;
   }
 
   public getDefaultOpenapiDocumentFileUri(): string {
