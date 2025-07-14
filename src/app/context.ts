@@ -29,8 +29,6 @@ export enum LogLevel {
   PANIC = "panic",
 }
 
-const NDC_NODEJS_LAMBDA_SDK_VERSION = "v1.8.0";
-
 const PACKAGE_JSON_FILENAME = "package.json";
 const TS_CONFIG_FILENAME = "tsconfig.json";
 
@@ -180,10 +178,6 @@ export class Context {
 
   public getFunctionsTsFileTemplateFileName(): string {
     return FUNCTIONS_TS_FILE_TEMPLATE_FILE_NAME;
-  }
-
-  public getNdcNodeJsLambdaSdkVersion(): SemVer {
-    return new SemVer(NDC_NODEJS_LAMBDA_SDK_VERSION);
   }
 
   public getNodeVersion(): string {
