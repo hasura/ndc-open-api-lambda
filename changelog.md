@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add support for `.npmrc` ([#96](https://github.com/hasura/ndc-open-api-lambda/pull/96))
+
 ## [[1.6.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.6.1)] 2025-05-12
 
 - Update dependencies. Also update ndc-nodejs-lambda to `v1.14.0` ([#93](https://github.com/hasura/ndc-open-api-lambda/pull/93))
