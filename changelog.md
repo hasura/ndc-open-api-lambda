@@ -2,8 +2,11 @@
 
 ## Unreleased
 
+## [[1.7.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.7.0)] 2025-07-15
+
 - Update NDC NodeJS Lambda to `v1.15.0` ([#98](https://github.com/hasura/ndc-open-api-lambda/pull/98))
 - Add support for `.npmrc` ([#96](https://github.com/hasura/ndc-open-api-lambda/pull/96))
+- Fix user mounted file path detection ([#97](https://github.com/hasura/ndc-open-api-lambda/pull/97))
 
 ## [[1.6.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.6.1)] 2025-05-12
 
