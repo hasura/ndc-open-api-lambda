@@ -84,9 +84,9 @@ function packageJsonExists(): boolean {
 
 async function getLatestNdcNodeJsLambdaSdkVersion(): Promise<SemVer> {
   // Temporarily change working directory if needed for npm config resolution (.npmrc file)
-  // we need to do this so that pacote can find the .npmrc file in the output directory
+  // we need to do this so that pacote can find the .npmrc file in the mounted directory
   const originalCwd = process.cwd();
-  process.chdir(context.getInstance().getOutputDirectory());
+  process.chdir(context.getInstance().getUserMountedFilePath());
 
   try {
     const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
