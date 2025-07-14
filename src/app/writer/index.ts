@@ -6,6 +6,7 @@ import * as types from "../types";
 import * as logger from "../../util/logger";
 import { exit } from "process";
 import { execSync } from "child_process";
+import * as context from "../context";
 
 export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
   try {
@@ -22,12 +23,8 @@ export async function writeToFileSystem(codeToWrite: types.GeneratedCode[]) {
     await functionsWriter.writeToFileSystem(functionsTsCode, apiTsCode);
 
     logger.info("running npm install :: installing dependencies");
-    if (process.env.HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH) {
-      execSync("npm install ", { stdio: "inherit", cwd: process.env.HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH });
-    } else {
-      execSync("npm install ", { stdio: "inherit" });
-    }
-    
+    const mountedPath = context.getInstance().getUserMountedFilePath();
+    execSync("npm install ", { stdio: "inherit", cwd: mountedPath });
     logger.info("all dependencies installed");
   } catch (e) {
     if (e instanceof apiWriter.SimilarFileContentsError) {

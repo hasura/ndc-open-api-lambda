@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import { resolve } from "path";
 import * as logger from "../util/logger";
+import * as context from "../app/context";
 
 export const cmd = new Command("init")
   .description(
@@ -15,13 +16,13 @@ Further reading:
   )
   .option(
     "--open-api <value>",
-    "URI of OAS Document. Defaults to /etc/connector/swagger.json",
-    "/etc/connector/swagger.json",
+    `URI of OAS Document. Defaults to ${context.getInstance().getDefaultOpenapiDocumentFileUri()}`,
+    context.getInstance().getDefaultOpenapiDocumentFileUri(),
   )
   .option(
     "--out-dir <value>",
-    "Output Directory. Defaults to /etc/connector/",
-    "/etc/connector/",
+    `Output Directory. Defaults to ${context.getInstance().getUserMountedFilePath()}`,
+    context.getInstance().getUserMountedFilePath(),
   )
   .action((args, cmd) => {
     main(args.openApi, resolve(args.outDir));
