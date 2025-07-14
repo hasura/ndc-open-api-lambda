@@ -18,14 +18,14 @@ Further reading:
   .addOption(
     new Option(
       "--open-api <uri or filepath>",
-      "URI or file path of OAS Document. Usually ${HASURA_CONFIGURATION_DIRECTORY}/swagger.json",
+      `URI or file path of OAS Document. Defaults to ${context.getInstance().getDefaultOpenapiDocumentFileUri()}`,
     )
-      .default("./swagger.json")
+      .default(context.getInstance().getDefaultOpenapiDocumentFileUri())
       .env("NDC_OAS_DOCUMENT_URI"),
   )
   .addOption(
-    new Option("--output-directory <directory>", "Output Directory")
-      .default("./")
+    new Option("--output-directory <directory>", `Output Directory. Defaults to ${context.getInstance().getUserMountedFilePath()}`)
+      .default(context.getInstance().getUserMountedFilePath())
       .env("HASURA_CONFIGURATION_DIRECTORY"),
   )
   .addOption(

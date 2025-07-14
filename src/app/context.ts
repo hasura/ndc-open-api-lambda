@@ -40,6 +40,9 @@ const FUNCTIONS_TS_FILE_TEMPLATE_FILE_NAME = "functions.ejs"; // name of the tem
 
 const NODE_VERSION = "node20";
 
+const OPENAPI_SWAGGER_FILE_NAME = "swagger.json";
+const DEFAULT_CONFIGURATION_DIRECTORY = "/etc/connector/";
+
 /**
  * Context is a singleton class that holds the configuration of the app
  */
@@ -188,5 +191,30 @@ export class Context {
 
   public getNodeVersion(): string {
     return NODE_VERSION;
+  }
+
+  /**
+   * Use this function to get filepaths for user files relating to the connector
+   * The DDN CLI is responsible for setting the correct env vars
+   * The reason we need this correction is because the filepaths can change on whether the connector is being run via the CLI or via the Docker image
+   */
+  public getUserMountedFilePath(): string {
+    // Check for HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH environment variable
+    if (process.env.HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH) {
+      return process.env.HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH;
+    }
+
+    // Check for HASURA_CONFIGURATION_DIRECTORY environment variable
+    if (process.env.HASURA_CONFIGURATION_DIRECTORY) {
+      return process.env.HASURA_CONFIGURATION_DIRECTORY;
+    }
+
+    // If neither variable is present, log warning and return default path
+    logger.warn(`Neither HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH nor HASURA_CONFIGURATION_DIRECTORY environment variables are set. Using default path (${DEFAULT_CONFIGURATION_DIRECTORY}).`);
+    return DEFAULT_CONFIGURATION_DIRECTORY;
+  }
+
+  public getDefaultOpenapiDocumentFileUri(): string {
+    return path.join(this.getUserMountedFilePath(), OPENAPI_SWAGGER_FILE_NAME);
   }
 }
