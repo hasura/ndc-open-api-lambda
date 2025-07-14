@@ -88,7 +88,7 @@ async function getLatestNdcNodeJsLambdaSdkVersion(): Promise<SemVer> {
     const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
       `@hasura/ndc-lambda-sdk`,
       {
-        // this is required for custom registry support via .npmrc files (and other npm config options)
+        // this is required for custom registry support via .npmrc file (and other npm config options)
         where: context.getInstance().getUserMountedFilePath(), // Use pacote's where option for npm config resolution (.npmrc file)
       },
     );
