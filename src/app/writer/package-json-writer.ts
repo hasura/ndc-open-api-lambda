@@ -4,6 +4,7 @@ import * as context from "../context";
 import * as logger from "../../util/logger";
 import { SemVer } from "semver";
 import NPMCliPackageJson from "@npmcli/package-json";
+import { exit } from "process";
 
 export async function writeToFileSystem() {
   const ndcNodeJsLambdaSdkVersion = await getLatestNdcNodeJsLambdaSdkVersion();
@@ -83,13 +84,18 @@ function packageJsonExists(): boolean {
 }
 
 async function getLatestNdcNodeJsLambdaSdkVersion(): Promise<SemVer> {
-  const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
-    `@hasura/ndc-lambda-sdk`,
-    {
-      // this is required for custom registry support via .npmrc files (and other npm config options)
-      where: context.getInstance().getUserMountedFilePath(), // Use pacote's where option for npm config resolution (.npmrc file)
-    },
-  );
+  try {
+    const ndcNodeJsLambdaPackageManifest = await pacote.manifest(
+      `@hasura/ndc-lambda-sdk`,
+      {
+        // this is required for custom registry support via .npmrc files (and other npm config options)
+        where: context.getInstance().getUserMountedFilePath(), // Use pacote's where option for npm config resolution (.npmrc file)
+      },
+    );
 
-  return new SemVer(ndcNodeJsLambdaPackageManifest.version);
+    return new SemVer(ndcNodeJsLambdaPackageManifest.version);
+  } catch (e) {
+    logger.fatal("Error while downloading dependency @hasura/ndc-lambda-sdk", e);
+    exit(1);
+  }
 }
