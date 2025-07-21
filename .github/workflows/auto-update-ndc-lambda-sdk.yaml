@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      issues: write
     env:
       RUNNING_IN_CI: "true"
     steps:
@@ -36,14 +37,36 @@ jobs:
       - name: Get current version from context.ts
         id: current-version
         run: |
+          echo "Debugging: Looking for version in context.ts"
+          grep -n "NDC_NODEJS_LAMBDA_SDK_VERSION" src/app/context.ts || echo "Pattern not found"
+
           CURRENT_VERSION=$(grep -E "const NDC_NODEJS_LAMBDA_SDK_VERSION = " src/app/context.ts | sed -E 's/.*"([^"]+)".*/\1/')
+
+          if [ -z "$CURRENT_VERSION" ]; then
+            echo "❌ Failed to extract current version from context.ts"
+            echo "File content around the version:"
+            grep -A2 -B2 "NDC_NODEJS_LAMBDA_SDK_VERSION" src/app/context.ts || echo "No matches found"
+            exit 1
+          fi
+
           echo "current-version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
           echo "Current version in context.ts: $CURRENT_VERSION"
 
       - name: Get latest release from GitHub API
         id: latest-release
         run: |
-          LATEST_RELEASE=$(curl -s https://api.github.com/repos/hasura/ndc-nodejs-lambda/releases/latest | jq -r '.tag_name')
+          echo "Debugging: Fetching latest release from GitHub API"
+          API_RESPONSE=$(curl -s https://api.github.com/repos/hasura/ndc-nodejs-lambda/releases/latest)
+          echo "API Response: $API_RESPONSE"
+
+          LATEST_RELEASE=$(echo "$API_RESPONSE" | jq -r '.tag_name')
+
+          if [ -z "$LATEST_RELEASE" ] || [ "$LATEST_RELEASE" = "null" ]; then
+            echo "❌ Failed to extract latest release version"
+            echo "API Response was: $API_RESPONSE"
+            exit 1
+          fi
+
           echo "latest-version=$LATEST_RELEASE" >> $GITHUB_OUTPUT
           echo "Latest release: $LATEST_RELEASE"
 
@@ -52,7 +75,22 @@ jobs:
         run: |
           CURRENT="${{ steps.current-version.outputs.current-version }}"
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
-          
+
+          echo "Debugging version comparison:"
+          echo "CURRENT: '$CURRENT'"
+          echo "LATEST: '$LATEST'"
+
+          # Validate that we have non-empty versions
+          if [ -z "$CURRENT" ] || [ "$CURRENT" = "null" ]; then
+            echo "❌ Current version is empty or null"
+            exit 1
+          fi
+
+          if [ -z "$LATEST" ] || [ "$LATEST" = "null" ]; then
+            echo "❌ Latest version is empty or null"
+            exit 1
+          fi
+
           if [ "$CURRENT" = "$LATEST" ]; then
             echo "needs-update=false" >> $GITHUB_OUTPUT
             echo "✅ Already up to date: $CURRENT"
@@ -67,9 +105,10 @@ jobs:
         run: |
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
           PR_TITLE="chore: update NDC Lambda SDK to $LATEST"
-          
-          # Check if PR already exists
-          EXISTING_PR=$(gh pr list --state open --search "in:title \"update NDC Lambda SDK to $LATEST\"" --json number --jq '.[0].number // empty')
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
+
+          # Check if PR already exists (check by branch name for more accuracy)
+          EXISTING_PR=$(gh pr list --state open --head "$BRANCH_NAME" --json number --jq '.[0].number // empty' 2>/dev/null || echo "")
           
           if [ -n "$EXISTING_PR" ]; then
             echo "pr-exists=true" >> $GITHUB_OUTPUT
@@ -99,38 +138,43 @@ jobs:
         if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
         run: |
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
-          BRANCH_NAME="auto-update/ndc-lambda-sdk-$LATEST"
-          
+          # Use github-ci/ prefix for branch name
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
+
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
+
+          # Delete the branch if it exists remotely to avoid conflicts
+          git push origin --delete "$BRANCH_NAME" 2>/dev/null || echo "Branch doesn't exist remotely, continuing..."
+
           # Create and switch to new branch
           git checkout -b "$BRANCH_NAME"
-          
+
           # Update context.ts
           sed -i "s/const NDC_NODEJS_LAMBDA_SDK_VERSION = \".*\";/const NDC_NODEJS_LAMBDA_SDK_VERSION = \"$LATEST\";/" src/app/context.ts
-          
+
           # Update Dockerfile
           sed -i "s|FROM ghcr.io/hasura/ndc-nodejs-lambda:.*|FROM ghcr.io/hasura/ndc-nodejs-lambda:$LATEST|" connector-definition/.hasura-connector/Dockerfile
-          
+
           # Commit changes
           git add src/app/context.ts connector-definition/.hasura-connector/Dockerfile
           git commit -m "chore: update NDC Lambda SDK to $LATEST"
-          
-          # Push branch
+
+          # Push the new branch
           git push origin "$BRANCH_NAME"
-          
+
           echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
         env:
           GITHUB_OUTPUT: ${{ github.output }}
 
       - name: Create Pull Request
+        id: create-pr
         if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
         run: |
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
           CURRENT="${{ steps.current-version.outputs.current-version }}"
-          BRANCH_NAME="auto-update/ndc-lambda-sdk-$LATEST"
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
           
           # Create PR description
           cat > pr_description.md << EOF
@@ -167,10 +211,81 @@ jobs:
             --head "$BRANCH_NAME" \
             --base main \
             --reviewer m-Bilal \
-            --label "dependencies" \
-            --label "automated"
+            --label "automation"
           
           echo "✅ Pull Request created successfully!"
+
+          # Get the PR URL and number for changelog
+          PR_INFO=$(gh pr view "$BRANCH_NAME" --json url,number)
+          PR_URL=$(echo "$PR_INFO" | jq -r '.url')
+          PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
+          echo "PR URL: $PR_URL"
+          echo "PR Number: $PR_NUMBER"
+          echo "pr-url=$PR_URL" >> $GITHUB_OUTPUT
+          echo "pr-number=$PR_NUMBER" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update changelog
+        if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
+        run: |
+          LATEST="${{ steps.latest-release.outputs.latest-version }}"
+          CURRENT="${{ steps.current-version.outputs.current-version }}"
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
+          PR_URL="${{ steps.create-pr.outputs.pr-url }}"
+          PR_NUMBER="${{ steps.create-pr.outputs.pr-number }}"
+
+          # Get current date
+          CURRENT_DATE=$(date '+%Y-%m-%d')
+
+          # Create changelog entry matching existing format
+          CHANGELOG_ENTRY="- Update NDC NodeJS Lambda to \`$LATEST\` ([#$PR_NUMBER]($PR_URL))"
+
+          # Check if changelog.md exists
+          if [ ! -f "changelog.md" ]; then
+            echo "❌ changelog.md not found"
+            exit 1
+          fi
+
+          # Create a temporary file with the new entry
+          echo "" > temp_entry.txt
+          echo "$CHANGELOG_ENTRY" >> temp_entry.txt
+
+          # Find the "## Unreleased" section and add the entry
+          if grep -q "## Unreleased" changelog.md; then
+            # Find line number of "## Unreleased" and insert after it
+            LINE_NUM=$(grep -n "## Unreleased" changelog.md | head -1 | cut -d: -f1)
+            NEXT_LINE=$((LINE_NUM + 1))
+
+            # Split file and insert entry
+            head -n $LINE_NUM changelog.md > changelog_temp.md
+            cat temp_entry.txt >> changelog_temp.md
+            tail -n +$NEXT_LINE changelog.md >> changelog_temp.md
+            mv changelog_temp.md changelog.md
+            echo "✅ Added changelog entry: $CHANGELOG_ENTRY"
+          else
+            # If no "## Unreleased" section, add it at the top
+            echo "Adding new Unreleased section to changelog.md"
+            echo "# Changelog" > changelog_temp.md
+            echo "" >> changelog_temp.md
+            echo "## Unreleased" >> changelog_temp.md
+            echo "" >> changelog_temp.md
+            echo "$CHANGELOG_ENTRY" >> changelog_temp.md
+            echo "" >> changelog_temp.md
+            cat changelog.md >> changelog_temp.md
+            mv changelog_temp.md changelog.md
+            echo "✅ Created Unreleased section and added entry"
+          fi
+
+          # Clean up temp file
+          rm -f temp_entry.txt
+
+          # Commit and push the changelog update
+          git add changelog.md
+          git commit -m "docs: add changelog entry for NDC Lambda SDK $LATEST update"
+          git push origin "$BRANCH_NAME"
+
+          echo "✅ Changelog updated and pushed to PR branch"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -186,7 +301,22 @@ jobs:
 
       - name: Create failure issue
         if: failure()
+        continue-on-error: true
         run: |
+          # Ensure GitHub CLI is available for issue creation
+          if ! command -v gh &> /dev/null; then
+            echo "❌ GitHub CLI not available - cannot create failure issue"
+            exit 1
+          fi
+
+          # Test GitHub CLI authentication
+          if ! gh auth status &> /dev/null; then
+            echo "❌ GitHub CLI not authenticated - cannot create failure issue"
+            exit 1
+          fi
+
+          echo "✅ GitHub CLI is available and authenticated"
+
           # Get the workflow run URL
           WORKFLOW_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
@@ -223,20 +353,63 @@ jobs:
 
           ---
 
-          @m-Bilal Please investigate this failure and fix the automated workflow.
+          **@m-Bilal** Please investigate this failure and fix the automated workflow.
 
           *This issue was automatically created by the failed Auto Update NDC Lambda SDK workflow.*
           EOF
 
           # Create the issue
-          gh issue create \
+          echo "Creating failure issue..."
+          if gh issue create \
             --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
             --body-file issue_description.md \
             --assignee m-Bilal \
             --label "bug" \
             --label "automation" \
-            --label "high-priority"
+            --label "high-priority"; then
+            echo "✅ Failure issue created successfully!"
+          else
+            echo "❌ Failed to create issue with assignee and labels"
+            echo "Attempting to create issue without assignee..."
+            # Fallback: try without assignee in case user doesn't exist or there are permission issues
+            if gh issue create \
+              --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
+              --body-file issue_description.md \
+              --label "bug" \
+              --label "automation" \
+              --label "high-priority"; then
+              echo "✅ Fallback issue created successfully (please assign manually)"
+            else
+              echo "❌ Failed to create issue with labels, trying without labels..."
+              # Final fallback: try without labels in case they don't exist
+              if gh issue create \
+                --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
+                --body-file issue_description.md \
+                --assignee m-Bilal; then
+                echo "✅ Issue created without labels (please add labels manually)"
+              else
+                echo "❌ Failed to create issue with assignee, trying minimal issue..."
+                # Create a simple fallback description that ensures you're tagged
+                cat > fallback_issue_description.md << EOF
+          🚨 **Auto Update NDC Lambda SDK Workflow Failed**
 
-          echo "✅ Failure issue created successfully!"
+          The automated workflow failed. Please check the logs:
+          https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          **@m-Bilal** Please investigate this failure.
+          EOF
+
+                # Ultimate fallback: just title and simple body with mention
+                if gh issue create \
+                  --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
+                  --body-file fallback_issue_description.md; then
+                  echo "✅ Minimal issue created successfully (please assign and label manually)"
+                else
+                  echo "❌ Failed to create issue entirely"
+                  exit 1
+                fi
+              fi
+            fi
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
