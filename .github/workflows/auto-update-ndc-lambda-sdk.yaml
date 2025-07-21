@@ -1,0 +1,242 @@
+name: Auto Update NDC Lambda SDK
+
+on:
+  schedule:
+    # Run daily at 9 AM UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  check-and-update-ndc-lambda-sdk:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      RUNNING_IN_CI: "true"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Verify GitHub CLI availability
+        run: |
+          if ! command -v gh &> /dev/null; then
+            echo "❌ GitHub CLI is not available in CI environment"
+            echo "This is required for PR creation and management"
+            exit 1
+          fi
+          echo "✅ GitHub CLI is available"
+          gh --version
+
+      - name: Get current version from context.ts
+        id: current-version
+        run: |
+          CURRENT_VERSION=$(grep -E "const NDC_NODEJS_LAMBDA_SDK_VERSION = " src/app/context.ts | sed -E 's/.*"([^"]+)".*/\1/')
+          echo "current-version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          echo "Current version in context.ts: $CURRENT_VERSION"
+
+      - name: Get latest release from GitHub API
+        id: latest-release
+        run: |
+          LATEST_RELEASE=$(curl -s https://api.github.com/repos/hasura/ndc-nodejs-lambda/releases/latest | jq -r '.tag_name')
+          echo "latest-version=$LATEST_RELEASE" >> $GITHUB_OUTPUT
+          echo "Latest release: $LATEST_RELEASE"
+
+      - name: Compare versions
+        id: compare
+        run: |
+          CURRENT="${{ steps.current-version.outputs.current-version }}"
+          LATEST="${{ steps.latest-release.outputs.latest-version }}"
+          
+          if [ "$CURRENT" = "$LATEST" ]; then
+            echo "needs-update=false" >> $GITHUB_OUTPUT
+            echo "✅ Already up to date: $CURRENT"
+          else
+            echo "needs-update=true" >> $GITHUB_OUTPUT
+            echo "🔄 Update needed: $CURRENT -> $LATEST"
+          fi
+
+      - name: Check for existing PR
+        id: check-pr
+        if: steps.compare.outputs.needs-update == 'true'
+        run: |
+          LATEST="${{ steps.latest-release.outputs.latest-version }}"
+          PR_TITLE="chore: update NDC Lambda SDK to $LATEST"
+          
+          # Check if PR already exists
+          EXISTING_PR=$(gh pr list --state open --search "in:title \"update NDC Lambda SDK to $LATEST\"" --json number --jq '.[0].number // empty')
+          
+          if [ -n "$EXISTING_PR" ]; then
+            echo "pr-exists=true" >> $GITHUB_OUTPUT
+            echo "pr-number=$EXISTING_PR" >> $GITHUB_OUTPUT
+            echo "✅ PR already exists: #$EXISTING_PR"
+          else
+            echo "pr-exists=false" >> $GITHUB_OUTPUT
+            echo "🆕 No existing PR found"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get release changelog
+        id: changelog
+        if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
+        run: |
+          LATEST="${{ steps.latest-release.outputs.latest-version }}"
+          
+          # Get release notes from GitHub API
+          RELEASE_NOTES=$(curl -s https://api.github.com/repos/hasura/ndc-nodejs-lambda/releases/latest | jq -r '.body // "No release notes available"')
+          
+          # Save to file to handle multiline content
+          echo "$RELEASE_NOTES" > release_notes.txt
+          echo "Release notes saved to release_notes.txt"
+
+      - name: Create branch and update files
+        if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
+        run: |
+          LATEST="${{ steps.latest-release.outputs.latest-version }}"
+          BRANCH_NAME="auto-update/ndc-lambda-sdk-$LATEST"
+          
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Create and switch to new branch
+          git checkout -b "$BRANCH_NAME"
+          
+          # Update context.ts
+          sed -i "s/const NDC_NODEJS_LAMBDA_SDK_VERSION = \".*\";/const NDC_NODEJS_LAMBDA_SDK_VERSION = \"$LATEST\";/" src/app/context.ts
+          
+          # Update Dockerfile
+          sed -i "s|FROM ghcr.io/hasura/ndc-nodejs-lambda:.*|FROM ghcr.io/hasura/ndc-nodejs-lambda:$LATEST|" connector-definition/.hasura-connector/Dockerfile
+          
+          # Commit changes
+          git add src/app/context.ts connector-definition/.hasura-connector/Dockerfile
+          git commit -m "chore: update NDC Lambda SDK to $LATEST"
+          
+          # Push branch
+          git push origin "$BRANCH_NAME"
+          
+          echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_OUTPUT: ${{ github.output }}
+
+      - name: Create Pull Request
+        if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
+        run: |
+          LATEST="${{ steps.latest-release.outputs.latest-version }}"
+          CURRENT="${{ steps.current-version.outputs.current-version }}"
+          BRANCH_NAME="auto-update/ndc-lambda-sdk-$LATEST"
+          
+          # Create PR description
+          cat > pr_description.md << EOF
+          ## 🚀 Auto Update: NDC Lambda SDK $CURRENT → $LATEST
+          
+          This PR automatically updates the NDC Lambda SDK version from \`$CURRENT\` to \`$LATEST\`.
+          
+          ### 📋 Changes Made
+          - Updated \`NDC_NODEJS_LAMBDA_SDK_VERSION\` in \`src/app/context.ts\`
+          - Updated Docker image version in \`connector-definition/.hasura-connector/Dockerfile\`
+          
+          ### 🔗 Release Information
+          **Release:** [hasura/ndc-nodejs-lambda@$LATEST](https://github.com/hasura/ndc-nodejs-lambda/releases/tag/$LATEST)
+          
+          ### 📝 Changelog
+          \`\`\`
+          $(cat release_notes.txt)
+          \`\`\`
+          
+          ### ✅ Verification
+          Please verify that:
+          - [ ] The version update is correct
+          - [ ] All tests pass
+          - [ ] The changelog looks reasonable
+          
+          ---
+          *This PR was automatically created by the Auto Update NDC Lambda SDK workflow.*
+          EOF
+          
+          # Create the PR
+          gh pr create \
+            --title "chore: update NDC Lambda SDK to $LATEST" \
+            --body-file pr_description.md \
+            --head "$BRANCH_NAME" \
+            --base main \
+            --reviewer m-Bilal \
+            --label "dependencies" \
+            --label "automated"
+          
+          echo "✅ Pull Request created successfully!"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Summary
+        run: |
+          if [ "${{ steps.compare.outputs.needs-update }}" = "false" ]; then
+            echo "✅ NDC Lambda SDK is already up to date"
+          elif [ "${{ steps.check-pr.outputs.pr-exists }}" = "true" ]; then
+            echo "✅ Update needed but PR already exists: #${{ steps.check-pr.outputs.pr-number }}"
+          else
+            echo "✅ Created new PR to update NDC Lambda SDK to ${{ steps.latest-release.outputs.latest-version }}"
+          fi
+
+      - name: Create failure issue
+        if: failure()
+        run: |
+          # Get the workflow run URL
+          WORKFLOW_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          # Create issue description
+          cat > issue_description.md << EOF
+          ## 🚨 Auto Update NDC Lambda SDK Workflow Failed
+
+          The automated workflow to check and update the NDC Lambda SDK has failed.
+
+          ### 📋 Failure Details
+          - **Workflow Run**: [${{ github.run_id }}]($WORKFLOW_URL)
+          - **Repository**: ${{ github.repository }}
+          - **Branch**: ${{ github.ref_name }}
+          - **Triggered by**: ${{ github.event_name }}
+          - **Run Date**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+
+          ### 🔍 What to Check
+          Please review the workflow logs to determine the cause of the failure:
+          1. Check if GitHub CLI is available and authenticated
+          2. Verify API access to hasura/ndc-nodejs-lambda repository
+          3. Check for any network or permission issues
+          4. Review the version comparison logic
+
+          ### 🔗 Links
+          - [Failed Workflow Run]($WORKFLOW_URL)
+          - [Workflow File](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/auto-update-ndc-lambda-sdk.yaml)
+          - [Manual Check Script](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/scripts/check-ndc-lambda-sdk-updates.sh)
+
+          ### 🛠️ Manual Workaround
+          You can manually check for updates by running:
+          \`\`\`bash
+          npm run check-ndc-updates
+          \`\`\`
+
+          ---
+
+          @m-Bilal Please investigate this failure and fix the automated workflow.
+
+          *This issue was automatically created by the failed Auto Update NDC Lambda SDK workflow.*
+          EOF
+
+          # Create the issue
+          gh issue create \
+            --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
+            --body-file issue_description.md \
+            --assignee m-Bilal \
+            --label "bug" \
+            --label "automation" \
+            --label "high-priority"
+
+          echo "✅ Failure issue created successfully!"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
