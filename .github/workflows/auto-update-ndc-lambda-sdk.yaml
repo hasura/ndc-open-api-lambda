@@ -246,28 +246,29 @@ jobs:
 
           # Create the issue
           echo "Creating failure issue..."
-          ISSUE_URL=$(gh issue create \
+          if gh issue create \
             --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
             --body-file issue_description.md \
             --assignee m-Bilal \
             --label "bug" \
             --label "automation" \
-            --label "high-priority" \
-            --json url --jq '.url')
-
-          if [ $? -eq 0 ] && [ -n "$ISSUE_URL" ]; then
-            echo "✅ Failure issue created successfully: $ISSUE_URL"
+            --label "high-priority"; then
+            echo "✅ Failure issue created successfully!"
           else
-            echo "❌ Failed to create issue"
+            echo "❌ Failed to create issue with assignee"
             echo "Attempting to create issue without assignee..."
-            # Fallback: try without assignee in case user doesn't exist
-            gh issue create \
+            # Fallback: try without assignee in case user doesn't exist or there are permission issues
+            if gh issue create \
               --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
               --body-file issue_description.md \
               --label "bug" \
               --label "automation" \
-              --label "high-priority"
-            echo "✅ Fallback issue created (please assign manually)"
+              --label "high-priority"; then
+              echo "✅ Fallback issue created successfully (please assign manually)"
+            else
+              echo "❌ Failed to create issue entirely"
+              exit 1
+            fi
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
