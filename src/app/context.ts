@@ -41,6 +41,8 @@ const NODE_VERSION = "node20";
 const OPENAPI_SWAGGER_FILE_NAME = "swagger.json";
 const DEFAULT_CONFIGURATION_DIRECTORY = "/etc/connector/";
 
+const NDC_NODEJS_LAMBDA_SDK_VERSION = "v1.15.0";
+
 /**
  * Context is a singleton class that holds the configuration of the app
  */
@@ -204,11 +206,17 @@ export class Context {
     }
 
     // If neither variable is present, log warning and return default path
-    logger.warn(`Neither HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH nor HASURA_CONFIGURATION_DIRECTORY environment variables are set. Using default path (${DEFAULT_CONFIGURATION_DIRECTORY}).`);
+    logger.warn(
+      `Neither HASURA_PLUGIN_CONNECTOR_CONTEXT_PATH nor HASURA_CONFIGURATION_DIRECTORY environment variables are set. Using default path (${DEFAULT_CONFIGURATION_DIRECTORY}).`,
+    );
     return DEFAULT_CONFIGURATION_DIRECTORY;
   }
 
   public getDefaultOpenapiDocumentFileUri(): string {
     return path.join(this.getUserMountedFilePath(), OPENAPI_SWAGGER_FILE_NAME);
+  }
+
+  public getNdcNodeJsLambdaSdkVersion(): SemVer {
+    return new SemVer(NDC_NODEJS_LAMBDA_SDK_VERSION);
   }
 }

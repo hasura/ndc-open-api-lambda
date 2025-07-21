@@ -3,6 +3,14 @@ name: Test
 on: pull_request
 
 jobs:
+  verify-ndc-lambda-sdk-version:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify NDC Lambda SDK Version Consistency
+        run: bash tests/scripts/verify-ndc-lambda-sdk-version.sh
+
   unit-tests:
     runs-on: ubuntu-24.04
     steps:
@@ -15,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-     
+
       - name: Compile
         run: npm run compile
 

@@ -12,13 +12,13 @@
     "install-bin-unsafe": "npm run compile && npm install -g .",
     "build": "webpack",
     "test": "mocha --require ts-node/register --timeout 30000 --ui bdd ./src/**/*.test.ts",
+    "check-ndc-updates": "bash scripts/check-ndc-lambda-sdk-updates.sh",
     "format": "npx prettier . --write"
   },
   "dependencies": {
     "@npmcli/package-json": "^5.0.0",
     "commander": "^12.0.0",
     "eta": "^3.2.0",
-    "pacote": "^17.0.5",
     "pino": "^8.19.0",
     "pino-pretty": "^11.0.0",
     "prettier": "^3.2.5",
