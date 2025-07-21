@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      issues: write
     env:
       RUNNING_IN_CI: "true"
     steps:
@@ -186,7 +187,22 @@ jobs:
 
       - name: Create failure issue
         if: failure()
+        continue-on-error: true
         run: |
+          # Ensure GitHub CLI is available for issue creation
+          if ! command -v gh &> /dev/null; then
+            echo "❌ GitHub CLI not available - cannot create failure issue"
+            exit 1
+          fi
+
+          # Test GitHub CLI authentication
+          if ! gh auth status &> /dev/null; then
+            echo "❌ GitHub CLI not authenticated - cannot create failure issue"
+            exit 1
+          fi
+
+          echo "✅ GitHub CLI is available and authenticated"
+
           # Get the workflow run URL
           WORKFLOW_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
@@ -229,14 +245,29 @@ jobs:
           EOF
 
           # Create the issue
-          gh issue create \
+          echo "Creating failure issue..."
+          ISSUE_URL=$(gh issue create \
             --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
             --body-file issue_description.md \
             --assignee m-Bilal \
             --label "bug" \
             --label "automation" \
-            --label "high-priority"
+            --label "high-priority" \
+            --json url --jq '.url')
 
-          echo "✅ Failure issue created successfully!"
+          if [ $? -eq 0 ] && [ -n "$ISSUE_URL" ]; then
+            echo "✅ Failure issue created successfully: $ISSUE_URL"
+          else
+            echo "❌ Failed to create issue"
+            echo "Attempting to create issue without assignee..."
+            # Fallback: try without assignee in case user doesn't exist
+            gh issue create \
+              --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
+              --body-file issue_description.md \
+              --label "bug" \
+              --label "automation" \
+              --label "high-priority"
+            echo "✅ Fallback issue created (please assign manually)"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
