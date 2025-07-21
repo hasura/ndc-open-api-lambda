@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Update NDC NodeJS Lambda to `v1.16.0` ([#108](https://github.com/hasura/ndc-open-api-lambda/pull/108))
+
 - Freeze `ndc-nodejs-lambda` to `v1.15.0` ([#100](https://github.com/hasura/ndc-open-api-lambda/pull/100))
 
 ## [[1.7.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.7.0)] 2025-07-15
