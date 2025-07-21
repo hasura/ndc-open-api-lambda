@@ -239,7 +239,7 @@ jobs:
 
           ---
 
-          @m-Bilal Please investigate this failure and fix the automated workflow.
+          **@m-Bilal** Please investigate this failure and fix the automated workflow.
 
           *This issue was automatically created by the failed Auto Update NDC Lambda SDK workflow.*
           EOF
@@ -255,7 +255,7 @@ jobs:
             --label "high-priority"; then
             echo "✅ Failure issue created successfully!"
           else
-            echo "❌ Failed to create issue with assignee"
+            echo "❌ Failed to create issue with assignee and labels"
             echo "Attempting to create issue without assignee..."
             # Fallback: try without assignee in case user doesn't exist or there are permission issues
             if gh issue create \
@@ -266,8 +266,35 @@ jobs:
               --label "high-priority"; then
               echo "✅ Fallback issue created successfully (please assign manually)"
             else
-              echo "❌ Failed to create issue entirely"
-              exit 1
+              echo "❌ Failed to create issue with labels, trying without labels..."
+              # Final fallback: try without labels in case they don't exist
+              if gh issue create \
+                --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
+                --body-file issue_description.md \
+                --assignee m-Bilal; then
+                echo "✅ Issue created without labels (please add labels manually)"
+              else
+                echo "❌ Failed to create issue with assignee, trying minimal issue..."
+                # Create a simple fallback description that ensures you're tagged
+                cat > fallback_issue_description.md << EOF
+          🚨 **Auto Update NDC Lambda SDK Workflow Failed**
+
+          The automated workflow failed. Please check the logs:
+          https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          **@m-Bilal** Please investigate this failure.
+          EOF
+
+                # Ultimate fallback: just title and simple body with mention
+                if gh issue create \
+                  --title "🚨 Auto Update NDC Lambda SDK Workflow Failed - Run #${{ github.run_id }}" \
+                  --body-file fallback_issue_description.md; then
+                  echo "✅ Minimal issue created successfully (please assign and label manually)"
+                else
+                  echo "❌ Failed to create issue entirely"
+                  exit 1
+                fi
+              fi
             fi
           fi
         env:
