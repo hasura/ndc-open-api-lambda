@@ -68,9 +68,10 @@ jobs:
         run: |
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
           PR_TITLE="chore: update NDC Lambda SDK to $LATEST"
-          
-          # Check if PR already exists
-          EXISTING_PR=$(gh pr list --state open --search "in:title \"update NDC Lambda SDK to $LATEST\"" --json number --jq '.[0].number // empty')
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
+
+          # Check if PR already exists (check by branch name for more accuracy)
+          EXISTING_PR=$(gh pr list --state open --head "$BRANCH_NAME" --json number --jq '.[0].number // empty' 2>/dev/null || echo "")
           
           if [ -n "$EXISTING_PR" ]; then
             echo "pr-exists=true" >> $GITHUB_OUTPUT
@@ -100,28 +101,29 @@ jobs:
         if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
         run: |
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
-          BRANCH_NAME="auto-update/ndc-lambda-sdk-$LATEST"
-          
+          # Use github-ci/ prefix for branch name
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
+
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           # Create and switch to new branch
           git checkout -b "$BRANCH_NAME"
-          
+
           # Update context.ts
           sed -i "s/const NDC_NODEJS_LAMBDA_SDK_VERSION = \".*\";/const NDC_NODEJS_LAMBDA_SDK_VERSION = \"$LATEST\";/" src/app/context.ts
-          
+
           # Update Dockerfile
           sed -i "s|FROM ghcr.io/hasura/ndc-nodejs-lambda:.*|FROM ghcr.io/hasura/ndc-nodejs-lambda:$LATEST|" connector-definition/.hasura-connector/Dockerfile
-          
+
           # Commit changes
           git add src/app/context.ts connector-definition/.hasura-connector/Dockerfile
           git commit -m "chore: update NDC Lambda SDK to $LATEST"
-          
-          # Push branch
-          git push origin "$BRANCH_NAME"
-          
+
+          # Force push branch (in case it exists from a previous run)
+          git push --force-with-lease origin "$BRANCH_NAME"
+
           echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
         env:
           GITHUB_OUTPUT: ${{ github.output }}
@@ -131,7 +133,7 @@ jobs:
         run: |
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
           CURRENT="${{ steps.current-version.outputs.current-version }}"
-          BRANCH_NAME="auto-update/ndc-lambda-sdk-$LATEST"
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
           
           # Create PR description
           cat > pr_description.md << EOF
