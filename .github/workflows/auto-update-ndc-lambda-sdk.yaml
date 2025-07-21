@@ -169,6 +169,7 @@ jobs:
           GITHUB_OUTPUT: ${{ github.output }}
 
       - name: Create Pull Request
+        id: create-pr
         if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
         run: |
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
@@ -213,6 +214,78 @@ jobs:
             --label "automation"
           
           echo "✅ Pull Request created successfully!"
+
+          # Get the PR URL and number for changelog
+          PR_INFO=$(gh pr view "$BRANCH_NAME" --json url,number)
+          PR_URL=$(echo "$PR_INFO" | jq -r '.url')
+          PR_NUMBER=$(echo "$PR_INFO" | jq -r '.number')
+          echo "PR URL: $PR_URL"
+          echo "PR Number: $PR_NUMBER"
+          echo "pr-url=$PR_URL" >> $GITHUB_OUTPUT
+          echo "pr-number=$PR_NUMBER" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update changelog
+        if: steps.compare.outputs.needs-update == 'true' && steps.check-pr.outputs.pr-exists == 'false'
+        run: |
+          LATEST="${{ steps.latest-release.outputs.latest-version }}"
+          CURRENT="${{ steps.current-version.outputs.current-version }}"
+          BRANCH_NAME="github-ci/update-ndc-lambda-sdk-$LATEST"
+          PR_URL="${{ steps.create-pr.outputs.pr-url }}"
+          PR_NUMBER="${{ steps.create-pr.outputs.pr-number }}"
+
+          # Get current date
+          CURRENT_DATE=$(date '+%Y-%m-%d')
+
+          # Create changelog entry matching existing format
+          CHANGELOG_ENTRY="- Update NDC NodeJS Lambda to \`$LATEST\` ([#$PR_NUMBER]($PR_URL))"
+
+          # Check if changelog.md exists
+          if [ ! -f "changelog.md" ]; then
+            echo "❌ changelog.md not found"
+            exit 1
+          fi
+
+          # Create a temporary file with the new entry
+          echo "" > temp_entry.txt
+          echo "$CHANGELOG_ENTRY" >> temp_entry.txt
+
+          # Find the "## Unreleased" section and add the entry
+          if grep -q "## Unreleased" changelog.md; then
+            # Find line number of "## Unreleased" and insert after it
+            LINE_NUM=$(grep -n "## Unreleased" changelog.md | head -1 | cut -d: -f1)
+            NEXT_LINE=$((LINE_NUM + 1))
+
+            # Split file and insert entry
+            head -n $LINE_NUM changelog.md > changelog_temp.md
+            cat temp_entry.txt >> changelog_temp.md
+            tail -n +$NEXT_LINE changelog.md >> changelog_temp.md
+            mv changelog_temp.md changelog.md
+            echo "✅ Added changelog entry: $CHANGELOG_ENTRY"
+          else
+            # If no "## Unreleased" section, add it at the top
+            echo "Adding new Unreleased section to changelog.md"
+            echo "# Changelog" > changelog_temp.md
+            echo "" >> changelog_temp.md
+            echo "## Unreleased" >> changelog_temp.md
+            echo "" >> changelog_temp.md
+            echo "$CHANGELOG_ENTRY" >> changelog_temp.md
+            echo "" >> changelog_temp.md
+            cat changelog.md >> changelog_temp.md
+            mv changelog_temp.md changelog.md
+            echo "✅ Created Unreleased section and added entry"
+          fi
+
+          # Clean up temp file
+          rm -f temp_entry.txt
+
+          # Commit and push the changelog update
+          git add changelog.md
+          git commit -m "docs: add changelog entry for NDC Lambda SDK $LATEST update"
+          git push origin "$BRANCH_NAME"
+
+          echo "✅ Changelog updated and pushed to PR branch"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
