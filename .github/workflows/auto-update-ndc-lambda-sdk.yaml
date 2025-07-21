@@ -37,14 +37,36 @@ jobs:
       - name: Get current version from context.ts
         id: current-version
         run: |
+          echo "Debugging: Looking for version in context.ts"
+          grep -n "NDC_NODEJS_LAMBDA_SDK_VERSION" src/app/context.ts || echo "Pattern not found"
+
           CURRENT_VERSION=$(grep -E "const NDC_NODEJS_LAMBDA_SDK_VERSION = " src/app/context.ts | sed -E 's/.*"([^"]+)".*/\1/')
+
+          if [ -z "$CURRENT_VERSION" ]; then
+            echo "❌ Failed to extract current version from context.ts"
+            echo "File content around the version:"
+            grep -A2 -B2 "NDC_NODEJS_LAMBDA_SDK_VERSION" src/app/context.ts || echo "No matches found"
+            exit 1
+          fi
+
           echo "current-version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
           echo "Current version in context.ts: $CURRENT_VERSION"
 
       - name: Get latest release from GitHub API
         id: latest-release
         run: |
-          LATEST_RELEASE=$(curl -s https://api.github.com/repos/hasura/ndc-nodejs-lambda/releases/latest | jq -r '.tag_name')
+          echo "Debugging: Fetching latest release from GitHub API"
+          API_RESPONSE=$(curl -s https://api.github.com/repos/hasura/ndc-nodejs-lambda/releases/latest)
+          echo "API Response: $API_RESPONSE"
+
+          LATEST_RELEASE=$(echo "$API_RESPONSE" | jq -r '.tag_name')
+
+          if [ -z "$LATEST_RELEASE" ] || [ "$LATEST_RELEASE" = "null" ]; then
+            echo "❌ Failed to extract latest release version"
+            echo "API Response was: $API_RESPONSE"
+            exit 1
+          fi
+
           echo "latest-version=$LATEST_RELEASE" >> $GITHUB_OUTPUT
           echo "Latest release: $LATEST_RELEASE"
 
@@ -53,7 +75,22 @@ jobs:
         run: |
           CURRENT="${{ steps.current-version.outputs.current-version }}"
           LATEST="${{ steps.latest-release.outputs.latest-version }}"
-          
+
+          echo "Debugging version comparison:"
+          echo "CURRENT: '$CURRENT'"
+          echo "LATEST: '$LATEST'"
+
+          # Validate that we have non-empty versions
+          if [ -z "$CURRENT" ] || [ "$CURRENT" = "null" ]; then
+            echo "❌ Current version is empty or null"
+            exit 1
+          fi
+
+          if [ -z "$LATEST" ] || [ "$LATEST" = "null" ]; then
+            echo "❌ Latest version is empty or null"
+            exit 1
+          fi
+
           if [ "$CURRENT" = "$LATEST" ]; then
             echo "needs-update=false" >> $GITHUB_OUTPUT
             echo "✅ Already up to date: $CURRENT"
