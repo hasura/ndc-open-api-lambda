@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Script to verify that NDC_NDOEJS_LAMBDA_SDK_VERSION in context.ts matches
+# Script to verify that NDC_NODEJS_LAMBDA_SDK_VERSION in context.ts matches
 # the version in connector-definition/.hasura-connector/Dockerfile
 
 # We need this check because the nodejs connector version is tightly coupled
@@ -16,7 +16,7 @@ check_version_consistency() {
     echo "=== Checking NDC Lambda SDK version consistency ==="
 
     # Extract version from context.ts
-    local context_version=$(grep -E "const NDC_NDOEJS_LAMBDA_SDK_VERSION = " "$CONTEXT_FILE" | sed -E 's/.*"([^"]+)".*/\1/')
+    local context_version=$(grep -E "const NDC_NODEJS_LAMBDA_SDK_VERSION = " "$CONTEXT_FILE" | sed -E 's/.*"([^"]+)".*/\1/')
 
     # Extract version from Dockerfile
     local dockerfile_version=$(grep -E "FROM ghcr.io/hasura/ndc-nodejs-lambda:" "$DOCKERFILE" | sed -E 's/.*:([^[:space:]]+).*/\1/')
@@ -29,11 +29,11 @@ check_version_consistency() {
         return 0
     else
         echo "❌ Version mismatch detected!"
-        echo "The NDC_NDOEJS_LAMBDA_SDK_VERSION in $CONTEXT_FILE is '$context_version'"
+        echo "The NDC_NODEJS_LAMBDA_SDK_VERSION in $CONTEXT_FILE is '$context_version'"
         echo "The ghcr.io/hasura/ndc-nodejs-lambda version in $DOCKERFILE is '$dockerfile_version'"
         echo ""
         echo "Please update one of the files to ensure the versions match:"
-        echo "  - Update NDC_NDOEJS_LAMBDA_SDK_VERSION in $CONTEXT_FILE, or"
+        echo "  - Update NDC_NODEJS_LAMBDA_SDK_VERSION in $CONTEXT_FILE, or"
         echo "  - Update the FROM statement in $DOCKERFILE"
         return 1
     fi
@@ -45,7 +45,7 @@ check_version_downloadable() {
     echo "=== Checking if npm package version is downloadable ==="
 
     # Extract version from context.ts (remove 'v' prefix if present)
-    local context_version=$(grep -E "const NDC_NDOEJS_LAMBDA_SDK_VERSION = " "$CONTEXT_FILE" | sed -E 's/.*"([^"]+)".*/\1/' | sed 's/^v//')
+    local context_version=$(grep -E "const NDC_NODEJS_LAMBDA_SDK_VERSION = " "$CONTEXT_FILE" | sed -E 's/.*"([^"]+)".*/\1/' | sed 's/^v//')
     local package_name="@hasura/ndc-lambda-sdk"
 
     echo "Checking if npm package exists: $package_name@$context_version"

@@ -41,7 +41,7 @@ const NODE_VERSION = "node20";
 const OPENAPI_SWAGGER_FILE_NAME = "swagger.json";
 const DEFAULT_CONFIGURATION_DIRECTORY = "/etc/connector/";
 
-const NDC_NDOEJS_LAMBDA_SDK_VERSION = "v1.15.0";
+const NDC_NODEJS_LAMBDA_SDK_VERSION = "v1.15.0";
 
 /**
  * Context is a singleton class that holds the configuration of the app
@@ -217,6 +217,6 @@ export class Context {
   }
 
   public getNdcNodeJsLambdaSdkVersion(): SemVer {
-    return new SemVer(NDC_NDOEJS_LAMBDA_SDK_VERSION);
+    return new SemVer(NDC_NODEJS_LAMBDA_SDK_VERSION);
   }
 }
