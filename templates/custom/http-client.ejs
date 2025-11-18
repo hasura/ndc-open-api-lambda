@@ -195,6 +195,11 @@ export class HttpClient<SecurityDataType = unknown> {
             r.data = (null as unknown) as T;
             r.error = (null as unknown) as E;
 
+            if(response.status === 204){
+                r.data = {};
+                return r;
+            }
+
             if (!response.ok && response.status < 500) {
               const data = await r.json()
               r.data = data
