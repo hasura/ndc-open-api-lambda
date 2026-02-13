@@ -14,11 +14,11 @@ supportedEnvironmentVariables:
 commands:
   update:
     type: Dockerized
-    dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v1.7.1
-    commandArgs: [ "update" ]
+    dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v1.8.0
+    commandArgs: ["update"]
 cliPlugin:
   type: Docker
-  dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v1.7.1
+  dockerImage: ghcr.io/hasura/ndc-open-api-lambda:v1.8.0
 dockerComposeWatch:
   # Rebuild the container if a new package restore is required because package[-lock].json changed
   - path: package.json
@@ -51,3 +51,4 @@ nativeToolchainDefinition:
       powershell: |
         $ErrorActionPreference = "Stop"
         & "$env:HASURA_DDN_NATIVE_CONNECTOR_PLUGIN_DIR\ndc-oas-lambda.bat" update
+

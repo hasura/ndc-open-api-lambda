@@ -6,8 +6,8 @@ This connector is published as a Docker Image. The image name is `ghcr.io/hasura
 
 | Environment Variable       | Description                                                                                                                                                                                                          | Required | Example Value                                                                                         |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| NDC_OAS_DOCUMENT_URI       | The URI to your Open API Document. If you're using a file instead of a HTTP link, please ensure that it is named `swagger.json` and is present in the root directory of the volume being mounted to `/etc/connector` | false    | https://raw.githubusercontent.com/swagger-api/swagger-petstore/master/src/main/resources/openapi.yaml |
-| NDC_OAS_BASE_URL           | The base URL of your API.                                                                                                                                                                                            | false    | http://my-awesome-webapp.com/v1/                                                                      |
+| NDC_OAS_DOCUMENT_URI       | The URI to your Open API Document. If you're using a file instead of a HTTP link, please ensure that it is named `swagger.json` and is present in the root directory of the volume being mounted to `/etc/connector` | false    | <https://raw.githubusercontent.com/swagger-api/swagger-petstore/master/src/main/resources/openapi.yaml> |
+| NDC_OAS_BASE_URL           | The base URL of your API.                                                                                                                                                                                            | false    | <http://my-awesome-webapp.com/v1/>                                                                      |
 | NDC_OAS_FILE_OVERWRITE     | A Boolean flag to allow previously generated files to be over-written. Defaults to `false`.                                                                                                                          | false    |                                                                                                       |
 | HASURA_PLUGIN_LOG_LEVEL    | The log level. Possible values: `trace`, `debug`, `info`, `warn`, `error`, `fatal`, `panic`. Defaults to `info`                                                                                                      | false    | info                                                                                                  |
 | NDC_OAS_LAMBDA_PRETTY_LOGS | A Boolean flag to print human readable logs instead of JSON. Defaults to `false`                                                                                                                                     | false    | true                                                                                                  |
@@ -133,19 +133,19 @@ The Docker Container will output the generated files at `/etc/connector`. Please
 
 ```bash
 # get command documentation/help
-docker run --rm ghcr.io/hasura/ndc-open-api-lambda:v1.7.1 update -h
+docker run --rm ghcr.io/hasura/ndc-open-api-lambda:v1.8.0 update -h
 
 # run the code generation (using env vars)
-docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ghcr.io/hasura/ndc-open-api-lambda:v1.7.1 update
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} ghcr.io/hasura/ndc-open-api-lambda:v1.8.0 update
 
 # run the code generation (using CLI flags)
-docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.7.1 update --open-api ${url to open API document}
+docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.8.0 update --open-api ${url to open API document}
 
 # with baseUrl (using env vars)
-docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_BASE_URL=http://demoapi.com/ ghcr.io/hasura/ndc-open-api-lambda:v1.7.1 update
+docker run --rm -v ./:/etc/connector/ -e NDC_OAS_DOCUMENT_URI=${url to open API document} -e NDC_OAS_BASE_URL=http://demoapi.com/ ghcr.io/hasura/ndc-open-api-lambda:v1.8.0 update
 
 # with baseUrl (using CLI flags)
-docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.7.1 update --open-api ${url to open API document} --base-url http://demoapi.com/
+docker run --rm -v ./:/etc/connector/ ghcr.io/hasura/ndc-open-api-lambda:v1.8.0 update --open-api ${url to open API document} --base-url http://demoapi.com/
 ```
 
 ## Build and Run
