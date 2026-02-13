@@ -13,6 +13,10 @@ RUN apt-get update && apt-get install -y \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
+# Update npm to fix vulnerabilities in its bundled dependencies
+# (cross-spawn, glob, tar)
+RUN npm update -g npm
+
 COPY ./ /app/
 WORKDIR /app/
 
