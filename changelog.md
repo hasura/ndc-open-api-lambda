@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [[1.8.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.8.0)] 2026-02-13
+
+- Freeze `ndc-nodejs-lambda` to `v1.20.2`
+- Update dockerfile to ubuntu:24.04
+- Updates for security vulnerabilities
+
 ## [[1.7.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.7.1)] 2025-07-22
 
 - Freeze `ndc-nodejs-lambda` to `v1.15.0` ([#100](https://github.com/hasura/ndc-open-api-lambda/pull/100))
@@ -75,7 +81,7 @@
 
 - Add compatibilty for Windows Powershell and Command Prompt. ([#51](https://github.com/hasura/ndc-open-api-lambda/pull/51))
 
-- Use `hasuraSdk.JSONValue` as the type for `Record<>` and `object`. Also, make APIs that don't have a return type return `hasuraSdk.JSONValue` instead of `void` (39)[https://github.com/hasura/ndc-open-api-lambda/pull/39]
+- Use `hasuraSdk.JSONValue` as the type for `Record<>` and `object`. Also, make APIs that don't have a return type return `hasuraSdk.JSONValue` instead of `void` [39](https://github.com/hasura/ndc-open-api-lambda/pull/39)
 
 ## [[0.1.1](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.1.1)] 2024-06-05
 
@@ -93,7 +99,7 @@
 
 - Added [Prettier Code Formatting](https://prettier.io/docs/en/api.html) to the generated `functions.ts` file
 - Added `--ndc-lambda-sdk` flag and corresponding environment variable `NDC_LAMBDA_SDK_VERSION` that can be used to set the preferred version of NDC Lambda SDK to be used
-- Return api errors that are not code 500 as `hasuraSdk.UnprocessableContent` (#14)[https://github.com/hasura/ndc-open-api-lambda/pull/14]
+- Return api errors that are not code 500 as `hasuraSdk.UnprocessableContent` [#14](https://github.com/hasura/ndc-open-api-lambda/pull/14)
 
 ## [[0.0.1-alpha](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v0.0.1-alpha)] 2024-04-10
 
