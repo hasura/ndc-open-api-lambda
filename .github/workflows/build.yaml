@@ -21,7 +21,7 @@ jobs:
       image_name: ${{ steps.vars.outputs.image_name }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
     
       - name: Get Commit Hash
         id: vars
@@ -42,7 +42,7 @@ jobs:
           echo "::set-output name=image_name::$image_name"
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
 
       - name: Build Docker image
         run: |
@@ -53,7 +53,7 @@ jobs:
           docker save -o $tar_file $image_name
 
       - name: Upload Docker image artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: ${{ env.tar_file }}
           path: ${{ env.tar_file }}
@@ -64,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Docker image artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: ${{ needs.build-docker-image.outputs.tar_file }}
 
@@ -72,7 +72,7 @@ jobs:
         run: |
           docker load -i ${{ needs.build-docker-image.outputs.tar_file }}
       - name: Run Trivy vulnerability scan
-        uses: aquasecurity/trivy-action@v0.35.0
+        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1 # v0.35.0
         with:
           image-ref: '${{ needs.build-docker-image.outputs.image_name }}'
           format: 'table'
