@@ -20,12 +20,13 @@ RUN npm update -g npm
 COPY ./ /app/
 WORKDIR /app/
 
-RUN npm install
+RUN npm ci
 
-# we use unsafe install because we have ignored all the test files to keep the image size small
-# the test files are not needed in the production image
-# therefore, please ensure that the tests are green before building the image
-RUN npm run install-bin-unsafe
+# Compile with dev dependencies present, then prune them so the runtime image
+# only carries production dependencies before the global CLI install.
+RUN npm run compile \
+    && npm prune --omit=dev \
+    && npm install -g .
 
 RUN mkdir /etc/connector/
 WORKDIR /etc/connector/
