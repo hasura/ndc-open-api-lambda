@@ -17,8 +17,15 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Update npm to fix vulnerabilities in its bundled dependencies
-# (cross-spawn, glob, tar)
-RUN npm update -g npm
+# (cross-spawn, glob, tar). npm bundles undici 6.29.0 (CVE-2026-109869);
+# swap in the patched 6.29.1 until npm ships it (same as ndc-nodejs-lambda).
+RUN npm update -g npm \
+    && NPM_UNDICI="$(npm root -g)/npm/node_modules/undici" \
+    && cd /tmp && npm pack undici@6.29.1 --silent \
+    && rm -rf "$NPM_UNDICI" && mkdir "$NPM_UNDICI" \
+    && tar -xzf undici-6.29.1.tgz -C "$NPM_UNDICI" --strip-components=1 \
+    && rm undici-6.29.1.tgz && cd / \
+    && node -e "if (require('$NPM_UNDICI/package.json').version !== '6.29.1') process.exit(1)"
 
 # Patched Node and the OS store are independent trust inputs; retain OS trust selection.
 ENV NODE_OPTIONS="--no-experimental-strip-types --use-openssl-ca" \
