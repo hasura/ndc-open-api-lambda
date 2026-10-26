@@ -41,7 +41,7 @@ export async function generateApiTsCode(
   }
 
   const genenratedApiTsFiles = await swaggerTypescriptApi.generateApi({
-    name: context.getInstance().getApiFileName(),
+    fileName: context.getInstance().getApiFileName(),
     url: openApiUrl,
     input: openApiFilePath,
     output: false, // this denotes that the output should be returned to a variable and not written to a file,
@@ -118,7 +118,7 @@ export async function generateApiTsCode(
     schemaComponents: generatedSchemaComponents,
     routes: generatedRoutes,
     typeNames: generatedTypeNames,
-    files: genenratedApiTsFiles,
+    files: genenratedApiTsFiles as swaggerTypescriptApi.GenerateApiOutput,
   };
 
   return generatedTsCode;

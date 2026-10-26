@@ -150,12 +150,12 @@ export async function deleteProjectBuildCacheDelete(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getProjectCheckoutKeyDetail(
+export async function getProjectCheckoutKeyList(
   username: string,
   project: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Keys> {
-  const result = await api.project.checkoutKeyDetail({
+  const result = await api.project.checkoutKeyList({
     username: username,
     project: project,
     params: {
@@ -229,13 +229,13 @@ export async function deleteProjectCheckoutKeyDelete(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getProjectCheckoutKeyDetail2(
+export async function getProjectCheckoutKeyDetail(
   username: string,
   project: string,
   fingerprint: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Key> {
-  const result = await api.project.checkoutKeyDetail2({
+  const result = await api.project.checkoutKeyDetail({
     username: username,
     project: project,
     fingerprint: fingerprint,
@@ -255,12 +255,12 @@ export async function getProjectCheckoutKeyDetail2(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getProjectEnvvarDetail(
+export async function getProjectEnvvarList(
   username: string,
   project: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Envvars> {
-  const result = await api.project.envvarDetail({
+  const result = await api.project.envvarList({
     username: username,
     project: project,
     params: {
@@ -331,13 +331,13 @@ export async function deleteProjectEnvvarDelete(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getProjectEnvvarDetail2(
+export async function getProjectEnvvarDetail(
   username: string,
   project: string,
   name: string,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Envvar> {
-  const result = await api.project.envvarDetail2({
+  const result = await api.project.envvarDetail({
     username: username,
     project: project,
     name: name,
@@ -454,13 +454,13 @@ export async function getProjectProjectDetail2(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getProjectArtifactsDetail(
+export async function getProjectArtifactsList(
   username: string,
   project: string,
   buildNum: number,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Artifacts> {
-  const result = await api.project.artifactsDetail({
+  const result = await api.project.artifactsList({
     username: username,
     project: project,
     buildNum: buildNum,
@@ -530,13 +530,13 @@ export async function postProjectRetryCreate(
  * @allowrelaxedtypes
  * @readonly
  */
-export async function getProjectTestsDetail(
+export async function getProjectTestsList(
   username: string,
   project: string,
   buildNum: number,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Tests> {
-  const result = await api.project.testsDetail({
+  const result = await api.project.testsList({
     username: username,
     project: project,
     buildNum: buildNum,
