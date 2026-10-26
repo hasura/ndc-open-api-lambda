@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Freeze `ndc-nodejs-lambda` to `v1.20.4` (Node 24, TS SDK 8.5.1)
+- Bump `js-yaml` to 4.3.2, `nanoid` to 3.3.18, `brace-expansion` to 5.0.12 via overrides
+
 ## [[1.8.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.8.0)] 2026-02-13
 
 - Freeze `ndc-nodejs-lambda` to `v1.20.2`
