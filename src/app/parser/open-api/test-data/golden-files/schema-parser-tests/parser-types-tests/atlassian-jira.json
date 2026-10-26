@@ -860,7 +860,7 @@
     "schemaRef": "#/components/schemas/CustomContextVariable",
     "properties": {
       "CustomContextVariable": "object",
-      "BaseCustomContextVariable.type.": "scaler"
+      "__undefined_0": "scaler"
     }
   },
   {
@@ -5903,14 +5903,13 @@
     }
   },
   {
-    "schemaRef": "#/components/schemas/BaseCustomContextVariable",
+    "schemaRef": "#/components/schemas/BaseWorkflowCondition",
     "properties": {
-      "BaseCustomContextVariable": "object",
-      "BaseCustomContextVariable.type.": "scaler"
+      "BaseWorkflowCondition": "primitive"
     }
   },
   {
-    "schemaRef": "#/components/schemas/BaseCustomContextVariableTypeMapping",
+    "schemaRef": "#/components/schemas/BaseWorkflowConditionNodeTypeMapping",
     "properties": {
       "": "object"
     }
@@ -5928,13 +5927,14 @@
     }
   },
   {
-    "schemaRef": "#/components/schemas/BaseWorkflowCondition",
+    "schemaRef": "#/components/schemas/BaseCustomContextVariable",
     "properties": {
-      "BaseWorkflowCondition": "primitive"
+      "BaseCustomContextVariable": "object",
+      "BaseCustomContextVariable.type.": "scaler"
     }
   },
   {
-    "schemaRef": "#/components/schemas/BaseWorkflowConditionNodeTypeMapping",
+    "schemaRef": "#/components/schemas/BaseCustomContextVariableTypeMapping",
     "properties": {
       "": "object"
     }

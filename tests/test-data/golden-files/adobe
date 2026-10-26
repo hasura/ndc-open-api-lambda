@@ -41,8 +41,8 @@ export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(
   query: {
     keyStorePassword?: string;
     "keyStorePassword@TypeHint"?: string;
-    serviceRanking?: number;
-    serviceRankingTypeHint?: string;
+    "service.ranking"?: number;
+    "service.ranking@TypeHint"?: string;
     idpHttpRedirect?: boolean;
     "idpHttpRedirect@TypeHint"?: string;
     createUser?: boolean;
@@ -111,8 +111,8 @@ export async function postAppsPostConfigAdobeGraniteSamlAuthenticationHandler(
  */
 export async function postAppsPostConfigAemPasswordReset(
   query: {
-    pwdresetAuthorizables?: string[];
-    pwdresetAuthorizablesTypeHint?: string;
+    "pwdreset.authorizables"?: string[];
+    "pwdreset.authorizables@TypeHint"?: string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -134,7 +134,7 @@ export async function postAppsPostConfigAemPasswordReset(
  * @allowrelaxedtypes
  */
 export async function postAppsPostConfigAemHealthCheckServlet(
-  query: { bundlesIgnored?: string[]; bundlesIgnoredTypeHint?: string },
+  query: { "bundles.ignored"?: string[]; "bundles.ignored@TypeHint"?: string },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
   const result = await api.apps.postConfigAemHealthCheckServlet({
@@ -156,26 +156,26 @@ export async function postAppsPostConfigAemHealthCheckServlet(
  */
 export async function postAppsPostConfigApacheFelixJettyBasedHttpService(
   query: {
-    orgApacheFelixHttpsNio?: boolean;
-    orgApacheFelixHttpsNioTypeHint?: string;
-    orgApacheFelixHttpsKeystore?: string;
-    orgApacheFelixHttpsKeystoreTypeHint?: string;
-    orgApacheFelixHttpsKeystorePassword?: string;
-    orgApacheFelixHttpsKeystorePasswordTypeHint?: string;
-    orgApacheFelixHttpsKeystoreKey?: string;
-    orgApacheFelixHttpsKeystoreKeyTypeHint?: string;
-    orgApacheFelixHttpsKeystoreKeyPassword?: string;
-    orgApacheFelixHttpsKeystoreKeyPasswordTypeHint?: string;
-    orgApacheFelixHttpsTruststore?: string;
-    orgApacheFelixHttpsTruststoreTypeHint?: string;
-    orgApacheFelixHttpsTruststorePassword?: string;
-    orgApacheFelixHttpsTruststorePasswordTypeHint?: string;
-    orgApacheFelixHttpsClientcertificate?: string;
-    orgApacheFelixHttpsClientcertificateTypeHint?: string;
-    orgApacheFelixHttpsEnable?: boolean;
-    orgApacheFelixHttpsEnableTypeHint?: string;
-    orgOsgiServiceHttpPortSecure?: string;
-    orgOsgiServiceHttpPortSecureTypeHint?: string;
+    "org.apache.felix.https.nio"?: boolean;
+    "org.apache.felix.https.nio@TypeHint"?: string;
+    "org.apache.felix.https.keystore"?: string;
+    "org.apache.felix.https.keystore@TypeHint"?: string;
+    "org.apache.felix.https.keystore.password"?: string;
+    "org.apache.felix.https.keystore.password@TypeHint"?: string;
+    "org.apache.felix.https.keystore.key"?: string;
+    "org.apache.felix.https.keystore.key@TypeHint"?: string;
+    "org.apache.felix.https.keystore.key.password"?: string;
+    "org.apache.felix.https.keystore.key.password@TypeHint"?: string;
+    "org.apache.felix.https.truststore"?: string;
+    "org.apache.felix.https.truststore@TypeHint"?: string;
+    "org.apache.felix.https.truststore.password"?: string;
+    "org.apache.felix.https.truststore.password@TypeHint"?: string;
+    "org.apache.felix.https.clientcertificate"?: string;
+    "org.apache.felix.https.clientcertificate@TypeHint"?: string;
+    "org.apache.felix.https.enable"?: boolean;
+    "org.apache.felix.https.enable@TypeHint"?: string;
+    "org.osgi.service.http.port.secure"?: string;
+    "org.osgi.service.http.port.secure@TypeHint"?: string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -198,18 +198,18 @@ export async function postAppsPostConfigApacheFelixJettyBasedHttpService(
  */
 export async function postAppsPostConfigApacheHttpComponentsProxyConfiguration(
   query: {
-    proxyHost?: string;
-    proxyHostTypeHint?: string;
-    proxyPort?: number;
-    proxyPortTypeHint?: string;
-    proxyExceptions?: string[];
-    proxyExceptionsTypeHint?: string;
-    proxyEnabled?: boolean;
-    proxyEnabledTypeHint?: string;
-    proxyUser?: string;
-    proxyUserTypeHint?: string;
-    proxyPassword?: string;
-    proxyPasswordTypeHint?: string;
+    "proxy.host"?: string;
+    "proxy.host@TypeHint"?: string;
+    "proxy.port"?: number;
+    "proxy.port@TypeHint"?: string;
+    "proxy.exceptions"?: string[];
+    "proxy.exceptions@TypeHint"?: string;
+    "proxy.enabled"?: boolean;
+    "proxy.enabled@TypeHint"?: string;
+    "proxy.user"?: string;
+    "proxy.user@TypeHint"?: string;
+    "proxy.password"?: string;
+    "proxy.password@TypeHint"?: string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -235,8 +235,8 @@ export async function postAppsPostConfigApacheSlingDavExServlet(
   query: {
     alias?: string;
     "alias@TypeHint"?: string;
-    davCreateAbsoluteUri?: boolean;
-    davCreateAbsoluteUriTypeHint?: string;
+    "dav.create-absolute-uri"?: boolean;
+    "dav.create-absolute-uri@TypeHint"?: string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -259,14 +259,14 @@ export async function postAppsPostConfigApacheSlingDavExServlet(
  */
 export async function postAppsPostConfigApacheSlingReferrerFilter(
   query: {
-    allowEmpty?: boolean;
-    allowEmptyTypeHint?: string;
-    allowHosts?: string;
-    allowHostsTypeHint?: string;
-    allowHostsRegexp?: string;
-    allowHostsRegexpTypeHint?: string;
-    filterMethods?: string;
-    filterMethodsTypeHint?: string;
+    "allow.empty"?: boolean;
+    "allow.empty@TypeHint"?: string;
+    "allow.hosts"?: string;
+    "allow.hosts@TypeHint"?: string;
+    "allow.hosts.regexp"?: string;
+    "allow.hosts.regexp@TypeHint"?: string;
+    "filter.methods"?: string;
+    "filter.methods@TypeHint"?: string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -289,14 +289,14 @@ export async function postAppsPostConfigApacheSlingReferrerFilter(
  */
 export async function postAppsPostConfigApacheSlingGetServlet(
   query: {
-    jsonMaximumresults?: string;
-    jsonMaximumresultsTypeHint?: string;
-    enableHtml?: boolean;
-    enableHtmlTypeHint?: string;
-    enableTxt?: boolean;
-    enableTxtTypeHint?: string;
-    enableXml?: boolean;
-    enableXmlTypeHint?: string;
+    "json.maximumresults"?: string;
+    "json.maximumresults@TypeHint"?: string;
+    "enable.html"?: boolean;
+    "enable.html@TypeHint"?: string;
+    "enable.txt"?: boolean;
+    "enable.txt@TypeHint"?: string;
+    "enable.xml"?: boolean;
+    "enable.xml@TypeHint"?: string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -342,9 +342,9 @@ export async function postAppsPostConfigProperty(
 export async function getBinGetQuery(
   query: {
     path: string;
-    pLimit: number;
+    "p.limit": number;
     "1_property": string;
-    "1PropertyValue": string;
+    "1_property.value": string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -368,9 +368,9 @@ export async function getBinGetQuery(
 export async function postBinPostQuery(
   query: {
     path: string;
-    pLimit: number;
+    "p.limit": number;
     "1_property": string;
-    "1PropertyValue": string;
+    "1_property.value": string;
   },
   headers?: hasuraSdk.JSONValue,
 ): Promise<hasuraSdk.JSONValue> {
@@ -1042,7 +1042,7 @@ export async function postSystemPostSamlConfiguration(
     action?: string;
     $location?: string;
     path?: string[];
-    serviceRanking?: number;
+    "service.ranking"?: number;
     idpUrl?: string;
     idpCertAlias?: string;
     idpHttpRedirect?: boolean;

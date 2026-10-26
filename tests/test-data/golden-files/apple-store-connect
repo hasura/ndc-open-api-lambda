@@ -3303,7 +3303,7 @@ export async function getV1AppStoreVersionsRoutingAppCoverageGetToOneRelated(
 export async function getV1AppsGetCollection(
   query: {
     /** filter by attribute 'appStoreVersions.appStoreState' */
-    filterAppStoreVersionsAppStoreState?: (
+    "filter[appStoreVersions.appStoreState]"?: (
       | "DEVELOPER_REMOVED_FROM_SALE"
       | "DEVELOPER_REJECTED"
       | "IN_REVIEW"
@@ -3323,7 +3323,7 @@ export async function getV1AppsGetCollection(
       | "REPLACED_WITH_NEW_VERSION"
     )[];
     /** filter by attribute 'appStoreVersions.platform' */
-    filterAppStoreVersionsPlatform?: ("IOS" | "MAC_OS" | "TV_OS")[];
+    "filter[appStoreVersions.platform]"?: ("IOS" | "MAC_OS" | "TV_OS")[];
     /** filter by attribute 'bundleId' */
     "filter[bundleId]"?: string[];
     /** filter by attribute 'name' */
@@ -7273,7 +7273,7 @@ export async function postV1BuildBetaNotificationsCreateInstance(
 export async function getV1BuildsGetCollection(
   query: {
     /** filter by attribute 'betaAppReviewSubmission.betaReviewState' */
-    filterBetaAppReviewSubmissionBetaReviewState?: (
+    "filter[betaAppReviewSubmission.betaReviewState]"?: (
       | "WAITING_FOR_REVIEW"
       | "IN_REVIEW"
       | "REJECTED"
@@ -7282,9 +7282,9 @@ export async function getV1BuildsGetCollection(
     /** filter by attribute 'expired' */
     "filter[expired]"?: string[];
     /** filter by attribute 'preReleaseVersion.platform' */
-    filterPreReleaseVersionPlatform?: ("IOS" | "MAC_OS" | "TV_OS")[];
+    "filter[preReleaseVersion.platform]"?: ("IOS" | "MAC_OS" | "TV_OS")[];
     /** filter by attribute 'preReleaseVersion.version' */
-    filterPreReleaseVersionVersion?: string[];
+    "filter[preReleaseVersion.version]"?: string[];
     /** filter by attribute 'processingState' */
     "filter[processingState]"?: (
       | "PROCESSING"
@@ -9498,9 +9498,9 @@ export async function getV1InAppPurchasesGetInstance(
 export async function getV1PreReleaseVersionsGetCollection(
   query: {
     /** filter by attribute 'builds.expired' */
-    filterBuildsExpired?: string[];
+    "filter[builds.expired]"?: string[];
     /** filter by attribute 'builds.processingState' */
-    filterBuildsProcessingState?: (
+    "filter[builds.processingState]"?: (
       | "PROCESSING"
       | "FAILED"
       | "INVALID"

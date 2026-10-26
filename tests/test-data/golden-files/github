@@ -1191,21 +1191,22 @@ export async function getGistsGistsGet(
 export async function patchGistsGistsUpdate(
   gistId: string,
   /** Request body */
-  data: null & {
-    /**
-     * The description of the gist.
-     * @example "Example Ruby script"
-     */
-    description?: string;
-    /**
-     * The gist files to be updated, renamed, or deleted. Each `key` must match the current filename
-     * (including extension) of the targeted gist file. For example: `hello.py`.
-     *
-     * To delete a file, set the whole file to null. For example: `hello.py : null`.
-     * @example {"hello.rb":{"content":"blah","filename":"goodbye.rb"}}
-     */
-    files?: hasuraSdk.JSONValue;
-  },
+  data: null &
+    ({
+      /**
+       * The description of the gist.
+       * @example "Example Ruby script"
+       */
+      description?: string;
+      /**
+       * The gist files to be updated, renamed, or deleted. Each `key` must match the current filename
+       * (including extension) of the targeted gist file. For example: `hello.py`.
+       *
+       * To delete a file, set the whole file to null. For example: `hello.py : null`.
+       * @example {"hello.rb":{"content":"blah","filename":"goodbye.rb"}}
+       */
+      files?: hasuraSdk.JSONValue;
+    } | null),
   headers?: hasuraSdk.JSONValue,
 ): Promise<GistSimple> {
   const result = await api.gists.gistsUpdate({
@@ -15659,7 +15660,7 @@ export async function putReposReposCreateOrUpdateEnvironment(
       | null;
     /** The amount of time to delay a job after the job is initially triggered. The time (in minutes) must be an integer between 0 and 43,200 (30 days). */
     wait_timer?: WaitTimer;
-  },
+  } | null,
   headers?: hasuraSdk.JSONValue,
 ): Promise<Environment> {
   const result = await api.repos.reposCreateOrUpdateEnvironment({

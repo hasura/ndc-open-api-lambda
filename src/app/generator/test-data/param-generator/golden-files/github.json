@@ -829,7 +829,7 @@
     "query": {},
     "body": {
       ".data": {
-        "rendered": "\n/** Request body */\n data: ( | null) & ({\n  /**\n   * The description of the gist.\n   * @example \"Example Ruby script\"\n   */\n    description?: string,\n  /**\n   * The gist files to be updated, renamed, or deleted. Each `key` must match the current filename\n   * (including extension) of the targeted gist file. For example: `hello.py`.\n   * \n   * To delete a file, set the whole file to null. For example: `hello.py : null`.\n   * @example {\"hello.rb\":{\"content\":\"blah\",\"filename\":\"goodbye.rb\"}}\n   */\n    files?: hasuraSdk.JSONValue,\n\n}),",
+        "rendered": "\n/** Request body */\n data: ( | null) & ({\n  /**\n   * The description of the gist.\n   * @example \"Example Ruby script\"\n   */\n    description?: string,\n  /**\n   * The gist files to be updated, renamed, or deleted. Each `key` must match the current filename\n   * (including extension) of the targeted gist file. For example: `hello.py`.\n   * \n   * To delete a file, set the whole file to null. For example: `hello.py : null`.\n   * @example {\"hello.rb\":{\"content\":\"blah\",\"filename\":\"goodbye.rb\"}}\n   */\n    files?: hasuraSdk.JSONValue,\n\n} | null),",
         "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {
@@ -14937,7 +14937,7 @@
     "query": {},
     "body": {
       ".data": {
-        "rendered": "\n/** Request body */\n data?: {\n  /** The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`. */\n    deployment_branch_policy?: DeploymentBranchPolicySettings,\n  /** The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed. */\n    reviewers?: ({\n  /**\n   * The id of the user or team who can review the deployment\n   * @example 4532992\n   */\n    id?: number,\n  /** The type of reviewer. */\n    type?: DeploymentReviewerType,\n\n})[] | null,\n  /** The amount of time to delay a job after the job is initially triggered. The time (in minutes) must be an integer between 0 and 43,200 (30 days). */\n    wait_timer?: WaitTimer,\n\n},",
+        "rendered": "\n/** Request body */\n data?: {\n  /** The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`. */\n    deployment_branch_policy?: DeploymentBranchPolicySettings,\n  /** The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed. */\n    reviewers?: ({\n  /**\n   * The id of the user or team who can review the deployment\n   * @example 4532992\n   */\n    id?: number,\n  /** The type of reviewer. */\n    type?: DeploymentReviewerType,\n\n})[] | null,\n  /** The amount of time to delay a job after the job is initially triggered. The time (in minutes) must be an integer between 0 and 43,200 (30 days). */\n    wait_timer?: WaitTimer,\n\n} | null,",
         "requiresRelaxedTypeAnnotation": true
       },
       ".data.__no_name": {

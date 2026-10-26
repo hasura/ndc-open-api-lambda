@@ -30,7 +30,7 @@
   "post__/apps/system/config/com.adobe.granite.auth.saml.SamlAuthenticationHandler.config": {
     "query": {
       ".query": {
-        "rendered": " query: {  keyStorePassword?: string,  \"keyStorePassword@TypeHint\"?: string,  serviceRanking?: number,  serviceRankingTypeHint?: string,  idpHttpRedirect?: boolean,  \"idpHttpRedirect@TypeHint\"?: string,  createUser?: boolean,  \"createUser@TypeHint\"?: string,  defaultRedirectUrl?: string,  \"defaultRedirectUrl@TypeHint\"?: string,  userIDAttribute?: string,  \"userIDAttribute@TypeHint\"?: string,  defaultGroups?: (string)[],  \"defaultGroups@TypeHint\"?: string,  idpCertAlias?: string,  \"idpCertAlias@TypeHint\"?: string,  addGroupMemberships?: boolean,  \"addGroupMemberships@TypeHint\"?: string,  path?: (string)[],  \"path@TypeHint\"?: string,  synchronizeAttributes?: (string)[],  \"synchronizeAttributes@TypeHint\"?: string,  clockTolerance?: number,  \"clockTolerance@TypeHint\"?: string,  groupMembershipAttribute?: string,  \"groupMembershipAttribute@TypeHint\"?: string,  idpUrl?: string,  \"idpUrl@TypeHint\"?: string,  logoutUrl?: string,  \"logoutUrl@TypeHint\"?: string,  serviceProviderEntityId?: string,  \"serviceProviderEntityId@TypeHint\"?: string,  assertionConsumerServiceURL?: string,  \"assertionConsumerServiceURL@TypeHint\"?: string,  handleLogout?: boolean,  \"handleLogout@TypeHint\"?: string,  spPrivateKeyAlias?: string,  \"spPrivateKeyAlias@TypeHint\"?: string,  useEncryption?: boolean,  \"useEncryption@TypeHint\"?: string,  nameIdFormat?: string,  \"nameIdFormat@TypeHint\"?: string,  digestMethod?: string,  \"digestMethod@TypeHint\"?: string,  signatureMethod?: string,  \"signatureMethod@TypeHint\"?: string,  userIntermediatePath?: string,  \"userIntermediatePath@TypeHint\"?: string, },",
+        "rendered": " query: {  keyStorePassword?: string,  \"keyStorePassword@TypeHint\"?: string,  \"service.ranking\"?: number,  \"service.ranking@TypeHint\"?: string,  idpHttpRedirect?: boolean,  \"idpHttpRedirect@TypeHint\"?: string,  createUser?: boolean,  \"createUser@TypeHint\"?: string,  defaultRedirectUrl?: string,  \"defaultRedirectUrl@TypeHint\"?: string,  userIDAttribute?: string,  \"userIDAttribute@TypeHint\"?: string,  defaultGroups?: (string)[],  \"defaultGroups@TypeHint\"?: string,  idpCertAlias?: string,  \"idpCertAlias@TypeHint\"?: string,  addGroupMemberships?: boolean,  \"addGroupMemberships@TypeHint\"?: string,  path?: (string)[],  \"path@TypeHint\"?: string,  synchronizeAttributes?: (string)[],  \"synchronizeAttributes@TypeHint\"?: string,  clockTolerance?: number,  \"clockTolerance@TypeHint\"?: string,  groupMembershipAttribute?: string,  \"groupMembershipAttribute@TypeHint\"?: string,  idpUrl?: string,  \"idpUrl@TypeHint\"?: string,  logoutUrl?: string,  \"logoutUrl@TypeHint\"?: string,  serviceProviderEntityId?: string,  \"serviceProviderEntityId@TypeHint\"?: string,  assertionConsumerServiceURL?: string,  \"assertionConsumerServiceURL@TypeHint\"?: string,  handleLogout?: boolean,  \"handleLogout@TypeHint\"?: string,  spPrivateKeyAlias?: string,  \"spPrivateKeyAlias@TypeHint\"?: string,  useEncryption?: boolean,  \"useEncryption@TypeHint\"?: string,  nameIdFormat?: string,  \"nameIdFormat@TypeHint\"?: string,  digestMethod?: string,  \"digestMethod@TypeHint\"?: string,  signatureMethod?: string,  \"signatureMethod@TypeHint\"?: string,  userIntermediatePath?: string,  \"userIntermediatePath@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.keyStorePassword": {
@@ -41,12 +41,12 @@
         "rendered": " \"keyStorePassword@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.serviceRanking": {
-        "rendered": " serviceRanking?: number,",
+      ".query.service.ranking": {
+        "rendered": " \"service.ranking\"?: number,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.serviceRankingTypeHint": {
-        "rendered": " serviceRankingTypeHint?: string,",
+      ".query.service.ranking@TypeHint": {
+        "rendered": " \"service.ranking@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.idpHttpRedirect": {
@@ -254,19 +254,19 @@
   "post__/apps/system/config/com.shinesolutions.aem.passwordreset.Activator": {
     "query": {
       ".query": {
-        "rendered": " query: {  pwdresetAuthorizables?: (string)[],  pwdresetAuthorizablesTypeHint?: string, },",
+        "rendered": " query: {  \"pwdreset.authorizables\"?: (string)[],  \"pwdreset.authorizables@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.pwdresetAuthorizables": {
-        "rendered": " pwdresetAuthorizables?: (string)[],",
+      ".query.pwdreset.authorizables": {
+        "rendered": " \"pwdreset.authorizables\"?: (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.pwdresetAuthorizables.__no_name": {
+      ".query.pwdreset.authorizables.__no_name": {
         "rendered": "string",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.pwdresetAuthorizablesTypeHint": {
-        "rendered": " pwdresetAuthorizablesTypeHint?: string,",
+      ".query.pwdreset.authorizables@TypeHint": {
+        "rendered": " \"pwdreset.authorizables@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -286,19 +286,19 @@
   "post__/apps/system/config/com.shinesolutions.healthcheck.hc.impl.ActiveBundleHealthCheck": {
     "query": {
       ".query": {
-        "rendered": " query: {  bundlesIgnored?: (string)[],  bundlesIgnoredTypeHint?: string, },",
+        "rendered": " query: {  \"bundles.ignored\"?: (string)[],  \"bundles.ignored@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.bundlesIgnored": {
-        "rendered": " bundlesIgnored?: (string)[],",
+      ".query.bundles.ignored": {
+        "rendered": " \"bundles.ignored\"?: (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.bundlesIgnored.__no_name": {
+      ".query.bundles.ignored.__no_name": {
         "rendered": "string",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.bundlesIgnoredTypeHint": {
-        "rendered": " bundlesIgnoredTypeHint?: string,",
+      ".query.bundles.ignored@TypeHint": {
+        "rendered": " \"bundles.ignored@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -318,87 +318,87 @@
   "post__/apps/system/config/org.apache.felix.http": {
     "query": {
       ".query": {
-        "rendered": " query: {  orgApacheFelixHttpsNio?: boolean,  orgApacheFelixHttpsNioTypeHint?: string,  orgApacheFelixHttpsKeystore?: string,  orgApacheFelixHttpsKeystoreTypeHint?: string,  orgApacheFelixHttpsKeystorePassword?: string,  orgApacheFelixHttpsKeystorePasswordTypeHint?: string,  orgApacheFelixHttpsKeystoreKey?: string,  orgApacheFelixHttpsKeystoreKeyTypeHint?: string,  orgApacheFelixHttpsKeystoreKeyPassword?: string,  orgApacheFelixHttpsKeystoreKeyPasswordTypeHint?: string,  orgApacheFelixHttpsTruststore?: string,  orgApacheFelixHttpsTruststoreTypeHint?: string,  orgApacheFelixHttpsTruststorePassword?: string,  orgApacheFelixHttpsTruststorePasswordTypeHint?: string,  orgApacheFelixHttpsClientcertificate?: string,  orgApacheFelixHttpsClientcertificateTypeHint?: string,  orgApacheFelixHttpsEnable?: boolean,  orgApacheFelixHttpsEnableTypeHint?: string,  orgOsgiServiceHttpPortSecure?: string,  orgOsgiServiceHttpPortSecureTypeHint?: string, },",
+        "rendered": " query: {  \"org.apache.felix.https.nio\"?: boolean,  \"org.apache.felix.https.nio@TypeHint\"?: string,  \"org.apache.felix.https.keystore\"?: string,  \"org.apache.felix.https.keystore@TypeHint\"?: string,  \"org.apache.felix.https.keystore.password\"?: string,  \"org.apache.felix.https.keystore.password@TypeHint\"?: string,  \"org.apache.felix.https.keystore.key\"?: string,  \"org.apache.felix.https.keystore.key@TypeHint\"?: string,  \"org.apache.felix.https.keystore.key.password\"?: string,  \"org.apache.felix.https.keystore.key.password@TypeHint\"?: string,  \"org.apache.felix.https.truststore\"?: string,  \"org.apache.felix.https.truststore@TypeHint\"?: string,  \"org.apache.felix.https.truststore.password\"?: string,  \"org.apache.felix.https.truststore.password@TypeHint\"?: string,  \"org.apache.felix.https.clientcertificate\"?: string,  \"org.apache.felix.https.clientcertificate@TypeHint\"?: string,  \"org.apache.felix.https.enable\"?: boolean,  \"org.apache.felix.https.enable@TypeHint\"?: string,  \"org.osgi.service.http.port.secure\"?: string,  \"org.osgi.service.http.port.secure@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsNio": {
-        "rendered": " orgApacheFelixHttpsNio?: boolean,",
+      ".query.org.apache.felix.https.nio": {
+        "rendered": " \"org.apache.felix.https.nio\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsNioTypeHint": {
-        "rendered": " orgApacheFelixHttpsNioTypeHint?: string,",
+      ".query.org.apache.felix.https.nio@TypeHint": {
+        "rendered": " \"org.apache.felix.https.nio@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystore": {
-        "rendered": " orgApacheFelixHttpsKeystore?: string,",
+      ".query.org.apache.felix.https.keystore": {
+        "rendered": " \"org.apache.felix.https.keystore\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystoreTypeHint": {
-        "rendered": " orgApacheFelixHttpsKeystoreTypeHint?: string,",
+      ".query.org.apache.felix.https.keystore@TypeHint": {
+        "rendered": " \"org.apache.felix.https.keystore@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystorePassword": {
-        "rendered": " orgApacheFelixHttpsKeystorePassword?: string,",
+      ".query.org.apache.felix.https.keystore.password": {
+        "rendered": " \"org.apache.felix.https.keystore.password\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystorePasswordTypeHint": {
-        "rendered": " orgApacheFelixHttpsKeystorePasswordTypeHint?: string,",
+      ".query.org.apache.felix.https.keystore.password@TypeHint": {
+        "rendered": " \"org.apache.felix.https.keystore.password@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystoreKey": {
-        "rendered": " orgApacheFelixHttpsKeystoreKey?: string,",
+      ".query.org.apache.felix.https.keystore.key": {
+        "rendered": " \"org.apache.felix.https.keystore.key\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystoreKeyTypeHint": {
-        "rendered": " orgApacheFelixHttpsKeystoreKeyTypeHint?: string,",
+      ".query.org.apache.felix.https.keystore.key@TypeHint": {
+        "rendered": " \"org.apache.felix.https.keystore.key@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystoreKeyPassword": {
-        "rendered": " orgApacheFelixHttpsKeystoreKeyPassword?: string,",
+      ".query.org.apache.felix.https.keystore.key.password": {
+        "rendered": " \"org.apache.felix.https.keystore.key.password\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsKeystoreKeyPasswordTypeHint": {
-        "rendered": " orgApacheFelixHttpsKeystoreKeyPasswordTypeHint?: string,",
+      ".query.org.apache.felix.https.keystore.key.password@TypeHint": {
+        "rendered": " \"org.apache.felix.https.keystore.key.password@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsTruststore": {
-        "rendered": " orgApacheFelixHttpsTruststore?: string,",
+      ".query.org.apache.felix.https.truststore": {
+        "rendered": " \"org.apache.felix.https.truststore\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsTruststoreTypeHint": {
-        "rendered": " orgApacheFelixHttpsTruststoreTypeHint?: string,",
+      ".query.org.apache.felix.https.truststore@TypeHint": {
+        "rendered": " \"org.apache.felix.https.truststore@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsTruststorePassword": {
-        "rendered": " orgApacheFelixHttpsTruststorePassword?: string,",
+      ".query.org.apache.felix.https.truststore.password": {
+        "rendered": " \"org.apache.felix.https.truststore.password\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsTruststorePasswordTypeHint": {
-        "rendered": " orgApacheFelixHttpsTruststorePasswordTypeHint?: string,",
+      ".query.org.apache.felix.https.truststore.password@TypeHint": {
+        "rendered": " \"org.apache.felix.https.truststore.password@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsClientcertificate": {
-        "rendered": " orgApacheFelixHttpsClientcertificate?: string,",
+      ".query.org.apache.felix.https.clientcertificate": {
+        "rendered": " \"org.apache.felix.https.clientcertificate\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsClientcertificateTypeHint": {
-        "rendered": " orgApacheFelixHttpsClientcertificateTypeHint?: string,",
+      ".query.org.apache.felix.https.clientcertificate@TypeHint": {
+        "rendered": " \"org.apache.felix.https.clientcertificate@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsEnable": {
-        "rendered": " orgApacheFelixHttpsEnable?: boolean,",
+      ".query.org.apache.felix.https.enable": {
+        "rendered": " \"org.apache.felix.https.enable\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgApacheFelixHttpsEnableTypeHint": {
-        "rendered": " orgApacheFelixHttpsEnableTypeHint?: string,",
+      ".query.org.apache.felix.https.enable@TypeHint": {
+        "rendered": " \"org.apache.felix.https.enable@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgOsgiServiceHttpPortSecure": {
-        "rendered": " orgOsgiServiceHttpPortSecure?: string,",
+      ".query.org.osgi.service.http.port.secure": {
+        "rendered": " \"org.osgi.service.http.port.secure\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.orgOsgiServiceHttpPortSecureTypeHint": {
-        "rendered": " orgOsgiServiceHttpPortSecureTypeHint?: string,",
+      ".query.org.osgi.service.http.port.secure@TypeHint": {
+        "rendered": " \"org.osgi.service.http.port.secure@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -418,59 +418,59 @@
   "post__/apps/system/config/org.apache.http.proxyconfigurator.config": {
     "query": {
       ".query": {
-        "rendered": " query: {  proxyHost?: string,  proxyHostTypeHint?: string,  proxyPort?: number,  proxyPortTypeHint?: string,  proxyExceptions?: (string)[],  proxyExceptionsTypeHint?: string,  proxyEnabled?: boolean,  proxyEnabledTypeHint?: string,  proxyUser?: string,  proxyUserTypeHint?: string,  proxyPassword?: string,  proxyPasswordTypeHint?: string, },",
+        "rendered": " query: {  \"proxy.host\"?: string,  \"proxy.host@TypeHint\"?: string,  \"proxy.port\"?: number,  \"proxy.port@TypeHint\"?: string,  \"proxy.exceptions\"?: (string)[],  \"proxy.exceptions@TypeHint\"?: string,  \"proxy.enabled\"?: boolean,  \"proxy.enabled@TypeHint\"?: string,  \"proxy.user\"?: string,  \"proxy.user@TypeHint\"?: string,  \"proxy.password\"?: string,  \"proxy.password@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyHost": {
-        "rendered": " proxyHost?: string,",
+      ".query.proxy.host": {
+        "rendered": " \"proxy.host\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyHostTypeHint": {
-        "rendered": " proxyHostTypeHint?: string,",
+      ".query.proxy.host@TypeHint": {
+        "rendered": " \"proxy.host@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyPort": {
-        "rendered": " proxyPort?: number,",
+      ".query.proxy.port": {
+        "rendered": " \"proxy.port\"?: number,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyPortTypeHint": {
-        "rendered": " proxyPortTypeHint?: string,",
+      ".query.proxy.port@TypeHint": {
+        "rendered": " \"proxy.port@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyExceptions": {
-        "rendered": " proxyExceptions?: (string)[],",
+      ".query.proxy.exceptions": {
+        "rendered": " \"proxy.exceptions\"?: (string)[],",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyExceptions.__no_name": {
+      ".query.proxy.exceptions.__no_name": {
         "rendered": "string",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyExceptionsTypeHint": {
-        "rendered": " proxyExceptionsTypeHint?: string,",
+      ".query.proxy.exceptions@TypeHint": {
+        "rendered": " \"proxy.exceptions@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyEnabled": {
-        "rendered": " proxyEnabled?: boolean,",
+      ".query.proxy.enabled": {
+        "rendered": " \"proxy.enabled\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyEnabledTypeHint": {
-        "rendered": " proxyEnabledTypeHint?: string,",
+      ".query.proxy.enabled@TypeHint": {
+        "rendered": " \"proxy.enabled@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyUser": {
-        "rendered": " proxyUser?: string,",
+      ".query.proxy.user": {
+        "rendered": " \"proxy.user\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyUserTypeHint": {
-        "rendered": " proxyUserTypeHint?: string,",
+      ".query.proxy.user@TypeHint": {
+        "rendered": " \"proxy.user@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyPassword": {
-        "rendered": " proxyPassword?: string,",
+      ".query.proxy.password": {
+        "rendered": " \"proxy.password\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.proxyPasswordTypeHint": {
-        "rendered": " proxyPasswordTypeHint?: string,",
+      ".query.proxy.password@TypeHint": {
+        "rendered": " \"proxy.password@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -490,7 +490,7 @@
   "post__/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet": {
     "query": {
       ".query": {
-        "rendered": " query: {  alias?: string,  \"alias@TypeHint\"?: string,  davCreateAbsoluteUri?: boolean,  davCreateAbsoluteUriTypeHint?: string, },",
+        "rendered": " query: {  alias?: string,  \"alias@TypeHint\"?: string,  \"dav.create-absolute-uri\"?: boolean,  \"dav.create-absolute-uri@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.alias": {
@@ -501,12 +501,12 @@
         "rendered": " \"alias@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.davCreateAbsoluteUri": {
-        "rendered": " davCreateAbsoluteUri?: boolean,",
+      ".query.dav.create-absolute-uri": {
+        "rendered": " \"dav.create-absolute-uri\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.davCreateAbsoluteUriTypeHint": {
-        "rendered": " davCreateAbsoluteUriTypeHint?: string,",
+      ".query.dav.create-absolute-uri@TypeHint": {
+        "rendered": " \"dav.create-absolute-uri@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -526,39 +526,39 @@
   "post__/apps/system/config/org.apache.sling.security.impl.ReferrerFilter": {
     "query": {
       ".query": {
-        "rendered": " query: {  allowEmpty?: boolean,  allowEmptyTypeHint?: string,  allowHosts?: string,  allowHostsTypeHint?: string,  allowHostsRegexp?: string,  allowHostsRegexpTypeHint?: string,  filterMethods?: string,  filterMethodsTypeHint?: string, },",
+        "rendered": " query: {  \"allow.empty\"?: boolean,  \"allow.empty@TypeHint\"?: string,  \"allow.hosts\"?: string,  \"allow.hosts@TypeHint\"?: string,  \"allow.hosts.regexp\"?: string,  \"allow.hosts.regexp@TypeHint\"?: string,  \"filter.methods\"?: string,  \"filter.methods@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.allowEmpty": {
-        "rendered": " allowEmpty?: boolean,",
+      ".query.allow.empty": {
+        "rendered": " \"allow.empty\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.allowEmptyTypeHint": {
-        "rendered": " allowEmptyTypeHint?: string,",
+      ".query.allow.empty@TypeHint": {
+        "rendered": " \"allow.empty@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.allowHosts": {
-        "rendered": " allowHosts?: string,",
+      ".query.allow.hosts": {
+        "rendered": " \"allow.hosts\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.allowHostsTypeHint": {
-        "rendered": " allowHostsTypeHint?: string,",
+      ".query.allow.hosts@TypeHint": {
+        "rendered": " \"allow.hosts@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.allowHostsRegexp": {
-        "rendered": " allowHostsRegexp?: string,",
+      ".query.allow.hosts.regexp": {
+        "rendered": " \"allow.hosts.regexp\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.allowHostsRegexpTypeHint": {
-        "rendered": " allowHostsRegexpTypeHint?: string,",
+      ".query.allow.hosts.regexp@TypeHint": {
+        "rendered": " \"allow.hosts.regexp@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.filterMethods": {
-        "rendered": " filterMethods?: string,",
+      ".query.filter.methods": {
+        "rendered": " \"filter.methods\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.filterMethodsTypeHint": {
-        "rendered": " filterMethodsTypeHint?: string,",
+      ".query.filter.methods@TypeHint": {
+        "rendered": " \"filter.methods@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -578,39 +578,39 @@
   "post__/apps/system/config/org.apache.sling.servlets.get.DefaultGetServlet": {
     "query": {
       ".query": {
-        "rendered": " query: {  jsonMaximumresults?: string,  jsonMaximumresultsTypeHint?: string,  enableHtml?: boolean,  enableHtmlTypeHint?: string,  enableTxt?: boolean,  enableTxtTypeHint?: string,  enableXml?: boolean,  enableXmlTypeHint?: string, },",
+        "rendered": " query: {  \"json.maximumresults\"?: string,  \"json.maximumresults@TypeHint\"?: string,  \"enable.html\"?: boolean,  \"enable.html@TypeHint\"?: string,  \"enable.txt\"?: boolean,  \"enable.txt@TypeHint\"?: string,  \"enable.xml\"?: boolean,  \"enable.xml@TypeHint\"?: string, },",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.jsonMaximumresults": {
-        "rendered": " jsonMaximumresults?: string,",
+      ".query.json.maximumresults": {
+        "rendered": " \"json.maximumresults\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.jsonMaximumresultsTypeHint": {
-        "rendered": " jsonMaximumresultsTypeHint?: string,",
+      ".query.json.maximumresults@TypeHint": {
+        "rendered": " \"json.maximumresults@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.enableHtml": {
-        "rendered": " enableHtml?: boolean,",
+      ".query.enable.html": {
+        "rendered": " \"enable.html\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.enableHtmlTypeHint": {
-        "rendered": " enableHtmlTypeHint?: string,",
+      ".query.enable.html@TypeHint": {
+        "rendered": " \"enable.html@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.enableTxt": {
-        "rendered": " enableTxt?: boolean,",
+      ".query.enable.txt": {
+        "rendered": " \"enable.txt\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.enableTxtTypeHint": {
-        "rendered": " enableTxtTypeHint?: string,",
+      ".query.enable.txt@TypeHint": {
+        "rendered": " \"enable.txt@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.enableXml": {
-        "rendered": " enableXml?: boolean,",
+      ".query.enable.xml": {
+        "rendered": " \"enable.xml\"?: boolean,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.enableXmlTypeHint": {
-        "rendered": " enableXmlTypeHint?: string,",
+      ".query.enable.xml@TypeHint": {
+        "rendered": " \"enable.xml@TypeHint\"?: string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -650,23 +650,23 @@
   "get__/bin/querybuilder.json": {
     "query": {
       ".query": {
-        "rendered": " query: {  path: string,  pLimit: number,  \"1_property\": string,  \"1PropertyValue\": string, },",
+        "rendered": " query: {  path: string,  \"p.limit\": number,  \"1_property\": string,  \"1_property.value\": string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.path": {
         "rendered": " path: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.pLimit": {
-        "rendered": " pLimit: number,",
+      ".query.p.limit": {
+        "rendered": " \"p.limit\": number,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.1_property": {
         "rendered": " \"1_property\": string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.1PropertyValue": {
-        "rendered": " \"1PropertyValue\": string,",
+      ".query.1_property.value": {
+        "rendered": " \"1_property.value\": string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -686,23 +686,23 @@
   "post__/bin/querybuilder.json": {
     "query": {
       ".query": {
-        "rendered": " query: {  path: string,  pLimit: number,  \"1_property\": string,  \"1PropertyValue\": string, },",
+        "rendered": " query: {  path: string,  \"p.limit\": number,  \"1_property\": string,  \"1_property.value\": string, },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.path": {
         "rendered": " path: string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.pLimit": {
-        "rendered": " pLimit: number,",
+      ".query.p.limit": {
+        "rendered": " \"p.limit\": number,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.1_property": {
         "rendered": " \"1_property\": string,",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.1PropertyValue": {
-        "rendered": " \"1PropertyValue\": string,",
+      ".query.1_property.value": {
+        "rendered": " \"1_property.value\": string,",
         "requiresRelaxedTypeAnnotation": false
       }
     },
@@ -1614,7 +1614,7 @@
   "post__/system/console/configMgr/com.adobe.granite.auth.saml.SamlAuthenticationHandler": {
     "query": {
       ".query": {
-        "rendered": " query: {  post?: boolean,  apply?: boolean,  delete?: boolean,  action?: string,  $location?: string,  path?: (string)[],  serviceRanking?: number,  idpUrl?: string,  idpCertAlias?: string,  idpHttpRedirect?: boolean,  serviceProviderEntityId?: string,  assertionConsumerServiceURL?: string,  spPrivateKeyAlias?: string,  keyStorePassword?: string,  defaultRedirectUrl?: string,  userIDAttribute?: string,  useEncryption?: boolean,  createUser?: boolean,  addGroupMemberships?: boolean,  groupMembershipAttribute?: string,  defaultGroups?: (string)[],  nameIdFormat?: string,  synchronizeAttributes?: (string)[],  handleLogout?: boolean,  logoutUrl?: string,  clockTolerance?: number,  digestMethod?: string,  signatureMethod?: string,  userIntermediatePath?: string,  propertylist?: (string)[], },",
+        "rendered": " query: {  post?: boolean,  apply?: boolean,  delete?: boolean,  action?: string,  $location?: string,  path?: (string)[],  \"service.ranking\"?: number,  idpUrl?: string,  idpCertAlias?: string,  idpHttpRedirect?: boolean,  serviceProviderEntityId?: string,  assertionConsumerServiceURL?: string,  spPrivateKeyAlias?: string,  keyStorePassword?: string,  defaultRedirectUrl?: string,  userIDAttribute?: string,  useEncryption?: boolean,  createUser?: boolean,  addGroupMemberships?: boolean,  groupMembershipAttribute?: string,  defaultGroups?: (string)[],  nameIdFormat?: string,  synchronizeAttributes?: (string)[],  handleLogout?: boolean,  logoutUrl?: string,  clockTolerance?: number,  digestMethod?: string,  signatureMethod?: string,  userIntermediatePath?: string,  propertylist?: (string)[], },",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.post": {
@@ -1645,8 +1645,8 @@
         "rendered": "string",
         "requiresRelaxedTypeAnnotation": false
       },
-      ".query.serviceRanking": {
-        "rendered": " serviceRanking?: number,",
+      ".query.service.ranking": {
+        "rendered": " \"service.ranking\"?: number,",
         "requiresRelaxedTypeAnnotation": false
       },
       ".query.idpUrl": {

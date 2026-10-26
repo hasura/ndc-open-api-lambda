@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Freeze `ndc-nodejs-lambda` to `v1.20.4` (Node 24, TS SDK 8.5.1)
+- Upgrade `swagger-typescript-api` to 13.12.2 (security fixes). Generated output changes: nullable request bodies are typed `| null`, and dotted query parameter names (e.g. `p.limit`) are preserved instead of camelCased
+- Bump `js-yaml` to 4.3.2, `brace-expansion` to 5.0.12 and `fast-uri` to 3.1.9 via overrides
+
 ## [[1.8.0](https://github.com/hasura/ndc-open-api-lambda/releases/tag/v1.8.0)] 2026-02-13
 
 - Freeze `ndc-nodejs-lambda` to `v1.20.2`
