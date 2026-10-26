@@ -63,6 +63,9 @@ jobs:
     needs: build-docker-image
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout (for .trivyignore)
+        uses: actions/checkout@v4
+
       - name: Download Docker image artifact
         uses: actions/download-artifact@v4
         with:
@@ -78,3 +81,4 @@ jobs:
           format: 'table'
           exit-code: 1
           severity: 'CRITICAL,HIGH'
+          trivyignores: '.trivyignore'
